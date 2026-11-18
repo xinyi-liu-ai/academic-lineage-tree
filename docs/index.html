@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Academic Lineage Tree</title>
+  <meta name="description" content="Explore the PhD advisor lineage of 5,000+ computer science professors at US universities: who trained them, and whom they trained.">
+  <link rel="icon" type="image/png" href="assets/tree-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#/" aria-label="Academic Lineage Tree home">
+      <img src="assets/tree-icon.png" alt="" width="32" height="32">
+      <span>Academic Lineage Tree</span>
+    </a>
+    <div class="search-wrap">
+      <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search a professor, e.g. Michael I. Jordan" autocomplete="off" aria-label="Search professors">
+      <ul id="suggest" class="suggest" role="listbox" hidden></ul>
+    </div>
+    <button id="aboutBtn" class="ghost" type="button">About the data</button>
+  </header>
+
+  <main class="layout">
+    <button id="filterToggle" class="ghost filter-toggle" type="button" aria-expanded="false" aria-controls="sidebar">Filters</button>
+    <aside class="sidebar" id="sidebar">
+      <section class="panel">
+        <h2>Research area</h2>
+        <div id="areas" class="areas"></div>
+      </section>
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Institution</h2>
+          <span class="links"><button type="button" class="link" id="uniAll">All</button> · <button type="button" class="link" id="uniNone">Clear</button></span>
+        </div>
+        <input id="uniQ" type="search" placeholder="Filter institutions" aria-label="Filter institutions">
+        <div id="unis" class="uni-list"></div>
+      </section>
+      <section class="panel">
+        <label class="check"><input type="checkbox" id="onlyKnown"> Only show professors with known advisors</label>
+      </section>
+    </aside>
+
+    <section class="results" id="results">
+      <div class="results-head">
+        <h2 id="resTitle">Professors</h2>
+        <select id="sort" aria-label="Sort results">
+          <option value="lineage">Most connected</option>
+          <option value="name">Name A–Z</option>
+          <option value="uni">Institution</option>
+        </select>
+      </div>
+      <ol id="resList" class="res-list"></ol>
+      <button id="more" class="ghost wide" type="button" hidden>Show more</button>
+    </section>
+
+    <section class="tree-view" id="treeView" hidden>
+      <div class="tree-toolbar">
+        <button id="back" class="ghost" type="button">← Results</button>
+        <div class="gen">
+          <label>Ancestors <select id="up"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>6</option></select></label>
+          <label>Descendants <select id="down"><option>1</option><option selected>2</option><option>3</option></select></label>
+        </div>
+        <div class="zoom">
+          <button id="zin" class="icon" type="button" aria-label="Zoom in">+</button>
+          <button id="zout" class="icon" type="button" aria-label="Zoom out">−</button>
+          <button id="zfit" class="icon" type="button" aria-label="Fit to screen">⤢</button>
+        </div>
+      </div>
+      <div class="legend">
+        <span><i class="dot prof"></i>Professor in dataset</span>
+        <span><i class="dot ext"></i>Other researcher</span>
+        <span><i class="ln phd"></i>PhD advisor</span>
+        <span><i class="ln postdoc"></i>Postdoc advisor</span>
+        <span><i class="ln disputed"></i>Unverified</span>
+        <span class="hint">← advisors · students →</span>
+      </div>
+      <div class="canvas-wrap"><svg id="canvas" role="img" aria-label="Lineage tree"></svg></div>
+    </section>
+
+    <aside class="detail" id="detail" hidden></aside>
+  </main>
+
+  <dialog id="about">
+    <form method="dialog"><button class="close" aria-label="Close">×</button></form>
+    <h2>About the data</h2>
+    <div id="aboutBody"></div>
+  </dialog>
+
+  <div id="tip" class="tip" hidden></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
