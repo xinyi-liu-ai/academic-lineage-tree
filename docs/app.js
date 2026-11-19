@@ -65,6 +65,14 @@
       nodes.get(a).stu.push(e);
       nodes.get(s).adv.push(e);
     }
+    // 名单外、但去向写着某所收录的美国高校（又不是博后、学生）的人：多半也在美国高校任教，只是 CSRankings 没收
+    const uniNames = raw.unis.map((u) => u[0].toLowerCase()).filter((u) => u.length > 6);
+    for (const n of nodes.values()) {
+      if (n.ext && n.af && !/postdoc|post-doc|student|ph\.?d|fellow|intern|alum|formerly|scientist|engineer/i.test(n.af)) {
+        const a = n.af.toLowerCase();
+        n.usAcad = uniNames.some((u) => a.includes(u));
+      }
+    }
     for (const n of nodes.values()) {
       n.knownAdv = n.adv.some((e) => !e.disputed);
       n.degree = n.adv.length + n.stu.length;
@@ -108,6 +116,21 @@
     return box;
   };
   const title = (n) => n.ti || 'Faculty';
+  const isAP = (n) => !n.ext && /^Assistant (Research |Teaching )?Professor/.test(n.ti || '');
+  // 主页上的招生声明：n.rc = [yes/no, 目标年份, 抓取年月, 原句, 出处]
+  // 现在申请的是哪一年秋季入学：8 月以后算下一年
+  const ADMIT_YEAR = (() => { const d = new Date(); return d.getFullYear() + (d.getMonth() >= 7 ? 1 : 0); })();
+  const rcStale = (n) => !!(n.rc && n.rc[1] && n.rc[1] < ADMIT_YEAR);
+  const recruiting = (n) => !!(n.rc && n.rc[0] === 'yes' && !rcStale(n));
+  const rcLabel = (n) => (rcStale(n) ? `Recruited for ${n.rc[1]} · may be outdated` : n.rc[1] ? `Recruiting for ${n.rc[1]}` : 'Recruiting');
+  const rcBadge = (n, cls = '') => {
+    if (!n.rc || (n.rc[0] === 'no' && rcStale(n))) return null;
+    const no = n.rc[0] === 'no';
+    return el('span', { class: `rc-badge ${cls} ${no || rcStale(n) ? 'stale' : ''}`, title: `Homepage (seen ${n.rc[2]}): “${n.rc[3]}”` },
+      no ? (n.rc[1] ? `Not recruiting for ${n.rc[1]}` : 'Not taking students') : rcLabel(n));
+  };
+  // 名单外的人：有去向写去向，导师主页列为当前学生的写 Student
+  const outsideSub = (n) => (n.af ? shortAff(n.af) : n.st ? 'PhD student' : 'Position unknown');
   const shortAff = (s) => {
     let t = (s.length > 34 ? s.split(/,\s*/)[0] : s);
     if (t.length > 40) t = t.slice(0, 40).replace(/\s+\S*$/, '') + '…';
@@ -290,13 +313,15 @@
   };
 
   /* ---------- results ---------- */
-  const R = { onlyKnown: false, sort: 'lineage', shown: PAGE, name: '' };
+  const R = { onlyKnown: false, onlyAP: false, onlyRC: false, sort: 'lineage', shown: PAGE, name: '' };
   function filtered() {
     const t = fold(R.name);
     const list = G.profs.filter((p) =>
       (!S.subs.size || p.d.some((d) => S.subs.has(d))) &&
       (!S.unis.size || S.unis.has(p.u)) &&
       (!R.onlyKnown || p.knownAdv) &&
+      (!R.onlyAP || isAP(p)) &&
+      (!R.onlyRC || recruiting(p)) &&
       !p.former &&
       (!t || p.f.includes(t)));
     const by = {
@@ -320,7 +345,8 @@
       el('div', { class: 'card-body' },
         el('div', { class: 'card-name' }, p.n),
         el('div', { class: 'card-meta' },
-          el('div', {}, title(p), p.former ? el('span', { class: 'badge-former' }, 'former') : null),
+          el('div', { class: isAP(p) ? 'is-ap' : null }, title(p)),
+          rcBadge(p) ? el('div', {}, rcBadge(p)) : null,
           el('div', {}, p.uni),
           el('div', { class: 'interest' }, interest(p) || '—')),
         el('div', { class: 'card-stats' }, nA ? `${nA} advisor${nA > 1 ? 's' : ''}` : 'Advisor unknown', nS ? ` · ${nS} student${nS > 1 ? 's' : ''}` : '')));
@@ -394,21 +420,27 @@
 
   function genLabel(gen, col) {
     if (gen === 0 || (!col && Math.abs(gen) > 1)) return '';
-    if (Math.abs(gen) === 1) return gen < 0 ? 'Advisors' : 'Students';
-    const of = col ? G.nodes.get(col.parent).n : '';
-    return `${gen < 0 ? 'Advisors' : 'Students'} of ${of}`;
+    const k = Math.abs(gen);
+    const pre = k === 1 ? '' : k === 2 ? 'Grand-' : 'Great-'.repeat(k - 2) + 'grand-';
+    const base = gen < 0 ? 'advisors' : 'students';
+    return (pre ? pre + base : base[0].toUpperCase() + base.slice(1)).replace(/^g/, 'G');
   }
+  const genTitle = (gen, col) => (col && Math.abs(gen) > 1 ? `${gen < 0 ? 'Advisors' : 'Students'} of ${G.nodes.get(col.parent).n}` : genLabel(gen, col));
+
+  const shortTitle = (t) => t.replace(/ Professor\b/, ' Prof.').replace(/^Professor\b/, 'Prof.');
 
   function tnode(it, gen, isFocus) {
     const n = G.nodes.get(it.id), e = it.edge;
     const badge = e ? (e.disputed ? el('span', { class: 't-badge warn' }, 'unverified') : e.inferred ? el('span', { class: 't-badge' }, 'inferred') : e.t === 'postdoc' ? el('span', { class: 't-badge' }, 'postdoc') : null) : null;
-    const b = el('button', { class: `tnode ${gen === 0 ? 'root' : ''} ${isFocus ? 'focus' : ''}`, type: 'button', 'data-id': it.id, 'data-gen': gen },
+    // 在美国高校任教的人醒目显示（AP 另外高亮，最可能在招生）；业界、国外、学生淡化
+    const role = n.ext ? (n.usAcad ? 'fac' : 'out') : isAP(n) ? 'fac ap' : 'fac';
+    const b = el('button', { class: `tnode ${role} ${gen === 0 ? 'root' : ''} ${isFocus ? 'focus' : ''}`, type: 'button', 'data-id': it.id, 'data-gen': gen },
       avatar(n),
       el('span', { class: 't-name' }, n.n),
-      // 职称只在中心人物下显示（那一列只有一个人，有空间）；其余节点放在悬停提示里
-      gen === 0 && !n.ext && n.ti ? el('span', { class: 't-title' }, n.ti) : null,
-      el('span', { class: 't-sub' }, n.ext ? (n.af ? shortAff(n.af) : 'Outside faculty list') : n.uniShort),
-      n.ext ? null : el('span', { class: 't-dir' }, n.d[0] ? SUB_LABEL[n.d[0]] : ''),
+      !n.ext && n.ti ? el('span', { class: 't-title' }, shortTitle(n.ti)) : null,
+      el('span', { class: 't-sub' }, n.ext ? outsideSub(n) : n.uniShort),
+      gen === 0 && !n.ext ? el('span', { class: 't-dir' }, n.d[0] ? SUB_LABEL[n.d[0]] : '') : null,
+      rcBadge(n, 't-rc'),
       badge);
     b.addEventListener('click', () => selectNode(it.id, gen));
     b.addEventListener('dblclick', () => { if (gen !== 0) go(it.id); });
@@ -443,7 +475,7 @@
       const col = cols.get(g);
       const band = el('div', { class: `band d${Math.min(Math.abs(g), 2)}` });
       const label = genLabel(g, col);
-      if (label) band.append(el('div', { class: 'gen-label', title: label }, label.length > 34 ? label.slice(0, 33) + '…' : label));
+      if (label) band.append(el('div', { class: 'gen-label', title: genTitle(g, col) }, label + (col && col.items.length > 1 ? ` · ${col.items.length}` : '')));
       if (col) {
         const dir = g > 0 ? 'down' : 'up';
         const f = g === 0 ? null : T.focus[dir][Math.abs(g) - 1];
@@ -574,7 +606,10 @@ Source (homepage, CV, thesis…):
     d.replaceChildren(...[
       el('button', { class: 'close', type: 'button', 'aria-label': 'Close details', onclick: closeDrawer }, '×'),
       el('div', { class: 'who' }, avatar(n), el('div', {}, el('h3', {}, n.n),
-        n.ext ? null : el('div', { class: 'uni ti' }, title(n)), el('div', { class: 'uni' }, n.ext ? (n.af || 'Current position unknown') : n.former ? `Formerly ${n.uni}` : n.uni))),
+        n.ext ? null : el('div', { class: 'uni ti' }, title(n)), el('div', { class: 'uni' }, n.ext ? (n.af || (n.st ? 'PhD student (listed on an advisor’s page)' : 'Current position unknown')) : n.uni))),
+      n.rc ? el('div', { class: `rc-box ${n.rc[0]}` },
+        el('b', {}, n.rc[0] === 'yes' ? rcLabel(n) : 'Not taking students'), ` — homepage, seen ${n.rc[2]}`,
+        el('q', {}, n.rc[3]), n.rc[4] ? el('a', { href: n.rc[4], target: '_blank', rel: 'noopener' }, 'Source') : null) : null,
       n.ext ? el('p', { class: 'note' }, 'Not on the CSRankings faculty list of these 189 US universities (for example in industry, abroad or another field).') : null,
       n.former ? el('p', { class: 'note' }, 'No longer on CSRankings’ current faculty list for these institutions (moved, retired or emeritus)' + (n.now ? `; now listed at ${n.now}.` : '.')) : null,
       rel ? el('p', { class: 'note' }, rel[1], ' ', ...flagBadges(rel[0])) : null,
@@ -608,6 +643,78 @@ Source (homepage, CV, thesis…):
     document.title = `${n.n} · Academic Lineage Family Tree`;
     closeDrawer();
     drawTree();
+    renderFamily();
+  }
+
+  /* ---------- academic family list ---------- */
+  // 从中心人物出发，沿师生关系（上 = 导师方向，下 = 学生方向）做广度优先搜索，记下最短路径的上下序列
+  const F = { dist: 2, ap: false, rc: false, area: false, all: false, cache: null };
+  const REL = {
+    u: 'Advisor', uu: 'Grand-advisor', uuu: 'Great-grand-advisor', uuuu: 'Great-great-grand-advisor',
+    d: 'Student', dd: 'Grand-student', ddd: 'Great-grand-student', dddd: 'Great-great-grand-student',
+    ud: 'Lab sibling (same advisor)', udd: 'Student of a lab sibling', uddd: 'Grand-student of a lab sibling',
+    uud: 'Advisor’s lab sibling', uudd: 'Academic cousin', uuud: 'Grand-advisor’s lab sibling',
+    du: 'Co-advisor of a student', dud: 'Student of a co-advisor', duu: 'Advisor of a co-advisor',
+  };
+  const relLabel = (sig) => REL[sig] || `${sig.length} steps away`;
+
+  function familyOf(rootId, maxDist) {
+    const seen = new Map([[rootId, '']]);
+    let frontier = [rootId];
+    for (let k = 1; k <= maxDist && frontier.length; k++) {
+      const next = [];
+      for (const id of frontier) {
+        const n = G.nodes.get(id), sig = seen.get(id);
+        for (const e of n.adv) if (!e.disputed && !seen.has(e.a)) { seen.set(e.a, sig + 'u'); next.push(e.a); }
+        for (const e of n.stu) if (!e.disputed && !seen.has(e.s)) { seen.set(e.s, sig + 'd'); next.push(e.s); }
+      }
+      frontier = next;
+    }
+    seen.delete(rootId);
+    return seen;
+  }
+
+  function renderFamily() {
+    const root = G.nodes.get(T.root);
+    if (!root) return;
+    if (!F.cache || F.cache.root !== T.root) F.cache = { root: T.root, map: familyOf(T.root, 4) };
+    for (const b of document.querySelectorAll('.fam-controls [data-dist]')) b.classList.toggle('on', +b.dataset.dist === F.dist);
+    const areas = new Set(root.ext ? [] : root.a);
+    $('#famArea').disabled = !areas.size;
+    const rows = [];
+    for (const [id, sig] of F.cache.map) {
+      if (sig.length > F.dist) continue;
+      const n = G.nodes.get(id);
+      if (!F.all && n.ext && !n.usAcad) continue;
+      if (F.ap && !isAP(n)) continue;
+      if (F.rc && !recruiting(n)) continue;
+      if (F.area && areas.size && (n.ext || !n.a.some((a) => areas.has(a)))) continue;
+      rows.push({ n, sig });
+    }
+    // 近的在前；同样远时招生的、AP 在前
+    rows.sort((x, y) => x.sig.length - y.sig.length || recruiting(y.n) - recruiting(x.n) || isAP(y.n) - isAP(x.n)
+      || ((x.n.ext && !x.n.usAcad) - (y.n.ext && !y.n.usAcad)) || (x.n.ext - y.n.ext) || y.n.degree - x.n.degree);
+    const fac = rows.filter((r) => !r.n.ext || r.n.usAcad).length;
+    $('#famTitle').textContent = `${root.n}’s academic family`;
+    $('#famSub').textContent = `${fmt(fac)} US faculty within ${F.dist} step${F.dist > 1 ? 's' : ''}` +
+      (F.all ? ` · ${fmt(rows.length - fac)} others` : '') +
+      ` · ${fmt(rows.filter((r) => isAP(r.n)).length)} assistant professor${rows.filter((r) => isAP(r.n)).length === 1 ? '' : 's'}` +
+      ` · ${fmt(rows.filter((r) => recruiting(r.n)).length)} ${rows.filter((r) => recruiting(r.n)).length === 1 ? 'says' : 'say'} recruiting`;
+    const LIMIT = 200;
+    $('#famList').replaceChildren(...(rows.length ? rows.slice(0, LIMIT).map(({ n, sig }) => {
+      const li = el('li', { class: `fam-row d${Math.min(sig.length, 4)} ${n.ext && !n.usAcad ? 'out' : ''}` },
+        el('button', { class: 'fam-main', type: 'button', onclick: () => renderDrawer(n.id), title: 'Show details' },
+          avatar(n, true),
+          el('span', { class: 'fam-text' },
+            el('span', { class: 'fam-name' }, n.n),
+            el('span', { class: 'fam-rel' }, relLabel(sig)),
+            el('span', { class: 'fam-meta', title: n.ext ? n.af || '' : '' }, n.ext ? outsideSub(n) + (n.usAcad ? ' · not on CSRankings' : '') : `${shortTitle(title(n))} · ${n.uniShort}`),
+            rcBadge(n))),
+        el('button', { class: 'tree-btn', type: 'button', title: `Open ${n.n}’s family tree`, 'aria-label': `Open ${n.n}’s family tree`, onclick: () => go(n.id) },
+          el('img', { src: 'assets/tree-icon.png', alt: '' })));
+      return li;
+    }) : [el('li', { class: 'fam-empty' }, F.rc ? 'Nobody in this range says on their homepage that they are recruiting. Try a larger range or turn off the filter.' : 'Nobody matches. Try a larger range or fewer filters.')]),
+    ...(rows.length > LIMIT ? [el('li', { class: 'fam-empty' }, `Showing the closest ${LIMIT} of ${fmt(rows.length)}.`)] : []));
   }
 
   /* ---------- about ---------- */
@@ -671,6 +778,10 @@ Source (homepage, CV, thesis…):
     renderAbout();
     updateFavCount();
     $('#onlyKnown').addEventListener('change', (e) => { R.onlyKnown = e.target.checked; R.shown = PAGE; renderResults(); });
+    $('#onlyAP').addEventListener('change', (e) => { R.onlyAP = e.target.checked; R.shown = PAGE; renderResults(); });
+    $('#onlyRC').addEventListener('change', (e) => { R.onlyRC = e.target.checked; R.shown = PAGE; renderResults(); });
+    for (const b of document.querySelectorAll('.fam-controls [data-dist]')) b.addEventListener('click', () => { F.dist = +b.dataset.dist; renderFamily(); });
+    for (const [id, key] of [['famAP', 'ap'], ['famRC', 'rc'], ['famArea', 'area'], ['famAll', 'all']]) $('#' + id).addEventListener('change', (e) => { F[key] = e.target.checked; renderFamily(); });
     $('#sort').addEventListener('change', (e) => { R.sort = e.target.value; renderResults(); });
     let nt;
     $('#nameFilter').addEventListener('input', (e) => { clearTimeout(nt); nt = setTimeout(() => { R.name = e.target.value; R.shown = PAGE; renderResults(); }, 150); });

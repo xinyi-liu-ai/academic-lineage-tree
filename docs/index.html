@@ -37,6 +37,8 @@
         <div class="results-tools">
           <label class="name-filter"><img src="assets/icons/icon_search.png" alt=""><input id="nameFilter" type="search" placeholder="Filter by name" aria-label="Filter results by name"></label>
           <label class="toggle"><input type="checkbox" id="onlyKnown"> Known advisor only</label>
+          <label class="toggle"><input type="checkbox" id="onlyAP"> Assistant professors</label>
+          <label class="toggle"><input type="checkbox" id="onlyRC"> Says recruiting</label>
           <select id="sort" aria-label="Sort results">
             <option value="lineage">Most connected</option>
             <option value="name">Name</option>
@@ -67,22 +69,44 @@
             <button type="button" id="fullBtn" title="Full screen"><img src="assets/icons/icon_wholescreen.png" alt="Full screen"></button>
           </div>
         </div>
-        <div class="tree-stage">
-          <button class="gen-arrow left" id="genLeft" type="button" aria-label="Show earlier generations"></button>
-          <div class="tree-viewport" id="viewport">
-            <div class="tree-scale" id="scaleBox">
-              <svg class="links" id="links" aria-hidden="true"></svg>
-              <div class="bands" id="bands"></div>
+        <div class="tree-body">
+          <div class="tree-stage">
+            <button class="gen-arrow left" id="genLeft" type="button" aria-label="Show earlier generations"></button>
+            <div class="tree-viewport" id="viewport">
+              <div class="tree-scale" id="scaleBox">
+                <svg class="links" id="links" aria-hidden="true"></svg>
+                <div class="bands" id="bands"></div>
+              </div>
             </div>
+            <button class="gen-arrow right" id="genRight" type="button" aria-label="Show later generations"></button>
+            <aside class="drawer" id="drawer" aria-live="polite"></aside>
           </div>
-          <button class="gen-arrow right" id="genRight" type="button" aria-label="Show later generations"></button>
-          <aside class="drawer" id="drawer" aria-live="polite"></aside>
+          <!-- 家族名单：从中心人物出发，按亲缘远近列出在美国高校任教的人 -->
+          <aside class="family" id="family" aria-label="Faculty in this academic family">
+            <div class="fam-head">
+              <h3 id="famTitle">Academic family</h3>
+              <p class="fam-sub" id="famSub"></p>
+            </div>
+            <div class="fam-controls">
+              <div class="seg" role="group" aria-label="How far from the center">
+                <span class="seg-label">Within</span>
+                <button type="button" data-dist="1">1 step</button><button type="button" data-dist="2" class="on">2</button><button type="button" data-dist="3">3</button><button type="button" data-dist="4">4</button>
+              </div>
+              <label class="toggle"><input type="checkbox" id="famAP"> Assistant professors only</label>
+              <label class="toggle"><input type="checkbox" id="famRC"> Says recruiting on homepage</label>
+              <label class="toggle"><input type="checkbox" id="famArea"> Same research area</label>
+              <label class="toggle"><input type="checkbox" id="famAll"> Also show people outside US faculty</label>
+            </div>
+            <ol class="fam-list" id="famList"></ol>
+          </aside>
         </div>
         <div class="tree-legend">
           <span><i class="ln phd"></i>PhD advisor</span>
           <span><i class="ln postdoc"></i>Postdoc advisor</span>
           <span><i class="ln inferred"></i>Inferred</span>
           <span><i class="ln disputed"></i>Unverified</span>
+          <span><i class="dot fac"></i>US faculty</span>
+          <span><i class="dot out"></i>Industry, abroad or student</span>
           <span class="hint">Click a person for details · double-click to re-center · ← advisors · students →</span>
         </div>
       </div>

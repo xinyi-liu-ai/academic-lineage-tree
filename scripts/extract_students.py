@@ -352,6 +352,10 @@ def main():
                         r['other_prof'] = fac[0]
                     if note and (alumni or kind == 'postdoc') and not YEARISH.fullmatch(note):
                         r['af'] = note
+                    # 列在"当前学生"里、备注也没写去向或毕业年份：网站上标为在读学生
+                    if (kind == 'phd' and not alumni
+                            and not re.search(r'\bnow\b|graduat|alum|former|\b(?:19[89]\d|20[01]\d|202[0-3])\b', f'{note} {rest}', re.I)):
+                        r['cur'] = 1
                     r['_co'] = k in coauthors or bool(STUDENTISH.search(rest))  # rest：备注清洗前的原文（"Ph.D." 会被 clean_note 去掉）
                     recs.append(r)
     # 名单过长、和教授合写过论文的比例又很低：多半抓到了院系名录或课程名单，只保留合写过 / 注明是学生的

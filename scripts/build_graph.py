@@ -197,6 +197,8 @@ def main():
             g.nodes[other]['af'] = r['af']  # 导师主页上写的去向，如 "Amazon"、"postdoc, Harvard"
         if r.get('h') and g.nodes[other].get('ext'):
             g.nodes[other]['h'] = r['h']
+        if r.get('cur') and g.nodes[other].get('ext'):
+            g.nodes[other]['cur'] = True  # 导师主页"当前学生"名单里的人
         g.add_edge(r['prof'], other, r.get('type', 'phd'), r.get('source', 'homepage'), r.get('url', ''))
         stats[r.get('source', 'homepage') + '_student'] += 1
 
@@ -300,7 +302,7 @@ def main():
             titles[pid] = r['ti']
         if r.get('ph'):
             photos[pid] = r['ph']
-    link_updates, dead_links = opt('link_updates.json'), opt('dead_links.json')
+    link_updates, dead_links, recruiting = opt('link_updates.json'), opt('dead_links.json'), opt('recruiting.json')
     bad_urls = opt('photo_https_bad.json')  # https 下打不开的照片地址（verify_photos.py），换下一个来源
     for src in (photos, people_photos):
         for nid in [k for k, u in src.items() if u in bad_urls]:
@@ -331,6 +333,8 @@ def main():
                         d['hv'] = links[nid]['via']
             if people_photos.get(nid):
                 d['ph'] = people_photos[nid]
+            if n.get('cur') and not d.get('af'):
+                d['st'] = 1  # 在读学生（导师主页的当前学生名单）
             if d.get('h') and nid in dead_links:  # 主页已失效（check_links.py）：名字改链到领英 / 搜索
                 del d['h']
                 d.pop('hv', None)
@@ -348,6 +352,9 @@ def main():
                 d['ti'] = titles[nid]
             if photos.get(nid):
                 d['ph'] = photos[nid]
+            if recruiting.get(nid):  # 主页上的招生声明（extract_recruiting.py）：[yes/no, 年份, 抓取年月, 原句, 出处]
+                r = recruiting[nid]
+                d['rc'] = [r['s'], r.get('y'), r.get('at', ''), r.get('q', ''), r.get('src', '')]
             if n.get('status') == 'former':
                 # 已不在 CSRankings 的美国学校名单上（调去国外、退休、转业界……）：网站只收在美国高校任教的人，
                 # 不再当作教授列出；作为别人的导师 / 学生仍留在树上，显示现在的去向或原学校
