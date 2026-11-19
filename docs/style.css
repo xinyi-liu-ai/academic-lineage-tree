@@ -209,6 +209,8 @@ a { color: var(--green-dark); }
 .drawer .links-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
 .drawer .links-row a { font-size: 13px; font-weight: 600; text-decoration: none; border: 1px solid var(--line-soft); border-radius: 8px; padding: 5px 10px; }
 .drawer .links-row a:hover { background: var(--green-pale); }
+.drawer .links-row a.primary { background: var(--green-dark); border-color: var(--green-dark); color: #fff; }
+.drawer .links-row a.primary:hover { background: var(--green-dark-2); }
 .drawer .actions { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
 .drawer .fav { position: relative; border: 1px solid var(--line-soft); background: #fff; border-radius: 8px; padding: 7px 12px 7px 30px; font-weight: 600; font-size: 13px; }
 .drawer .fav .star { left: 9px; top: 9px; right: auto; }

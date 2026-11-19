@@ -140,6 +140,17 @@ def main():
         w = csv.writer(f)
         w.writerow(HEADER)
         w.writerows(rows)
+    # 同一人的其他写法（dblp 别名），供 build_graph 合并同人
+    inv = defaultdict(set)
+    for a, n in canon.items():
+        inv[n].add(a)
+    with open(os.path.join(ROOT, 'data/raw/faculty_aliases.csv'), 'w', encoding='utf-8', newline='') as f:
+        w = csv.writer(f)
+        w.writerow(['name', 'alias'])
+        for r in rows:
+            c = C(r[1])
+            for a in sorted((inv[c] | {c}) - {r[1]}):
+                w.writerow([r[1], a])
     print(dict(st), 'total', len(rows))
 
 

@@ -118,6 +118,15 @@ def main():
     profs = load_profs()
     unis = load_unis()
     g = Graph(profs)
+    alias_path = os.path.join(ROOT, 'data/raw/faculty_aliases.csv')  # 同一人的其他写法
+    if os.path.exists(alias_path):
+        pid_of = {p['dblp']: p['id'] for p in profs}
+        with open(alias_path, encoding='utf-8', newline='') as f:
+            for r in list(csv.reader(f))[1:]:
+                pid = pid_of.get(r[0])
+                k = key(display_name(r[1]))
+                if pid and pid not in g.by_key[k]:
+                    g.by_key[k].append(pid)
     stats = defaultdict(int)
 
     # 1) 人工整理的导师
@@ -194,12 +203,16 @@ def main():
     uni_list = sorted({p['uni'] for p in profs})
     uni_idx = {u: i for i, u in enumerate(uni_list)}
     used = {e['a'] for e in g.edges.values()} | {e['s'] for e in g.edges.values()}
+    people_path = os.path.join(ROOT, 'data/enrich/people.json')  # 名单外的人：主页 / 领英 / Scholar / 现单位
+    people = json.load(open(people_path, encoding='utf-8')) if os.path.exists(people_path) else {}
     out_nodes = []
     for nid, n in g.nodes.items():
         if n.get('ext'):
             if nid not in used:
                 continue
-            out_nodes.append(dict(id=nid, n=n['name'], x=1, **({'w': n['url']} if n.get('url') else {})))
+            d = dict(id=nid, n=n['name'], x=1, **({'w': n['url']} if n.get('url') else {}))
+            d.update(people.get(nid, {}))
+            out_nodes.append(d)
         else:
             d = dict(id=nid, n=n['name'], u=uni_idx[n['uni']], h=n['homepage'])
             if n['scholar']:

@@ -30,6 +30,7 @@ CACHE = os.path.join(ROOT, 'data/cache/dblp/index.pkl')
 PAPER = {'article', 'inproceedings', 'incollection'}
 TYPES = ('article', 'inproceedings', 'incollection', 'phdthesis', 'book', 'proceedings', 'mastersthesis', 'www')
 START = re.compile(r'<(%s)\s' % '|'.join(TYPES))
+SPLIT = re.compile(r'(?=<(?:%s)\s)' % '|'.join(TYPES))
 END = re.compile(r'</(%s)>' % '|'.join(TYPES))
 AUTH = re.compile(r'<author[^>]*>(.*?)</author>')
 YEAR = re.compile(r'<year>(\d{4})</year>')
@@ -48,7 +49,7 @@ def records():
     """逐行解析 dump，产出 (type, year, [authors], school, [affiliation notes], is_homepage)。"""
     cur = None
     with gzip.open(DUMP, 'rt', encoding='utf-8', errors='replace') as f:
-        for line in f:
+        for line in (part for raw in f for part in SPLIT.split(raw)):  # 一行里可能有上一条的结尾和下一条的开头
             if cur is None:
                 m = START.search(line)
                 if not m:
@@ -191,7 +192,7 @@ def evaluate(profs, data, uni_of):
     g = json.load(open(os.path.join(ROOT, 'docs/data/graph.json'), encoding='utf-8'))
     nodes = {n['id']: n for n in g['nodes']}
     truth = defaultdict(set)
-    for a, s, t, src, _, _ in g['edges']:
+    for a, s, t, src, *_ in g['edges']:
         if t == 'phd' and s in nodes and not nodes[s].get('x') and set(src.split('+')) & {'wikidata', 'wikipedia'}:
             truth[s].add(nodes[a]['n'])
     rows = []

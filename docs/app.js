@@ -85,6 +85,7 @@
     class: `avatar ${n.ext ? 'ext' : ''} ${extra}`, 'aria-hidden': 'true',
     style: n.ext ? null : `--av:${AREA_COLOR[AREA_OF[n.d[0]]] || '#6c9a58'}`,
   }, initials(n.n));
+  const shortAff = (s) => (s.length > 34 ? s.split(/,\s*/)[0] : s).slice(0, 40);
   const interest = (n, k = 2) => n.d.slice(0, k).map((d) => SUB_LABEL[d] || d).join(', ');
 
   /* ---------- shared search filters ---------- */
@@ -363,7 +364,7 @@
     const b = el('button', { class: `tnode ${gen === 0 ? 'root' : ''} ${isFocus ? 'focus' : ''}`, type: 'button', 'data-id': it.id, 'data-gen': gen },
       avatar(n),
       el('span', { class: 't-name' }, n.n),
-      el('span', { class: 't-sub' }, n.ext ? 'Not in faculty list' : n.uniShort),
+      el('span', { class: 't-sub' }, n.ext ? (n.af ? shortAff(n.af) : 'Outside faculty list') : n.uniShort),
       n.ext ? null : el('span', { class: 't-dir' }, n.d[0] ? SUB_LABEL[n.d[0]] : ''),
       badge);
     b.addEventListener('click', () => selectNode(it.id, gen));
@@ -492,7 +493,7 @@
     const render = (all) => ul.replaceChildren(...sorted.slice(0, all ? Infinity : LIMIT).map((e) => {
       const o = G.nodes.get(e[otherKey]);
       return el('li', {}, el('button', { class: 'p-link', type: 'button', onclick: () => go(o.id) }, o.n),
-        o.ext ? null : el('small', {}, o.uniShort), ...srcBadges(e));
+        el('small', {}, o.ext ? (o.af ? shortAff(o.af) : '') : o.uniShort), ...srcBadges(e));
     }), ...(sorted.length > LIMIT && !all ? [el('li', {}, el('button', { class: 'more-people', type: 'button', onclick: () => render(true) }, `Show all ${sorted.length}`))] : []));
     render(false);
     return ul;
@@ -502,20 +503,25 @@
     const n = G.nodes.get(id), d = $('#drawer');
     const rel = relationTo(id);
     const links = [];
-    if (n.h) links.push(el('a', { href: n.h, target: '_blank', rel: 'noopener' }, 'Homepage'));
-    if (n.g) links.push(el('a', { href: n.g, target: '_blank', rel: 'noopener' }, 'Google Scholar'));
-    if (n.c) links.push(el('a', { href: n.c, target: '_blank', rel: 'noopener' }, 'CV'));
-    if (n.w) links.push(el('a', { href: n.w, target: '_blank', rel: 'noopener' }, n.w.includes('wikidata') ? 'Wikidata' : n.w.includes('dblp') ? 'dblp' : 'Wikipedia'));
+    const ext = (href, text, cls) => el('a', { href, target: '_blank', rel: 'noopener', class: cls || null }, text);
+    if (n.h) links.push(ext(n.h, 'Homepage', 'primary'));
+    if (n.li) links.push(ext(n.li, 'LinkedIn'));
+    else if (!n.h || n.ext) links.push(ext('https://www.linkedin.com/search/results/people/?keywords=' + encodeURIComponent(n.n), 'Find on LinkedIn'));
+    if (n.g) links.push(ext(n.g, 'Google Scholar'));
+    if (n.c) links.push(ext(n.c, 'CV'));
+    const more = n.w ? el('p', { class: 'note' }, 'Also on ', ext(n.w, n.w.includes('wikidata') ? 'Wikidata' : n.w.includes('dblp') ? 'dblp' : 'Wikipedia')) : null;
     const fav = n.ext ? null : el('button', { class: `fav ${favs.has(id) ? 'on' : ''}`, type: 'button' }, el('span', { class: 'star' }), favs.has(id) ? 'Starred' : 'Star');
     if (fav) fav.addEventListener('click', () => { toggleFav(id); renderDrawer(id); });
     d.replaceChildren(...[
       el('button', { class: 'close', type: 'button', 'aria-label': 'Close details', onclick: closeDrawer }, '×'),
       el('div', { class: 'who' }, avatar(n), el('div', {}, el('h3', {}, n.n),
-        el('div', { class: 'uni' }, n.ext ? 'Not in the CSRankings faculty list' : n.former ? `Formerly ${n.uni}` : n.uni))),
+        el('div', { class: 'uni' }, n.ext ? (n.af || 'Current position unknown') : n.former ? `Formerly ${n.uni}` : n.uni))),
+      n.ext ? el('p', { class: 'note' }, 'Not on the CSRankings faculty list of these 189 US universities (for example in industry, abroad or another field).') : null,
       n.former ? el('p', { class: 'note' }, 'No longer on CSRankings’ current faculty list for these institutions (moved, retired or emeritus)' + (n.now ? `; now listed at ${n.now}.` : '.')) : null,
       rel ? el('p', { class: 'note' }, rel[1], ' ', ...srcBadges(rel[0])) : null,
       n.ext || !n.d.length ? null : el('div', { class: 'tags' }, n.d.map((x) => el('span', { class: 'tag' }, SUB_LABEL[x] || x))),
       links.length ? el('div', { class: 'links-row' }, links) : null,
+      n.h ? null : more,
       el('div', { class: 'actions' }, fav, id !== T.root ? el('button', { class: 'btn-dark', type: 'button', onclick: () => go(id) }, 'View this family tree') : null),
       el('h4', {}, `Advisors (${n.adv.length})`), peopleList(n.adv, 'a'),
       el('h4', {}, `Students (${n.stu.length})`), peopleList(n.stu, 's'),
@@ -527,7 +533,7 @@
 
   const tip = $('#tip');
   function showTip(ev, n, e) {
-    tip.textContent = [n.n, n.ext ? null : n.uni + (n.former ? ' (former)' : ''),
+    tip.textContent = [n.n, n.ext ? (n.af || null) : n.uni + (n.former ? ' (former)' : ''),
       e ? `${e.t === 'phd' ? 'PhD' : 'Postdoc'} · ${e.src.map((s) => SRC_LABEL[s]).join(', ')}${e.disputed ? ' · unverified' : ''}${e.inferred ? ' · inferred' : ''}` : null,
       'Click for details · double-click to re-center'].filter(Boolean).join('\n');
     tip.hidden = false;
