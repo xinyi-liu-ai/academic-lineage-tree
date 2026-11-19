@@ -1,0 +1,936 @@
+{
+ "p45": {
+  "homepage": "https://www.andrew.cmu.edu/user/aristesk"
+ },
+ "p54": {
+  "homepage": "https://www.andrew.cmu.edu/user/bparno"
+ },
+ "p79": {
+  "scholar": "https://scholar.google.com/citations?user=l6oz33MAAAAJ"
+ },
+ "p118": {
+  "homepage": "https://radum.ece.utexas.edu"
+ },
+ "p214": {
+  "scholar": "https://scholar.google.com/citations?user=CiesWGcAAAAJ"
+ },
+ "p224": {
+  "homepage": "https://rtsl.cps.mw.tum.de/personal_page/mcaccamo"
+ },
+ "p275": {
+  "homepage": "https://ggis.illinois.edu/directory/profile/shaowen"
+ },
+ "p280": {
+  "homepage": "https://engineering.cmu.edu/directory/bios/sanders-william.html"
+ },
+ "p284": {
+  "homepage": "https://stodden.net"
+ },
+ "p287": {
+  "homepage": "https://www.haosu.ai"
+ },
+ "p296": {
+  "homepage": "https://sites.google.com/ucsd.edu/yufeiding"
+ },
+ "p397": {
+  "homepage": "https://www.humanw.tu-darmstadt.de/kontakt_details_83584.de.jsp"
+ },
+ "p427": {
+  "homepage": "https://www.khoury.northeastern.edu/people/seth-hutchinson"
+ },
+ "p430": {
+  "homepage": "https://jhoffman.github.io"
+ },
+ "p446": {
+  "homepage": "https://sim.ece.utexas.edu/people.html"
+ },
+ "p484": {
+  "scholar": "https://scholar.google.com/citations?user=BXEDBDUAAAAJ"
+ },
+ "p491": {
+  "homepage": "https://mdav.ece.gatech.edu/index.html"
+ },
+ "p538": {
+  "homepage": "https://www.eecs.psu.edu/departments/directory-detail-g.aspx?q=mvs7249"
+ },
+ "p586": {
+  "homepage": "https://people.csail.mit.edu/rrw"
+ },
+ "p642": {
+  "homepage": "https://engineering.dartmouth.edu/community/faculty/rahul-sarpeshkar"
+ },
+ "p644": {
+  "scholar": "https://scholar.google.com/citations?user=jkWGjeAAAAAJ"
+ },
+ "p667": {
+  "scholar": "https://scholar.google.com/citations?user=5_ksIkAAAAJ"
+ },
+ "p688": {
+  "homepage": "https://wainwrigwork.github.io/index.html"
+ },
+ "p737": {
+  "homepage": "https://people.epfl.ch/vivek.subramanian?lang=en"
+ },
+ "p810": {
+  "scholar": "https://scholar.google.com/citations?user=UU9gkwEAAAAJ"
+ },
+ "p848": {
+  "homepage": "https://homes.cs.washington.edu/~bboots"
+ },
+ "p856": {
+  "scholar": "https://scholar.google.com/citations?user=w_HJY2MAAAAJ"
+ },
+ "p924": {
+  "scholar": "https://scholar.google.com/citations?user=ogXTOZ4AAAAJ"
+ },
+ "p925": {
+  "homepage": "https://profiles.stanford.edu/leonidas-guibas"
+ },
+ "p931": {
+  "homepage": "https://nlp.stanford.edu/~manning"
+ },
+ "p942": {
+  "homepage": "https://tml.stanford.edu/people/karen-liu"
+ },
+ "p943": {
+  "homepage": "https://web.stanford.edu/~bohg"
+ },
+ "p948": {
+  "scholar": "https://scholar.google.com/citations?user=ZTsHfNAAAAAJ"
+ },
+ "p953": {
+  "scholar": "https://scholar.google.com/citations?user=pXzn2akAAAAJ"
+ },
+ "p957": {
+  "homepage": "https://theory.stanford.edu/~barrett"
+ },
+ "p965": {
+  "scholar": "https://scholar.google.com/citations?user=16rpqWQAAAAJ"
+ },
+ "p970": {
+  "scholar": "https://scholar.google.com/citations?user=4hS0jZ8AAAAJ"
+ },
+ "p979": {
+  "homepage": "https://profiles.stanford.edu/mehran-sahami"
+ },
+ "p982": {
+  "scholar": "https://scholar.google.com/citations?user=TyPF9V4AAAAJ"
+ },
+ "p995": {
+  "homepage": "https://www.cs.toronto.edu/~ristenpart"
+ },
+ "p1004": {
+  "scholar": "https://scholar.google.com/citations?user=_7IzKZQAAAAJ"
+ },
+ "p1052": {
+  "homepage": "https://alexandrasilva.org/#/main.html"
+ },
+ "p1106": {
+  "homepage": "https://amandalazar.net"
+ },
+ "p1108": {
+  "homepage": "https://zaoxing.github.io"
+ },
+ "p1133": {
+  "homepage": "https://ischool.umd.edu/directory/jonathan-lazar"
+ },
+ "p1134": {
+  "homepage": "https://www.cs.umd.edu/users/metzler"
+ },
+ "p1137": {
+  "homepage": "https://users.umiacs.umd.edu/~nhf"
+ },
+ "p1145": {
+  "homepage": "https://www.cics.umass.edu/about/directory/keith-marzullo"
+ },
+ "p1148": {
+  "homepage": "https://ece.umd.edu/clark/faculty/484/Ankur-Srivastava"
+ },
+ "p1158": {
+  "scholar": "https://scholar.google.com/citations?user=5-O2lzIAAAAJ"
+ },
+ "p1179": {
+  "homepage": "https://shelat.khoury.northeastern.edu"
+ },
+ "p1192": {
+  "homepage": "https://cs.uwaterloo.ca/contacts/renee-j-miller"
+ },
+ "p1217": {
+  "homepage": "https://olga-vitek-lab.khoury.northeastern.edu"
+ },
+ "p1218": {
+  "homepage": "https://lazerlab.net"
+ },
+ "p1251": {
+  "homepage": "https://www.cs.tsinghua.edu.cn/info/1107/6209.htm"
+ },
+ "p1260": {
+  "homepage": "https://cs.purdue.edu/homes/bbenes"
+ },
+ "p1261": {
+  "homepage": "https://majianzhu.com"
+ },
+ "p1266": {
+  "scholar": "https://scholar.google.com/citations?user=3jJAvruHOWYC"
+ },
+ "p1300": {
+  "scholar": "https://scholar.google.com/citations?user=EH2FzosAAAAJ"
+ },
+ "p1303": {
+  "scholar": "https://scholar.google.com/citations?user=RPVQCysAAAAJ"
+ },
+ "p1309": {
+  "scholar": "https://scholar.google.com/citations?user=xQMGL_8AAAAJ"
+ },
+ "p1315": {
+  "scholar": "https://scholar.google.com/citations?user=UEFIltYAAAAJ"
+ },
+ "p1338": {
+  "homepage": "https://wisionlab.com/people/mohit-gupta"
+ },
+ "p1367": {
+  "scholar": "https://scholar.google.com/citations?user=J8ixfu8AAAAJ"
+ },
+ "p1374": {
+  "homepage": "https://cecchetti.sites.cs.wisc.edu"
+ },
+ "p1384": {
+  "homepage": "https://www.dpmms.cam.ac.uk/~pll28",
+  "scholar": "https://scholar.google.com/citations?user=cht-q2UAAAAJ"
+ },
+ "p1410": {
+  "homepage": "https://eunsol.github.io"
+ },
+ "p1450": {
+  "homepage": "https://www.math.ucla.edu/~cffjiang"
+ },
+ "p1453": {
+  "scholar": "https://scholar.google.com/citations?user=M9V6y-0AAAAJ"
+ },
+ "p1464": {
+  "scholar": "https://scholar.google.com/citations?user=K_PZFhEAAAAJ"
+ },
+ "p1466": {
+  "homepage": "https://pratikac.github.io"
+ },
+ "p1473": {
+  "homepage": "https://www.cis.upenn.edu/~myatskar"
+ },
+ "p1476": {
+  "scholar": "https://scholar.google.com/citations?user=0o1C8ykAAAAJ"
+ },
+ "p1490": {
+  "scholar": "https://scholar.google.com/citations?user=FqKcLDQAAAAJ"
+ },
+ "p1497": {
+  "homepage": "https://www.mit.edu/~rakhlin"
+ },
+ "p1508": {
+  "homepage": "https://sites.google.com/site/quaerereverum9"
+ },
+ "p1594": {
+  "scholar": "https://scholar.google.com/citations?user=5elBSHQAAAAJ"
+ },
+ "p1630": {
+  "homepage": "https://www.cs.princeton.edu/people/profile/ogt"
+ },
+ "p1641": {
+  "scholar": "https://scholar.google.com/citations?user=cagVT0AAAAAJ"
+ },
+ "p1647": {
+  "homepage": "https://ctsilva.github.io"
+ },
+ "p1686": {
+  "homepage": "https://wp.nyu.edu/odednov"
+ },
+ "p1698": {
+  "homepage": "https://www.nealen.net"
+ },
+ "p1703": {
+  "homepage": "https://cse.engineering.nyu.edu/~hstein"
+ },
+ "p1719": {
+  "scholar": "https://scholar.google.com/citations?user=UedS9LQAAAAJ"
+ },
+ "p1759": {
+  "homepage": "https://hcr.cs.umass.edu/people/hzhang"
+ },
+ "p1760": {
+  "homepage": "https://people.cs.umass.edu/~sniekum"
+ },
+ "p1764": {
+  "homepage": "https://groups.cs.umass.edu/zamani"
+ },
+ "p1766": {
+  "homepage": "https://people.cs.umass.edu/~amir"
+ },
+ "p1767": {
+  "homepage": "https://people.cs.umass.edu/~yzick"
+ },
+ "p1768": {
+  "homepage": "https://people.cs.umass.edu/~domke"
+ },
+ "p1771": {
+  "homepage": "https://groups.cs.umass.edu/marlin"
+ },
+ "p1776": {
+  "homepage": "https://people.cs.umass.edu/~shenoy"
+ },
+ "p1777": {
+  "homepage": "https://groups.cs.umass.edu/ramesh",
+  "scholar": "https://scholar.google.com/citations?user=Hj4o7GYAAAAJ"
+ },
+ "p1778": {
+  "homepage": "https://www.cics.umass.edu/about/directory/donald-towsley"
+ },
+ "p1781": {
+  "scholar": "https://scholar.google.com/citations?user=-bLGeg0AAAAJ"
+ },
+ "p1787": {
+  "homepage": "https://people.cs.umass.edu/~bsilva"
+ },
+ "p1789": {
+  "homepage": "https://marcoserafini.github.io"
+ },
+ "p1798": {
+  "homepage": "https://people.cs.umass.edu/~pdatta"
+ },
+ "p1799": {
+  "homepage": "https://people.cs.umass.edu/~rkarkar"
+ },
+ "p1800": {
+  "homepage": "https://groups.cs.umass.edu/oneill"
+ },
+ "p1802": {
+  "homepage": "https://people.cs.umass.edu/~phaas"
+ },
+ "p1804": {
+  "homepage": "https://people.cs.umass.edu/~arun"
+ },
+ "p1813": {
+  "homepage": "https://haipeng-luo.net"
+ },
+ "p1815": {
+  "homepage": "https://govindan.usc.edu"
+ },
+ "p1816": {
+  "homepage": "https://sites.google.com/view/yanliu-ai/home",
+  "scholar": "https://scholar.google.com/citations?user=UUKLPMYAAAAJ"
+ },
+ "p1821": {
+  "homepage": "https://www.david-kempe.com"
+ },
+ "p1822": {
+  "homepage": "https://sites.usc.edu/chaowang"
+ },
+ "p1828": {
+  "homepage": "https://cgit.usc.edu/contact/ulrich-neumann",
+  "scholar": "https://scholar.google.com/citations?user=MHet2VoAAAAJ"
+ },
+ "p1831": {
+  "homepage": "https://viterbi-web.usc.edu/~shaddin"
+ },
+ "p1840": {
+  "homepage": "https://viterbi-web.usc.edu/~halfond"
+ },
+ "p1842": {
+  "homepage": "https://viterbi-web.usc.edu/~jbarbic"
+ },
+ "p1843": {
+  "homepage": "https://softarch.usc.edu/~neno"
+ },
+ "p1845": {
+  "homepage": "https://ebiyik.github.io"
+ },
+ "p1848": {
+  "homepage": "https://www.etis.ee/CV/Naveed_Muhammad/eng"
+ },
+ "p1856": {
+  "homepage": "https://viterbi.usc.edu/directory/faculty/Chattopadhyay/Souti"
+ },
+ "p1858": {
+  "homepage": "https://viterbi-web.usc.edu/~shanghua"
+ },
+ "p1864": {
+  "homepage": "https://www.flslab.org"
+ },
+ "p1865": {
+  "homepage": "https://valerolab.org"
+ },
+ "p1866": {
+  "homepage": "https://viterbi.usc.edu/directory/faculty/Huang/Ming-Deh"
+ },
+ "p1867": {
+  "homepage": "https://myweb.cuhk.edu.cn/hwangkai"
+ },
+ "p1869": {
+  "scholar": "https://scholar.google.com/citations?user=iqvLgJIAAAAJ"
+ },
+ "p1882": {
+  "homepage": "https://cs.uchicago.edu/people/michael-franklin"
+ },
+ "p1884": {
+  "scholar": "https://scholar.google.com/citations?user=bEXfdkoAAAAJ"
+ },
+ "p1888": {
+  "homepage": "https://yuxinchen.org"
+ },
+ "p1889": {
+  "homepage": "https://computerscience.uchicago.edu/people/ian-foster"
+ },
+ "p1897": {
+  "homepage": "https://orecchia.net"
+ },
+ "p1900": {
+  "homepage": "https://coe.northeastern.edu/people/li-yanjing",
+  "scholar": "https://scholar.google.com/citations?user=V-VpTSIAAAAJ"
+ },
+ "p1909": {
+  "homepage": "https://cs.uchicago.edu/people/rick-stevens"
+ },
+ "p1910": {
+  "scholar": "https://scholar.google.com/citations?user=KbVFiKYAAAAJ"
+ },
+ "p1913": {
+  "scholar": "https://scholar.google.com/citations?user=TtRVMCgAAAAJ"
+ },
+ "p1963": {
+  "homepage": "https://cse.whu.edu.cn/info/3421/37531.htm"
+ },
+ "p1972": {
+  "homepage": "http://susu-xu.com"
+ },
+ "p2008": {
+  "homepage": "http://plrg.ics.uci.edu"
+ },
+ "p2013": {
+  "homepage": "https://hpcforge.eng.uci.edu"
+ },
+ "p2015": {
+  "homepage": "https://ics.uci.edu/~vazirani",
+  "scholar": "https://scholar.google.com/citations?user=8eB7Q1kAAAAJ"
+ },
+ "p2024": {
+  "scholar": "https://scholar.google.com/citations?user=xzi3XR8AAAAJ"
+ },
+ "p2029": {
+  "scholar": "https://scholar.google.com/citations?user=oD0ISLcAAAAJ"
+ },
+ "p2040": {
+  "scholar": "https://scholar.google.com/citations?user=dBhm_oIAAAAJ"
+ },
+ "p2051": {
+  "scholar": "https://scholar.google.com/citations?user=-jW6ADwAAAAJ"
+ },
+ "p2054": {
+  "homepage": "https://ece.duke.edu/people/lawrence-carin"
+ },
+ "p2056": {
+  "homepage": "https://ece.duke.edu/people/hai-helen-li"
+ },
+ "p2079": {
+  "scholar": "https://scholar.google.com/citations?user=XtUBAtwAAAAJ"
+ },
+ "p2097": {
+  "scholar": "https://scholar.google.com/citations?user=UNa5ktYAAAAJ"
+ },
+ "p2101": {
+  "homepage": "https://scholars.duke.edu/person/xiaobai.sun"
+ },
+ "p2135": {
+  "homepage": "https://cs.ucsb.edu/people/faculty/michael-beyeler"
+ },
+ "p2141": {
+  "homepage": "https://www.hkust-gz.edu.cn/people/hui-xiong"
+ },
+ "p2151": {
+  "homepage": "http://seqam.rutgers.edu"
+ },
+ "p2153": {
+  "homepage": "https://people.cs.rutgers.edu/~dd903"
+ },
+ "p2155": {
+  "homepage": "https://engineering.nyu.edu/faculty/martin-farach-colton"
+ },
+ "p2157": {
+  "homepage": "https://wp.nyu.edu/tandonschoolofengineering-aaronbernstein"
+ },
+ "p2160": {
+  "homepage": "https://people.cs.rutgers.edu/~sn624"
+ },
+ "p2165": {
+  "homepage": "https://cskarthikcs.github.io"
+ },
+ "p2166": {
+  "homepage": "https://chiragshah.org"
+ },
+ "p2175": {
+  "homepage": "https://ruccs.rutgers.edu/jacob"
+ },
+ "p2190": {
+  "scholar": "https://scholar.google.com/citations?user=OSBfM5sAAAAJ"
+ },
+ "p2194": {
+  "homepage": "https://profiles.ucr.edu/app/home/profile/gregoryv"
+ },
+ "p2214": {
+  "scholar": "https://scholar.google.com/citations?user=RI2U3JYAAAAJ"
+ },
+ "p2216": {
+  "homepage": "https://mohsenlesani.github.io"
+ },
+ "p2219": {
+  "homepage": "https://profiles.ucr.edu/app/home/profile/pbrisk"
+ },
+ "p2223": {
+  "scholar": "https://scholar.google.com/citations?user=3FC3-T0AAAAJ"
+ },
+ "p2224": {
+  "homepage": "https://www.cs.ucr.edu/~eldawy"
+ },
+ "p2225": {
+  "homepage": "https://www.cs.ucr.edu/~epapalex"
+ },
+ "p2258": {
+  "homepage": "http://www.trentjaeger.com"
+ },
+ "p2306": {
+  "homepage": "https://zhaoranwang.github.io"
+ },
+ "p2311": {
+  "homepage": "http://users.eecs.northwestern.edu/~jhullman"
+ },
+ "p2315": {
+  "scholar": "https://scholar.google.com/citations?user=-E3hYj8AAAAJ"
+ },
+ "p2326": {
+  "scholar": "https://scholar.google.com/citations?user=0pdiFKEAAAAJ"
+ },
+ "p2328": {
+  "homepage": "http://users.eecs.northwestern.edu/~jennie"
+ },
+ "p2351": {
+  "scholar": "https://scholar.google.com/citations?user=3UlRWD8AAAAJ"
+ },
+ "p2361": {
+  "homepage": "https://people.cs.gmu.edu/~fangyiyu"
+ },
+ "p2384": {
+  "homepage": "https://www.jokeren.tech"
+ },
+ "p2388": {
+  "homepage": "https://www.noramcdonald.net"
+ },
+ "p2390": {
+  "homepage": "https://shishika.com"
+ },
+ "p2394": {
+  "homepage": "https://mason.gmu.edu/~johri"
+ },
+ "p2399": {
+  "homepage": "https://www.gmu.edu/profiles/cummings"
+ },
+ "p2404": {
+  "homepage": "https://science.gmu.edu/directory/hoda-bidkhori",
+  "scholar": "https://scholar.google.com/citations?user=xtn4e0wAAAAJ"
+ },
+ "p2427": {
+  "homepage": "https://www.cise.ufl.edu/ragan-eric"
+ },
+ "p2436": {
+  "homepage": "http://krishnanarayanan.wikidot.com"
+ },
+ "p2448": {
+  "homepage": "https://artsci.tamu.edu/geography/contact/profiles/daniel-goldberg.html"
+ },
+ "p2449": {
+  "homepage": "https://people.engr.tamu.edu/shipman/index.html",
+  "scholar": "https://scholar.google.com/citations?user=w0hg2MoAAAAJ"
+ },
+ "p2517": {
+  "homepage": "https://pictureresearch.github.io/picture_website/xshen5/index.htm"
+ },
+ "p2518": {
+  "homepage": "https://wenwujie.github.io"
+ },
+ "p2521": {
+  "homepage": "https://www.cise.ufl.edu/boyer-kristy"
+ },
+ "p2531": {
+  "scholar": "https://scholar.google.com/citations?user=1hEE9ZsAAAAJ"
+ },
+ "p2573": {
+  "homepage": "https://sites.google.com/view/wei-lun-harry-chao"
+ },
+ "p2607": {
+  "homepage": "https://cse.osu.edu/people/zhang.10631"
+ },
+ "p2619": {
+  "homepage": "https://jundongli.github.io"
+ },
+ "p2657": {
+  "homepage": "http://www.cs.virginia.edu/~soffa/index.html%3Fp=6.html"
+ },
+ "p2743": {
+  "scholar": "https://scholar.google.com/citations?user=-uHod_AAAAAJ"
+ },
+ "p2791": {
+  "scholar": "https://scholar.google.com/citations?user=t_CVDYoAAAAJ"
+ },
+ "p2794": {
+  "homepage": "https://www.andrew.cmu.edu/user/theophib"
+ },
+ "p2797": {
+  "homepage": "https://scale-lab.github.io/pages/sreda.html"
+ },
+ "p2839": {
+  "homepage": "https://ai.bu.edu/ksaenko.html"
+ },
+ "p2841": {
+  "homepage": "https://www.cs.bu.edu/fac/sclaroff"
+ },
+ "p2845": {
+  "homepage": "http://cs-people.bu.edu/ads22"
+ },
+ "p2847": {
+  "homepage": "https://cs-people.bu.edu/aene"
+ },
+ "p2848": {
+  "homepage": "https://www.bu.edu/cs/profiles/ran-canetti",
+  "scholar": "https://scholar.google.com/citations?user=-PWcE1YAAAAJ"
+ },
+ "p2851": {
+  "homepage": "https://www.csd.uoc.gr/CSD/index.jsp?content=academic_staff&openmenu=demoAcc2&lang=en"
+ },
+ "p2852": {
+  "homepage": "https://www.monash.edu/indonesia/about/academic-staff/derry-wijaya"
+ },
+ "p2870": {
+  "homepage": "https://cs-people.bu.edu/evimaria"
+ },
+ "p2878": {
+  "homepage": "https://www.cs.jhu.edu/~vova"
+ },
+ "p2916": {
+  "homepage": "https://cse.buffalo.edu/~yaxiongx"
+ },
+ "p3055": {
+  "homepage": "https://cs.uic.edu/profiles/tang-wei"
+ },
+ "p3065": {
+  "homepage": "https://lcheng.org"
+ },
+ "p3100": {
+  "scholar": "https://scholar.google.com/citations?user=-ExSBb0AAAAJ"
+ },
+ "p3150": {
+  "homepage": "https://cseweb.ucsd.edu//~mniethammer/author/marc-niethammer"
+ },
+ "p3168": {
+  "homepage": "https://cs.unc.edu/person/roni-sengupta"
+ },
+ "p3246": {
+  "homepage": "https://www.csc.ncsu.edu/people/skraghve"
+ },
+ "p3279": {
+  "homepage": "https://next.cs.vt.edu"
+ },
+ "p3285": {
+  "homepage": "https://isminoula.github.io"
+ },
+ "p3303": {
+  "homepage": "https://people.ucas.edu.cn/~tdw"
+ },
+ "p3322": {
+  "homepage": "https://jisun.me"
+ },
+ "p3336": {
+  "homepage": "https://arifulazad.github.io"
+ },
+ "p3374": {
+  "scholar": "https://scholar.google.com/citations?user=OUS_bT8AAAAJ"
+ },
+ "p3378": {
+  "scholar": "https://scholar.google.com/citations?user=htWC_lMAAAAJ"
+ },
+ "p3379": {
+  "homepage": "https://suchisaria.jhu.edu",
+  "scholar": "https://scholar.google.com/citations?user=FZLHMv8AAAAJ"
+ },
+ "p3396": {
+  "homepage": "https://jovo.me"
+ },
+ "p3440": {
+  "homepage": "https://en.westlake.edu.cn/faculty/guojun-qi.html"
+ },
+ "p3465": {
+  "homepage": "https://website.cs.vt.edu/people/faculty/ryan-p-mcmahan.html"
+ },
+ "p3515": {
+  "homepage": "https://personal.utdallas.edu/~vibhav.gogate/index.html"
+ },
+ "p3517": {
+  "homepage": "https://youngwei.com"
+ },
+ "p3523": {
+  "homepage": "http://www.yliuu.com",
+  "scholar": "https://scholar.google.com/citations?user=jKrIVCIAAAAJ"
+ },
+ "p3568": {
+  "homepage": "https://cigroup.wustl.edu"
+ },
+ "p3571": {
+  "homepage": "https://www.cs.utah.edu/patwari-neal"
+ },
+ "p3577": {
+  "homepage": "https://cs.unc.edu/person/xiaoming-liu"
+ },
+ "p3579": {
+  "homepage": "https://people.gix.tsinghua.edu.cn/yunhao"
+ },
+ "p3581": {
+  "homepage": "https://jiayuzhou.github.io"
+ },
+ "p3582": {
+  "homepage": "https://staff.ie.cuhk.edu.hk/~glxing"
+ },
+ "p3623": {
+  "homepage": "https://engineering.buffalo.edu/engineering-education/people/directory/decker-adrienne.html"
+ },
+ "p3626": {
+  "homepage": "https://fawadahm.github.io"
+ },
+ "p3633": {
+  "homepage": "http://http://tdesell.cs.und.edu"
+ },
+ "p3657": {
+  "homepage": "https://engineering.nd.edu/faculty/yiyu-shi"
+ },
+ "p3735": {
+  "homepage": "https://www.uta.edu/academics/faculty/profile?user=dianqi.han"
+ },
+ "p3766": {
+  "homepage": "https://eecs.utk.edu/people/michela-taufer"
+ },
+ "p3795": {
+  "homepage": "https://caiwending.github.io/web/home.html"
+ },
+ "p3869": {
+  "homepage": "https://people.computing.clemson.edu/~ioannis"
+ },
+ "p3898": {
+  "homepage": "https://engineering.vanderbilt.edu/bio/?pid=robert-bodenheimer"
+ },
+ "p3899": {
+  "homepage": "https://computing.vanderbilt.edu/person/xenofon-koutsoukos"
+ },
+ "p3907": {
+  "homepage": "https://engineering.vanderbilt.edu/bio/?pid=gautam-biswas",
+  "scholar": "https://scholar.google.com/citations?user=-m5wrTkAAAAJ"
+ },
+ "p3911": {
+  "homepage": "https://forrestlaine.github.io"
+ },
+ "p3912": {
+  "homepage": "https://engineering.vanderbilt.edu/bio/?pid=meiyi-ma"
+ },
+ "p3918": {
+  "scholar": "https://scholar.google.com/citations?user=XfSl-OoAAAAJ"
+ },
+ "p3921": {
+  "homepage": "https://engineering.vanderbilt.edu/bio/?pid=padma-raghavan"
+ },
+ "p3922": {
+  "scholar": "https://scholar.google.com/citations?user=y_HDkOYAAAAJ"
+ },
+ "p3946": {
+  "homepage": "https://www.vision.caltech.edu"
+ },
+ "p3947": {
+  "homepage": "https://adamwierman.com"
+ },
+ "p3949": {
+  "homepage": "https://www.epfl.ch/labs/qcc"
+ },
+ "p3950": {
+  "homepage": "https://users.cms.caltech.edu/~ps"
+ },
+ "p3951": {
+  "homepage": "https://users.cms.caltech.edu/~schulman"
+ },
+ "p3953": {
+  "homepage": "https://users.cms.caltech.edu/~umans"
+ },
+ "p3957": {
+  "homepage": "https://www.cs.wm.edu/~bren"
+ },
+ "p3964": {
+  "homepage": "https://jren73.github.io"
+ },
+ "p4060": {
+  "scholar": "https://scholar.google.com/citations?user=W4Y0jUIAAAAJ"
+ },
+ "p4195": {
+  "homepage": "https://ninghaohello.github.io"
+ },
+ "p4259": {
+  "homepage": "https://cs.uic.edu/profiles/lan-zhiling"
+ },
+ "p4262": {
+  "homepage": "https://engineering.oregonstate.edu/people/kyle-c-hale"
+ },
+ "p4265": {
+  "scholar": "https://scholar.google.com/citations?user=axLpOwwAAAAJ"
+ },
+ "p4268": {
+  "homepage": "https://people.cs.rutgers.edu/~lirong.xia"
+ },
+ "p4305": {
+  "homepage": "https://engineering.tamu.edu/cse/profiles/luo-wenhao.html"
+ },
+ "p4357": {
+  "homepage": "https://eecs.utk.edu/people/hairong-qi"
+ },
+ "p4445": {
+  "homepage": "https://bio-nlp.github.io/index.html"
+ },
+ "p4455": {
+  "homepage": "https://sciences.utsa.edu/faculty/profiles/martin-fred.html"
+ },
+ "p4467": {
+  "homepage": "https://www.cis.udel.edu/people/faculty/ioannis-rekleitis"
+ },
+ "p4482": {
+  "homepage": "https://www.abusayeedsaifullah.com"
+ },
+ "p4484": {
+  "homepage": "https://dongxiaozhu.github.io"
+ },
+ "p4485": {
+  "homepage": "https://zichunzhong.github.io"
+ },
+ "p4521": {
+  "homepage": "https://damrl.cs.fiu.edu/janki-bhimani"
+ },
+ "p4548": {
+  "homepage": "https://person.zju.edu.cn/wenliangdu"
+ },
+ "p4579": {
+  "homepage": "https://cclinus.github.io"
+ },
+ "p4589": {
+  "homepage": "https://facultyinfo.unt.edu/faculty-profile?profile=ss4875"
+ },
+ "p4645": {
+  "homepage": "https://yinghwu.github.io"
+ },
+ "p4659": {
+  "homepage": "https://www.memphis.edu/cs/people/faculty_pages/christos-papadopoulos.php"
+ },
+ "p4661": {
+  "scholar": "https://scholar.google.com/citations?user=0VzUxIcAAAAJ"
+ },
+ "p4769": {
+  "homepage": "https://cise.ufl.edu/~sumit.jha"
+ },
+ "p4771": {
+  "scholar": "https://scholar.google.com/citations?user=vTHyzNoAAAAJ"
+ },
+ "p4786": {
+  "homepage": "https://www.rit.edu/directory/bxkcis-bartosz-krawczyk"
+ },
+ "p4788": {
+  "homepage": "https://eecs.utk.edu/people/hongkai-yu"
+ },
+ "p4795": {
+  "homepage": "https://sji.soc.uconn.edu"
+ },
+ "p4803": {
+  "homepage": "https://engineering.uconn.edu/person/pavel-skums"
+ },
+ "p4804": {
+  "homepage": "https://www.cc.gatech.edu/people/lynn-dombrowski"
+ },
+ "p4806": {
+  "homepage": "https://khreda.com"
+ },
+ "p4809": {
+  "homepage": "https://engineering.indiana.edu/contact/profile/index.html?Fengguang_Song"
+ },
+ "p4826": {
+  "homepage": "https://sites.mst.edu/sjpark"
+ },
+ "p4828": {
+  "homepage": "https://people.computing.clemson.edu/~bullmer"
+ },
+ "p4832": {
+  "homepage": "https://computerscience.nmsu.edu/facultydirectory/individual-bio-pages/enrico-pontelli.html"
+ },
+ "p4848": {
+  "homepage": "https://arazi.people.clemson.edu"
+ },
+ "p4858": {
+  "homepage": "https://www.depts.ttu.edu/cs/faculty/yuanlin_zhang"
+ },
+ "p4859": {
+  "scholar": "https://scholar.google.com/citations?user=B1b-yVAAAAAJ"
+ },
+ "p4862": {
+  "homepage": "https://www.depts.ttu.edu/cs/faculty/susan_a._mengel",
+  "scholar": "https://scholar.google.com/citations?user=SH_ZjnkAAAAJ"
+ },
+ "p4863": {
+  "homepage": "https://www.depts.ttu.edu/cs/faculty/Abdul_Serwadda"
+ },
+ "p4864": {
+  "homepage": "https://www.depts.ttu.edu/cs/faculty/yu_zhuang",
+  "scholar": "https://scholar.google.com/citations?user=N3w8SZEAAAAJ"
+ },
+ "p4908": {
+  "homepage": "https://www.cs.washington.edu/people/faculty/zhao-dongfang"
+ },
+ "p4941": {
+  "homepage": "https://nassernasrabadi.wixsite.com/mysite"
+ },
+ "p4942": {
+  "homepage": "https://sci.utah.edu/people/gianfranco-doretto"
+ },
+ "p4955": {
+  "homepage": "http://www.fsnhp.msstate.edu/docs/staff/Byron%20%20Williams%20CV%20July%202012%20.pdf"
+ },
+ "p4987": {
+  "homepage": "https://www.cs.albany.edu/~cchelmis"
+ },
+ "p4989": {
+  "homepage": "https://homes.luddy.indiana.edu/yanda/home.html",
+  "scholar": "https://scholar.google.com/citations?user=Kw71k1gAAAAJ"
+ },
+ "p4991": {
+  "homepage": "https://thomas.gilray.org"
+ },
+ "p5000": {
+  "homepage": "https://ist.gmu.edu/profiles/sdas35"
+ },
+ "p5011": {
+  "homepage": "https://duanye.org",
+  "scholar": "https://scholar.google.com/citations?user=lJvwEx8AAAAJ"
+ },
+ "p5023": {
+  "homepage": "https://qcheng2023.github.io"
+ },
+ "p5024": {
+  "homepage": "https://ceg.me",
+  "scholar": "https://scholar.google.com/citations?user=qIQ3IwYAAAAJ"
+ },
+ "p5025": {
+  "homepage": "https://cs.ou.edu/~database/faculty",
+  "scholar": "https://scholar.google.com/citations?user=MTdLuRsAAAAJ"
+ },
+ "p5026": {
+  "homepage": "https://mcgovern-fagg.org/amy"
+ },
+ "p5027": {
+  "homepage": "https://cs.ou.edu/~trytten",
+  "scholar": "https://scholar.google.com/citations?user=wmpx67kAAAAJ"
+ }
+}

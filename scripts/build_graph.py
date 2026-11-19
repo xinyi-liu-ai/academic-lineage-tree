@@ -220,6 +220,52 @@ def main():
         g.edges[(other, stu, 'phd')]['note'] = r.get('note', '')
         stats['dblp_advisor'] += 1
 
+    # 2c) 合并同一个人的重复节点（find_duplicates.py：同主页 / 同 Scholar / 同名且同导师）
+    alias = {}
+    mc_path = os.path.join(ROOT, 'data/enrich/merge_candidates.json')
+    for m in (json.load(open(mc_path, encoding='utf-8')) if os.path.exists(mc_path) else []):
+        keep, drop = m['keep'], m['drop']
+        if m.get('reason') not in ('same_homepage', 'same_scholar', 'same_name_shared_advisor'):
+            continue
+        while keep in alias:
+            keep = alias[keep]
+        if keep == drop or drop not in g.nodes or keep not in g.nodes or not g.nodes[drop].get('ext'):
+            continue
+        alias[drop] = keep
+        for k in ('url', 'af', 'h'):
+            if g.nodes[keep].get('ext') and g.nodes[drop].get(k) and not g.nodes[keep].get(k):
+                g.nodes[keep][k] = g.nodes[drop][k]
+        for (a, s, t), e in list(g.edges.items()):
+            if drop not in (a, s):
+                continue
+            del g.edges[(a, s, t)]
+            a2, s2 = (keep if a == drop else a), (keep if s == drop else s)
+            if a2 == s2:
+                continue
+            if (a2, s2, t) in g.edges:
+                old = g.edges[(a2, s2, t)]
+                old['src'] += [x for x in e['src'] if x not in old['src']]
+            else:
+                e['a'], e['s'] = a2, s2
+                g.edges[(a2, s2, t)] = e
+        del g.nodes[drop]
+    stats['merged_duplicates'] = len(alias)
+
+    # 2d) 两人互为导师（A→B 且 B→A）：保留来源更可靠的那条，一样可靠就都去掉
+    rank = lambda e: max({'sheet': 3, 'wikidata': 3, 'wikipedia': 3, 'cv': 2, 'homepage': 1, 'dblp': 0}.get(x, 1) for x in e['src'])
+    mutual = 0
+    for (a, s, t), e in list(g.edges.items()):
+        rev = g.edges.get((s, a, 'phd')) if t == 'phd' else None
+        if rev is None or (a, s, t) not in g.edges:
+            continue
+        ra, rb = rank(e), rank(rev)
+        if ra >= rb:
+            del g.edges[(s, a, 'phd')]
+        if rb >= ra:
+            del g.edges[(a, s, t)]
+        mutual += 1
+    stats['mutual_advisor_pairs_fixed'] = mutual
+
     # 3) 人工表的 PhD 导师若与 Wikidata / 维基百科不一致，标为存疑
     trusted = defaultdict(set)
     for e in g.edges.values():
@@ -240,6 +286,34 @@ def main():
     people = json.load(open(people_path, encoding='utf-8')) if os.path.exists(people_path) else {}
     links_path = os.path.join(ROOT, 'data/enrich/student_links.json')  # 导师/学生主页上链过去的个人主页
     links = json.load(open(links_path, encoding='utf-8')) if os.path.exists(links_path) else {}
+    def opt(name):
+        f = os.path.join(ROOT, 'data/enrich', name)
+        return json.load(open(f, encoding='utf-8')) if os.path.exists(f) else {}
+    # 主页上的职称 / 照片地址（extract_titles.py、fetch_photos.py、fetch_people_photos.py）
+    titles, photos, people_photos = opt('titles.json'), opt('photos.json'), opt('people_photos.json')
+    for nid in opt('photo_blocklist.json'):  # 人工核对出的选错的主页照片，或本人要求删除
+        photos.pop(nid, None)
+        people_photos.pop(nid, None)
+    # 院系名录（fetch_directories.py）比个人主页可靠，优先；Wikimedia Commons 照片（fetch_wikidata_photos.py）兜底
+    for pid, r in opt('directory.json').items():
+        if r.get('ti'):
+            titles[pid] = r['ti']
+        if r.get('ph'):
+            photos[pid] = r['ph']
+    link_updates, dead_links = opt('link_updates.json'), opt('dead_links.json')
+    bad_urls = opt('photo_https_bad.json')  # https 下打不开的照片地址（verify_photos.py），换下一个来源
+    for src in (photos, people_photos):
+        for nid in [k for k, u in src.items() if u in bad_urls]:
+            del src[nid]
+    for nid, u in opt('wikidata_photos.json').items():
+        if u not in bad_urls:
+            photos.setdefault(nid, u)
+            people_photos.setdefault(nid, u)
+    aliases_of = defaultdict(list)
+    for drop, keep in alias.items():
+        while keep in alias:
+            keep = alias[keep]
+        aliases_of[keep].append(drop)
     out_nodes = []
     for nid, n in g.nodes.items():
         if n.get('ext'):
@@ -247,18 +321,33 @@ def main():
                 continue
             d = dict(id=nid, n=n['name'], x=1, **({'w': n['url']} if n.get('url') else {}), **({'af': n['af']} if n.get('af') else {}), **({'h': n['h']} if n.get('h') else {}))
             d.update(people.get(nid, {}))
+            for dup in aliases_of.get(nid, ()):  # 合并掉的重复节点带来的主页 / 领英 / 单位
+                for k, v in {**people.get(dup, {}), **{k: v for k, v in links.get(dup, {}).items() if k in ('h', 'li', 'g')}}.items():
+                    d.setdefault(k, v)
             for k, v in links.get(nid, {}).items():
                 if k in ('h', 'li', 'g') and not d.get(k):
                     d[k] = v
                     if k == 'h':
                         d['hv'] = links[nid]['via']
+            if people_photos.get(nid):
+                d['ph'] = people_photos[nid]
+            if d.get('h') and nid in dead_links:  # 主页已失效（check_links.py）：名字改链到领英 / 搜索
+                del d['h']
+                d.pop('hv', None)
             out_nodes.append(d)
         else:
             d = dict(id=nid, n=n['name'], u=uni_idx[n['uni']], h=n['homepage'])
-            if n['scholar']:
-                d['g'] = n['scholar']
+            lu = link_updates.get(nid, {})  # 旧主页失效时用 CSRankings 现在的主页；补 Scholar（refresh_links.py）
+            if lu.get('homepage'):
+                d['h'] = lu['homepage']
+            if n['scholar'] or lu.get('scholar'):
+                d['g'] = n['scholar'] or lu['scholar']
             if n['cv']:
                 d['c'] = n['cv']
+            if titles.get(nid):
+                d['ti'] = titles[nid]
+            if photos.get(nid):
+                d['ph'] = photos[nid]
             if n.get('status') == 'former':  # 已不在 CSRankings 名单内的学校（调走、退休、荣休）
                 d['o'] = 1
                 if n.get('now_at'):
@@ -266,6 +355,10 @@ def main():
             d['d'] = [a for a, _ in parse_domains(n['domain'])]
             d['a'] = sorted({b for _, b in parse_domains(n['domain'])})
             out_nodes.append(d)
+    for d in out_nodes:  # 抓来的链接只放行 http(s)，防止 javascript: 之类进到网页
+        for k in ('h', 'li', 'g', 'c', 'ph', 'w'):
+            if k in d and not re.match(r'https?://', str(d[k]), re.I):
+                del d[k]
     # 边: [导师, 学生, 类型, 来源, 出处链接, 是否存疑(, 推断依据)]
     edges = [[e['a'], e['s'], e['t'], '+'.join(e['src']), e.get('url', ''), int(bool(e.get('disputed')))]
              + ([e['note']] if e.get('note') else []) for e in g.edges.values()]

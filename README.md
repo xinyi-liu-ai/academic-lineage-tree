@@ -17,9 +17,30 @@ academic background and research family.
 | [English Wikipedia](https://en.wikipedia.org) | `doctoral_advisor` / `doctoral_students` infobox fields | CC BY-SA 4.0 |
 | Professor homepages / CVs | phrases like "PhD advisor: …" or "under the supervision of …", extracted automatically for professors not covered above (≈88% agreement with Wikidata where both exist); each links to its source page | facts only; page text is not redistributed |
 | [dblp](https://dblp.org) | for professors still without an advisor: the senior co-author most often listed last on their papers during their PhD years; only confident cases kept (≈83% correct when checked against 2,177 known advisors); shown as **inferred** | CC0 |
+| Professor homepages (student lists) | the "Students / PhD Students / Alumni / Postdocs" sections of a professor's own page and its People/Group subpages (`fetch_people_pages.py`, `extract_students.py`); personal links of students and advisors are matched from the same pages (`match_people_links.py`) | facts only; page text is not redistributed |
+| Professor homepages (job titles) | title such as "Assistant Professor" or "Associate Teaching Professor", read from the top of the page; the site shows "Faculty" when none is found. Currently ≈4,100 of 6,708 professors (`data/enrich/titles.json`) | facts only |
+| Professor homepages (photos) | the person's photo picked from their own page; only the image URL is stored, see "Photos and takedown". Coverage: see `data/enrich/photos.json` | not redistributed |
 
 When a curated PhD advisor disagrees with Wikidata or Wikipedia for the same person, the curated one is kept but
 marked **unverified** on the site. Faculty who are no longer on CSRankings' list for these institutions (moved, retired, emeritus) are kept for their lineage and marked **former**. Data can be wrong or incomplete; always confirm with the professor's own CV.
+
+### Photos and takedown
+
+Photos are shown straight from the person's own page (the site hotlinks the original URL; images are not copied or re-hosted),
+with initials as the fallback. To remove or fix a photo, [open an issue](https://github.com/xinyi-liu-ai/academic-lineage-tree/issues)
+or add the person's id to `data/enrich/photo_blocklist.json`. The drawer of every person also has a
+"Missing someone or something wrong?" link that opens a prefilled issue.
+
+### Adding a missing student
+
+Add a row to `data/raw/manual_students.csv` (or open an issue) and rerun `python scripts/build_graph.py`:
+
+```csv
+advisor,student,type,homepage,affiliation,note
+David A. Smith,Xinyi Liu,phd,https://xinyi-liu-ai.github.io,Northeastern University,added by the student (2026-11)
+```
+
+`advisor` must match a name in `data/raw/professors.csv`; `type` is the relation (e.g. `phd`); the other columns are optional.
 
 ## Rebuilding the data
 
@@ -37,6 +58,8 @@ python scripts/infer_dblp.py --eval        # writes data/enrich/dblp.jsonl (co-a
 python scripts/build_graph.py              # writes docs/data/graph.json
 python scripts/fetch_people_pages.py       # ~1 h, polite crawl of professors' pages + Students/People/Alumni subpages
 python scripts/extract_students.py         # student lists from those pages -> data/enrich/students_homepage.jsonl
+python scripts/extract_titles.py           # job titles (Assistant / Associate Teaching / Research Professor ...) -> data/enrich/titles.json
+python scripts/fetch_photos.py             # ~30 min, picks the professor's photo on their homepage -> data/enrich/photos.json (URL only)
 python scripts/build_graph.py
 python scripts/enrich_people.py            # homepages / LinkedIn / current positions for people outside the list
 python scripts/match_people_links.py       # personal homepage links found on advisors' pages
@@ -50,7 +73,7 @@ To preview locally: `python -m http.server 8765 --directory docs` and open http:
 - `data/raw/professors.csv` – faculty list with curated advisor columns and a `status` column (current / moved / new / former)
 - `data/raw/universities.csv` – institution names and short names
 - `data/raw/manual_students.csv` – advisor/student links added by hand (e.g. reported by the student); add rows here or open an issue
-- `data/enrich/` – relations pulled from Wikidata and Wikipedia
+- `data/enrich/` – relations pulled from Wikidata, Wikipedia, homepages and dblp, plus `titles.json`, `photos.json` and `student_links.json`
 - `scripts/` – matching, cleaning and graph-building scripts
 - `docs/` – the static site served by GitHub Pages (vanilla JS, no build step); layout follows the team's Figma mock-up
 

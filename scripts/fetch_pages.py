@@ -25,7 +25,7 @@ CACHE = os.path.join(ROOT, 'data/cache/pages')
 MAX_BYTES = 8 * 1024 * 1024
 HOST_GAP = 2.0
 
-_robots, _robots_lock = {}, threading.Lock()
+_robots, _robots_lock, _robots_locks = {}, threading.Lock(), {}
 _last, _host_locks = {}, {}
 
 
@@ -64,7 +64,9 @@ class TextAndLinks(HTMLParser):
 def allowed(url):
     p = urlparse(url)
     base = f'{p.scheme}://{p.netloc}'
-    with _robots_lock:
+    with _robots_lock:  # 全局锁只用来取每个站点自己的锁，下载 robots.txt 时不挡别的站点
+        lock = _robots_locks.setdefault(base, threading.Lock())
+    with lock:
         rp = _robots.get(base)
         if rp is None:
             rp = urllib.robotparser.RobotFileParser()
@@ -86,7 +88,10 @@ def polite_get(url):
             time.sleep(wait)
         try:
             r = requests.get(url, headers={'User-Agent': UA}, timeout=20, stream=True, allow_redirects=True)
-            body = r.raw.read(MAX_BYTES, decode_content=True)
+            try:
+                body = r.raw.read(MAX_BYTES, decode_content=True)
+            finally:
+                r.close()  # 多线程下不关会占着连接
         finally:
             _last[host] = time.time()
     return r, body

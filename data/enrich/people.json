@@ -51,11 +51,6 @@
 "h": "http://db.lcs.mit.edu/",
 "af": "Massachusetts Institute of Technology, Cambridge, USA"
 },
-"x:hiroshi ishii": {
-"h": "https://tangible.media.mit.edu/person/hiroshi-ishii/",
-"g": "https://scholar.google.com/citations?user=wS0qP_MAAAAJ",
-"af": "MIT Media Lab, Cambridge, MA, USA"
-},
 "x:jorg liebeherr": {
 "h": "http://www.comm.utoronto.ca/~jorg",
 "af": "University of Toronto",
@@ -116,11 +111,6 @@
 "af": "University of Toronto",
 "g": "https://scholar.google.com/citations?user=bQJWJPYAAAAJ"
 },
-"x:tomas perez": {
-"h": "http://people.csail.mit.edu/tlp",
-"af": "Massachusetts Inst. of Technology",
-"g": "https://scholar.google.com/citations?user=gQOKAggAAAAJ"
-},
 "x:berthold horn": {
 "h": "http://people.csail.mit.edu/bkph/",
 "af": "Massachusetts Institute of Technology, Computer Science and Artificial Intelligence Laboratory"
@@ -129,16 +119,6 @@
 "h": "http://www.cs.cmu.edu/~lsl/",
 "g": "https://scholar.google.com/citations?user=56o9adoAAAAJ",
 "af": "Carnegie Mellon University, Language Technologies Institute"
-},
-"x:jay ligatti": {
-"h": "http://www.cse.usf.edu/~ligatti",
-"af": "University of South Florida",
-"g": "https://scholar.google.com/citations?user=xmQREcEAAAAJ"
-},
-"x:peter schroder": {
-"h": "https://users.cms.caltech.edu/~ps",
-"af": "California Inst. of Technology",
-"g": "https://scholar.google.com/citations?user=t3TgxNwAAAAJ"
 },
 "x:richard karp": {
 "h": "https://www.icir.org/karp/",
@@ -158,16 +138,6 @@
 "h": "http://http.cs.berkeley.edu/~culler/",
 "g": "https://scholar.google.com/citations?user=urTiL7QAAAAJ",
 "af": "Google Inc., USA"
-},
-"x:christopher re": {
-"h": "https://cs.stanford.edu/people/chrismre",
-"af": "Stanford University",
-"g": "https://scholar.google.com/citations?user=DnnCWN0AAAAJ"
-},
-"x:daniel sanchez": {
-"h": "http://people.csail.mit.edu/sanchez",
-"af": "Massachusetts Inst. of Technology",
-"g": "https://scholar.google.com/citations?user=se0TZ2EAAAAJ"
 },
 "x:bernard chazelle": {
 "h": "https://www.cs.princeton.edu/~chazelle",
@@ -289,11 +259,6 @@
 "h": "http://www-crc.stanford.edu/users/ejm/McCluskey_Edward.html",
 "af": "Stanford University, USA"
 },
-"x:annie anton": {
-"h": "http://www.cc.gatech.edu/people/annie-anton",
-"af": "Georgia Institute of Technology",
-"g": "https://scholar.google.com/citations?user=IQosWycAAAAJ"
-},
 "x:david mcneill": {
 "h": "https://www.qub.ac.uk/schools/eeecs/Connect/Staff/BusinessCard/?name=dw.mcneill",
 "af": "Queen's University Belfast",
@@ -333,9 +298,6 @@
 "li": "https://www.linkedin.com/in/willy-zwaenepoel-31a27323",
 "g": "https://scholar.google.com/citations?user=KfI_FL4AAAAJ",
 "af": "University of Sydney, NSW, Australia"
-},
-"x:alonzo church": {
-"h": "http://id.worldcat.org/fast/1458233"
 },
 "x:marc pollefeys": {
 "h": "https://www.inf.ethz.ch/personal/pomarc/",
@@ -389,11 +351,6 @@
 "x:franco preparata": {
 "h": "http://www.cs.brown.edu/people/franco/",
 "af": "Brown University, Providence, USA"
-},
-"x:jose martinez": {
-"h": "http://www.csl.cornell.edu/~martinez",
-"af": "Cornell University",
-"g": "https://scholar.google.com/citations?user=f1CZknQAAAAJ"
 },
 "x:michiel smid": {
 "h": "http://www.scs.carleton.ca/~michiel",
@@ -498,11 +455,6 @@
 "li": "https://www.linkedin.com/in/carl-hewitt-a0409738",
 "af": "Massachusetts Institute of Technology, Cambridge, MA, USA"
 },
-"x:georg lausen": {
-"h": "http://dbis.informatik.uni-freiburg.de/team/lausen/georg",
-"af": "University of Freiburg",
-"g": "https://scholar.google.com/citations?user=wzKbqkcAAAAJ"
-},
 "x:david donoho": {
 "h": "http://www-stat.stanford.edu/~donoho/",
 "af": "Stanford University, USA"
@@ -511,11 +463,6 @@
 "h": "http://cbcl.mit.edu/people/poggio/poggio-new.htm",
 "g": "https://scholar.google.com/citations?user=WgAGy7wAAAAJ",
 "af": "Massachusetts Institute of Technology, Computer Science and Artificial Intelligence Laboratory"
-},
-"x:ryan williams": {
-"h": "https://people.csail.mit.edu/rrw",
-"af": "Massachusetts Inst. of Technology",
-"g": "https://scholar.google.com/citations?user=Wp38QQYAAAAJ"
 },
 "x:giovanni micheli": {
 "h": "http://si2.epfl.ch/~demichel",
@@ -538,12 +485,6 @@
 "h": "http://www.dgp.toronto.edu/~ravin",
 "af": "University of Toronto",
 "g": "https://scholar.google.com/citations?user=WtijM48AAAAJ"
-},
-"x:david mazieres": {
-"h": "http://www.scs.stanford.edu/~dm",
-"af": "Stanford University",
-"g": "https://scholar.google.com/citations?user=16rpqWQAAAAJ",
-"li": "https://www.linkedin.com/in/david-mazi%C3%A8res-20a92924"
 },
 "x:kimberly keeton": {
 "h": "http://www.labs.hpe.com/people/kimberly_keeton/",
@@ -585,10 +526,6 @@
 "g": "https://scholar.google.com/citations?user=-kNTrVcAAAAJ",
 "af": "University of Naples Federico II, Italy"
 },
-"x:joel spencer": {
-"h": "http://cs.nyu.edu/cs/faculty/spencer/index.html",
-"af": "New York University, USA"
-},
 "x:claude puech": {
 "h": "http://www-imagis.imag.fr/~Claude.Puech/",
 "af": "IMAG, Grenoble, France"
@@ -623,11 +560,6 @@
 "g": "https://scholar.google.com/citations?user=7pL1OUUAAAAJ",
 "af": "University of Southern California, Keck School of Medicine, USA"
 },
-"x:daniel weld": {
-"h": "http://www.cs.washington.edu/people/faculty/weld",
-"g": "https://scholar.google.com/citations?user=IUZgJogAAAAJ",
-"af": "University of Washington, Seattle, Washington, USA"
-},
 "x:amin shokrollahi": {
 "h": "https://people.epfl.ch/amin.shokrollahi",
 "af": "EPFL",
@@ -653,11 +585,6 @@
 "h": "http://people.inf.ethz.ch/troscoe",
 "af": "ETH Zurich"
 },
-"x:percy liang": {
-"h": "http://cs.stanford.edu/~pliang/",
-"g": "https://scholar.google.com/citations?user=pouyVyUAAAAJ",
-"af": "Stanford University, Computer Science Department"
-},
 "x:robert wilensky": {
 "h": "http://http.cs.berkeley.edu/~wilensky/",
 "af": "University of California, Berkeley, USA"
@@ -665,10 +592,6 @@
 "x:jerry feldman": {
 "h": "http://www.eecs.berkeley.edu/Faculty/Homepages/feldman.html",
 "af": "University of California, Berkeley, USA"
-},
-"x:naftali tishby": {
-"h": "http://www.cs.huji.ac.il/~tishby",
-"af": "Hebrew University of Jerusalem"
 },
 "x:hanah margalit": {
 "g": "https://scholar.google.com/citations?user=OaYQfOoAAAAJ"
@@ -708,11 +631,6 @@
 "h": "http://www.stanford.edu/~boyd/",
 "g": "https://scholar.google.com/citations?user=GExyiRkAAAAJ",
 "af": "Stanford University, USA"
-},
-"x:fredo durand": {
-"h": "http://people.csail.mit.edu/fredo",
-"af": "Massachusetts Inst. of Technology",
-"g": "https://scholar.google.com/citations?user=NJ9c4ygAAAAJ"
 },
 "x:serge belongie": {
 "h": "https://di.ku.dk/ai-centre",
@@ -846,11 +764,6 @@
 "g": "https://scholar.google.com/citations?user=2FbkAzYAAAAJ",
 "af": "Carnegie Mellon University, Pittsburgh, USA"
 },
-"x:bjorn hartmann": {
-"h": "https://people.eecs.berkeley.edu/~bjoern",
-"af": "Univ. of California - Berkeley",
-"g": "https://scholar.google.com/citations?user=aZMY6_UAAAAJ"
-},
 "x:emina torlak": {
 "g": "https://scholar.google.com/citations?user=rFpexEAAAAAJ",
 "af": "Amazon Web Services, USA"
@@ -895,11 +808,6 @@
 "g": "https://scholar.google.com/citations?user=tQVe-fAAAAAJ",
 "af": "Stanford University, Department of Statistics"
 },
-"x:kai li": {
-"h": "http://www.cs.princeton.edu/~li",
-"af": "Princeton University",
-"g": "https://scholar.google.com/citations?user=9MSpWOUAAAAJ"
-},
 "x:david mackay": {
 "h": "https://openlibrary.org/authors/OL7167291A",
 "g": "https://scholar.google.com/citations?user=g3mGoAwAAAAJ"
@@ -928,11 +836,6 @@
 "af": "University of Freiburg",
 "g": "https://scholar.google.com/citations?user=UAF-ud8AAAAJ"
 },
-"x:andrew moore": {
-"h": "http://www.cs.cmu.edu/~awm/",
-"g": "https://scholar.google.com/citations?user=PbfkKLcAAAAJ",
-"af": "Carnegie Mellon University, PA, USA"
-},
 "x:birgitta whaley": {
 "h": "http://www.cchem.berkeley.edu/kbwgrp/index.php/People/BirgittaWhaley",
 "af": "University of California Berkeley, Quantum Information and Computation Center, CA, USA"
@@ -957,11 +860,6 @@
 "g": "https://scholar.google.com/citations?user=4VVgg_UAAAAJ",
 "af": "University of California, Berkeley, USA"
 },
-"x:hal daume": {
-"h": "http://www.umiacs.umd.edu/~hal",
-"af": "Univ. of Maryland - College Park",
-"g": "https://scholar.google.com/citations?user=PbEw81gAAAAJ"
-},
 "x:scott yih": {
 "h": "https://scottyih.org/",
 "g": "https://scholar.google.com/citations?user=8rDNIMsAAAAJ",
@@ -976,11 +874,6 @@
 "h": "https://goodrobot.ai/",
 "g": "https://scholar.google.com/citations?user=RCi98EAAAAAJ",
 "af": "University of Washington, Paul G. Allen School of Computer Science & Engineering, Seattle, WA, USA"
-},
-"x:david hsu": {
-"h": "http://www.comp.nus.edu.sg/~dyhsu",
-"af": "National University of Singapore",
-"g": "https://scholar.google.com/citations?user=LhnU_joAAAAJ"
 },
 "x:viktor kuncak": {
 "h": "http://lara.epfl.ch/~kuncak",
@@ -997,19 +890,10 @@
 "g": "https://scholar.google.com/citations?user=YjTldCMAAAAJ",
 "af": "University of Maryland, College Park, MD, USA"
 },
-"x:hui zhang": {
-"h": "http://www.cs.cmu.edu/~hzhang/",
-"af": "Conviva Inc., USA"
-},
 "x:daniel roy": {
 "h": "http://danroy.org",
 "af": "University of Toronto",
 "g": "https://scholar.google.com/citations?user=vA6ZQ_AAAAAJ"
-},
-"x:eike kiltz": {
-"h": "http://kiltz.net",
-"af": "Ruhr-University Bochum",
-"g": "https://scholar.google.com/citations?user=8d8jP60AAAAJ"
 },
 "x:carl westin": {
 "h": "http://lmi.bwh.harvard.edu/~westin/",
@@ -1187,11 +1071,6 @@
 "af": "Singapore Management University",
 "g": "https://scholar.google.com/citations?user=IFg0H1wAAAAJ"
 },
-"x:rene vidal": {
-"h": "https://www.grasp.upenn.edu/people/rene-vidal",
-"af": "University of Pennsylvania",
-"g": "https://scholar.google.com/citations?user=uT8fgagAAAAJ"
-},
 "x:xiaoru yuan": {
 "h": "http://vis.pku.edu.cn/xiaoruyuan.html",
 "af": "Peking University",
@@ -1295,10 +1174,6 @@
 "g": "https://scholar.google.com/citations?user=EoqHOMsAAAAJ",
 "af": "Columbia University, New York City, USA"
 },
-"x:ben liblit": {
-"h": "http://www.cs.wisc.edu/%7Eliblit/",
-"af": "University of Wisconsin-Madison, Madison, USA"
-},
 "x:eugene fiume": {
 "h": "https://www.sfu.ca/computing/people/faculty/eugenefiume.html",
 "af": "Simon Fraser University",
@@ -1314,11 +1189,6 @@
 "af": "California Inst. of Technology",
 "g": "https://scholar.google.com/citations?user=5GQF2FwAAAAJ"
 },
-"x:yiling chen": {
-"h": "http://yiling.seas.harvard.edu",
-"af": "Harvard University",
-"g": "https://scholar.google.com/citations?user=Q8vaKmUAAAAJ"
-},
 "x:matej hoffmann": {
 "h": "https://sites.google.com/site/matejhof",
 "af": "Czech Technical University",
@@ -1327,11 +1197,6 @@
 "x:mitchel resnick": {
 "h": "http://web.media.mit.edu/~mres/",
 "af": "MIT, Cambridge, USA"
-},
-"x:alex smola": {
-"h": "http://alex.smola.org/",
-"g": "https://scholar.google.com/citations?user=Tb0ZrYwAAAAJ",
-"af": "Carnegie Mellon University"
 },
 "x:dale schuurmans": {
 "h": "https://webdocs.cs.ualberta.ca/~dale",
@@ -1361,11 +1226,6 @@
 "g": "https://scholar.google.com/citations?user=aT8oqcoAAAAJ",
 "af": "University of Michigan, USA"
 },
-"x:sayan mitra": {
-"h": "https://mitras.ece.illinois.edu/index.html",
-"af": "Univ. of Illinois at Urbana-Champaign",
-"g": "https://scholar.google.com/citations?user=dXUl8ewAAAAJ"
-},
 "x:david gries": {
 "h": "http://www.cs.cornell.edu/Info/People/gries/gries.html",
 "g": "https://scholar.google.com/citations?user=Ormag-QAAAAJ",
@@ -1375,20 +1235,10 @@
 "h": "http://www.cs.sunysb.edu/~kifer/",
 "af": "Stony Brook University, USA"
 },
-"x:ramakrishnan": {
-"h": "https://www.cs.stonybrook.edu/people/faculty/IVRamakrishnan",
-"af": "Stony Brook University",
-"g": "https://scholar.google.com/citations?user=FgfwY_UAAAAJ"
-},
 "x:tovi grossman": {
 "h": "http://www.tovigrossman.com",
 "af": "University of Toronto",
 "g": "https://scholar.google.com/citations?user=EZgkJ3sAAAAJ"
-},
-"x:stephen edwards": {
-"h": "http://people.cs.vt.edu/~edwards",
-"af": "Virginia Tech",
-"g": "https://scholar.google.com/citations?user=5pV6DQ4AAAAJ"
 },
 "x:yiannis moschovakis": {
 "h": "http://www.math.ucla.edu/~ynm/",
@@ -1408,11 +1258,6 @@
 "h": "http://www.di.ens.fr/~slacoste",
 "af": "University of Montreal",
 "g": "https://scholar.google.com/citations?user=oejm5IUAAAAJ"
-},
-"x:ioannis mitliagkas": {
-"h": "http://mitliagkas.github.io",
-"af": "University of Montreal",
-"g": "https://scholar.google.com/citations?user=K757SxgAAAAJ"
 },
 "x:thomas dietterich": {
 "h": "http://web.engr.oregonstate.edu/~tgd/",
@@ -1441,11 +1286,6 @@
 "h": "http://www.cs.toronto.edu/~nisarg",
 "af": "University of Toronto",
 "g": "https://scholar.google.com/citations?user=GCvk26UAAAAJ"
-},
-"x:renee miller": {
-"h": "https://cs.uwaterloo.ca/contacts/renee-j-miller",
-"af": "University of Waterloo",
-"g": "https://scholar.google.com/citations?user=NjeM1LsAAAAJ"
 },
 "x:deliang wang": {
 "h": "http://web.cse.ohio-state.edu/~dwang",
@@ -1547,11 +1387,6 @@
 "x:george hripcsak": {
 "af": "Columbia University, Department of Biomedical Informatics, New York, NY, USA"
 },
-"x:luca trevisan": {
-"h": "https://lucatrevisan.github.io",
-"af": "Bocconi University",
-"g": "https://scholar.google.com/citations?user=4yuKD_AAAAAJ"
-},
 "x:thomas lukasiewicz": {
 "h": "https://informatics.tuwien.ac.at/people/thomas-lukasiewicz",
 "af": "TU Wien",
@@ -1570,10 +1405,6 @@
 "x:tanzirul azim": {
 "af": "University of California, Riverside, USA"
 },
-"x:stephane lafortune": {
-"g": "https://scholar.google.com/citations?user=5wgTi1AAAAAJ",
-"af": "University of Michigan, Ann Arbor, USA"
-},
 "x:daniel kleitman": {
 "af": "MIT, USA"
 },
@@ -1582,11 +1413,6 @@
 "af": "KAUST",
 "g": "https://scholar.google.com/citations?user=g1ha-iYAAAAJ",
 "li": "https://www.linkedin.com/in/francescoorabona"
-},
-"x:michael goodrich": {
-"h": "https://www.ics.uci.edu/~goodrich",
-"af": "Univ. of California - Irvine",
-"g": "https://scholar.google.com/citations?user=sSS9gSoAAAAJ"
 },
 "x:jingqiang lin": {
 "h": "http://www.escience.cn/people/linjingqiang/index.html",
@@ -1597,11 +1423,6 @@
 "h": "http://iqua.ece.toronto.edu/bli",
 "af": "University of Toronto",
 "g": "https://scholar.google.com/citations?user=rkb3_FgAAAAJ"
-},
-"x:celine latulipe": {
-"h": "https://celinelatulipe.net",
-"af": "University of Manitoba",
-"g": "https://scholar.google.com/citations?user=LdGogroAAAAJ"
 },
 "x:francois bremond": {
 "h": "http://www-sop.inria.fr/members/Francois.Bremond/",
@@ -1616,20 +1437,10 @@
 "h": "http://www.cs.yale.edu/~dvm",
 "af": "Yale University"
 },
-"x:larry davis": {
-"h": "http://cvl.umiacs.umd.edu/users/lsd/",
-"g": "https://scholar.google.com/citations?user=lc0ARagAAAAJ",
-"af": "University of Maryland, College Park, MD, USA"
-},
 "x:claus pahl": {
 "h": "http://www.inf.unibz.it/~cpahl/",
 "g": "https://scholar.google.com/citations?user=2BSGAkgAAAAJ",
 "af": "Free University of Bozen-Bolzano, Italy"
-},
-"x:christian kastner": {
-"h": "https://www.cs.cmu.edu/~ckaestne",
-"af": "Carnegie Mellon University",
-"g": "https://scholar.google.com/citations?user=PR-ZnJUAAAAJ"
 },
 "x:andrea montanari": {
 "g": "https://scholar.google.com/citations?user=r3q68rcAAAAJ",
@@ -1654,11 +1465,6 @@
 "x:ken kennedy": {
 "h": "http://id.worldcat.org/fast/1575385",
 "af": "Rice University, Houston, USA"
-},
-"x:nam kim": {
-"h": "https://fast.ece.illinois.edu",
-"af": "Univ. of Illinois at Urbana-Champaign",
-"g": "https://scholar.google.com/citations?user=iccBxJIAAAAJ"
 },
 "x:scott deloach": {
 "h": "http://cis.ksu.edu/~sdeloach",
@@ -1688,11 +1494,6 @@
 "af": "Karlsruhe Inst. of Technology",
 "g": "https://scholar.google.com/citations?user=0xWltyAAAAAJ"
 },
-"x:lars arge": {
-"h": "http://www.cs.duke.edu/~large/",
-"g": "https://scholar.google.com/citations?user=MgdxxbAAAAAJ",
-"af": "Aarhus University, Denmark"
-},
 "x:helge ritter": {
 "h": "https://ni.www.techfak.uni-bielefeld.de/people/helge",
 "af": "Bielefeld University",
@@ -1701,11 +1502,6 @@
 "x:eliot moss": {
 "h": "http://www-ali.cs.umass.edu/~moss/",
 "af": "University of Massachusetts Amherst, USA"
-},
-"x:jeff huang": {
-"h": "http://jeffhuang.com",
-"af": "Brown University",
-"g": "https://scholar.google.com/citations?user=o8oJ6s4AAAAJ"
 },
 "x:kyros kutulakos": {
 "h": "http://www.cs.toronto.edu/~kyros",
@@ -1745,21 +1541,6 @@
 "li": "https://www.linkedin.com/in/danupon-nanongkai-64785431/",
 "g": "https://scholar.google.com/citations?user=ofNbQXAAAAAJ",
 "af": "Max Planck Institut für Informatik Saarbrücken, Germany"
-},
-"x:kotaro hara": {
-"h": "https://sis.smu.edu.sg/faculty/profile/153351/HARA-Kotaro",
-"af": "Singapore Management University",
-"g": "https://scholar.google.com/citations?user=Uc5mFiQAAAAJ"
-},
-"x:fabian bustamante": {
-"h": "http://www.cs.northwestern.edu/~fabianb",
-"af": "Northwestern University",
-"g": "https://scholar.google.com/citations?user=vg76M1oAAAAJ"
-},
-"x:patrick mcdaniel": {
-"h": "http://www.patrickmcdaniel.org",
-"af": "University of Wisconsin - Madison",
-"g": "https://scholar.google.com/citations?user=AMGqrI0AAAAJ"
 },
 "x:sanjay lall": {
 "h": "http://lall.stanford.edu/",
@@ -1928,11 +1709,6 @@
 "af": "Dalhousie University",
 "g": "https://scholar.google.com/citations?user=elXOB1sAAAAJ"
 },
-"x:yi yang": {
-"h": "https://person.zju.edu.cn/yiyang",
-"af": "Zhejiang University",
-"g": "https://scholar.google.com/citations?user=RMSuNFwAAAAJ"
-},
 "x:giuliano antoniol": {
 "h": "http://www.antoniol.net",
 "af": "Polytechnique Montreal",
@@ -1947,15 +1723,6 @@
 "h": "http://www.cs.cornell.edu/ken",
 "af": "Cornell University",
 "g": "https://scholar.google.com/citations?user=I-rKkyEAAAAJ"
-},
-"x:xia hu": {
-"h": "https://profiles.rice.edu/faculty/xia-ben-hu",
-"af": "Rice University",
-"g": "https://scholar.google.com/citations?user=pcCS60IAAAAJ"
-},
-"x:laxmi bhuyan": {
-"h": "http://www.cs.ucr.edu/~bhuyan/",
-"af": "University of California, Riverside, USA"
 },
 "x:denis trystram": {
 "h": "https://datamove.imag.fr/denis.trystram/index.php",
@@ -2005,11 +1772,6 @@
 "h": "http://www.cs.uic.edu/~wilkinson/",
 "g": "https://scholar.google.com/citations?user=ToXALZ8AAAAJ",
 "af": "University of Illinois at Chicago, USA"
-},
-"x:yoshua bengio": {
-"h": "http://www.iro.umontreal.ca/~bengioy",
-"af": "University of Montreal",
-"g": "https://scholar.google.com/citations?user=kukA0LcAAAAJ"
 },
 "x:stark draper": {
 "h": "https://www.comm.utoronto.ca/~sdraper/",
@@ -2062,11 +1824,6 @@
 "af": "EPFL",
 "g": "https://scholar.google.com/citations?user=rW1Bio0AAAAJ"
 },
-"x:jamie morgenstern": {
-"h": "http://jamiemorgenstern.com",
-"af": "University of Washington",
-"g": "https://scholar.google.com/citations?user=t0ZfFH8AAAAJ"
-},
 "x:vijay reddi": {
 "h": "https://scholar.harvard.edu/vijay-janapa-reddi/home",
 "g": "https://scholar.google.com/citations?user=gy4UVGcAAAAJ",
@@ -2091,11 +1848,6 @@
 },
 "x:daniel weitzner": {
 "h": "http://www.w3.org/People/Weitzner.html"
-},
-"x:prateek saxena": {
-"h": "https://www.comp.nus.edu.sg/~prateeks",
-"af": "National University of Singapore",
-"g": "https://scholar.google.com/citations?user=7YoDkzsAAAAJ"
 },
 "x:reid simmons": {
 "h": "http://www-2.cs.cmu.edu/afs/cs.cmu.edu/user/reids/www/home/reidhome.html",
@@ -2210,11 +1962,6 @@
 "af": "EPFL",
 "g": "https://scholar.google.com/citations?user=kzFmAkYAAAAJ"
 },
-"x:qing liu": {
-"h": "https://web.njit.edu/~qliu/",
-"g": "https://scholar.google.com/citations?user=sWUc3y4AAAAJ",
-"af": "New Jersey Institute of Technology, Department of Electrical and Computer Engineering, NJ, USA"
-},
 "x:katerina argyraki": {
 "h": "https://people.epfl.ch/katerina.argyraki",
 "af": "EPFL",
@@ -2236,11 +1983,6 @@
 },
 "x:mette olufsen": {
 "h": "http://www4.ncsu.edu/~msolufse/"
-},
-"x:song han": {
-"h": "https://hanlab.mit.edu/songhan",
-"af": "Massachusetts Inst. of Technology",
-"g": "https://scholar.google.com/citations?user=E0iCaa4AAAAJ"
 },
 "x:mikhail atallah": {
 "h": "https://www.cs.purdue.edu/people/mja",
@@ -2275,11 +2017,6 @@
 "af": "HKUST",
 "g": "https://scholar.google.com/citations?user=OuSPv-AAAAAJ"
 },
-"x:kyu lee": {
-"h": "http://cobweb.cs.uga.edu/~kyuhlee",
-"af": "University of Georgia",
-"g": "https://scholar.google.com/citations?user=oHcacuIAAAAJ"
-},
 "x:lei yang": {
 "h": "https://www4.comp.polyu.edu.hk/~csyanglei/#/pages/profile/about",
 "af": "The Hong Kong Polytechnic Univ.",
@@ -2290,25 +2027,10 @@
 "af": "The Hong Kong Polytechnic Univ.",
 "g": "https://scholar.google.com/citations?user=q2jH-3sAAAAJ"
 },
-"x:jiawei zhang": {
-"h": "http://jiaweizhang.net",
-"af": "Univ. of California - Davis",
-"g": "https://scholar.google.com/citations?user=7AkZSJsAAAAJ",
-"li": "https://www.linkedin.com/in/jiawei-zhang-4b70885b"
-},
 "x:javad lavaei": {
 "h": "https://lavaei.ieor.berkeley.edu/",
 "g": "https://scholar.google.com/citations?user=fVo3u5wAAAAJ",
 "af": "University of California, Berkeley, Department of Industrial Engineering and Operations Research, CA, USA"
-},
-"x:xiang zhang": {
-"h": "https://faculty.ist.psu.edu/xzz89",
-"af": "Pennsylvania State University"
-},
-"x:jing yang": {
-"h": "https://engineering.virginia.edu/faculty/jing-yang",
-"af": "University of Virginia",
-"g": "https://scholar.google.com/citations?user=AbFi7JAAAAAJ"
 },
 "x:maciej ciesielski": {
 "h": "http://www.ecs.umass.edu/ece/labs/vlsicad/ciesielski.html",
@@ -2377,11 +2099,6 @@
 "h": "https://cs.uwaterloo.ca/~brecht",
 "af": "University of Waterloo",
 "g": "https://scholar.google.com/citations?user=74nBKe8AAAAJ"
-},
-"x:adam smith": {
-"h": "http://cs-people.bu.edu/ads22",
-"af": "Boston University",
-"g": "https://scholar.google.com/citations?user=fkGi-JMAAAAJ"
 },
 "x:karsten borgwardt": {
 "h": "https://www.bsse.ethz.ch/mlcb/karsten/profile-karsten.html",
@@ -3530,11 +3247,6 @@
 "af": "Chinese Academy of Sciences",
 "g": "https://scholar.google.com/citations?user=mGPuiasAAAAJ"
 },
-"wd:Q102337366": {
-"h": "http://teacher.ucas.ac.cn/~chensm",
-"af": "Chinese Academy of Sciences",
-"g": "https://scholar.google.com/citations?user=mGPuiasAAAAJ"
-},
 "wd:Q102499000": {
 "h": "http://www.cs.toronto.edu/~pekhimenko",
 "af": "University of Toronto",
@@ -4313,11 +4025,6 @@
 "g": "https://scholar.google.com/citations?user=r3zJb3YAAAAJ",
 "af": "University of Southern California, Los Angeles, USA"
 },
-"wd:Q102312471": {
-"h": "https://www.engr.uky.edu/directory/cheng-qiang-shawn",
-"af": "University of Kentucky",
-"g": "https://scholar.google.com/citations?user=tpRmu_MAAAAJ"
-},
 "wd:Q102430737": {
 "af": "University of Michigan, USA"
 },
@@ -4492,11 +4199,6 @@
 "h": "https://cs.uwaterloo.ca/~sgorbuno",
 "af": "University of Waterloo",
 "g": "https://scholar.google.com/citations?user=joZ7vIgAAAAJ"
-},
-"wd:Q102441665": {
-"h": "https://www.comp.nus.edu.sg/~bleong",
-"af": "National University of Singapore",
-"g": "https://scholar.google.com/citations?user=kLMAXGgAAAAJ"
 },
 "wd:Q102441673": {
 "af": "Google, Mountain View, CA, USA"
@@ -4764,12 +4466,6 @@
 "h": "https://www.cse.iitb.ac.in/~br/webpage",
 "af": "IIT Bombay",
 "g": "https://scholar.google.com/citations?user=qj3IRU8AAAAJ"
-},
-"wd:Q102271388": {
-"h": "http://www.cs.northwestern.edu/~ychen",
-"af": "Northwestern University",
-"g": "https://scholar.google.com/citations?user=98iA_ooAAAAJ",
-"li": "https://www.linkedin.com/in/yan-chen-057b123"
 },
 "wd:Q102271390": {
 "h": "https://www.microsoft.com/en-us/research/people/sagarwal/",
@@ -5903,10 +5599,6 @@
 "wd:Q102982050": {
 "h": "https://www.gareyes.com/"
 },
-"wd:Q102982065": {
-"h": "https://infosci.cornell.edu/content/zhang-0",
-"af": "Cornell University"
-},
 "wd:Q11755": {
 "h": "http://ai.stanford.edu/~koller/",
 "g": "https://scholar.google.com/citations?user=5Iqe53IAAAAJ",
@@ -5972,9 +5664,6 @@
 },
 "wd:Q102422618": {
 "g": "https://scholar.google.com/citations?user=bh4-L5kAAAAJ"
-},
-"wd:Q102250040": {
-"h": "https://users.soe.ucsc.edu/~davis/"
 },
 "wd:Q102265256": {
 "af": "Dartmouth College, Hanover, NH, USA"
@@ -7053,11 +6742,6 @@
 "g": "https://scholar.google.com/citations?user=pWhso8EAAAAJ",
 "af": "University of Sharjah, United Arab Emirates"
 },
-"wd:Q102339651": {
-"h": "http://faculty.uoit.ca/qureshi",
-"g": "https://scholar.google.com/citations?user=w2TkNysAAAAJ",
-"af": "University of Ontario Institute of Technology, Faculty of Science, Visual Computing Lab, Oshawa, Canada"
-},
 "wd:Q102384510": {
 "h": "http://motionlab.kaist.ac.kr/?page_id=41",
 "af": "KAIST",
@@ -7750,11 +7434,6 @@
 "g": "https://scholar.google.com/citations?user=5222Mu8AAAAJ",
 "af": "University of Wisconsin-Milwaukee"
 },
-"wd:Q102282243": {
-"h": "https://www.cs.rutgers.edu/~amelie",
-"af": "Rutgers University",
-"g": "https://scholar.google.com/citations?user=hcqjUUQAAAAJ"
-},
 "wd:Q11656090": {
 "g": "https://scholar.google.com/citations?user=SWOdltsAAAAJ",
 "h": "http://nlp.cs.nyu.edu/sekine/",
@@ -8341,11 +8020,6 @@
 "h": "https://silverbottlep.github.io",
 "af": "Yonsei University",
 "g": "https://scholar.google.com/citations?user=iPyuJmQAAAAJ"
-},
-"wd:Q102087753": {
-"h": "https://people.math.osu.edu/memoli.2",
-"af": "Ohio State University",
-"g": "https://scholar.google.com/citations?user=E3APGcgAAAAJ"
 },
 "wd:Q102443884": {
 "g": "https://scholar.google.com/citations?user=yTiYbvcAAAAJ"
@@ -9190,11 +8864,6 @@
 "wd:Q102339429": {
 "af": "Yahoo! Labs, Sunnyvale, CA, USA"
 },
-"wd:Q102340458": {
-"h": "http://www.cse.unt.edu/~weijin",
-"af": "University of North Texas",
-"g": "https://scholar.google.com/citations?user=lGOp0dMAAAAJ"
-},
 "wd:Q102301265": {
 "af": "Merck Research Labs, Departments of Human Genetics and Biostatistics, UCLA"
 },
@@ -9912,11 +9581,6 @@
 },
 "wd:Q102112775": {
 "g": "https://scholar.google.com/citations?user=U7svaOMAAAAJ"
-},
-"wd:Q102314188": {
-"h": "http://web.cse.ohio-state.edu/~jwdavis",
-"af": "Ohio State University",
-"g": "https://scholar.google.com/citations?user=Jd6nw80AAAAJ"
 },
 "wd:Q6243987": {
 "g": "https://scholar.google.com/citations?user=LFiqVpwAAAAJ",
@@ -10860,11 +10524,6 @@
 },
 "wd:Q102759383": {
 "h": "https://abhaykashyap.com/",
-"g": "https://scholar.google.com/citations?user=e4cn-kYAAAAJ",
-"af": "Stitch Fix, San Francisco, CA, USA"
-},
-"wd:Q142168830": {
-"h": "https://abhay.fyi/",
 "g": "https://scholar.google.com/citations?user=e4cn-kYAAAAJ",
 "af": "Stitch Fix, San Francisco, CA, USA"
 },
@@ -11969,10 +11628,6 @@
 "h": "https://pcao3.web.engr.illinois.edu/",
 "g": "https://scholar.google.com/citations?user=MMDDvwIAAAAJ"
 },
-"wd:Q102442604": {
-"h": "https://cse.osu.edu/people/wang.7564",
-"af": "Ohio State University"
-},
 "wd:Q6246751": {
 "h": "https://www.library.upenn.edu/people/staff/john-mark-ockerbloom"
 },
@@ -12156,10 +11811,6 @@
 },
 "wd:Q102321233": {
 "af": "Carnegie Mellon University, Pittsburgh, USA"
-},
-"wd:Q113667680": {
-"h": "http://www.cs.cornell.edu/~eland/",
-"af": "Cornell University"
 },
 "wd:Q113667779": {
 "h": "https://homes.cs.washington.edu/~awb/",
@@ -12594,11 +12245,6 @@
 "wd:Q102245376": {
 "h": "http://www.cs.sfu.ca/~cenk/",
 "af": "Simon Fraser University, Burnaby, Canada"
-},
-"wd:Q86640280": {
-"h": "http://people.sabanciuniv.edu/~esraerdem",
-"af": "Sabancı University",
-"g": "https://scholar.google.com/citations?user=q-hZTe0AAAAJ"
 },
 "wd:Q102346897": {
 "h": "http://people.sabanciuniv.edu/~esraerdem",
@@ -13307,11 +12953,6 @@
 "h": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=174263",
 "af": "Pennsylvania State University, Department of Computer Science and Engineering, University Park, PA, USA"
 },
-"wd:Q103035367": {
-"li": "https://www.linkedin.com/in/jing-zhao-a5b3a740",
-"g": "https://scholar.google.com/citations?user=gfbshvcAAAAJ",
-"af": "Pennsylvania State University, Department of Computer Science and Engineering, University Park, PA, USA"
-},
 "wd:Q103035382": {
 "af": "Pennsylvania State University, Department of Computer Science and Engineering, PA, USA"
 },
@@ -13725,11 +13366,6 @@
 "wd:Q102441519": {
 "af": "University of Nebraska-Lincoln, Department of Computer Science and Engineering, Lincoln, NE, USA"
 },
-"wd:Q102345204": {
-"h": "http://www.cc.gatech.edu/~jx",
-"af": "Georgia Institute of Technology",
-"g": "https://scholar.google.com/citations?user=mHwonDEAAAAJ"
-},
 "wd:Q102449731": {
 "h": "https://www.cs.uky.edu/~manivann",
 "af": "University of Kentucky"
@@ -13783,11 +13419,6 @@
 "h": "https://www.lix.polytechnique.fr/geovic/members/marie-paule_cani/",
 "g": "https://scholar.google.com/citations?user=z0RoFtcAAAAJ",
 "af": "Ecole Polytechnique, IPParis, France"
-},
-"wd:Q29347714": {
-"h": "https://people.inf.ethz.ch/alonso",
-"af": "ETH Zurich",
-"g": "https://scholar.google.com/citations?user=fkNjVcIAAAAJ"
 },
 "wd:Q102335993": {
 "h": "https://www.ifi.uzh.ch/en/dbtg/Staff/Boehlen.html",
@@ -15559,11 +15190,6 @@
 "af": "University of Toronto",
 "g": "https://scholar.google.com/citations?user=KfGfDvcAAAAJ"
 },
-"wd:Q102430569": {
-"h": "https://www.mtu.edu/cs/department/faculty-staff/faculty/s-onder",
-"af": "Michigan Technological University",
-"g": "https://scholar.google.com/citations?user=co8JfCAAAAAJ"
-},
 "wd:Q102671567": {
 "af": "University of California, Riverside, CA, USA"
 },
@@ -15576,11 +15202,6 @@
 "g": "https://scholar.google.com/citations?user=CCToMygAAAAJ",
 "h": "http://www.sontaglab.org/",
 "af": "Northeastern University, Department of Bioengineering, Boston, MA, USA"
-},
-"wd:Q92845": {
-"h": "http://people.cs.uchicago.edu/~laci",
-"af": "University of Chicago",
-"g": "https://scholar.google.com/citations?user=KbVFiKYAAAAJ"
 },
 "wd:Q68622015": {
 "h": "http://www.cse.ogi.edu/~dick/dick.html"
@@ -15857,10 +15478,6 @@
 "g": "https://scholar.google.com/citations?user=Ii7P2QQAAAAJ",
 "af": "Purdue University, West Lafayette, USA"
 },
-"wp:Hui_Zhang_(computer_scientist)": {
-"h": "http://www.cs.cmu.edu/~hzhang/",
-"af": "Conviva Inc., USA"
-},
 "wp:Haoyuan_Li": {
 "h": "https://haoyuanli.com/",
 "li": "https://www.linkedin.com/in/haoyuanli1/",
@@ -15892,26 +15509,11 @@
 "h": "http://web.mit.edu/afs/athena.mit.edu/user/other/a/Saltzer/www/home.html",
 "af": "MIT, Cambridge, USA"
 },
-"wp:Michael_D._Smith_(computer_scientist)": {
-"h": "http://www.fas.harvard.edu/pages/dean-michael-smith",
-"af": "Harvard University",
-"g": "https://scholar.google.com/citations?user=rzPlMfQAAAAJ"
-},
 "wp:Sunghyun_Choi": {
 "h": "https://sites.google.com/view/sunghyun-chois-home",
 "li": "https://www.linkedin.com/in/sunghyun-choi-b20268",
 "g": "https://scholar.google.com/citations?user=gd23c7MAAAAJ",
 "af": "Samsung Electronics, Samsung Research, Seoul, South Korea"
-},
-"wp:Yi_Ma": {
-"h": "https://ai.hku.hk/index.php/people/academic-staff/mayi",
-"af": "University of Hong Kong",
-"g": "https://scholar.google.com/citations?user=XqLiBQMAAAAJ"
-},
-"wp:Funda_Ergun": {
-"h": "http://homes.soic.indiana.edu/fergun",
-"af": "Indiana University",
-"g": "https://scholar.google.com/citations?user=C3Xc9xIAAAAJ"
 },
 "wp:Sepandar_Kamvar": {
 "h": "http://www.kamvar.org/"
@@ -15940,16 +15542,6 @@
 "h": "http://www-net.cs.umass.edu/personnel/kurose.html",
 "g": "https://scholar.google.com/citations?user=219_uIcAAAAJ",
 "af": "University of Massachusetts Amherst, USA"
-},
-"wp:Claudio_Silva_(computer_scientist)": {
-"h": "https://ctsilva.github.io",
-"af": "New York University",
-"g": "https://scholar.google.com/citations?user=YIwiAAsAAAAJ"
-},
-"wp:Éva_Tardos": {
-"h": "http://www.cs.cornell.edu/~eva",
-"af": "Cornell University",
-"g": "https://scholar.google.com/citations?user=h6jljQQAAAAJ"
 },
 "wp:Robin_Li": {
 "af": "Baidu"
@@ -15999,21 +15591,11 @@
 "h": "https://www.cs.utah.edu/~miriah/",
 "af": "Linköping University, Sweden"
 },
-"hs:p1:adithya murali": {
-"h": "https://muraliadithya.github.io",
-"af": "University of Wisconsin - Madison",
-"g": "https://scholar.google.com/citations?user=Yw5Q_CgAAAAJ"
-},
 "hs:p1:tess hellebrekers": {
 "af": "Microsoft Research"
 },
 "hs:p2:hoai nguyen": {
 "af": "Carnegie Mellon University, Pittsburgh, PA, USA"
-},
-"hs:p2:shenghao xie": {
-"h": "https://sites.google.com/view/shenghaoxie/%E9%A6%96%E9%A1%B5",
-"g": "https://scholar.google.com/citations?user=JKjz5D8AAAAJ",
-"af": "Texas A&M University, College Station, TX, USA"
 },
 "hs:p2:taisuke yasuda": {
 "af": "Carnegie Mellon University, USA"
@@ -16067,9 +15649,18 @@
 "af": "University of Oxford",
 "g": "https://scholar.google.com/citations?user=LeFkVsYAAAAJ"
 },
+"hs:p16:troels lund": {
+"h": "http://www.itu.dk/people/trbj",
+"af": "IT University of Copenhagen",
+"g": "https://scholar.google.com/citations?user=2tOriSoAAAAJ"
+},
 "hs:p19:zinan lin": {
 "h": "https://www.andrew.cmu.edu/user/zinanl/bio/",
 "af": "Microsoft Research, Redmond, WA, USA"
+},
+"hs:p19:seyed fayazbakhsh": {
+"h": "http://www.contrib.andrew.cmu.edu/~sfayazba/",
+"af": "Carnegie Mellon University, Pittsburgh, USA"
 },
 "hs:p28:chao liu": {
 "af": "Carnegie Mellon University, Robotics Institute, Pennsylvania, PA, USA"
@@ -16083,11 +15674,6 @@
 "hs:p28:yuandong tian": {
 "h": "http://www.cs.cmu.edu/~yuandong/",
 "af": "Carnegie Mellon University"
-},
-"hs:p28:jean lalonde": {
-"h": "http://vision.gel.ulaval.ca/~jflalonde",
-"af": "Université Laval",
-"g": "https://scholar.google.com/citations?user=hW9fwNYAAAAJ"
 },
 "hs:p28:bowei chen": {
 "h": "https://homes.cs.washington.edu/~boweiche/",
@@ -16113,7 +15699,7 @@
 "af": "National University of Singapore",
 "g": "https://scholar.google.com/citations?user=9j6NeHkAAAAJ"
 },
-"hs:p32:mohamed ibrahim": {
+"hs:p32:mohamed ahmed": {
 "af": "Hewlett Packard Enterprise, Palo Alto, CA, USA"
 },
 "hs:p35:william zhang": {
@@ -16124,11 +15710,6 @@
 "af": "Tsinghua University",
 "g": "https://scholar.google.com/citations?user=filGbagAAAAJ"
 },
-"hs:p36:yang liu": {
-"h": "https://yangpliu.github.io",
-"af": "Carnegie Mellon University",
-"g": "https://scholar.google.com/citations?user=LrHm5cgAAAAJ"
-},
 "hs:p36:benny sudakov": {
 "g": "https://scholar.google.com/citations?user=yqfXEPIAAAAJ"
 },
@@ -16136,12 +15717,6 @@
 "h": "https://www.cs.cmu.edu/~jeremiac/",
 "g": "https://scholar.google.com/citations?user=r493814AAAAJ",
 "af": "Carnegie Mellon University, Pittsburgh, PA, USA"
-},
-"hs:p39:maziar sanjabi": {
-"h": "https://sites.google.com/view/maziar",
-"li": "https://www.linkedin.com/in/maziar-sanjabi-a20a3550/",
-"g": "https://scholar.google.com/citations?user=bc_N2-oAAAAJ",
-"af": "LinkedIn, Sunnyvale, CA, USA"
 },
 "hs:p41:alexandra li": {
 "af": "Carnegie Mellon University, Pittsburgh, PA, USA"
@@ -16168,11 +15743,6 @@
 "h": "https://wgsxm.github.io/",
 "af": "Peking University, Beijing, China"
 },
-"hs:p47:arpit agarwal": {
-"h": "https://agarpit.github.io",
-"af": "IIT Bombay",
-"g": "https://scholar.google.com/citations?user=bjrtXOcAAAAJ"
-},
 "hs:p50:chenyang xu": {
 "af": "East China Normal University, Software Engineering Institute, Shanghai, China"
 },
@@ -16184,6 +15754,12 @@
 "h": "https://www.uvic.ca/ecs/computerscience/faculty-staff/faculty/horvath-amber.php",
 "af": "University of Victoria",
 "g": "https://scholar.google.com/citations?user=_0XfqH4AAAAJ"
+},
+"hs:p53:mary kery": {
+"h": "https://marybethkery.com/",
+"li": "https://www.linkedin.com/in/mary-beth-kery-80126b90",
+"g": "https://scholar.google.com/citations?user=KR8gY5kAAAAJ",
+"af": "Carnegie Mellon University, School of Computer Science, Pittsburgh, PA, USA"
 },
 "hs:p53:stephen oney": {
 "h": "http://from.so",
@@ -16206,11 +15782,6 @@
 "h": "https://www.ericwzeng.com/",
 "af": "Georgetown University, Massive Data Institute, Washington, DC, USA"
 },
-"hs:p71:siyuan chen": {
-"h": "https://gulang2019.github.io/",
-"g": "https://scholar.google.com/citations?user=Pb_NPKAAAAAJ",
-"af": "Carnegie Mellon University, Pittsburgh, PA, USA"
-},
 "hs:p71:yiwei zhao": {
 "h": "https://zhaoyw007.github.io/",
 "g": "https://scholar.google.com/citations?user=kldNhnYAAAAJ",
@@ -16219,10 +15790,10 @@
 "hs:p71:chris fallin": {
 "af": "Fastly, San Francisco, CA, USA"
 },
-"hs:p71:shimin chen": {
-"h": "http://teacher.ucas.ac.cn/~chensm",
-"af": "Chinese Academy of Sciences",
-"g": "https://scholar.google.com/citations?user=mGPuiasAAAAJ"
+"hs:p71:harsha simhadri": {
+"h": "http://harsha-simhadri.org/",
+"li": "https://www.linkedin.com/in/harsha-vardhan-simhadri-66988a27",
+"af": "Microsoft Research, India"
 },
 "hs:p72:pedro paredes": {
 "af": "Carnegie Mellon University, Pittsburgh, PA, USA"
@@ -16243,15 +15814,6 @@
 "af": "ShanghaiTech University",
 "g": "https://scholar.google.com/citations?user=wDMoU3UAAAAJ"
 },
-"hs:p82:pucktada treeratpituk": {
-"h": "http://ist.psu.edu/ist/directory/staff/?EmployeeID=486",
-"af": "Penn State, University Park, USA"
-},
-"hs:p86:charles yuan": {
-"h": "https://pages.cs.wisc.edu/~charlesyuan",
-"af": "University of Wisconsin - Madison",
-"g": "https://scholar.google.com/citations?user=8eveKksAAAAJ"
-},
 "hs:p86:di wang": {
 "h": "https://stonebuddha.github.io",
 "af": "Peking University",
@@ -16262,21 +15824,11 @@
 "af": "KAIST",
 "g": "https://scholar.google.com/citations?user=NMggRxkAAAAJ"
 },
-"hs:p88:chenren xu": {
-"h": "http://soar.group/chenren",
-"af": "Peking University",
-"g": "https://scholar.google.com/citations?user=IFX5C-cAAAAJ"
-},
 "hs:p88:mukesh agrawal": {
 "af": "Carnegie Mellon University, USA"
 },
 "hs:p94:ivan stelmakh": {
 "af": "Carnegie Mellon University, Pittsburgh, PA, USA"
-},
-"hs:p94:jingyan wang": {
-"h": "https://jingyanw.github.io/",
-"g": "https://scholar.google.com/citations?user=7-2bbBgAAAAJ",
-"af": "Toyota Technological Institute at Chicago, IL, USA"
 },
 "hs:p95:siyuan feng": {
 "af": "Toyota Research Institute, One Kendall Square, Cambridge, MA, USA"
@@ -16347,10 +15899,6 @@
 "h": "https://research.cs.queensu.ca/home/jana/",
 "af": "Queen's University, Kingston, Ontario, Canada"
 },
-"hs:p109:ruy wild": {
-"h": "http://www.cs.cmu.edu/~rleywild/",
-"af": "Carnegie Mellon University, Pittsburgh, USA"
-},
 "hs:p114:james howison": {
 "h": "https://orkg.org/resource/R166501",
 "g": "https://scholar.google.com/citations?user=mN4sKEcAAAAJ",
@@ -16360,8 +15908,16 @@
 "h": "http://www.cs.cmu.edu/~etrainer/",
 "af": "Carnegie Mellon University, Pittsburgh, USA"
 },
+"hs:p121:sang cha": {
+"h": "http://softsec.kaist.ac.kr/~sangkilc",
+"af": "KAIST",
+"g": "https://scholar.google.com/citations?user=kV40DzcAAAAJ"
+},
 "hs:p121:maverick woo": {
 "af": "Carnegie Mellon University, Pittsburgh, USA"
+},
+"hs:p122:franklin li": {
+"af": "Carnegie Mellon University, Pittsburgh, PA, USA"
 },
 "hs:p126:yue niu": {
 "af": "Carnegie Mellon University, Department of Computer Science, Pittsburgh, PA, USA"
@@ -16410,11 +15966,6 @@
 "af": "University of Cambridge",
 "g": "https://scholar.google.com/citations?user=qCE8eVcAAAAJ"
 },
-"hs:p143:derek dreyer": {
-"h": "http://www.mpi-sws.org/~dreyer/",
-"g": "https://scholar.google.com/citations?user=1_c89uMAAAAJ",
-"af": "Max Planck Institute for Software Systems"
-},
 "hs:p143:susmit sarkar": {
 "h": "https://ss265.host.cs.st-andrews.ac.uk",
 "af": "University of St Andrews",
@@ -16456,10 +16007,6 @@
 "h": "https://scai.sufe.edu.cn/dyx",
 "af": "SUFE",
 "g": "https://scholar.google.com/citations?user=anobfigAAAAJ"
-},
-"hs:p162:ruy wild": {
-"h": "http://www.cs.cmu.edu/~rleywild/",
-"af": "Carnegie Mellon University, Pittsburgh, USA"
 },
 "hs:p162:carsten varming": {
 "h": "http://www.cs.cmu.edu/~cvarming/",
@@ -16568,11 +16115,6 @@
 "g": "https://scholar.google.com/citations?user=CNh8cHMAAAAJ",
 "af": "University of Illinois Urbana-Champaign, Urbana, IL, USA"
 },
-"hs:p212:rachata ausavarungnirun": {
-"h": "https://rausavar.github.io/",
-"g": "https://scholar.google.com/citations?user=fIUdEFwAAAAJ",
-"af": "King Mongkut's University of Technology North Bangkok, Thailand"
-},
 "hs:p212:amol shah": {
 "af": "University of Illinois Urbana-Champaign, Urbana, IL, USA"
 },
@@ -16595,11 +16137,6 @@
 "h": "http://ashish.vulimiri.net/",
 "af": "University of Illinois, IL, USA"
 },
-"hs:p228:anduo wang": {
-"h": "http://anduowang.github.io",
-"af": "Temple University",
-"g": "https://scholar.google.com/citations?user=G0TbvLAAAAAJ"
-},
 "hs:p235:pranav garg": {
 "h": "http://pranav-garg.com/",
 "af": "Amazon Web Services, New York, NY, USA"
@@ -16619,28 +16156,13 @@
 "g": "https://scholar.google.com/citations?user=d_hbg3cAAAAJ",
 "li": "https://www.linkedin.com/in/danielneider"
 },
-"hs:p239:hussein sibai": {
-"h": "https://engineering.washu.edu/faculty/Hussein-Sibai.html",
-"af": "Washington University in St. Louis",
-"g": "https://scholar.google.com/citations?user=St5uCSwAAAAJ"
-},
 "hs:p239:chuchu fan": {
 "h": "http://chuchu.mit.edu/",
 "g": "https://scholar.google.com/citations?user=J-dq_8EAAAAJ",
 "af": "Massachusetts Institute of Technology, MA, USA"
 },
-"hs:p239:taylor johnson": {
-"h": "http://www.TaylorTJohnson.com",
-"af": "Vanderbilt University",
-"g": "https://scholar.google.com/citations?user=MdTkXNYAAAAJ"
-},
 "hs:p243:mohammed hassan": {
 "af": "University of Illinois, Urbana, IL, USA"
-},
-"hs:p243:david smith": {
-"h": "https://website.cs.vt.edu/people/faculty/david-h-smith-iv.html",
-"af": "Virginia Tech",
-"g": "https://scholar.google.com/citations?user=hpe-z9YAAAAJ"
 },
 "hs:p244:abdulrahman mahmoud": {
 "h": "https://mbzuai.ac.ae/study/faculty/abdulrahman-mahmoud",
@@ -16698,6 +16220,9 @@
 "hs:p288:jia wan": {
 "af": "City University of Hong, Kowloon, Hong Kong"
 },
+"hs:p288:yeong koh": {
+"g": "https://scholar.google.com/citations?user=nSV_vGAAAAAJ"
+},
 "hs:p288:antoni chan": {
 "h": "https://www.cs.cityu.edu.hk/~abchan",
 "af": "City University of Hong Kong",
@@ -16712,11 +16237,6 @@
 "h": "https://mbzuai.ac.ae/study/faculty/lingqi-yan",
 "af": "MBZUAI",
 "g": "https://scholar.google.com/citations?user=IP5vaxAAAAAJ"
-},
-"hs:p289:huamin wang": {
-"h": "https://wanghmin.github.io/",
-"g": "https://scholar.google.com/citations?user=iHpqfoQAAAAJ",
-"af": "Style3D Research, Hangzhou, China"
 },
 "hs:p289:adrien bousseau": {
 "h": "https://www-sop.inria.fr/members/Adrien.Bousseau/",
@@ -16777,16 +16297,6 @@
 },
 "hs:p304:david moore": {
 "af": "University of California San Diego, CAIDA, La Jolla, CA, USA"
-},
-"hs:p309:zihan zhang": {
-"h": "https://cse.hkust.edu.hk/admin/people/faculty/profile/zihanz",
-"af": "HKUST",
-"g": "https://scholar.google.com/citations?user=un0eGzEAAAAJ"
-},
-"hs:p309:danica kragic": {
-"h": "https://www.csc.kth.se/~dani",
-"af": "KTH Royal Inst. of Technology",
-"g": "https://scholar.google.com/citations?user=ZlSVieAAAAAJ"
 },
 "hs:p309:patric jensfelt": {
 "h": "http://www.csc.kth.se/~patric/",
@@ -16877,11 +16387,6 @@
 "g": "https://scholar.google.com/citations?user=gxW8UCEAAAAJ",
 "af": "Zama, France"
 },
-"hs:p336:nadia heninger": {
-"h": "https://cseweb.ucsd.edu/~nadiah",
-"af": "Univ. of California - San Diego",
-"g": "https://scholar.google.com/citations?user=okx33sUAAAAJ"
-},
 "hs:p336:marc fischlin": {
 "h": "https://www.cryptoplexity.informatik.tu-darmstadt.de/members/marcfischlin/marcfischlin.en.jsp",
 "af": "TU Darmstadt",
@@ -16912,16 +16417,16 @@
 "hs:p362:jim hayes": {
 "af": "University of California, San Diego, CA, USA"
 },
+"hs:p368:parinaz naghizadeh": {
+"h": "https://jacobsschool.ucsd.edu/people/profile/parinaz-naghizadeh",
+"af": "Univ. of California - San Diego",
+"g": "https://scholar.google.com/citations?user=rbleSIcAAAAJ"
+},
 "hs:p375:hao wang": {
 "af": "Harvard University, Cambridge, MA, USA"
 },
 "hs:p389:yufan zhang": {
 "af": "University of California at San Diego (UCSD), Department of Electrical and Computer Engineering, CA, USA"
-},
-"hs:p389:chi zhang": {
-"h": "https://en.westlake.edu.cn/faculty/chi-zhang.html",
-"af": "Westlake University",
-"g": "https://scholar.google.com/citations?user=J4s398EAAAAJ"
 },
 "hs:p392:jon sanders": {
 "g": "https://scholar.google.com/citations?user=VEsdTjwAAAAJ",
@@ -16934,10 +16439,6 @@
 "h": "http://www.knightslab.org",
 "af": "University of Minnesota",
 "g": "https://scholar.google.com/citations?user=zTkLS_gAAAAJ"
-},
-"hs:p402:derek lomas": {
-"h": "https://www.tudelft.nl/io/over-io/personen/lomas-j-d",
-"af": "Delft University of Technology, Department of Human Centered Design, Netherlands"
 },
 "hs:p402:lars mueller": {
 "af": "University of Leeds, UK"
@@ -16993,10 +16494,6 @@
 "af": "University of Michigan",
 "g": "https://scholar.google.com/citations?user=NWpUSd4AAAAJ"
 },
-"hs:p441:adam kalai": {
-"h": "http://people.cs.uchicago.edu/~kalai/",
-"af": "University of Chicago, USA"
-},
 "hs:p452:mark lee": {
 "af": "Georgia Institute of Technology, School of Electrical and Computer Engineering, Atlanta, GA, USA"
 },
@@ -17031,11 +16528,6 @@
 },
 "hs:p474:daniel zhang": {
 "af": "Georgia Institute of Technology, School of Computer Science, Atlanta, GA, USA"
-},
-"hs:p476:yuan qiu": {
-"h": "https://cyber.seu.edu.cn/qy/list.htm",
-"af": "Southeast University",
-"g": "https://scholar.google.com/citations?user=G3Q_MzIAAAAJ"
 },
 "hs:p476:haoxin liu": {
 "af": "Georgia Institute of Technology, GA, USA"
@@ -17119,6 +16611,38 @@
 "g": "https://scholar.google.com/citations?user=7-2bbBgAAAAJ",
 "af": "Toyota Technological Institute at Chicago, IL, USA"
 },
+"hs:p559:piotr didyk": {
+"h": "https://www.pdf.inf.usi.ch/people/piotr",
+"af": "Università della Svizzera italiana",
+"g": "https://scholar.google.com/citations?user=kH5VxAIAAAAJ"
+},
+"hs:p559:petr kellnhofer": {
+"h": "http://graphics.tudelft.nl/petr-kellnhofer",
+"af": "TU Delft",
+"g": "https://scholar.google.com/citations?user=Lh54BvgAAAAJ"
+},
+"hs:p559:david levin": {
+"h": "http://diwlevin.webfactional.com/researchdb",
+"af": "University of Toronto",
+"g": "https://scholar.google.com/citations?user=UokN-dcAAAAJ"
+},
+"hs:p559:tae oh": {
+"h": "https://ami.kaist.ac.kr",
+"af": "KAIST",
+"g": "https://scholar.google.com/citations?user=dMCBjeIAAAAJ"
+},
+"hs:p559:changil kim": {
+"h": "https://changilkim.com/",
+"g": "https://scholar.google.com/citations?user=_FYPe4oAAAAJ",
+"af": "Facebook Research, Seattle, WA, USA"
+},
+"hs:p559:yifei li": {
+"h": "https://omegaiota.github.io/",
+"af": "Massachusetts Institute of Technology (MIT), CSAIL, Cambridge, MA, USA"
+},
+"hs:p559:liang shi": {
+"af": "MIT CSAIL, Cambridge, MA, USA"
+},
 "hs:p564:yifei wang": {
 "af": "Peking University, School of Mathematical Sciences, China"
 },
@@ -17146,9 +16670,6 @@
 "af": "SUFE",
 "g": "https://scholar.google.com/citations?user=g65nv5cAAAAJ"
 },
-"hs:p571:nima haghpanah": {
-"h": "http://mehr.sharif.edu/~haghpanah/"
-},
 "hs:p571:yeshwanth cherapanamjeri": {
 "h": "https://dr.ntu.edu.sg/entities/person/Yeshwanth-Cherapanamjeri",
 "af": "Nanyang Technological University",
@@ -17162,11 +16683,6 @@
 "hs:p573:fumiya iida": {
 "h": "http://www.ifi.unizh.ch/ailab/people/iida/",
 "af": "University of Cambridge, UK"
-},
-"hs:p576:yang yuan": {
-"h": "https://people.iiis.tsinghua.edu.cn/~yuanyang/en.html",
-"af": "Tsinghua University",
-"g": "https://scholar.google.com/citations?user=7o4wtKEAAAAJ"
 },
 "hs:p579:diego cifuentes": {
 "af": "Massachusetts Institute of Technology, Cambridge, USA"
@@ -17188,11 +16704,6 @@
 "h": "https://people.csail.mit.edu/wangpeng/",
 "li": "https://www.linkedin.com/in/peng-wang-26206b83",
 "af": "Massachusetts Institute of Technology, Cambridge, MA, USA"
-},
-"hs:p594:sidhanth mohanty": {
-"h": "https://sidhanthm.com",
-"af": "Northwestern University",
-"g": "https://scholar.google.com/citations?user=GF4pITIAAAAJ"
 },
 "hs:p596:yu gan": {
 "af": "Cornell University, Ithaca, NY, USA"
@@ -17238,11 +16749,6 @@
 "h": "http://people.mpi-inf.mpg.de/~rlevi/",
 "af": "Max-Planck-Institut für Informatik, Saarbrücken, Germany"
 },
-"hs:p614:themis gouleakis": {
-"h": "https://dr.ntu.edu.sg/entities/person/Themistoklis-Gouleakis",
-"af": "Nanyang Technological University",
-"g": "https://scholar.google.com/citations?user=2qUvOz4AAAAJ"
-},
 "hs:p614:arsen vasilyan": {
 "h": "https://vasilyan.net",
 "af": "Aarhus University",
@@ -17285,10 +16791,6 @@
 "h": "http://www.csa.iisc.ac.in/~chiru",
 "af": "IISc Bangalore"
 },
-"hs:p651:venkat chandrasekaran": {
-"h": "http://users.cms.caltech.edu/~venkatc",
-"af": "California Inst. of Technology"
-},
 "hs:p651:tatjana chavdarova": {
 "h": "https://chavdarova.github.io",
 "af": "TU Wien",
@@ -17309,18 +16811,14 @@
 "af": "EPFL",
 "g": "https://scholar.google.com/citations?user=7nVGYfgAAAAJ"
 },
-"hs:p651:emily fox": {
-"h": "http://www.stat.washington.edu/~ebfox/",
-"g": "https://scholar.google.com/citations?user=OO-2710AAAAJ",
-"af": "Stanford University, USA"
-},
 "hs:p651:tianyu guo": {
 "af": "University of California Berkeley, CA, USA"
 },
-"hs:p651:thomas hofmann": {
-"h": "http://www.da.inf.ethz.ch/people/ThomasHofmann",
-"af": "ETH Zurich",
-"g": "https://scholar.google.com/citations?user=T3hAyLkAAAAJ"
+"hs:p652:himanshu singh": {
+"h": "https://hgaurav2k.github.io/",
+"li": "https://www.linkedin.com/in/himanshu-singh-371b6385/",
+"g": "https://scholar.google.com/citations?user=qav_fQYAAAAJ",
+"af": "University of California, Berkeley, CA, USA"
 },
 "hs:p656:qianqian wang": {
 "h": "https://qianqianwang68.github.io/",
@@ -17330,16 +16828,6 @@
 "hs:p656:mathieu aubry": {
 "h": "http://imagine.enpc.fr/~aubrym/",
 "g": "https://scholar.google.com/citations?user=0MiPsosAAAAJ"
-},
-"hs:p656:ali farhadi": {
-"h": "http://allenai.org/team.html",
-"g": "https://scholar.google.com/citations?user=jeOFRDsAAAAJ",
-"af": "AI2, Allen Institute for Artificial Intelligence, Seattle, WA, USA"
-},
-"hs:p656:santosh kumar": {
-"h": "https://www.memphis.edu/cs/people/faculty_pages/santosh-kumar.php",
-"af": "University of Memphis",
-"g": "https://scholar.google.com/citations?user=f0i_WNoAAAAJ"
 },
 "hs:p656:richard zhang": {
 "h": "https://research.adobe.com/person/richard-zhang/",
@@ -17399,10 +16887,10 @@
 "hs:p669:david rosenberg": {
 "af": "Bloomberg, Toronto, ON, Canada"
 },
-"hs:p669:alexander smola": {
-"h": "http://alex.smola.org/",
-"g": "https://scholar.google.com/citations?user=Tb0ZrYwAAAAJ",
-"af": "Carnegie Mellon University"
+"hs:p669:wee lee": {
+"h": "https://www.comp.nus.edu.sg/~leews",
+"af": "National University of Singapore",
+"g": "https://scholar.google.com/citations?user=8PCrLgwAAAAJ"
 },
 "hs:p670:vinayak kumar": {
 "h": "https://v-m-kumar.github.io/",
@@ -17445,11 +16933,6 @@
 "hs:p682:eric zhao": {
 "af": "University of California Berkeley, CA, USA"
 },
-"hs:p682:yuval dagan": {
-"h": "https://en-exact-sciences.tau.ac.il/profile/ydagan",
-"af": "Tel Aviv University",
-"g": "https://scholar.google.com/citations?user=X91gWisAAAAJ"
-},
 "hs:p682:ellen vitercik": {
 "af": "Stanford University, CA, USA"
 },
@@ -17470,16 +16953,6 @@
 },
 "hs:p689:xin lyu": {
 "af": "Tsinghua University, Institute for Interdisciplinary Information Sciences, Beijing, China"
-},
-"hs:p689:rasmus kyng": {
-"h": "http://rasmuskyng.com",
-"af": "ETH Zurich",
-"g": "https://scholar.google.com/citations?user=DHHVA9IAAAAJ"
-},
-"hs:p689:jakub pachocki": {
-"h": "https://scholar.harvard.edu/meret/home",
-"li": "https://www.linkedin.com/in/jakub-pachocki",
-"af": "OpenAI, San Francisco, CA, USA"
 },
 "hs:p694:tianhao wu": {
 "h": "https://thwu1.github.io/tianhaowu/",
@@ -17679,11 +17152,6 @@
 "hs:p860:michael correll": {
 "af": "Northeastern University, USA"
 },
-"hs:p860:zhicheng liu": {
-"h": "https://www.cs.umd.edu/people/leozcliu",
-"af": "Univ. of Maryland - College Park",
-"g": "https://scholar.google.com/citations?user=rRCnB0wAAAAJ"
-},
 "hs:p860:jorge poco": {
 "g": "https://scholar.google.com/citations?user=S_88vX4AAAAJ"
 },
@@ -17771,14 +17239,6 @@
 "af": "BITS Pilani",
 "g": "https://scholar.google.com/citations?user=4ky6cJ0AAAAJ"
 },
-"hs:p897:igor mordatch": {
-"g": "https://scholar.google.com/citations?user=Vzr1RukAAAAJ"
-},
-"hs:p897:adam smith": {
-"h": "https://adamsmith.as",
-"af": "Univ. of California - Santa Cruz",
-"g": "https://scholar.google.com/citations?user=78OLNd4AAAAJ"
-},
 "hs:p901:joe devietti": {
 "h": "https://www.cis.upenn.edu/~devietti",
 "af": "University of Pennsylvania",
@@ -17788,39 +17248,26 @@
 "h": "https://www.ccs.neu.edu/home/blerner/",
 "af": "Northeastern University, Khoury College of Computer Sciences, Boston, MA, USA"
 },
+"hs:p910:zixuan liu": {
+"af": "University of Washington, Seattle, WA, USA"
+},
 "hs:p911:navreet kaur": {
 "h": "https://navreeetkaur.github.io/",
 "g": "https://scholar.google.com/citations?user=97o1HRgAAAAJ",
 "af": "University of Washington, Seattle, WA, USA"
 },
-"hs:p911:hua shen": {
-"h": "https://hua-shen.org",
-"af": "NYU Shanghai",
-"g": "https://scholar.google.com/citations?user=zFjlv1sAAAAJ"
-},
 "hs:p911:brian keith": {
 "af": "Catholic University of the North, Coquimbo, Chile"
-},
-"hs:p911:siddharth krishnan": {
-"h": "https://webpages.uncc.edu/~skrish21",
-"af": "UNC - Charlotte",
-"g": "https://scholar.google.com/citations?user=I8HrLhQAAAAJ"
 },
 "hs:p914:ewin tang": {
 "h": "https://ewintang.com/",
 "g": "https://scholar.google.com/citations?user=ytm_89IAAAAJ",
 "af": "University of California, Berkeley, CA, USA"
 },
-"hs:p915:jacob nelson": {
-"h": "https://www.microsoft.com/en-us/research/people/jacnels/",
-"li": "https://www.linkedin.com/in/jacobnelson",
-"g": "https://scholar.google.com/citations?user=WsokyM4AAAAJ",
-"af": "Microsoft Research, Redmond, WA, USA"
-},
-"hs:p915:joe devietti": {
-"h": "https://www.cis.upenn.edu/~devietti",
-"af": "University of Pennsylvania",
-"g": "https://scholar.google.com/citations?user=0o1C8ykAAAAJ"
+"hs:p914:tsz kwok": {
+"h": "http://itcs.shufe.edu.cn/tckwok",
+"af": "SUFE",
+"g": "https://scholar.google.com/citations?user=579buxIAAAAJ"
 },
 "hs:p918:kit kuksenok": {
 "h": "https://xnze.ro/",
@@ -17831,11 +17278,6 @@
 "h": "http://www.ischool.berkeley.edu/people/faculty/danielperry",
 "li": "https://www.linkedin.com/in/danielbperry",
 "af": "University of California, Berkeley, School of Information"
-},
-"hs:p922:sarah dean": {
-"h": "https://sdean.website",
-"af": "Cornell University",
-"g": "https://scholar.google.com/citations?user=xhKqjpYAAAAJ"
 },
 "hs:p928:ziyu chen": {
 "h": "http://www.cs.cqu.edu.cn/info/1333/4224.htm",
@@ -17866,6 +17308,10 @@
 "af": "Tsinghua University",
 "g": "https://scholar.google.com/citations?user=t9HPFawAAAAJ"
 },
+"hs:p930:ines chami": {
+"g": "https://scholar.google.com/citations?user=9ceELFsAAAAJ",
+"af": "Stanford University, USA"
+},
 "hs:p930:sharon li": {
 "h": "https://pages.cs.wisc.edu/~sharonli",
 "af": "University of Wisconsin - Madison",
@@ -17876,15 +17322,13 @@
 "af": "University of Wisconsin - Madison",
 "g": "https://scholar.google.com/citations?user=9KhIkNkAAAAJ"
 },
-"hs:p930:madalina fiterau": {
-"h": "https://people.cs.umass.edu/~mfiterau",
-"af": "Univ. of Massachusetts Amherst",
-"g": "https://scholar.google.com/citations?user=NTHsaUQAAAAJ"
+"hs:p930:alex ratner": {
+"li": "https://www.linkedin.com/in/alexander-ratner-038ba239"
 },
-"hs:p930:virginia smith": {
-"h": "http://users.ece.cmu.edu/~smithv",
-"af": "Carnegie Mellon University",
-"g": "https://scholar.google.com/citations?user=bldHpWIAAAAJ"
+"hs:p930:chris sa": {
+"h": "http://www.cs.cornell.edu/~cdesa",
+"af": "Cornell University",
+"g": "https://scholar.google.com/citations?user=v7EjGHkAAAAJ"
 },
 "hs:p930:ioannis mitliagkas": {
 "h": "http://mitliagkas.github.io",
@@ -17895,11 +17339,6 @@
 "h": "https://cs.stanford.edu/~jhaochen/",
 "g": "https://scholar.google.com/citations?user=SWQxcO8AAAAJ",
 "af": "Stanford University, CA, USA"
-},
-"hs:p932:zhiyuan li": {
-"h": "https://zhiyuanli.ttic.edu",
-"af": "TTI Chicago",
-"g": "https://scholar.google.com/citations?user=5vVjpBsAAAAJ"
 },
 "hs:p933:sanmi koyejo": {
 "h": "https://cs.stanford.edu/~sanmi",
@@ -17964,6 +17403,9 @@
 "hs:p936:shayan doroudi": {
 "af": "University of California, Irvine, CA, USA"
 },
+"hs:p936:zhaohan guo": {
+"af": "Google DeepMind"
+},
 "hs:p936:rika antonova": {
 "h": "https://www.cst.cam.ac.uk/people/ra702",
 "af": "University of Cambridge",
@@ -17981,9 +17423,6 @@
 "g": "https://scholar.google.com/citations?user=1okGjb8AAAAJ",
 "af": "Stanford University, Stanford, CA, USA"
 },
-"hs:p937:esin durmus": {
-"g": "https://scholar.google.com/citations?user=cq2R_uoAAAAJ"
-},
 "hs:p937:dora demszky": {
 "h": "https://www.dorademszky.com/",
 "g": "https://scholar.google.com/citations?user=WtVqgE8AAAAJ",
@@ -17993,10 +17432,6 @@
 "h": "https://www.mhahn.info",
 "af": "Saarland University",
 "g": "https://scholar.google.com/citations?user=9y9ALCQAAAAJ"
-},
-"hs:p941:adrien bousseau": {
-"h": "https://www-sop.inria.fr/members/Adrien.Bousseau/",
-"g": "https://scholar.google.com/citations?user=KdX5MN4AAAAJ"
 },
 "hs:p941:ross daly": {
 "h": "https://web.stanford.edu/~rdaly525/",
@@ -18009,15 +17444,18 @@
 "g": "https://scholar.google.com/citations?user=NySeLFcAAAAJ",
 "af": "York University, School of Information Technology, Toronto, Canada"
 },
-"hs:p941:juho kim": {
-"h": "https://juhokim.com",
-"af": "KAIST",
-"g": "https://scholar.google.com/citations?user=2dDAbMgAAAAJ"
+"hs:p941:dae kim": {
+"h": "https://dhkim16.github.io",
+"af": "Yonsei University",
+"g": "https://scholar.google.com/citations?user=bjKa3nEAAAAJ"
 },
 "hs:p941:anyi rao": {
 "h": "https://anyirao.com",
 "af": "HKUST",
 "g": "https://scholar.google.com/citations?user=8lKr7j4AAAAJ"
+},
+"hs:p944:joon park": {
+"af": "Stanford University, USA"
 },
 "hs:p944:mitchell gordon": {
 "h": "http://mgordon.me/",
@@ -18027,11 +17465,6 @@
 "h": "https://joseph.seering.org",
 "af": "KAIST",
 "g": "https://scholar.google.com/citations?user=FUWKkd0AAAAJ"
-},
-"hs:p944:amy zhang": {
-"h": "https://people.csail.mit.edu/axz",
-"af": "University of Washington",
-"g": "https://scholar.google.com/citations?user=thZJZaYAAAAJ"
 },
 "hs:p944:mark whiting": {
 "h": "https://whiting.me/",
@@ -18159,25 +17592,11 @@
 "hs:p964:hui zhang": {
 "af": "Ant Financial Services Group, Blockchain Platform Division, Hangzhou, China"
 },
-"hs:p965:adam belay": {
-"h": "https://engineering.mit.edu/faculty-research/year-2017",
-"af": "Massachusetts Inst. of Technology",
-"g": "https://scholar.google.com/citations?user=AKQec5wAAAAJ"
-},
-"hs:p965:deian stefan": {
-"h": "https://cseweb.ucsd.edu/~dstefan",
-"af": "Univ. of California - San Diego",
-"g": "https://scholar.google.com/citations?user=qTVj7nwAAAAJ"
-},
-"hs:p965:ryan stutsman": {
-"h": "https://faculty.utah.edu/u0982239-Ryan_Stutsman/teaching/index.hml",
-"af": "University of Utah",
-"g": "https://scholar.google.com/citations?user=pyZ_FH4AAAAJ"
-},
-"hs:p965:nickolai zeldovich": {
-"h": "https://people.csail.mit.edu/nickolai",
-"af": "Massachusetts Inst. of Technology",
-"g": "https://scholar.google.com/citations?user=DJ6--hMAAAAJ"
+"hs:p965:ali mashtizadeh": {
+"h": "https://cs.uwaterloo.ca/~mashti",
+"af": "University of Waterloo",
+"g": "https://scholar.google.com/citations?user=djMOD-IAAAAJ",
+"li": "https://www.linkedin.com/in/ali-mashtizadeh-83969020"
 },
 "hs:p965:antonio nicolosi": {
 "h": "https://www.stevens.edu/profile/anicolos",
@@ -18190,22 +17609,13 @@
 "hs:p992:hanyu chen": {
 "af": "Carnegie Mellon University, PA, USA"
 },
-"hs:p992:qianqian wang": {
-"h": "https://qianqianwang68.github.io/",
-"g": "https://scholar.google.com/citations?user=VdmfIeUAAAAJ",
-"af": "University of California, Berkeley, CA, USA"
-},
-"hs:p992:sean bell": {
-"g": "https://scholar.google.com/citations?user=xY1GdVgAAAAJ",
-"af": "Facebook Inc., Menlo Park, CA, USA"
+"hs:p992:bharath kani": {
+"h": "https://bharathrajn.com/",
+"g": "https://scholar.google.com/citations?user=DcZsAGEAAAAJ",
+"af": "Cornell University, Ithaca, NY, USA"
 },
 "hs:p992:kevin matzen": {
 "af": "Adobe Systems, Seattle, WA, USA"
-},
-"hs:p996:utkarsh mall": {
-"h": "https://mbzuai.ac.ae/study/faculty/utkarsh-mall",
-"af": "MBZUAI",
-"g": "https://scholar.google.com/citations?user=AK0AFWwAAAAJ"
 },
 "hs:p1009:dipendra misra": {
 "af": "Cornell University, NY, USA"
@@ -18220,11 +17630,6 @@
 "hs:p1010:lana ramjit": {
 "af": "Cornell Tech, USA"
 },
-"hs:p1010:julia len": {
-"h": "https://julialen.github.io",
-"af": "University of North Carolina",
-"g": "https://scholar.google.com/citations?user=YXafOYwAAAAJ"
-},
 "hs:p1010:chinasa okolo": {
 "g": "https://scholar.google.com/citations?user=Ljcd9nMAAAAJ"
 },
@@ -18233,11 +17638,6 @@
 "li": "https://www.linkedin.com/in/alexa-vanhattum",
 "g": "https://scholar.google.com/citations?user=niKmcN0AAAAJ",
 "af": "Wellesley College, MA, USA"
-},
-"hs:p1010:judith uchidiuno": {
-"h": "https://judithu.com",
-"af": "Georgia Institute of Technology",
-"g": "https://scholar.google.com/citations?user=n6zdTxUAAAAJ"
 },
 "hs:p1010:longqi yang": {
 "af": "Microsoft Corp., Redmond, WA, USA"
@@ -18255,27 +17655,17 @@
 "af": "University of Bonn",
 "g": "https://scholar.google.com/citations?user=etneny8C6icJ"
 },
-"hs:p1013:patrick briest": {
-"h": "https://www.hni.uni-paderborn.de/en/algorithms-and-complexity/staff/alumni/pbriest/",
-"li": "https://www.linkedin.com/in/patrick-briest",
-"af": "University of Paderborn, Department of Computer Science, Germany"
-},
 "hs:p1013:shahar dobzinski": {
 "h": "https://www.weizmann.ac.il/pages/search/people?language=english&single=1&person_id=41667",
 "af": "Weizmann Institute of Science",
 "g": "https://scholar.google.com/citations?user=teS9lHAAAAAJ"
-},
-"hs:p1013:katrina ligett": {
-"h": "http://www.huji.ac.il/dataj/controller/ihoker/MOP-STAFF_LINK?sno=68805179&Save_t=",
-"af": "Hebrew University of Jerusalem",
-"g": "https://scholar.google.com/citations?user=PqQAVcAAAAAJ"
 },
 "hs:p1015:sujaya maiyya": {
 "h": "https://cs.uwaterloo.ca/~smaiyya",
 "af": "University of Waterloo",
 "g": "https://scholar.google.com/citations?user=9pZLKbgAAAAJ"
 },
-"hs:p1015:mina tahmasbi": {
+"hs:p1015:mina arashloo": {
 "h": "https://mina.arashloo.net",
 "af": "University of Waterloo",
 "g": "https://scholar.google.com/citations?user=gPxtQfgAAAAJ"
@@ -18380,12 +17770,6 @@
 },
 "hs:p1049:zhijing li": {
 "af": "Cornell University, Thaca, NY, USA"
-},
-"hs:p1049:alexa vanhattum": {
-"h": "https://www.cs.cornell.edu/~avh/",
-"li": "https://www.linkedin.com/in/alexa-vanhattum",
-"g": "https://scholar.google.com/citations?user=niKmcN0AAAAJ",
-"af": "Wellesley College, MA, USA"
 },
 "hs:p1050:chen wang": {
 "af": "Cornell University, USA"
@@ -18538,11 +17922,6 @@
 "g": "https://scholar.google.com/citations?user=45heFpgAAAAJ",
 "af": "Amazon, AWS AI Labs, New York, NY, USA"
 },
-"hs:p1100:fnu suya": {
-"h": "https://eecs.utk.edu/people/fnu-suya",
-"af": "University of Tennessee",
-"g": "https://scholar.google.com/citations?user=OmLIG8EAAAAJ"
-},
 "hs:p1102:alexander frolov": {
 "g": "https://scholar.google.com/citations?user=CfXEkmoAAAAJ",
 "af": "University of Maryland, College Park, MD, USA"
@@ -18550,11 +17929,6 @@
 "hs:p1104:aishwarya thiruvengadam": {
 "h": "https://sites.google.com/view/aishwaryat",
 "af": "IIT Madras"
-},
-"hs:p1104:feng liu": {
-"h": "https://school.eecs.wsu.edu/faculty/profile/?nid=feng-hao.liu",
-"af": "Washington State University",
-"g": "https://scholar.google.com/citations?user=vvWcl-wAAAAJ"
 },
 "hs:p1112:junyi liu": {
 "h": "https://www.quics.umd.edu/people/junyi-liu",
@@ -18595,6 +17969,9 @@
 "hs:p1123:david li": {
 "af": "University of Maryland, Department of Computer Science, MD, USA"
 },
+"hs:p1127:ashwin kumar": {
+"h": "http://kayyoor.ashwin.googlepages.com/"
+},
 "hs:p1127:souvik bhattacherjee": {
 "h": "https://researcher.ibm.com/researcher/view.php?person=in-souvikbh",
 "af": "IBM Research"
@@ -18614,11 +17991,6 @@
 "hs:p1166:chethan kamath": {
 "h": "https://www.cse.iitb.ac.in/~ckamath",
 "af": "IIT Bombay"
-},
-"hs:p1166:omer paneth": {
-"h": "https://people.csail.mit.edu/omerpa",
-"af": "Tel Aviv University",
-"g": "https://scholar.google.com/citations?user=yORoyhsAAAAJ"
 },
 "hs:p1166:siyao guo": {
 "h": "https://sites.google.com/site/siyaoguo",
@@ -18658,6 +18030,11 @@
 },
 "hs:p1187:yaohui chen": {
 "af": "Facebook Inc., Menlo Park, CA, USA"
+},
+"hs:p1196:sara bartolomeo": {
+"h": "https://picorana.github.io/",
+"g": "https://scholar.google.com/citations?user=VAi0mIQAAAAJ",
+"af": "University of Konstanz, Germany"
 },
 "hs:p1200:xin fang": {
 "af": "Qualcomm Inc., Boxborough, MA, USA"
@@ -18748,15 +18125,6 @@
 "af": "UNIST",
 "g": "https://scholar.google.com/citations?user=g4ASrlcAAAAJ"
 },
-"hs:p1250:yousra aafer": {
-"h": "https://cs.uwaterloo.ca/~yaafer",
-"af": "University of Waterloo",
-"g": "https://scholar.google.com/citations?user=sx3vhoMAAAAJ"
-},
-"hs:p1250:zhiyong shan": {
-"h": "https://www.wichita.edu/profiles/academics/engineering/SoC/Shan-Zhiyong.php",
-"af": "Wichita State University"
-},
 "hs:p1254:yuchen zhou": {
 "af": "Purdue University, West Lafayette, Indiana, USA"
 },
@@ -18767,21 +18135,10 @@
 "li": "https://www.linkedin.com/in/csgates",
 "af": "Symantec Research Labs"
 },
-"hs:p1257:xinming ou": {
-"h": "http://www.cse.usf.edu/~xou",
-"af": "University of South Florida",
-"g": "https://scholar.google.com/citations?user=faldcbwAAAAJ",
-"li": "https://www.linkedin.com/in/xinming-ou-a967a53"
-},
 "hs:p1257:zenglin xu": {
 "h": "https://faculty.fudan.edu.cn/xuzenglin/en/index.htm",
 "af": "Fudan University",
 "g": "https://scholar.google.com/citations?user=gF0H9nEAAAAJ"
-},
-"hs:p1257:omar chowdhury": {
-"h": "https://www.cs.stonybrook.edu/people/faculty/OmarChowdhury",
-"af": "Stony Brook University",
-"g": "https://scholar.google.com/citations?user=8QhYsz8AAAAJ"
 },
 "hs:p1258:jianfei gao": {
 "af": "Purdue University, West Lafayette, IN, USA"
@@ -18865,8 +18222,10 @@
 "h": "https://tamalikamukherjee.com/",
 "af": "Max Planck Institute for Security and Privacy, Germany"
 },
-"hs:p1276:mohammad hassan": {
-"h": "http://zu.edu.jo/MainFile/Profile_Dr_UploadFile/PersonalInformation/Files/File_1054_15_31_15.pdf"
+"hs:p1274:raphael meyer": {
+"h": "https://ram900.com/",
+"g": "https://scholar.google.com/citations?user=Xpi5HD0AAAAJ",
+"af": "New York University, Tandon School of Engineering, NY, USA"
 },
 "hs:p1276:seunghoon lee": {
 "af": "Purdue University, Department of Computer Science, West Lafayette, IN, USA"
@@ -18901,12 +18260,6 @@
 },
 "hs:p1289:mengbo wang": {
 "af": "Purdue University, West Lafayette, IN, USA"
-},
-"hs:p1302:gregory dexter": {
-"h": "https://www.cs.purdue.edu/people/graduate-students/gdexter.html",
-"li": "https://www.linkedin.com/in/gregorydexter1",
-"g": "https://scholar.google.com/citations?user=nEIGQ00AAAAJ",
-"af": "Purdue University, Department of Computer Science, West Lafayette, IN, USA"
 },
 "hs:p1306:xiaowei zhang": {
 "af": "Purdue University, West Lafayette, IN, USA"
@@ -18965,6 +18318,9 @@
 "hs:p1334:jiefeng chen": {
 "af": "Google Cloud AI Research"
 },
+"hs:p1335:bobbi yogatama": {
+"h": "https://bwyogatama.github.io/"
+},
 "hs:p1336:bryan gibson": {
 "h": "http://pages.cs.wisc.edu/~bgibson/",
 "af": "Department of Computer Sciences, University of Wisconsin-Madison"
@@ -18993,11 +18349,6 @@
 "hs:p1348:song bian": {
 "h": "https://waterpine.github.io/",
 "af": "University of Wisconsin, Madison, WI, USA"
-},
-"hs:p1349:nicolas papernot": {
-"h": "https://www.papernot.fr",
-"af": "University of Toronto",
-"g": "https://scholar.google.com/citations?user=cGxq0cMAAAAJ"
 },
 "hs:p1349:kunyang li": {
 "h": "https://kunyangli.com/",
@@ -19055,6 +18406,16 @@
 "hs:p1375:gilles louppe": {
 "af": "University of Liège, Belgium"
 },
+"hs:p1375:danilo rezende": {
+"li": "https://www.linkedin.com/in/danilo-jimenez-rezende-2031a7a",
+"g": "https://scholar.google.com/citations?user=UGlyhFMAAAAJ",
+"af": "Google"
+},
+"hs:p1375:andrew wilson": {
+"h": "https://cims.nyu.edu/~andrewgw",
+"af": "New York University",
+"g": "https://scholar.google.com/citations?user=twWX2LIAAAAJ"
+},
 "hs:p1375:shirley ho": {
 "g": "https://scholar.google.com/citations?user=fhOi--4AAAAJ"
 },
@@ -19102,16 +18463,6 @@
 "hs:p1403:jeffrey zhang": {
 "af": "University of Texas at Austin, TX, USA"
 },
-"hs:p1403:yue zhao": {
-"h": "https://yzhao062.github.io",
-"af": "University of Southern California",
-"g": "https://scholar.google.com/citations?user=zoGDYsoAAAAJ"
-},
-"hs:p1403:mina lee": {
-"h": "https://cs.uchicago.edu/people/mina-lee",
-"af": "University of Chicago",
-"g": "https://scholar.google.com/citations?user=Z7H58GIAAAAJ"
-},
 "hs:p1404:rachit garg": {
 "h": "https://sites.google.com/view/rachit-garg/home",
 "g": "https://scholar.google.com/citations?user=GQv28pcAAAAJ",
@@ -19144,6 +18495,11 @@
 "h": "https://magiclinux.github.io/zhaos/",
 "g": "https://scholar.google.com/citations?user=yDZct7UAAAAJ",
 "af": "University of California Berkeley, CA, USA"
+},
+"hs:p1419:juan rodriguez": {
+"h": "https://www.juandiego-rodriguez.com/",
+"g": "https://scholar.google.com/citations?user=IIwOwFUAAAAJ",
+"af": "University of Texas at Austin, TX, USA"
 },
 "hs:p1419:gemma boleda": {
 "h": "http://gboleda.utcompling.com/",
@@ -19183,19 +18539,6 @@
 "af": "KAIST",
 "g": "https://scholar.google.com/citations?user=T5xFDAMAAAAJ"
 },
-"hs:p1427:supartha podder": {
-"h": "https://www.cs.stonybrook.edu/people/faculty/suparthapodder",
-"af": "Stony Brook University",
-"g": "https://scholar.google.com/citations?user=vpwsjWkAAAAJ"
-},
-"hs:p1427:robin kothari": {
-"g": "https://scholar.google.com/citations?user=6toFymgAAAAJ"
-},
-"hs:p1427:thomas vidick": {
-"h": "https://www.epfl.ch/labs/qcc",
-"af": "EPFL",
-"g": "https://scholar.google.com/citations?user=IGDs4HwAAAAJ"
-},
 "hs:p1427:avinatan hassidim": {
 "h": "http://u.cs.biu.ac.il/~avinatan",
 "af": "Bar-Ilan University",
@@ -19214,15 +18557,8 @@
 "af": "USTC",
 "g": "https://scholar.google.com/citations?user=pOhKXhYAAAAJ"
 },
-"hs:p1430:xin li": {
-"h": "http://www.cs.jhu.edu/~lixints",
-"af": "Johns Hopkins University",
-"g": "https://scholar.google.com/citations?user=OUS_bT8AAAAJ"
-},
-"hs:p1430:ben lee": {
-"h": "http://web.engr.oregonstate.edu/~benl/Ben_Lee/Welcome.html",
-"af": "Oregon State University",
-"g": "https://scholar.google.com/citations?user=Rsx5uzAAAAAJ"
+"hs:p1430:ben volk": {
+"af": "Reichman University, Herzliya, Israel"
 },
 "hs:p1430:dean doron": {
 "af": "Ben-Gurion University of the Negev, Israel"
@@ -19252,10 +18588,6 @@
 },
 "hs:p1434:paul clements": {
 "af": "BigLever Software"
-},
-"hs:p1434:farnam jahanian": {
-"h": "https://www.cmu.edu/leadership/the-provost",
-"af": "Carnegie Mellon University"
 },
 "hs:p1442:yi li": {
 "af": "University of Texas at Austin, Department of Computer Sciences, TX, USA"
@@ -19322,15 +18654,16 @@
 "g": "https://scholar.google.com/citations?user=UrsQh_0AAAAJ",
 "af": "Meta, USA"
 },
-"hs:p1446:jamie morgenstern": {
-"h": "http://jamiemorgenstern.com",
-"af": "University of Washington",
-"g": "https://scholar.google.com/citations?user=t0ZfFH8AAAAJ"
-},
 "hs:p1446:steven wu": {
 "h": "https://zstevenwu.com",
 "af": "Carnegie Mellon University",
 "g": "https://scholar.google.com/citations?user=MbF6rTEAAAAJ"
+},
+"hs:p1452:veronica lyu": {
+"h": "https://veronica320.github.io/",
+"li": "https://www.linkedin.com/in/qing-lyu-255514209",
+"g": "https://scholar.google.com/citations?user=RD8UGoAAAAAJ",
+"af": "University of Pennsylvania, PA, USA"
 },
 "hs:p1452:matt post": {
 "h": "https://post3.net/",
@@ -19378,20 +18711,9 @@
 "g": "https://scholar.google.com/citations?user=JnTrJCQAAAAJ",
 "af": "University of Pennsylvania, GRASP Lab, Philadelphia, PA, USA"
 },
-"hs:p1461:aalok thakkar": {
-"h": "https://www.ashoka.edu.in/profile/aalok-thakkar",
-"af": "Ashoka University",
-"g": "https://scholar.google.com/citations?user=ytHg69QAAAAJ",
-"li": "https://www.linkedin.com/in/aalokthakkar/"
-},
 "hs:p1461:lei shi": {
 "g": "https://scholar.google.com/citations?user=lLOHDJ0AAAAJ",
 "af": "Hefei University of Technology, School of Computer Science and Information Engineering, Hefei, China"
-},
-"hs:p1461:yuepeng wang": {
-"h": "https://www.cs.sfu.ca/~yuepeng",
-"af": "Simon Fraser University",
-"g": "https://scholar.google.com/citations?user=SMln4gEAAAAJ"
 },
 "hs:p1461:dana fisman": {
 "g": "https://scholar.google.com/citations?user=LWgGkRsAAAAJ",
@@ -19400,32 +18722,12 @@
 "hs:p1462:fernando cladera": {
 "h": "https://fcladera.com/"
 },
-"hs:p1463:yahav bechavod": {
-"h": "https://www.cs.huji.ac.il/~yahav_be/",
-"g": "https://scholar.google.com/citations?user=bsnma4wAAAAJ",
-"af": "Hebrew University of Jerusalem, Israel"
-},
-"hs:p1463:meena jagadeesan": {
-"h": "https://mjagadeesan.github.io",
-"af": "University of Pennsylvania",
-"g": "https://scholar.google.com/citations?user=XW62DrcAAAAJ"
-},
 "hs:p1463:varun gupta": {
 "h": "https://vgup.me/",
 "af": "University of Pennsylvania, Department of Computer and Information Sciences, Philadelphia, PA, USA"
 },
 "hs:p1463:alexander tolbert": {
 "af": "Emory University, Department of Quantitative Theory and Methods, Atlanta, GA, USA"
-},
-"hs:p1463:jamie morgenstern": {
-"h": "http://jamiemorgenstern.com",
-"af": "University of Washington",
-"g": "https://scholar.google.com/citations?user=t0ZfFH8AAAAJ"
-},
-"hs:p1463:steven wu": {
-"h": "https://zstevenwu.com",
-"af": "Carnegie Mellon University",
-"g": "https://scholar.google.com/citations?user=MbF6rTEAAAAJ"
 },
 "hs:p1463:kareem amin": {
 "af": "Google Research, New York, NY, USA"
@@ -19442,10 +18744,6 @@
 "hs:p1463:eyal dar": {
 "h": "http://www.seas.upenn.edu/~evendar/",
 "af": "University of Pennsylvania, Philadelphia, USA"
-},
-"hs:p1463:john langford": {
-"g": "https://scholar.google.com/citations?user=LFiqVpwAAAAJ",
-"af": "Microsoft Research, USA"
 },
 "hs:p1467:yinda zhang": {
 "h": "https://yindazhang.github.io/",
@@ -19506,20 +18804,11 @@
 "g": "https://scholar.google.com/citations?user=PKep7rYAAAAJ",
 "af": "University of Toronto, Department of Computer Science, Toronto, ON, Canada"
 },
-"hs:p1486:chen chen": {
-"h": "http://www.cis.upenn.edu/~chenche/",
-"af": "University of Pennsylvania, Philadelphia, PA, USA"
-},
 "hs:p1487:yuhao liu": {
 "af": "University of Pennsylvania, Philadelphia, PA, USA"
 },
 "hs:p1487:junyu zhou": {
 "af": "University of Pennsylvania, Philadelphia, PA, USA"
-},
-"hs:p1492:sampath kannan": {
-"h": "https://www.cis.upenn.edu/~kannan",
-"af": "University of Pennsylvania",
-"g": "https://scholar.google.com/citations?user=WhvtccoAAAAJ"
 },
 "hs:p1492:marie jacob": {
 "h": "http://www.cis.upenn.edu/~majacob/",
@@ -19528,30 +18817,20 @@
 "hs:p1492:ling ding": {
 "af": "University of California, Los Angeles, CA, USA"
 },
+"hs:p1492:partha talukdar": {
+"h": "https://parthatalukdar.github.io/",
+"g": "https://scholar.google.com/citations?user=CIZwXAcAAAAJ",
+"af": "Indian Institute of Science, Bangalore"
+},
 "hs:p1498:sarah boulakia": {
 "h": "http://www.lri.fr/~cohen/",
 "g": "https://scholar.google.com/citations?user=8QeCBlwAAAAJ",
 "af": "University of Paris-Sud, Laboratory for Computer Science (LRI), France"
 },
-"hs:p1498:yinjun wu": {
-"h": "https://wuyinjun-1993.github.io",
-"af": "Peking University",
-"g": "https://scholar.google.com/citations?user=m3iZm6kAAAAJ"
-},
 "hs:p1505:jonathan chan": {
 "h": "https://ionathan.ch/",
 "g": "https://scholar.google.com/citations?user=dR8doS8AAAAJ",
 "af": "University of Pennsylvania, PA, USA"
-},
-"hs:p1507:stephanie wang": {
-"h": "https://www.cs.washington.edu/people/faculty/stephanie-wang",
-"af": "University of Washington",
-"g": "https://scholar.google.com/citations?user=7w24ptsAAAAJ"
-},
-"hs:p1512:matt huenerfauth": {
-"h": "http://huenerfauth.ist.rit.edu",
-"af": "Rochester Inst. of Technology",
-"g": "https://scholar.google.com/citations?user=UsP45DwAAAAJ"
 },
 "hs:p1512:dan bikel": {
 "g": "https://scholar.google.com/citations?user=St5gv-4AAAAJ"
@@ -19563,11 +18842,6 @@
 "h": "https://mingxuan.me/",
 "g": "https://scholar.google.com/citations?user=V4MEw70AAAAJ",
 "af": "Columbia University, Causal Artificial Intelligence Lab, New York, NY, USA"
-},
-"hs:p1519:sanghack lee": {
-"h": "https://www.sanghacklee.me",
-"af": "Seoul National University",
-"g": "https://scholar.google.com/citations?user=hsxjzdkAAAAJ"
 },
 "hs:p1519:adele ribeiro": {
 "h": "https://adele.github.io/#about",
@@ -19605,11 +18879,6 @@
 "h": "http://dawenl.github.io/",
 "af": "Netflix Inc., Los Gatos, CA, USA"
 },
-"hs:p1522:scott linderman": {
-"h": "https://lindermanlab.github.io/cv/cv.pdf",
-"g": "https://scholar.google.com/citations?user=6mD3I24AAAAJ",
-"af": "Stanford University, CA, USA"
-},
 "hs:p1522:liping liu": {
 "h": "https://www.eecs.tufts.edu/~liulp",
 "af": "Tufts University",
@@ -19626,11 +18895,6 @@
 "g": "https://scholar.google.com/citations?user=GQ6rOssAAAAJ",
 "li": "https://www.linkedin.com/in/chrisandersson"
 },
-"hs:p1522:john paisley": {
-"h": "http://www.columbia.edu/~jwp2128/",
-"g": "https://scholar.google.com/citations?user=r31_fYQAAAAJ",
-"af": "Columbia University, Department of Electrical Engineering, New York, NY, USA"
-},
 "hs:p1528:arpit agarwal": {
 "h": "https://agarpit.github.io",
 "af": "IIT Bombay",
@@ -19645,48 +18909,23 @@
 "h": "http://paulduetting.com/",
 "af": "Google Research, Switzerland"
 },
-"hs:p1528:kira goldner": {
-"h": "https://www.kiragoldner.com",
-"af": "Boston University",
-"g": "https://scholar.google.com/citations?user=3Gk0uc8AAAAJ",
-"li": "https://www.linkedin.com/in/kira-goldner"
-},
 "hs:p1528:martin hoefer": {
 "h": "https://algo.rwth-aachen.de/team/hoefer/index.en.shtml",
 "af": "RWTH Aachen University",
 "g": "https://scholar.google.com/citations?user=PBCXFY8AAAAJ"
-},
-"hs:p1528:zhiyi huang": {
-"h": "https://i.cs.hku.hk/~zhiyi",
-"af": "University of Hong Kong",
-"g": "https://scholar.google.com/citations?user=6ztViH8AAAAJ"
 },
 "hs:p1528:sophie huiberts": {
 "h": "https://sophie.huiberts.me/",
 "g": "https://scholar.google.com/citations?user=s2ii11EAAAAJ",
 "af": "Clermont Auvergne University, LIMOS, Clermont-Ferrand, France"
 },
-"hs:p1531:yinzhi cao": {
-"h": "https://www.cs.jhu.edu/~yzcao",
-"af": "Johns Hopkins University",
-"g": "https://scholar.google.com/citations?user=0jBP_aEAAAAJ"
-},
 "hs:p1532:clayton sanford": {
 "h": "https://claytonsanford.com/",
 "g": "https://scholar.google.com/citations?user=Qo18yHAAAAAJ",
 "af": "Columbia University, NY, USA"
 },
-"hs:p1532:james wang": {
-"h": "https://people.cs.clemson.edu/~jzwang",
-"af": "Clemson University",
-"g": "https://scholar.google.com/citations?user=JVEaAlEAAAAJ"
-},
 "hs:p1532:ji xu": {
 "af": "Columbia University, Department of Computer Science, NY, USA"
-},
-"hs:p1532:christopher tosh": {
-"h": "https://cjtosh.github.io/",
-"g": "https://scholar.google.com/citations?user=mRBHEjEAAAAJ"
 },
 "hs:p1532:debmalya mandal": {
 "h": "https://debmandal.github.io",
@@ -19728,11 +18967,6 @@
 "hs:p1542:xavier carreras": {
 "g": "https://scholar.google.com/citations?user=mSn1TVMAAAAJ"
 },
-"hs:p1542:shay cohen": {
-"h": "http://homepages.inf.ed.ac.uk/scohen",
-"af": "University of Edinburgh",
-"g": "https://scholar.google.com/citations?user=Q4oVM7IAAAAJ"
-},
 "hs:p1542:percy liang": {
 "h": "http://cs.stanford.edu/~pliang/",
 "g": "https://scholar.google.com/citations?user=pouyVyUAAAAJ",
@@ -19746,11 +18980,6 @@
 "li": "https://www.linkedin.com/in/chengyu-lin-3aa7687b",
 "g": "https://scholar.google.com/citations?user=iYUb4MsAAAAJ",
 "af": "Columbia University, New York City, NY, USA"
-},
-"hs:p1550:alexander hoover": {
-"h": "https://axhoover.com",
-"af": "Stevens Institute of Technology",
-"g": "https://scholar.google.com/citations?user=ko3G0roAAAAJ"
 },
 "hs:p1560:jack yang": {
 "af": "Columbia University, New York, NY, USA"
@@ -19778,11 +19007,6 @@
 },
 "hs:p1570:michael theobald": {
 "h": "http://www.michaeltheobald.com/"
-},
-"hs:p1575:sheng zhong": {
-"h": "http://cosec.nju.edu.cn/index.php/%E4%BB%B2%E7%9B%9B_Sheng_Zhong",
-"af": "Nanjing University",
-"g": "https://scholar.google.com/citations?user=EztoKEIAAAAJ"
 },
 "hs:p1576:zixuan wang": {
 "h": "https://zixuan-wang-dlt.github.io/",
@@ -19824,6 +19048,11 @@
 "af": "University of Toronto",
 "g": "https://scholar.google.com/citations?user=ZLpO3XQAAAAJ"
 },
+"hs:p1580:jose lobato": {
+"h": "http://jmhl.org",
+"af": "University of Cambridge",
+"g": "https://scholar.google.com/citations?user=BEBccCQAAAAJ"
+},
 "hs:p1580:shamim nemati": {
 "h": "http://www.bmi.emory.edu/Nemati",
 "g": "https://scholar.google.com/citations?user=u4v19dYAAAAJ",
@@ -19864,7 +19093,7 @@
 "hs:p1591:lana ramjit": {
 "af": "Cornell Tech, USA"
 },
-"hs:p1592:mina tahmasbi": {
+"hs:p1592:mina arashloo": {
 "h": "https://mina.arashloo.net",
 "af": "University of Waterloo",
 "g": "https://scholar.google.com/citations?user=gPxtQfgAAAAJ"
@@ -19878,26 +19107,6 @@
 "h": "https://theryanl.github.io/",
 "g": "https://scholar.google.com/citations?user=s3McVn8AAAAJ",
 "af": "Princeton University, Department of Computer Science, Princeton, NJ, USA"
-},
-"hs:p1598:anders miltner": {
-"h": "https://www.cs.sfu.ca/~miltner",
-"af": "Simon Fraser University",
-"g": "https://scholar.google.com/citations?user=SzgX3_MAAAAJ"
-},
-"hs:p1598:michael greenberg": {
-"h": "https://mgree.github.io",
-"af": "Stevens Institute of Technology",
-"g": "https://scholar.google.com/citations?user=_LSrWlwAAAAJ"
-},
-"hs:p1598:nate foster": {
-"h": "https://people.epfl.ch/nate.foster",
-"af": "EPFL",
-"g": "https://scholar.google.com/citations?user=AH5j40kAAAAJ"
-},
-"hs:p1598:kenny zhu": {
-"h": "https://kenzhu2000.github.io",
-"af": "University of Texas at Arlington",
-"g": "https://scholar.google.com/citations?user=ZIRJ6lIAAAAJ"
 },
 "hs:p1598:daniel dantas": {
 "li": "https://www.linkedin.com/in/dantasfiles",
@@ -19942,18 +19151,9 @@
 "h": "https://sites.google.com/site/iargandacarreras/",
 "g": "https://scholar.google.com/citations?user=02VpQlGwa_kC"
 },
-"hs:p1618:steven ko": {
-"h": "https://www.sfu.ca/computing/people/faculty/steven-ko.html",
-"af": "Simon Fraser University",
-"g": "https://scholar.google.com/citations?user=SsRxrX4AAAAJ"
-},
 "hs:p1618:amy tai": {
 "h": "https://amytai.github.io/",
 "af": "Google, USA"
-},
-"hs:p1618:prem gopalan": {
-"h": "http://www.cs.princeton.edu/~pgopalan/",
-"af": "Princeton University, Department of Computer Science, USA"
 },
 "hs:p1632:sang oum": {
 "h": "https://sangiloum.github.io/",
@@ -19991,11 +19191,6 @@
 "af": "University of Warsaw",
 "g": "https://scholar.google.com/citations?user=r0mZYagAAAAJ"
 },
-"hs:p1649:siyao guo": {
-"h": "https://sites.google.com/site/siyaoguo",
-"af": "NYU Shanghai",
-"g": "https://scholar.google.com/citations?user=nscLxl4AAAAJ"
-},
 "hs:p1649:yiannis tselekounis": {
 "h": "https://www.yiannistselekounis.com",
 "af": "Royal Holloway Univ. of London",
@@ -20010,11 +19205,6 @@
 "g": "https://scholar.google.com/citations?user=Rb5UizIAAAAJ",
 "af": "New York University, New York, NY, USA"
 },
-"hs:p1649:rachit garg": {
-"h": "https://sites.google.com/view/rachit-garg/home",
-"g": "https://scholar.google.com/citations?user=GQv28pcAAAAJ",
-"af": "New York University, NY, USA"
-},
 "hs:p1649:james bartusek": {
 "af": "New York University, USA"
 },
@@ -20027,6 +19217,9 @@
 "g": "https://scholar.google.com/citations?user=pB9hZ_MAAAAJ",
 "af": "University of Michigan, Ann Arbor, MI, USA"
 },
+"hs:p1652:teal witter": {
+"af": "New York University, USA"
+},
 "hs:p1652:raphael meyer": {
 "h": "https://ram900.com/",
 "g": "https://scholar.google.com/citations?user=Xpi5HD0AAAAJ",
@@ -20034,9 +19227,6 @@
 },
 "hs:p1652:aline bessa": {
 "h": "http://engineering.nyu.edu/people/aline-duarte-bessa"
-},
-"hs:p1652:teal witter": {
-"af": "New York University, USA"
 },
 "hs:p1653:boyang yu": {
 "af": "New York University, New York, NY, USA"
@@ -20072,25 +19262,15 @@
 "g": "https://scholar.google.com/citations?user=p2Oqdl4AAAAJ",
 "af": "University of Amsterdam, Korteweg-de Vries Institute for Mathematics, The Netherlands"
 },
-"hs:p1676:euiwoong lee": {
-"h": "https://web.eecs.umich.edu/~euiwoong",
-"af": "University of Michigan",
-"g": "https://scholar.google.com/citations?user=9Yxhn6oAAAAJ"
+"hs:p1676:young ko": {
+"h": "https://youngkunko.github.io",
+"af": "Pennsylvania State University",
+"g": "https://scholar.google.com/citations?user=IKUWKs0AAAAJ"
 },
 "hs:p1676:omri weinstein": {
 "h": "http://www.cs.columbia.edu/~omri",
 "af": "Hebrew University of Jerusalem",
 "g": "https://scholar.google.com/citations?user=oRi9TIwAAAAJ"
-},
-"hs:p1676:anindya de": {
-"h": "https://www.seas.upenn.edu/directory/profile.php?ID=273",
-"af": "University of Pennsylvania",
-"g": "https://scholar.google.com/citations?user=lPM8k54AAAAJ"
-},
-"hs:p1676:daniel dadush": {
-"h": "https://homepages.cwi.nl/~dadush/",
-"g": "https://scholar.google.com/citations?user=dD3X2gwAAAAJ",
-"af": "Centrum Wiskunde & Informatica, Amsterdam, The Netherlands"
 },
 "hs:p1676:divesh aggarwal": {
 "h": "https://sites.google.com/site/diveshhomepage",
@@ -20138,10 +19318,10 @@
 "g": "https://scholar.google.com/citations?user=OTLaJT4AAAAJ",
 "af": "University of California, Davis, Department of Statistics, Davis, CA, USA"
 },
-"hs:p1709:yiwei wang": {
-"h": "https://engineering.ucmerced.edu/content/yiwei-wang",
-"af": "Univ. of California - Merced",
-"g": "https://scholar.google.com/citations?user=Sh9QvBkAAAAJ"
+"hs:p1709:anaelia ovalle": {
+"h": "https://anaeliaovalle.github.io/",
+"g": "https://scholar.google.com/citations?user=BLB0ybwAAAAJ",
+"af": "Meta, New York, NY, USA"
 },
 "hs:p1710:ahmed alaa": {
 "h": "https://alaalab.berkeley.edu/",
@@ -20171,19 +19351,10 @@
 "hs:p1715:ran gelles": {
 "af": "Bar-Ilan University, Ramat-Gan, Israel"
 },
-"hs:p1715:brett hemenway": {
-"h": "http://cis.upenn.edu/~fbrett/",
-"af": "University of Pennsylvania, Department of Computer and Information Science, Philadelphia, PA, USA"
-},
 "hs:p1715:anat paskin": {
 "h": "http://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=483&numtafrit=1&id_lang=1&d=",
 "af": "Ariel University",
 "g": "https://scholar.google.com/citations?user=XcyQbAYAAAAJ"
-},
-"hs:p1715:bhavana kanukurthi": {
-"h": "http://www.csa.iisc.ac.in/~bhavana",
-"af": "IISc Bangalore",
-"g": "https://scholar.google.com/citations?user=QYNU5jMAAAAJ"
 },
 "hs:p1715:jens groth": {
 "af": "DFINITY, Zurich, Switzerland"
@@ -20232,11 +19403,6 @@
 },
 "hs:p1720:lu fang": {
 "af": "University of California, Irvine, CA, USA"
-},
-"hs:p1720:keval vora": {
-"h": "http://www.cs.sfu.ca/~keval",
-"af": "Simon Fraser University",
-"g": "https://scholar.google.com/citations?user=l40B-WYAAAAJ"
 },
 "hs:p1720:aftab hussain": {
 "h": "https://isr.uci.edu/users/aftab-hussain",
@@ -20303,11 +19469,6 @@
 "g": "https://scholar.google.com/citations?user=Avtv7FkAAAAJ",
 "af": "Johns Hopkins University, Baltimore, MD, USA"
 },
-"hs:p1751:laura dietz": {
-"h": "http://www.cs.unh.edu/~dietz",
-"af": "University of New Hampshire",
-"g": "https://scholar.google.com/citations?user=IIXpJ8oAAAAJ"
-},
 "hs:p1751:hanna wallach": {
 "h": "http://dirichlet.net/",
 "g": "https://scholar.google.com/citations?user=OcPVegoAAAAJ",
@@ -20348,8 +19509,10 @@
 "g": "https://scholar.google.com/citations?user=CCFN2YwAAAAJ",
 "af": "UMass Amherst, MA, USA"
 },
-"hs:p1763:gary huang": {
-"g": "https://scholar.google.com/citations?user=RjScbooAAAAJ"
+"hs:p1763:laura lara": {
+"h": "http://www.inf.ed.ac.uk/people/staff/Laura_Sevilla-Lara.html",
+"af": "University of Edinburgh",
+"g": "https://scholar.google.com/citations?user=bel5BBcAAAAJ"
 },
 "hs:p1763:matthew blaschko": {
 "h": "https://homes.esat.kuleuven.be/~mblaschk",
@@ -20366,21 +19529,25 @@
 "g": "https://scholar.google.com/citations?user=bN9HffgAAAAJ",
 "af": "Microsoft Research, Redmond, WA, USA"
 },
+"hs:p1772:juan pizzorno": {
+"h": "https://medium.com/@juan.pizzorno"
+},
 "hs:p1773:alex stern": {
 "h": "https://www.alexsanchezstern.com/",
 "li": "https://www.linkedin.com/in/alex-sanchez-stern-08393229b/",
 "g": "https://scholar.google.com/citations?user=EYVTQsAAAAAJ",
 "af": "University of Massachusetts Amherst, Amherst, MA, USA"
 },
+"hs:p1773:seung shin": {
+"af": "University of Luxembourg"
+},
+"hs:p1773:juan pizzorno": {
+"h": "https://medium.com/@juan.pizzorno"
+},
 "hs:p1773:lijun zhang": {
 "h": "http://cs.nju.edu.cn/zlj",
 "af": "Nanjing University",
 "g": "https://scholar.google.com/citations?user=DC5FEjoAAAAJ"
-},
-"hs:p1773:ivan beschastnikh": {
-"h": "http://www.cs.ubc.ca/~bestchai",
-"af": "University of British Columbia",
-"g": "https://scholar.google.com/citations?user=iKnYSo8AAAAJ"
 },
 "hs:p1783:aritra ghosh": {
 "h": "https://arghosh.github.io/",
@@ -20390,11 +19557,6 @@
 "h": "https://xl1990.github.io/resume/",
 "g": "https://scholar.google.com/citations?user=iHg8xfQAAAAJ",
 "af": "University of Massachusetts Amherst, MA, USA"
-},
-"hs:p1785:lijun zhang": {
-"h": "http://cs.nju.edu.cn/zlj",
-"af": "Nanjing University",
-"g": "https://scholar.google.com/citations?user=DC5FEjoAAAAJ"
 },
 "hs:p1786:david tench": {
 "af": "Lawrence Berkeley National Labs, Berkeley, CA, USA"
@@ -20413,6 +19575,9 @@
 "h": "http://people.cs.bris.ac.uk/~konrad",
 "af": "University of Bristol",
 "g": "https://scholar.google.com/citations?user=pUijx84AAAAJ"
+},
+"hs:p1788:juan pizzorno": {
+"h": "https://medium.com/@juan.pizzorno"
 },
 "hs:p1796:kimberly walter": {
 "g": "https://scholar.google.com/citations?user=o0yhhe8AAAAJ"
@@ -20458,11 +19623,6 @@
 "g": "https://scholar.google.com/citations?user=hdyKNLYAAAAJ",
 "af": "University of Southern California (USC), Los Angeles, CA, USA"
 },
-"hs:p1871:haoxiang wang": {
-"h": "https://haoxiang-wang.github.io/",
-"g": "https://scholar.google.com/citations?user=bcInPlwAAAAJ",
-"af": "University of Illinois at Urbana-Champaign, IL, USA"
-},
 "hs:p1871:linyi li": {
 "h": "https://linyil.com",
 "af": "Simon Fraser University",
@@ -20477,6 +19637,11 @@
 "h": "https://cse.hkust.edu.hk/admin/people/faculty/profile/biyuan",
 "af": "HKUST",
 "g": "https://scholar.google.com/citations?user=TflKxcIAAAAJ"
+},
+"hs:p1872:nezihe gurel": {
+"h": "https://www.tudelft.nl/ewi/over-de-faculteit/afdelingen/intelligent-systems/pattern-recognition-bioinformatics/pattern-recognition-bioinformatics/people/merve-guerel",
+"af": "TU Delft",
+"g": "https://scholar.google.com/citations?user=5yYPHwYAAAAJ"
 },
 "hs:p1872:jiawei jiang": {
 "h": "http://bluesjjw.github.io",
@@ -20519,6 +19684,11 @@
 "hs:p1932:james davis": {
 "h": "https://davisjam.github.io/",
 "af": "Purdue University, West Lafayette, IN, USA"
+},
+"hs:p1935:nguyen hoang": {
+"h": "https://homepage.np-tokumei.net",
+"af": "University of British Columbia",
+"g": "https://scholar.google.com/citations?user=zwQ8_0EAAAAJ"
 },
 "hs:p1935:hyungjoon koo": {
 "h": "https://secai.skku.edu",
@@ -20566,8 +19736,19 @@
 "hs:p1990:zhe wang": {
 "af": "University of California, Irvine, CA, USA"
 },
+"hs:p1991:sai nagarajan": {
+"g": "https://scholar.google.com/citations?user=VoaosL4AAAAJ"
+},
 "hs:p2006:markelle kelly": {
 "h": "https://www.markellekelly.com/"
+},
+"hs:p2006:jimmy foulds": {
+"h": "https://jfoulds.informationsystems.umbc.edu",
+"af": "Univ. of Maryland - Baltimore County",
+"g": "https://scholar.google.com/citations?user=j-kLU-4AAAAJ"
+},
+"hs:p2006:chris dubois": {
+"af": "Apple Inc."
 },
 "hs:p2006:arthur asuncion": {
 "h": "http://www.ics.uci.edu/~asuncion/",
@@ -20610,11 +19791,6 @@
 "af": "Tsinghua University",
 "g": "https://scholar.google.com/citations?user=s9n7-fQAAAAJ"
 },
-"hs:p2011:jiaheng lu": {
-"h": "https://www.cs.helsinki.fi/u/jilu",
-"af": "University of Helsinki",
-"g": "https://scholar.google.com/citations?user=EVNolAkAAAAJ"
-},
 "hs:p2011:bin wang": {
 "h": "http://faculty.neu.edu.cn/binwang/index.html",
 "af": "Northeastern University, School of Computer Science and Engineering, Shenyang, China"
@@ -20622,6 +19798,11 @@
 "hs:p2029:joseph hummel": {
 "h": "https://www.cs.uic.edu/~jhummel",
 "af": "University of Illinois at Chicago"
+},
+"hs:p2029:preeti panda": {
+"h": "http://www.cse.iitd.ernet.in/~panda",
+"af": "IIT Delhi",
+"g": "https://scholar.google.com/citations?user=4Q2DOC4AAAAJ"
 },
 "hs:p2036:yang feng": {
 "h": "https://fengyang-nju.github.io",
@@ -20631,11 +19812,6 @@
 "hs:p2057:xiang wang": {
 "h": "https://users.cs.duke.edu/~xwang/",
 "af": "Duke University, Department of Computer Science, Durham, NC, USA"
-},
-"hs:p2057:chenwei wu": {
-"h": "https://users.cs.duke.edu/~cwwu/",
-"g": "https://scholar.google.com/citations?user=WoB6M2cAAAAJ",
-"af": "Duke University, Durham, NC, USA"
 },
 "hs:p2060:yuqi jia": {
 "af": "Duke University, Department of Electrical and Computer Engineering, Durham, NC, USA"
@@ -20687,9 +19863,6 @@
 "g": "https://scholar.google.com/citations?user=3apwLYIAAAAJ",
 "af": "ByteDance Inc., Seattle, WA, USA"
 },
-"hs:p2072:maverick woo": {
-"af": "Carnegie Mellon University, Pittsburgh, USA"
-},
 "hs:p2072:chris olston": {
 "h": "http://www-2.cs.cmu.edu/~olston/",
 "af": "Carnegie Mellon University, Pittsburgh, USA"
@@ -20733,19 +19906,8 @@
 "hs:p2075:zhi chen": {
 "af": "Duke University, Durham, NC, USA"
 },
-"hs:p2082:tong li": {
-"h": "http://happyli.org/tongli/",
-"li": "https://www.linkedin.com/in/tong-li-4558175/",
-"g": "https://scholar.google.com/citations?user=OL39KmUAAAAJ",
-"af": "Lenovo, Beijing, China"
-},
 "hs:p2085:michail lagoudakis": {
 "g": "https://scholar.google.com/citations?user=VqHiIg8AAAAJ"
-},
-"hs:p2087:lisa wu": {
-"h": "https://www.lisawuwills.com",
-"af": "Duke University",
-"g": "https://scholar.google.com/citations?user=TOriZzEAAAAJ"
 },
 "hs:p2090:wentao ma": {
 "af": "Virginia Tech, Department of Aerospace and Ocean Engineering, Blacksburg, VA, USA"
@@ -20894,11 +20056,6 @@
 "hs:p2217:zhaorui yang": {
 "af": "University of California Riverside, CA, USA"
 },
-"hs:p2217:eric wong": {
-"h": "https://riceric22.github.io",
-"af": "University of Pennsylvania",
-"g": "https://scholar.google.com/citations?user=pWnTMRkAAAAJ"
-},
 "hs:p2217:ye tian": {
 "g": "https://scholar.google.com/citations?user=8VONYLgAAAAJ",
 "af": "Chinese University of Hong Kong, Department of Computer Science and Engineering, Shenzhen Research Institute, Hong Kong"
@@ -20916,11 +20073,6 @@
 "hs:p2237:chen zhao": {
 "af": "University of California at Riverside, Riverside, CA, USA"
 },
-"hs:p2238:xin zhang": {
-"h": "https://xinpl.github.io",
-"af": "Peking University",
-"g": "https://scholar.google.com/citations?user=D9NJsrcAAAAJ"
-},
 "hs:p2240:ziyu ying": {
 "af": "Pennsylvania State University, PA, USA"
 },
@@ -20933,6 +20085,11 @@
 "h": "https://haibocs.github.io/",
 "g": "https://scholar.google.com/citations?user=X_cSx7kAAAAJ",
 "af": "Pennsylvania State University, PA, USA"
+},
+"hs:p2241:ranran zhang": {
+"h": "https://windchimeran.github.io/",
+"g": "https://scholar.google.com/citations?user=aDqdjcUAAAAJ",
+"af": "Pennsylvania State University, State College, PA, USA"
 },
 "hs:p2241:yusen zhang": {
 "h": "https://yuszh.com/",
@@ -20991,6 +20148,11 @@
 "hs:p2260:runze liu": {
 "af": "Pennsylvania State University, PA, USA"
 },
+"hs:p2264:sanjukta roy": {
+"h": "https://sites.google.com/view/sanjuktaroy/home",
+"af": "ISI Kolkata",
+"g": "https://scholar.google.com/citations?user=usTXFGwAAAAJ"
+},
 "hs:p2270:yuan xue": {
 "g": "https://scholar.google.com/citations?user=yRf1kygAAAAJ",
 "af": "Johns Hopkins University, Baltimore, MD, USA"
@@ -21001,40 +20163,29 @@
 "hs:p2294:cheng wang": {
 "af": "Pennsylvania State University, Philadelphia, PA, USA"
 },
+"hs:p2294:byung tak": {
+"h": "https://sites.google.com/view/knudiscolab/member/byungchul-tak?authuser=0",
+"af": "Kyungpook National University",
+"g": "https://scholar.google.com/citations?user=-wM1-88AAAAJ"
+},
 "hs:p2294:euiseong seo": {
 "h": "http://csl.skku.edu",
 "af": "Sungkyunkwan University",
 "g": "https://scholar.google.com/citations?user=VjycY14AAAAJ"
-},
-"hs:p2294:youngjae kim": {
-"h": "https://sites.google.com/site/youkim/home",
-"af": "Sogang University, Seoul, South Korea"
 },
 "hs:p2299:xi wang": {
 "h": "https://www.sheffield.ac.uk/cs/people/academic/xi-wang",
 "af": "University of Sheffield",
 "g": "https://scholar.google.com/citations?user=nFmvLQgAAAAJ"
 },
-"hs:p2307:wenbo guo": {
-"h": "https://henrygwb.github.io",
-"af": "Univ. of California - Santa Barbara",
-"g": "https://scholar.google.com/citations?user=KyPheRMAAAAJ"
+"hs:p2299:md arovi": {
+"af": "Pennsylvania State University, Philadelphia, PA, USA"
 },
 "hs:p2312:taewook kim": {
 "af": "Northwestern University, Evanston, IL, USA"
 },
 "hs:p2312:sheng long": {
 "af": "Northwestern University, Evanston, IL, USA"
-},
-"hs:p2315:xue chen": {
-"h": "http://staff.ustc.edu.cn/~xuechen1989",
-"af": "USTC",
-"g": "https://scholar.google.com/citations?user=pOhKXhYAAAAJ"
-},
-"hs:p2316:xue chen": {
-"h": "http://staff.ustc.edu.cn/~xuechen1989",
-"af": "USTC",
-"g": "https://scholar.google.com/citations?user=pOhKXhYAAAAJ"
 },
 "hs:p2319:chang wang": {
 "af": "Peking University, Beijing, China"
@@ -21080,14 +20231,10 @@
 "hs:p2351:corey brady": {
 "af": "Vanderbilt University, Nashville, TN, USA"
 },
-"hs:p2351:golnaz arastoopour": {
+"hs:p2351:golnaz irgens": {
 "h": "https://lab.vanderbilt.edu/live/person/golnaz-arastoopour-irgens",
 "af": "Vanderbilt University",
 "g": "https://scholar.google.com/citations?user=5bJ9ABkAAAAJ"
-},
-"hs:p2351:sharona levy": {
-"h": "https://sites.google.com/site/sharonatlevy/",
-"af": "University of Haifa, Faculty of Education, Israel"
 },
 "hs:p2352:tian feng": {
 "h": "https://person.zju.edu.cn/en/fengtian",
@@ -21126,30 +20273,6 @@
 },
 "hs:p2380:xiaopeng li": {
 "af": "University of South Carolina, Department of Computer Science, Columbia, SC, USA"
-},
-"hs:p2413:guohao dai": {
-"h": "https://nicsefc.ee.tsinghua.edu.cn/people/GuohaoDai",
-"af": "Shanghai Jiao Tong University",
-"g": "https://scholar.google.com/citations?user=gz3Tkl0AAAAJ"
-},
-"hs:p2413:chin sze": {
-"h": "http://dropzone.tamu.edu/~cnsze/first.html",
-"af": "Texas A&M University, College Station, Texas, USA"
-},
-"hs:p2413:shiyan hu": {
-"h": "https://www.ecs.soton.ac.uk/people/sh2e19",
-"af": "University of Southampton",
-"g": "https://scholar.google.com/citations?user=OLFPRHAAAAAJ"
-},
-"hs:p2413:yu yang": {
-"h": "https://www.yyang.site",
-"af": "Lehigh University",
-"g": "https://scholar.google.com/citations?user=-jvY0w8AAAAJ"
-},
-"hs:p2415:chen wang": {
-"h": "https://faculty.rpi.edu/chen-wang",
-"af": "Rensselaer Polytechnic Institute",
-"g": "https://scholar.google.com/citations?user=DnrU0k0AAAAJ"
 },
 "hs:p2415:shenghao xie": {
 "h": "https://sites.google.com/view/shenghaoxie/%E9%A6%96%E9%A1%B5",
@@ -21213,7 +20336,7 @@
 "g": "https://scholar.google.com/citations?user=fCDg0VQAAAAJ",
 "af": "Visa Research, Palo Alto, CA, USA"
 },
-"hs:p2467:ishrat jahan": {
+"hs:p2467:ishrat eliza": {
 "g": "https://scholar.google.com/citations?user=KUAcybAAAAAJ",
 "af": "University of Utah, Salt Lake City, UT, USA"
 },
@@ -21240,6 +20363,9 @@
 "hs:p2480:song zhang": {
 "af": "University of Utah, Salt Lake City, UT, USA"
 },
+"hs:p2480:anka chen": {
+"af": "University of Utah, USA"
+},
 "hs:p2480:agatha mallett": {
 "h": "https://geometrian.com/research/",
 "af": "University of Utah, Salt Lake City, UT, USA"
@@ -21260,15 +20386,6 @@
 "af": "IIT Mandi",
 "g": "https://scholar.google.com/citations?user=RPol2lkAAAAJ"
 },
-"hs:p2489:david miller": {
-"h": "http://www.depaul.edu/about/administration/Pages/miller.aspx",
-"af": "DePaul University"
-},
-"hs:p2501:gaurav sharma": {
-"h": "https://hajim.rochester.edu/ece/sites/gsharma",
-"af": "University of Rochester",
-"g": "https://scholar.google.com/citations?user=OlsDoroAAAAJ"
-},
 "hs:p2504:ricardo lanfredi": {
 "h": "https://ricbl.github.io/",
 "g": "https://scholar.google.com/citations?user=d5PjGOcAAAAJ",
@@ -21280,12 +20397,6 @@
 },
 "hs:p2511:andrew fisher": {
 "af": "University of Utah, Salt Lake City, UT, USA"
-},
-"hs:p2511:hao zheng": {
-"h": "http://www.csee.usf.edu/~zheng",
-"af": "University of South Florida",
-"g": "https://scholar.google.com/citations?user=BT95LeMAAAAJ",
-"li": "https://www.linkedin.com/in/hao-zheng-37267220"
 },
 "hs:p2511:eric yu": {
 "h": "http://www.cs.toronto.edu/~eric",
@@ -21377,11 +20488,6 @@
 "g": "https://scholar.google.com/citations?user=FY2dQSgAAAAJ",
 "af": "University of Twente, Department of Applied Mathematics, Enschede, The Netherlands"
 },
-"hs:p2700:sushant sachdeva": {
-"h": "http://www.cs.toronto.edu/~sachdeva",
-"af": "University of Toronto",
-"g": "https://scholar.google.com/citations?user=sb1-HK8AAAAJ"
-},
 "hs:p2710:zeyu wang": {
 "af": "University of California, Santa Cruz, CA, USA"
 },
@@ -21389,11 +20495,6 @@
 "h": "https://xk-huang.github.io/",
 "g": "https://scholar.google.com/citations?user=BD9AT04AAAAJ",
 "af": "University of California, Santa Cruz, CA, USA"
-},
-"hs:p2710:chen wei": {
-"h": "https://profiles.rice.edu/faculty/chen-wei",
-"af": "Rice University",
-"g": "https://scholar.google.com/citations?user=LHQGpBUAAAAJ"
 },
 "hs:p2710:yixiao zhang": {
 "af": "Johns Hopkins University, Baltimore, MD, USA"
@@ -21433,15 +20534,8 @@
 "hs:p2783:robin milner": {
 "h": "http://www.cl.cam.ac.uk/~rm135/"
 },
-"hs:p2784:ting he": {
-"h": "https://www.eecs.psu.edu/departments/directory-detail-g.aspx?q=tzh58",
-"af": "Pennsylvania State University",
-"g": "https://scholar.google.com/citations?user=g9yS74gAAAAJ"
-},
-"hs:p2799:feng liu": {
-"h": "https://school.eecs.wsu.edu/faculty/profile/?nid=feng-hao.liu",
-"af": "Washington State University",
-"g": "https://scholar.google.com/citations?user=vvWcl-wAAAAJ"
+"hs:p2784:kinan albab": {
+"af": "Brown University, Providence, RI, USA"
 },
 "hs:p2804:jiaqi zhang": {
 "h": "https://www.jiaqiz.site/",
@@ -21459,11 +20553,6 @@
 "h": "https://dhalpern13.github.io/",
 "g": "https://scholar.google.com/citations?user=Q4HPgdsAAAAJ",
 "af": "Harvard University, MA, USA"
-},
-"hs:p2810:hadi hosseini": {
-"h": "https://faculty.ist.psu.edu/hadi",
-"af": "Pennsylvania State University",
-"g": "https://scholar.google.com/citations?user=bnvEtsMAAAAJ"
 },
 "hs:p2810:david kurokawa": {
 "h": "http://www.cs.cmu.edu/~dkurokaw/",
@@ -21506,15 +20595,6 @@
 "hs:p2823:eli sasson": {
 "g": "https://scholar.google.com/citations?user=M93Auk4AAAAJ"
 },
-"hs:p2823:amir shpilka": {
-"h": "http://www.cs.tau.ac.il/~shpilka",
-"af": "Tel Aviv University"
-},
-"hs:p2823:julia chuzhoy": {
-"h": "http://ttic.uchicago.edu/~cjulia",
-"af": "TTI Chicago",
-"g": "https://scholar.google.com/citations?user=ikn-xhYAAAAJ"
-},
 "hs:p2823:tali kaufman": {
 "h": "http://cs.biu.ac.il/en/node/650",
 "af": "Bar-Ilan University"
@@ -21528,15 +20608,15 @@
 "af": "Technion",
 "g": "https://scholar.google.com/citations?user=SYpADC4AAAAJ"
 },
+"hs:p2824:nam kim": {
+"h": "https://www.namwkim.org",
+"af": "Boston College",
+"g": "https://scholar.google.com/citations?user=puTV6X0AAAAJ"
+},
 "hs:p2824:ofra amir": {
 "h": "https://scholar.harvard.edu/oamir",
 "af": "Technion",
 "g": "https://scholar.google.com/citations?user=WS5b_koAAAAJ"
-},
-"hs:p2824:edith law": {
-"h": "http://edithlaw.ca",
-"af": "University of Waterloo",
-"g": "https://scholar.google.com/citations?user=OOssnq8AAAAJ"
 },
 "hs:p2824:joseph williams": {
 "h": "http://www.josephjaywilliams.com",
@@ -21550,10 +20630,8 @@
 "g": "https://scholar.google.com/citations?user=5KHfVTQAAAAJ",
 "af": "Boston University, MA, USA"
 },
-"hs:p2843:cheng zhang": {
-"h": "https://www.wpi.edu/people/faculty/czhang13",
-"af": "Worcester Polytechnic Institute",
-"g": "https://scholar.google.com/citations?user=_pppqNwAAAAJ"
+"hs:p2843:gian farina": {
+"h": "https://0000-0001-7823-1536"
 },
 "hs:p2843:charles grellois": {
 "af": "Aix-Marseille University, France"
@@ -21586,11 +20664,6 @@
 "hs:p2857:shubham kaushik": {
 "af": "Brandeis University, Waltham, MA, USA"
 },
-"hs:p2859:yilei chen": {
-"h": "https://iiis.tsinghua.edu.cn/en/People/Faculty/ChenYilei.htm",
-"af": "Tsinghua University",
-"g": "https://scholar.google.com/citations?user=mJkYl8MAAAAJ"
-},
 "hs:p2859:sophia yakoubov": {
 "h": "https://pure.au.dk/portal/da/persons/sophia-yakoubov(818cd271-6e5e-4980-b248-4a337b7c0603).html",
 "af": "Aarhus University",
@@ -21604,11 +20677,6 @@
 "h": "http://lglinskih.com/",
 "af": "Boston University, USA"
 },
-"hs:p2871:phillipa gill": {
-"h": "https://people.cs.umass.edu/~phillipa/",
-"g": "https://scholar.google.com/citations?user=1Y7IX2AAAAAJ",
-"af": "University of Massachusetts - Amherst"
-},
 "hs:p2896:xiao liang": {
 "h": "https://xiao-liang.com",
 "af": "Chinese University of Hong Kong",
@@ -21616,11 +20684,6 @@
 },
 "hs:p2900:weijie huang": {
 "af": "Indiana University, Bloomington, IN, USA"
-},
-"hs:p2904:nan xi": {
-"h": "https://southnx.github.io",
-"af": "Virginia Commonwealth University",
-"g": "https://scholar.google.com/citations?user=QLh4qlYAAAAJ"
 },
 "hs:p2904:zhigang tu": {
 "h": "http://tuzhigang.cn",
@@ -21709,11 +20772,6 @@
 "hs:p2965:daniel defreez": {
 "af": "University of California, Davis, CA, USA"
 },
-"hs:p2967:yutong wang": {
-"h": "https://www.iit.edu/directory/people/yutong-wang",
-"af": "Illinois Institute of Technology",
-"g": "https://scholar.google.com/citations?user=GH7ryE4AAAAJ"
-},
 "hs:p2967:hui guo": {
 "h": "https://research.unsw.edu.au/people/dr-hui-guo",
 "af": "UNSW",
@@ -21736,11 +20794,6 @@
 "af": "Tsinghua University",
 "g": "https://scholar.google.com/citations?user=anGaUZEAAAAJ"
 },
-"hs:p2972:sachin kumar": {
-"h": "https://shocheen.com",
-"af": "Ohio State University",
-"g": "https://scholar.google.com/citations?user=qO38fRIAAAAJ"
-},
 "hs:p2976:ahsan abdullah": {
 "af": "University of California, Davis, USA"
 },
@@ -21753,11 +20806,6 @@
 "hs:p2976:yejin kim": {
 "g": "https://scholar.google.com/citations?user=OTOfYAIAAAAJ",
 "af": "Hongik University, School of Games, Sejong, South Korea"
-},
-"hs:p2984:david eppstein": {
-"h": "https://www.ics.uci.edu/~eppstein",
-"af": "Univ. of California - Irvine",
-"g": "https://scholar.google.com/citations?user=QSY7ufMAAAAJ"
 },
 "hs:p2984:rahul jain": {
 "h": "https://www.comp.nus.edu.sg/~rahul",
@@ -21781,10 +20829,16 @@
 "h": "http://cs.nyu.edu/cs/faculty/spencer/index.html",
 "af": "New York University, USA"
 },
-"hs:p3012:robert soden": {
-"h": "http://robertsoden.io",
-"af": "University of Toronto",
-"g": "https://scholar.google.com/citations?user=1vePPCkAAAAJ"
+"hs:p3012:jennings anderson": {
+"h": "http://www.townsendjennings.com/",
+"li": "https://www.linkedin.com/in/jenningsanderson",
+"g": "https://scholar.google.com/citations?user=7Wt7XDUAAAAJ",
+"af": "University of Colorado Boulder, Human Centered Computing"
+},
+"hs:p3025:mohammad rifat": {
+"h": "https://hci.nd.edu/people/professors/mohammad-rashidujjaman-rifat",
+"af": "University of Notre Dame",
+"g": "https://scholar.google.com/citations?user=5AZ7UUQAAAAJ"
 },
 "hs:p3027:sourav chakraborty": {
 "af": "University of Colorado Boulder, CO, USA"
@@ -21829,11 +20883,6 @@
 "hs:p3072:christopher tran": {
 "af": "University of Illinois at Chicago, Department of Computer Science, IL, USA"
 },
-"hs:p3089:david schwartz": {
-"h": "http://igm.rit.edu/~dis",
-"af": "Rochester Inst. of Technology",
-"g": "https://scholar.google.com/citations?user=Aob433gAAAAJ"
-},
 "hs:p3102:sascha stoeter": {
 "h": "http://www.stoeter.com/"
 },
@@ -21851,6 +20900,11 @@
 "hs:p3108:bowen yu": {
 "h": "https://www-users.cs.umn.edu/~bowen-yu/",
 "af": "University of Minnesota - Twin Cities, Minneapolis, MN, USA"
+},
+"hs:p3110:catherine zhao": {
+"h": "https://www-users.cse.umn.edu/~qzhao",
+"af": "University of Minnesota",
+"g": "https://scholar.google.com/citations?user=JO40q04AAAAJ"
 },
 "hs:p3110:shi chen": {
 "af": "University of Minnesota, Department of Computer Science and Engineering, Minneapolis, MN, USA"
@@ -21874,9 +20928,6 @@
 "hs:p3110:qiang zhou": {
 "h": "http://www.tsinghua.edu.cn/publish/csen/4623/2010/20101225001843542358511/20101225001843542358511_.html",
 "af": "Tsinghua University"
-},
-"hs:p3113:guo dan": {
-"af": "Shenzhen University, Shenzhen, Guangdong, China"
 },
 "hs:p3113:micah smith": {
 "h": "https://www.micahsmith.com/",
@@ -21972,6 +21023,10 @@
 "hs:p3232:yuhan sun": {
 "af": "Arizona State University, Tempe, AZ, USA"
 },
+"hs:p3232:venkata meduri": {
+"h": "https://vamsikrishna1902.github.io/",
+"af": "Arizona State University, AZ, USA"
+},
 "hs:p3258:ying zhang": {
 "h": "https://neuzhangy.github.io/",
 "g": "https://scholar.google.com/citations?user=h6AkTC4AAAAJ",
@@ -22011,6 +21066,11 @@
 "af": "USP-ICMC",
 "g": "https://scholar.google.com/citations?user=WHdCNq0AAAAJ"
 },
+"hs:p3353:giovanni ciampaglia": {
+"h": "https://www.cs.umd.edu/people/gciampag",
+"af": "Univ. of Maryland - College Park",
+"g": "https://scholar.google.com/citations?user=ay9uGpcAAAAJ"
+},
 "hs:p3353:przemyslaw grabowicz": {
 "h": "https://przemyslslaw.github.io",
 "af": "University College Dublin",
@@ -22020,10 +21080,6 @@
 "h": "http://www.lajello.com",
 "af": "IT University of Copenhagen",
 "g": "https://scholar.google.com/citations?user=FIX-7hcAAAAJ"
-},
-"hs:p3353:markus jakobsson": {
-"h": "http://www.markus-jakobsson.com/",
-"g": "https://scholar.google.com/citations?user=3bag1c0AAAAJ"
 },
 "hs:p3353:jose ramasco": {
 "h": "http://ifisc.uib-csic.es/~jramasco/",
@@ -22069,6 +21125,9 @@
 "h": "https://thompsonb.github.io/",
 "af": "AWS AI Labs, USA"
 },
+"hs:p3384:victor antony": {
+"h": "https://dblp2.uni-trier.de/pid/341/9295.html"
+},
 "hs:p3384:bokyung kim": {
 "af": "Johns Hopkins University, Baltimore, MD, USA"
 },
@@ -22110,8 +21169,16 @@
 "h": "http://web.engr.oregonstate.edu/~hamidim/",
 "af": "Oregon State University, Corvallis, OR, USA"
 },
+"hs:p3408:aswin raghavan": {
+"h": "https://sites.google.com/site/ashwinnr/",
+"af": "Oregon State University, Corvallis, OR, USA"
+},
 "hs:p3414:ross sowell": {
 "h": "http://www.cornellcollege.edu/academics/our-faculty/faculty-profile/index.php/show/rsowell"
+},
+"hs:p3415:jose escamilla": {
+"h": "https://aguilar.phd/",
+"af": "Oregon State University, Corvallis, OR, USA"
 },
 "hs:p3416:derek greene": {
 "h": "https://people.ucd.ie/derek.greene",
@@ -22152,11 +21219,6 @@
 "hs:p3441:yipeng wang": {
 "af": "Intel Labs, Portland, OR, USA"
 },
-"hs:p3443:rakibul hasan": {
-"h": "https://rakib062.github.io",
-"af": "Arizona State University",
-"g": "https://scholar.google.com/citations?user=EuZ5pnwAAAAJ"
-},
 "hs:p3444:hao hu": {
 "af": "University of Central Florida, Department of Computer Science, FL, Orlando, USA"
 },
@@ -22174,11 +21236,6 @@
 "li": "https://www.linkedin.com/in/ypzhao24/",
 "g": "https://scholar.google.com/citations?user=rZYsysUAAAAJ",
 "af": "University of Central Florida, Orlando, FL, USA"
-},
-"hs:p3466:jian zhou": {
-"h": "http://faculty.hust.edu.cn/jianzhou/en/index.htm",
-"af": "HUST",
-"g": "https://scholar.google.com/citations?user=Sn_0HWYAAAAJ"
 },
 "hs:p3466:dan huang": {
 "h": "https://cse.sysu.edu.cn/teacher/Huangdan",
@@ -22250,6 +21307,9 @@
 "hs:p3531:jianwei hu": {
 "g": "https://scholar.google.com/citations?user=tW0Zn2YAAAAJ",
 "af": "Tsinghua University, School of Software, BNRist, Beijing, China"
+},
+"hs:p3533:jonathan perry": {
+"af": "University of Texas at Dallas, Richardson, TX, USA"
 },
 "hs:p3535:xiaoyang xu": {
 "li": "https://www.linkedin.com/in/xiaoyang-xu-66417a96/",
@@ -22356,20 +21416,14 @@
 "g": "https://scholar.google.com/citations?user=X-VK_5EAAAAJ",
 "af": "University of Illinois at Urbana-Champaign, Urbana, IL, USA"
 },
+"hs:p3722:kareem gebaly": {
+"li": "https://www.linkedin.com/in/kareem-el-gebaly-1355324",
+"af": "University of Waterloo, Canada"
+},
 "hs:p3722:ahmed roby": {
 "h": "https://people.scs.carleton.ca/~ahmedelroby",
 "af": "Carleton University",
 "g": "https://scholar.google.com/citations?user=DA68vjUAAAAJ"
-},
-"hs:p3722:umar farooq": {
-"h": "https://csc.lsu.edu/~ufarooq",
-"af": "Louisiana State University",
-"g": "https://scholar.google.com/citations?user=QsWn-r8AAAAJ"
-},
-"hs:p3745:yang song": {
-"h": "https://cgi.cse.unsw.edu.au/~ysong",
-"af": "UNSW",
-"g": "https://scholar.google.com/citations?user=7u3M9hMAAAAJ"
 },
 "hs:p3750:chen liu": {
 "li": "https://www.linkedin.com/in/chenliuudel",
@@ -22396,6 +21450,9 @@
 "hs:p3780:luanzheng guo": {
 "af": "University of Washington Tacoma, USA"
 },
+"hs:p3781:ankur kamthe": {
+"h": "http://www.andes.ucmerced.edu/~akamthe/"
+},
 "hs:p3784:gang yan": {
 "h": "https://ccst.jlu.edu.cn/info/1367/20676.htm",
 "af": "Jilin University",
@@ -22403,11 +21460,6 @@
 },
 "hs:p3786:zhiyi huang": {
 "af": "University of California, Merced, CA, USA"
-},
-"hs:p3786:xin zhang": {
-"h": "https://xinpl.github.io",
-"af": "Peking University",
-"g": "https://scholar.google.com/citations?user=D9NJsrcAAAAJ"
 },
 "hs:p3802:hoda maleki": {
 "h": "https://www.augusta.edu/faculty/directory/view.php?id=HMALEKI",
@@ -22474,11 +21526,6 @@
 "af": "Southeast University",
 "g": "https://scholar.google.com/citations?user=5jddCswAAAAJ"
 },
-"hs:p3859:matthew berger": {
-"h": "https://engineering.vanderbilt.edu/bio/?pid=matthew-berger",
-"af": "Vanderbilt University",
-"g": "https://scholar.google.com/citations?user=i-j2oMsAAAAJ"
-},
 "hs:p3859:kenny weiss": {
 "h": "http://kennyweiss.com/",
 "g": "https://scholar.google.com/citations?user=_UgcrLoAAAAJ",
@@ -22498,7 +21545,7 @@
 "hs:p3862:changqing zhang": {
 "af": "Binghamton University, NY, USA"
 },
-"hs:p3867:hossein rajoli": {
+"hs:p3867:hossein nowdeh": {
 "af": "Clemson University, SC, USA"
 },
 "hs:p3875:heba aly": {
@@ -22554,11 +21601,6 @@
 "hs:p4056:nicholas kolkin": {
 "af": "Adobe Research, USA"
 },
-"hs:p4056:shubhendu trivedi": {
-"h": "https://people.csail.mit.edu/shubhendu/",
-"g": "https://scholar.google.com/citations?user=EbyGwncAAAAJ",
-"af": "Massachusetts Institute of Technology (MIT), Computer Science and Artificial Intelligence Laboratory (CSAIL), Cambridge, MA, USA"
-},
 "hs:p4056:taehwan kim": {
 "h": "http://ttic.uchicago.edu/~taehwan",
 "af": "Toyota Technol. Inst. at Chicago, IL, USA"
@@ -22579,10 +21621,6 @@
 "h": "http://www.inf.ed.ac.uk/people/staff/Hao_Tang.html",
 "af": "University of Edinburgh",
 "g": "https://scholar.google.com/citations?user=VN0X-PcAAAAJ"
-},
-"hs:p4057:taehwan kim": {
-"h": "http://ttic.uchicago.edu/~taehwan",
-"af": "Toyota Technol. Inst. at Chicago, IL, USA"
 },
 "hs:p4061:mrinalkanti ghosh": {
 "h": "http://ttic.uchicago.edu/~mkghosh/"
@@ -22663,11 +21701,6 @@
 "h": "https://nmt.edu",
 "af": "New Mexico Tech"
 },
-"hs:p4114:jie zhou": {
-"h": "https://jiezhoucs.github.io",
-"af": "George Washington University",
-"g": "https://scholar.google.com/citations?user=H4ZhjZAAAAAJ"
-},
 "hs:p4115:jiachi zhang": {
 "af": "Alibaba Group, Hangzhou, China"
 },
@@ -22705,6 +21738,11 @@
 "af": "University of Kentucky",
 "g": "https://scholar.google.com/citations?user=DoBBtIkAAAAJ"
 },
+"hs:p4254:tanvir khan": {
+"h": "https://takhandipu.github.io",
+"af": "Columbia University",
+"g": "https://scholar.google.com/citations?user=5Tv_pRsAAAAJ"
+},
 "hs:p4290:di liu": {
 "h": "https://www.ntnu.edu/employees/di.liu",
 "af": "NTNU",
@@ -22724,10 +21762,18 @@
 "hs:p4292:tian bai": {
 "af": "Temple University, USA"
 },
+"hs:p4296:hui wu": {
+"af": "University of North Carolina, Charlotte, NC, USA"
+},
 "hs:p4302:celine latulipe": {
 "h": "https://celinelatulipe.net",
 "af": "University of Manitoba",
 "g": "https://scholar.google.com/citations?user=LdGogroAAAAJ"
+},
+"hs:p4302:mary maher": {
+"h": "https://www.sydney.edu.au/engineering/about/our-people/academic-staff/marylou-maher.html",
+"af": "University of Sydney",
+"g": "https://scholar.google.com/citations?user=2COOamwAAAAJ"
 },
 "hs:p4302:jennifer preece": {
 "h": "https://ischool.umd.edu/directory/jennifer-j-preece/",
@@ -22775,11 +21821,6 @@
 "g": "https://scholar.google.com/citations?user=OgPD66oAAAAJ",
 "li": "https://www.linkedin.com/in/nisansadds/"
 },
-"hs:p4341:yang zhou": {
-"h": "http://eng.auburn.edu/users/yangzhou",
-"af": "Auburn University",
-"g": "https://scholar.google.com/citations?user=yvE8Po0AAAAJ"
-},
 "hs:p4345:matthew hall": {
 "h": "https://mattall.com/",
 "li": "https://www.linkedin.com/in/mattall",
@@ -22793,16 +21834,6 @@
 "h": "https://shi.buaa.edu.cn/wangzhiyuan/en/index.htm",
 "af": "Beihang University",
 "g": "https://scholar.google.com/citations?user=-2kts5AAAAAJ"
-},
-"hs:p4424:yifan zhang": {
-"h": "http://www.cs.binghamton.edu/~zhangy",
-"af": "Binghamton University",
-"g": "https://scholar.google.com/citations?user=sPZZB4UAAAAJ"
-},
-"hs:p4425:yifan zhang": {
-"h": "http://www.cs.binghamton.edu/~zhangy",
-"af": "Binghamton University",
-"g": "https://scholar.google.com/citations?user=sPZZB4UAAAAJ"
 },
 "hs:p4444:xudong he": {
 "h": "https://users.cs.fiu.edu/~hex",
@@ -22825,6 +21856,9 @@
 "hs:p4444:walid saad": {
 "af": "Virginia Tech, Wireless@VT, Department of Electrical and Computer Engineering, Arlington, VA, USA"
 },
+"hs:p4444:samir perlaza": {
+"h": "https://cybernets.inria.fr/"
+},
 "hs:p4444:yong xiao": {
 "af": "Huazhong University of Science and Technology, School of Electronic Information and Communications, China"
 },
@@ -22835,10 +21869,10 @@
 "g": "https://scholar.google.com/citations?user=xD_6EHoAAAAJ",
 "af": "University of South Carolina, College of Engineering and Computing, Columbia, SC, USA"
 },
-"hs:p4495:peng liu": {
-"h": "https://s2.ist.psu.edu/pliu",
-"af": "Pennsylvania State University",
-"g": "https://scholar.google.com/citations?user=qVOHi9cAAAAJ"
+"hs:p4497:jia zhu": {
+"h": "https://www.kth.se/profile/jiajie?l=en",
+"af": "KTH Royal Inst. of Technology",
+"g": "https://scholar.google.com/citations?user=IQ8Ay5gAAAAJ"
 },
 "hs:p4500:nikhil gupta": {
 "h": "https://sites.google.com/view/nikhilgupta1",
@@ -22849,11 +21883,6 @@
 "h": "https://coe.northeastern.edu/people/li-yanjing",
 "af": "Northeastern University",
 "g": "https://scholar.google.com/citations?user=V-VpTSIAAAAJ"
-},
-"hs:p4506:yifan zhang": {
-"h": "http://www.cs.binghamton.edu/~zhangy",
-"af": "Binghamton University",
-"g": "https://scholar.google.com/citations?user=sPZZB4UAAAAJ"
 },
 "hs:p4506:chi zhang": {
 "af": "Keebo, Inc., Ann Arbor, MI, USA"
@@ -22987,6 +22016,11 @@
 "hs:p4746:xingli zhang": {
 "af": "University of Louisiana at Lafayette, LA, USA"
 },
+"hs:p4746:md hossen": {
+"h": "https://www.utc.edu/computer-science-engineering-directory",
+"af": "Univ. of Tennessee at Chattanooga",
+"g": "https://scholar.google.com/citations?user=DoVUjOwAAAAJ"
+},
 "hs:p4746:yihe zhang": {
 "h": "https://ihozh.github.io/",
 "li": "https://www.linkedin.com/in/yihe-zhang-0ab70347/",
@@ -23013,6 +22047,9 @@
 "hs:p4837:yifan hao": {
 "af": "New Mexico State University, Las Cruces, NM, USA"
 },
+"hs:p4841:jacob penney": {
+"g": "https://scholar.google.com/citations?user=4maC0rUAAAAJ"
+},
 "hs:p4851:heng lian": {
 "h": "https://www.cs.odu.edu/~cs_hlian001/",
 "g": "https://scholar.google.com/citations?user=uGVjU2QAAAAJ",
@@ -23035,34 +22072,43 @@
 "h": "http://sunset.usc.edu/~dport/",
 "af": "University of Hawaii, Honolulu, HI, USA"
 },
+"hs:p4880:bo xiao": {
+"h": "https://shidler.hawaii.edu/itm/directory/bo-sophia-xiao",
+"g": "https://scholar.google.com/citations?user=C1dvJskAAAAJ"
+},
+"hs:p4912:seyed alinodehi": {
+"h": "https://www.cse.unr.edu/~hoseini/",
+"li": "https://www.linkedin.com/in/pourya-hoseini",
+"g": "https://scholar.google.com/citations?user=NdmGNBIAAAAJ",
+"af": "University of Nevada, Reno, NV, USA"
+},
 "hs:p4912:richard kelley": {
 "g": "https://scholar.google.com/citations?user=M2-aooQAAAAJ",
 "af": "University of Nevada, Reno, USA"
 },
-"hs:p4913:richard kelley": {
-"g": "https://scholar.google.com/citations?user=M2-aooQAAAAJ",
-"af": "University of Nevada, Reno, USA"
+"hs:p4913:seyed alinodehi": {
+"h": "https://www.cse.unr.edu/~hoseini/",
+"li": "https://www.linkedin.com/in/pourya-hoseini",
+"g": "https://scholar.google.com/citations?user=NdmGNBIAAAAJ",
+"af": "University of Nevada, Reno, NV, USA"
 },
 "hs:p4967:zhou chen": {
 "h": "https://zzc0053.github.io/",
 "g": "https://scholar.google.com/citations?user=ldA-y-kAAAAJ",
 "af": "Auburn University, Department of Computer Science and Software Engineering, Auburn, AL, USA"
 },
+"hs:p4978:sidd kaza": {
+"h": "https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/skaza.html",
+"af": "Towson University",
+"g": "https://scholar.google.com/citations?user=xj0-4yQAAAAJ"
+},
 "hs:p4990:qing liu": {
 "h": "https://web.njit.edu/~qliu/",
 "g": "https://scholar.google.com/citations?user=sWUc3y4AAAAJ",
 "af": "New Jersey Institute of Technology, Department of Electrical and Computer Engineering, NJ, USA"
 },
-"hs:p4990:hadi zamani": {
+"hs:p4990:hadi sabzi": {
 "af": "University of California Riverside, USA"
-},
-"hs:p4990:laxmi bhuyan": {
-"h": "http://www.cs.ucr.edu/~bhuyan/",
-"af": "University of California, Riverside, USA"
-},
-"hs:p4990:todd munson": {
-"h": "https://www.mcs.anl.gov/~tmunson/",
-"af": "Argonne National Laboratory, IL, USA"
 },
 "hs:p4990:nathan debardeleben": {
 "h": "http://www.parl.clemson.edu/~ndebard/",
@@ -23073,10 +22119,6 @@
 },
 "hs:p4990:hongbo li": {
 "af": "University of California Riverside, Department of Computer Science and Engineering, Riverside, CA, USA"
-},
-"hs:p5053:manish anand": {
-"h": "http://www.eecs.umich.edu/~anandm/",
-"af": "University of Michigan, Ann Arbor, USA"
 },
 "hs:p5068:alina beygelzimer": {
 "h": "https://hunch.net/~beygel/",
@@ -23115,6 +22157,9 @@
 "li": "https://www.linkedin.com/in/dahye-kim-919803278/",
 "g": "https://scholar.google.com/citations?user=psS9UC4AAAAJ",
 "af": "Boston University, Department of Computer Science, Boston, MA, USA"
+},
+"hs:p5145:zhuan koh": {
+"af": "Boston University, USA"
 },
 "hs:p5163:zhujun li": {
 "af": "City University of New York, NY, USA"
@@ -23288,54 +22333,14 @@
 "li": "https://www.linkedin.com/in/qian-xie-0abb54190",
 "af": "Cornell University, School of Operations Research and Information Engineering, Ithaca, NY, USA"
 },
-"hs:p5331:boyuan chen": {
-"h": "http://boyuanchen.com",
-"af": "Duke University",
-"g": "https://scholar.google.com/citations?user=5DBpY6EAAAAJ"
-},
-"hs:p5331:tingjun chen": {
-"h": "https://tingjunchen.com",
-"af": "Duke University",
-"g": "https://scholar.google.com/citations?user=RPmhP24AAAAJ"
-},
-"hs:p5331:yiran chen": {
-"h": "https://ece.duke.edu/faculty/yiran-chen",
-"af": "Duke University",
-"g": "https://scholar.google.com/citations?user=3G-nnjMAAAAJ"
-},
 "hs:p5331:john cocke": {
 "h": "http://amturing.acm.org/award_winners/cocke_2083115.cfm",
 "af": "IBM Thomas J. Watson Research Center, Yorktown Heights, NY, USA"
-},
-"hs:p5331:sina farsiu": {
-"h": "http://people.duke.edu/~sf59",
-"af": "Duke University",
-"g": "https://scholar.google.com/citations?user=mzcr92sAAAAJ"
-},
-"hs:p5331:neil gong": {
-"h": "http://people.duke.edu/~zg70",
-"af": "Duke University",
-"g": "https://scholar.google.com/citations?user=t6uCsYoAAAAJ"
-},
-"hs:p5331:maria gorlatova": {
-"h": "https://ece.duke.edu/faculty/maria-gorlatova",
-"af": "Duke University",
-"g": "https://scholar.google.com/citations?user=h_DY5OQAAAAJ"
 },
 "hs:p5331:jennifer groh": {
 "h": "http://people.duke.edu/~jmgroh",
 "af": "Duke University",
 "g": "https://scholar.google.com/citations?user=n_BMt9AAAAAJ"
-},
-"hs:p5331:alexander hartemink": {
-"h": "https://users.cs.duke.edu/~amink",
-"af": "Duke University",
-"g": "https://scholar.google.com/citations?user=HLRZ3oAAAAAJ"
-},
-"hs:p5331:debmalya panigrahi": {
-"h": "https://users.cs.duke.edu/~debmalya",
-"af": "Duke University",
-"g": "https://scholar.google.com/citations?user=syv4e-EAAAAJ"
 },
 "hs:p5331:susan rodger": {
 "h": "http://www.cs.duke.edu/~rodger/HomePage.html",
@@ -23346,84 +22351,21 @@
 "h": "http://www.cs.duke.edu/~ola/",
 "af": "Duke University, Durham, USA"
 },
-"hs:p5331:kartik nayak": {
-"h": "https://users.cs.duke.edu/~kartik",
-"af": "Duke University",
-"g": "https://scholar.google.com/citations?user=JEyz8wEAAAAJ"
-},
 "hs:p5331:josh boyd": {
 "af": "Purdue University, West Lafayette, IN, USA"
 },
-"hs:p5335:boyuan chen": {
-"h": "http://boyuanchen.com",
-"af": "Duke University",
-"g": "https://scholar.google.com/citations?user=5DBpY6EAAAAJ"
-},
-"hs:p5335:tingjun chen": {
-"h": "https://tingjunchen.com",
-"af": "Duke University",
-"g": "https://scholar.google.com/citations?user=RPmhP24AAAAJ"
-},
-"hs:p5335:yiran chen": {
-"h": "https://ece.duke.edu/faculty/yiran-chen",
-"af": "Duke University",
-"g": "https://scholar.google.com/citations?user=3G-nnjMAAAAJ"
-},
-"hs:p5335:john cocke": {
-"h": "http://amturing.acm.org/award_winners/cocke_2083115.cfm",
-"af": "IBM Thomas J. Watson Research Center, Yorktown Heights, NY, USA"
-},
-"hs:p5335:sina farsiu": {
-"h": "http://people.duke.edu/~sf59",
-"af": "Duke University",
-"g": "https://scholar.google.com/citations?user=mzcr92sAAAAJ"
-},
-"hs:p5335:neil gong": {
-"h": "http://people.duke.edu/~zg70",
-"af": "Duke University",
-"g": "https://scholar.google.com/citations?user=t6uCsYoAAAAJ"
-},
-"hs:p5335:maria gorlatova": {
-"h": "https://ece.duke.edu/faculty/maria-gorlatova",
-"af": "Duke University",
-"g": "https://scholar.google.com/citations?user=h_DY5OQAAAAJ"
-},
-"hs:p5335:jennifer groh": {
-"h": "http://people.duke.edu/~jmgroh",
-"af": "Duke University",
-"g": "https://scholar.google.com/citations?user=n_BMt9AAAAAJ"
-},
-"hs:p5335:ali makhdoumi": {
-"h": "https://cs.duke.edu/people/appointed-faculty/secondary-faculty",
-"af": "Duke University",
-"g": "https://scholar.google.com/citations?user=Fm5_a0oAAAAJ"
-},
-"hs:p5335:alexander hartemink": {
-"h": "https://users.cs.duke.edu/~amink",
-"af": "Duke University",
-"g": "https://scholar.google.com/citations?user=HLRZ3oAAAAAJ"
-},
-"hs:p5335:debmalya panigrahi": {
-"h": "https://users.cs.duke.edu/~debmalya",
-"af": "Duke University",
-"g": "https://scholar.google.com/citations?user=syv4e-EAAAAJ"
-},
-"hs:p5335:susan rodger": {
-"h": "http://www.cs.duke.edu/~rodger/HomePage.html",
-"g": "https://scholar.google.com/citations?user=YzvXRfAAAAAJ",
-"af": "Duke University, Durham, USA"
-},
-"hs:p5335:owen astrachan": {
-"h": "http://www.cs.duke.edu/~ola/",
-"af": "Duke University, Durham, USA"
-},
-"hs:p5335:kartik nayak": {
-"h": "https://users.cs.duke.edu/~kartik",
-"af": "Duke University",
-"g": "https://scholar.google.com/citations?user=JEyz8wEAAAAJ"
-},
 "hs:p5335:josh boyd": {
 "af": "Purdue University, West Lafayette, IN, USA"
+},
+"hs:p5337:furong jia": {
+"h": "https://flora-jia-jfr.github.io/furongjia.github.io/",
+"g": "https://scholar.google.com/citations?user=yNx9cokAAAAJ",
+"af": "Duke University, Durham, NC, USA"
+},
+"hs:p5369:md islam": {
+"h": "https://sites.google.com/view/mdmorshedul/home?authuser=2",
+"g": "https://scholar.google.com/citations?user=sxLXnJQAAAAJ",
+"af": "Concordia University of Edmonton, Department of Mathematics and Information Technology, Edmonton, AB, Canada"
 },
 "hs:p5379:shaoying wang": {
 "af": "Florida State University, Department of Computer Science, FL, USA"
@@ -23500,6 +22442,11 @@
 "hs:p5433:martin fraser": {
 "af": "Georgia State University, Atlanta, GA, USA"
 },
+"hs:p5490:mazdak abulnaga": {
+"h": "http://people.csail.mit.edu/abulnaga/",
+"g": "https://scholar.google.com/citations?user=8jYvAUIAAAAJ",
+"af": "Massachusetts Institute of Technology, Cambridge, MA, USA"
+},
 "hs:p5490:ulisses neto": {
 "af": "Texas A&M University, College Station, TX, USA"
 },
@@ -23533,6 +22480,9 @@
 "hs:p5516:feng jiang": {
 "af": "University of Texas at Arlington, Department of Computer Science and Engineering, TX, USA"
 },
+"hs:p5516:thao dang": {
+"af": "Chonnam National University, Gwangju, South Korea"
+},
 "hs:p5524:steven seiden": {
 "h": "https://www.sseiden.com/",
 "af": "Duke University, School of Engineering, Durham, NC, USA"
@@ -23559,11 +22509,6 @@
 "af": "University of Manchester",
 "g": "https://scholar.google.com/citations?user=GqryWPsAAAAJ"
 },
-"hs:p5535:yang cai": {
-"h": "https://cpsc.yale.edu/people/yang-cai",
-"af": "Yale University",
-"g": "https://scholar.google.com/citations?user=HMa4vcYAAAAJ"
-},
 "hs:p5535:jing chen": {
 "h": "https://cse.whu.edu.cn/info/3421/37531.htm",
 "af": "Wuhan University"
@@ -23574,29 +22519,10 @@
 "g": "https://scholar.google.com/citations?user=P5fPJ1oAAAAJ",
 "af": "Massachusetts Institute of Technology (MIT), Cambridge, MA, USA"
 },
-"hs:p5548:fadel adib": {
-"h": "http://www.mit.edu/~fadel",
-"af": "Massachusetts Inst. of Technology",
-"g": "https://scholar.google.com/citations?user=OxKLBqwAAAAJ"
-},
-"hs:p5548:cynthia breazeal": {
-"h": "http://web.media.mit.edu/~cynthiab/",
-"af": "MIT, Cambridge, USA"
-},
 "hs:p5548:hiroshi ishii": {
 "h": "https://tangible.media.mit.edu/person/hiroshi-ishii/",
 "g": "https://scholar.google.com/citations?user=wS0qP_MAAAAJ",
 "af": "MIT Media Lab, Cambridge, MA, USA"
-},
-"hs:p5548:karrie karahalios": {
-"h": "https://cs.illinois.edu/directory/profile/kkarahal",
-"af": "Univ. of Illinois at Urbana-Champaign",
-"g": "https://scholar.google.com/citations?user=xyHrRFUAAAAJ"
-},
-"hs:p5549:sidhanth mohanty": {
-"h": "https://sidhanthm.com",
-"af": "Northwestern University",
-"g": "https://scholar.google.com/citations?user=GF4pITIAAAAJ"
 },
 "hs:p5584:dulanga weerakoon": {
 "af": "Singapore Management University, Singapore"
@@ -23627,32 +22553,9 @@
 "af": "National Inst. of Informatics",
 "g": "https://scholar.google.com/citations?user=wpHvNtYAAAAJ"
 },
-"hs:p5680:jingxian wang": {
-"h": "https://wangwireless.com",
-"af": "National University of Singapore",
-"g": "https://scholar.google.com/citations?user=9j6NeHkAAAAJ"
-},
-"hs:p5680:michael rubenstein": {
-"h": "http://users.eecs.northwestern.edu/~mrubenst",
-"af": "Northwestern University",
-"g": "https://scholar.google.com/citations?user=JVNms8wAAAAJ"
-},
-"hs:p5680:brenna argall": {
-"h": "http://www.eecs.northwestern.edu/~argall",
-"af": "Northwestern University",
-"g": "https://scholar.google.com/citations?user=nhpEPFgAAAAJ"
-},
-"hs:p5680:michael salvato": {
-"h": "http://allenai.org/team.html",
-"af": "AI2, Allen Institute for Artificial Intelligence, Seattle, USA"
-},
-"hs:p5680:brent gillespie": {
-"af": "University of Michigan, Ann Arbor, MI, USA"
-},
-"hs:p5685:allen liu": {
-"h": "https://aliu42.github.io",
-"af": "New York University",
-"g": "https://scholar.google.com/citations?user=GNYqvgQAAAAJ"
+"hs:p5680:edward colgate": {
+"h": "http://colgate.mech.northwestern.edu/",
+"af": "Department of Mechanical Engineering, Northwestern University, Evanston, IL, USA"
 },
 "hs:p5685:benjamin schiffer": {
 "h": "https://bschiffer1.github.io/",
@@ -23729,11 +22632,6 @@
 "hs:p5836:yifei wang": {
 "af": "Peking University, School of Mathematical Sciences, China"
 },
-"hs:p5837:gang yan": {
-"h": "https://ccst.jlu.edu.cn/info/1367/20676.htm",
-"af": "Jilin University",
-"g": "https://scholar.google.com/citations?user=wyHzGcgAAAAJ"
-},
 "hs:p5845:amir bar": {
 "h": "https://www.amirbar.net",
 "af": "Imperial College London",
@@ -23746,18 +22644,8 @@
 "hs:p5862:ziyu xiang": {
 "af": "Texas A&M University, TX, USA"
 },
-"hs:p5862:zi wang": {
-"h": "https://www.augusta.edu/faculty/directory/view.php?id=ZWANG1",
-"af": "Augusta University",
-"g": "https://scholar.google.com/citations?user=wWmQDIAAAAJ"
-},
 "hs:p5862:yijie wang": {
 "af": "Texas A&M University, Department of Electrical and Computer Engineering, College Station, TX, USA"
-},
-"hs:p5862:liang zhao": {
-"h": "https://cs.emory.edu/~lzhao41",
-"af": "Emory University",
-"g": "https://scholar.google.com/citations?user=qnvyqtwAAAAJ"
 },
 "hs:p5863:jingdong zhang": {
 "af": "Texas A&M University, College Station, TX, USA"
@@ -23782,11 +22670,21 @@
 "hs:p5915:fan bai": {
 "af": "General Motors Research, Warren, MI, USA"
 },
+"hs:p5928:jingyi xu": {
+"h": "https://jingyixu.net/",
+"g": "https://scholar.google.com/citations?user=XRyVggYAAAAJ",
+"af": "Stony Brook University, Department of Computer Science, Stony Brook, NY, USA"
+},
 "hs:p5936:ziyan wang": {
 "af": "University of North Carolina, Charlotte, NC, USA"
 },
 "hs:p5953:smitha milli": {
 "af": "Meta, Menlo Park, USA"
+},
+"hs:p5960:wang zhu": {
+"h": "https://billzhu.me/",
+"g": "https://scholar.google.com/citations?user=dMkqNF8AAAAJ",
+"af": "University of Southern California, CA, USA"
 },
 "hs:p5966:jingyu chen": {
 "af": "University of California Los Angeles, UCLA, Department of Mathematics, CA, US"
@@ -23797,10 +22695,6 @@
 },
 "hs:p5970:sophie engle": {
 "h": "http://sjengle.cs.usfca.edu/"
-},
-"hs:p5993:yanggon kim": {
-"h": "https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/ykim.html",
-"af": "Towson University"
 },
 "hs:p6013:michael strobel": {
 "af": "University of California Riverside, CA, USA"
@@ -23869,76 +22763,14 @@
 "hs:p6079:wenxuan zhou": {
 "af": "University of Illinois Urbana-Champaign (UIUC), Broadcom, IL, USA"
 },
-"hs:p6079:anduo wang": {
-"h": "http://anduowang.github.io",
-"af": "Temple University",
-"g": "https://scholar.google.com/citations?user=G0TbvLAAAAAJ"
-},
 "hs:p6082:kuan chen": {
 "af": "University of Michigan, Department of Electrical Engineering and Computer Science, Ann Arbor, MI, USA"
 },
 "hs:p6084:dawei sun": {
 "af": "University of Illinois at Urbana-Champaign, Urbana, IL, USA"
 },
-"hs:p6084:chuchu fan": {
-"h": "http://chuchu.mit.edu/",
-"g": "https://scholar.google.com/citations?user=J-dq_8EAAAAJ",
-"af": "Massachusetts Institute of Technology, MA, USA"
-},
 "hs:p6087:yifan song": {
 "af": "University of Illinois Urbana-Champaign, Urbana, IL, USA"
-},
-"hs:p6089:richard han": {
-"h": "http://www.cs.colorado.edu/~rhan",
-"af": "University of Colorado Boulder",
-"g": "https://scholar.google.com/citations?user=mah-B4IAAAAJ"
-},
-"hs:p6089:fang li": {
-"h": "http://www.cs.sjtu.edu.cn/~li-fang",
-"af": "Shanghai Jiao Tong University",
-"g": "https://scholar.google.com/citations?user=U3Sm3-YAAAAJ"
-},
-"hs:p6089:huan li": {
-"h": "https://mypage.zju.edu.cn/en/lihuan",
-"af": "Zhejiang University",
-"g": "https://scholar.google.com/citations?user=fZoYJz8AAAAJ"
-},
-"hs:p6089:mingrui liu": {
-"h": "https://mingrliu.github.io",
-"af": "George Mason University",
-"g": "https://scholar.google.com/citations?user=KFoEnFQAAAAJ"
-},
-"hs:p6089:cuong pham": {
-"h": "https://sites.google.com/view/cuongpham/home",
-"af": "PTIT",
-"g": "https://scholar.google.com/citations?user=tDWY0U8AAAAJ"
-},
-"hs:p6089:han wang": {
-"h": "https://hwangcsiit.github.io",
-"af": "University of Kansas",
-"g": "https://scholar.google.com/citations?user=LI8-yJoAAAAJ"
-},
-"hs:p6089:wei wu": {
-"h": "http://scse.buaa.edu.cn/info/1078/2642.htm",
-"af": "Beihang University"
-},
-"hs:p6089:nan zhang": {
-"h": "https://faculty.ist.psu.edu/nan",
-"af": "Pennsylvania State University"
-},
-"hs:p6089:ruohan zhang": {
-"h": "https://ruohanzhang.com",
-"af": "Northwestern University",
-"g": "https://scholar.google.com/citations?user=-bqvNWoAAAAJ"
-},
-"hs:p6089:yunlei zhao": {
-"h": "http://www.cs.fudan.edu.cn/?page_id=2655###",
-"af": "Fudan University"
-},
-"hs:p6089:xinyi zhou": {
-"h": "https://www.xinyizhou.xyz",
-"af": "Boise State University",
-"g": "https://scholar.google.com/citations?user=9U_Ge4MAAAAJ"
 },
 "hs:p6092:wei cao": {
 "h": "https://vveicao.github.io/X",
@@ -23957,6 +22789,9 @@
 "h": "http://www.clip.dia.fi.upm.es/~damiano/",
 "af": "Technical University of Madrid, Spain"
 },
+"hs:p6128:mila preda": {
+"af": "University of Verona, Italy"
+},
 "hs:p6128:elisa quintarelli": {
 "h": "http://home.deib.polimi.it/quintare",
 "af": "Politecnico di Milano",
@@ -23972,38 +22807,19 @@
 "af": "University of Chicago",
 "g": "https://scholar.google.com/citations?user=p0sQC6sAAAAJ"
 },
-"hs:p6162:rebecca willett": {
-"h": "https://voices.uchicago.edu/willett",
-"af": "University of Chicago",
-"g": "https://scholar.google.com/citations?user=bGRVPl8AAAAJ"
-},
 "hs:p6162:david uminsky": {
 "h": "https://cs.uchicago.edu/news/uminsky-profile/",
 "g": "https://scholar.google.com/citations?user=ei--1CoAAAAJ",
 "af": "University of Chicago, IL, USA"
 },
-"hs:p6162:risi kondor": {
-"h": "http://people.cs.uchicago.edu/~risi",
+"hs:p6162:raul fernandez": {
+"h": "http://raulcastrofernandez.com",
 "af": "University of Chicago",
-"g": "https://scholar.google.com/citations?user=v12-jLUAAAAJ"
-},
-"hs:p6162:david miller": {
-"h": "http://www.depaul.edu/about/administration/Pages/miller.aspx",
-"af": "DePaul University"
-},
-"hs:p6162:chenhao tan": {
-"h": "https://chenhaot.com",
-"af": "University of Chicago",
-"g": "https://scholar.google.com/citations?user=KGMaP18AAAAJ"
+"g": "https://scholar.google.com/citations?user=bBHxY_MAAAAJ"
 },
 "hs:p6162:moon duchin": {
 "h": "https://mggg.org/people/mduchin/",
 "af": "University of Chicago, USA"
-},
-"hs:p6162:aloni cohen": {
-"h": "https://aloni.net",
-"af": "University of Chicago",
-"g": "https://scholar.google.com/citations?user=g7Op2tgAAAAJ"
 },
 "hs:p6179:linfeng liu": {
 "af": "University of Cincinnati, Cincinnati, Ohio, USA"
@@ -24022,11 +22838,6 @@
 "h": "http://www0.cs.ucl.ac.uk/staff/G.Roberts",
 "af": "University College London"
 },
-"hs:p6209:nikita soni": {
-"h": "https://cs.uic.edu/profiles/soni-nikita",
-"af": "University of Illinois at Chicago",
-"g": "https://scholar.google.com/citations?user=FL4uv6wAAAAJ"
-},
 "hs:p6217:xiao liu": {
 "af": "University of California, Davis, CA, USA"
 },
@@ -24035,10 +22846,34 @@
 "g": "https://scholar.google.com/citations?user=13mkSSkAAAAJ",
 "af": "University of Louisville (UofL), Louisville, KY, USA"
 },
-"hs:p6284:yu chen": {
-"h": "https://sites.google.com/view/chenyu94",
-"af": "National University of Singapore",
-"g": "https://scholar.google.com/citations?user=vuH-jZIAAAAJ"
+"hs:p6296:nina balcan": {
+"h": "https://www.cs.cmu.edu/~ninamf",
+"af": "Carnegie Mellon University",
+"g": "https://scholar.google.com/citations?user=LWlN_BUAAAAJ"
+},
+"hs:p6296:martin pal": {
+"h": "http://martin.palenica.com/"
+},
+"hs:p6296:bo sun": {
+"h": "https://www.uottawa.ca/faculty-engineering/school-electrical-engineering-computer-science/directory/bo-sun",
+"af": "University of Ottawa",
+"g": "https://scholar.google.com/citations?user=nzuTDlcAAAAJ"
+},
+"hs:p6296:john lui": {
+"h": "http://www.cse.cuhk.edu.hk/~cslui",
+"af": "Chinese University of Hong Kong",
+"g": "https://scholar.google.com/citations?user=7LVjQ7MAAAAJ"
+},
+"hs:p6296:yiding feng": {
+"h": "https://www.ydfeng.us/",
+"g": "https://scholar.google.com/citations?user=p5t34vIAAAAJ",
+"af": "Hong Kong University of Science and Technology, Department of Industrial Engineering and Decision Analytics, Hong Kong SAR"
+},
+"hs:p6296:sheng long": {
+"af": "Northwestern University, Evanston, IL, USA"
+},
+"hs:p6296:daniela saban": {
+"af": "Stanford University, CA, USA"
 },
 "hs:p6302:rui cai": {
 "h": "https://luisrui.github.io/",
@@ -24107,6 +22942,10 @@
 "g": "https://scholar.google.com/citations?user=zVcu-J4AAAAJ",
 "af": "University of Texas at Austin, TX, USA"
 },
+"hs:p6487:rajarshi haldar": {
+"h": "https://rajarshihaldar.com/",
+"af": "University of Illinois Urbana-Champaign, Urbana, IL, USA"
+},
 "hs:p6488:bastian leibe": {
 "h": "http://www.vision.rwth-aachen.de/person/1",
 "af": "RWTH Aachen University",
@@ -24148,11 +22987,6 @@
 "g": "https://scholar.google.com/citations?user=CMX6f0oAAAAJ",
 "af": "University of Washington, Seattle, WA, USA"
 },
-"hs:p6584:trang tran": {
-"h": "https://ttmt001.github.io/",
-"g": "https://scholar.google.com/citations?user=pJXKrrkAAAAJ",
-"af": "University of Southern California, Institute for Creative Technologies, CA, USA"
-},
 "hs:p6584:kevin lybarger": {
 "h": "https://www.lybargerlanguagelab.org",
 "af": "George Mason University",
@@ -24174,23 +23008,17 @@
 "af": "University of Hong Kong",
 "g": "https://scholar.google.com/citations?user=Hfrih1EAAAAJ"
 },
-"hs:p6616:blaine hoak": {
-"h": "https://hoak.me",
-"af": "University of Texas at Dallas",
-"g": "https://scholar.google.com/citations?user=P6jPU9AAAAAJ"
-},
-"hs:p6616:quinn burke": {
-"h": "https://www.quinnburke.net",
-"af": "University of Arizona",
-"g": "https://scholar.google.com/citations?user=Gv96S0UAAAAJ"
-},
-"hs:p6616:eric pauley": {
-"h": "https://website.cs.vt.edu/people/faculty/eric-pauley.html",
-"af": "Virginia Tech",
-"g": "https://scholar.google.com/citations?user=-zY91R4AAAAJ"
+"hs:p6616:berkay celik": {
+"h": "https://beerkay.github.io",
+"af": "Purdue University",
+"g": "https://scholar.google.com/citations?user=g1I269gAAAAJ"
 },
 "hs:p6673:mingming liu": {
 "af": "Virginia Polytechnic Institute and State University, Virginia Tech, Department of Computer Science, Blacksburg, VA, USA"
+},
+"hs:p6673:ioana bercea": {
+"h": "https://ioanabercea.github.io/webpage//",
+"af": "KTH Royal Institute of Technology, Stockholm, Sweden"
 },
 "hs:p6679:simeng han": {
 "h": "https://sophiahan6.github.io/",
@@ -24282,11 +23110,6 @@
 "h": "http://www.syssec.ethz.ch/people/capkun",
 "af": "ETH Zurich",
 "g": "https://scholar.google.com/citations?user=VtkPBNsAAAAJ"
-},
-"dblp:Tobias Höllerer": {
-"h": "http://www.cs.ucsb.edu/~holl",
-"af": "Univ. of California - Santa Barbara",
-"g": "https://scholar.google.com/citations?user=008lr2cAAAAJ"
 },
 "dblp:Helmut Krcmar": {
 "h": "http://www.professoren.tum.de/en/krcmar-helmut",
@@ -24432,11 +23255,6 @@
 "h": "http://www.elet.polimi.it/people/crespi",
 "af": "Polytechnic University of Milan, Italy"
 },
-"dblp:Ugur Çetintemel": {
-"h": "https://sites.google.com/a/brown.edu/ugur-cetintemel",
-"af": "Brown University",
-"g": "https://scholar.google.com/citations?user=t_CVDYoAAAAJ"
-},
 "dblp:D. F. Wong 0001": {
 "h": "https://www.hkbu.edu.hk/en/about/university-officers/professor-martin-wong.html",
 "af": "Hong Kong Baptist University",
@@ -24473,11 +23291,6 @@
 "dblp:Carla D. Savage": {
 "h": "http://www4.ncsu.edu/~savage",
 "af": "North Carolina State University"
-},
-"dblp:Daniel A. Jiménez": {
-"h": "https://people.engr.tamu.edu/djimenez/index.html",
-"af": "Texas A&M University",
-"g": "https://scholar.google.com/citations?user=kajXr5oAAAAJ"
 },
 "dblp:Al Geist": {
 "h": "http://www.csm.ornl.gov/~geist/",
@@ -24532,10 +23345,6 @@
 "h": "https://www.professoren.tum.de/en/jacobsen-hans-arno",
 "af": "TU Munich",
 "g": "https://scholar.google.com/citations?user=85bt-X0AAAAJ"
-},
-"dblp:Süleyman Cenk Sahinalp": {
-"h": "http://www.cs.sfu.ca/~cenk/",
-"af": "Simon Fraser University, Burnaby, Canada"
 },
 "dblp:Munther A. Dahleh": {
 "h": "https://dahleh.lids.mit.edu/",

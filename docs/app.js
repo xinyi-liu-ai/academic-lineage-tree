@@ -81,11 +81,38 @@
     const t = name.replace(/[^\p{L}\s.-]/gu, '').split(/[\s.-]+/).filter((x) => x && !/^(jr|sr|ii|iii)$/i.test(x));
     return ((t[0] || '?')[0] + (t.length > 1 ? t[t.length - 1][0] : '')).toUpperCase();
   };
-  const avatar = (n, extra = '') => el('div', {
-    class: `avatar ${n.ext ? 'ext' : ''} ${extra}`, 'aria-hidden': 'true',
-    style: n.ext ? null : `--av:${AREA_COLOR[AREA_OF[n.d[0]]] || '#6c9a58'}`,
-  }, initials(n.n));
-  const shortAff = (s) => (s.length > 34 ? s.split(/,\s*/)[0] : s).slice(0, 40);
+  // 已确认加载失败的照片地址：重绘树、翻页时不再反复请求、也不会闪一下
+  const badPhoto = new Set(), goodPhoto = new Set();
+  const avatar = (n, lazy = false) => {
+    const box = el('div', {
+      class: n.ext ? 'avatar ext' : 'avatar', 'aria-hidden': 'true',
+      style: n.ext ? null : `--av:${AREA_COLOR[AREA_OF[(n.d || [])[0]]] || '#6c9a58'}`,
+    }, el('span', { class: 'ini' }, initials(n.n)));
+    const src = n.ph && n.ph.replace(/^http:/, 'https:');
+    if (src && !badPhoto.has(src)) {
+      // 照片引用自本人主页（教授和非名单人员都适用）；加载失败、链接失效、对方禁止外链
+      // 或只是个占位小图时，移除 <img>，保留姓名首字母
+      const img = el('img', { src, alt: '', loading: lazy ? 'lazy' : 'eager', decoding: 'async', referrerpolicy: 'no-referrer', draggable: 'false' });
+      const fail = () => { badPhoto.add(src); img.remove(); box.classList.remove('has-photo'); };
+      const show = () => { goodPhoto.add(src); box.classList.add('has-photo'); };
+      img.addEventListener('load', () => {
+        if (img.naturalWidth < 24 || img.naturalHeight < 24) return fail();
+        // 大图解码完再淡入，避免首字母先消失、圆里空白一下
+        if (img.decode) img.decode().then(show, show); else show();
+      });
+      img.addEventListener('error', fail);
+      // 已经显示过的照片在浏览器缓存里：直接显示，点树节点重绘时不再闪一下淡入
+      if (goodPhoto.has(src)) box.classList.add('has-photo', 'seen');
+      box.append(img);
+    }
+    return box;
+  };
+  const title = (n) => n.ti || 'Faculty';
+  const shortAff = (s) => {
+    let t = (s.length > 34 ? s.split(/,\s*/)[0] : s);
+    if (t.length > 40) t = t.slice(0, 40).replace(/\s+\S*$/, '') + '…';
+    return (t.split('(').length > t.split(')').length) ? t.replace(/\s*\([^)]*$/, '') : t;  // 别留半个括号
+  };
   const interest = (n, k = 2) => n.d.slice(0, k).map((d) => SUB_LABEL[d] || d).join(', ');
 
   /* ---------- shared search filters ---------- */
@@ -240,11 +267,25 @@
     return el('div', { class: 'name-row' }, el('span', { class: 'glass' }), input, box);
   }
 
+  // URL 里的机构用全名（可读、可分享，数据重排后也不失效）；也接受旧链接里的序号和简称（如 CMU），大小写、重音不敏感
+  let uniKey = null;
+  const uniIndex = (v) => {
+    const s = v.trim();
+    if (!s) return null;
+    if (/^\d+$/.test(s)) return G.unis[+s] ? +s : null;
+    if (!uniKey) {
+      uniKey = new Map();
+      G.unis.forEach(([full, short], i) => { uniKey.set(fold(full), i); if (short && !uniKey.has(fold(short))) uniKey.set(fold(short), i); });
+    }
+    const k = uniKey.get(fold(s));
+    return k == null ? null : k;
+  };
   const searchHash = () => {
-    const p = new URLSearchParams();
-    if (S.subs.size) p.set('r', [...S.subs].join(','));
-    if (S.unis.size) p.set('i', [...S.unis].join(','));
-    const q = p.toString();
+    // 逐项编码、逗号保留原样，地址栏里更好读：?i=Northeastern%20University,Carnegie%20Mellon%20University
+    const p = [];
+    if (S.subs.size) p.push('r=' + [...S.subs].join(','));
+    if (S.unis.size) p.push('i=' + [...S.unis].map((i) => encodeURIComponent(G.unis[i][0])).join(','));
+    const q = p.join('&');
     return '#/search' + (q ? '?' + q : '');
   };
 
@@ -275,11 +316,11 @@
       if (current.view === 'favorites') renderFavorites();
     });
     return el('li', { class: 'card', tabindex: 0, onclick: () => go(p.id), onkeydown: (e) => { if (e.key === 'Enter') go(p.id); } },
-      avatar(p), star,
+      avatar(p, true), star,
       el('div', { class: 'card-body' },
         el('div', { class: 'card-name' }, p.n),
         el('div', { class: 'card-meta' },
-          el('div', {}, 'Professor', p.former ? el('span', { class: 'badge-former' }, 'former') : null),
+          el('div', {}, title(p), p.former ? el('span', { class: 'badge-former' }, 'former') : null),
           el('div', {}, p.uni),
           el('div', { class: 'interest' }, interest(p) || '—')),
         el('div', { class: 'card-stats' }, nA ? `${nA} advisor${nA > 1 ? 's' : ''}` : 'Advisor unknown', nS ? ` · ${nS} student${nS > 1 ? 's' : ''}` : '')));
@@ -364,6 +405,8 @@
     const b = el('button', { class: `tnode ${gen === 0 ? 'root' : ''} ${isFocus ? 'focus' : ''}`, type: 'button', 'data-id': it.id, 'data-gen': gen },
       avatar(n),
       el('span', { class: 't-name' }, n.n),
+      // 职称只在中心人物下显示（那一列只有一个人，有空间）；其余节点放在悬停提示里
+      gen === 0 && !n.ext && n.ti ? el('span', { class: 't-title' }, n.ti) : null,
       el('span', { class: 't-sub' }, n.ext ? (n.af ? shortAff(n.af) : 'Outside faculty list') : n.uniShort),
       n.ext ? null : el('span', { class: 't-dir' }, n.d[0] ? SUB_LABEL[n.d[0]] : ''),
       badge);
@@ -531,7 +574,7 @@ Source (homepage, CV, thesis…):
     d.replaceChildren(...[
       el('button', { class: 'close', type: 'button', 'aria-label': 'Close details', onclick: closeDrawer }, '×'),
       el('div', { class: 'who' }, avatar(n), el('div', {}, el('h3', {}, n.n),
-        el('div', { class: 'uni' }, n.ext ? (n.af || 'Current position unknown') : n.former ? `Formerly ${n.uni}` : n.uni))),
+        n.ext ? null : el('div', { class: 'uni ti' }, title(n)), el('div', { class: 'uni' }, n.ext ? (n.af || 'Current position unknown') : n.former ? `Formerly ${n.uni}` : n.uni))),
       n.ext ? el('p', { class: 'note' }, 'Not on the CSRankings faculty list of these 189 US universities (for example in industry, abroad or another field).') : null,
       n.former ? el('p', { class: 'note' }, 'No longer on CSRankings’ current faculty list for these institutions (moved, retired or emeritus)' + (n.now ? `; now listed at ${n.now}.` : '.')) : null,
       rel ? el('p', { class: 'note' }, rel[1], ' ', ...flagBadges(rel[0])) : null,
@@ -549,7 +592,7 @@ Source (homepage, CV, thesis…):
 
   const tip = $('#tip');
   function showTip(ev, n, e) {
-    tip.textContent = [n.n, n.ext ? (n.af || null) : n.uni + (n.former ? ' (former)' : ''),
+    tip.textContent = [n.n, n.ext ? (n.af || null) : (n.ti ? n.ti + ', ' : '') + n.uni + (n.former ? ' (former)' : ''),
       e ? `${e.t === 'phd' ? 'PhD' : 'Postdoc'}${e.disputed ? ' · unverified' : ''}${e.inferred ? ' · inferred from co-authorship' : ''}` : null,
       'Click for details · double-click to re-center'].filter(Boolean).join('\n');
     tip.hidden = false;
@@ -585,7 +628,7 @@ Source (homepage, CV, thesis…):
         el('li', {}, el('b', {}, 'Wikipedia: '), 'doctoral advisor and doctoral students fields of English Wikipedia infoboxes (CC BY-SA 4.0).'),
         el('li', {}, el('b', {}, 'Homepage / CV: '), 'phrases such as “PhD advisor: …” or “under the supervision of …” found on the professor’s own homepage or CV. Each links to its page.'),
         el('li', {}, el('b', {}, 'dblp (inferred): '), 'for professors with no advisor from the sources above, the co-author who most often appears as senior last author on their papers during their PhD years, using ', a('https://dblp.org', 'dblp'), ' (CC0). Only confident cases are kept; checked against known advisors they are right about 83% of the time.')),
-      el('p', {}, 'A curated advisor is marked “unverified” when Wikidata or Wikipedia lists a different advisor for the same person. Photos are not collected; avatars show initials, colored by research area. Favorites are stored only in your browser.'),
+      el('p', {}, 'A curated advisor is marked “unverified” when Wikidata or Wikipedia lists a different advisor for the same person. Photos and job titles are taken from each person’s own homepage; photos are shown directly from that page rather than copied here, so one may disappear if the page changes. Where no photo was found, the avatar shows initials colored by research area; where no title was found, it reads “Faculty”. Favorites are stored only in your browser.'),
       el('p', {}, 'Data can be wrong or incomplete. Always confirm with the professor’s own CV.'));
   }
 
@@ -606,8 +649,8 @@ Source (homepage, CV, thesis…):
     if (m && G.nodes.has(decodeURIComponent(m[1]))) { show('tree'); openTree(decodeURIComponent(m[1])); return; }
     if (h.startsWith('#/search')) {
       const p = new URLSearchParams(h.split('?')[1] || '');
-      S.subs = new Set((p.get('r') || '').split(',').filter((k) => SUB_LABEL[k]));
-      S.unis = new Set((p.get('i') || '').split(',').filter(Boolean).map(Number).filter((i) => G.unis[i]));
+      S.subs = new Set((p.get('r') || '').split(',').map((k) => k.trim()).flatMap((k) => (SUB_LABEL[k] ? [k] : AREAS[k] ? Object.keys(AREAS[k][1]) : [])));
+      S.unis = new Set((p.get('i') || '').split(',').map(uniIndex).filter((i) => i != null));
       lastList = h;
       R.shown = PAGE;
       show('results'); renderResults();

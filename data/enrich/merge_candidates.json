@@ -1,0 +1,427 @@
+[
+ {
+  "keep": "p1023",
+  "drop": "hs:p1598:nate foster",
+  "reason": "professor_no_advisor"
+ },
+ {
+  "keep": "p1623",
+  "drop": "hs:p965:amit levy",
+  "reason": "professor_no_advisor"
+ },
+ {
+  "keep": "p1944",
+  "drop": "hs:p1257:omar chowdhury",
+  "reason": "professor_no_advisor"
+ },
+ {
+  "keep": "p2073",
+  "drop": "hs:p5331:kartik nayak",
+  "reason": "professor_no_advisor"
+ },
+ {
+  "keep": "p2073",
+  "drop": "hs:p5335:kartik nayak",
+  "reason": "professor_no_advisor"
+ },
+ {
+  "keep": "p2468",
+  "drop": "hs:p965:ryan stutsman",
+  "reason": "professor_no_advisor"
+ },
+ {
+  "keep": "p3615",
+  "drop": "hs:p1512:matt huenerfauth",
+  "reason": "professor_no_advisor"
+ },
+ {
+  "keep": "p3655",
+  "drop": "hs:p3089:david schwartz",
+  "reason": "professor_no_advisor"
+ },
+ {
+  "keep": "p3681",
+  "drop": "hs:p3243:patrick flynn",
+  "reason": "professor_no_advisor"
+ },
+ {
+  "keep": "p3720",
+  "drop": "hs:p1598:kenny zhu",
+  "reason": "professor_no_advisor"
+ },
+ {
+  "keep": "p3895",
+  "drop": "hs:p1532:james wang",
+  "reason": "professor_no_advisor"
+ },
+ {
+  "keep": "p4668",
+  "drop": "hs:p2489:david miller",
+  "reason": "professor_no_advisor"
+ },
+ {
+  "keep": "p4668",
+  "drop": "hs:p6162:david miller",
+  "reason": "professor_no_advisor"
+ },
+ {
+  "keep": "p4737",
+  "drop": "hs:p2904:yang xiao",
+  "reason": "professor_no_advisor"
+ },
+ {
+  "keep": "p5200",
+  "drop": "hs:p2489:jason li",
+  "reason": "professor_no_advisor"
+ },
+ {
+  "keep": "p5680",
+  "drop": "hs:p5184:malcolm maciver",
+  "reason": "professor_no_advisor"
+ },
+ {
+  "keep": "p6006",
+  "drop": "hs:p1709:yiwei wang",
+  "reason": "professor_no_advisor"
+ },
+ {
+  "keep": "p6051",
+  "drop": "hs:p2307:wenbo guo",
+  "reason": "professor_no_advisor"
+ },
+ {
+  "keep": "p6458",
+  "drop": "hs:p1100:fnu suya",
+  "reason": "professor_no_advisor"
+ },
+ {
+  "keep": "p6659",
+  "drop": "hs:p2904:nan xi",
+  "reason": "professor_no_advisor"
+ },
+ {
+  "keep": "p677",
+  "drop": "wp:Yi_Ma",
+  "reason": "professor_same_advisor"
+ },
+ {
+  "keep": "dblp:Phillipa Gill",
+  "drop": "hs:p2871:phillipa gill",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "dblp:Thomas Hofmann 0001",
+  "drop": "hs:p651:thomas hofmann",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "hs:p1166:siyao guo",
+  "drop": "hs:p1649:siyao guo",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "hs:p136:michael kuchnik",
+  "drop": "hs:p75:michael kuchnik",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "hs:p1404:rachit garg",
+  "drop": "hs:p1649:rachit garg",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "hs:p1446:jiuyao lu",
+  "drop": "hs:p1481:jiuyao lu",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "hs:p1456:yuepeng wang",
+  "drop": "hs:p1461:yuepeng wang",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "hs:p163:joseph reeves",
+  "drop": "hs:p5206:joseph reeves",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "hs:p1676:shravas rao",
+  "drop": "hs:p2316:shravas rao",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "hs:p1772:juan pizzorno",
+  "drop": "hs:p1773:juan pizzorno",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "hs:p1772:juan pizzorno",
+  "drop": "hs:p1788:juan pizzorno",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "hs:p19:tianlong yu",
+  "drop": "hs:p88:tianlong yu",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "hs:p289:adrien bousseau",
+  "drop": "hs:p941:adrien bousseau",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "hs:p313:lixiang ao",
+  "drop": "hs:p374:lixiang ao",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "hs:p5412:prateek saxena",
+  "drop": "x:prateek saxena",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "hs:p564:sharut gupta",
+  "drop": "hs:p570:sharut gupta",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "hs:p652:vongani maluleke",
+  "drop": "hs:p665:vongani maluleke",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "hs:p964:geoff ramseyer",
+  "drop": "hs:p965:geoff ramseyer",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "p1498",
+  "drop": "hs:p1492:susan davidson",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "p1636",
+  "drop": "hs:p1375:andrew wilson",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "p1882",
+  "drop": "hs:p6162:michael franklin",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "p1900",
+  "drop": "hs:p4504:yanjing li",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "p1963",
+  "drop": "hs:p5535:jing chen",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "p2034",
+  "drop": "hs:p2984:david eppstein",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "p2255",
+  "drop": "x:xiang zhang",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "p3374",
+  "drop": "x:xin li",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "p3374",
+  "drop": "hs:p1430:xin li",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "p3519",
+  "drop": "x:feng chen",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "p4763",
+  "drop": "hs:p1257:xinming ou",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "p773",
+  "drop": "hs:p1676:euiwoong lee",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "wd:Q102386696",
+  "drop": "hs:p1715:bhavana kanukurthi",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "wd:Q102409586",
+  "drop": "hs:p1773:ivan beschastnikh",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "wd:Q102409739",
+  "drop": "hs:p1528:zhiyi huang",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "wd:Q102414479",
+  "drop": "hs:p1676:daniel dadush",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "wd:Q102680839",
+  "drop": "hs:p1250:yousra aafer",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "wd:Q102810221",
+  "drop": "hs:p1720:keval vora",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "wd:Q102978097",
+  "drop": "hs:p6673:ioana bercea",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "wd:Q104878993",
+  "drop": "hs:p1522:john paisley",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "wd:Q113667817",
+  "drop": "hs:p930:laurel orr",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "wd:Q123478068",
+  "drop": "hs:p689:jakub pachocki",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "wd:Q17514372",
+  "drop": "hs:p651:venkat chandrasekaran",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "wd:Q60057466",
+  "drop": "hs:p1463:luis ortiz",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "wd:Q80873822",
+  "drop": "hs:p656:ali farhadi",
+  "reason": "same_homepage"
+ },
+ {
+  "keep": "wd:Q102292964",
+  "drop": "wd:Q102337366",
+  "reason": "same_name_shared_advisor"
+ },
+ {
+  "keep": "wd:Q102301178",
+  "drop": "wd:Q97555345",
+  "reason": "same_name_shared_advisor"
+ },
+ {
+  "keep": "wd:Q102339488",
+  "drop": "wd:Q102339651",
+  "reason": "same_name_shared_advisor"
+ },
+ {
+  "keep": "wd:Q102346897",
+  "drop": "wd:Q86640280",
+  "reason": "same_name_shared_advisor"
+ },
+ {
+  "keep": "wd:Q102354635",
+  "drop": "wd:Q103035367",
+  "reason": "same_name_shared_advisor"
+ },
+ {
+  "keep": "wd:Q102356810",
+  "drop": "wd:Q103330032",
+  "reason": "same_name_shared_advisor"
+ },
+ {
+  "keep": "wd:Q102759383",
+  "drop": "wd:Q142168830",
+  "reason": "same_name_shared_advisor"
+ },
+ {
+  "keep": "wd:Q102982163",
+  "drop": "wd:Q117768958",
+  "reason": "same_name_shared_advisor"
+ },
+ {
+  "keep": "wd:Q14492049",
+  "drop": "wp:Adam_Marcus_(mathematician)",
+  "reason": "same_name_shared_advisor"
+ },
+ {
+  "keep": "wd:Q6829665",
+  "drop": "wp:Michael_D._Smith_(computer_scientist)",
+  "reason": "same_name_shared_advisor"
+ },
+ {
+  "keep": "hs:p1015:mina arashloo",
+  "drop": "hs:p1592:mina arashloo",
+  "reason": "same_scholar"
+ },
+ {
+  "keep": "hs:p1274:raphael meyer",
+  "drop": "hs:p1652:raphael meyer",
+  "reason": "same_scholar"
+ },
+ {
+  "keep": "hs:p2319:yiding feng",
+  "drop": "hs:p6296:yiding feng",
+  "reason": "same_scholar"
+ },
+ {
+  "keep": "hs:p290:qiyue gao",
+  "drop": "hs:p298:qiyue gao",
+  "reason": "same_scholar"
+ },
+ {
+  "keep": "p1277",
+  "drop": "hs:p6616:berkay celik",
+  "reason": "same_scholar"
+ },
+ {
+  "keep": "p1891",
+  "drop": "hs:p6162:raul fernandez",
+  "reason": "same_scholar"
+ },
+ {
+  "keep": "p2289",
+  "drop": "hs:p1676:young ko",
+  "reason": "same_scholar"
+ },
+ {
+  "keep": "p4494",
+  "drop": "hs:p2824:nam kim",
+  "reason": "same_scholar"
+ },
+ {
+  "keep": "p5276",
+  "drop": "hs:p4254:tanvir khan",
+  "reason": "same_scholar"
+ },
+ {
+  "keep": "p810",
+  "drop": "hs:p3555:lin ma",
+  "reason": "same_scholar"
+ },
+ {
+  "keep": "wd:Q103330793",
+  "drop": "hs:p651:nhat ho",
+  "reason": "same_scholar"
+ }
+]

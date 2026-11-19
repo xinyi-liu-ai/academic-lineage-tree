@@ -10,3 +10,13 @@ data/cache/csrankings/
 data/cache/pipeline*.log
 data/cache/student_links_raw.jsonl
 data/cache/people_pages/
+data/cache/photo_pages/
+data/cache/photos.log
+data/cache/titles_eval.txt
+data/cache/directories/
+data/cache/people_photo_pages/
+data/cache/link_check/
+data/cache/photo_verify.jsonl
+data/audit/
+data/cache/*.log
+docs/_*.html

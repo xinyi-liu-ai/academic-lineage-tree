@@ -34,7 +34,8 @@ def main():
     for a, s, *_ in g['edges']:
         for me, other in ((a, s), (s, a)):
             o = nodes.get(other)
-            if me in profs and o and o.get('x') and not o.get('h'):
+            # 主页来自上一轮匹配（带 hv）的也重新算，否则重跑时会丢掉这些结果
+            if me in profs and o and o.get('x') and (not o.get('h') or o.get('hv')):
                 t = tokens(o['n'])
                 if t:
                     need[me][other] = t
@@ -67,7 +68,11 @@ def main():
         h = ok[0]
         kind = 'li' if 'linkedin.com/in' in h else 'g' if 'scholar.google' in h else 'h'
         out[person] = {kind: h, 'via': sorted(hs[h])[0]}
-    with open(os.path.join(ROOT, 'data/enrich/student_links.json'), 'w', encoding='utf-8') as f:
+    out_path = os.path.join(ROOT, 'data/enrich/student_links.json')
+    if os.path.exists(out_path):  # 累积：上一轮找到、这次没再找到的（页面变了或节点改名）保留
+        for k, v in json.load(open(out_path, encoding='utf-8')).items():
+            out.setdefault(k, v)
+    with open(out_path, 'w', encoding='utf-8') as f:
         json.dump(out, f, ensure_ascii=False, indent=0)
     print('people needing a link', len({k for v in need.values() for k in v}), 'found', len(out))
 
