@@ -33,6 +33,7 @@
 {"prof": "p228", "rel": "advisor", "name": "Ion Stoica", "type": "phd", "source": "homepage", "url": "http://pbg.cs.illinois.edu/"}
 {"prof": "p232", "rel": "advisor", "name": "Sylvia Ratnasamy", "type": "phd", "source": "homepage", "url": "http://radhikam.web.illinois.edu/"}
 {"prof": "p232", "rel": "advisor", "name": "Scott Shenker", "type": "phd", "source": "homepage", "url": "http://radhikam.web.illinois.edu/"}
+{"prof": "p239", "rel": "advisor", "name": "Nancy Lynch", "type": "phd", "source": "cv", "url": "http://mitras.ece.illinois.edu/cvnoref.pdf"}
 {"prof": "p247", "rel": "advisor", "name": "Mark Steedman", "type": "phd", "source": "cv", "url": "http://juliahmr.cs.illinois.edu/./HockenmaierCV.pdf"}
 {"prof": "p251", "rel": "advisor", "name": "Michael Cafarella", "type": "phd", "source": "cv", "url": "https://yongjoopark.com//resources/Yongjoo_CV_2023_02.pdf"}
 {"prof": "p251", "rel": "advisor", "name": "Barzan Mozafari", "type": "phd", "source": "cv", "url": "https://yongjoopark.com//resources/Yongjoo_CV_2023_02.pdf"}
@@ -315,8 +316,6 @@
 {"prof": "p2154", "rel": "advisor", "name": "Michael Collins", "type": "phd", "source": "homepage", "url": "http://karlstratos.com/"}
 {"prof": "p2169", "rel": "advisor", "name": "Mark Braverman", "type": "phd", "source": "homepage", "url": "https://sites.google.com/view/sumegha-garg/home"}
 {"prof": "p2172", "rel": "advisor", "name": "Suresh Jagannathan", "type": "phd", "source": "homepage", "url": "http://herowanzhu.github.io/"}
-{"prof": "p2178", "rel": "advisor", "name": "Richard Peng", "type": "phd", "source": "homepage", "url": "https://sites.google.com/site/pengzhang27182"}
-{"prof": "p2178", "rel": "advisor", "name": "Daniel Spielman", "type": "postdoc", "source": "homepage", "url": "https://sites.google.com/site/pengzhang27182"}
 {"prof": "p2180", "rel": "advisor", "name": "Luis Gravano", "type": "phd", "source": "cv", "url": "https://wordpress.cs.rutgers.edu/amelie-marian-cs-rutgers-edu/wp-content/uploads/sites/50/2024/01/Curriculum_Vitae_Amelie_Jan24.pdf"}
 {"prof": "p2193", "rel": "advisor", "name": "Wenke Lee", "type": "phd", "source": "homepage", "url": "https://www.cs.ucr.edu/~csong"}
 {"prof": "p2193", "rel": "advisor", "name": "Taesoo Kim", "type": "phd", "source": "homepage", "url": "https://www.cs.ucr.edu/~csong"}
@@ -405,8 +404,6 @@
 {"prof": "p2727", "rel": "advisor", "name": "Charalampos Papamanthou", "type": "phd", "source": "homepage", "url": "https://idemertzis.com/"}
 {"prof": "p2733", "rel": "advisor", "name": "Xipeng Shen", "type": "phd", "source": "homepage", "url": "https://yuanchaoxu6.github.io/"}
 {"prof": "p2733", "rel": "advisor", "name": "Yan Solihin", "type": "phd", "source": "homepage", "url": "https://yuanchaoxu6.github.io/"}
-{"prof": "p2736", "rel": "advisor", "name": "Sean Munson", "type": "phd", "source": "homepage", "url": "https://people.ucsc.edu/~cfchung"}
-{"prof": "p2736", "rel": "advisor", "name": "Sean Munson", "type": "phd", "source": "cv", "url": "https://people.ucsc.edu/~cfchung/assets/papers/chiafangchung_cv.pdf"}
 {"prof": "p2771", "rel": "advisor", "name": "Andrew G. Barto", "type": "phd", "source": "cv", "url": "https://cs.brown.edu/people/gdk/cv.pdf"}
 {"prof": "p2777", "rel": "advisor", "name": "Pat Hanrahan", "type": "phd", "source": "cv", "url": "https://dritchie.github.io/misc/cv.pdf"}
 {"prof": "p2777", "rel": "advisor", "name": "Noah Goodman", "type": "phd", "source": "cv", "url": "https://dritchie.github.io/misc/cv.pdf"}
@@ -512,6 +509,7 @@
 {"prof": "p3501", "rel": "advisor", "name": "Wendi Heinzelman", "type": "phd", "source": "cv", "url": "https://hajim.rochester.edu/ece/sites/zduan/resource/ZhiyaoDUAN_CV.pdf"}
 {"prof": "p3504", "rel": "advisor", "name": "Tao Yang", "type": "phd", "source": "cv", "url": "https://www.cs.rochester.edu/u/kshen/cv.pdf"}
 {"prof": "p3507", "rel": "advisor", "name": "Shachar Lovett", "type": "phd", "source": "homepage", "url": "https://www.cs.rochester.edu/u/shossei2"}
+{"prof": "p3519", "rel": "advisor", "name": "Chang-Tien Lu", "type": "phd", "source": "homepage", "url": "https://personal.utdallas.edu/~fxc190007"}
 {"prof": "p3521", "rel": "advisor", "name": "Silvio Savarese", "type": "phd", "source": "homepage", "url": "https://yuxng.github.io/"}
 {"prof": "p3521", "rel": "advisor", "name": "Dieter Fox", "type": "postdoc", "source": "cv", "url": "https://yuxng.github.io/CV_YuXiang.pdf"}
 {"prof": "p3521", "rel": "advisor", "name": "Silvio Savarese", "type": "postdoc", "source": "cv", "url": "https://yuxng.github.io/CV_YuXiang.pdf"}
@@ -543,6 +541,8 @@
 {"prof": "p3788", "rel": "advisor", "name": "Xu Liu", "type": "phd", "source": "homepage", "url": "https://pengfei-su.github.io/"}
 {"prof": "p3789", "rel": "advisor", "name": "Murali Annavaram", "type": "phd", "source": "homepage", "url": "https://www.mocalab.org/"}
 {"prof": "p3791", "rel": "advisor", "name": "Shan Lin", "type": "phd", "source": "cv", "url": "https://sites.ucmerced.edu/files/huahuang/files/cv_full.pdf"}
+{"prof": "p3799", "rel": "advisor", "name": "Aloysius K. Mok", "type": "phd", "source": "homepage", "url": "http://engr.uconn.edu/~song"}
+{"prof": "p3799", "rel": "advisor", "name": "Simon S. Lam", "type": "phd", "source": "homepage", "url": "http://engr.uconn.edu/~song"}
 {"prof": "p3808", "rel": "advisor", "name": "Sorin Istrail", "type": "phd", "source": "homepage", "url": "http://derekaguiar.com/"}
 {"prof": "p3808", "rel": "advisor", "name": "Fragile Families", "type": "postdoc", "source": "cv", "url": "http://derekaguiar.com//resources/DerekAguiarCV.pdf"}
 {"prof": "p3808", "rel": "advisor", "name": "Barbara Engelhardt", "type": "postdoc", "source": "cv", "url": "http://derekaguiar.com//resources/DerekAguiarCV.pdf"}
@@ -571,6 +571,9 @@
 {"prof": "p4076", "rel": "advisor", "name": "Lei Ying", "type": "phd", "source": "homepage", "url": "https://honghaow.me/"}
 {"prof": "p4082", "rel": "advisor", "name": "Giuliano Antoniol", "type": "phd", "source": "homepage", "url": "http://www.veneraarnaoudova.com/"}
 {"prof": "p4082", "rel": "advisor", "name": "Yann-Gaël Guéhéneuc", "type": "phd", "source": "homepage", "url": "http://www.veneraarnaoudova.com/"}
+{"prof": "p4089", "rel": "advisor", "name": "Thomas Lukasiewicz", "type": "postdoc", "source": "homepage", "url": "http://www.cs.emory.edu/~jyang71"}
+{"prof": "p4089", "rel": "advisor", "name": "Jiawei Han", "type": "phd", "source": "homepage", "url": "http://www.cs.emory.edu/~jyang71"}
+{"prof": "p4089", "rel": "advisor", "name": "Thomas Lukasiewicz", "type": "postdoc", "source": "cv", "url": "http://www.cs.emory.edu/~jyang71/files/resume_carl.pdf"}
 {"prof": "p4098", "rel": "advisor", "name": "Ken Birman", "type": "phd", "source": "cv", "url": "http://ymsir.com/CV.pdf"}
 {"prof": "p4105", "rel": "advisor", "name": "Rafael Pass", "type": "phd", "source": "homepage", "url": "https://muthu.georgetown.domains/"}
 {"prof": "p4112", "rel": "advisor", "name": "Stan Sclaroff", "type": "phd", "source": "cv", "url": "https://bargal.georgetown.domains/SarahAdelBargal_CV.pdf"}
@@ -702,3 +705,589 @@
 {"prof": "p4990", "rel": "advisor", "name": "Zizhong Chen", "type": "phd", "source": "cv", "url": "https://jieyangchen7.github.io/CV.pdf"}
 {"prof": "p5068", "rel": "advisor", "name": "Kojiro Kobayashi", "type": "phd", "source": "cv", "url": "http://www.cs.miami.edu/~ogihara/vitae.pdf"}
 {"prof": "p5073", "rel": "advisor", "name": "Jeff Huang", "type": "phd", "source": "homepage", "url": "https://shaunwallace.org/"}
+{"prof": "p5082", "rel": "advisor", "name": "Xiao Wang", "type": "phd", "source": "cv", "url": "https://ckweng.github.io/cv.pdf"}
+{"prof": "p5083", "rel": "advisor", "name": "Rob Nowak", "type": "phd", "source": "homepage", "url": "https://search.asu.edu/profile/1176368"}
+{"prof": "p5083", "rel": "advisor", "name": "Stark Draper", "type": "phd", "source": "homepage", "url": "https://search.asu.edu/profile/1176368"}
+{"prof": "p5083", "rel": "advisor", "name": "Robert Nowak", "type": "phd", "source": "cv", "url": "https://search.asu.edu/profile/1176368/cv"}
+{"prof": "p5087", "rel": "advisor", "name": "Changhee Jung", "type": "phd", "source": "homepage", "url": "https://jianpingzeng.github.io"}
+{"prof": "p5088", "rel": "advisor", "name": "Narayan Mandayam", "type": "phd", "source": "cv", "url": "https://search.asu.edu/profile/1981673/cv"}
+{"prof": "p5088", "rel": "advisor", "name": "H. Vincent Poor", "type": "postdoc", "source": "cv", "url": "https://search.asu.edu/profile/1981673/cv"}
+{"prof": "p5088", "rel": "advisor", "name": "Narayan Mandayam", "type": "postdoc", "source": "cv", "url": "https://search.asu.edu/profile/1981673/cv"}
+{"prof": "p5093", "rel": "advisor", "name": "Vivek Srikumar", "type": "phd", "source": "homepage", "url": "https://vgupta123.github.io"}
+{"prof": "p5093", "rel": "advisor", "name": "Vivek Srikumar", "type": "phd", "source": "cv", "url": "https://vgupta123.github.io/docs/resume.pdf"}
+{"prof": "p5096", "rel": "advisor", "name": "Gesine Reinert", "type": "phd", "source": "cv", "url": "https://sherylhyx.github.io/files/Yixuan_He_s_CV.pdf"}
+{"prof": "p5096", "rel": "advisor", "name": "Mihai Cucuringu", "type": "phd", "source": "cv", "url": "https://sherylhyx.github.io/files/Yixuan_He_s_CV.pdf"}
+{"prof": "p5097", "rel": "advisor", "name": "Qing Li", "type": "phd", "source": "cv", "url": "https://search.asu.edu/profile/4082902/cv"}
+{"prof": "p5100", "rel": "advisor", "name": "Sanjay Ranka", "type": "phd", "source": "homepage", "url": "https://panhe.org"}
+{"prof": "p5100", "rel": "advisor", "name": "Anand Rangarajan", "type": "phd", "source": "homepage", "url": "https://panhe.org"}
+{"prof": "p5100", "rel": "advisor", "name": "Sanjay Ranka", "type": "phd", "source": "cv", "url": "https://panhe.org/resources/PanHe.pdf"}
+{"prof": "p5100", "rel": "advisor", "name": "Anand Rangarajan", "type": "phd", "source": "cv", "url": "https://panhe.org/resources/PanHe.pdf"}
+{"prof": "p5101", "rel": "advisor", "name": "Zhiqiang Lin", "type": "phd", "source": "homepage", "url": "https://schuan.github.io"}
+{"prof": "p5101", "rel": "advisor", "name": "Yinqian Zhang", "type": "phd", "source": "homepage", "url": "https://schuan.github.io"}
+{"prof": "p5106", "rel": "advisor", "name": "Feng Chen", "type": "phd", "source": "homepage", "url": "https://linlin-yu.github.io"}
+{"prof": "p5108", "rel": "advisor", "name": "Jie Shen", "type": "phd", "source": "homepage", "url": "https://sites.google.com/view/shiweizeng"}
+{"prof": "p5121", "rel": "advisor", "name": "Mohammad Al Hasan", "type": "phd", "source": "homepage", "url": "https://junzhuang.xyz"}
+{"prof": "p5125", "rel": "advisor", "name": "Paul Goldberg", "type": "phd", "source": "homepage", "url": "https://www.fmarmolejo.com"}
+{"prof": "p5127", "rel": "advisor", "name": "Tal Linzen", "type": "phd", "source": "homepage", "url": "https://aaronmueller.github.io"}
+{"prof": "p5127", "rel": "advisor", "name": "Mark Dredze", "type": "phd", "source": "homepage", "url": "https://aaronmueller.github.io"}
+{"prof": "p5127", "rel": "advisor", "name": "David Bau", "type": "postdoc", "source": "cv", "url": "https://aaronmueller.github.io/files/cv/CurriculumVitae.pdf"}
+{"prof": "p5127", "rel": "advisor", "name": "Yonatan Belinkov", "type": "postdoc", "source": "cv", "url": "https://aaronmueller.github.io/files/cv/CurriculumVitae.pdf"}
+{"prof": "p5131", "rel": "advisor", "name": "Thomas Vidick", "type": "phd", "source": "homepage", "url": "https://scc1.bu.edu/poremba"}
+{"prof": "p5131", "rel": "advisor", "name": "Thomas Vidick", "type": "phd", "source": "cv", "url": "https://scc1.bu.edu/~poremba/#CV"}
+{"prof": "p5145", "rel": "advisor", "name": "Anna Karlin", "type": "phd", "source": "homepage", "url": "https://nathan-klein.github.io"}
+{"prof": "p5145", "rel": "advisor", "name": "Shayan Oveis Gharan", "type": "phd", "source": "homepage", "url": "https://nathan-klein.github.io"}
+{"prof": "p5155", "rel": "advisor", "name": "Hari Balakrishnan", "type": "phd", "source": "cv", "url": "https://akshayn.xyz/res/akshay-narayan-cv.pdf"}
+{"prof": "p5155", "rel": "advisor", "name": "Mohammad Alizadeh", "type": "phd", "source": "cv", "url": "https://akshayn.xyz/res/akshay-narayan-cv.pdf"}
+{"prof": "p5155", "rel": "advisor", "name": "Sylvia Ratnasamy", "type": "postdoc", "source": "cv", "url": "https://akshayn.xyz/res/akshay-narayan-cv.pdf"}
+{"prof": "p5155", "rel": "advisor", "name": "Scott Shenker", "type": "postdoc", "source": "cv", "url": "https://akshayn.xyz/res/akshay-narayan-cv.pdf"}
+{"prof": "p5157", "rel": "advisor", "name": "Matei Zaharia", "type": "phd", "source": "cv", "url": "https://deeptir.me/papers/DeeptiRaghavanCV.pdf"}
+{"prof": "p5157", "rel": "advisor", "name": "Philip Levis", "type": "phd", "source": "cv", "url": "https://deeptir.me/papers/DeeptiRaghavanCV.pdf"}
+{"prof": "p5159", "rel": "advisor", "name": "John Guttag", "type": "phd", "source": "homepage", "url": "https://harinisuresh.com"}
+{"prof": "p5159", "rel": "advisor", "name": "Arvind Satyanaryan", "type": "phd", "source": "homepage", "url": "https://harinisuresh.com"}
+{"prof": "p5191", "rel": "advisor", "name": "Percy Liang", "type": "phd", "source": "homepage", "url": "https://www.cs.cmu.edu/~aditirag"}
+{"prof": "p5193", "rel": "advisor", "name": "Costis Daskalakis", "type": "phd", "source": "homepage", "url": "https://andrewilyas.com"}
+{"prof": "p5193", "rel": "advisor", "name": "Aleksander Madry", "type": "phd", "source": "homepage", "url": "https://andrewilyas.com"}
+{"prof": "p5193", "rel": "advisor", "name": "Aleksander Mądry", "type": "phd", "source": "cv", "url": "https://andrewilyas.com/AndrewIlyasCV.pdf"}
+{"prof": "p5193", "rel": "advisor", "name": "Constantinos Daskalakis", "type": "phd", "source": "cv", "url": "https://andrewilyas.com/AndrewIlyasCV.pdf"}
+{"prof": "p5194", "rel": "advisor", "name": "Percy Liang", "type": "postdoc", "source": "homepage", "url": "https://chrisdonahue.com"}
+{"prof": "p5194", "rel": "advisor", "name": "Miller Puckette", "type": "phd", "source": "homepage", "url": "https://chrisdonahue.com"}
+{"prof": "p5194", "rel": "advisor", "name": "Julian McAuley", "type": "phd", "source": "homepage", "url": "https://chrisdonahue.com"}
+{"prof": "p5201", "rel": "advisor", "name": "Ron Alterovitz", "type": "phd", "source": "homepage", "url": "https://ichnow.ski"}
+{"prof": "p5201", "rel": "advisor", "name": "Jan Prins", "type": "phd", "source": "homepage", "url": "https://ichnow.ski"}
+{"prof": "p5202", "rel": "advisor", "name": "Sven Koenig", "type": "phd", "source": "homepage", "url": "https://jiaoyangli.me"}
+{"prof": "p5206", "rel": "advisor", "name": "Hans van", "type": "phd", "source": "cv", "url": "https://www.cs.cmu.edu/~mheule/resume.pdf"}
+{"prof": "p5207", "rel": "advisor", "name": "Alkes Price", "type": "postdoc", "source": "cv", "url": "https://mzhanglab.github.io/cv/CV_083026.pdf"}
+{"prof": "p5207", "rel": "advisor", "name": "David Tse", "type": "phd", "source": "cv", "url": "https://mzhanglab.github.io/cv/CV_083026.pdf"}
+{"prof": "p5209", "rel": "advisor", "name": "Larry Leifer", "type": "phd", "source": "homepage", "url": "https://hcii.cmu.edu/people/nikolas-martelaro"}
+{"prof": "p5209", "rel": "advisor", "name": "Wendy Ju", "type": "phd", "source": "homepage", "url": "https://hcii.cmu.edu/people/nikolas-martelaro"}
+{"prof": "p5210", "rel": "advisor", "name": "Dan Boneh", "type": "phd", "source": "cv", "url": "https://wahby.net/riad_s_wahby_cv.pdf"}
+{"prof": "p5210", "rel": "advisor", "name": "Keith Winstein", "type": "phd", "source": "cv", "url": "https://wahby.net/riad_s_wahby_cv.pdf"}
+{"prof": "p5212", "rel": "advisor", "name": "Mayank Varia", "type": "phd", "source": "homepage", "url": "https://www.sarahscheffler.net"}
+{"prof": "p5212", "rel": "advisor", "name": "Mayank Varia", "type": "phd", "source": "cv", "url": "https://www.sarahscheffler.net/cv-folder/cv.pdf"}
+{"prof": "p5213", "rel": "advisor", "name": "Kyunghyun Cho", "type": "phd", "source": "homepage", "url": "https://wellecks.com"}
+{"prof": "p5213", "rel": "advisor", "name": "Yejin Choi", "type": "postdoc", "source": "homepage", "url": "https://wellecks.com"}
+{"prof": "p5214", "rel": "advisor", "name": "Jeffrey Heer", "type": "phd", "source": "cv", "url": "https://www.cs.cmu.edu/~sherryw/CV.html"}
+{"prof": "p5214", "rel": "advisor", "name": "Dan Weld", "type": "phd", "source": "cv", "url": "https://www.cs.cmu.edu/~sherryw/CV.html"}
+{"prof": "p5217", "rel": "advisor", "name": "R. Srikant", "type": "postdoc", "source": "cv", "url": "https://www.cs.cmu.edu/~weinaw/pdf/cv-weina-wang.pdf"}
+{"prof": "p5217", "rel": "advisor", "name": "Lei Ying", "type": "postdoc", "source": "cv", "url": "https://www.cs.cmu.edu/~weinaw/pdf/cv-weina-wang.pdf"}
+{"prof": "p5217", "rel": "advisor", "name": "Lei Ying", "type": "phd", "source": "cv", "url": "https://www.cs.cmu.edu/~weinaw/pdf/cv-weina-wang.pdf"}
+{"prof": "p5217", "rel": "advisor", "name": "Junshan Zhang", "type": "phd", "source": "cv", "url": "https://www.cs.cmu.edu/~weinaw/pdf/cv-weina-wang.pdf"}
+{"prof": "p5219", "rel": "advisor", "name": "Aaron Sidford", "type": "phd", "source": "homepage", "url": "https://yangpliu.github.io"}
+{"prof": "p5221", "rel": "advisor", "name": "Songqing Chen", "type": "phd", "source": "homepage", "url": "http://engineering.case.edu/groups/an-wang"}
+{"prof": "p5223", "rel": "advisor", "name": "Alfred O. Hero", "type": "phd", "source": "homepage", "url": "https://sites.google.com/site/kevinshuaixu"}
+{"prof": "p5225", "rel": "advisor", "name": "Eunsuk Kang", "type": "postdoc", "source": "cv", "url": "https://sumonbis.github.io/uploads/CV_SumonBiswas.pdf"}
+{"prof": "p5241", "rel": "advisor", "name": "Yeng Chai", "type": "phd", "source": "homepage", "url": "https://haipeng-chen.github.io"}
+{"prof": "p5245", "rel": "advisor", "name": "Yangfeng Ji", "type": "phd", "source": "homepage", "url": "https://stephanieschoch.com"}
+{"prof": "p5248", "rel": "advisor", "name": "Luyi Xing", "type": "phd", "source": "homepage", "url": "https://sites.google.com/view/yue-xiao/bio?authuser=0"}
+{"prof": "p5250", "rel": "advisor", "name": "Michelle Mazurek", "type": "phd", "source": "homepage", "url": "http://www.cs.umd.edu/~kfulton"}
+{"prof": "p5252", "rel": "advisor", "name": "Marco Aurelio Gerosa", "type": "phd", "source": "homepage", "url": "https://biancatrink.github.io"}
+{"prof": "p5252", "rel": "advisor", "name": "Dr. Igor", "type": "phd", "source": "homepage", "url": "https://biancatrink.github.io"}
+{"prof": "p5253", "rel": "advisor", "name": "Jozef Skokan", "type": "phd", "source": "cv", "url": "https://www.ewandavies.org/downloads/EDavies-CV.pdf"}
+{"prof": "p5253", "rel": "advisor", "name": "Peter Allen", "type": "phd", "source": "cv", "url": "https://www.ewandavies.org/downloads/EDavies-CV.pdf"}
+{"prof": "p5256", "rel": "advisor", "name": "Peter Love", "type": "phd", "source": "homepage", "url": "https://juspreetsandhu.me"}
+{"prof": "p5256", "rel": "advisor", "name": "Boaz Barak", "type": "phd", "source": "homepage", "url": "https://juspreetsandhu.me"}
+{"prof": "p5263", "rel": "advisor", "name": "Alessandro Orso", "type": "phd", "source": "cv", "url": "https://ravimangal.github.io/CV.pdf"}
+{"prof": "p5267", "rel": "advisor", "name": "Nikil Dutt", "type": "phd", "source": "cv", "url": "http://www.engr.colostate.edu/~sudeep/wp-content/uploads/cv-pasricha.pdf"}
+{"prof": "p5270", "rel": "advisor", "name": "Alexander Rakhlin", "type": "phd", "source": "cv", "url": "https://abblock.github.io/CV.pdf"}
+{"prof": "p5273", "rel": "advisor", "name": "Christopher D. Manning", "type": "phd", "source": "cv", "url": "http://www.cs.columbia.edu/~johnhew/public/cv.pdf"}
+{"prof": "p5273", "rel": "advisor", "name": "Percy Liang", "type": "phd", "source": "cv", "url": "http://www.cs.columbia.edu/~johnhew/public/cv.pdf"}
+{"prof": "p5282", "rel": "advisor", "name": "Ryan Adams", "type": "phd", "source": "homepage", "url": "https://www.dianacai.com"}
+{"prof": "p5282", "rel": "advisor", "name": "Barbara Engelhardt", "type": "phd", "source": "homepage", "url": "https://www.dianacai.com"}
+{"prof": "p5284", "rel": "advisor", "name": "Daniel Cohen-Or", "type": "phd", "source": "homepage", "url": "https://www.hadarelor.com"}
+{"prof": "p5286", "rel": "advisor", "name": "Aditya Akella", "type": "phd", "source": "homepage", "url": "https://www.csl.cornell.edu/~jiaxinl"}
+{"prof": "p5287", "rel": "advisor", "name": "Percy Liang", "type": "postdoc", "source": "homepage", "url": "https://johnthickstun.com"}
+{"prof": "p5287", "rel": "advisor", "name": "Sham Kakade", "type": "phd", "source": "homepage", "url": "https://johnthickstun.com"}
+{"prof": "p5287", "rel": "advisor", "name": "Zaid Harchaoui", "type": "phd", "source": "homepage", "url": "https://johnthickstun.com"}
+{"prof": "p5288", "rel": "advisor", "name": "Radhika Nagpal", "type": "phd", "source": "cv", "url": "https://cei.ece.cornell.edu/files/2024/07/CV2024_KPetersen.pdf"}
+{"prof": "p5291", "rel": "advisor", "name": "Edward Crawley", "type": "phd", "source": "cv", "url": "https://campbell.mae.cornell.edu/files/2022/05/MCampbell-CVMay2013.pdf"}
+{"prof": "p5292", "rel": "advisor", "name": "Omer Reingold", "type": "phd", "source": "homepage", "url": "https://www.cs.cornell.edu/~mpkim"}
+{"prof": "p5293", "rel": "advisor", "name": "Alessandro Chiesa", "type": "phd", "source": "homepage", "url": "https://spooner.cc"}
+{"prof": "p5298", "rel": "advisor", "name": "Ben Recht", "type": "phd", "source": "homepage", "url": "https://sdean.website"}
+{"prof": "p5298", "rel": "advisor", "name": "Jamie Morgenstern", "type": "postdoc", "source": "cv", "url": "https://sdean.website/cv.pdf"}
+{"prof": "p5298", "rel": "advisor", "name": "Benjamin Recht", "type": "phd", "source": "cv", "url": "https://sdean.website/cv.pdf"}
+{"prof": "p5300", "rel": "advisor", "name": "Greg Durrett", "type": "phd", "source": "homepage", "url": "https://tagoyal.github.io"}
+{"prof": "p5304", "rel": "advisor", "name": "Mor Harchol-Balter", "type": "phd", "source": "homepage", "url": "https://ziv.codes"}
+{"prof": "p5304", "rel": "advisor", "name": "Guy Blelloch", "type": "phd", "source": "homepage", "url": "https://ziv.codes"}
+{"prof": "p5306", "rel": "advisor", "name": "Vijay Janapa Reddi", "type": "phd", "source": "cv", "url": "https://brianplancher.com/files/Brian_Plancher_CV.pdf"}
+{"prof": "p5306", "rel": "advisor", "name": "Scott Kuindersma", "type": "phd", "source": "cv", "url": "https://brianplancher.com/files/Brian_Plancher_CV.pdf"}
+{"prof": "p5308", "rel": "advisor", "name": "Dave Tian", "type": "phd", "source": "homepage", "url": "https://kt0755.github.io"}
+{"prof": "p5308", "rel": "advisor", "name": "Byoungyoung Lee", "type": "phd", "source": "homepage", "url": "https://kt0755.github.io"}
+{"prof": "p5314", "rel": "advisor", "name": "Julian Shun", "type": "phd", "source": "homepage", "url": "https://sites.google.com/view/siddhartha-jayanti"}
+{"prof": "p5329", "rel": "advisor", "name": "Smita Krishnaswamy", "type": "phd", "source": "homepage", "url": "https://www.alextong.net"}
+{"prof": "p5329", "rel": "advisor", "name": "Yoshua Bengio", "type": "postdoc", "source": "cv", "url": "https://www.alextong.net/uploads/resume.pdf"}
+{"prof": "p5329", "rel": "advisor", "name": "Smita Krishnaswamy", "type": "phd", "source": "cv", "url": "https://www.alextong.net/uploads/resume.pdf"}
+{"prof": "p5333", "rel": "advisor", "name": "Ben Y. Zhao", "type": "phd", "source": "cv", "url": "https://www.emilywenger.com/assets/CV.pdf"}
+{"prof": "p5340", "rel": "advisor", "name": "Graham Neubig", "type": "phd", "source": "homepage", "url": "https://shuyanzhou.github.io"}
+{"prof": "p5341", "rel": "advisor", "name": "Alessandro Chiesa", "type": "phd", "source": "homepage", "url": "https://siqi-l.github.io"}
+{"prof": "p5352", "rel": "advisor", "name": "Volkan Isler", "type": "phd", "source": "homepage", "url": "https://minghanwei.github.io"}
+{"prof": "p5361", "rel": "advisor", "name": "Z. Berkay Celik", "type": "phd", "source": "homepage", "url": "https://arjunarunasalam.github.io"}
+{"prof": "p5361", "rel": "advisor", "name": "Z. Berkay Celik", "type": "phd", "source": "cv", "url": "https://arjunarunasalam.github.io//files/arjun_arunasalam_CV_Aug_25.pdf"}
+{"prof": "p5369", "rel": "advisor", "name": "Ehab Al-Shaer", "type": "phd", "source": "homepage", "url": "https://rahman.eng.fiu.edu"}
+{"prof": "p5374", "rel": "advisor", "name": "Kevin Butler", "type": "phd", "source": "homepage", "url": "https://weidong-zhu.github.io"}
+{"prof": "p5374", "rel": "advisor", "name": "Sara Rampazzi", "type": "phd", "source": "homepage", "url": "https://weidong-zhu.github.io"}
+{"prof": "p5376", "rel": "advisor", "name": "Jiawei Han", "type": "phd", "source": "homepage", "url": "http://www.cs.fsu.edu/~zhao"}
+{"prof": "p5386", "rel": "advisor", "name": "David Chiang", "type": "phd", "source": "homepage", "url": "https://kentonmurray.com"}
+{"prof": "p5389", "rel": "advisor", "name": "Nael Abu-Ghazaleh", "type": "phd", "source": "homepage", "url": "https://yichez.site"}
+{"prof": "p5389", "rel": "advisor", "name": "Nael Abu-Ghazaleh", "type": "phd", "source": "cv", "url": "https://yichez.site/resume/Yicheng_CV.pdf"}
+{"prof": "p5392", "rel": "advisor", "name": "John Criswell", "type": "phd", "source": "homepage", "url": "https://jiezhoucs.github.io"}
+{"prof": "p5396", "rel": "advisor", "name": "Aviv Zohar", "type": "phd", "source": "homepage", "url": "https://aviv.yai.sh"}
+{"prof": "p5405", "rel": "advisor", "name": "Russ Tedrake", "type": "postdoc", "source": "cv", "url": "https://glenchou.github.io/cv_apr_26.pdf"}
+{"prof": "p5406", "rel": "advisor", "name": "Charles E. Leiserson", "type": "phd", "source": "homepage", "url": "https://itshelenxu.github.io"}
+{"prof": "p5411", "rel": "advisor", "name": "Peter Bailis", "type": "phd", "source": "cv", "url": "https://kexinrong.github.io/data/CV.pdf"}
+{"prof": "p5411", "rel": "advisor", "name": "Philip Levis", "type": "phd", "source": "cv", "url": "https://kexinrong.github.io/data/CV.pdf"}
+{"prof": "p5413", "rel": "advisor", "name": "Gerry Sussman", "type": "phd", "source": "homepage", "url": "https://mikespecter.com"}
+{"prof": "p5413", "rel": "advisor", "name": "Danny Weitzner", "type": "phd", "source": "homepage", "url": "https://mikespecter.com"}
+{"prof": "p5413", "rel": "advisor", "name": "Gerald Jay Sussman", "type": "phd", "source": "cv", "url": "https://mikespecter.com/assets/pdf/cv.pdf"}
+{"prof": "p5413", "rel": "advisor", "name": "Daniel J. Weitzner", "type": "phd", "source": "cv", "url": "https://mikespecter.com/assets/pdf/cv.pdf"}
+{"prof": "p5420", "rel": "advisor", "name": "Prateek Saxena", "type": "phd", "source": "cv", "url": "https://teobaluta.github.io/assets/pdf/Teodora_Baluta_CV.pdf"}
+{"prof": "p5420", "rel": "advisor", "name": "Kuldeep S. Meel", "type": "phd", "source": "cv", "url": "https://teobaluta.github.io/assets/pdf/Teodora_Baluta_CV.pdf"}
+{"prof": "p5423", "rel": "advisor", "name": "Eric Vigoda", "type": "phd", "source": "homepage", "url": "https://sites.gatech.edu/zongchenchen"}
+{"prof": "p5462", "rel": "advisor", "name": "Dongyan Xu", "type": "phd", "source": "cv", "url": "https://kimhyungsub.github.io/CV_HyungsubKim.pdf"}
+{"prof": "p5462", "rel": "advisor", "name": "Antonio Bianchi", "type": "phd", "source": "cv", "url": "https://kimhyungsub.github.io/CV_HyungsubKim.pdf"}
+{"prof": "p5462", "rel": "advisor", "name": "Z. Berkay Celik", "type": "phd", "source": "cv", "url": "https://kimhyungsub.github.io/CV_HyungsubKim.pdf"}
+{"prof": "p5466", "rel": "advisor", "name": "Henny Admoni", "type": "phd", "source": "homepage", "url": "https://luddy.iu.edu/people/zhao-michelle.html"}
+{"prof": "p5466", "rel": "advisor", "name": "Reid Simmons", "type": "phd", "source": "homepage", "url": "https://luddy.iu.edu/people/zhao-michelle.html"}
+{"prof": "p5473", "rel": "advisor", "name": "Steffen Staab", "type": "phd", "source": "homepage", "url": "https://boxiong.io"}
+{"prof": "p5477", "rel": "advisor", "name": "Bei Wang", "type": "phd", "source": "homepage", "url": "https://www.cs.iastate.edu/people/lin-yan"}
+{"prof": "p5486", "rel": "advisor", "name": "Sanjeev Arora", "type": "phd", "source": "homepage", "url": "https://holdenlee.github.io"}
+{"prof": "p5494", "rel": "advisor", "name": "Dan Jurafsky", "type": "postdoc", "source": "homepage", "url": "https://kristinagligoric.com"}
+{"prof": "p5494", "rel": "advisor", "name": "Robert West", "type": "phd", "source": "homepage", "url": "https://kristinagligoric.com"}
+{"prof": "p5495", "rel": "advisor", "name": "Alejandro Ribeiro", "type": "phd", "source": "homepage", "url": "https://luanaruiz9.github.io"}
+{"prof": "p5503", "rel": "advisor", "name": "Xinyu Zhang", "type": "phd", "source": "homepage", "url": "https://renjiezhao.github.io"}
+{"prof": "p5503", "rel": "advisor", "name": "Xinyu Zhang", "type": "phd", "source": "cv", "url": "https://renjiezhao.github.io/files/CV.pdf"}
+{"prof": "p5506", "rel": "advisor", "name": "Fei Fang", "type": "phd", "source": "homepage", "url": "https://stephmilani.github.io"}
+{"prof": "p5509", "rel": "advisor", "name": "Michael Bernstein", "type": "postdoc", "source": "homepage", "url": "https://piccardi.me"}
+{"prof": "p5509", "rel": "advisor", "name": "Robert West", "type": "phd", "source": "homepage", "url": "https://piccardi.me"}
+{"prof": "p5510", "rel": "advisor", "name": "Ben Raphael", "type": "phd", "source": "homepage", "url": "https://uthsavc.github.io"}
+{"prof": "p5512", "rel": "advisor", "name": "Michael Yip", "type": "phd", "source": "homepage", "url": "https://sarahchiu.github.io"}
+{"prof": "p5516", "rel": "advisor", "name": "Junzhou Huang", "type": "phd", "source": "homepage", "url": "https://yuzhiguo07.github.io"}
+{"prof": "p5537", "rel": "advisor", "name": "Anca D. Dragan", "type": "phd", "source": "homepage", "url": "https://people.csail.mit.edu/dhm"}
+{"prof": "p5537", "rel": "advisor", "name": "Pieter Abbeel", "type": "phd", "source": "homepage", "url": "https://people.csail.mit.edu/dhm"}
+{"prof": "p5537", "rel": "advisor", "name": "Stuart J. Russell", "type": "phd", "source": "homepage", "url": "https://people.csail.mit.edu/dhm"}
+{"prof": "p5537", "rel": "advisor", "name": "Stuart Russell", "type": "phd", "source": "cv", "url": "https://people.csail.mit.edu/dhm/files/CV.pdf"}
+{"prof": "p5537", "rel": "advisor", "name": "Anca Dragan", "type": "phd", "source": "cv", "url": "https://people.csail.mit.edu/dhm/files/CV.pdf"}
+{"prof": "p5537", "rel": "advisor", "name": "Pieter Abbeel", "type": "phd", "source": "cv", "url": "https://people.csail.mit.edu/dhm/files/CV.pdf"}
+{"prof": "p5542", "rel": "advisor", "name": "Christopher Potts", "type": "phd", "source": "cv", "url": "https://omarkhattab.com/okhattab_cv.pdf"}
+{"prof": "p5542", "rel": "advisor", "name": "Matei Zaharia", "type": "phd", "source": "cv", "url": "https://omarkhattab.com/okhattab_cv.pdf"}
+{"prof": "p5542", "rel": "advisor", "name": "Ruoming Pang", "type": "phd", "source": "cv", "url": "https://omarkhattab.com/okhattab_cv.pdf"}
+{"prof": "p5542", "rel": "advisor", "name": "Distinguished Engineer", "type": "phd", "source": "cv", "url": "https://omarkhattab.com/okhattab_cv.pdf"}
+{"prof": "p5549", "rel": "advisor", "name": "David Steurer", "type": "phd", "source": "homepage", "url": "https://www.samuelbhopkins.com"}
+{"prof": "p5550", "rel": "advisor", "name": "Pietro Perona", "type": "phd", "source": "homepage", "url": "https://beerys.github.io"}
+{"prof": "p5550", "rel": "advisor", "name": "Pietro Perona", "type": "phd", "source": "cv", "url": "https://beerys.github.io/#cv"}
+{"prof": "p5551", "rel": "advisor", "name": "Bill Dally", "type": "phd", "source": "homepage", "url": "https://hanlab.mit.edu/songhan"}
+{"prof": "p5556", "rel": "advisor", "name": "Alexander Rush", "type": "phd", "source": "homepage", "url": "https://people.csail.mit.edu/yoonkim"}
+{"prof": "p5556", "rel": "advisor", "name": "Alexander Rush", "type": "phd", "source": "cv", "url": "https://people.csail.mit.edu/yoonkim/data/cv_yoon_kim.pdf"}
+{"prof": "p5566", "rel": "advisor", "name": "Kun Sun", "type": "phd", "source": "homepage", "url": "https://yunlongxing.github.io"}
+{"prof": "p5571", "rel": "advisor", "name": "Christopher Gill", "type": "phd", "source": "homepage", "url": "https://www.sudvarg.com"}
+{"prof": "p5572", "rel": "advisor", "name": "Engin Arslan", "type": "phd", "source": "homepage", "url": "https://sites.mst.edu/marifuzzaman"}
+{"prof": "p5574", "rel": "advisor", "name": "Laura Dietz", "type": "phd", "source": "homepage", "url": "https://sites.mst.edu/schatterjee"}
+{"prof": "p5575", "rel": "advisor", "name": "Animesh Mukherjee", "type": "phd", "source": "homepage", "url": "https://sites.mst.edu/smaity"}
+{"prof": "p5584", "rel": "advisor", "name": "Archan Misra", "type": "phd", "source": "cv", "url": "https://kjayarajah.github.io/docs/CV_public.pdf"}
+{"prof": "p5587", "rel": "advisor", "name": "Madhav Marathe", "type": "phd", "source": "homepage", "url": "https://christa60.github.io"}
+{"prof": "p5587", "rel": "advisor", "name": "Jiangzhuo Chen", "type": "phd", "source": "homepage", "url": "https://christa60.github.io"}
+{"prof": "p5588", "rel": "advisor", "name": "Quanquan Gu", "type": "phd", "source": "homepage", "url": "https://lingxiaowang-ai.github.io"}
+{"prof": "p5593", "rel": "advisor", "name": "Vibhav Gogate", "type": "phd", "source": "homepage", "url": "https://shivvrat.github.io"}
+{"prof": "p5593", "rel": "advisor", "name": "Yu Xiang", "type": "phd", "source": "homepage", "url": "https://shivvrat.github.io"}
+{"prof": "p5594", "rel": "advisor", "name": "Meng Wang", "type": "phd", "source": "homepage", "url": "https://inchs708.github.io/shuaizhang.github.io/index.html"}
+{"prof": "p5596", "rel": "advisor", "name": "Jane Li", "type": "phd", "source": "cv", "url": "https://lintsungchi.com/assets/files/Lin-CurriculumVitae.pdf"}
+{"prof": "p5597", "rel": "advisor", "name": "Alessandra Scafuro", "type": "phd", "source": "cv", "url": "https://varunmadathil.com/cv/"}
+{"prof": "p5599", "rel": "advisor", "name": "Samet Oymak", "type": "phd", "source": "homepage", "url": "https://yingcong-li.github.io"}
+{"prof": "p5602", "rel": "advisor", "name": "Carlos Rubio-Medrano", "type": "phd", "source": "cv", "url": "https://efrenlopez.org/assets/pdf/cv_academic_efrenlopez.pdf"}
+{"prof": "p5605", "rel": "advisor", "name": "Amy Voida", "type": "phd", "source": "cv", "url": "https://smdarian.github.io/Darian_CV_2024Aug.pdf"}
+{"prof": "p5605", "rel": "advisor", "name": "Philanthropic Informatics", "type": "phd", "source": "cv", "url": "https://smdarian.github.io/Darian_CV_2024Aug.pdf"}
+{"prof": "p5609", "rel": "advisor", "name": "Ankur Moitra", "type": "phd", "source": "homepage", "url": "https://aliu42.github.io"}
+{"prof": "p5611", "rel": "advisor", "name": "Daniel Ho", "type": "postdoc", "source": "cv", "url": "https://emblack.github.io/files/cv.pdf"}
+{"prof": "p5614", "rel": "advisor", "name": "Deian Stefan", "type": "phd", "source": "homepage", "url": "https://enjhnsn2.github.io"}
+{"prof": "p5614", "rel": "advisor", "name": "Stefan Savage", "type": "phd", "source": "homepage", "url": "https://enjhnsn2.github.io"}
+{"prof": "p5615", "rel": "advisor", "name": "Mark Zhandry", "type": "phd", "source": "homepage", "url": "https://fermima.com"}
+{"prof": "p5619", "rel": "advisor", "name": "Peter Bartlett", "type": "phd", "source": "cv", "url": "https://jcperdomo.org/pdfs/Perdomo_CV.pdf"}
+{"prof": "p5619", "rel": "advisor", "name": "Moritz Hardt", "type": "phd", "source": "cv", "url": "https://jcperdomo.org/pdfs/Perdomo_CV.pdf"}
+{"prof": "p5625", "rel": "advisor", "name": "Antonio Torralba", "type": "phd", "source": "homepage", "url": "https://pratyushasharma.github.io"}
+{"prof": "p5625", "rel": "advisor", "name": "Jacob Andreas", "type": "phd", "source": "homepage", "url": "https://pratyushasharma.github.io"}
+{"prof": "p5632", "rel": "advisor", "name": "Peter Müller", "type": "phd", "source": "homepage", "url": "https://dardinier.me"}
+{"prof": "p5633", "rel": "advisor", "name": "Renato Renner", "type": "phd", "source": "homepage", "url": "https://tonymetger.com"}
+{"prof": "p5638", "rel": "advisor", "name": "Wenyao Xu", "type": "phd", "source": "homepage", "url": "https://huining-li.github.io"}
+{"prof": "p5648", "rel": "advisor", "name": "Salil Vadhan", "type": "phd", "source": "homepage", "url": "https://jayshreesarathy.net"}
+{"prof": "p5648", "rel": "advisor", "name": "Jonathan Zittrain", "type": "phd", "source": "homepage", "url": "https://jayshreesarathy.net"}
+{"prof": "p5649", "rel": "advisor", "name": "Elaine Shi", "type": "phd", "source": "cv", "url": "https://gancher.dev/materials/cv.pdf"}
+{"prof": "p5649", "rel": "advisor", "name": "Greg Morrisett", "type": "phd", "source": "cv", "url": "https://gancher.dev/materials/cv.pdf"}
+{"prof": "p5649", "rel": "advisor", "name": "Bryan Parno", "type": "postdoc", "source": "cv", "url": "https://gancher.dev/materials/cv.pdf"}
+{"prof": "p5652", "rel": "advisor", "name": "Moses Charikar", "type": "phd", "source": "homepage", "url": "https://lunjiahu.com"}
+{"prof": "p5652", "rel": "advisor", "name": "Omer Reingold", "type": "phd", "source": "homepage", "url": "https://lunjiahu.com"}
+{"prof": "p5659", "rel": "advisor", "name": "David Danks", "type": "postdoc", "source": "cv", "url": "https://sinafazelpour.com/wp-content/uploads/2026/09/fazelpour_cv.pdf"}
+{"prof": "p5659", "rel": "advisor", "name": "Christopher Mole", "type": "phd", "source": "cv", "url": "https://sinafazelpour.com/wp-content/uploads/2026/09/fazelpour_cv.pdf"}
+{"prof": "p5661", "rel": "advisor", "name": "Jason Hong", "type": "phd", "source": "cv", "url": "https://tianshili.me/assets/pdf/tianshili_cv.pdf"}
+{"prof": "p5664", "rel": "advisor", "name": "Regina Barzilay", "type": "phd", "source": "homepage", "url": "https://wengong-jin.github.io"}
+{"prof": "p5664", "rel": "advisor", "name": "Tommi Jaakkola", "type": "phd", "source": "homepage", "url": "https://wengong-jin.github.io"}
+{"prof": "p5666", "rel": "advisor", "name": "Abhishek Jain", "type": "phd", "source": "homepage", "url": "https://zhengzhongjin.github.io"}
+{"prof": "p5666", "rel": "advisor", "name": "Xin Li", "type": "phd", "source": "homepage", "url": "https://zhengzhongjin.github.io"}
+{"prof": "p5666", "rel": "advisor", "name": "Vinod Vaikuntanathan", "type": "postdoc", "source": "homepage", "url": "https://zhengzhongjin.github.io"}
+{"prof": "p5675", "rel": "advisor", "name": "David Gamarnik", "type": "phd", "source": "cv", "url": "https://sites.northwestern.edu/juliagaudio/files/2025/06/Julia-Gaudio-CV.pdf"}
+{"prof": "p5675", "rel": "advisor", "name": "Patrick Jaillet", "type": "phd", "source": "cv", "url": "https://sites.northwestern.edu/juliagaudio/files/2025/06/Julia-Gaudio-CV.pdf"}
+{"prof": "p5677", "rel": "advisor", "name": "Chris Harrison", "type": "phd", "source": "cv", "url": "https://karan-ahuja.com/assets/docs/cv/CV_Karan_Ahuja.pdf"}
+{"prof": "p5677", "rel": "advisor", "name": "Mayank Goel", "type": "phd", "source": "cv", "url": "https://karan-ahuja.com/assets/docs/cv/CV_Karan_Ahuja.pdf"}
+{"prof": "p5681", "rel": "advisor", "name": "Heng Ji", "type": "phd", "source": "homepage", "url": "https://limanling.github.io"}
+{"prof": "p5691", "rel": "advisor", "name": "Dana Ballard", "type": "phd", "source": "homepage", "url": "https://ruohanzhang.com"}
+{"prof": "p5691", "rel": "advisor", "name": "Mary Hayhoe", "type": "phd", "source": "homepage", "url": "https://ruohanzhang.com"}
+{"prof": "p5692", "rel": "advisor", "name": "Michael Levin", "type": "postdoc", "source": "cv", "url": "https://skriegman.github.io/papers/Sam_Kriegman_CV.pdf"}
+{"prof": "p5692", "rel": "advisor", "name": "Josh Bongard", "type": "postdoc", "source": "cv", "url": "https://skriegman.github.io/papers/Sam_Kriegman_CV.pdf"}
+{"prof": "p5692", "rel": "advisor", "name": "Josh Bongard", "type": "phd", "source": "cv", "url": "https://skriegman.github.io/papers/Sam_Kriegman_CV.pdf"}
+{"prof": "p5694", "rel": "advisor", "name": "Prabal Dutta", "type": "postdoc", "source": "cv", "url": "https://stephenxia.github.io/files/StephenXia_CV.pdf"}
+{"prof": "p5695", "rel": "advisor", "name": "James T. Enns", "type": "postdoc", "source": "cv", "url": "https://psychology.northwestern.edu/documents/faculty-cvs/franconeri-cv.pdf"}
+{"prof": "p5702", "rel": "advisor", "name": "Do Young Eun", "type": "phd", "source": "cv", "url": "https://jiehu-research.github.io/assets/files/cv.pdf"}
+{"prof": "p5703", "rel": "advisor", "name": "Weisong Shi", "type": "phd", "source": "homepage", "url": "https://lori930.github.io"}
+{"prof": "p5704", "rel": "advisor", "name": "Alexey Svyatkovskiy", "type": "phd", "source": "homepage", "url": "https://wardat.github.io"}
+{"prof": "p5704", "rel": "advisor", "name": "Hridesh Rajan", "type": "phd", "source": "homepage", "url": "https://wardat.github.io"}
+{"prof": "p5706", "rel": "advisor", "name": "Soroush Vosoughi", "type": "phd", "source": "homepage", "url": "https://hikari-nyu.github.io"}
+{"prof": "p5710", "rel": "advisor", "name": "Noah Smith", "type": "postdoc", "source": "homepage", "url": "https://shocheen.com"}
+{"prof": "p5710", "rel": "advisor", "name": "Hannaneh Hajishirzi", "type": "postdoc", "source": "homepage", "url": "https://shocheen.com"}
+{"prof": "p5710", "rel": "advisor", "name": "Yulia Tsvetkov", "type": "phd", "source": "homepage", "url": "https://shocheen.com"}
+{"prof": "p5723", "rel": "advisor", "name": "Dong Li", "type": "phd", "source": "homepage", "url": "https://wdong5.github.io"}
+{"prof": "p5725", "rel": "advisor", "name": "Cynthia Rudin", "type": "phd", "source": "homepage", "url": "https://jiachangliu.github.io"}
+{"prof": "p5727", "rel": "advisor", "name": "Cho-Jui Hsieh", "type": "phd", "source": "homepage", "url": "https://cmhcbb.github.io"}
+{"prof": "p5731", "rel": "advisor", "name": "Joshua B. Tenenbaum", "type": "phd", "source": "cv", "url": "https://www.cs.princeton.edu/~bl8144/Lake_CV.pdf"}
+{"prof": "p5738", "rel": "advisor", "name": "Leslie Kaelbling", "type": "phd", "source": "homepage", "url": "https://tomsilver.github.io"}
+{"prof": "p5738", "rel": "advisor", "name": "Josh Tenenbaum", "type": "phd", "source": "homepage", "url": "https://tomsilver.github.io"}
+{"prof": "p5738", "rel": "advisor", "name": "Leslie Kaelbling", "type": "phd", "source": "cv", "url": "https://tomsilver.github.io/assets/pdf/tom_silver_cv2026.pdf"}
+{"prof": "p5738", "rel": "advisor", "name": "Joshua Tenenbaum", "type": "phd", "source": "cv", "url": "https://tomsilver.github.io/assets/pdf/tom_silver_cv2026.pdf"}
+{"prof": "p5747", "rel": "advisor", "name": "Heni Ben Amor", "type": "phd", "source": "cv", "url": "https://joe-campbell.github.io/assets/pdf/campbell_cv.pdf"}
+{"prof": "p5747", "rel": "advisor", "name": "Georgios Fainekos", "type": "phd", "source": "cv", "url": "https://joe-campbell.github.io/assets/pdf/campbell_cv.pdf"}
+{"prof": "p5748", "rel": "advisor", "name": "Ari Juels", "type": "phd", "source": "homepage", "url": "https://mahimnakelkar.github.io"}
+{"prof": "p5749", "rel": "advisor", "name": "Rachit Agarwal", "type": "phd", "source": "homepage", "url": "https://midhul.com"}
+{"prof": "p5749", "rel": "advisor", "name": "Rachit Agarwal", "type": "phd", "source": "cv", "url": "https://midhul.com/cv.pdf"}
+{"prof": "p5752", "rel": "advisor", "name": "Dana Moshkovitz", "type": "phd", "source": "homepage", "url": "https://ruizhezhang.com"}
+{"prof": "p5752", "rel": "advisor", "name": "Dana Moshkovitz", "type": "phd", "source": "cv", "url": "https://ruizhezhang.com/CV.pdf"}
+{"prof": "p5760", "rel": "advisor", "name": "Sepehr Assadi", "type": "phd", "source": "homepage", "url": "https://faculty.rpi.edu/chen-wang"}
+{"prof": "p5794", "rel": "advisor", "name": "Tian Guo", "type": "phd", "source": "cv", "url": "https://claws.rit.edu/photos/getphotoid.php?Client=MarketingCV&UN=yzigm&HASH=1ddec766155f74d414accc23be9470263b65e543&T=1795069523"}
+{"prof": "p5795", "rel": "advisor", "name": "Abhishek Jain", "type": "phd", "source": "homepage", "url": "https://aarushigoel.github.io"}
+{"prof": "p5798", "rel": "advisor", "name": "Carl Vondrick", "type": "phd", "source": "homepage", "url": "https://chengzhi-mao.github.io"}
+{"prof": "p5798", "rel": "advisor", "name": "Junfeng Yang", "type": "phd", "source": "homepage", "url": "https://chengzhi-mao.github.io"}
+{"prof": "p5799", "rel": "advisor", "name": "Sorin Lerner", "type": "postdoc", "source": "homepage", "url": "https://efirst.github.io"}
+{"prof": "p5799", "rel": "advisor", "name": "Yuriy Brun", "type": "phd", "source": "homepage", "url": "https://efirst.github.io"}
+{"prof": "p5801", "rel": "advisor", "name": "Dimitris Papailiopoulos", "type": "phd", "source": "homepage", "url": "https://hwang595.github.io"}
+{"prof": "p5801", "rel": "advisor", "name": "Dimitris Papailiopoulos", "type": "phd", "source": "cv", "url": "https://hwang595.github.io/cv/hwang_cv.pdf"}
+{"prof": "p5808", "rel": "advisor", "name": "Anupam Gupta", "type": "phd", "source": "homepage", "url": "https://roielevin.com"}
+{"prof": "p5808", "rel": "advisor", "name": "Anupam Gupta", "type": "phd", "source": "cv", "url": "https://roielevin.com/files/roie_cv.pdf"}
+{"prof": "p5810", "rel": "advisor", "name": "Mark Dredze", "type": "postdoc", "source": "homepage", "url": "https://sharonlevy.github.io"}
+{"prof": "p5810", "rel": "advisor", "name": "Michelle Kaufman", "type": "postdoc", "source": "homepage", "url": "https://sharonlevy.github.io"}
+{"prof": "p5810", "rel": "advisor", "name": "Mark Dredze", "type": "postdoc", "source": "cv", "url": "https://sharonlevy.github.io/files/CV-3.pdf"}
+{"prof": "p5810", "rel": "advisor", "name": "Michelle Kaufman", "type": "postdoc", "source": "cv", "url": "https://sharonlevy.github.io/files/CV-3.pdf"}
+{"prof": "p5822", "rel": "advisor", "name": "Hui Xiong", "type": "phd", "source": "homepage", "url": "https://zhangdenghui.site"}
+{"prof": "p5824", "rel": "advisor", "name": "Adwait Jog", "type": "phd", "source": "homepage", "url": "https://www.liuhongyuan.com"}
+{"prof": "p5828", "rel": "advisor", "name": "Naren Ramakrishnan", "type": "phd", "source": "homepage", "url": "https://www.stevens.edu/profile/nmurali1"}
+{"prof": "p5828", "rel": "advisor", "name": "Anuj Karpatne", "type": "phd", "source": "homepage", "url": "https://www.stevens.edu/profile/nmurali1"}
+{"prof": "p5829", "rel": "advisor", "name": "Alexandra Silva", "type": "phd", "source": "homepage", "url": "https://zilberstein.github.io"}
+{"prof": "p5831", "rel": "advisor", "name": "Caiwen Ding", "type": "phd", "source": "homepage", "url": "https://www.shaoyihuang.com"}
+{"prof": "p5831", "rel": "advisor", "name": "Omer Khan", "type": "phd", "source": "homepage", "url": "https://www.shaoyihuang.com"}
+{"prof": "p5836", "rel": "advisor", "name": "James S. Duncan", "type": "phd", "source": "homepage", "url": "http://chenyuyou.me"}
+{"prof": "p5844", "rel": "advisor", "name": "Dan Klein", "type": "phd", "source": "homepage", "url": "https://nickatomlin.github.io"}
+{"prof": "p5844", "rel": "advisor", "name": "Dan Klein", "type": "phd", "source": "cv", "url": "https://nickatomlin.github.io/cv.pdf"}
+{"prof": "p5845", "rel": "advisor", "name": "Jitendra Malik", "type": "postdoc", "source": "homepage", "url": "https://shiry.ttic.edu"}
+{"prof": "p5846", "rel": "advisor", "name": "Sanjeev Arora", "type": "phd", "source": "homepage", "url": "https://zhiyuanli.ttic.edu"}
+{"prof": "p5847", "rel": "advisor", "name": "Dingwen Tao", "type": "phd", "source": "homepage", "url": "https://www.sianjin.com"}
+{"prof": "p5854", "rel": "advisor", "name": "Kai-Wei Chang", "type": "phd", "source": "cv", "url": "https://khhuang.me/CV_Kuan-Hao_Huang.pdf"}
+{"prof": "p5855", "rel": "advisor", "name": "André Ricardo", "type": "phd", "source": "cv", "url": "https://marcusbotacin.github.io/files/cv.pdf"}
+{"prof": "p5857", "rel": "advisor", "name": "José Meseguer", "type": "phd", "source": "homepage", "url": "https://siliunobi.github.io"}
+{"prof": "p5858", "rel": "advisor", "name": "Lior Wolf", "type": "phd", "source": "homepage", "url": "https://tomergalanti.github.io"}
+{"prof": "p5861", "rel": "advisor", "name": "Huamin Qu", "type": "phd", "source": "homepage", "url": "https://wtong2017.github.io"}
+{"prof": "p5861", "rel": "advisor", "name": "Ting Chuen Pong", "type": "phd", "source": "homepage", "url": "https://wtong2017.github.io"}
+{"prof": "p5861", "rel": "advisor", "name": "Huamin Qu", "type": "phd", "source": "cv", "url": "https://wtong2017.github.io/cv.pdf"}
+{"prof": "p5861", "rel": "advisor", "name": "Ting Chuen Pong", "type": "phd", "source": "cv", "url": "https://wtong2017.github.io/cv.pdf"}
+{"prof": "p5865", "rel": "advisor", "name": "Vahid Tarokh", "type": "postdoc", "source": "homepage", "url": "https://sites.google.com/site/yizhouhomepage"}
+{"prof": "p5865", "rel": "advisor", "name": "Yingbin Liang", "type": "phd", "source": "homepage", "url": "https://sites.google.com/site/yizhouhomepage"}
+{"prof": "p5868", "rel": "advisor", "name": "Alan C. Bovik", "type": "phd", "source": "homepage", "url": "https://taco-group.github.io"}
+{"prof": "p5869", "rel": "advisor", "name": "Ning Zhang", "type": "phd", "source": "cv", "url": "https://zhiyuanyu.org/uploads/CV_ZhiyuanYu.pdf"}
+{"prof": "p5874", "rel": "advisor", "name": "Hridesh Rajan", "type": "phd", "source": "homepage", "url": "https://shibbirtanvin.github.io"}
+{"prof": "p5881", "rel": "advisor", "name": "Long Cheng", "type": "phd", "source": "homepage", "url": "https://songacademic.github.io"}
+{"prof": "p5881", "rel": "advisor", "name": "Long Cheng", "type": "phd", "source": "cv", "url": "https://songacademic.github.io/files/CV_Song_Liao.pdf"}
+{"prof": "p5882", "rel": "advisor", "name": "Naftali Tishby", "type": "phd", "source": "homepage", "url": "https://www.depts.ttu.edu/cs/faculty/Stas_tiomkin/stastiomkin.php"}
+{"prof": "p5882", "rel": "advisor", "name": "Daniel Polani", "type": "phd", "source": "homepage", "url": "https://www.depts.ttu.edu/cs/faculty/Stas_tiomkin/stastiomkin.php"}
+{"prof": "p5884", "rel": "advisor", "name": "Zhenkai Zhang", "type": "phd", "source": "homepage", "url": "https://zihaozhan.github.io"}
+{"prof": "p5884", "rel": "advisor", "name": "Xenofon Koutsoukos", "type": "phd", "source": "homepage", "url": "https://zihaozhan.github.io"}
+{"prof": "p5896", "rel": "advisor", "name": "Peter Stone", "type": "postdoc", "source": "homepage", "url": "https://www.eecs.tufts.edu/~jsinapov"}
+{"prof": "p5906", "rel": "advisor", "name": "Aram Harrow", "type": "phd", "source": "homepage", "url": "https://sites.google.com/view/saeedmehraban/about"}
+{"prof": "p5906", "rel": "advisor", "name": "Scott Aaronson", "type": "phd", "source": "homepage", "url": "https://sites.google.com/view/saeedmehraban/about"}
+{"prof": "p5912", "rel": "advisor", "name": "Miryung Kim", "type": "phd", "source": "homepage", "url": "https://www.cs.tulane.edu/~wjiyuan"}
+{"prof": "p5912", "rel": "advisor", "name": "Harry Xu", "type": "phd", "source": "homepage", "url": "https://www.cs.tulane.edu/~wjiyuan"}
+{"prof": "p5913", "rel": "advisor", "name": "Carlos Scheidegger", "type": "postdoc", "source": "cv", "url": "https://rjfaust.github.io/files/Faust_cv.pdf"}
+{"prof": "p5925", "rel": "advisor", "name": "Xia Hu", "type": "phd", "source": "homepage", "url": "https://guanchuwang.github.io/home"}
+{"prof": "p5925", "rel": "advisor", "name": "Vladimir Braverman", "type": "phd", "source": "homepage", "url": "https://guanchuwang.github.io/home"}
+{"prof": "p5928", "rel": "advisor", "name": "Dimitris Samaras", "type": "phd", "source": "cv", "url": "https://hieulem.github.io/files/cv_sep_2026.pdf"}
+{"prof": "p5928", "rel": "advisor", "name": "Pascal Fua", "type": "postdoc", "source": "cv", "url": "https://hieulem.github.io/files/cv_sep_2026.pdf"}
+{"prof": "p5929", "rel": "advisor", "name": "Lu Su", "type": "phd", "source": "homepage", "url": "https://havocfixer.github.io"}
+{"prof": "p5929", "rel": "advisor", "name": "Aidong Zhang", "type": "phd", "source": "homepage", "url": "https://havocfixer.github.io"}
+{"prof": "p5933", "rel": "advisor", "name": "Qing Liu", "type": "phd", "source": "homepage", "url": "https://sites.google.com/charlotte.edu/hpdilab/about-pi"}
+{"prof": "p5954", "rel": "advisor", "name": "Dan Boneh", "type": "phd", "source": "homepage", "url": "https://people.eecs.berkeley.edu/~henrycg"}
+{"prof": "p5959", "rel": "advisor", "name": "George Candea", "type": "phd", "source": "cv", "url": "https://rishabh246.github.io/files/rishabh-cv.pdf"}
+{"prof": "p5959", "rel": "advisor", "name": "Katerina Argyraki", "type": "phd", "source": "cv", "url": "https://rishabh246.github.io/files/rishabh-cv.pdf"}
+{"prof": "p5959", "rel": "advisor", "name": "Sylvia Ratnasamy", "type": "postdoc", "source": "cv", "url": "https://rishabh246.github.io/files/rishabh-cv.pdf"}
+{"prof": "p5960", "rel": "advisor", "name": "Jure Leskovec", "type": "phd", "source": "homepage", "url": "https://serinachang5.github.io"}
+{"prof": "p5960", "rel": "advisor", "name": "Johan Ugander", "type": "phd", "source": "homepage", "url": "https://serinachang5.github.io"}
+{"prof": "p5960", "rel": "advisor", "name": "Jure Leskovec", "type": "phd", "source": "cv", "url": "https://serinachang5.github.io/assets/files/CV.pdf"}
+{"prof": "p5960", "rel": "advisor", "name": "Johan Ugander", "type": "phd", "source": "cv", "url": "https://serinachang5.github.io/assets/files/CV.pdf"}
+{"prof": "p5976", "rel": "advisor", "name": "Ion Stoica", "type": "postdoc", "source": "homepage", "url": "https://yangzhou1997.github.io"}
+{"prof": "p5976", "rel": "advisor", "name": "Minlan Yu", "type": "phd", "source": "homepage", "url": "https://yangzhou1997.github.io"}
+{"prof": "p5976", "rel": "advisor", "name": "James Mickens", "type": "phd", "source": "homepage", "url": "https://yangzhou1997.github.io"}
+{"prof": "p5976", "rel": "advisor", "name": "Ion Stoica", "type": "postdoc", "source": "cv", "url": "https://yangzhou1997.github.io/cv_yang.pdf"}
+{"prof": "p5981", "rel": "advisor", "name": "Brad Myers", "type": "phd", "source": "homepage", "url": "https://dayenam.com"}
+{"prof": "p5981", "rel": "advisor", "name": "Bogdan Vasilescu", "type": "phd", "source": "homepage", "url": "https://dayenam.com"}
+{"prof": "p5982", "rel": "advisor", "name": "Z. Berkay Celik", "type": "phd", "source": "homepage", "url": "https://habiba-farrukh.github.io"}
+{"prof": "p5982", "rel": "advisor", "name": "Z. Berkay Celik", "type": "phd", "source": "cv", "url": "https://habiba-farrukh.github.io/files/CV_latest.pdf"}
+{"prof": "p5991", "rel": "advisor", "name": "Alex Schwing", "type": "phd", "source": "homepage", "url": "https://unnat.github.io"}
+{"prof": "p5991", "rel": "advisor", "name": "Svetlana Lazebnik", "type": "phd", "source": "homepage", "url": "https://unnat.github.io"}
+{"prof": "p5991", "rel": "advisor", "name": "Abhinav Gupta", "type": "postdoc", "source": "cv", "url": "https://unnat.github.io/resume.pdf"}
+{"prof": "p5991", "rel": "advisor", "name": "Deepak Pathak", "type": "postdoc", "source": "cv", "url": "https://unnat.github.io/resume.pdf"}
+{"prof": "p5991", "rel": "advisor", "name": "Xinlei Chen", "type": "postdoc", "source": "cv", "url": "https://unnat.github.io/resume.pdf"}
+{"prof": "p5993", "rel": "advisor", "name": "Hyesoon Kim", "type": "phd", "source": "homepage", "url": "https://blaisetine.github.io"}
+{"prof": "p5993", "rel": "advisor", "name": "Sudhakar Yalamanchili", "type": "phd", "source": "homepage", "url": "https://blaisetine.github.io"}
+{"prof": "p5999", "rel": "advisor", "name": "Yejin Choi", "type": "phd", "source": "homepage", "url": "https://saadiagabriel.com"}
+{"prof": "p5999", "rel": "advisor", "name": "Franziska Roesner", "type": "phd", "source": "homepage", "url": "https://saadiagabriel.com"}
+{"prof": "p6000", "rel": "advisor", "name": "Arvind Krishnamurthy", "type": "postdoc", "source": "homepage", "url": "https://www.samkumar.org"}
+{"prof": "p6000", "rel": "advisor", "name": "Ratul Mahajan", "type": "postdoc", "source": "homepage", "url": "https://www.samkumar.org"}
+{"prof": "p6000", "rel": "advisor", "name": "David E. Culler", "type": "phd", "source": "homepage", "url": "https://www.samkumar.org"}
+{"prof": "p6000", "rel": "advisor", "name": "Raluca Ada Popa", "type": "phd", "source": "homepage", "url": "https://www.samkumar.org"}
+{"prof": "p6002", "rel": "advisor", "name": "Scott Hudson", "type": "phd", "source": "cv", "url": "https://hci.prof/cv.pdf"}
+{"prof": "p6002", "rel": "advisor", "name": "Stelian Coros", "type": "phd", "source": "cv", "url": "https://hci.prof/cv.pdf"}
+{"prof": "p6009", "rel": "advisor", "name": "Xulong Tang", "type": "phd", "source": "cv", "url": "https://libingyao.github.io/assets/files/LBY_CV.pdf"}
+{"prof": "p6011", "rel": "advisor", "name": "Santosh Nagarakatte", "type": "phd", "source": "homepage", "url": "https://dongura.me"}
+{"prof": "p6011", "rel": "advisor", "name": "Santosh Nagarakatte", "type": "phd", "source": "cv", "url": "https://dongura.me/JayLimCV.pdf"}
+{"prof": "p6020", "rel": "advisor", "name": "William S. Noble", "type": "postdoc", "source": "cv", "url": "https://faculty.ucr.edu/~wenxiu/MaWenxiu-CV.pdf"}
+{"prof": "p6021", "rel": "advisor", "name": "Robert Nowak", "type": "phd", "source": "homepage", "url": "https://yinglunz.com"}
+{"prof": "p6023", "rel": "advisor", "name": "Sam Bowman", "type": "phd", "source": "homepage", "url": "https://alexwarstadt.github.io"}
+{"prof": "p6028", "rel": "advisor", "name": "Zakir Durumeric", "type": "postdoc", "source": "cv", "url": "https://kumarde.com/cv.pdf"}
+{"prof": "p6028", "rel": "advisor", "name": "Michael Bailey", "type": "phd", "source": "cv", "url": "https://kumarde.com/cv.pdf"}
+{"prof": "p6034", "rel": "advisor", "name": "Mette S. Olufsen", "type": "phd", "source": "cv", "url": "https://www.mikioaoi.com/docs/CV_MCAoi_2019.pdf"}
+{"prof": "p6036", "rel": "advisor", "name": "Laura Waller", "type": "phd", "source": "cv", "url": "https://www.nickantipa.com/antipa_files/Nick_CV.pdf"}
+{"prof": "p6036", "rel": "advisor", "name": "Ren Ng", "type": "phd", "source": "cv", "url": "https://www.nickantipa.com/antipa_files/Nick_CV.pdf"}
+{"prof": "p6036", "rel": "advisor", "name": "Laura Waller", "type": "postdoc", "source": "cv", "url": "https://www.nickantipa.com/antipa_files/Nick_CV.pdf"}
+{"prof": "p6037", "rel": "advisor", "name": "Mark Zhandry", "type": "phd", "source": "homepage", "url": "https://sites.google.com/view/qipengliu"}
+{"prof": "p6041", "rel": "advisor", "name": "Nima Anari", "type": "phd", "source": "homepage", "url": "https://thuyduongvuong.github.io/index.html"}
+{"prof": "p6041", "rel": "advisor", "name": "Moses Charikar", "type": "phd", "source": "homepage", "url": "https://thuyduongvuong.github.io/index.html"}
+{"prof": "p6041", "rel": "advisor", "name": "Nima Anari", "type": "phd", "source": "cv", "url": "https://thuyduongvuong.github.io/VuongCV_Jan26.pdf"}
+{"prof": "p6041", "rel": "advisor", "name": "Moses Charikar", "type": "phd", "source": "cv", "url": "https://thuyduongvuong.github.io/VuongCV_Jan26.pdf"}
+{"prof": "p6045", "rel": "advisor", "name": "Song Han", "type": "phd", "source": "homepage", "url": "https://zhijianliu.com"}
+{"prof": "p6052", "rel": "advisor", "name": "Garrison W. Cottrell", "type": "phd", "source": "homepage", "url": "https://yaoqin1.github.io"}
+{"prof": "p6054", "rel": "advisor", "name": "Luca Daniel", "type": "phd", "source": "cv", "url": "https://web.ece.ucsb.edu/~zhengzhang/cv.pdf"}
+{"prof": "p6058", "rel": "advisor", "name": "Divy Agrawal", "type": "phd", "source": "homepage", "url": "https://ishtiyaque.github.io"}
+{"prof": "p6058", "rel": "advisor", "name": "Amr El Abbadi", "type": "phd", "source": "homepage", "url": "https://ishtiyaque.github.io"}
+{"prof": "p6059", "rel": "advisor", "name": "Margaret Martonosi", "type": "phd", "source": "homepage", "url": "https://morenes.github.io"}
+{"prof": "p6059", "rel": "advisor", "name": "David Wentzlaff", "type": "phd", "source": "homepage", "url": "https://morenes.github.io"}
+{"prof": "p6062", "rel": "advisor", "name": "Roya Ensafi", "type": "phd", "source": "cv", "url": "https://ramakrishnansr.com/assets/CV_Ramakrishnan_Sundara_Raman.pdf"}
+{"prof": "p6071", "rel": "advisor", "name": "Keith Winstein", "type": "phd", "source": "homepage", "url": "https://fyy.cs.illinois.edu"}
+{"prof": "p6071", "rel": "advisor", "name": "Philip Levis", "type": "phd", "source": "homepage", "url": "https://fyy.cs.illinois.edu"}
+{"prof": "p6071", "rel": "advisor", "name": "Keith Winstein", "type": "phd", "source": "cv", "url": "https://fyy.cs.illinois.edu/files/fyy-cv.pdf"}
+{"prof": "p6071", "rel": "advisor", "name": "Philip Levis", "type": "phd", "source": "cv", "url": "https://fyy.cs.illinois.edu/files/fyy-cv.pdf"}
+{"prof": "p6081", "rel": "advisor", "name": "Ruzica Piskac", "type": "phd", "source": "cv", "url": "https://ning0luo.github.io/CV_Ning_Luo_202605.pdf"}
+{"prof": "p6083", "rel": "advisor", "name": "Rachit Agarwal", "type": "phd", "source": "cv", "url": "https://saksham.web.illinois.edu/assets/pdf/saksham-cv.pdf"}
+{"prof": "p6084", "rel": "advisor", "name": "Nancy Lynch", "type": "phd", "source": "cv", "url": "https://mitras.ece.illinois.edu/cvnoref.pdf"}
+{"prof": "p6085", "rel": "advisor", "name": "Susan R. Fussell", "type": "phd", "source": "homepage", "url": "https://www.sharifasultana.com"}
+{"prof": "p6091", "rel": "advisor", "name": "Charles E. Leiserson", "type": "phd", "source": "cv", "url": "https://wsmoses.com/wsm_cv.pdf"}
+{"prof": "p6098", "rel": "advisor", "name": "Lujo Bauer", "type": "phd", "source": "homepage", "url": "https://clementfung.me"}
+{"prof": "p6098", "rel": "advisor", "name": "Lujo Bauer", "type": "phd", "source": "cv", "url": "https://clementfung.me/cv.html"}
+{"prof": "p6107", "rel": "advisor", "name": "C.-C. Jay Kuo", "type": "phd", "source": "homepage", "url": "https://sanjayp.is.umbc.edu"}
+{"prof": "p6112", "rel": "advisor", "name": "Guan-Hua Tu", "type": "phd", "source": "homepage", "url": "https://yiwenhu556.github.io"}
+{"prof": "p6112", "rel": "advisor", "name": "Li Xiao", "type": "phd", "source": "homepage", "url": "https://yiwenhu556.github.io"}
+{"prof": "p6117", "rel": "advisor", "name": "Leonidas Lampropoulos", "type": "postdoc", "source": "cv", "url": "https://harrisongoldste.in/resume.pdf"}
+{"prof": "p6117", "rel": "advisor", "name": "Benjamin C. Pierce", "type": "phd", "source": "cv", "url": "https://harrisongoldste.in/resume.pdf"}
+{"prof": "p6119", "rel": "advisor", "name": "Mikhail Atallah", "type": "phd", "source": "cv", "url": "https://www.acsu.buffalo.edu/~mblanton/vita-mblanton.pdf"}
+{"prof": "p6120", "rel": "advisor", "name": "Benjamin Delaware", "type": "phd", "source": "homepage", "url": "https://cse.buffalo.edu/~qcye"}
+{"prof": "p6121", "rel": "advisor", "name": "Dinesh Bharadia", "type": "phd", "source": "homepage", "url": "https://cse.buffalo.edu/~roshana"}
+{"prof": "p6123", "rel": "advisor", "name": "Vikas Singh", "type": "phd", "source": "homepage", "url": "http://vlokhande-ub.github.io"}
+{"prof": "p6123", "rel": "advisor", "name": "Laxmidhar Behera", "type": "phd", "source": "homepage", "url": "http://vlokhande-ub.github.io"}
+{"prof": "p6124", "rel": "advisor", "name": "Daniel Epstein", "type": "phd", "source": "homepage", "url": "https://cse.buffalo.edu/~xlu30"}
+{"prof": "p6126", "rel": "advisor", "name": "George Kesidis", "type": "phd", "source": "homepage", "url": "https://lixi1994.github.io"}
+{"prof": "p6126", "rel": "advisor", "name": "David Miller", "type": "phd", "source": "homepage", "url": "https://lixi1994.github.io"}
+{"prof": "p6127", "rel": "advisor", "name": "Patrick McDaniel", "type": "phd", "source": "homepage", "url": "https://www.quinnburke.net"}
+{"prof": "p6127", "rel": "advisor", "name": "Patrick McDaniel", "type": "phd", "source": "cv", "url": "https://www.quinnburke.net/cv.pdf"}
+{"prof": "p6128", "rel": "advisor", "name": "Giorgio Levi", "type": "phd", "source": "cv", "url": "https://www2.cs.arizona.edu/people/giacobazzi/styled/index.html"}
+{"prof": "p6132", "rel": "advisor", "name": "Tien N. Nguyen", "type": "phd", "source": "homepage", "url": "https://aashishyadavally.github.io"}
+{"prof": "p6132", "rel": "advisor", "name": "Tien N. Nguyen", "type": "phd", "source": "cv", "url": "https://aashishyadavally.github.io/assets/pdf/cv.pdf"}
+{"prof": "p6133", "rel": "advisor", "name": "Felix J. Herrmann", "type": "phd", "source": "cv", "url": "https://alisiahkoohi.github.io/files/AliSiahkoohi-CV.pdf"}
+{"prof": "p6138", "rel": "advisor", "name": "Murat Kantarcioglu", "type": "postdoc", "source": "cv", "url": "https://cakcora.github.io/files/AkcoraCV.pdf"}
+{"prof": "p6138", "rel": "advisor", "name": "Elena Ferrari", "type": "phd", "source": "cv", "url": "https://cakcora.github.io/files/AkcoraCV.pdf"}
+{"prof": "p6138", "rel": "advisor", "name": "Barbara Carminati", "type": "phd", "source": "cv", "url": "https://cakcora.github.io/files/AkcoraCV.pdf"}
+{"prof": "p6138", "rel": "advisor", "name": "Murat Kantarcioglu", "type": "phd", "source": "cv", "url": "https://cakcora.github.io/files/AkcoraCV.pdf"}
+{"prof": "p6158", "rel": "advisor", "name": "Yan Yan", "type": "phd", "source": "homepage", "url": "https://www.ucf.edu/expert/yuzhang-shang"}
+{"prof": "p6158", "rel": "advisor", "name": "Liqiang Nie", "type": "phd", "source": "homepage", "url": "https://www.ucf.edu/expert/yuzhang-shang"}
+{"prof": "p6158", "rel": "advisor", "name": "Dan Xu", "type": "phd", "source": "homepage", "url": "https://www.ucf.edu/expert/yuzhang-shang"}
+{"prof": "p6179", "rel": "advisor", "name": "Ellen Riloff", "type": "phd", "source": "homepage", "url": "https://jiangtianyu.com"}
+{"prof": "p6186", "rel": "advisor", "name": "Ben Recht", "type": "phd", "source": "homepage", "url": "https://www.colorado.edu/cs/esther-rolf"}
+{"prof": "p6186", "rel": "advisor", "name": "Michael I. Jordan", "type": "phd", "source": "homepage", "url": "https://www.colorado.edu/cs/esther-rolf"}
+{"prof": "p6194", "rel": "advisor", "name": "Daniel Leithinger", "type": "phd", "source": "homepage", "url": "https://ryosuzuki.org"}
+{"prof": "p6194", "rel": "advisor", "name": "Mark D. Gross", "type": "phd", "source": "homepage", "url": "https://ryosuzuki.org"}
+{"prof": "p6209", "rel": "advisor", "name": "Francis Quek", "type": "phd", "source": "cv", "url": "https://cise.ufl.edu/~slchu/docs/ChuSharonLynn-CV-Aug2020.pdf"}
+{"prof": "p6209", "rel": "advisor", "name": "Rodney Hill", "type": "phd", "source": "cv", "url": "https://cise.ufl.edu/~slchu/docs/ChuSharonLynn-CV-Aug2020.pdf"}
+{"prof": "p6211", "rel": "advisor", "name": "Roberto Perdisci", "type": "phd", "source": "homepage", "url": "https://karthikas03.github.io"}
+{"prof": "p6211", "rel": "advisor", "name": "Kyu Hyung Lee", "type": "phd", "source": "homepage", "url": "https://karthikas03.github.io"}
+{"prof": "p6211", "rel": "advisor", "name": "Roberto Perdisci", "type": "phd", "source": "cv", "url": "https://karthikas03.github.io/cv/"}
+{"prof": "p6211", "rel": "advisor", "name": "Kyu Hyung Lee", "type": "phd", "source": "cv", "url": "https://karthikas03.github.io/cv/"}
+{"prof": "p6213", "rel": "advisor", "name": "David J. Miller", "type": "phd", "source": "homepage", "url": "https://zhenxianglance.github.io"}
+{"prof": "p6213", "rel": "advisor", "name": "George Kesidis", "type": "phd", "source": "homepage", "url": "https://zhenxianglance.github.io"}
+{"prof": "p6214", "rel": "advisor", "name": "Longfei Shangguan", "type": "postdoc", "source": "homepage", "url": "https://anplus.github.io"}
+{"prof": "p6214", "rel": "advisor", "name": "Kyle Jamieson", "type": "postdoc", "source": "homepage", "url": "https://anplus.github.io"}
+{"prof": "p6214", "rel": "advisor", "name": "Lei Yang", "type": "phd", "source": "homepage", "url": "https://anplus.github.io"}
+{"prof": "p6214", "rel": "advisor", "name": "Jiannong Cao", "type": "phd", "source": "homepage", "url": "https://anplus.github.io"}
+{"prof": "p6217", "rel": "advisor", "name": "Jiawei Zhang", "type": "phd", "source": "homepage", "url": "https://hpzhang94.github.io"}
+{"prof": "p6217", "rel": "advisor", "name": "Jiawei Zhang", "type": "phd", "source": "cv", "url": "https://hpzhang94.github.io/HaopengZhang_CV.pdf"}
+{"prof": "p6219", "rel": "advisor", "name": "Javad Lavaei", "type": "phd", "source": "homepage", "url": "https://igormolybog.github.io"}
+{"prof": "p6225", "rel": "advisor", "name": "Xiang Zhang", "type": "phd", "source": "homepage", "url": "https://nijingchao.github.io"}
+{"prof": "p6228", "rel": "advisor", "name": "Michael A. Bender", "type": "phd", "source": "homepage", "url": "https://www.rathishdas.com"}
+{"prof": "p6228", "rel": "advisor", "name": "Rezaul A. Chowdhury", "type": "phd", "source": "homepage", "url": "https://www.rathishdas.com"}
+{"prof": "p6229", "rel": "advisor", "name": "Ness Shroff", "type": "postdoc", "source": "homepage", "url": "https://slin70.github.io"}
+{"prof": "p6229", "rel": "advisor", "name": "Yingbin Liang", "type": "postdoc", "source": "homepage", "url": "https://slin70.github.io"}
+{"prof": "p6231", "rel": "advisor", "name": "Jeremiah Blocki", "type": "phd", "source": "homepage", "url": "https://www.cs.uic.edu/~block"}
+{"prof": "p6237", "rel": "advisor", "name": "Arie E. Kaufman", "type": "phd", "source": "homepage", "url": "https://saeedboorboor.github.io"}
+{"prof": "p6237", "rel": "advisor", "name": "Arie E. Kaufman", "type": "phd", "source": "cv", "url": "https://saeedboorboor.github.io/papers/cv.pdf"}
+{"prof": "p6250", "rel": "advisor", "name": "Jeff Foster", "type": "phd", "source": "homepage", "url": "https://sankhs.com"}
+{"prof": "p6250", "rel": "advisor", "name": "David Van Horn", "type": "phd", "source": "homepage", "url": "https://sankhs.com"}
+{"prof": "p6251", "rel": "advisor", "name": "Hui Xiong", "type": "phd", "source": "homepage", "url": "https://ittc.ku.edu/~zyao"}
+{"prof": "p6251", "rel": "advisor", "name": "Hui Xiong", "type": "phd", "source": "cv", "url": "https://ittc.ku.edu/~zyao/files/cv.pdf"}
+{"prof": "p6253", "rel": "advisor", "name": "Ness B. Shroff", "type": "postdoc", "source": "homepage", "url": "https://functionadvanced.github.io/PeizhongJu"}
+{"prof": "p6253", "rel": "advisor", "name": "Ness B. Shroff", "type": "postdoc", "source": "cv", "url": "https://functionadvanced.github.io/PeizhongJu/CV.pdf"}
+{"prof": "p6255", "rel": "advisor", "name": "Jing Yang", "type": "phd", "source": "homepage", "url": "https://ruiquan5514.github.io"}
+{"prof": "p6268", "rel": "advisor", "name": "Onur Mutlu", "type": "phd", "source": "homepage", "url": "https://www.cs.umd.edu/people/firtina"}
+{"prof": "p6269", "rel": "advisor", "name": "Zhiru Zhang", "type": "postdoc", "source": "cv", "url": "https://ycunxi.github.io/cunxiyu/docs/cv-2page.pdf"}
+{"prof": "p6269", "rel": "advisor", "name": "Giovanni De Micheli", "type": "postdoc", "source": "cv", "url": "https://ycunxi.github.io/cunxiyu/docs/cv-2page.pdf"}
+{"prof": "p6269", "rel": "advisor", "name": "Maciej Ciesielski", "type": "phd", "source": "cv", "url": "https://ycunxi.github.io/cunxiyu/docs/cv-2page.pdf"}
+{"prof": "p6272", "rel": "advisor", "name": "Avi Rubin", "type": "phd", "source": "homepage", "url": "https://www.cs.umd.edu/users/kaptchuk"}
+{"prof": "p6272", "rel": "advisor", "name": "Matt Green", "type": "phd", "source": "homepage", "url": "https://www.cs.umd.edu/users/kaptchuk"}
+{"prof": "p6272", "rel": "advisor", "name": "Matthew Green", "type": "phd", "source": "cv", "url": "https://kaptchuk.com/filedump/cv.pdf"}
+{"prof": "p6272", "rel": "advisor", "name": "Aviel Rubin", "type": "phd", "source": "cv", "url": "https://kaptchuk.com/filedump/cv.pdf"}
+{"prof": "p6274", "rel": "advisor", "name": "Avrim Blum", "type": "phd", "source": "homepage", "url": "https://www.cs.umd.edu/~hanshao"}
+{"prof": "p6284", "rel": "advisor", "name": "Carl Vondrick", "type": "phd", "source": "homepage", "url": "https://ruoshiliu.github.io"}
+{"prof": "p6289", "rel": "advisor", "name": "Qiaozhu Mei", "type": "phd", "source": "homepage", "url": "https://aiwei.me"}
+{"prof": "p6296", "rel": "advisor", "name": "Avrim Blum", "type": "postdoc", "source": "cv", "url": "https://hedyehbeyhaghi.github.io/Hedyeh_Beyhaghi_CV.pdf"}
+{"prof": "p6296", "rel": "advisor", "name": "Jason Hartline", "type": "postdoc", "source": "cv", "url": "https://hedyehbeyhaghi.github.io/Hedyeh_Beyhaghi_CV.pdf"}
+{"prof": "p6296", "rel": "advisor", "name": "Samir Khuller", "type": "postdoc", "source": "cv", "url": "https://hedyehbeyhaghi.github.io/Hedyeh_Beyhaghi_CV.pdf"}
+{"prof": "p6298", "rel": "advisor", "name": "Gregory Valiant", "type": "phd", "source": "homepage", "url": "https://sites.google.com/site/acmonsterqiao"}
+{"prof": "p6303", "rel": "advisor", "name": "Manos Athanassoulis", "type": "phd", "source": "homepage", "url": "https://www.cs.umb.edu/~tpapon"}
+{"prof": "p6307", "rel": "advisor", "name": "Jodi Forlizzi", "type": "phd", "source": "homepage", "url": "https://samreig.com"}
+{"prof": "p6307", "rel": "advisor", "name": "Aaron Steinfeld", "type": "phd", "source": "homepage", "url": "https://samreig.com"}
+{"prof": "p6312", "rel": "advisor", "name": "Xiaohua Jia", "type": "phd", "source": "homepage", "url": "https://www.memphis.edu/cs/people/faculty_pages/kan-yang.php"}
+{"prof": "p6312", "rel": "advisor", "name": "Kui Ren", "type": "phd", "source": "homepage", "url": "https://www.memphis.edu/cs/people/faculty_pages/kan-yang.php"}
+{"prof": "p6315", "rel": "advisor", "name": "Hadar Averbuch-Elor", "type": "phd", "source": "cv", "url": "https://morrisalp.github.io/files/CV.pdf"}
+{"prof": "p6315", "rel": "advisor", "name": "Raja Giryes", "type": "phd", "source": "cv", "url": "https://morrisalp.github.io/files/CV.pdf"}
+{"prof": "p6315", "rel": "advisor", "name": "Lori Levin", "type": "postdoc", "source": "cv", "url": "https://morrisalp.github.io/files/CV.pdf"}
+{"prof": "p6319", "rel": "advisor", "name": "Kostas Daniilidis", "type": "phd", "source": "homepage", "url": "https://bucherb.github.io"}
+{"prof": "p6319", "rel": "advisor", "name": "Nikolai Matni", "type": "phd", "source": "homepage", "url": "https://bucherb.github.io"}
+{"prof": "p6319", "rel": "advisor", "name": "Kostas Daniilidis", "type": "phd", "source": "cv", "url": "https://bucherb.github.io/data/BernadetteBucher.pdf"}
+{"prof": "p6323", "rel": "advisor", "name": "Stefanie Mueller", "type": "phd", "source": "homepage", "url": "https://www.junyizhu.com"}
+{"prof": "p6324", "rel": "advisor", "name": "Xinyu Zhang", "type": "phd", "source": "cv", "url": "https://samsonsjarkal.github.io/KeSun/files/kesun_cv.pdf"}
+{"prof": "p6329", "rel": "advisor", "name": "Sanjeev Arora", "type": "phd", "source": "homepage", "url": "https://weihu.me"}
+{"prof": "p6336", "rel": "advisor", "name": "Jana Doppa", "type": "phd", "source": "cv", "url": "https://aryandeshwal.github.io/files/cv.pdf"}
+{"prof": "p6349", "rel": "advisor", "name": "Peter Brusilovsky", "type": "phd", "source": "homepage", "url": "https://www.cht77.com"}
+{"prof": "p6350", "rel": "advisor", "name": "Fengguang Song", "type": "phd", "source": "homepage", "url": "https://www.daocewang.com"}
+{"prof": "p6350", "rel": "advisor", "name": "Dingwen Tao", "type": "phd", "source": "homepage", "url": "https://www.daocewang.com"}
+{"prof": "p6351", "rel": "advisor", "name": "Amiangshu Bosu", "type": "phd", "source": "cv", "url": "https://jaydebsarker.github.io/Jaydeb_CV.pdf"}
+{"prof": "p6357", "rel": "advisor", "name": "Yanmin Gong", "type": "phd", "source": "homepage", "url": "https://sites.google.com/view/ruihu/home"}
+{"prof": "p6361", "rel": "advisor", "name": "Eamonn Keogh", "type": "phd", "source": "cv", "url": "http://www.cs.unm.edu/%7Emueen/CV.pdf"}
+{"prof": "p6365", "rel": "advisor", "name": "Tom Ristenpart", "type": "phd", "source": "homepage", "url": "https://julialen.github.io"}
+{"prof": "p6365", "rel": "advisor", "name": "Thomas Ristenpart", "type": "phd", "source": "cv", "url": "https://julialen.github.io/CV.pdf"}
+{"prof": "p6371", "rel": "advisor", "name": "Alexander Schwing", "type": "phd", "source": "homepage", "url": "https://jason718.github.io"}
+{"prof": "p6372", "rel": "advisor", "name": "Cynthia Dwork", "type": "phd", "source": "homepage", "url": "https://www.zhundeng.org"}
+{"prof": "p6390", "rel": "advisor", "name": "Paul Rosen", "type": "phd", "source": "homepage", "url": "https://www.jiquadcs.com"}
+{"prof": "p6394", "rel": "advisor", "name": "Yao Liu", "type": "phd", "source": "homepage", "url": "https://cs.ou.edu/~songf"}
+{"prof": "p6403", "rel": "advisor", "name": "Adam Belay", "type": "phd", "source": "homepage", "url": "https://joshfried.io"}
+{"prof": "p6405", "rel": "advisor", "name": "Michael I. Jordan", "type": "phd", "source": "homepage", "url": "https://mjagadeesan.github.io"}
+{"prof": "p6405", "rel": "advisor", "name": "Jacob Steinhardt", "type": "phd", "source": "homepage", "url": "https://mjagadeesan.github.io"}
+{"prof": "p6412", "rel": "advisor", "name": "Cynthia Rudin", "type": "phd", "source": "homepage", "url": "https://alinajadebarnett.github.io"}
+{"prof": "p6413", "rel": "advisor", "name": "Marten van Dijk", "type": "phd", "source": "homepage", "url": "https://web.uri.edu/cs/meet/kaleel-mahmood"}
+{"prof": "p6414", "rel": "advisor", "name": "Dan Roth", "type": "phd", "source": "cv", "url": "https://hornhehhf.github.io/CV.pdf"}
+{"prof": "p6424", "rel": "advisor", "name": "Len Schubert", "type": "phd", "source": "homepage", "url": "https://cse.usf.edu/~genekim"}
+{"prof": "p6424", "rel": "advisor", "name": "Lenhart Schubert", "type": "phd", "source": "cv", "url": "https://cse.usf.edu/~genekim/cv.pdf"}
+{"prof": "p6426", "rel": "advisor", "name": "Zizhong Chen", "type": "phd", "source": "homepage", "url": "https://jiajunhuang1999.github.io"}
+{"prof": "p6435", "rel": "advisor", "name": "Jungseock Joo", "type": "postdoc", "source": "homepage", "url": "https://sites.google.com/site/sbkimcv"}
+{"prof": "p6435", "rel": "advisor", "name": "Wei Wang", "type": "phd", "source": "homepage", "url": "https://sites.google.com/site/sbkimcv"}
+{"prof": "p6438", "rel": "advisor", "name": "Huacheng Zeng", "type": "phd", "source": "homepage", "url": "https://sczhang6.github.io"}
+{"prof": "p6441", "rel": "advisor", "name": "Yiannis Aloimonos", "type": "phd", "source": "cv", "url": "https://xiaominlin.github.io/cv/Academic_CV.pdf"}
+{"prof": "p6443", "rel": "advisor", "name": "Jie Yang", "type": "phd", "source": "homepage", "url": "https://yiliren.github.io"}
+{"prof": "p6444", "rel": "advisor", "name": "Tom Williams", "type": "postdoc", "source": "homepage", "url": "https://zhaohanphd.com"}
+{"prof": "p6444", "rel": "advisor", "name": "Tom Williams", "type": "postdoc", "source": "cv", "url": "https://zhaohanphd.com/cv/"}
+{"prof": "p6444", "rel": "advisor", "name": "Holly Yanco", "type": "phd", "source": "cv", "url": "https://zhaohanphd.com/cv/"}
+{"prof": "p6445", "rel": "advisor", "name": "Mark Horowitz", "type": "postdoc", "source": "homepage", "url": "https://ctorng.com"}
+{"prof": "p6445", "rel": "advisor", "name": "Christopher Batten", "type": "phd", "source": "homepage", "url": "https://ctorng.com"}
+{"prof": "p6446", "rel": "advisor", "name": "Nisarg Shah", "type": "phd", "source": "homepage", "url": "https://evi-micha.github.io"}
+{"prof": "p6446", "rel": "advisor", "name": "Nisarg Shah", "type": "phd", "source": "cv", "url": "https://evi-micha.github.io/Evi_CV.pdf"}
+{"prof": "p6450", "rel": "advisor", "name": "Martin Jaggi", "type": "phd", "source": "homepage", "url": "https://spkreddy.org"}
+{"prof": "p6450", "rel": "advisor", "name": "Martin Jaggi", "type": "phd", "source": "cv", "url": "https://spkreddy.org/media/CV_KARIMIREDDY.pdf"}
+{"prof": "p6450", "rel": "advisor", "name": "Michael I. Jordan", "type": "postdoc", "source": "cv", "url": "https://spkreddy.org/media/CV_KARIMIREDDY.pdf"}
+{"prof": "p6461", "rel": "advisor", "name": "Scott Hudson", "type": "phd", "source": "homepage", "url": "https://eecs.utk.edu/people/sai-swaminathan"}
+{"prof": "p6462", "rel": "advisor", "name": "Jing Gao", "type": "phd", "source": "homepage", "url": "https://lliutianc.github.io"}
+{"prof": "p6465", "rel": "advisor", "name": "Ziming Zhao", "type": "phd", "source": "homepage", "url": "https://tomal-kuet.github.io/armanuzzaman"}
+{"prof": "p6467", "rel": "advisor", "name": "Yexiang Xue", "type": "phd", "source": "cv", "url": "https://jiangnanhugo.github.io/CV.pdf"}
+{"prof": "p6481", "rel": "advisor", "name": "Joelle Pineau", "type": "phd", "source": "homepage", "url": "https://amyzhang.github.io"}
+{"prof": "p6481", "rel": "advisor", "name": "Doina Precup", "type": "phd", "source": "homepage", "url": "https://amyzhang.github.io"}
+{"prof": "p6482", "rel": "advisor", "name": "Yulia Tsvetkov", "type": "phd", "source": "homepage", "url": "https://chan0park.github.io"}
+{"prof": "p6482", "rel": "advisor", "name": "Yejin Choi", "type": "postdoc", "source": "cv", "url": "https://chan0park.github.io/assets/files/CV_Chan_Park.pdf"}
+{"prof": "p6482", "rel": "advisor", "name": "Yulia Tsvetkov", "type": "phd", "source": "cv", "url": "https://chan0park.github.io/assets/files/CV_Chan_Park.pdf"}
+{"prof": "p6485", "rel": "advisor", "name": "Benjamin Van Durme", "type": "phd", "source": "homepage", "url": "https://esteng.github.io"}
+{"prof": "p6489", "rel": "advisor", "name": "Zachary Lipton", "type": "phd", "source": "homepage", "url": "https://leqiliu.github.io"}
+{"prof": "p6491", "rel": "advisor", "name": "Darko Marinov", "type": "phd", "source": "homepage", "url": "https://users.ece.utexas.edu/~gligoric"}
+{"prof": "p6493", "rel": "advisor", "name": "Constantinos Daskalakis", "type": "phd", "source": "homepage", "url": "https://noahgol.github.io"}
+{"prof": "p6493", "rel": "advisor", "name": "Ankur Moitra", "type": "phd", "source": "homepage", "url": "https://noahgol.github.io"}
+{"prof": "p6499", "rel": "advisor", "name": "Hari Balakrishnan", "type": "phd", "source": "cv", "url": "https://www.cs.utexas.edu/~venkatar/cv.pdf"}
+{"prof": "p6499", "rel": "advisor", "name": "Mohammad Alizadeh", "type": "phd", "source": "cv", "url": "https://www.cs.utexas.edu/~venkatar/cv.pdf"}
+{"prof": "p6504", "rel": "advisor", "name": "Patrick McDaniel", "type": "phd", "source": "homepage", "url": "https://hoak.me"}
+{"prof": "p6509", "rel": "advisor", "name": "Jon E. Froehlich", "type": "phd", "source": "cv", "url": "https://www.lianghe.me/cv/Liang_CV_2026_JUNE.pdf"}
+{"prof": "p6511", "rel": "advisor", "name": "August Shi", "type": "phd", "source": "homepage", "url": "https://shanto-rahman.github.io"}
+{"prof": "p6511", "rel": "advisor", "name": "August Shi", "type": "phd", "source": "cv", "url": "https://shanto-rahman.github.io/Shanto-Rahman-CV.pdf"}
+{"prof": "p6513", "rel": "advisor", "name": "Kun Sun", "type": "phd", "source": "homepage", "url": "https://xindawang.org"}
+{"prof": "p6515", "rel": "advisor", "name": "William Wang", "type": "phd", "source": "homepage", "url": "https://czyssrs.github.io"}
+{"prof": "p6515", "rel": "advisor", "name": "Xifeng Yan", "type": "phd", "source": "homepage", "url": "https://czyssrs.github.io"}
+{"prof": "p6515", "rel": "advisor", "name": "Fei Fang", "type": "postdoc", "source": "homepage", "url": "https://czyssrs.github.io"}
+{"prof": "p6530", "rel": "advisor", "name": "Marta Kwiatkowska", "type": "phd", "source": "homepage", "url": "https://benjiewang.com"}
+{"prof": "p6534", "rel": "advisor", "name": "Divyakant Agrawal", "type": "phd", "source": "homepage", "url": "https://zhaofuheng.github.io"}
+{"prof": "p6534", "rel": "advisor", "name": "Amr El Abbadi", "type": "phd", "source": "homepage", "url": "https://zhaofuheng.github.io"}
+{"prof": "p6535", "rel": "advisor", "name": "Xiangyu Zhang", "type": "phd", "source": "homepage", "url": "https://tao.aisec.world"}
+{"prof": "p6537", "rel": "advisor", "name": "Abhinav Gupta", "type": "phd", "source": "homepage", "url": "https://kennethmarino.com"}
+{"prof": "p6537", "rel": "advisor", "name": "Abhinav Gupta", "type": "phd", "source": "cv", "url": "https://kennethmarino.com/data/Kenneth_Marino_CV.pdf"}
+{"prof": "p6538", "rel": "advisor", "name": "Saman Zonouz", "type": "phd", "source": "cv", "url": "https://lagarcia38.github.io/files/LuisGarcia_CV.pdf"}
+{"prof": "p6539", "rel": "advisor", "name": "Keenan Crane", "type": "phd", "source": "homepage", "url": "https://www.markjgillespie.com"}
+{"prof": "p6539", "rel": "advisor", "name": "Keenan Crane", "type": "phd", "source": "cv", "url": "https://www.markjgillespie.com/Mark_Gillespie_CV.pdf"}
+{"prof": "p6540", "rel": "advisor", "name": "Devesh Tiwari", "type": "phd", "source": "homepage", "url": "https://rohanbasuroy.github.io"}
+{"prof": "p6542", "rel": "advisor", "name": "Sonia Chernova", "type": "phd", "source": "homepage", "url": "https://www.weiyuliu.com"}
+{"prof": "p6542", "rel": "advisor", "name": "Sonia Chernova", "type": "phd", "source": "cv", "url": "https://www.weiyuliu.com/data/CV-WeiyuLiu.pdf"}
+{"prof": "p6543", "rel": "advisor", "name": "Antti Oulasvirta", "type": "phd", "source": "homepage", "url": "https://yuejiang-nj.github.io"}
+{"prof": "p6543", "rel": "advisor", "name": "Vikas Garg", "type": "phd", "source": "homepage", "url": "https://yuejiang-nj.github.io"}
+{"prof": "p6545", "rel": "advisor", "name": "Hod Lipson", "type": "phd", "source": "homepage", "url": "http://www.ncheney.com"}
+{"prof": "p6545", "rel": "advisor", "name": "Steve Strogatz", "type": "phd", "source": "homepage", "url": "http://www.ncheney.com"}
+{"prof": "p6548", "rel": "advisor", "name": "Hanghang Tong", "type": "phd", "source": "homepage", "url": "https://chenannie45.github.io"}
+{"prof": "p6561", "rel": "advisor", "name": "Laurel Riek", "type": "phd", "source": "homepage", "url": "https://www.tiqbal.com"}
+{"prof": "p6581", "rel": "advisor", "name": "Eric Brewer", "type": "postdoc", "source": "cv", "url": "https://kurti.sh/cv.pdf"}
+{"prof": "p6581", "rel": "advisor", "name": "Tapan Parikh", "type": "postdoc", "source": "cv", "url": "https://kurti.sh/cv.pdf"}
+{"prof": "p6581", "rel": "advisor", "name": "Eric Brewer", "type": "phd", "source": "cv", "url": "https://kurti.sh/cv.pdf"}
+{"prof": "p6581", "rel": "advisor", "name": "Tapan Parikh", "type": "phd", "source": "cv", "url": "https://kurti.sh/cv.pdf"}
+{"prof": "p6588", "rel": "advisor", "name": "Josh Tenenbaum", "type": "phd", "source": "homepage", "url": "https://faculty.washington.edu/maxkw"}
+{"prof": "p6588", "rel": "advisor", "name": "Tim Behrens", "type": "phd", "source": "homepage", "url": "https://faculty.washington.edu/maxkw"}
+{"prof": "p6588", "rel": "advisor", "name": "Josh Tenenbaum", "type": "phd", "source": "cv", "url": "https://faculty.washington.edu/maxkw/uploads/Max_Kleiman_Weiner_CV.pdf"}
+{"prof": "p6589", "rel": "advisor", "name": "Madhu Sudan", "type": "phd", "source": "homepage", "url": "https://mitalibafna.github.io"}
+{"prof": "p6601", "rel": "advisor", "name": "Anant Sahai", "type": "postdoc", "source": "homepage", "url": "https://pages.cs.wisc.edu/~abedi"}
+{"prof": "p6601", "rel": "advisor", "name": "Sachin Katti", "type": "postdoc", "source": "homepage", "url": "https://pages.cs.wisc.edu/~abedi"}
+{"prof": "p6601", "rel": "advisor", "name": "Tim Brecht", "type": "phd", "source": "homepage", "url": "https://pages.cs.wisc.edu/~abedi"}
+{"prof": "p6606", "rel": "advisor", "name": "Adam Smith", "type": "phd", "source": "homepage", "url": "https://pages.cs.wisc.edu/~grbrown5"}
+{"prof": "p6606", "rel": "advisor", "name": "Adam Smith", "type": "phd", "source": "cv", "url": "https://pages.cs.wisc.edu/~grbrown5/Gavin_Brown_CV.pdf"}
+{"prof": "p6606", "rel": "advisor", "name": "Sewoong Oh", "type": "postdoc", "source": "cv", "url": "https://pages.cs.wisc.edu/~grbrown5/Gavin_Brown_CV.pdf"}
+{"prof": "p6610", "rel": "advisor", "name": "Asuman Ozdaglar", "type": "postdoc", "source": "cv", "url": "https://jwzhang.netlify.app/uploads/JWZhangCV2610.pdf"}
+{"prof": "p6610", "rel": "advisor", "name": "Saurabh Amin", "type": "postdoc", "source": "cv", "url": "https://jwzhang.netlify.app/uploads/JWZhangCV2610.pdf"}
+{"prof": "p6612", "rel": "advisor", "name": "David Bamman", "type": "phd", "source": "homepage", "url": "https://lucy3.github.io"}
+{"prof": "p6612", "rel": "advisor", "name": "David Bamman", "type": "phd", "source": "cv", "url": "https://lucy3.github.io/assets/cv/cv.pdf"}
+{"prof": "p6619", "rel": "advisor", "name": "Nathan Beckmann", "type": "phd", "source": "homepage", "url": "https://saramcallister.github.io"}
+{"prof": "p6619", "rel": "advisor", "name": "Greg Ganger", "type": "phd", "source": "homepage", "url": "https://saramcallister.github.io"}
+{"prof": "p6632", "rel": "advisor", "name": "Kristopher Micinski", "type": "phd", "source": "homepage", "url": "https://pldi.me"}
+{"prof": "p6634", "rel": "advisor", "name": "Karsten Borgwardt", "type": "postdoc", "source": "cv", "url": "https://carlosoliver.co/assets/cv_full.pdf"}
+{"prof": "p6660", "rel": "advisor", "name": "Jian Liu", "type": "phd", "source": "homepage", "url": "https://irfanmee.github.io"}
+{"prof": "p6669", "rel": "advisor", "name": "Kentaro Toyama", "type": "phd", "source": "homepage", "url": "http://www.ihudiyawilliams.com"}
+{"prof": "p6672", "rel": "advisor", "name": "Milind Kulkarni", "type": "phd", "source": "homepage", "url": "https://kirshanthans.github.io"}
+{"prof": "p6677", "rel": "advisor", "name": "Xiangyu Zhang", "type": "phd", "source": "homepage", "url": "https://answ.in"}
+{"prof": "p6679", "rel": "advisor", "name": "Mohit Iyyer", "type": "phd", "source": "cv", "url": "https://tuvllms.github.io/assets/pdf/cv.pdf"}
+{"prof": "p6688", "rel": "advisor", "name": "Martin Tompa", "type": "phd", "source": "cv", "url": "https://www.cse.wustl.edu/~jbuhler/vitae.html"}
+{"prof": "p6692", "rel": "advisor", "name": "Chunming Qiao", "type": "phd", "source": "homepage", "url": "https://yzhu39.github.io"}
+{"prof": "p6692", "rel": "advisor", "name": "Lu Su", "type": "phd", "source": "homepage", "url": "https://yzhu39.github.io"}
+{"prof": "p6694", "rel": "advisor", "name": "Shubhra Kanti", "type": "phd", "source": "homepage", "url": "https://souvika.github.io"}
+{"prof": "p6701", "rel": "advisor", "name": "Brian Levine", "type": "phd", "source": "homepage", "url": "http://rjwalls.github.io"}
+{"prof": "p6704", "rel": "advisor", "name": "Vinod Vaikuntanathan", "type": "phd", "source": "homepage", "url": "https://sotiraki.com"}
+{"prof": "p6705", "rel": "advisor", "name": "Constantinos Daskalakis", "type": "phd", "source": "homepage", "url": "https://mzampet.com"}
+{"prof": "p6707", "rel": "advisor", "name": "Samir Khuller", "type": "postdoc", "source": "homepage", "url": "https://quanquancliu.com"}
+{"prof": "p6707", "rel": "advisor", "name": "Julian Shun", "type": "postdoc", "source": "homepage", "url": "https://quanquancliu.com"}
+{"prof": "p6707", "rel": "advisor", "name": "Erik D. Demaine", "type": "phd", "source": "homepage", "url": "https://quanquancliu.com"}
+{"prof": "p6707", "rel": "advisor", "name": "Julian Shun", "type": "phd", "source": "homepage", "url": "https://quanquancliu.com"}

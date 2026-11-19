@@ -191,7 +191,7 @@ def load_graph():
     names = {n['id']: n['n'] for n in g['nodes']}
     known = {key(n) for n in names.values()}
     trusted = defaultdict(set)
-    for a, s, typ, src, url, disputed in g['edges']:
+    for a, s, typ, src, *_ in g["edges"]:
         if typ == 'phd' and set(src.split('+')) & {'wikidata', 'wikipedia'}:
             trusted[s].add(key(names[a]))
             trusted[s].add('last:' + fold(names[a]).split()[-1])

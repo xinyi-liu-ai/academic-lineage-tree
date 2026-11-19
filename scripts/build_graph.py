@@ -31,7 +31,8 @@ def load_profs():
     profs = []
     for i, r in enumerate(rows):
         profs.append(dict(id=f'p{i}', name=display_name(s(r[1])), dblp=s(r[1]), uni=s(r[0]), homepage=s(r[2]),
-                          domain=s(r[3]), scholar=s(r[4]), cv=s(r[5]), phd_raw=s(r[6]), post_raw=s(r[7])))
+                          domain=s(r[3]), scholar=s(r[4]), cv=s(r[5]), phd_raw=s(r[6]), post_raw=s(r[7]),
+                          status=s(r[8]) if len(r) > 8 else 'current', now_at=s(r[9]) if len(r) > 9 else ''))
     return profs
 
 
@@ -128,9 +129,13 @@ def main():
                 g.add_edge(g.resolve(nm), p['id'], typ, 'sheet')
                 stats['sheet_' + typ] += 1
 
-    # 2) 自动补全的关系
+    # 2) 自动补全的关系（dblp 推断最后处理，见 2b）
+    inferred = []
     for f in sorted(glob.glob(os.path.join(ROOT, 'data/enrich/*.jsonl'))):
         recs = [json.loads(line) for line in open(f, encoding='utf-8')]
+        if os.path.basename(f) == 'dblp.jsonl':
+            inferred = recs
+            continue
         cleaned = []
         for r in recs:
             if r['source'] == 'wikipedia':  # 信息框纯文本字段里可能有 "A and B"、<br>、年份
@@ -152,6 +157,26 @@ def main():
             else:
                 g.add_edge(r['prof'], other, r.get('type', 'phd'), r['source'], r.get('url', ''))
             stats[r['source'] + '_' + r['rel']] += 1
+
+    # 2b) dblp 合作论文推断：与已有导师一致时作为佐证；只有其他来源都没有 PhD 导师时才新增
+    has_phd = defaultdict(set)
+    for e in g.edges.values():
+        if e['t'] == 'phd':
+            has_phd[e['s']].add(e['a'])
+    for r in inferred:
+        stu = r['prof']
+        if has_phd.get(stu):
+            match = [a for a in has_phd[stu] if key(g.nodes[a]['name']) == key(r['name'])]
+            if match:
+                g.edges[(match[0], stu, 'phd')]['src'].append('dblp')
+                stats['dblp_confirms'] += 1
+            continue
+        other = r.get('other_prof') or g.resolve(r['name'], r.get('ext_id'))
+        if g.nodes[other].get('ext') and not g.nodes[other].get('url'):
+            g.nodes[other]['url'] = r['url']
+        g.add_edge(other, stu, 'phd', 'dblp', r['url'])
+        g.edges[(other, stu, 'phd')]['note'] = r.get('note', '')
+        stats['dblp_advisor'] += 1
 
     # 3) 人工表的 PhD 导师若与 Wikidata / 维基百科不一致，标为存疑
     trusted = defaultdict(set)
@@ -181,18 +206,23 @@ def main():
                 d['g'] = n['scholar']
             if n['cv']:
                 d['c'] = n['cv']
+            if n.get('status') == 'former':  # 已不在 CSRankings 名单内的学校（调走、退休、荣休）
+                d['o'] = 1
+                if n.get('now_at'):
+                    d['now'] = n['now_at']
             d['d'] = [a for a, _ in parse_domains(n['domain'])]
             d['a'] = sorted({b for _, b in parse_domains(n['domain'])})
             out_nodes.append(d)
-    # 边: [导师, 学生, 类型, 来源, 出处链接, 是否存疑]
+    # 边: [导师, 学生, 类型, 来源, 出处链接, 是否存疑(, 推断依据)]
     edges = [[e['a'], e['s'], e['t'], '+'.join(e['src']), e.get('url', ''), int(bool(e.get('disputed')))]
-             for e in g.edges.values()]
+             + ([e['note']] if e.get('note') else []) for e in g.edges.values()]
 
     prof_ids = {p['id'] for p in profs}
     with_adv = {e['s'] for e in g.edges.values() if e['s'] in prof_ids and not e.get('disputed')}
     with_stu = {e['a'] for e in g.edges.values() if e['a'] in prof_ids}
     prof_prof = sum(1 for e in g.edges.values() if e['a'] in prof_ids and e['s'] in prof_ids)
-    summary = dict(professors=len(profs), with_advisor=len(with_adv), with_student=len(with_stu),
+    summary = dict(professors=len(profs), current_faculty=sum(1 for p in profs if p.get('status') != 'former'),
+                   current_with_advisor=sum(1 for p in profs if p.get('status') != 'former' and p['id'] in with_adv), with_advisor=len(with_adv), with_student=len(with_stu),
                    external_people=sum(1 for n in out_nodes if n.get('x')), edges=len(edges),
                    prof_to_prof_edges=prof_prof, by_source=dict(stats))
 

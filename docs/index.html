@@ -3,96 +3,100 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Academic Lineage Tree</title>
-  <meta name="description" content="Explore the PhD advisor lineage of 5,000+ computer science professors at US universities: who trained them, and whom they trained.">
+  <title>Academic Lineage Family Tree</title>
+  <meta name="description" content="Explore the PhD advisor lineage of 6,000+ computer science professors at US universities: who trained them, and whom they trained.">
   <link rel="icon" type="image/png" href="assets/tree-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,700;1,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="#/" aria-label="Academic Lineage Tree home">
-      <img src="assets/tree-icon.png" alt="" width="32" height="32">
-      <span>Academic Lineage Tree</span>
-    </a>
-    <div class="search-wrap">
-      <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-      <input id="q" type="search" placeholder="Search a professor, e.g. Michael I. Jordan" autocomplete="off" aria-label="Search professors">
-      <ul id="suggest" class="suggest" role="listbox" hidden></ul>
-    </div>
-    <button id="aboutBtn" class="ghost" type="button">About the data</button>
+  <header class="nav">
+    <a class="logo" href="#/" aria-label="Academic Lineage Family Tree home"><img src="assets/tree-icon.png" alt="" width="40" height="40"></a>
+    <nav>
+      <a href="#/" data-nav="home">HOME</a>
+      <a href="#/about" data-nav="about">ABOUT</a>
+      <a href="#/favorites" class="pill" data-nav="favorites">FAVORITES <span id="favCount" class="fav-count" hidden></span></a>
+    </nav>
   </header>
 
-  <main class="layout">
-    <button id="filterToggle" class="ghost filter-toggle" type="button" aria-expanded="false" aria-controls="sidebar">Filters</button>
-    <aside class="sidebar" id="sidebar">
-      <section class="panel">
-        <h2>Research area</h2>
-        <div id="areas" class="areas"></div>
-      </section>
-      <section class="panel">
-        <div class="panel-head">
-          <h2>Institution</h2>
-          <span class="links"><button type="button" class="link" id="uniAll">All</button> · <button type="button" class="link" id="uniNone">Clear</button></span>
-        </div>
-        <input id="uniQ" type="search" placeholder="Filter institutions" aria-label="Filter institutions">
-        <div id="unis" class="uni-list"></div>
-      </section>
-      <section class="panel">
-        <label class="check"><input type="checkbox" id="onlyKnown"> Only show professors with known advisors</label>
-      </section>
-    </aside>
+  <main>
+    <!-- 首页 / 搜索页 -->
+    <section id="view-home" class="view hero" hidden>
+      <h1 class="title">Academic Lineage<br><span>Family<img src="assets/icons/icon_whiteleaf.png" alt="" class="leaf">Tree</span></h1>
+      <div class="search-card" data-search="home"></div>
+      <p class="hero-stats" id="heroStats"></p>
+    </section>
 
-    <section class="results" id="results">
+    <!-- 结果页 -->
+    <section id="view-results" class="view results" hidden>
+      <div class="search-card compact" data-search="results"></div>
       <div class="results-head">
-        <h2 id="resTitle">Professors</h2>
-        <select id="sort" aria-label="Sort results">
-          <option value="lineage">Most connected</option>
-          <option value="name">Name A–Z</option>
-          <option value="uni">Institution</option>
-        </select>
-      </div>
-      <ol id="resList" class="res-list"></ol>
-      <button id="more" class="ghost wide" type="button" hidden>Show more</button>
-    </section>
-
-    <section class="tree-view" id="treeView" hidden>
-      <div class="tree-toolbar">
-        <button id="back" class="ghost" type="button">← Results</button>
-        <div class="gen">
-          <label>Ancestors <select id="up"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>6</option></select></label>
-          <label>Descendants <select id="down"><option>1</option><option selected>2</option><option>3</option></select></label>
-        </div>
-        <div class="zoom">
-          <button id="zin" class="icon" type="button" aria-label="Zoom in">+</button>
-          <button id="zout" class="icon" type="button" aria-label="Zoom out">−</button>
-          <button id="zfit" class="icon" type="button" aria-label="Fit to screen">⤢</button>
+        <h2 id="resCount"></h2>
+        <div class="results-tools">
+          <label class="name-filter"><img src="assets/icons/icon_search.png" alt=""><input id="nameFilter" type="search" placeholder="Filter by name" aria-label="Filter results by name"></label>
+          <label class="toggle"><input type="checkbox" id="onlyKnown"> Known advisor only</label>
+          <label class="toggle"><input type="checkbox" id="showFormer"> Include former faculty</label>
+          <select id="sort" aria-label="Sort results">
+            <option value="lineage">Most connected</option>
+            <option value="name">Name</option>
+            <option value="uni">Institution</option>
+          </select>
         </div>
       </div>
-      <div class="legend">
-        <span><i class="dot prof"></i>Professor in dataset</span>
-        <span><i class="dot ext"></i>Other researcher</span>
-        <span><i class="ln phd"></i>PhD advisor</span>
-        <span><i class="ln postdoc"></i>Postdoc advisor</span>
-        <span><i class="ln disputed"></i>Unverified</span>
-        <span class="hint">← advisors · students →</span>
-      </div>
-      <div class="canvas-wrap"><svg id="canvas" role="img" aria-label="Lineage tree"></svg></div>
+      <ul id="cards" class="cards"></ul>
+      <button id="more" class="btn-light" type="button" hidden>Show more</button>
     </section>
 
-    <aside class="detail" id="detail" hidden></aside>
+    <!-- 收藏页 -->
+    <section id="view-favorites" class="view results" hidden>
+      <div class="results-head"><h2>Favorites</h2></div>
+      <p class="muted">Professors you star are kept in this browser only.</p>
+      <ul id="favCards" class="cards"></ul>
+    </section>
+
+    <!-- 谱系树页 -->
+    <section id="view-tree" class="view tree-page" hidden>
+      <div class="tree-shell" id="treeShell">
+        <div class="tree-top">
+          <button id="backBtn" class="btn-dark" type="button">Back</button>
+          <div class="tree-title" id="treeTitle"></div>
+          <div class="tree-tools">
+            <button type="button" id="zoomIn" title="Zoom in"><img src="assets/icons/icon_zoomin.png" alt="Zoom in"></button>
+            <button type="button" id="zoomOut" title="Zoom out"><img src="assets/icons/icon_zoomout.png" alt="Zoom out"></button>
+            <button type="button" id="fullBtn" title="Full screen"><img src="assets/icons/icon_wholescreen.png" alt="Full screen"></button>
+          </div>
+        </div>
+        <div class="tree-stage">
+          <button class="gen-arrow left" id="genLeft" type="button" aria-label="Show earlier generations"></button>
+          <div class="tree-viewport" id="viewport">
+            <div class="tree-scale" id="scaleBox">
+              <svg class="links" id="links" aria-hidden="true"></svg>
+              <div class="bands" id="bands"></div>
+            </div>
+          </div>
+          <button class="gen-arrow right" id="genRight" type="button" aria-label="Show later generations"></button>
+          <aside class="drawer" id="drawer" aria-live="polite"></aside>
+        </div>
+        <div class="tree-legend">
+          <span><i class="ln phd"></i>PhD advisor</span>
+          <span><i class="ln postdoc"></i>Postdoc advisor</span>
+          <span><i class="ln inferred"></i>Inferred</span>
+          <span><i class="ln disputed"></i>Unverified</span>
+          <span class="hint">Click a person for details · double-click to re-center · ← advisors · students →</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 关于 -->
+    <section id="view-about" class="view about" hidden>
+      <article class="about-card" id="aboutBody"></article>
+    </section>
   </main>
 
-  <dialog id="about">
-    <form method="dialog"><button class="close" aria-label="Close">×</button></form>
-    <h2>About the data</h2>
-    <div id="aboutBody"></div>
-  </dialog>
-
   <div id="tip" class="tip" hidden></div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+  <noscript><p class="noscript">This site needs JavaScript to draw the lineage tree.</p></noscript>
   <script src="app.js"></script>
 </body>
 </html>

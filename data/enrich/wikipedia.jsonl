@@ -33,8 +33,7 @@
 {"prof": "p639", "rel": "student", "name": "Cal Newport", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Cal_Newport"}
 {"prof": "p639", "rel": "student", "name": "George Varghese", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/George_Varghese"}
 {"prof": "p321", "rel": "advisor", "name": "Silvio Micali", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Silvio_Micali"}
-{"prof": "p383", "rel": "advisor", "name": "Manfred K. Warmuth", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Manfred_K._Warmuth"}
-{"prof": "p383", "rel": "advisor", "name": "David Haussler", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Haussler"}
+{"prof": "p292", "rel": "advisor", "name": "Barry Mazur", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Barry_Mazur"}
 {"prof": "p48", "rel": "advisor", "name": "Robin Cooper and Graeme Ritchie", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Alan_W._Black"}
 {"prof": "p501", "rel": "advisor", "name": "Mitchel Resnick", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Mitchel_Resnick"}
 {"prof": "p556", "rel": "advisor", "name": "John Hopcroft", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/John_Hopcroft"}
@@ -59,7 +58,8 @@
 {"prof": "p174", "rel": "student", "name": "Jing Gao", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jing_Gao_(computer_scientist)"}
 {"prof": "p174", "rel": "student", "name": "Jian Pei", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jian_Pei"}
 {"prof": "p174", "rel": "student", "name": "Osmar R. Zaiane", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Osmar_R._Zaiane"}
-{"prof": "p292", "rel": "advisor", "name": "Barry Mazur", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Barry_Mazur"}
+{"prof": "p383", "rel": "advisor", "name": "Manfred K. Warmuth", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Manfred_K._Warmuth"}
+{"prof": "p383", "rel": "advisor", "name": "David Haussler", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Haussler"}
 {"prof": "p281", "rel": "advisor", "name": "John Henry Holland", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/John_Henry_Holland"}
 {"prof": "p281", "rel": "advisor", "name": "Carl Hewitt", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Carl_Hewitt"}
 {"prof": "p309", "rel": "advisor", "name": "Erik Granum", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Erik_Granum"}
@@ -351,15 +351,15 @@
 {"prof": "p860", "rel": "student", "name": "Mike Bostock", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Mike_Bostock"}
 {"prof": "p860", "rel": "student", "name": "Sean Kandel", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Sean_Kandel"}
 {"prof": "p951", "rel": "advisor", "name": "David Patterson", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Patterson_(computer_scientist)"}
-{"prof": "p1349", "rel": "advisor", "name": "Atul Prakash", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Patrick_Drew_McDaniel"}
-{"prof": "p1349", "rel": "student", "name": "William Enck", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Patrick_Drew_McDaniel"}
-{"prof": "p1349", "rel": "student", "name": "Kevin Butler", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Patrick_Drew_McDaniel"}
-{"prof": "p1349", "rel": "student", "name": "Nicolas Papernot", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Patrick_Drew_McDaniel"}
-{"prof": "p1349", "rel": "student", "name": "Fr. Boniface Hicks", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Patrick_Drew_McDaniel"}
-{"prof": "p1349", "rel": "student", "name": "Patrick Traynor", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Patrick_Drew_McDaniel"}
-{"prof": "p1349", "rel": "student", "name": "Z. Berkay Celik", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Patrick_Drew_McDaniel"}
-{"prof": "p1349", "rel": "student", "name": "Ryan Sheatsley", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Patrick_Drew_McDaniel"}
-{"prof": "p1349", "rel": "student", "name": "Tom Moyer", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Patrick_Drew_McDaniel"}
+{"prof": "p6616", "rel": "advisor", "name": "Atul Prakash", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Patrick_Drew_McDaniel"}
+{"prof": "p6616", "rel": "student", "name": "William Enck", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Patrick_Drew_McDaniel"}
+{"prof": "p6616", "rel": "student", "name": "Kevin Butler", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Patrick_Drew_McDaniel"}
+{"prof": "p6616", "rel": "student", "name": "Nicolas Papernot", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Patrick_Drew_McDaniel"}
+{"prof": "p6616", "rel": "student", "name": "Fr. Boniface Hicks", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Patrick_Drew_McDaniel"}
+{"prof": "p6616", "rel": "student", "name": "Patrick Traynor", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Patrick_Drew_McDaniel"}
+{"prof": "p6616", "rel": "student", "name": "Z. Berkay Celik", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Patrick_Drew_McDaniel"}
+{"prof": "p6616", "rel": "student", "name": "Ryan Sheatsley", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Patrick_Drew_McDaniel"}
+{"prof": "p6616", "rel": "student", "name": "Tom Moyer", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Patrick_Drew_McDaniel"}
 {"prof": "p825", "rel": "advisor", "name": "Jon Kleinberg", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jon_Kleinberg"}
 {"prof": "p931", "rel": "student", "name": "Dan Klein", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Dan_Klein"}
 {"prof": "p931", "rel": "student", "name": "Sepandar Kamvar", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Sepandar_Kamvar"}
@@ -383,19 +383,16 @@
 {"prof": "p821", "rel": "advisor", "name": "Andrew B. Kahng", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Andrew_B._Kahng"}
 {"prof": "p821", "rel": "student", "name": "Smita Krishnaswamy", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Smita_Krishnaswamy"}
 {"prof": "p848", "rel": "advisor", "name": "Geoffrey J. Gordon", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Geoffrey_J._Gordon"}
-{"prof": "p1509", "rel": "advisor", "name": "Steven Strogatz", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Steven_Strogatz"}
-{"prof": "p1559", "rel": "advisor", "name": "David Parnas", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Parnas"}
-{"prof": "p1731", "rel": "advisor", "name": "Jack Schwartz", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jack_Schwartz"}
-{"prof": "p1731", "rel": "student", "name": "Rosa Donat", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Rosa_Donat"}
-{"prof": "p1731", "rel": "student", "name": "Ron Fedkiw", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ron_Fedkiw"}
-{"prof": "p1731", "rel": "student", "name": "Chiu-Yen Kao", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Chiu-Yen_Kao"}
-{"prof": "p1731", "rel": "student", "name": "Chi-Wang Shu", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Chi-Wang_Shu"}
-{"prof": "p1544", "rel": "advisor", "name": "David Shmoys", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Shmoys"}
-{"prof": "p2034", "rel": "advisor", "name": "Zvi Galil", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Zvi_Galil"}
-{"prof": "p1694", "rel": "advisor", "name": "Michael Griffiths (1974)", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Patrick_Cousot"}
-{"prof": "p1694", "rel": "advisor", "name": "<BR>Philippe Jorrand (1978)", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Patrick_Cousot"}
-{"prof": "p1551", "rel": "advisor", "name": "Jeffrey Ullman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jeffrey_Ullman"}
-{"prof": "p1522", "rel": "advisor", "name": "Michael I. Jordan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Michael_I._Jordan"}
+{"prof": "p1493", "rel": "advisor", "name": "Robert Harper", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Robert_Harper_(computer_scientist)"}
+{"prof": "p1493", "rel": "advisor", "name": "John C. Reynolds", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/John_C._Reynolds"}
+{"prof": "p1715", "rel": "advisor", "name": "Silvio Micali", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Silvio_Micali"}
+{"prof": "p1715", "rel": "student", "name": "Jonathan Katz", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jonathan_Katz_(computer_scientist)"}
+{"prof": "p2007", "rel": "advisor", "name": "R. M. Wilson", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/R._M._Wilson"}
+{"prof": "p1751", "rel": "advisor", "name": "Dana H. Ballard", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Dana_H._Ballard"}
+{"prof": "p1979", "rel": "advisor", "name": "Heisuke Hironaka", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Heisuke_Hironaka"}
+{"prof": "p1979", "rel": "student", "name": "Guillermo Sapiro", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Guillermo_Sapiro"}
+{"prof": "p1741", "rel": "advisor", "name": "Shimon Ullman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Shimon_Ullman"}
+{"prof": "p1741", "rel": "advisor", "name": "J. Michael Brady", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/J._Michael_Brady"}
 {"prof": "p790", "rel": "advisor", "name": "Karrie Karahalios", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Karrie_Karahalios"}
 {"prof": "p778", "rel": "advisor", "name": "Jennifer Mankoff", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jennifer_Mankoff"}
 {"prof": "p1217", "rel": "advisor", "name": "Bruce A. Craig", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Bruce_A._Craig_(statistician)"}
@@ -403,57 +400,74 @@
 {"prof": "p882", "rel": "advisor", "name": "Josep Torrellas", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Josep_Torrellas"}
 {"prof": "p929", "rel": "advisor", "name": "Pietro Perona", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Pietro_Perona"}
 {"prof": "p936", "rel": "advisor", "name": "Nicholas Roy", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Nicholas_Roy"}
-{"prof": "p1622", "rel": "advisor", "name": "Robert W. Floyd", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Robert_W._Floyd"}
-{"prof": "p1622", "rel": "student", "name": "Thomas Lengauer", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Thomas_Lengauer"}
-{"prof": "p1622", "rel": "student", "name": "Monika Henzinger", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Monika_Henzinger"}
-{"prof": "p1622", "rel": "student", "name": "Ramesh Sitaraman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ramesh_Sitaraman"}
-{"prof": "p1622", "rel": "student", "name": "Daniel Sleator", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Daniel_Sleator"}
-{"prof": "p1622", "rel": "student", "name": "Jeff Westbrook", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jeff_Westbrook"}
-{"prof": "p1862", "rel": "advisor", "name": "Elliott Ward Cheney Jr.", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Elliott_Ward_Cheney_Jr."}
-{"prof": "p1732", "rel": "advisor", "name": "Leonard Strauss", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Judea_Pearl"}
-{"prof": "p1732", "rel": "advisor", "name": "Leonard Bergstein", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Judea_Pearl"}
-{"prof": "p1732", "rel": "student", "name": "Rina Dechter", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Rina_Dechter"}
-{"prof": "p1732", "rel": "student", "name": "Hector Geffner", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Hector_Geffner"}
-{"prof": "p1493", "rel": "advisor", "name": "Robert Harper", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Robert_Harper_(computer_scientist)"}
-{"prof": "p1493", "rel": "advisor", "name": "John C. Reynolds", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/John_C._Reynolds"}
 {"prof": "p1889", "rel": "advisor", "name": "Keith Clark", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Keith_Clark_(computer_scientist)"}
-{"prof": "p1540", "rel": "advisor", "name": "Kenneth Steiglitz", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Kenneth_Steiglitz"}
-{"prof": "p1540", "rel": "student", "name": "Constantinos Daskalakis", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Constantinos_Daskalakis"}
-{"prof": "p1540", "rel": "student", "name": "Paris Kanellakis", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Paris_Kanellakis"}
-{"prof": "p1540", "rel": "student", "name": "Elias Koutsoupias", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Elias_Koutsoupias"}
-{"prof": "p1540", "rel": "student", "name": "Joseph S. B. Mitchell", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Joseph_S._B._Mitchell"}
-{"prof": "p1540", "rel": "student", "name": "Chris Umans", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Chris_Umans"}
-{"prof": "p1540", "rel": "student", "name": "Yaron Singer", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Yaron_Singer"}
 {"prof": "p1778", "rel": "advisor", "name": "K. Mani Chandy", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/K._Mani_Chandy"}
 {"prof": "p1778", "rel": "student", "name": "Zhi-Li Zhang", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Zhi-Li_Zhang"}
-{"prof": "p1715", "rel": "advisor", "name": "Silvio Micali", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Silvio_Micali"}
-{"prof": "p1715", "rel": "student", "name": "Jonathan Katz", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jonathan_Katz_(computer_scientist)"}
-{"prof": "p2007", "rel": "advisor", "name": "R. M. Wilson", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/R._M._Wilson"}
-{"prof": "p1582", "rel": "advisor", "name": "Umesh Vazirani", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Umesh_Vazirani"}
-{"prof": "p1582", "rel": "student", "name": "Subhash Khot", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Subhash_Khot"}
-{"prof": "p1582", "rel": "student", "name": "Elad Hazan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Elad_Hazan"}
-{"prof": "p1582", "rel": "student", "name": "Rong Ge", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Rong_Ge"}
+{"prof": "p1542", "rel": "advisor", "name": "Mitch Marcus", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Michael_Collins_(computational_linguist)"}
+{"prof": "p1616", "rel": "advisor", "name": "David Robert Nelson", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Robert_Nelson"}
 {"prof": "p1432", "rel": "advisor", "name": "John Edward Hopcroft", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/John_Edward_Hopcroft"}
 {"prof": "p1432", "rel": "student", "name": "Tamal Dey", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Tamal_Dey"}
 {"prof": "p1432", "rel": "student", "name": "Yongjie Jessica Zhang", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Yongjie_Jessica_Zhang"}
 {"prof": "p2083", "rel": "advisor", "name": "Tomás Lozano-Pérez", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Tomás_Lozano-Pérez"}
-{"prof": "p1751", "rel": "advisor", "name": "Dana H. Ballard", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Dana_H._Ballard"}
-{"prof": "p1979", "rel": "advisor", "name": "Heisuke Hironaka", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Heisuke_Hironaka"}
-{"prof": "p1979", "rel": "student", "name": "Guillermo Sapiro", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Guillermo_Sapiro"}
-{"prof": "p1741", "rel": "advisor", "name": "Shimon Ullman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Shimon_Ullman"}
-{"prof": "p1741", "rel": "advisor", "name": "J. Michael Brady", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/J._Michael_Brady"}
-{"prof": "p1542", "rel": "advisor", "name": "Mitch Marcus", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Michael_Collins_(computational_linguist)"}
-{"prof": "p1616", "rel": "advisor", "name": "David Robert Nelson", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Robert_Nelson"}
-{"prof": "p1573", "rel": "advisor", "name": "James Kurose", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/James_Kurose"}
 {"prof": "p2074", "rel": "advisor", "name": "Micha Sharir", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Micha_Sharir"}
 {"prof": "p1847", "rel": "advisor", "name": "Rodney Brooks", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Rodney_Brooks"}
 {"prof": "p1630", "rel": "advisor", "name": "Russ Altman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Russ_Altman"}
 {"prof": "p1630", "rel": "advisor", "name": "David Botstein", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Botstein"}
 {"prof": "p1630", "rel": "student", "name": "Curtis Huttenhower", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Curtis_Huttenhower"}
 {"prof": "p1936", "rel": "advisor", "name": "Herbert Edelsbrunner", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Herbert_Edelsbrunner"}
+{"prof": "p1850", "rel": "advisor", "name": "Abeer Alwan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Abeer_Alwan"}
+{"prof": "p1554", "rel": "advisor", "name": "Andy van Dam", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Andy_van_Dam"}
+{"prof": "p1554", "rel": "student", "name": "Lauren Wilcox", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Lauren_Wilcox"}
+{"prof": "p1518", "rel": "advisor", "name": "Geoffrey Hinton", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Geoffrey_Hinton"}
+{"prof": "p1865", "rel": "advisor", "name": "Felix Zajac", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Francisco_Valero-Cuevas"}
+{"prof": "p2006", "rel": "advisor", "name": "Rodney M. Goodman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Padhraic_Smyth"}
+{"prof": "p1843", "rel": "advisor", "name": "Richard Taylor", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Richard_Taylor_(computer_scientist)"}
+{"prof": "p1843", "rel": "student", "name": "Chris Mattmann", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Chris_Mattmann"}
+{"prof": "p1843", "rel": "student", "name": "Yuriy Brun", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Yuriy_Brun"}
+{"prof": "p1776", "rel": "advisor", "name": "Harrick M. Vin", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Prashant_Shenoy"}
+{"prof": "p1987", "rel": "advisor", "name": "Deborah Estrin", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Deborah_Estrin"}
+{"prof": "p1445", "rel": "advisor", "name": "Hans-Hellmut Nagel", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Kostas_Daniilidis"}
+{"prof": "p1502", "rel": "advisor", "name": "Gerald Quentin Maguire", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jonathan_M._Smith"}
+{"prof": "p1401", "rel": "advisor", "name": "Srinivasan Seshan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Srinivasan_Seshan"}
+{"prof": "p1517", "rel": "advisor", "name": "David Messerschmitt", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Messerschmitt"}
+{"prof": "p1517", "rel": "advisor", "name": "David Messerschmitt", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Messerschmitt"}
+{"prof": "p2090", "rel": "advisor", "name": "Efthimios Kaxiras", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Efthimios_Kaxiras"}
+{"prof": "p2090", "rel": "advisor", "name": "Hanspeter Pfister", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Hanspeter_Pfister"}
+{"prof": "p1575", "rel": "advisor", "name": "Michael J. Fischer", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Michael_J._Fischer"}
+{"prof": "p2075", "rel": "advisor", "name": "Robert Schapire", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Robert_Schapire"}
+{"prof": "p2075", "rel": "advisor", "name": "Ingrid Daubechies", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ingrid_Daubechies"}
+{"prof": "p1710", "rel": "advisor", "name": "Jan Biemond", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Mihaela_van_der_Schaar"}
+{"prof": "p1857", "rel": "advisor", "name": "Giacomo Fiumara", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Emilio_Ferrara"}
+{"prof": "p1857", "rel": "advisor", "name": "Alessandro Provetti", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Emilio_Ferrara"}
+{"prof": "p1448", "rel": "advisor", "name": "S. Shankar Sastry", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/S._Shankar_Sastry"}
+{"prof": "p1618", "rel": "advisor", "name": "David Mazières", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Michael_J._Freedman"}
+{"prof": "p1676", "rel": "advisor", "name": "Yossi Azar", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Oded_Regev_(computer_scientist)"}
+{"prof": "p1977", "rel": "advisor", "name": "Tim Teitelbaum", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Tim_Teitelbaum"}
+{"prof": "p1435", "rel": "advisor", "name": "Ran Raz", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ran_Raz"}
+{"prof": "p1881", "rel": "advisor", "name": "Anant Agarwal", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Anant_Agarwal"}
+{"prof": "p1827", "rel": "advisor", "name": "David Tse", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Tse"}
+{"prof": "p1593", "rel": "advisor", "name": "Fei-Fei Li", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Fei-Fei_Li"}
+{"prof": "p1595", "rel": "advisor", "name": "Joshua Tenenbaum", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Joshua_Tenenbaum"}
+{"prof": "p1928", "rel": "advisor", "name": "Michael O. Rabin", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Michael_O._Rabin"}
+{"prof": "p2102", "rel": "advisor", "name": "Harry Perros", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Alicia_Nicki_Washington"}
+{"prof": "p1725", "rel": "advisor", "name": "Craig Chambers", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Craig_Chambers"}
+{"prof": "p1685", "rel": "student", "name": "Carol Friedman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Carol_Friedman"}
+{"prof": "p1685", "rel": "student", "name": "Heng Ji", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Heng_Ji"}
+{"prof": "p1773", "rel": "advisor", "name": "Nenad Medvidović", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Nenad_Medvidović"}
+{"prof": "p1573", "rel": "advisor", "name": "James Kurose", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/James_Kurose"}
 {"prof": "p1375", "rel": "advisor", "name": "Sau Lan Wu", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Sau_Lan_Wu"}
 {"prof": "p1588", "rel": "advisor", "name": "Thomas E. Anderson", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Thomas_E._Anderson"}
 {"prof": "p1588", "rel": "student", "name": "Kevin Skadron", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Kevin_Skadron"}
+{"prof": "p2025", "rel": "advisor", "name": "Alexander L. Wolf", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/André_van_der_Hoek"}
+{"prof": "p1408", "rel": "advisor", "name": "Gerald DeJong", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Raymond_J._Mooney"}
+{"prof": "p1620", "rel": "advisor", "name": "David Blei", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Blei"}
+{"prof": "p1701", "rel": "advisor", "name": "d:Q58783901", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/d:Q58783901"}
+{"prof": "p1940", "rel": "advisor", "name": "Atul Prakash", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Atul_Prakash"}
+{"prof": "p1452", "rel": "advisor", "name": "Miles Osborne", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Miles_Osborne"}
+{"prof": "p1452", "rel": "advisor", "name": "Mark Steedman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Mark_Steedman"}
+{"prof": "p1567", "rel": "advisor", "name": "Hector Garcia-Molina", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Hector_Garcia-Molina"}
+{"prof": "p1567", "rel": "student", "name": "Panos Ipeirotis", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Panos_Ipeirotis"}
+{"prof": "p2055", "rel": "advisor", "name": "Kaushik Roy", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Kaushik_Roy"}
 {"prof": "p1934", "rel": "advisor", "name": "Samuel Bergman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Arie_E._Kaufman"}
 {"prof": "p1934", "rel": "student", "name": "Hanspeter Pfister", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Hanspeter_Pfister"}
 {"prof": "p1934", "rel": "student", "name": "Claudio Silva", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Claudio_Silva_(computer_scientist)"}
@@ -464,6 +478,7 @@
 {"prof": "p1945", "rel": "advisor", "name": "Richard Fujimoto", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Samir_Das"}
 {"prof": "p1602", "rel": "advisor", "name": "Vitaly Shmatikov", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Vitaly_Shmatikov"}
 {"prof": "p1832", "rel": "advisor", "name": "John Tsitsiklis", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/John_Tsitsiklis"}
+{"prof": "p1832", "rel": "student", "name": "Kyoung Mu Lee", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Kyoung_Mu_Lee"}
 {"prof": "p1494", "rel": "advisor", "name": "Michael Ben-Or", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Michael_Ben-Or"}
 {"prof": "p1611", "rel": "advisor", "name": "Gerald Jay Sussman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Gerald_Jay_Sussman"}
 {"prof": "p1713", "rel": "advisor", "name": "Shafi Goldwasser", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Shafi_Goldwasser"}
@@ -481,85 +496,71 @@
 {"prof": "p1463", "rel": "student", "name": "Jennifer Wortman Vaughan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jennifer_Wortman_Vaughan"}
 {"prof": "p1394", "rel": "advisor", "name": "Manuela Veloso", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Manuela_Veloso"}
 {"prof": "p1988", "rel": "advisor", "name": "Jitendra Malik", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jitendra_Malik"}
+{"prof": "p1509", "rel": "advisor", "name": "Steven Strogatz", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Steven_Strogatz"}
+{"prof": "p1559", "rel": "advisor", "name": "David Parnas", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Parnas"}
+{"prof": "p1731", "rel": "advisor", "name": "Jack Schwartz", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jack_Schwartz"}
+{"prof": "p1731", "rel": "student", "name": "Rosa Donat", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Rosa_Donat"}
+{"prof": "p1731", "rel": "student", "name": "Ron Fedkiw", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ron_Fedkiw"}
+{"prof": "p1731", "rel": "student", "name": "Chiu-Yen Kao", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Chiu-Yen_Kao"}
+{"prof": "p1731", "rel": "student", "name": "Chi-Wang Shu", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Chi-Wang_Shu"}
+{"prof": "p1544", "rel": "advisor", "name": "David Shmoys", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Shmoys"}
+{"prof": "p2034", "rel": "advisor", "name": "Zvi Galil", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Zvi_Galil"}
 {"prof": "p1515", "rel": "advisor", "name": "Morris Halle", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Morris_Halle"}
+{"prof": "p1694", "rel": "advisor", "name": "Michael Griffiths (1974)", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Patrick_Cousot"}
+{"prof": "p1694", "rel": "advisor", "name": "<BR>Philippe Jorrand (1978)", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Patrick_Cousot"}
+{"prof": "p1551", "rel": "advisor", "name": "Jeffrey Ullman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jeffrey_Ullman"}
 {"prof": "p1699", "rel": "advisor", "name": "Charles Gregory Plaxton", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Charles_Gregory_Plaxton"}
 {"prof": "p1814", "rel": "advisor", "name": "Reid Simmons", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Sven_Koenig_(computer_scientist)"}
+{"prof": "p1522", "rel": "advisor", "name": "Michael I. Jordan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Michael_I._Jordan"}
 {"prof": "p1528", "rel": "advisor", "name": "Éva Tardos", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Éva_Tardos"}
 {"prof": "p2136", "rel": "advisor", "name": "Charles William Gear", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Charles_William_Gear"}
 {"prof": "p1673", "rel": "advisor", "name": "David S. Warren", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Juliana_Freire"}
 {"prof": "p2155", "rel": "advisor", "name": "Amihood Amir", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Martin_Farach-Colton"}
 {"prof": "p1647", "rel": "advisor", "name": "Arie Kaufman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Arie_Kaufman"}
 {"prof": "p2140", "rel": "advisor", "name": "Demetri Terzopoulos", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Demetri_Terzopoulos"}
-{"prof": "p1850", "rel": "advisor", "name": "Abeer Alwan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Abeer_Alwan"}
-{"prof": "p1554", "rel": "advisor", "name": "Andy van Dam", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Andy_van_Dam"}
-{"prof": "p1554", "rel": "student", "name": "Lauren Wilcox", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Lauren_Wilcox"}
-{"prof": "p1518", "rel": "advisor", "name": "Geoffrey Hinton", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Geoffrey_Hinton"}
-{"prof": "p1865", "rel": "advisor", "name": "Felix Zajac", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Francisco_Valero-Cuevas"}
-{"prof": "p2006", "rel": "advisor", "name": "Rodney M. Goodman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Padhraic_Smyth"}
-{"prof": "p1502", "rel": "advisor", "name": "Gerald Quentin Maguire", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jonathan_M._Smith"}
-{"prof": "p1843", "rel": "advisor", "name": "Richard Taylor", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Richard_Taylor_(computer_scientist)"}
-{"prof": "p1843", "rel": "student", "name": "Chris Mattmann", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Chris_Mattmann"}
-{"prof": "p1843", "rel": "student", "name": "Yuriy Brun", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Yuriy_Brun"}
-{"prof": "p1776", "rel": "advisor", "name": "Harrick M. Vin", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Prashant_Shenoy"}
-{"prof": "p1987", "rel": "advisor", "name": "Deborah Estrin", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Deborah_Estrin"}
-{"prof": "p1445", "rel": "advisor", "name": "Hans-Hellmut Nagel", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Kostas_Daniilidis"}
-{"prof": "p1401", "rel": "advisor", "name": "Srinivasan Seshan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Srinivasan_Seshan"}
-{"prof": "p1517", "rel": "advisor", "name": "David Messerschmitt", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Messerschmitt"}
-{"prof": "p1517", "rel": "advisor", "name": "David Messerschmitt", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Messerschmitt"}
-{"prof": "p1857", "rel": "advisor", "name": "Giacomo Fiumara", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Emilio_Ferrara"}
-{"prof": "p1857", "rel": "advisor", "name": "Alessandro Provetti", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Emilio_Ferrara"}
-{"prof": "p1448", "rel": "advisor", "name": "S. Shankar Sastry", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/S._Shankar_Sastry"}
-{"prof": "p2090", "rel": "advisor", "name": "Efthimios Kaxiras", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Efthimios_Kaxiras"}
-{"prof": "p2090", "rel": "advisor", "name": "Hanspeter Pfister", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Hanspeter_Pfister"}
-{"prof": "p1575", "rel": "advisor", "name": "Michael J. Fischer", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Michael_J._Fischer"}
-{"prof": "p1618", "rel": "advisor", "name": "David Mazières", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Michael_J._Freedman"}
-{"prof": "p1676", "rel": "advisor", "name": "Yossi Azar", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Oded_Regev_(computer_scientist)"}
-{"prof": "p2075", "rel": "advisor", "name": "Robert Schapire", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Robert_Schapire"}
-{"prof": "p2075", "rel": "advisor", "name": "Ingrid Daubechies", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ingrid_Daubechies"}
-{"prof": "p1710", "rel": "advisor", "name": "Jan Biemond", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Mihaela_van_der_Schaar"}
-{"prof": "p1685", "rel": "student", "name": "Carol Friedman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Carol_Friedman"}
-{"prof": "p1685", "rel": "student", "name": "Heng Ji", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Heng_Ji"}
-{"prof": "p1773", "rel": "advisor", "name": "Nenad Medvidović", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Nenad_Medvidović"}
-{"prof": "p1977", "rel": "advisor", "name": "Tim Teitelbaum", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Tim_Teitelbaum"}
-{"prof": "p1435", "rel": "advisor", "name": "Ran Raz", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ran_Raz"}
-{"prof": "p1881", "rel": "advisor", "name": "Anant Agarwal", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Anant_Agarwal"}
-{"prof": "p1827", "rel": "advisor", "name": "David Tse", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Tse"}
-{"prof": "p1593", "rel": "advisor", "name": "Fei-Fei Li", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Fei-Fei_Li"}
-{"prof": "p2025", "rel": "advisor", "name": "Alexander L. Wolf", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/André_van_der_Hoek"}
-{"prof": "p1595", "rel": "advisor", "name": "Joshua Tenenbaum", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Joshua_Tenenbaum"}
-{"prof": "p1701", "rel": "advisor", "name": "d:Q58783901", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/d:Q58783901"}
-{"prof": "p1928", "rel": "advisor", "name": "Michael O. Rabin", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Michael_O._Rabin"}
-{"prof": "p2102", "rel": "advisor", "name": "Harry Perros", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Alicia_Nicki_Washington"}
-{"prof": "p1725", "rel": "advisor", "name": "Craig Chambers", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Craig_Chambers"}
+{"prof": "p1622", "rel": "advisor", "name": "Robert W. Floyd", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Robert_W._Floyd"}
+{"prof": "p1622", "rel": "student", "name": "Thomas Lengauer", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Thomas_Lengauer"}
+{"prof": "p1622", "rel": "student", "name": "Monika Henzinger", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Monika_Henzinger"}
+{"prof": "p1622", "rel": "student", "name": "Ramesh Sitaraman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ramesh_Sitaraman"}
+{"prof": "p1622", "rel": "student", "name": "Daniel Sleator", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Daniel_Sleator"}
+{"prof": "p1622", "rel": "student", "name": "Jeff Westbrook", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jeff_Westbrook"}
+{"prof": "p1862", "rel": "advisor", "name": "Elliott Ward Cheney Jr.", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Elliott_Ward_Cheney_Jr."}
 {"prof": "p2823", "rel": "advisor", "name": "Umesh Vazirani", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Umesh_Vazirani"}
 {"prof": "p2823", "rel": "student", "name": "Venkatesan Guruswami", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Venkatesan_Guruswami"}
 {"prof": "p2823", "rel": "student", "name": "Benjamin Rossman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Benjamin_Rossman"}
 {"prof": "p2823", "rel": "student", "name": "Ryan O'Donnell", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ryan_O'Donnell_(computer_scientist)"}
 {"prof": "p2823", "rel": "student", "name": "Adam D. Smith", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Adam_D._Smith"}
+{"prof": "p1732", "rel": "advisor", "name": "Leonard Strauss", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Judea_Pearl"}
+{"prof": "p1732", "rel": "advisor", "name": "Leonard Bergstein", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Judea_Pearl"}
+{"prof": "p1732", "rel": "student", "name": "Rina Dechter", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Rina_Dechter"}
+{"prof": "p1732", "rel": "student", "name": "Hector Geffner", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Hector_Geffner"}
 {"prof": "p2838", "rel": "advisor", "name": "Mike Paterson", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Mike_Paterson"}
 {"prof": "p2838", "rel": "student", "name": "Mark Jerrum", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Mark_Jerrum"}
 {"prof": "p2838", "rel": "student", "name": "Michael Kearns", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Michael_Kearns_(computer_scientist)"}
 {"prof": "p2838", "rel": "student", "name": "Dan Roth", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Dan_Roth"}
+{"prof": "p1540", "rel": "advisor", "name": "Kenneth Steiglitz", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Kenneth_Steiglitz"}
+{"prof": "p1540", "rel": "student", "name": "Constantinos Daskalakis", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Constantinos_Daskalakis"}
+{"prof": "p1540", "rel": "student", "name": "Paris Kanellakis", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Paris_Kanellakis"}
+{"prof": "p1540", "rel": "student", "name": "Elias Koutsoupias", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Elias_Koutsoupias"}
+{"prof": "p1540", "rel": "student", "name": "Joseph S. B. Mitchell", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Joseph_S._B._Mitchell"}
+{"prof": "p1540", "rel": "student", "name": "Chris Umans", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Chris_Umans"}
+{"prof": "p1540", "rel": "student", "name": "Yaron Singer", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Yaron_Singer"}
 {"prof": "p2875", "rel": "advisor", "name": "Catriel Beeri", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Moshe_Vardi"}
 {"prof": "p2875", "rel": "student", "name": "Kristin Yvonne Rozier", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Kristin_Yvonne_Rozier"}
 {"prof": "p2984", "rel": "advisor", "name": "Andrew Casson", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Andrew_Casson"}
 {"prof": "p2700", "rel": "advisor", "name": "Michael Sipser", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Michael_Sipser"}
 {"prof": "p2700", "rel": "student", "name": "Nikhil Srivastava", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Nikhil_Srivastava"}
+{"prof": "p1582", "rel": "advisor", "name": "Umesh Vazirani", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Umesh_Vazirani"}
+{"prof": "p1582", "rel": "student", "name": "Subhash Khot", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Subhash_Khot"}
+{"prof": "p1582", "rel": "student", "name": "Elad Hazan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Elad_Hazan"}
+{"prof": "p1582", "rel": "student", "name": "Rong Ge", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Rong_Ge"}
 {"prof": "p2701", "rel": "advisor", "name": "Manuel Blum", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Manuel_Blum"}
 {"prof": "p2701", "rel": "student", "name": "Ehud Shapiro", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ehud_Shapiro"}
 {"prof": "p2298", "rel": "advisor", "name": "James Robertson", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Mary_Jane_Irwin"}
 {"prof": "p2657", "rel": "advisor", "name": "Gary Lindstrom", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Gary_Lindstrom"}
 {"prof": "p2657", "rel": "student", "name": "Mary Jean Harrold", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Mary_Jean_Harrold"}
 {"prof": "p2657", "rel": "student", "name": "Lori L. Pollock", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Lori_L._Pollock"}
-{"prof": "p1408", "rel": "advisor", "name": "Gerald DeJong", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Raymond_J._Mooney"}
-{"prof": "p1620", "rel": "advisor", "name": "David Blei", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Blei"}
 {"prof": "p2793", "rel": "advisor", "name": "Fabian Monrose", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Fabian_Monrose"}
-{"prof": "p1940", "rel": "advisor", "name": "Atul Prakash", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Atul_Prakash"}
-{"prof": "p1452", "rel": "advisor", "name": "Miles Osborne", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Miles_Osborne"}
-{"prof": "p1452", "rel": "advisor", "name": "Mark Steedman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Mark_Steedman"}
-{"prof": "p1567", "rel": "advisor", "name": "Hector Garcia-Molina", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Hector_Garcia-Molina"}
-{"prof": "p1567", "rel": "student", "name": "Panos Ipeirotis", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Panos_Ipeirotis"}
-{"prof": "p2055", "rel": "advisor", "name": "Kaushik Roy", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Kaushik_Roy"}
 {"prof": "p2829", "rel": "advisor", "name": "Joseph F. Traub", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Joseph_F._Traub"}
 {"prof": "p2829", "rel": "student", "name": "Brad Karp", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Brad_Karp_(computer_scientist)"}
 {"prof": "p2829", "rel": "student", "name": "Monica S. Lam", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Monica_S._Lam"}
@@ -636,7 +637,6 @@
 {"prof": "p2334", "rel": "student", "name": "Paulo Shakarian", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Paulo_Shakarian"}
 {"prof": "p2334", "rel": "student", "name": "Sibel Adalı", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Sibel_Adalı"}
 {"prof": "p2334", "rel": "student", "name": "Fatma Özcan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Fatma_Özcan"}
-{"prof": "p3569", "rel": "advisor", "name": "Whitman Richards", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Whitman_Richards"}
 {"prof": "p3947", "rel": "advisor", "name": "Mor Harchol-Balter", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Mor_Harchol-Balter"}
 {"prof": "p3583", "rel": "advisor", "name": "Robert B. McGhee", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Anil_K._Jain_(computer_scientist,_born_1948)"}
 {"prof": "p3946", "rel": "advisor", "name": "Jitendra Malik", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jitendra_Malik"}
@@ -648,9 +648,9 @@
 {"prof": "p3952", "rel": "advisor", "name": "Pravin Varaiya", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Pravin_Varaiya"}
 {"prof": "p3953", "rel": "advisor", "name": "Christos Papadimitriou", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Christos_Papadimitriou"}
 {"prof": "p3495", "rel": "advisor", "name": "James F. Allen", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/James_F._Allen_(computer_scientist)"}
-{"prof": "p3776", "rel": "advisor", "name": "H.L. Warren", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Cathy_H._Wu"}
 {"prof": "p3700", "rel": "advisor", "name": "Lev Nikolayevich Korolyov", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Lev_Nikolayevich_Korolyov"}
-{"prof": "p3956", "rel": "advisor", "name": "Martin Bodo Plenio", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Martin_Bodo_Plenio"}
+{"prof": "p4129", "rel": "advisor", "name": "Uzi Vishkin", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Uzi_Vishkin"}
+{"prof": "p3491", "rel": "advisor", "name": "Rosalind Picard", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Rosalind_Picard"}
 {"prof": "p4355", "rel": "advisor", "name": "Cleve Moler", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Cleve_Moler"}
 {"prof": "p4135", "rel": "advisor", "name": "Joseph F. JaJa", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Bader_(computer_scientist)"}
 {"prof": "p4280", "rel": "advisor", "name": "Eugene Charniak", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Eugene_Charniak"}
@@ -665,8 +665,10 @@
 {"prof": "p4055", "rel": "student", "name": "Jamie Morgenstern", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jamie_Morgenstern"}
 {"prof": "p4055", "rel": "student", "name": "Aaron Roth", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Aaron_Roth"}
 {"prof": "p4055", "rel": "student", "name": "Santosh Vempala", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Santosh_Vempala"}
+{"prof": "p3569", "rel": "advisor", "name": "Whitman Richards", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Whitman_Richards"}
 {"prof": "p4189", "rel": "advisor", "name": "William Wulf", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/William_Wulf"}
-{"prof": "p4129", "rel": "advisor", "name": "Uzi Vishkin", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Uzi_Vishkin"}
+{"prof": "p3776", "rel": "advisor", "name": "H.L. Warren", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Cathy_H._Wu"}
+{"prof": "p3956", "rel": "advisor", "name": "Martin Bodo Plenio", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Martin_Bodo_Plenio"}
 {"prof": "p4010", "rel": "advisor", "name": "Kevin J. Sullivan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Kevin_J._Sullivan_(computer_scientist)"}
 {"prof": "p4010", "rel": "student", "name": "Tyler Sondag", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Hridesh_Rajan"}
 {"prof": "p4010", "rel": "student", "name": "Robert Dyer", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Hridesh_Rajan"}
@@ -679,7 +681,6 @@
 {"prof": "p4010", "rel": "student", "name": "Rangeet Pan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Hridesh_Rajan"}
 {"prof": "p4010", "rel": "student", "name": "Sumon Biswas", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Hridesh_Rajan"}
 {"prof": "p4010", "rel": "student", "name": "and Mohammad Wardat", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Hridesh_Rajan"}
-{"prof": "p3491", "rel": "advisor", "name": "Rosalind Picard", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Rosalind_Picard"}
 {"prof": "p3605", "rel": "advisor", "name": "Sanjay Sarma", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Sanjay_Sarma"}
 {"prof": "p3401", "rel": "advisor", "name": "Steven Salzberg", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Steven_Salzberg"}
 {"prof": "p4059", "rel": "advisor", "name": "Joseph Seffi Naor", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Joseph_Seffi_Naor"}
@@ -698,6 +699,55 @@
 {"prof": "p3394", "rel": "advisor", "name": "Darrell Long", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Darrell_Long"}
 {"prof": "p3777", "rel": "advisor", "name": "Narendra Ahuja", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Narendra_Ahuja"}
 {"prof": "p3777", "rel": "advisor", "name": "Dan Roth", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Dan_Roth"}
+{"prof": "p5185", "rel": "advisor", "name": "Steven Weinberg", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Steven_Weinberg"}
+{"prof": "p5185", "rel": "student", "name": "Peter Galison", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Peter_Galison"}
+{"prof": "p5185", "rel": "student", "name": "Daniel Gottesman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Daniel_Gottesman"}
+{"prof": "p5185", "rel": "student", "name": "Anton Kapustin", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Anton_Kapustin"}
+{"prof": "p5185", "rel": "student", "name": "Sandip Trivedi", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Sandip_Trivedi"}
+{"prof": "p5185", "rel": "student", "name": "Graeme Smith", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Graeme_Smith_(physicist)"}
+{"prof": "p5185", "rel": "student", "name": "Nicole Yunger Halpern", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Nicole_Yunger_Halpern"}
+{"prof": "p6580", "rel": "advisor", "name": "Leysia Palen", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Leysia_Palen"}
+{"prof": "p6573", "rel": "advisor", "name": "Randy Schekman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Randy_Schekman"}
+{"prof": "p6573", "rel": "student", "name": "Richard Bonneau", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Richard_Bonneau"}
+{"prof": "p5179", "rel": "advisor", "name": "Thomas Kailath", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Thomas_Kailath"}
+{"prof": "p152", "rel": "advisor", "name": "David McNeill", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_McNeill_(Chicago_psychologist)"}
+{"prof": "p152", "rel": "student", "name": "Kristinn R. Thórisson", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Kristinn_R._Thórisson"}
+{"prof": "p5177", "rel": "advisor", "name": "John Norbury", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Andrew_M._Stuart"}
+{"prof": "p5839", "rel": "advisor", "name": "Christos Papadimitriou", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Christos_Papadimitriou"}
+{"prof": "p95", "rel": "advisor", "name": "Emilio Bizzi", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Emilio_Bizzi"}
+{"prof": "p5548", "rel": "advisor", "name": "Henry Fuchs", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Henry_Fuchs"}
+{"prof": "p5608", "rel": "advisor", "name": "Zvi Kedem", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Alexander_Tuzhilin"}
+{"prof": "p3833", "rel": "advisor", "name": "Nikil Dutt", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Prabhat_Mishra"}
+{"prof": "p5966", "rel": "advisor", "name": "Ronald Fedkiw", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ronald_Fedkiw"}
+{"prof": "p5435", "rel": "advisor", "name": "Judith Donath", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Judith_Donath"}
+{"prof": "p5404", "rel": "advisor", "name": "Sebastian Thrun", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Sebastian_Thrun"}
+{"prof": "p5404", "rel": "advisor", "name": "Charles Thorpe", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Charles_Thorpe"}
+{"prof": "p6188", "rel": "advisor", "name": "Roger Schank", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Roger_Schank"}
+{"prof": "p5622", "rel": "advisor", "name": "Luis Gravano", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Luis_Gravano"}
+{"prof": "p5052", "rel": "advisor", "name": "Narsingh Deo", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Sajal_K._Das"}
+{"prof": "p268", "rel": "advisor", "name": "Jonathan M. Smith", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jonathan_M._Smith"}
+{"prof": "p268", "rel": "student", "name": "Baochun Li", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Baochun_Li"}
+{"prof": "p5998", "rel": "advisor", "name": "David D. Clark", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_D._Clark"}
+{"prof": "p5998", "rel": "student", "name": "Lan Wang", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Lan_Wang_(computer_scientist)"}
+{"prof": "p6109", "rel": "student", "name": "Vince Calhoun", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Vince_Calhoun"}
+{"prof": "p5178", "rel": "advisor", "name": "Lang Tong", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Anima_Anandkumar"}
+{"prof": "p6574", "rel": "advisor", "name": "Tom Wasow", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Tom_Wasow"}
+{"prof": "p6574", "rel": "advisor", "name": "Penelope Eckert", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Penelope_Eckert"}
+{"prof": "p5490", "rel": "advisor", "name": "Alan S. Willsky", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jerry_L._Prince"}
+{"prof": "p5490", "rel": "student", "name": "Christos Davatzikos", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Christos_Davatzikos"}
+{"prof": "p4920", "rel": "advisor", "name": "Barbara Liskov", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Barbara_Liskov"}
+{"prof": "p5818", "rel": "advisor", "name": "David Culler", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Culler"}
+{"prof": "p5617", "rel": "advisor", "name": "Constantinos Daskalakis", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Constantinos_Daskalakis"}
+{"prof": "p6584", "rel": "advisor", "name": "Robert M. Gray", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Robert_M._Gray"}
+{"prof": "p5555", "rel": "advisor", "name": "Shafi Goldwasser", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Shafi_Goldwasser"}
+{"prof": "p5555", "rel": "student", "name": "Elette Boyle", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Elette_Boyle"}
+{"prof": "p6488", "rel": "advisor", "name": "Trevor Darrell", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Trevor_Darrell"}
+{"prof": "p5623", "rel": "advisor", "name": "Michael Batty", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Michael_Batty"}
+{"prof": "p5186", "rel": "advisor", "name": "William T. Freeman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/William_T._Freeman"}
+{"prof": "p6076", "rel": "advisor", "name": "Michael Pfender", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jose_Meseguer"}
+{"prof": "p5436", "rel": "advisor", "name": "Jure Leskovec", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jure_Leskovec"}
+{"prof": "p5183", "rel": "advisor", "name": "Gérard Ben Arous", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Gérard_Ben_Arous"}
+{"prof": "p5541", "rel": "advisor", "name": "Tang Xiao'ou", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Tang_Xiao'ou"}
 {"prof": "p631", "rel": "advisor", "name": "Manuel Blum", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Manuel_Blum"}
 {"prof": "p631", "rel": "student", "name": "Mihir Bellare", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Mihir_Bellare"}
 {"prof": "p631", "rel": "student", "name": "Bonnie Berger", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Bonnie_Berger"}
@@ -708,131 +758,117 @@
 {"prof": "p631", "rel": "student", "name": "Phillip Rogaway", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Phillip_Rogaway"}
 {"prof": "p629", "rel": "advisor", "name": "H. T. Kung", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/H._T._Kung"}
 {"prof": "p629", "rel": "advisor", "name": "Jon Bentley", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jon_Bentley_(computer_scientist)"}
-{"prof": "p531", "rel": "advisor", "name": "Alistair Sinclair", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Alistair_Sinclair"}
-{"prof": "p970", "rel": "advisor", "name": "H. T. Kung", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/H._T._Kung"}
-{"prof": "p152", "rel": "advisor", "name": "David McNeill", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_McNeill_(Chicago_psychologist)"}
-{"prof": "p152", "rel": "student", "name": "Kristinn R. Thórisson", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Kristinn_R._Thórisson"}
-{"prof": "p523", "rel": "advisor", "name": "Edward M. Riseman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Edward_M._Riseman"}
-{"prof": "p976", "rel": "advisor", "name": "Hari Balakrishnan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Hari_Balakrishnan"}
-{"prof": "p3833", "rel": "advisor", "name": "Nikil Dutt", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Prabhat_Mishra"}
 {"prof": "p622", "rel": "advisor", "name": "John McCarthy", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist)"}
 {"prof": "p622", "rel": "student", "name": "Maurice Herlihy", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Maurice_Herlihy"}
 {"prof": "p622", "rel": "student", "name": "J. Eliot Moss", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/J._Eliot_Moss"}
 {"prof": "p622", "rel": "student", "name": "Sanjay Ghemawat", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Sanjay_Ghemawat"}
-{"prof": "p988", "rel": "advisor", "name": "Stanley Osher", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Stanley_Osher"}
-{"prof": "p971", "rel": "advisor", "name": "Moni Naor", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Moni_Naor"}
-{"prof": "p657", "rel": "advisor", "name": "Christopher D. Manning", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Christopher_D._Manning"}
-{"prof": "p1048", "rel": "advisor", "name": "Juris Hartmanis", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Juris_Hartmanis"}
-{"prof": "p121", "rel": "advisor", "name": "Dawn Song", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Dawn_Song"}
-{"prof": "p492", "rel": "advisor", "name": "John Stasko", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/John_Stasko"}
-{"prof": "p95", "rel": "advisor", "name": "Emilio Bizzi", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Emilio_Bizzi"}
-{"prof": "p714", "rel": "advisor", "name": "William Kahan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/William_Kahan"}
-{"prof": "p714", "rel": "student", "name": "Sherry Li", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Sherry_Li"}
-{"prof": "p984", "rel": "advisor", "name": "Drew McDermott", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Drew_McDermott"}
-{"prof": "p984", "rel": "student", "name": "Kevin Leyton-Brown", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Kevin_Leyton-Brown"}
+{"prof": "p531", "rel": "advisor", "name": "Alistair Sinclair", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Alistair_Sinclair"}
+{"prof": "p970", "rel": "advisor", "name": "H. T. Kung", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/H._T._Kung"}
+{"prof": "p1468", "rel": "advisor", "name": "John McCarthy", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist)"}
+{"prof": "p1468", "rel": "student", "name": "David Heeger", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Heeger"}
+{"prof": "p1468", "rel": "student", "name": "Jana Košecká", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jana_Košecká"}
+{"prof": "p1468", "rel": "student", "name": "Stéphane Mallat", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Stéphane_Mallat"}
+{"prof": "p1468", "rel": "student", "name": "Franc Solina", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Franc_Solina"}
+{"prof": "p976", "rel": "advisor", "name": "Hari Balakrishnan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Hari_Balakrishnan"}
 {"prof": "p894", "rel": "advisor", "name": "Edward D. Lazowska", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Edward_D._Lazowska"}
 {"prof": "p894", "rel": "advisor", "name": "Hank Levy", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Hank_Levy_(computer_scientist)"}
 {"prof": "p894", "rel": "student", "name": "Ratul Mahajan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ratul_Mahajan"}
 {"prof": "p894", "rel": "student", "name": "Margaret Martonosi", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Margaret_Martonosi"}
 {"prof": "p894", "rel": "student", "name": "Stefan Savage", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Stefan_Savage"}
 {"prof": "p894", "rel": "student", "name": "Amin Vahdat", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Amin_Vahdat"}
+{"prof": "p1498", "rel": "advisor", "name": "Hector Garcia-Molina", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Hector_Garcia-Molina"}
 {"prof": "p609", "rel": "advisor", "name": "Silvio Micali", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Silvio_Micali"}
 {"prof": "p609", "rel": "student", "name": "Manolis Kellis", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Manolis_Kellis"}
 {"prof": "p609", "rel": "student", "name": "Serafim Batzoglou", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Serafim_Batzoglou"}
 {"prof": "p609", "rel": "student", "name": "Lior Pachter", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Lior_Pachter"}
 {"prof": "p609", "rel": "student", "name": "Mona Singh", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Mona_Singh_(scientist)"}
+{"prof": "p1443", "rel": "advisor", "name": "Leslie Valiant", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Leslie_Valiant"}
+{"prof": "p1443", "rel": "student", "name": "Ming-Hsuan Yang", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ming-Hsuan_Yang"}
+{"prof": "p562", "rel": "advisor", "name": "Kathleen McKeown", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Kathleen_McKeown"}
+{"prof": "p5621", "rel": "advisor", "name": "Yale Patt", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Yale_Patt"}
+{"prof": "p1238", "rel": "advisor", "name": "Daniel P. Friedman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Daniel_P._Friedman"}
 {"prof": "p126", "rel": "student", "name": "Benjamin C. Pierce", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Benjamin_C._Pierce"}
 {"prof": "p126", "rel": "student", "name": "Greg Morrisett", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Greg_Morrisett"}
 {"prof": "p126", "rel": "student", "name": "Tom Murphy VII", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Tom_Murphy_VII"}
+{"prof": "p1388", "rel": "advisor", "name": "Emanuel Parzen", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Emanuel_Parzen"}
+{"prof": "p1388", "rel": "student", "name": "Wing Hung Wong", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Wing_Hung_Wong"}
+{"prof": "p1388", "rel": "student", "name": "Yoonkyung Lee", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Yoonkyung_Lee"}
+{"prof": "p1388", "rel": "student", "name": "Hao Helen Zhang", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Hao_Helen_Zhang"}
 {"prof": "p550", "rel": "advisor", "name": "David Parnas", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Parnas"}
 {"prof": "p550", "rel": "student", "name": "Dan Boneh", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Dan_Boneh"}
 {"prof": "p550", "rel": "student", "name": "Vijaya Ramachandran", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Vijaya_Ramachandran"}
 {"prof": "p550", "rel": "student", "name": "Avi Wigderson", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Avi_Wigderson"}
-{"prof": "p231", "rel": "advisor", "name": "Seth A. Hutchinson", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Seth_A._Hutchinson"}
+{"prof": "p657", "rel": "advisor", "name": "Christopher D. Manning", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Christopher_D._Manning"}
+{"prof": "p1048", "rel": "advisor", "name": "Juris Hartmanis", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Juris_Hartmanis"}
+{"prof": "p121", "rel": "advisor", "name": "Dawn Song", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Dawn_Song"}
 {"prof": "p987", "rel": "student", "name": "Vanessa Teague", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Vanessa_Teague"}
 {"prof": "p921", "rel": "advisor", "name": "Kenneth C. Sevcik", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ed_Lazowska"}
 {"prof": "p921", "rel": "student", "name": "Thomas E. Anderson", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Thomas_E._Anderson"}
 {"prof": "p921", "rel": "student", "name": "Edward Felten", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Edward_Felten"}
 {"prof": "p921", "rel": "student", "name": "Hank Levy", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Hank_Levy_(computer_scientist)"}
 {"prof": "p921", "rel": "student", "name": "Lin Yi-bing", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Lin_Yi-bing"}
+{"prof": "p690", "rel": "advisor", "name": "Robert Wilensky", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Robert_Wilensky"}
+{"prof": "p690", "rel": "student", "name": "Cecilia R. Aragon", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Cecilia_R._Aragon"}
+{"prof": "p1574", "rel": "advisor", "name": "Alexander Lerner", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Alexander_Lerner"}
+{"prof": "p988", "rel": "advisor", "name": "Stanley Osher", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Stanley_Osher"}
+{"prof": "p971", "rel": "advisor", "name": "Moni Naor", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Moni_Naor"}
+{"prof": "p523", "rel": "advisor", "name": "Edward M. Riseman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Edward_M._Riseman"}
+{"prof": "p231", "rel": "advisor", "name": "Seth A. Hutchinson", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Seth_A._Hutchinson"}
+{"prof": "p492", "rel": "advisor", "name": "John Stasko", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/John_Stasko"}
+{"prof": "p1427", "rel": "advisor", "name": "Umesh Vazirani", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Umesh_Vazirani"}
+{"prof": "p1162", "rel": "advisor", "name": "Yossi Shiloach", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Uzi_Vishkin"}
+{"prof": "p714", "rel": "advisor", "name": "William Kahan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/William_Kahan"}
+{"prof": "p714", "rel": "student", "name": "Sherry Li", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Sherry_Li"}
 {"prof": "p23", "rel": "advisor", "name": "Bruce G. Buchanan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Tom_M._Mitchell"}
 {"prof": "p23", "rel": "student", "name": "Sebastian Thrun", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Sebastian_Thrun"}
 {"prof": "p23", "rel": "student", "name": "Oren Etzioni", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Oren_Etzioni"}
 {"prof": "p23", "rel": "student", "name": "Geoffrey J. Gordon", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Geoffrey_J._Gordon"}
 {"prof": "p23", "rel": "student", "name": "Derry Tanti Wijaya", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Derry_Tanti_Wijaya"}
-{"prof": "p5052", "rel": "advisor", "name": "Narsingh Deo", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Sajal_K._Das"}
-{"prof": "p690", "rel": "advisor", "name": "Robert Wilensky", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Robert_Wilensky"}
-{"prof": "p690", "rel": "student", "name": "Cecilia R. Aragon", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Cecilia_R._Aragon"}
+{"prof": "p1529", "rel": "advisor", "name": "Stephen Cook", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Stephen_Cook"}
+{"prof": "p984", "rel": "advisor", "name": "Drew McDermott", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Drew_McDermott"}
+{"prof": "p984", "rel": "student", "name": "Kevin Leyton-Brown", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Kevin_Leyton-Brown"}
 {"prof": "p964", "rel": "advisor", "name": "Sergey Plotkin", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ashish_Goel"}
-{"prof": "p697", "rel": "advisor", "name": "Venkatesan Guruswami", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Venkatesan_Guruswami"}
 {"prof": "p1153", "rel": "advisor", "name": "Robert L. Constable", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Robert_L._Constable"}
-{"prof": "p268", "rel": "advisor", "name": "Jonathan M. Smith", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jonathan_M._Smith"}
-{"prof": "p268", "rel": "student", "name": "Baochun Li", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Baochun_Li"}
+{"prof": "p1430", "rel": "advisor", "name": "Umesh Vazirani", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Umesh_Vazirani"}
 {"prof": "p774", "rel": "advisor", "name": "John Baras", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/John_Baras"}
 {"prof": "p973", "rel": "advisor", "name": "Edward J. McCluskey", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Edward_J._McCluskey"}
 {"prof": "p973", "rel": "student", "name": "Max Shulaker", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Max_Shulaker"}
-{"prof": "p562", "rel": "advisor", "name": "Kathleen McKeown", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Kathleen_McKeown"}
 {"prof": "p869", "rel": "advisor", "name": "Brad A. Myers", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Brad_A._Myers"}
+{"prof": "p1571", "rel": "advisor", "name": "Greg Hannon", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Greg_Hannon"}
+{"prof": "p1028", "rel": "advisor", "name": "Alex Pentland", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Alex_Pentland"}
+{"prof": "p1564", "rel": "advisor", "name": "Ron Shamir", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ron_Shamir"}
+{"prof": "p1503", "rel": "advisor", "name": "Albert R. Meyer", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Albert_R._Meyer"}
+{"prof": "p1503", "rel": "student", "name": "Dan Suciu", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Dan_Suciu"}
+{"prof": "p697", "rel": "advisor", "name": "Venkatesan Guruswami", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Venkatesan_Guruswami"}
+{"prof": "p1020", "rel": "advisor", "name": "John C. Mitchell", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Vitaly_Shmatikov"}
+{"prof": "p1422", "rel": "advisor", "name": "Dan Boneh", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Dan_Boneh"}
 {"prof": "p284", "rel": "advisor", "name": "David Donoho", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Donoho"}
 {"prof": "p49", "rel": "advisor", "name": "Tom M. Mitchell", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Tom_M._Mitchell"}
 {"prof": "p49", "rel": "student", "name": "Joelle Pineau", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Joelle_Pineau"}
 {"prof": "p49", "rel": "student", "name": "Byron Boots", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Byron_Boots"}
+{"prof": "p314", "rel": "advisor", "name": "Abbas El Gamal", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Abbas_El_Gamal"}
+{"prof": "p1478", "rel": "advisor", "name": "Joseph M. Hellerstein", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Joseph_M._Hellerstein"}
+{"prof": "p1478", "rel": "advisor", "name": "Ion Stoica", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ion_Stoica"}
+{"prof": "p1534", "rel": "advisor", "name": "Haitao Zheng", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Haitao_Zheng"}
+{"prof": "p1016", "rel": "advisor", "name": "Julie Dorsey", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Julie_Dorsey"}
+{"prof": "p1016", "rel": "advisor", "name": "Seth Teller", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Seth_Teller"}
 {"prof": "p478", "rel": "advisor", "name": "Steven K. Feiner", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Steven_K._Feiner"}
-{"prof": "p1028", "rel": "advisor", "name": "Alex Pentland", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Alex_Pentland"}
-{"prof": "p4920", "rel": "advisor", "name": "Barbara Liskov", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Barbara_Liskov"}
+{"prof": "p876", "rel": "advisor", "name": "Gregory Abowd", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Gregory_Abowd"}
 {"prof": "p635", "rel": "advisor", "name": "Eric Grimson", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Eric_Grimson"}
-{"prof": "p1020", "rel": "advisor", "name": "John C. Mitchell", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Vitaly_Shmatikov"}
+{"prof": "p1446", "rel": "advisor", "name": "Avrim Blum", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Avrim_Blum"}
+{"prof": "p856", "rel": "advisor", "name": "Dina Katabi", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Dina_Katabi"}
+{"prof": "p1558", "rel": "advisor", "name": "Adrian Segall", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Gil_Zussman"}
 {"prof": "p2705", "rel": "advisor", "name": "Arthur Bernstein", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Gelernter"}
+{"prof": "p1690", "rel": "advisor", "name": "David G. Lowe", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_G._Lowe"}
+{"prof": "p2795", "rel": "advisor", "name": "Marvin Minsky", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Marvin_Minsky"}
+{"prof": "p2775", "rel": "advisor", "name": "Leslie P. Kaelbling", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Leslie_P._Kaelbling"}
 {"prof": "p1858", "rel": "advisor", "name": "Gary Miller", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Gary_Miller_(computer_scientist)"}
-{"prof": "p1427", "rel": "advisor", "name": "Umesh Vazirani", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Umesh_Vazirani"}
-{"prof": "p1468", "rel": "advisor", "name": "John McCarthy", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist)"}
-{"prof": "p1468", "rel": "student", "name": "David Heeger", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Heeger"}
-{"prof": "p1468", "rel": "student", "name": "Jana Košecká", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jana_Košecká"}
-{"prof": "p1468", "rel": "student", "name": "Stéphane Mallat", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Stéphane_Mallat"}
-{"prof": "p1468", "rel": "student", "name": "Franc Solina", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Franc_Solina"}
 {"prof": "p1610", "rel": "advisor", "name": "Avi Wigderson", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Avi_Wigderson"}
 {"prof": "p1610", "rel": "advisor", "name": "Michael Ben-Or", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Michael_Ben-Or"}
 {"prof": "p1610", "rel": "student", "name": "Dana Moshkovitz", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Dana_Moshkovitz"}
 {"prof": "p2785", "rel": "advisor", "name": "Eli Shamir", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Eli_Shamir"}
-{"prof": "p2491", "rel": "advisor", "name": "Robert L. Lux", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Christopher_R._Johnson"}
-{"prof": "p2491", "rel": "student", "name": "David M. Beazley", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_M._Beazley"}
-{"prof": "p2491", "rel": "student", "name": "Gordon Kindlmann", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Gordon_Kindlmann"}
-{"prof": "p314", "rel": "advisor", "name": "Abbas El Gamal", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Abbas_El_Gamal"}
-{"prof": "p1016", "rel": "advisor", "name": "Julie Dorsey", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Julie_Dorsey"}
-{"prof": "p1016", "rel": "advisor", "name": "Seth Teller", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Seth_Teller"}
-{"prof": "p876", "rel": "advisor", "name": "Gregory Abowd", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Gregory_Abowd"}
-{"prof": "p856", "rel": "advisor", "name": "Dina Katabi", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Dina_Katabi"}
-{"prof": "p1574", "rel": "advisor", "name": "Alexander Lerner", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Alexander_Lerner"}
-{"prof": "p1690", "rel": "advisor", "name": "David G. Lowe", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_G._Lowe"}
-{"prof": "p1388", "rel": "advisor", "name": "Emanuel Parzen", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Emanuel_Parzen"}
-{"prof": "p1388", "rel": "student", "name": "Wing Hung Wong", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Wing_Hung_Wong"}
-{"prof": "p1388", "rel": "student", "name": "Yoonkyung Lee", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Yoonkyung_Lee"}
-{"prof": "p1388", "rel": "student", "name": "Hao Helen Zhang", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Hao_Helen_Zhang"}
-{"prof": "p2795", "rel": "advisor", "name": "Marvin Minsky", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Marvin_Minsky"}
-{"prof": "p2694", "rel": "advisor", "name": "Steven Rudich", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Steven_Rudich"}
-{"prof": "p2730", "rel": "advisor", "name": "Hal Gabow", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Hal_Gabow"}
-{"prof": "p2730", "rel": "student", "name": "Yoav Freund", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Yoav_Freund"}
+{"prof": "p2828", "rel": "advisor", "name": "John Hopcroft", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/John_Hopcroft"}
 {"prof": "p2718", "rel": "advisor", "name": "Clifford Nass", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Clifford_Nass"}
-{"prof": "p2808", "rel": "advisor", "name": "Robion Kirby", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Robion_Kirby"}
-{"prof": "p2808", "rel": "student", "name": "Cindy Grimm", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Cindy_Grimm"}
-{"prof": "p2808", "rel": "student", "name": "Lee Markosian", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Lee_Markosian"}
-{"prof": "p2808", "rel": "student", "name": "Morgan McGuire", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Morgan_McGuire"}
-{"prof": "p2808", "rel": "student", "name": "Tomer Moscovich", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Tomer_Moscovich"}
-{"prof": "p2808", "rel": "student", "name": "Olga Karpenko", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Olga_Karpenko"}
-{"prof": "p2218", "rel": "advisor", "name": "Olivier Faugeras", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Olivier_Faugeras"}
-{"prof": "p2514", "rel": "advisor", "name": "David Marr", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Marr_(neuroscientist)"}
-{"prof": "p1498", "rel": "advisor", "name": "Hector Garcia-Molina", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Hector_Garcia-Molina"}
-{"prof": "p2835", "rel": "advisor", "name": "Martin H. Graham", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Martin_H._Graham"}
-{"prof": "p2835", "rel": "student", "name": "Martha E. Pollack", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Martha_E._Pollack"}
-{"prof": "p2680", "rel": "student", "name": "ChengXiang Zhai", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/ChengXiang_Zhai"}
-{"prof": "p2000", "rel": "advisor", "name": "Judea Pearl", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Judea_Pearl"}
-{"prof": "p1755", "rel": "advisor", "name": "Stuart J. Russell", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Stuart_J._Russell"}
-{"prof": "p1443", "rel": "advisor", "name": "Leslie Valiant", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Leslie_Valiant"}
-{"prof": "p1443", "rel": "student", "name": "Ming-Hsuan Yang", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ming-Hsuan_Yang"}
-{"prof": "p1594", "rel": "advisor", "name": "Stephen Cook", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Stephen_Cook"}
-{"prof": "p1238", "rel": "advisor", "name": "Daniel P. Friedman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Daniel_P._Friedman"}
-{"prof": "p2775", "rel": "advisor", "name": "Leslie P. Kaelbling", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Leslie_P._Kaelbling"}
-{"prof": "p1162", "rel": "advisor", "name": "Yossi Shiloach", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Uzi_Vishkin"}
 {"prof": "p1663", "rel": "advisor", "name": "Sanjeev Arora", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Sanjeev_Arora_(computer_scientist)"}
 {"prof": "p1628", "rel": "advisor", "name": "David Donoho", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Donoho"}
 {"prof": "p1628", "rel": "advisor", "name": "Peter Bickel", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Peter_Bickel"}
@@ -840,50 +876,209 @@
 {"prof": "p1628", "rel": "student", "name": "Ming-Yen Cheng", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ming-Yen_Cheng"}
 {"prof": "p1628", "rel": "student", "name": "Li-Shan Huang", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Li-Shan_Huang"}
 {"prof": "p1628", "rel": "student", "name": "Chunming Zhang", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Chunming_Zhang"}
-{"prof": "p1529", "rel": "advisor", "name": "Stephen Cook", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Stephen_Cook"}
+{"prof": "p2808", "rel": "advisor", "name": "Robion Kirby", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Robion_Kirby"}
+{"prof": "p2808", "rel": "student", "name": "Cindy Grimm", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Cindy_Grimm"}
+{"prof": "p2808", "rel": "student", "name": "Lee Markosian", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Lee_Markosian"}
+{"prof": "p2808", "rel": "student", "name": "Morgan McGuire", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Morgan_McGuire"}
+{"prof": "p2808", "rel": "student", "name": "Tomer Moscovich", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Tomer_Moscovich"}
+{"prof": "p2808", "rel": "student", "name": "Olga Karpenko", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Olga_Karpenko"}
+{"prof": "p2491", "rel": "advisor", "name": "Robert L. Lux", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Christopher_R._Johnson"}
+{"prof": "p2491", "rel": "student", "name": "David M. Beazley", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_M._Beazley"}
+{"prof": "p2491", "rel": "student", "name": "Gordon Kindlmann", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Gordon_Kindlmann"}
+{"prof": "p2514", "rel": "advisor", "name": "David Marr", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Marr_(neuroscientist)"}
+{"prof": "p2694", "rel": "advisor", "name": "Steven Rudich", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Steven_Rudich"}
+{"prof": "p2730", "rel": "advisor", "name": "Hal Gabow", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Hal_Gabow"}
+{"prof": "p2730", "rel": "student", "name": "Yoav Freund", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Yoav_Freund"}
+{"prof": "p2218", "rel": "advisor", "name": "Olivier Faugeras", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Olivier_Faugeras"}
+{"prof": "p2835", "rel": "advisor", "name": "Martin H. Graham", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Martin_H._Graham"}
+{"prof": "p2835", "rel": "student", "name": "Martha E. Pollack", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Martha_E._Pollack"}
+{"prof": "p2680", "rel": "student", "name": "ChengXiang Zhai", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/ChengXiang_Zhai"}
+{"prof": "p3115", "rel": "advisor", "name": "Giovanni degli Antoni", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Maria_L._Gini"}
+{"prof": "p2000", "rel": "advisor", "name": "Judea Pearl", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Judea_Pearl"}
+{"prof": "p1755", "rel": "advisor", "name": "Stuart J. Russell", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Stuart_J._Russell"}
 {"prof": "p2010", "rel": "advisor", "name": "Niklaus Wirth", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Niklaus_Wirth"}
 {"prof": "p2010", "rel": "student", "name": "Andreas Gal", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Andreas_Gal"}
-{"prof": "p1430", "rel": "advisor", "name": "Umesh Vazirani", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Umesh_Vazirani"}
 {"prof": "p2228", "rel": "advisor", "name": "Alberto Apostolico", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Stefano_Lonardi"}
-{"prof": "p1571", "rel": "advisor", "name": "Greg Hannon", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Greg_Hannon"}
-{"prof": "p1503", "rel": "advisor", "name": "Albert R. Meyer", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Albert_R._Meyer"}
-{"prof": "p1503", "rel": "student", "name": "Dan Suciu", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Dan_Suciu"}
-{"prof": "p1422", "rel": "advisor", "name": "Dan Boneh", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Dan_Boneh"}
 {"prof": "p2910", "rel": "advisor", "name": "Azriel Rosenfeld", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Azriel_Rosenfeld"}
 {"prof": "p2800", "rel": "advisor", "name": "Rajeev Motwani", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Rajeev_Motwani"}
 {"prof": "p2800", "rel": "advisor", "name": "Jean-Claude Latombe", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jean-Claude_Latombe"}
+{"prof": "p1594", "rel": "advisor", "name": "Stephen Cook", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Stephen_Cook"}
+{"prof": "p2845", "rel": "advisor", "name": "Madhu Sudan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Madhu_Sudan"}
 {"prof": "p1631", "rel": "advisor", "name": "Pablo Parrilo", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Pablo_Parrilo"}
 {"prof": "p1633", "rel": "advisor", "name": "Ron Rivest", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ron_Rivest"}
 {"prof": "p1633", "rel": "advisor", "name": "Bonnie Berger", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Bonnie_Berger"}
-{"prof": "p1478", "rel": "advisor", "name": "Joseph M. Hellerstein", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Joseph_M._Hellerstein"}
-{"prof": "p1478", "rel": "advisor", "name": "Ion Stoica", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ion_Stoica"}
-{"prof": "p1534", "rel": "advisor", "name": "Haitao Zheng", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Haitao_Zheng"}
+{"prof": "p2848", "rel": "advisor", "name": "Oded Goldreich", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Oded_Goldreich"}
+{"prof": "p3004", "rel": "advisor", "name": "Alan Bundy", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Alan_Bundy"}
 {"prof": "p2822", "rel": "advisor", "name": "Oded Goldreich", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Oded_Goldreich"}
 {"prof": "p1735", "rel": "advisor", "name": "Salvatore Stolfo", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Salvatore_Stolfo"}
-{"prof": "p2845", "rel": "advisor", "name": "Madhu Sudan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Madhu_Sudan"}
-{"prof": "p1564", "rel": "advisor", "name": "Ron Shamir", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ron_Shamir"}
+{"prof": "p2948", "rel": "advisor", "name": "Kris Sikorski", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Kwan-Liu_Ma"}
+{"prof": "p4360", "rel": "advisor", "name": "Rodney Brooks", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Rodney_Brooks"}
 {"prof": "p2485", "rel": "advisor", "name": "Salim Hariri", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Manish_Parashar"}
-{"prof": "p1446", "rel": "advisor", "name": "Avrim Blum", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Avrim_Blum"}
 {"prof": "p2689", "rel": "advisor", "name": "Igor L. Markov", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Igor_L._Markov"}
 {"prof": "p2689", "rel": "advisor", "name": "John P. Hayes", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/John_P._Hayes"}
-{"prof": "p1558", "rel": "advisor", "name": "Adrian Segall", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Gil_Zussman"}
+{"prof": "p2351", "rel": "advisor", "name": "Seymour Papert", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Seymour_Papert"}
+{"prof": "p2816", "rel": "advisor", "name": "Christos Papadimitriou", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Christos_Papadimitriou"}
 {"prof": "p4285", "rel": "advisor", "name": "Roderick Chisholm", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Roderick_Chisholm"}
-{"prof": "p2828", "rel": "advisor", "name": "John Hopcroft", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/John_Hopcroft"}
+{"prof": "p3368", "rel": "advisor", "name": "Kevin Knight", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Kevin_Knight_(scientist)"}
+{"prof": "p4249", "rel": "advisor", "name": "Phil Kearns", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Tracy_Camp"}
 {"prof": "p3986", "rel": "advisor", "name": "Chandan Dasgupta", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Chandan_Dasgupta"}
 {"prof": "p3834", "rel": "advisor", "name": "Chia-Yung Han", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Juan_E._Gilbert"}
 {"prof": "p3716", "rel": "advisor", "name": "Daniel E. Atkins III", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Daniel_E._Atkins_III"}
 {"prof": "p3752", "rel": "advisor", "name": "Mary Lou Soffa", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Mary_Lou_Soffa"}
-{"prof": "p3115", "rel": "advisor", "name": "Giovanni degli Antoni", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Maria_L._Gini"}
-{"prof": "p4360", "rel": "advisor", "name": "Rodney Brooks", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Rodney_Brooks"}
-{"prof": "p2351", "rel": "advisor", "name": "Seymour Papert", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Seymour_Papert"}
-{"prof": "p2816", "rel": "advisor", "name": "Christos Papadimitriou", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Christos_Papadimitriou"}
-{"prof": "p3368", "rel": "advisor", "name": "Kevin Knight", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Kevin_Knight_(scientist)"}
-{"prof": "p4249", "rel": "advisor", "name": "Phil Kearns", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Tracy_Camp"}
 {"prof": "p3379", "rel": "advisor", "name": "Daphne Koller", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Daphne_Koller"}
-{"prof": "p2848", "rel": "advisor", "name": "Oded Goldreich", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Oded_Goldreich"}
-{"prof": "p3004", "rel": "advisor", "name": "Alan Bundy", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Alan_Bundy"}
 {"prof": "p3721", "rel": "advisor", "name": "Deborah Joseph", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Deborah_Joseph"}
-{"prof": "p2948", "rel": "advisor", "name": "Kris Sikorski", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Kwan-Liu_Ma"}
+{"prof": "p171", "rel": "advisor", "name": "Alonzo Church", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Alonzo_Church"}
+{"prof": "p171", "rel": "student", "name": "Jack Copeland", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jack_Copeland"}
+{"prof": "p171", "rel": "student", "name": "Michael Fourman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Michael_Fourman"}
+{"prof": "p171", "rel": "student", "name": "Kenneth Kunen", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Kenneth_Kunen"}
+{"prof": "p171", "rel": "student", "name": "Angus Macintyre", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Angus_Macintyre"}
+{"prof": "p171", "rel": "student", "name": "Peter Mosses", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Peter_Mosses"}
+{"prof": "p171", "rel": "student", "name": "Roy Dyckhoff", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Roy_Dyckhoff"}
+{"prof": "p171", "rel": "student", "name": "Ketan Mulmuley", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ketan_Mulmuley"}
+{"prof": "p171", "rel": "student", "name": "Marko Petkovšek", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Marko_Petkovšek"}
+{"prof": "p171", "rel": "student", "name": "Fred S. Roberts", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Fred_S._Roberts"}
+{"prof": "p171", "rel": "student", "name": "David Turner", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Turner_(computer_scientist)"}
+{"prof": "p171", "rel": "student", "name": "Martin Davies", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Martin_Davies_(philosopher)"}
+{"prof": "p1039", "rel": "advisor", "name": "Richard Mattson", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Richard_Mattson"}
+{"prof": "p1039", "rel": "student", "name": "Alfred Aho", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Alfred_Aho"}
+{"prof": "p1039", "rel": "student", "name": "Chandrajit Bajaj", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Chandrajit_Bajaj"}
+{"prof": "p1039", "rel": "student", "name": "Gilles Brassard", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Gilles_Brassard"}
+{"prof": "p1039", "rel": "student", "name": "Richard J. Cole", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Richard_J._Cole"}
+{"prof": "p1039", "rel": "student", "name": "Cynthia Dwork", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Cynthia_Dwork"}
+{"prof": "p1039", "rel": "student", "name": "Zvi Galil", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Zvi_Galil"}
+{"prof": "p1039", "rel": "student", "name": "Daniela L. Rus", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Daniela_L._Rus"}
+{"prof": "p663", "rel": "advisor", "name": "Michael Genesereth", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Michael_Genesereth"}
+{"prof": "p663", "rel": "student", "name": "Marie desJardins", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Marie_desJardins"}
+{"prof": "p663", "rel": "student", "name": "Eric Xing", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Eric_Xing"}
+{"prof": "p663", "rel": "student", "name": "Shlomo Zilberstein", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Shlomo_Zilberstein"}
+{"prof": "p667", "rel": "advisor", "name": "S. Shankar Sastry", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/S._Shankar_Sastry"}
+{"prof": "p667", "rel": "student", "name": "Meeko Oishi", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Meeko_Oishi"}
+{"prof": "p717", "rel": "advisor", "name": "Manuel Blum", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Manuel_Blum"}
+{"prof": "p717", "rel": "student", "name": "Scott Aaronson", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Scott_Aaronson"}
+{"prof": "p717", "rel": "student", "name": "Andris Ambainis", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Andris_Ambainis"}
+{"prof": "p717", "rel": "student", "name": "Sanjeev Arora", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Sanjeev_Arora_(computer_scientist)"}
+{"prof": "p717", "rel": "student", "name": "Paul Christiano", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Paul_Christiano_(researcher)"}
+{"prof": "p717", "rel": "student", "name": "Urmila Mahadev", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Urmila_Mahadev"}
+{"prof": "p717", "rel": "student", "name": "Madhu Sudan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Madhu_Sudan"}
+{"prof": "p717", "rel": "student", "name": "David Zuckerman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Zuckerman_(computer_scientist)"}
+{"prof": "p741", "rel": "advisor", "name": "William E. \"Bill\" Weihl", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Eric_Brewer_(scientist)"}
+{"prof": "p741", "rel": "student", "name": "Nikita Borisov", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Nikita_Borisov"}
+{"prof": "p741", "rel": "student", "name": "Ian Goldberg", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ian_Goldberg"}
+{"prof": "p741", "rel": "student", "name": "David A. Wagner", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_A._Wagner"}
+{"prof": "p741", "rel": "student", "name": "Matt Welsh", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Matt_Welsh_(computer_scientist)"}
+{"prof": "p5534", "rel": "advisor", "name": "John L. Hennessy", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/John_L._Hennessy"}
+{"prof": "p5534", "rel": "student", "name": "Frederic T. Chong", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Frederic_T._Chong"}
+{"prof": "p513", "rel": "advisor", "name": "Jonathan Grudin", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jonathan_Grudin"}
+{"prof": "p621", "rel": "advisor", "name": "John Guttag", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/John_Guttag"}
+{"prof": "p5535", "rel": "advisor", "name": "Andrew Abel", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Andrew_Abel"}
+{"prof": "p5535", "rel": "advisor", "name": "Jerry A. Hausman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jerry_A._Hausman"}
 {"prof": "p4577", "rel": "advisor", "name": "Fred Brooks", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Fred_Brooks"}
 {"prof": "p3770", "rel": "advisor", "name": "Leslie P. Kaelbling", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Leslie_P._Kaelbling"}
 {"prof": "p3360", "rel": "advisor", "name": "Rangasami L. Kashyap", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Rangasami_L._Kashyap"}
+{"prof": "p626", "rel": "advisor", "name": "Dennis Sullivan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Dennis_Sullivan"}
+{"prof": "p626", "rel": "student", "name": "Elizabeth Bradley", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Elizabeth_Bradley_(mathematician_and_rower)"}
+{"prof": "p626", "rel": "student", "name": "Mitchel Resnick", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Mitchel_Resnick"}
+{"prof": "p626", "rel": "student", "name": "Latanya Sweeney", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Latanya_Sweeney"}
+{"prof": "p5152", "rel": "advisor", "name": "Walter Lewis Baily, Jr.", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Walter_Lewis_Baily,_Jr."}
+{"prof": "p5343", "rel": "advisor", "name": "Ian Fraser Blake", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Vahid_Tarokh"}
+{"prof": "p5343", "rel": "student", "name": "Natasha Devroye", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Natasha_Devroye"}
+{"prof": "p6042", "rel": "advisor", "name": "Leroy Hood", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Leroy_Hood"}
+{"prof": "p5414", "rel": "advisor", "name": "Pattie Maes", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Pattie_Maes"}
+{"prof": "p5965", "rel": "advisor", "name": "Bernd Sturmfels", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Bernd_Sturmfels"}
+{"prof": "p5965", "rel": "student", "name": "Ruriko Yoshida", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ruriko_Yoshida"}
+{"prof": "p539", "rel": "advisor", "name": "Joel Spencer", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Joel_Spencer"}
+{"prof": "p539", "rel": "student", "name": "Adam Marcus", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Adam_Marcus_(mathematician)"}
+{"prof": "p5670", "rel": "advisor", "name": "Robert I. Sutton", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Robert_I._Sutton"}
+{"prof": "p5670", "rel": "advisor", "name": "Chip Heath", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Chip_Heath"}
+{"prof": "p5670", "rel": "advisor", "name": "Pamela Hinds", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Pamela_Hinds"}
+{"prof": "p42", "rel": "advisor", "name": "Marc Raibert", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Marc_Raibert"}
+{"prof": "p5430", "rel": "advisor", "name": "Tülay Adalı", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Tülay_Adalı"}
+{"prof": "p605", "rel": "advisor", "name": "Jim Horning", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jim_Horning"}
+{"prof": "p605", "rel": "student", "name": "Jeannette Wing", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jeannette_Wing"}
+{"prof": "p605", "rel": "student", "name": "Joseph Zachary", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Joseph_Zachary"}
+{"prof": "p605", "rel": "student", "name": "Katherine Yelick", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Katherine_Yelick"}
+{"prof": "p605", "rel": "student", "name": "Daniel Jackson", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Daniel_Jackson_(computer_scientist)"}
+{"prof": "p605", "rel": "student", "name": "Raymie Stata", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Raymie_Stata"}
+{"prof": "p605", "rel": "student", "name": "Vanu Bose", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Vanu_Bose"}
+{"prof": "p202", "rel": "advisor", "name": "J. Michael Brady", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/J._Michael_Brady"}
+{"prof": "p202", "rel": "student", "name": "Tamara Berg", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Tamara_Berg"}
+{"prof": "p5424", "rel": "advisor", "name": "John Hopcroft", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/John_Hopcroft"}
+{"prof": "p5424", "rel": "student", "name": "Mordechai Ben-Ari", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Mordechai_Ben-Ari"}
+{"prof": "p5424", "rel": "student", "name": "Moti Yung", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Moti_Yung"}
+{"prof": "p5424", "rel": "student", "name": "David Eppstein", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Eppstein"}
+{"prof": "p5424", "rel": "student", "name": "Giuseppe Francesco Italiano", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Giuseppe_Francesco_Italiano"}
+{"prof": "p5424", "rel": "student", "name": "Matthew K. Franklin", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Matthew_K._Franklin"}
+{"prof": "p5424", "rel": "student", "name": "Jonathan Katz", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jonathan_Katz_(computer_scientist)"}
+{"prof": "p5424", "rel": "student", "name": "Stuart Haber", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Stuart_Haber"}
+{"prof": "p548", "rel": "advisor", "name": "Wen-mei Hwu", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Wen-mei_Hwu"}
+{"prof": "p561", "rel": "advisor", "name": "Nils Nilsson", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Nils_Nilsson_(researcher)"}
+{"prof": "p561", "rel": "student", "name": "Michael L. Littman", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Michael_L._Littman"}
+{"prof": "p561", "rel": "student", "name": "Leonid Peshkin", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Leonid_Peshkin"}
+{"prof": "p561", "rel": "student", "name": "Kristian Kersting", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Kristian_Kersting"}
+{"prof": "p728", "rel": "advisor", "name": "Peter Lee", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Peter_Lee_(computer_scientist)"}
+{"prof": "p112", "rel": "advisor", "name": "Charles E. Leiserson", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Charles_E._Leiserson"}
+{"prof": "p112", "rel": "student", "name": "Virginia Vassilevska Williams", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Virginia_Vassilevska_Williams"}
+{"prof": "p1068", "rel": "advisor", "name": "Stephen Kleene", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Stephen_Kleene"}
+{"prof": "p1068", "rel": "student", "name": "Allan Borodin", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Allan_Borodin"}
+{"prof": "p1068", "rel": "student", "name": "Edmund M. Clarke", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Edmund_M._Clarke"}
+{"prof": "p1068", "rel": "student", "name": "Robert Harper", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Robert_Harper_(computer_scientist)"}
+{"prof": "p1068", "rel": "student", "name": "Kurt Mehlhorn", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Kurt_Mehlhorn"}
+{"prof": "p1068", "rel": "student", "name": "Steven Muchnick", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Steven_Muchnick"}
+{"prof": "p1068", "rel": "student", "name": "David Basin", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/David_Basin"}
+{"prof": "p5205", "rel": "advisor", "name": "Robert Tibshirani", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Robert_Tibshirani"}
+{"prof": "p1000", "rel": "advisor", "name": "Austin Tate", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Austin_Tate"}
+{"prof": "p607", "rel": "advisor", "name": "Dimitri Bertsekas", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Dimitri_Bertsekas"}
+{"prof": "p607", "rel": "student", "name": "Ilan Lobel", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Asuman_Özdağlar"}
+{"prof": "p607", "rel": "student", "name": "Kostas Bimpikis", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Asuman_Özdağlar"}
+{"prof": "p607", "rel": "student", "name": "Ozan Candogan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Asuman_Özdağlar"}
+{"prof": "p607", "rel": "student", "name": "Kimon Drakopoulos", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Asuman_Özdağlar"}
+{"prof": "p607", "rel": "student", "name": "Ali Kakhbod", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Asuman_Özdağlar"}
+{"prof": "p607", "rel": "student", "name": "Ermin Wei", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Asuman_Özdağlar"}
+{"prof": "p607", "rel": "student", "name": "Ali ParandehGheibi", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Asuman_Özdağlar"}
+{"prof": "p607", "rel": "student", "name": "James Siderius", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Asuman_Özdağlar"}
+{"prof": "p607", "rel": "student", "name": "Ali Makhdoumi", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Asuman_Özdağlar"}
+{"prof": "p607", "rel": "student", "name": "Alireza Fallah.", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Asuman_Özdağlar"}
+{"prof": "p986", "rel": "advisor", "name": "Frans Kaashoek", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Frans_Kaashoek"}
+{"prof": "p1882", "rel": "advisor", "name": "Michael J. Carey", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Michael_J._Carey_(computer_scientist)"}
+{"prof": "p3955", "rel": "advisor", "name": "Inderjit Dhillon", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Inderjit_Dhillon"}
+{"prof": "p3955", "rel": "advisor", "name": "Anna C. Gilbert", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Anna_C._Gilbert"}
+{"prof": "p3951", "rel": "advisor", "name": "Michael Sipser", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Michael_Sipser"}
+{"prof": "p3634", "rel": "advisor", "name": "Michael Posner", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Michael_Posner_(psychologist)"}
+{"prof": "p5176", "rel": "advisor", "name": "S. Shankar Sastry", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/S._Shankar_Sastry"}
+{"prof": "p486", "rel": "advisor", "name": "Rodney Brooks", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Rodney_Brooks"}
+{"prof": "p486", "rel": "advisor", "name": "Paul Viola", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Paul_Viola"}
+{"prof": "p1404", "rel": "advisor", "name": "Edward Felten", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Edward_Felten"}
+{"prof": "p1404", "rel": "advisor", "name": "Amit Sahai", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Amit_Sahai"}
+{"prof": "p1871", "rel": "advisor", "name": "Raymond J. Carroll", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Raymond_J._Carroll"}
+{"prof": "p1492", "rel": "advisor", "name": "Alon Halevy", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Alon_Halevy"}
+{"prof": "p669", "rel": "advisor", "name": "Thomas Luther Downs", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Peter_L._Bartlett"}
+{"prof": "p1632", "rel": "advisor", "name": "Aubrey William Ingleton", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Aubrey_William_Ingleton"}
+{"prof": "p1632", "rel": "student", "name": "Maria Chudnovsky", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Maria_Chudnovsky"}
+{"prof": "p1632", "rel": "student", "name": "Oum Sang-il", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Oum_Sang-il"}
+{"prof": "p2706", "rel": "advisor", "name": "Arthur Bernstein", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Abraham_Silberschatz"}
+{"prof": "p2706", "rel": "advisor", "name": "Richard Kieburtz", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Abraham_Silberschatz"}
+{"prof": "p2706", "rel": "student", "name": "C. Mohan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/C._Mohan"}
+{"prof": "p2706", "rel": "student", "name": "Raghu Ramakrishnan", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Raghu_Ramakrishnan"}
+{"prof": "p1803", "rel": "advisor", "name": "Eduardo Daniel Sontag", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Eduardo_Daniel_Sontag"}
+{"prof": "p6095", "rel": "advisor", "name": "Ron Rivest", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ron_Rivest"}
+{"prof": "p2997", "rel": "advisor", "name": "Alcherio Martinoli", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Alcherio_Martinoli"}
+{"prof": "p2506", "rel": "advisor", "name": "Stephen M. Pizer", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ross_T._Whitaker"}
+{"prof": "p2506", "rel": "student", "name": "Miriah Meyer", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Miriah_Meyer"}
+{"prof": "p2323", "rel": "advisor", "name": "Robert E. Kraut", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Robert_E._Kraut"}
+{"prof": "p1688", "rel": "advisor", "name": "John Hopcroft", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/John_Hopcroft"}
+{"prof": "p5536", "rel": "advisor", "name": "Jelena Vuckovic", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Jelena_Vuckovic"}
+{"prof": "p4547", "rel": "advisor", "name": "Abraham H. Haddad", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Abraham_H._Haddad"}
+{"prof": "p4926", "rel": "advisor", "name": "Rolf Pfeifer", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Rolf_Pfeifer"}
+{"prof": "p2015", "rel": "advisor", "name": "Manuel Blum", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Manuel_Blum"}
+{"prof": "p2015", "rel": "student", "name": "Naveen Garg", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Naveen_Garg"}
+{"prof": "p2015", "rel": "student", "name": "Samir Khuller", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Samir_Khuller"}
+{"prof": "p2273", "rel": "advisor", "name": "Leonard Uhr", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Leonard_Uhr"}
+{"prof": "p1913", "rel": "advisor", "name": "Sergei Adian", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Sergei_Adian"}
+{"prof": "p2079", "rel": "advisor", "name": "Marshall Hall", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Marshall_Hall_(mathematician)"}
+{"prof": "p2079", "rel": "student", "name": "Vaneet Aggarwal", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Vaneet_Aggarwal"}
+{"prof": "p2079", "rel": "student", "name": "Yuejie Chi", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Yuejie_Chi"}
+{"prof": "p5805", "rel": "advisor", "name": "László Babai", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/László_Babai"}
+{"prof": "p2826", "rel": "advisor", "name": "Shafi Goldwasser", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Shafi_Goldwasser"}
+{"prof": "p1629", "rel": "advisor", "name": "Paul Hudak", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Paul_Hudak"}
+{"prof": "p1629", "rel": "advisor", "name": "Alan Perlis", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Alan_Perlis"}
+{"prof": "p1629", "rel": "student", "name": "Pei Cao", "type": "phd", "source": "wikipedia", "url": "https://en.wikipedia.org/wiki/Pei_Cao"}

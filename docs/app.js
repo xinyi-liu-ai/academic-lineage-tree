@@ -1,48 +1,67 @@
-/* Academic Lineage Tree — static front end (D3 v7). */
+/* Academic Lineage Family Tree — static front end following the team's Figma mock-up.
+   Views: #/ (search), #/search?r=…&i=… (result cards), #/p/<id> (generation-band tree), #/favorites, #/about */
 (() => {
   'use strict';
 
   const AREAS = {
-    ai: ['AI', { ai: 'Artificial intelligence', vision: 'Computer vision', ml: 'Machine learning', nlp: 'Natural language processing', ir: 'Web & information retrieval' }],
+    ai: ['AI', { ai: 'Artificial intelligence', vision: 'Computer vision', ml: 'Machine learning', nlp: 'Natural language processing', ir: 'The Web & information retrieval' }],
     systems: ['Systems', { arch: 'Computer architecture', networks: 'Computer networks', security: 'Computer security', db: 'Databases', eda: 'Design automation', embedded: 'Embedded & real-time systems', hpc: 'High-performance computing', mobile: 'Mobile computing', metrics: 'Measurement & performance', os: 'Operating systems', pl: 'Programming languages', se: 'Software engineering' }],
     theory: ['Theory', { theory: 'Algorithms & complexity', crypto: 'Cryptography', logic: 'Logic & verification' }],
     interdisciplinary: ['Interdisciplinary', { bio: 'Computational biology', graphics: 'Computer graphics', csed: 'CS education', ecom: 'Economics & computation', hci: 'Human-computer interaction', robotics: 'Robotics', visualization: 'Visualization' }],
   };
+  const SUB_SHORT = { ai: 'AI core', vision: 'Vision', ml: 'ML', nlp: 'NLP', ir: 'Web & IR', arch: 'Architecture', networks: 'Networks', security: 'Security', db: 'Databases', eda: 'EDA', embedded: 'Embedded', hpc: 'HPC', mobile: 'Mobile', metrics: 'Metrics', os: 'OS', pl: 'PL', se: 'SE', theory: 'Algorithms', crypto: 'Crypto', logic: 'Logic', bio: 'Comp. bio', graphics: 'Graphics', csed: 'CS ed', ecom: 'Econ & CS', hci: 'HCI', robotics: 'Robotics', visualization: 'Visualization' };
   const SUB_LABEL = Object.fromEntries(Object.values(AREAS).flatMap(([, subs]) => Object.entries(subs)));
-  const SRC_LABEL = { sheet: 'Curated', wikidata: 'Wikidata', wikipedia: 'Wikipedia', homepage: 'Homepage', cv: 'CV' };
-  const MAX_CHILDREN = 14;
-  const PAGE = 60;
+  const AREA_OF = Object.fromEntries(Object.entries(AREAS).flatMap(([a, [, subs]]) => Object.keys(subs).map((s) => [s, a])));
+  const AREA_COLOR = { ai: '#6c9a58', systems: '#4f7d6b', theory: '#8d874a', interdisciplinary: '#5d7f99' };
+  const SRC_LABEL = { sheet: 'Curated', wikidata: 'Wikidata', wikipedia: 'Wikipedia', homepage: 'Homepage', cv: 'CV', dblp: 'dblp' };
+  const INFER_TIP = 'Inferred from dblp: the most frequent senior last author on this person’s papers during their PhD years. About 83% accurate when checked against known advisors.';
+  const PAGE = 30;
+  const MAXGEN = 6;
 
-  const $ = (s) => document.querySelector(s);
+  const $ = (s, r = document) => r.querySelector(s);
   const el = (tag, attrs = {}, ...kids) => {
     const n = document.createElement(tag);
     for (const [k, v] of Object.entries(attrs)) {
       if (k === 'class') n.className = v;
+      else if (k === 'style') n.style.cssText = v;
       else if (k.startsWith('on')) n.addEventListener(k.slice(2), v);
       else if (v !== false && v != null) n.setAttribute(k, v === true ? '' : v);
     }
-    for (const k of kids.flat()) if (k != null && k !== false) n.append(k.nodeType ? k : document.createTextNode(k));
+    for (const k of kids.flat()) if (k != null && k !== false && k !== '') n.append(k.nodeType ? k : document.createTextNode(k));
     return n;
   };
   const fold = (s) => s.normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9 ]+/g, ' ').replace(/\s+/g, ' ').trim();
+  const fmt = (v) => Number(v).toLocaleString('en-US');
 
-  let G; // data
-  const state = { areas: new Set(), unis: new Set(), onlyKnown: false, sort: 'lineage', shown: PAGE, root: null, expanded: new Set() };
+  /* ---------- favorites (this browser only) ---------- */
+  const FAV_KEY = 'alt-favorites';
+  let favs = new Set();
+  try { favs = new Set(JSON.parse(localStorage.getItem(FAV_KEY) || '[]')); } catch (e) { favs = new Set(); }
+  const saveFavs = () => { try { localStorage.setItem(FAV_KEY, JSON.stringify([...favs])); } catch (e) { /* storage unavailable */ } updateFavCount(); };
+  const toggleFav = (id) => { favs.has(id) ? favs.delete(id) : favs.add(id); saveFavs(); };
+  function updateFavCount() {
+    const c = $('#favCount');
+    const n = G ? [...favs].filter((id) => G.nodes.has(id)).length : favs.size;
+    c.textContent = n; c.hidden = !n;
+  }
 
   /* ---------- data ---------- */
+  let G;
   async function load() {
-    const res = await fetch('data/graph.json');
-    const raw = await res.json();
+    const raw = await (await fetch('data/graph.json')).json();
     const nodes = new Map();
     for (const n of raw.nodes) {
       n.ext = !!n.x;
       n.f = fold(n.n);
+      n.d = n.d || [];
       if (!n.ext) { n.uni = raw.unis[n.u][0]; n.uniShort = raw.unis[n.u][1] || raw.unis[n.u][0]; }
+      n.former = !!n.o;
       n.adv = []; n.stu = [];
       nodes.set(n.id, n);
     }
-    for (const [a, s, t, src, url, disputed] of raw.edges) {
-      const e = { a, s, t, src: src.split('+'), url, disputed: !!disputed };
+    for (const [a, s, t, src, url, disputed, note] of raw.edges) {
+      const e = { a, s, t, src: src.split('+'), url, disputed: !!disputed, note };
+      e.inferred = e.src.length === 1 && e.src[0] === 'dblp';
       nodes.get(a).stu.push(e);
       nodes.get(s).adv.push(e);
     }
@@ -51,310 +70,563 @@
       n.degree = n.adv.length + n.stu.length;
     }
     const profs = [...nodes.values()].filter((n) => !n.ext);
-    G = { nodes, profs, unis: raw.unis, summary: raw.summary };
+    const subCount = {};
+    for (const p of profs) if (!p.former) for (const d of p.d) subCount[d] = (subCount[d] || 0) + 1;
+    const uniCount = new Map();
+    for (const p of profs) if (!p.former) uniCount.set(p.u, (uniCount.get(p.u) || 0) + 1);
+    G = { nodes, profs, unis: raw.unis, summary: raw.summary, subCount, uniCount };
   }
 
-  /* ---------- filters ---------- */
-  function buildAreaFilter() {
-    const box = $('#areas');
-    const count = {};
-    for (const p of G.profs) for (const d of p.d) count[d] = (count[d] || 0) + 1;
-    for (const [area, [label, subs]] of Object.entries(AREAS)) {
-      const parent = el('input', { type: 'checkbox' });
-      const kids = Object.entries(subs).filter(([k]) => count[k]).map(([k, lab]) => {
-        const cb = el('input', { type: 'checkbox', value: k });
-        cb.addEventListener('change', () => { cb.checked ? state.areas.add(k) : state.areas.delete(k); sync(); refresh(); });
-        return [cb, el('label', { class: 'check' }, cb, lab, el('small', {}, count[k]))];
-      });
-      const sync = () => {
-        const on = kids.filter(([cb]) => cb.checked).length;
-        parent.checked = on === kids.length; parent.indeterminate = on > 0 && on < kids.length;
-      };
-      parent.addEventListener('change', () => {
-        for (const [cb] of kids) { cb.checked = parent.checked; parent.checked ? state.areas.add(cb.value) : state.areas.delete(cb.value); }
-        parent.indeterminate = false; refresh();
-      });
-      const wrap = el('div', { class: 'area' },
-        el('div', { class: 'area-head' },
-          el('button', { class: 'caret', type: 'button', 'aria-label': `Expand ${label}`, onclick: () => wrap.classList.toggle('open') }, '▸'),
-          el('label', { class: 'check' }, parent, label)),
-        el('div', { class: 'subareas' }, kids.map(([, l]) => l)));
-      box.append(wrap);
-    }
-  }
+  const initials = (name) => {
+    const t = name.replace(/[^\p{L}\s.-]/gu, '').split(/[\s.-]+/).filter((x) => x && !/^(jr|sr|ii|iii)$/i.test(x));
+    return ((t[0] || '?')[0] + (t.length > 1 ? t[t.length - 1][0] : '')).toUpperCase();
+  };
+  const avatar = (n, extra = '') => el('div', {
+    class: `avatar ${n.ext ? 'ext' : ''} ${extra}`, 'aria-hidden': 'true',
+    style: n.ext ? null : `--av:${AREA_COLOR[AREA_OF[n.d[0]]] || '#6c9a58'}`,
+  }, initials(n.n));
+  const interest = (n, k = 2) => n.d.slice(0, k).map((d) => SUB_LABEL[d] || d).join(', ');
 
-  function buildUniFilter() {
-    const list = $('#unis');
-    const count = new Map();
-    for (const p of G.profs) count.set(p.u, (count.get(p.u) || 0) + 1);
-    const items = G.unis.map(([full, short], i) => {
-      const cb = el('input', { type: 'checkbox', value: i });
-      cb.addEventListener('change', () => { cb.checked ? state.unis.add(i) : state.unis.delete(i); refresh(); });
-      const label = el('label', { class: 'check' }, cb, short ? `${full} (${short})` : full, el('small', {}, count.get(i) || 0));
-      return { cb, label, key: fold(`${full} ${short}`) };
+  /* ---------- shared search filters ---------- */
+  const S = { subs: new Set(), unis: new Set() };
+  const cards = [];
+
+  let openPanel = null;
+  function closePanels() { if (openPanel) { openPanel.hidden = true; openPanel.previousElementSibling.setAttribute('aria-expanded', 'false'); openPanel = null; } for (const c of cards) c.sync(); }
+  document.addEventListener('mousedown', (e) => { if (openPanel && !openPanel.parentElement.contains(e.target)) closePanels(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { closePanels(); closeDrawer(); } });
+
+  function dropdown(icon, onOpen) {
+    const trigger = el('button', { class: 'dd-trigger', type: 'button', 'aria-haspopup': 'true', 'aria-expanded': 'false' });
+    const panel = el('div', { class: 'dd-panel', hidden: true });
+    trigger.addEventListener('click', () => {
+      const wasOpen = openPanel === panel;
+      closePanels();
+      if (!wasOpen) { onOpen(panel); panel.hidden = false; trigger.setAttribute('aria-expanded', 'true'); openPanel = panel; for (const c of cards) c.sync(); }
     });
-    items.forEach((it) => list.append(it.label));
-    $('#uniQ').addEventListener('input', (ev) => {
-      const q = fold(ev.target.value);
-      for (const it of items) it.label.hidden = q && !it.key.includes(q);
-    });
-    $('#uniAll').addEventListener('click', () => { for (const it of items) if (!it.label.hidden) { it.cb.checked = true; state.unis.add(+it.cb.value); } refresh(); });
-    $('#uniNone').addEventListener('click', () => { for (const it of items) it.cb.checked = false; state.unis.clear(); refresh(); });
+    const setChips = (chips, placeholder, open) => {
+      const caret = el('img', { class: 'caret', src: `assets/icons/icon_${open ? 'uparrow' : 'downarrow'}.png`, alt: '' });
+      trigger.replaceChildren(el('img', { src: `assets/icons/${icon}`, alt: '' }),
+        chips.length ? el('span', { class: 'chips' }, chips) : el('span', { class: 'ph' }, placeholder), caret);
+    };
+    return { box: el('div', { class: 'dd' }, trigger, panel), panel, setChips };
   }
 
-  function filtered() {
-    let list = G.profs.filter((p) =>
-      (!state.areas.size || p.d.some((d) => state.areas.has(d))) &&
-      (!state.unis.size || state.unis.has(p.u)) &&
-      (!state.onlyKnown || p.knownAdv));
-    const by = {
-      lineage: (a, b) => b.degree - a.degree || a.n.localeCompare(b.n),
-      name: (a, b) => a.n.localeCompare(b.n),
-      uni: (a, b) => a.uni.localeCompare(b.uni) || a.n.localeCompare(b.n),
-    }[state.sort];
-    return list.sort(by);
+  function chipList(labels) {
+    if (labels.length <= 2) return labels.map((l) => el('span', { class: 'chip' }, l));
+    return [el('span', { class: 'chip' }, labels[0]), el('span', { class: 'chip' }, labels[1]), el('span', { class: 'dots' }, '…'), el('span', { class: 'chip count' }, labels.length)];
   }
 
-  function refresh() { state.shown = PAGE; renderResults(); }
-
-  function renderResults() {
-    const list = filtered();
-    const ol = $('#resList');
-    ol.replaceChildren();
-    const any = state.areas.size || state.unis.size || state.onlyKnown;
-    $('#resTitle').textContent = any ? `${list.length.toLocaleString()} professors match` : 'All professors';
-    if (!any) {
-      const s = G.summary;
-      ol.append(el('div', { class: 'stats' },
-        stat(s.professors, 'professors'), stat(G.unis.length, 'institutions'),
-        stat(s.with_advisor, 'with a known advisor'), stat(G.nodes.size, 'researchers in the tree')));
+  function areaLabels() {
+    const out = [];
+    for (const [, [lab, subs]] of Object.entries(AREAS)) {
+      const ks = Object.keys(subs).filter((k) => G.subCount[k]);
+      const on = ks.filter((k) => S.subs.has(k));
+      if (on.length && on.length === ks.length) out.push(lab);
+      else out.push(...on.map((k) => SUB_SHORT[k]));
     }
-    if (!list.length) ol.append(el('li', { class: 'empty' }, 'No professors match these filters.'));
-    for (const p of list.slice(0, state.shown)) {
-      const nA = p.adv.filter((e) => !e.disputed).length, nS = p.stu.length;
-      ol.append(el('li', { onclick: () => go(p.id), tabindex: 0, onkeydown: (e) => e.key === 'Enter' && go(p.id) },
-        el('div', {}, el('div', { class: 'res-name' }, p.n), el('div', { class: 'res-uni' }, p.uni)),
-        el('div', { class: 'res-count' }, nA ? el('span', {}, el('b', {}, nA), ' advisor' + (nA > 1 ? 's' : '')) : 'advisor unknown',
-          nS ? el('div', {}, el('b', {}, nS), ' student' + (nS > 1 ? 's' : '')) : null),
-        el('div', { class: 'res-tags' }, p.d.map((d) => el('span', { class: 'tag' }, SUB_LABEL[d] || d)))));
-    }
-    $('#more').hidden = list.length <= state.shown;
+    return out;
   }
-  const stat = (v, l) => el('div', { class: 'stat' }, el('b', {}, Number(v).toLocaleString()), el('span', {}, l));
 
-  /* ---------- search ---------- */
-  function setupSearch() {
-    const q = $('#q'), box = $('#suggest');
+  function buildAreaPanel(panel, refresh) {
+    const rows = [];
+    const all = el('input', { type: 'checkbox' });
+    const allKeys = Object.keys(SUB_LABEL).filter((k) => G.subCount[k]);
+    const sync = () => {
+      all.checked = S.subs.size === allKeys.length; all.indeterminate = S.subs.size > 0 && !all.checked;
+      for (const r of rows) r();
+      refresh();
+    };
+    all.addEventListener('change', () => { S.subs = new Set(all.checked ? allKeys : []); sync(); });
+    panel.replaceChildren(el('label', { class: 'row area' }, all, 'ALL'));
+    for (const [, [lab, subs]] of Object.entries(AREAS)) {
+      const ks = Object.keys(subs).filter((k) => G.subCount[k]);
+      const acb = el('input', { type: 'checkbox' });
+      const subRows = ks.map((k) => {
+        const cb = el('input', { type: 'checkbox' });
+        cb.addEventListener('change', () => { cb.checked ? S.subs.add(k) : S.subs.delete(k); sync(); });
+        rows.push(() => { cb.checked = S.subs.has(k); });
+        return el('label', { class: 'row sub', hidden: true }, cb, subs[k], el('small', {}, fmt(G.subCount[k])));
+      });
+      const exp = el('button', { class: 'exp', type: 'button', 'aria-label': `Expand ${lab}` }, '+');
+      exp.addEventListener('click', (e) => {
+        e.preventDefault();
+        const open = subRows[0] && subRows[0].hidden;
+        for (const r of subRows) r.hidden = !open;
+        exp.textContent = open ? '−' : '+';
+      });
+      acb.addEventListener('change', () => { for (const k of ks) acb.checked ? S.subs.add(k) : S.subs.delete(k); sync(); });
+      rows.push(() => {
+        const on = ks.filter((k) => S.subs.has(k)).length;
+        acb.checked = on === ks.length; acb.indeterminate = on > 0 && on < ks.length;
+      });
+      panel.append(el('div', { class: 'row area' }, exp, el('label', { class: 'area-label' }, acb, lab)), ...subRows);
+    }
+    sync();
+  }
+
+  function buildUniPanel(panel, refresh) {
+    const q = el('input', { type: 'search', placeholder: 'Search institutions', 'aria-label': 'Search institutions' });
+    const list = el('div');
+    const items = G.unis.map(([full, short], i) => ({ i, full, short, key: fold(`${full} ${short}`) }))
+      .sort((a, b) => a.full.localeCompare(b.full));
+    const render = () => {
+      const t = fold(q.value);
+      list.replaceChildren(...items.filter((it) => !t || it.key.includes(t)).map((it) => {
+        const cb = el('input', { type: 'checkbox' });
+        cb.checked = S.unis.has(it.i);
+        cb.addEventListener('change', () => { cb.checked ? S.unis.add(it.i) : S.unis.delete(it.i); refresh(); });
+        return el('label', { class: 'row' }, cb, it.full, el('small', {}, fmt(G.uniCount.get(it.i) || 0)));
+      }));
+    };
+    q.addEventListener('input', render);
+    const selAll = el('button', { class: 'linkbtn', type: 'button' }, 'Select all');
+    selAll.addEventListener('click', () => { const t = fold(q.value); for (const it of items) if (!t || it.key.includes(t)) S.unis.add(it.i); render(); refresh(); });
+    const clear = el('button', { class: 'linkbtn', type: 'button' }, 'Clear');
+    clear.addEventListener('click', () => { S.unis.clear(); render(); refresh(); });
+    panel.replaceChildren(el('div', { class: 'uni-search' }, q, selAll, clear), list);
+    render();
+    setTimeout(() => q.focus(), 0);
+  }
+
+  function mountSearch(box, variant) {
+    const area = dropdown('icon_book.png', (panel) => buildAreaPanel(panel, () => syncChips()));
+    const uni = dropdown('icon_institution.png', (panel) => buildUniPanel(panel, () => syncChips()));
+    const syncChips = () => {
+      area.setChips(chipList(areaLabels()), 'Choose a tag.', openPanel === area.panel);
+      const u = [...S.unis].map((i) => G.unis[i][1] || G.unis[i][0]);
+      uni.setChips(u.length ? chipList(u) : [el('span', { class: 'chip' }, 'All')], '', openPanel === uni.panel);
+    };
+    const go = el('button', { class: 'go', type: 'button', 'aria-label': 'Search' }, el('img', { src: 'assets/icons/icon_search.png', alt: '' }));
+    go.addEventListener('click', () => { closePanels(); location.hash = searchHash(); });
+    box.append(el('div', { class: 'search-row' },
+      el('div', { class: 'field' }, el('span', { class: 'lab' }, 'Research Interest'), area.box),
+      el('div', { class: 'field' }, el('span', { class: 'lab' }, 'Institution'), uni.box),
+      go));
+    if (variant === 'home') box.append(nameSearch());
+    cards.push({ sync: syncChips });
+    syncChips();
+  }
+
+  function nameSearch() {
+    const input = el('input', { type: 'search', placeholder: 'Or jump to a professor by name, e.g. Michael I. Jordan', autocomplete: 'off', 'aria-label': 'Search professors by name' });
+    const box = el('ul', { class: 'suggest', role: 'listbox', hidden: true });
     let hits = [], sel = -1;
     const render = () => {
       box.replaceChildren(...hits.map((n, i) => el('li', {
         role: 'option', 'aria-selected': i === sel ? 'true' : 'false',
         onmousedown: (e) => { e.preventDefault(); pick(n); },
-      }, el('span', {}, n.n), el('small', {}, n.ext ? 'other researcher' : n.uniShort))));
+      }, el('span', {}, n.n), el('small', {}, n.ext ? 'other researcher' : n.uniShort + (n.former ? ' (former)' : '')))));
       box.hidden = !hits.length;
     };
-    const pick = (n) => { q.value = ''; hits = []; render(); q.blur(); go(n.id); };
-    q.addEventListener('input', () => {
-      const t = fold(q.value);
-      sel = -1;
-      if (t.length < 2) { hits = []; return render(); }
+    const pick = (n) => { input.value = ''; hits = []; render(); go(n.id); };
+    input.addEventListener('input', () => {
+      const t = fold(input.value);
+      if (t.length < 2) { hits = []; render(); return; }
       const words = t.split(' ');
-      const score = (n) => (n.f.startsWith(t) ? 0 : 1) + (n.ext ? 2 : 0);
+      const score = (n) => (n.f.startsWith(t) ? 0 : n.f.split(' ').some((w) => w.startsWith(words[0])) ? 1 : 2) + (n.ext ? 3 : 0) + (n.former ? 1 : 0);
       hits = [];
       for (const n of G.nodes.values()) if (words.every((w) => n.f.includes(w))) hits.push(n);
-      hits.sort((a, b) => score(a) - score(b) || b.degree - a.degree).splice(12);
-      render();
+      hits.sort((a, b) => score(a) - score(b) || b.degree - a.degree);
+      hits = hits.slice(0, 8); sel = hits.length ? 0 : -1; render();
     });
-    q.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowDown') { sel = Math.min(sel + 1, hits.length - 1); render(); e.preventDefault(); }
-      else if (e.key === 'ArrowUp') { sel = Math.max(sel - 1, 0); render(); e.preventDefault(); }
-      else if (e.key === 'Enter' && hits.length) pick(hits[Math.max(sel, 0)]);
-      else if (e.key === 'Escape') { hits = []; render(); }
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowDown') { sel = Math.min(hits.length - 1, sel + 1); render(); e.preventDefault(); }
+      else if (e.key === 'ArrowUp') { sel = Math.max(0, sel - 1); render(); e.preventDefault(); }
+      else if (e.key === 'Enter' && hits[sel]) pick(hits[sel]);
     });
-    q.addEventListener('blur', () => setTimeout(() => { box.hidden = true; }, 100));
-    q.addEventListener('focus', () => { box.hidden = !hits.length; });
+    input.addEventListener('blur', () => setTimeout(() => { box.hidden = true; }, 120));
+    return el('div', { class: 'name-row' }, el('span', { class: 'glass' }), input, box);
   }
 
-  /* ---------- tree ---------- */
-  const svg = d3.select('#canvas');
-  const gRoot = svg.append('g');
-  const zoom = d3.zoom().scaleExtent([0.15, 3]).on('zoom', (ev) => gRoot.attr('transform', ev.transform));
-  svg.call(zoom).on('dblclick.zoom', null);
+  const searchHash = () => {
+    const p = new URLSearchParams();
+    if (S.subs.size) p.set('r', [...S.subs].join(','));
+    if (S.unis.size) p.set('i', [...S.unis].join(','));
+    const q = p.toString();
+    return '#/search' + (q ? '?' + q : '');
+  };
 
-  function buildSide(rootId, dir, depth) {
-    // dir 'up' = advisors, 'down' = students
-    const make = (id, d, path, edge) => {
-      const n = G.nodes.get(id);
-      const node = { id, n, edge, children: [] };
-      if (d < depth) {
-        let es = (dir === 'up' ? n.adv : n.stu).filter((e) => !path.has(dir === 'up' ? e.a : e.s));
-        es = es.slice().sort((x, y) => (x.disputed - y.disputed) || (x.t === 'phd' ? -1 : 1) || (G.nodes.get(dir === 'up' ? y.a : y.s).degree - G.nodes.get(dir === 'up' ? x.a : x.s).degree));
-        const key = `${dir}:${id}`;
-        const limit = state.expanded.has(key) ? Infinity : d === 0 ? MAX_CHILDREN : 6;
-        for (const e of es.slice(0, limit)) {
-          const other = dir === 'up' ? e.a : e.s;
-          node.children.push(make(other, d + 1, new Set([...path, other]), e));
+  /* ---------- results ---------- */
+  const R = { onlyKnown: false, showFormer: false, sort: 'lineage', shown: PAGE, name: '' };
+  function filtered() {
+    const t = fold(R.name);
+    const list = G.profs.filter((p) =>
+      (!S.subs.size || p.d.some((d) => S.subs.has(d))) &&
+      (!S.unis.size || S.unis.has(p.u)) &&
+      (!R.onlyKnown || p.knownAdv) &&
+      (R.showFormer || !p.former) &&
+      (!t || p.f.includes(t)));
+    const by = {
+      lineage: (a, b) => b.degree - a.degree || a.n.localeCompare(b.n),
+      name: (a, b) => a.n.localeCompare(b.n),
+      uni: (a, b) => a.uni.localeCompare(b.uni) || a.n.localeCompare(b.n),
+    }[R.sort];
+    return list.sort(by);
+  }
+
+  function card(p) {
+    const nA = p.adv.filter((e) => !e.disputed).length, nS = p.stu.length;
+    const star = el('button', { class: `corner ${favs.has(p.id) ? 'on' : ''}`, type: 'button', 'aria-pressed': favs.has(p.id) ? 'true' : 'false', 'aria-label': `Star ${p.n}` }, el('span', { class: 'star' }));
+    star.addEventListener('click', (e) => {
+      e.stopPropagation(); toggleFav(p.id);
+      star.classList.toggle('on', favs.has(p.id)); star.setAttribute('aria-pressed', favs.has(p.id) ? 'true' : 'false');
+      if (current.view === 'favorites') renderFavorites();
+    });
+    return el('li', { class: 'card', tabindex: 0, onclick: () => go(p.id), onkeydown: (e) => { if (e.key === 'Enter') go(p.id); } },
+      avatar(p), star,
+      el('div', { class: 'card-body' },
+        el('div', { class: 'card-name' }, p.n),
+        el('div', { class: 'card-meta' },
+          el('div', {}, 'Professor', p.former ? el('span', { class: 'badge-former' }, 'former') : null),
+          el('div', {}, p.uni),
+          el('div', { class: 'interest' }, interest(p) || '—')),
+        el('div', { class: 'card-stats' }, nA ? `${nA} advisor${nA > 1 ? 's' : ''}` : 'Advisor unknown', nS ? ` · ${nS} student${nS > 1 ? 's' : ''}` : '')));
+  }
+
+  function renderResults() {
+    const list = filtered();
+    $('#resCount').textContent = `${fmt(list.length)} Results found...`;
+    const ul = $('#cards');
+    ul.replaceChildren(...list.slice(0, R.shown).map(card));
+    if (!list.length) ul.append(el('li', { class: 'empty' }, 'No professors match. Try fewer tags or another institution.'));
+    $('#more').hidden = list.length <= R.shown;
+  }
+
+  function renderFavorites() {
+    const ul = $('#favCards');
+    const list = [...favs].map((id) => G.nodes.get(id)).filter((n) => n && !n.ext);
+    ul.replaceChildren(...list.map(card));
+    if (!list.length) ul.append(el('li', { class: 'empty' }, 'No favorites yet. Use the star on a professor’s card or in the tree to keep them here.'));
+  }
+
+  /* ---------- tree (generation bands) ---------- */
+  const T = { root: null, focus: { up: [], down: [] }, page: {}, lo: null, zoom: 1, selected: null };
+  const edgeOther = (e, dir) => (dir === 'down' ? e.s : e.a);
+  const edgeSort = (dir) => (x, y) => (x.disputed - y.disputed) || (x.inferred - y.inferred) || ((x.t === 'phd' ? 0 : 1) - (y.t === 'phd' ? 0 : 1)) ||
+    (G.nodes.get(edgeOther(y, dir)).degree - G.nodes.get(edgeOther(x, dir)).degree);
+
+  function layoutParams() {
+    const vp = $('#viewport');
+    const w = vp.clientWidth / T.zoom, h = vp.clientHeight / T.zoom;
+    let n = Math.max(3, Math.min(7, Math.floor(w / 170)));
+    if (n % 2 === 0) n -= 1;
+    const av = w / n < 140 ? 44 : 60;
+    const perPage = Math.max(2, Math.floor((h - 90) / (av + 66)));
+    return { n, av, perPage };
+  }
+
+  function columns(perPage) {
+    const cols = new Map([[0, { items: [{ id: T.root, edge: null }], parent: null }]]);
+    for (const dir of ['down', 'up']) {
+      const sign = dir === 'down' ? 1 : -1;
+      const chain = new Set([T.root]);
+      let parent = T.root;
+      for (let k = 1; k <= MAXGEN; k++) {
+        const node = G.nodes.get(parent);
+        const es = (dir === 'down' ? node.stu : node.adv).filter((e) => !chain.has(edgeOther(e, dir))).sort(edgeSort(dir));
+        if (!es.length) break;
+        const gen = sign * k;
+        const items = es.map((e) => ({ id: edgeOther(e, dir), edge: e }));
+        const pages = Math.ceil(items.length / perPage);
+        let pg = Math.min(T.page[gen] || 0, pages - 1);
+        let f = T.focus[dir][k - 1];
+        const fi = items.findIndex((it) => it.id === f);
+        if (fi < 0) {
+          const onPage = items.slice(pg * perPage, (pg + 1) * perPage);
+          const more = (it) => { const n = G.nodes.get(it.id); return (dir === 'down' ? n.stu : n.adv).some((e) => !chain.has(edgeOther(e, dir)) && edgeOther(e, dir) !== it.id); };
+          f = (onPage.find(more) || onPage[0]).id;
+          T.focus[dir][k - 1] = f;
+          T.focus[dir].length = k;
+        } else if (T.page[gen] == null) {
+          pg = Math.floor(fi / perPage);
         }
-        if (es.length > limit) node.children.push({ more: es.length - limit, key, id: key + ':more', children: [] });
+        T.page[gen] = pg;
+        cols.set(gen, { items, parent, pages, page: pg });
+        chain.add(f);
+        parent = f;
       }
-      return node;
-    };
-    return d3.hierarchy(make(rootId, 0, new Set([rootId])), (d) => d.children);
-  }
-
-  function drawTree(fit = true) {
-    const root = G.nodes.get(state.root);
-    const up = +$('#up').value, down = +$('#down').value;
-    const layout = d3.tree().nodeSize([30, 230]).separation((a, b) => (a.parent === b.parent ? 1 : 1.25));
-    const sides = [['up', -1, layout(buildSide(root.id, 'up', up))], ['down', 1, layout(buildSide(root.id, 'down', down))]];
-    gRoot.selectAll('*').remove();
-    const linkG = gRoot.append('g'), nodeG = gRoot.append('g');
-    for (const [dir, sign, h] of sides) {
-      const pos = (d) => [sign * d.y, d.x];
-      linkG.selectAll(null).data(h.links()).join('path')
-        .attr('class', (l) => `link-path ${l.target.data.edge ? (l.target.data.edge.disputed ? 'disputed' : l.target.data.edge.t) : ''}`)
-        .attr('d', (l) => d3.linkHorizontal()({ source: pos(l.source), target: pos(l.target) }));
-      const nodes = h.descendants().filter((d) => dir === 'down' || d.depth > 0);
-      const g = nodeG.selectAll(null).data(nodes).join('g')
-        .attr('class', (d) => 'node ' + (d.data.more ? 'more' : d.depth === 0 ? 'root prof' : d.data.n.ext ? 'ext' : 'prof'))
-        .attr('transform', (d) => `translate(${pos(d)})`)
-        .on('click', (ev, d) => {
-          if (d.data.more) { state.expanded.add(d.data.key); drawTree(false); }
-          else if (d.depth > 0) go(d.id);
-        })
-        .on('mousemove', (ev, d) => showTip(ev, d))
-        .on('mouseleave', hideTip);
-      g.append('circle').attr('r', (d) => (d.depth === 0 ? 9 : 6));
-      const anchorLeft = (d) => (d.depth === 0 ? 'middle' : sign < 0 ? 'end' : 'start');
-      const dx = (d) => (d.depth === 0 ? 0 : sign * 11);
-      g.append('text').attr('class', 'name').attr('x', dx).attr('dy', (d) => (d.depth === 0 ? -16 : d.data.more || d.data.n.ext ? 4 : -1))
-        .attr('text-anchor', anchorLeft)
-        .text((d) => (d.data.more ? `+ ${d.data.more} more` : trunc(d.data.n.n, 28)));
-      g.filter((d) => !d.data.more && !d.data.n.ext).append('text').attr('class', 'sub').attr('x', dx)
-        .attr('dy', (d) => (d.depth === 0 ? 24 : 11)).attr('text-anchor', anchorLeft)
-        .text((d) => d.data.n.uniShort);
     }
-    if (fit) fitView();
-  }
-  const trunc = (s, n) => (s.length > n ? s.slice(0, n - 1) + '…' : s);
-
-  function fitView() {
-    const box = gRoot.node().getBBox();
-    const { width, height } = svg.node().getBoundingClientRect();
-    if (!box.width || !width) return;
-    const k = Math.min(1.1, 0.9 * Math.min(width / box.width, height / box.height));
-    const t = d3.zoomIdentity.translate(width / 2 - k * (box.x + box.width / 2), height / 2 - k * (box.y + box.height / 2)).scale(k);
-    svg.transition().duration(350).call(zoom.transform, t);
+    return cols;
   }
 
-  const tip = $('#tip');
-  function showTip(ev, d) {
-    if (d.data.more) { tip.textContent = 'Click to show all'; }
-    else {
-      const n = d.data.n, e = d.data.edge;
-      tip.textContent = [n.n, n.ext ? null : n.uni, e ? `${e.t === 'phd' ? 'PhD' : 'Postdoc'} · ${e.src.map((s) => SRC_LABEL[s]).join(', ')}${e.disputed ? ' · unverified' : ''}` : null].filter(Boolean).join('\n');
+  function genLabel(gen, col) {
+    if (gen === 0 || (!col && Math.abs(gen) > 1)) return '';
+    if (Math.abs(gen) === 1) return gen < 0 ? 'Advisors' : 'Students';
+    const of = col ? G.nodes.get(col.parent).n : '';
+    return `${gen < 0 ? 'Advisors' : 'Students'} of ${of}`;
+  }
+
+  function tnode(it, gen, isFocus) {
+    const n = G.nodes.get(it.id), e = it.edge;
+    const badge = e ? (e.disputed ? el('span', { class: 't-badge warn' }, 'unverified') : e.inferred ? el('span', { class: 't-badge' }, 'inferred') : e.t === 'postdoc' ? el('span', { class: 't-badge' }, 'postdoc') : null) : null;
+    const b = el('button', { class: `tnode ${gen === 0 ? 'root' : ''} ${isFocus ? 'focus' : ''}`, type: 'button', 'data-id': it.id, 'data-gen': gen },
+      avatar(n),
+      el('span', { class: 't-name' }, n.n),
+      el('span', { class: 't-sub' }, n.ext ? 'Not in faculty list' : n.uniShort),
+      n.ext ? null : el('span', { class: 't-dir' }, n.d[0] ? SUB_LABEL[n.d[0]] : ''),
+      badge);
+    b.addEventListener('click', () => selectNode(it.id, gen));
+    b.addEventListener('dblclick', () => { if (gen !== 0) go(it.id); });
+    b.addEventListener('mousemove', (ev) => showTip(ev, n, e));
+    b.addEventListener('mouseleave', hideTip);
+    return b;
+  }
+
+  function drawTree() {
+    if (!T.root) return;
+    const { n, av, perPage } = layoutParams();
+    const cols = columns(perPage);
+    const gens = [...cols.keys()];
+    const minGen = Math.min(...gens), maxGen = Math.max(...gens);
+    if (T.lo == null) {
+      let lo = -Math.floor(n / 2);
+      const hi = lo + n - 1;
+      if (minGen > lo) lo += Math.min(minGen - lo, Math.max(0, maxGen - hi));
+      else if (maxGen < hi) lo -= Math.min(hi - maxGen, Math.max(0, lo - minGen));
+      T.lo = lo;
     }
-    tip.style.whiteSpace = 'pre-line';
-    tip.hidden = false;
-    tip.style.left = Math.min(ev.clientX + 14, innerWidth - 300) + 'px';
-    tip.style.top = ev.clientY + 14 + 'px';
-  }
-  function hideTip() { tip.hidden = true; }
+    T.lo = Math.max(Math.min(T.lo, Math.max(maxGen - n + 1, -n + 1)), Math.min(minGen, 0));
+    const lo = T.lo, hi = lo + n - 1;
+    $('#genLeft').disabled = lo <= minGen;
+    $('#genRight').disabled = hi >= maxGen;
 
-  /* ---------- detail panel ---------- */
-  function renderDetail(n) {
-    const d = $('#detail');
-    const peopleList = (edges, otherKey) => {
-      if (!edges.length) return el('p', { class: 'note' }, 'None recorded yet.');
-      const sorted = edges.slice().sort((a, b) => a.disputed - b.disputed || (a.t === 'phd' ? -1 : 1));
-      return el('ul', { class: 'people' }, sorted.map((e) => {
-        const o = G.nodes.get(e[otherKey]);
-        return el('li', {},
-          el('button', { class: 'who', type: 'button', onclick: () => go(o.id) }, o.n, o.ext ? null : el('small', {}, ' · ' + o.uniShort)),
-          e.t === 'postdoc' ? el('span', { class: 'src' }, 'postdoc') : null,
-          e.disputed ? el('span', { class: 'src warn', title: 'From the curated sheet; conflicts with Wikidata / Wikipedia' }, 'unverified') : null,
-          ...e.src.map((s) => (e.url && s !== 'sheet'
-            ? el('a', { class: 'src', href: e.url, target: '_blank', rel: 'noopener' }, SRC_LABEL[s])
-            : el('span', { class: 'src' }, SRC_LABEL[s]))));
-      }));
+    const bands = $('#bands');
+    bands.style.setProperty('--av-size', av + 'px');
+    bands.style.setProperty('--root-size', (av + 36) + 'px');
+    bands.replaceChildren();
+    for (let g = lo; g <= hi; g++) {
+      const col = cols.get(g);
+      const band = el('div', { class: `band d${Math.min(Math.abs(g), 2)}` });
+      const label = genLabel(g, col);
+      if (label) band.append(el('div', { class: 'gen-label', title: label }, label.length > 34 ? label.slice(0, 33) + '…' : label));
+      if (col) {
+        const dir = g > 0 ? 'down' : 'up';
+        const f = g === 0 ? null : T.focus[dir][Math.abs(g) - 1];
+        const items = g === 0 ? col.items : col.items.slice(col.page * perPage, (col.page + 1) * perPage);
+        band.append(el('div', { class: 'stack' }, items.map((it) => tnode(it, g, it.id === f && cols.has(g + Math.sign(g))))));
+        if (col.pages > 1) {
+          const prev = el('button', { type: 'button', 'aria-label': 'Previous page' }, '‹');
+          const next = el('button', { type: 'button', 'aria-label': 'Next page' }, '›');
+          prev.disabled = col.page === 0; next.disabled = col.page >= col.pages - 1;
+          const turn = (d) => {
+            T.page[g] = col.page + d;
+            T.focus[dir].length = Math.abs(g) - 1;
+            for (const k of Object.keys(T.page)) if (Math.sign(+k) === Math.sign(g) && Math.abs(+k) > Math.abs(g)) delete T.page[k];
+            drawTree();
+          };
+          prev.addEventListener('click', () => turn(-1)); next.addEventListener('click', () => turn(1));
+          band.append(el('div', { class: 'pager' }, prev, `${col.page + 1} / ${col.pages}`, next));
+        }
+      } else if (g === -1) band.append(el('div', { class: 'empty-col' }, 'No advisor recorded yet'));
+      else if (g === 1) band.append(el('div', { class: 'empty-col' }, 'No students recorded yet'));
+      bands.append(band);
+    }
+    requestAnimationFrame(drawLinks);
+  }
+
+  function drawLinks() {
+    const svg = $('#links'), box = $('#scaleBox');
+    const br = box.getBoundingClientRect(), z = T.zoom;
+    const pos = (node) => {
+      const r = node.querySelector('.avatar').getBoundingClientRect();
+      return { l: (r.left - br.left) / z, r: (r.right - br.left) / z, y: (r.top + r.height / 2 - br.top) / z };
     };
+    const byId = (gen, id) => $(`.tnode[data-gen="${gen}"][data-id="${CSS.escape(id)}"]`, $('#bands'));
+    const paths = [];
+    for (const node of $('#bands').querySelectorAll('.tnode')) {
+      const g = +node.dataset.gen;
+      if (!g) continue;
+      const dir = g > 0 ? 'down' : 'up';
+      const parentId = Math.abs(g) === 1 ? T.root : T.focus[dir][Math.abs(g) - 2];
+      const pn = byId(g - Math.sign(g), parentId);
+      if (!pn) continue;
+      const a = pos(pn), b = pos(node);
+      const x1 = g > 0 ? a.r : a.l, x2 = g > 0 ? b.l : b.r;
+      const mx = (x1 + x2) / 2;
+      const n = G.nodes.get(node.dataset.id);
+      const e = (g > 0 ? n.adv : n.stu).find((x) => (g > 0 ? x.a : x.s) === parentId);
+      const cls = !e ? '' : e.disputed ? 'disputed' : e.inferred ? 'inferred' : e.t === 'postdoc' ? 'postdoc' : '';
+      paths.push(`<path class="${cls}" d="M${x1},${a.y} C${mx},${a.y} ${mx},${b.y} ${x2},${b.y}"/>`);
+    }
+    svg.setAttribute('viewBox', `0 0 ${box.offsetWidth} ${box.offsetHeight}`);
+    svg.innerHTML = paths.join('');
+  }
+
+  function selectNode(id, gen) {
+    if (gen !== 0) {
+      const dir = gen > 0 ? 'down' : 'up', k = Math.abs(gen);
+      T.focus[dir][k - 1] = id;
+      T.focus[dir].length = k;
+      for (const key of Object.keys(T.page)) if (Math.sign(+key) === Math.sign(gen) && Math.abs(+key) > k) delete T.page[key];
+    }
+    T.selected = id;
+    drawTree();
+    renderDrawer(id);
+  }
+
+  function relationTo(id) {
+    if (id === T.root) return null;
+    const root = G.nodes.get(T.root);
+    const asAdv = root.adv.find((e) => e.a === id);
+    if (asAdv) return [asAdv, `${asAdv.t === 'phd' ? 'PhD' : 'Postdoc'} advisor of ${root.n}`];
+    const asStu = root.stu.find((e) => e.s === id);
+    if (asStu) return [asStu, `${asStu.t === 'phd' ? 'PhD' : 'Postdoc'} student of ${root.n}`];
+    return null;
+  }
+
+  const srcBadges = (e) => [
+    e.t === 'postdoc' ? el('span', { class: 'src' }, 'postdoc') : null,
+    e.disputed ? el('span', { class: 'src warn', title: 'From the curated sheet; conflicts with Wikidata / Wikipedia' }, 'unverified') : null,
+    e.inferred ? el('span', { class: 'src infer', title: INFER_TIP + (e.note ? ` (${e.note})` : '') }, 'inferred') : null,
+    ...e.src.map((s) => (e.url && s !== 'sheet'
+      ? el('a', { class: 'src', href: e.url, target: '_blank', rel: 'noopener', title: s === 'dblp' ? (e.note || INFER_TIP) : null }, SRC_LABEL[s])
+      : el('span', { class: 'src' }, SRC_LABEL[s]))),
+  ];
+
+  function peopleList(edges, otherKey) {
+    if (!edges.length) return el('p', { class: 'note' }, 'None recorded yet.');
+    const sorted = edges.slice().sort((a, b) => a.disputed - b.disputed || a.inferred - b.inferred || (a.t === 'phd' ? -1 : 1));
+    const LIMIT = 12;
+    const ul = el('ul', { class: 'people' });
+    const render = (all) => ul.replaceChildren(...sorted.slice(0, all ? Infinity : LIMIT).map((e) => {
+      const o = G.nodes.get(e[otherKey]);
+      return el('li', {}, el('button', { class: 'p-link', type: 'button', onclick: () => go(o.id) }, o.n),
+        o.ext ? null : el('small', {}, o.uniShort), ...srcBadges(e));
+    }), ...(sorted.length > LIMIT && !all ? [el('li', {}, el('button', { class: 'more-people', type: 'button', onclick: () => render(true) }, `Show all ${sorted.length}`))] : []));
+    render(false);
+    return ul;
+  }
+
+  function renderDrawer(id) {
+    const n = G.nodes.get(id), d = $('#drawer');
+    const rel = relationTo(id);
     const links = [];
     if (n.h) links.push(el('a', { href: n.h, target: '_blank', rel: 'noopener' }, 'Homepage'));
     if (n.g) links.push(el('a', { href: n.g, target: '_blank', rel: 'noopener' }, 'Google Scholar'));
     if (n.c) links.push(el('a', { href: n.c, target: '_blank', rel: 'noopener' }, 'CV'));
-    if (n.w) links.push(el('a', { href: n.w, target: '_blank', rel: 'noopener' }, n.w.includes('wikidata') ? 'Wikidata' : 'Wikipedia'));
-    d.replaceChildren(
-      el('h3', {}, n.n),
-      el('div', { class: 'uni' }, n.ext ? 'Not in the CSRankings faculty list' : n.uni),
-      n.ext ? null : el('div', { class: 'res-tags' }, n.d.map((x) => el('span', { class: 'tag' }, SUB_LABEL[x] || x))),
-      links.length ? el('div', { class: 'actions' }, links) : null,
+    if (n.w) links.push(el('a', { href: n.w, target: '_blank', rel: 'noopener' }, n.w.includes('wikidata') ? 'Wikidata' : n.w.includes('dblp') ? 'dblp' : 'Wikipedia'));
+    const fav = n.ext ? null : el('button', { class: `fav ${favs.has(id) ? 'on' : ''}`, type: 'button' }, el('span', { class: 'star' }), favs.has(id) ? 'Starred' : 'Star');
+    if (fav) fav.addEventListener('click', () => { toggleFav(id); renderDrawer(id); });
+    d.replaceChildren(...[
+      el('button', { class: 'close', type: 'button', 'aria-label': 'Close details', onclick: closeDrawer }, '×'),
+      el('div', { class: 'who' }, avatar(n), el('div', {}, el('h3', {}, n.n),
+        el('div', { class: 'uni' }, n.ext ? 'Not in the CSRankings faculty list' : n.former ? `Formerly ${n.uni}` : n.uni))),
+      n.former ? el('p', { class: 'note' }, 'No longer on CSRankings’ current faculty list for these institutions (moved, retired or emeritus)' + (n.now ? `; now listed at ${n.now}.` : '.')) : null,
+      rel ? el('p', { class: 'note' }, rel[1], ' ', ...srcBadges(rel[0])) : null,
+      n.ext || !n.d.length ? null : el('div', { class: 'tags' }, n.d.map((x) => el('span', { class: 'tag' }, SUB_LABEL[x] || x))),
+      links.length ? el('div', { class: 'links-row' }, links) : null,
+      el('div', { class: 'actions' }, fav, id !== T.root ? el('button', { class: 'btn-dark', type: 'button', onclick: () => go(id) }, 'View this family tree') : null),
       el('h4', {}, `Advisors (${n.adv.length})`), peopleList(n.adv, 'a'),
       el('h4', {}, `Students (${n.stu.length})`), peopleList(n.stu, 's'),
-      el('p', { class: 'note' }, 'Students are only those recorded in Wikidata, Wikipedia or as advisors of other professors in this dataset, so lists are incomplete.'));
-    d.hidden = false;
+      el('p', { class: 'note' }, 'Students are only those recorded in Wikidata, Wikipedia or as advisors of other professors in this dataset, so lists are incomplete.')].filter(Boolean));
+    d.classList.add('open');
+    d.scrollTop = 0;
+  }
+  function closeDrawer() { $('#drawer').classList.remove('open'); }
+
+  const tip = $('#tip');
+  function showTip(ev, n, e) {
+    tip.textContent = [n.n, n.ext ? null : n.uni + (n.former ? ' (former)' : ''),
+      e ? `${e.t === 'phd' ? 'PhD' : 'Postdoc'} · ${e.src.map((s) => SRC_LABEL[s]).join(', ')}${e.disputed ? ' · unverified' : ''}${e.inferred ? ' · inferred' : ''}` : null,
+      'Click for details · double-click to re-center'].filter(Boolean).join('\n');
+    tip.hidden = false;
+    tip.style.left = Math.min(ev.clientX + 14, innerWidth - 290) + 'px';
+    tip.style.top = ev.clientY + 14 + 'px';
+  }
+  function hideTip() { tip.hidden = true; }
+
+  function openTree(id) {
+    if (T.root !== id) Object.assign(T, { root: id, focus: { up: [], down: [] }, page: {}, lo: null, selected: id });
+    const n = G.nodes.get(id);
+    $('#treeTitle').replaceChildren(n.n, el('small', {}, n.ext ? 'other researcher' : n.uni + (n.former ? ' (former)' : '')));
+    document.title = `${n.n} · Academic Lineage Family Tree`;
+    closeDrawer();
+    drawTree();
+  }
+
+  /* ---------- about ---------- */
+  function renderAbout() {
+    const s = G.summary;
+    const stat = (v, l) => el('div', { class: 'stat' }, el('b', {}, fmt(v)), el('span', {}, l));
+    const a = (href, text) => el('a', { href, target: '_blank', rel: 'noopener' }, text);
+    $('#aboutBody').replaceChildren(
+      el('h2', {}, 'About'),
+      el('p', {}, 'Academic Lineage Family Tree maps who trained whom among computer science faculty at US universities, to help prospective PhD students understand a potential advisor’s academic background and research family. Pick a research interest and institutions to browse professors, then open anyone’s tree: advisors are on the left, students on the right, one generation per band.'),
+      el('div', { class: 'stats' }, stat(s.current_faculty ?? s.professors, 'current professors'), stat(G.unis.length, 'institutions'),
+        stat(s.current_with_advisor ?? s.with_advisor, 'with a known advisor'), stat(G.nodes.size, 'researchers in the tree')),
+      el('h3', {}, 'Where the data comes from'),
+      el('ul', {},
+        el('li', {}, el('b', {}, 'Faculty list: '), 'names, institutions, areas and homepages from ', a('https://csrankings.org', 'CSRankings'), ' (CC BY-NC-SA 4.0), refreshed November 2026. Earlier faculty who have since moved away, retired or become emeritus are kept and marked “former”.'),
+        el('li', {}, el('b', {}, 'Curated: '), 'advisor names collected by hand from CVs and homepages by our team.'),
+        el('li', {}, el('b', {}, 'Wikidata: '), 'doctoral advisor / student statements (CC0), matched by Google Scholar ID, name or institution.'),
+        el('li', {}, el('b', {}, 'Wikipedia: '), 'doctoral advisor and doctoral students fields of English Wikipedia infoboxes (CC BY-SA 4.0).'),
+        el('li', {}, el('b', {}, 'Homepage / CV: '), 'phrases such as “PhD advisor: …” or “under the supervision of …” found on the professor’s own homepage or CV. Each links to its page.'),
+        el('li', {}, el('b', {}, 'dblp (inferred): '), 'for professors with no advisor from the sources above, the co-author who most often appears as senior last author on their papers during their PhD years, using ', a('https://dblp.org', 'dblp'), ' (CC0). Only confident cases are kept; checked against known advisors they are right about 83% of the time.')),
+      el('p', {}, 'A curated advisor is marked “unverified” when Wikidata or Wikipedia lists a different advisor for the same person. Photos are not collected; avatars show initials, colored by research area. Favorites are stored only in your browser.'),
+      el('p', {}, 'Data can be wrong or incomplete. Always confirm with the professor’s own CV.'));
   }
 
   /* ---------- routing ---------- */
+  const current = { view: null };
+  let lastList = '#/search';
   function go(id) { location.hash = '#/p/' + encodeURIComponent(id); }
-  function route() {
-    const m = location.hash.match(/^#\/p\/(.+)$/);
-    const id = m && decodeURIComponent(m[1]);
-    const n = id && G.nodes.get(id);
-    const layout = $('.layout');
-    if (n) {
-      state.root = id; state.expanded.clear();
-      layout.classList.add('tree-mode');
-      $('#results').hidden = true; $('#treeView').hidden = false;
-      renderDetail(n);
-      drawTree();
-      document.title = `${n.n} · Academic Lineage Tree`;
-      window.scrollTo({ top: 0 });
-    } else {
-      layout.classList.remove('tree-mode');
-      $('#results').hidden = false; $('#treeView').hidden = true; $('#detail').hidden = true;
-      document.title = 'Academic Lineage Tree';
-    }
+  function show(view) {
+    for (const v of ['home', 'results', 'favorites', 'tree', 'about']) $('#view-' + v).hidden = v !== view;
+    for (const link of document.querySelectorAll('[data-nav]')) link.classList.toggle('active', link.dataset.nav === view);
+    current.view = view;
+    closePanels(); hideTip();
+    window.scrollTo(0, 0);
   }
-
-  function about() {
-    const s = G.summary;
-    $('#aboutBody').replaceChildren(
-      el('p', {}, 'This site maps who trained whom among computer science faculty at US universities, to help prospective PhD students understand a potential advisor\'s academic background and research family.'),
-      el('ul', {},
-        el('li', {}, el('b', {}, 'Faculty list: '), 'names, institutions, areas and homepages come from ', el('a', { href: 'https://csrankings.org', target: '_blank', rel: 'noopener' }, 'CSRankings'), ' (CC BY-NC-SA 4.0).'),
-        el('li', {}, el('b', {}, 'Curated: '), 'advisor names collected by hand from CVs and homepages by our team.'),
-        el('li', {}, el('b', {}, 'Wikidata: '), 'doctoral advisor / student statements (CC0), matched by Google Scholar ID or by name.'),
-        el('li', {}, el('b', {}, 'Wikipedia: '), 'the doctoral advisor and doctoral students fields of English Wikipedia infoboxes (CC BY-SA 4.0).'),
-        el('li', {}, el('b', {}, 'Homepage / CV: '), 'phrases such as “PhD advisor: …” or “under the supervision of …” found automatically on the professor\'s own homepage or CV, for professors not covered by the sources above. Each one links to the page it came from.')),
-      el('p', {}, `Currently ${Number(s.with_advisor).toLocaleString()} of ${Number(s.professors).toLocaleString()} professors have at least one known advisor. A curated advisor is marked “unverified” when Wikidata or Wikipedia lists a different advisor for the same person.`),
-      el('p', {}, 'Data can be wrong or incomplete. Always confirm with the professor\'s own CV.'));
-    $('#about').showModal();
+  function route() {
+    const h = location.hash || '#/';
+    const m = h.match(/^#\/p\/(.+)$/);
+    if (m && G.nodes.has(decodeURIComponent(m[1]))) { show('tree'); openTree(decodeURIComponent(m[1])); return; }
+    if (h.startsWith('#/search')) {
+      const p = new URLSearchParams(h.split('?')[1] || '');
+      S.subs = new Set((p.get('r') || '').split(',').filter((k) => SUB_LABEL[k]));
+      S.unis = new Set((p.get('i') || '').split(',').filter(Boolean).map(Number).filter((i) => G.unis[i]));
+      lastList = h;
+      R.shown = PAGE;
+      show('results'); renderResults();
+      document.title = 'Results · Academic Lineage Family Tree';
+      return;
+    }
+    if (h === '#/favorites') { lastList = h; show('favorites'); renderFavorites(); document.title = 'Favorites · Academic Lineage Family Tree'; return; }
+    if (h === '#/about') { show('about'); document.title = 'About · Academic Lineage Family Tree'; return; }
+    show('home');
+    document.title = 'Academic Lineage Family Tree';
   }
 
   /* ---------- init ---------- */
   load().then(() => {
-    buildAreaFilter();
-    buildUniFilter();
-    setupSearch();
-    renderResults();
-    $('#onlyKnown').addEventListener('change', (e) => { state.onlyKnown = e.target.checked; refresh(); });
-    $('#sort').addEventListener('change', (e) => { state.sort = e.target.value; refresh(); });
-    $('#more').addEventListener('click', () => { state.shown += PAGE; renderResults(); });
-    $('#back').addEventListener('click', () => { location.hash = '#/'; });
-    $('#up').addEventListener('change', () => drawTree());
-    $('#down').addEventListener('change', () => drawTree());
-    $('#zin').addEventListener('click', () => svg.transition().call(zoom.scaleBy, 1.3));
-    $('#zout').addEventListener('click', () => svg.transition().call(zoom.scaleBy, 1 / 1.3));
-    $('#zfit').addEventListener('click', fitView);
-    $('#aboutBtn').addEventListener('click', about);
-    $('#filterToggle').addEventListener('click', (e) => {
-      const open = $('#sidebar').classList.toggle('open');
-      e.currentTarget.setAttribute('aria-expanded', open);
-      e.currentTarget.textContent = open ? 'Hide filters' : 'Filters';
+    for (const box of document.querySelectorAll('[data-search]')) mountSearch(box, box.dataset.search);
+    const s = G.summary;
+    $('#heroStats').textContent = `${fmt(s.current_faculty ?? s.professors)} professors · ${G.unis.length} institutions · ${fmt(s.current_with_advisor ?? s.with_advisor)} with a known advisor`;
+    renderAbout();
+    updateFavCount();
+    $('#onlyKnown').addEventListener('change', (e) => { R.onlyKnown = e.target.checked; R.shown = PAGE; renderResults(); });
+    $('#showFormer').addEventListener('change', (e) => { R.showFormer = e.target.checked; R.shown = PAGE; renderResults(); });
+    $('#sort').addEventListener('change', (e) => { R.sort = e.target.value; renderResults(); });
+    let nt;
+    $('#nameFilter').addEventListener('input', (e) => { clearTimeout(nt); nt = setTimeout(() => { R.name = e.target.value; R.shown = PAGE; renderResults(); }, 150); });
+    $('#more').addEventListener('click', () => { R.shown += PAGE; renderResults(); });
+    $('#backBtn').addEventListener('click', () => { location.hash = lastList; });
+    $('#genLeft').addEventListener('click', () => { T.lo -= 1; drawTree(); });
+    $('#genRight').addEventListener('click', () => { T.lo += 1; drawTree(); });
+    const zoom = (d) => { T.zoom = Math.max(0.6, Math.min(1.6, +(T.zoom + d).toFixed(2))); $('#scaleBox').style.transform = `scale(${T.zoom})`; drawTree(); };
+    $('#zoomIn').addEventListener('click', () => zoom(0.15));
+    $('#zoomOut').addEventListener('click', () => zoom(-0.15));
+    $('#fullBtn').addEventListener('click', () => {
+      const shell = $('#treeShell');
+      if (document.fullscreenElement) document.exitFullscreen(); else if (shell.requestFullscreen) shell.requestFullscreen();
     });
+    document.addEventListener('fullscreenchange', () => setTimeout(drawTree, 60));
+    let rt;
+    addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { if (current.view === 'tree') { T.lo = null; drawTree(); } }, 150); });
     addEventListener('hashchange', route);
     route();
   }).catch((err) => {
-    $('#resList').replaceChildren(el('li', { class: 'empty' }, 'Could not load data: ' + err.message));
+    document.querySelector('main').replaceChildren(el('p', { class: 'noscript' }, 'Could not load the data. ' + err.message));
   });
 })();

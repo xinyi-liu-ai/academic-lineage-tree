@@ -5,3 +5,6 @@ data/raw/*.xlsx
 data/cache/wd_desc.json
 data/cache/homepage_snippets.jsonl
 data/cache/pages/
+data/cache/dblp/
+data/cache/csrankings/
+data/cache/pipeline*.log

@@ -77,7 +77,11 @@ def initial_key(name):
 
 def main():
     profs = load_profs()
-    done = set(json.load(open(os.path.join(ROOT, 'data/cache/wikidata_match.json'))))
+    # 已被 Scholar ID / 全名匹配上的教授（不含上一次按学校匹配的结果，否则重跑时会丢掉它们）
+    emp_path = os.path.join(ROOT, 'data/enrich/wikidata_employer_match.json')
+    prev = json.load(open(emp_path)) if os.path.exists(emp_path) else {}
+    match = json.load(open(os.path.join(ROOT, 'data/cache/wikidata_match.json')))
+    done = {k for k, v in match.items() if prev.get(k) != v}
     todo = [p for p in profs if p['id'] not in done]
     print('unmatched professors', len(todo))
 
