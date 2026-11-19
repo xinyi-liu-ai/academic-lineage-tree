@@ -348,10 +348,16 @@ def main():
                 d['ti'] = titles[nid]
             if photos.get(nid):
                 d['ph'] = photos[nid]
-            if n.get('status') == 'former':  # 已不在 CSRankings 名单内的学校（调走、退休、荣休）
-                d['o'] = 1
-                if n.get('now_at'):
-                    d['now'] = n['now_at']
+            if n.get('status') == 'former':
+                # 已不在 CSRankings 的美国学校名单上（调去国外、退休、转业界……）：网站只收在美国高校任教的人，
+                # 不再当作教授列出；作为别人的导师 / 学生仍留在树上，显示现在的去向或原学校
+                if nid not in used:
+                    continue
+                stats['former_as_outside'] += 1
+                x = dict(id=nid, n=n['name'], x=1, af=n.get('now_at') or f"Formerly {n['uni']}")
+                x.update({k: d[k] for k in ('h', 'g', 'ph') if d.get(k)})
+                out_nodes.append(x)
+                continue
             d['d'] = [a for a, _ in parse_domains(n['domain'])]
             d['a'] = sorted({b for _, b in parse_domains(n['domain'])})
             out_nodes.append(d)

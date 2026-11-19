@@ -290,14 +290,14 @@
   };
 
   /* ---------- results ---------- */
-  const R = { onlyKnown: false, showFormer: false, sort: 'lineage', shown: PAGE, name: '' };
+  const R = { onlyKnown: false, sort: 'lineage', shown: PAGE, name: '' };
   function filtered() {
     const t = fold(R.name);
     const list = G.profs.filter((p) =>
       (!S.subs.size || p.d.some((d) => S.subs.has(d))) &&
       (!S.unis.size || S.unis.has(p.u)) &&
       (!R.onlyKnown || p.knownAdv) &&
-      (R.showFormer || !p.former) &&
+      !p.former &&
       (!t || p.f.includes(t)));
     const by = {
       lineage: (a, b) => b.degree - a.degree || a.n.localeCompare(b.n),
@@ -622,7 +622,7 @@ Source (homepage, CV, thesis…):
         stat(s.current_with_advisor ?? s.with_advisor, 'with a known advisor'), stat(G.nodes.size, 'researchers in the tree')),
       el('h3', {}, 'Where the data comes from'),
       el('ul', {},
-        el('li', {}, el('b', {}, 'Faculty list: '), 'names, institutions, areas and homepages from ', a('https://csrankings.org', 'CSRankings'), ' (CC BY-NC-SA 4.0), refreshed November 2026. Earlier faculty who have since moved away, retired or become emeritus are kept and marked “former”.'),
+        el('li', {}, el('b', {}, 'Faculty list: '), 'names, institutions, areas and homepages from ', a('https://csrankings.org', 'CSRankings'), ' (CC BY-NC-SA 4.0), refreshed November 2026. Only people currently on a US institution’s list are shown as faculty; earlier faculty who have since left (moved abroad, retired, emeritus, industry) still appear in others’ trees as outside researchers, with their new position when known.'),
         el('li', {}, el('b', {}, 'Curated: '), 'advisor names collected by hand from CVs and homepages by our team.'),
         el('li', {}, el('b', {}, 'Wikidata: '), 'doctoral advisor / student statements (CC0), matched by Google Scholar ID, name or institution.'),
         el('li', {}, el('b', {}, 'Wikipedia: '), 'doctoral advisor and doctoral students fields of English Wikipedia infoboxes (CC BY-SA 4.0).'),
@@ -671,7 +671,6 @@ Source (homepage, CV, thesis…):
     renderAbout();
     updateFavCount();
     $('#onlyKnown').addEventListener('change', (e) => { R.onlyKnown = e.target.checked; R.shown = PAGE; renderResults(); });
-    $('#showFormer').addEventListener('change', (e) => { R.showFormer = e.target.checked; R.shown = PAGE; renderResults(); });
     $('#sort').addEventListener('change', (e) => { R.sort = e.target.value; renderResults(); });
     let nt;
     $('#nameFilter').addEventListener('input', (e) => { clearTimeout(nt); nt = setTimeout(() => { R.name = e.target.value; R.shown = PAGE; renderResults(); }, 150); });
