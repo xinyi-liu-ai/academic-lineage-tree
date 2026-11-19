@@ -21,11 +21,30 @@ HEAD = {'Accept': 'application/sparql-results+json', 'User-Agent': 'lineage-tree
 
 def sparql(q, tries=4):
     for k in range(tries):
-        r = requests.post(API, data={'query': q}, headers=HEAD, timeout=90)
-        if r.status_code == 200:
-            return r.json()['results']['bindings']
+        try:
+            r = requests.post(API, data={'query': q}, headers=HEAD, timeout=90)
+            if r.status_code == 200:
+                return r.json()['results']['bindings']
+        except (requests.RequestException, ValueError):
+            pass
         time.sleep(5 * (k + 1))
-    r.raise_for_status()
+    raise RuntimeError('SPARQL query failed after retries')
+
+
+def too_old(qids):
+    """出生早于 1930 或 2005 年前去世的条目——不可能是现任教授，用于排除同名误配。"""
+    bad, qids = set(), list(qids)
+    for i in range(0, len(qids), 300):
+        vals = ' '.join('wd:' + q for q in qids[i:i + 300])
+        q = f'''SELECT ?i ?b ?d WHERE {{ VALUES ?i {{ {vals} }}
+          OPTIONAL {{ ?i wdt:P569 ?b }} OPTIONAL {{ ?i wdt:P570 ?d }} }}'''
+        for b in sparql(q):
+            by = b.get('b', {}).get('value', '')[:4]
+            dy = b.get('d', {}).get('value', '')[:4]
+            if (by.isdigit() and int(by) < 1930) or (dy.isdigit() and int(dy) < 2005):
+                bad.add(qid(b['i']['value']))
+        time.sleep(1)
+    return bad
 
 
 def qid(uri):
@@ -99,7 +118,11 @@ def main():
         return {t for t in re.findall(r'[a-z]{4,}', u.lower()) if t not in {'university', 'state', 'college', 'institute', 'technology'}}
 
     n_name = rejected = 0
+    old = too_old(uniq.values())
     for pid, q in uniq.items():
+        if q in old:
+            rejected += 1
+            continue
         d, emp = info.get(q, ('', ''))
         emp_ok = bool(uni_tokens(profs_by_id[pid]['uni']) & uni_tokens(emp))
         if emp_ok or (good_desc.search(d) and not bad_desc.search(d)):
@@ -108,6 +131,13 @@ def main():
         else:
             rejected += 1
     print('name matches', n_name, 'rejected', rejected, 'total', len(match))
+
+    # 1c. 按任职学校匹配的结果（scripts/match_wikidata_employer.py 生成）
+    emp_path = os.path.join(ROOT, 'data/enrich/wikidata_employer_match.json')
+    if os.path.exists(emp_path):
+        extra = {k: v for k, v in json.load(open(emp_path)).items() if k not in match}
+        match.update(extra)
+        print('employer matches', len(extra), 'total', len(match))
 
     # --- 2. 查导师和学生
     q2p = {}

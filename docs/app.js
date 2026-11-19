@@ -9,7 +9,7 @@
     interdisciplinary: ['Interdisciplinary', { bio: 'Computational biology', graphics: 'Computer graphics', csed: 'CS education', ecom: 'Economics & computation', hci: 'Human-computer interaction', robotics: 'Robotics', visualization: 'Visualization' }],
   };
   const SUB_LABEL = Object.fromEntries(Object.values(AREAS).flatMap(([, subs]) => Object.entries(subs)));
-  const SRC_LABEL = { sheet: 'Curated', wikidata: 'Wikidata', wikipedia: 'Wikipedia' };
+  const SRC_LABEL = { sheet: 'Curated', wikidata: 'Wikidata', wikipedia: 'Wikipedia', homepage: 'Homepage', cv: 'CV' };
   const MAX_CHILDREN = 14;
   const PAGE = 60;
 
@@ -324,7 +324,8 @@
         el('li', {}, el('b', {}, 'Faculty list: '), 'names, institutions, areas and homepages come from ', el('a', { href: 'https://csrankings.org', target: '_blank', rel: 'noopener' }, 'CSRankings'), ' (CC BY-NC-SA 4.0).'),
         el('li', {}, el('b', {}, 'Curated: '), 'advisor names collected by hand from CVs and homepages by our team.'),
         el('li', {}, el('b', {}, 'Wikidata: '), 'doctoral advisor / student statements (CC0), matched by Google Scholar ID or by name.'),
-        el('li', {}, el('b', {}, 'Wikipedia: '), 'the doctoral advisor and doctoral students fields of English Wikipedia infoboxes (CC BY-SA 4.0).')),
+        el('li', {}, el('b', {}, 'Wikipedia: '), 'the doctoral advisor and doctoral students fields of English Wikipedia infoboxes (CC BY-SA 4.0).'),
+        el('li', {}, el('b', {}, 'Homepage / CV: '), 'phrases such as “PhD advisor: …” or “under the supervision of …” found automatically on the professor\'s own homepage or CV, for professors not covered by the sources above. Each one links to the page it came from.')),
       el('p', {}, `Currently ${Number(s.with_advisor).toLocaleString()} of ${Number(s.professors).toLocaleString()} professors have at least one known advisor. A curated advisor is marked “unverified” when Wikidata or Wikipedia lists a different advisor for the same person.`),
       el('p', {}, 'Data can be wrong or incomplete. Always confirm with the professor\'s own CV.'));
     $('#about').showModal();

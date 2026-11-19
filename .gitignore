@@ -3,3 +3,5 @@ __pycache__/
 # 原始合并表含合作者分页信息，不公开
 data/raw/*.xlsx
 data/cache/wd_desc.json
+data/cache/homepage_snippets.jsonl
+data/cache/pages/

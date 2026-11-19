@@ -156,7 +156,7 @@ def main():
     # 3) 人工表的 PhD 导师若与 Wikidata / 维基百科不一致，标为存疑
     trusted = defaultdict(set)
     for e in g.edges.values():
-        if e['t'] == 'phd' and set(e['src']) - {'sheet'}:
+        if e['t'] == 'phd' and set(e['src']) & {'wikidata', 'wikipedia'}:
             trusted[e['s']].add(e['a'])
     disputed = 0
     for e in g.edges.values():
