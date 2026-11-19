@@ -12,7 +12,7 @@
   const SUB_SHORT = { ai: 'AI core', vision: 'Vision', ml: 'ML', nlp: 'NLP', ir: 'Web & IR', arch: 'Architecture', networks: 'Networks', security: 'Security', db: 'Databases', eda: 'EDA', embedded: 'Embedded', hpc: 'HPC', mobile: 'Mobile', metrics: 'Metrics', os: 'OS', pl: 'PL', se: 'SE', theory: 'Algorithms', crypto: 'Crypto', logic: 'Logic', bio: 'Comp. bio', graphics: 'Graphics', csed: 'CS ed', ecom: 'Econ & CS', hci: 'HCI', robotics: 'Robotics', visualization: 'Visualization' };
   const SUB_LABEL = Object.fromEntries(Object.values(AREAS).flatMap(([, subs]) => Object.entries(subs)));
   const AREA_OF = Object.fromEntries(Object.entries(AREAS).flatMap(([a, [, subs]]) => Object.keys(subs).map((s) => [s, a])));
-  const AREA_COLOR = { ai: '#6c9a58', systems: '#4f7d6b', theory: '#8d874a', interdisciplinary: '#5d7f99' };
+  const AREA_COLOR = { ai: '#5b8a68', systems: '#4f7783', theory: '#9a8350', interdisciplinary: '#7a6c97' };
   const SRC_LABEL = { sheet: 'Curated', wikidata: 'Wikidata', wikipedia: 'Wikipedia', homepage: 'Homepage', cv: 'CV', dblp: 'dblp' };
   const INFER_TIP = 'Inferred from dblp: the most frequent senior last author on this person’s papers during their PhD years. About 83% accurate when checked against known advisors.';
   const PAGE = 30;
@@ -94,7 +94,7 @@
   const avatar = (n, lazy = false) => {
     const box = el('div', {
       class: n.ext ? 'avatar ext' : 'avatar', 'aria-hidden': 'true',
-      style: n.ext ? null : `--av:${AREA_COLOR[AREA_OF[(n.d || [])[0]]] || '#6c9a58'}`,
+      style: n.ext ? null : `--av:${AREA_COLOR[AREA_OF[(n.d || [])[0]]] || '#5b8a68'}`,
     }, el('span', { class: 'ini' }, initials(n.n)));
     const src = n.ph && n.ph.replace(/^http:/, 'https:');
     if (src && !badPhoto.has(src)) {
@@ -132,6 +132,8 @@
   // 名单外的人：有去向写去向，导师主页列为当前学生的写 Student
   const outsideSub = (n) => (n.af ? shortAff(n.af) : n.st ? 'PhD student' : 'Position unknown');
   const shortAff = (s) => {
+    // 去掉“Thesis: …”这类论文题目，和开头的 now at / currently
+    s = s.replace(/\s*(?:Thesis|Dissertation)\s*:.*$/i, '').replace(/^(?:now|currently)\s+(?:at\s+)?/i, '').trim() || s;
     let t = (s.length > 34 ? s.split(/,\s*/)[0] : s);
     if (t.length > 40) t = t.slice(0, 40).replace(/\s+\S*$/, '') + '…';
     return (t.split('(').length > t.split(')').length) ? t.replace(/\s*\([^)]*$/, '') : t;  // 别留半个括号
@@ -248,7 +250,7 @@
       const u = [...S.unis].map((i) => G.unis[i][1] || G.unis[i][0]);
       uni.setChips(u.length ? chipList(u) : [el('span', { class: 'chip' }, 'All')], '', openPanel === uni.panel);
     };
-    const go = el('button', { class: 'go', type: 'button', 'aria-label': 'Search' }, el('img', { src: 'assets/icons/icon_search.png', alt: '' }));
+    const go = el('button', { class: 'go', type: 'button', 'aria-label': 'Search' }, el('img', { src: 'assets/icons/icon_search.png', alt: '' }), 'Search');
     go.addEventListener('click', () => { closePanels(); location.hash = searchHash(); });
     box.append(el('div', { class: 'search-row' },
       el('div', { class: 'field' }, el('span', { class: 'lab' }, 'Research Interest'), area.box),
@@ -345,16 +347,18 @@
       el('div', { class: 'card-body' },
         el('div', { class: 'card-name' }, p.n),
         el('div', { class: 'card-meta' },
-          el('div', { class: isAP(p) ? 'is-ap' : null }, title(p)),
-          rcBadge(p) ? el('div', {}, rcBadge(p)) : null,
-          el('div', {}, p.uni),
-          el('div', { class: 'interest' }, interest(p) || '—')),
-        el('div', { class: 'card-stats' }, nA ? `${nA} advisor${nA > 1 ? 's' : ''}` : 'Advisor unknown', nS ? ` · ${nS} student${nS > 1 ? 's' : ''}` : '')));
+          el('div', { class: `c-title ${isAP(p) ? 'is-ap' : ''}` }, title(p)),
+          el('div', {}, p.uni)),
+        p.d.length ? el('div', { class: 'card-tags' }, p.d.slice(0, 3).map((x) => el('span', { class: 'tag' }, SUB_SHORT[x] || x))) : null,
+        el('div', { class: 'card-foot' },
+          nA ? el('span', {}, el('b', {}, nA), ` advisor${nA > 1 ? 's' : ''}`) : el('span', {}, 'Advisor unknown'),
+          nS ? el('span', {}, el('b', {}, nS), ` student${nS > 1 ? 's' : ''}`) : null,
+          rcBadge(p))));
   }
 
   function renderResults() {
     const list = filtered();
-    $('#resCount').textContent = `${fmt(list.length)} Results found...`;
+    $('#resCount').replaceChildren(`${fmt(list.length)} professor${list.length === 1 ? '' : 's'}`, el('small', {}, areaLabels().join(', ') || 'All areas'));
     const ul = $('#cards');
     ul.replaceChildren(...list.slice(0, R.shown).map(card));
     if (!list.length) ul.append(el('li', { class: 'empty' }, 'No professors match. Try fewer tags or another institution.'));
@@ -774,7 +778,12 @@ Source (homepage, CV, thesis…):
   load().then(() => {
     for (const box of document.querySelectorAll('[data-search]')) mountSearch(box, box.dataset.search);
     const s = G.summary;
-    $('#heroStats').textContent = `${fmt(s.current_faculty ?? s.professors)} professors · ${G.unis.length} institutions · ${fmt(s.current_with_advisor ?? s.with_advisor)} with a known advisor`;
+    const stat = (v, l) => el('li', {}, el('b', {}, fmt(v)), el('span', {}, l));
+    $('#heroStats').replaceChildren(stat(s.current_faculty ?? s.professors, 'professors'), stat(G.unis.length, 'US institutions'),
+      stat(s.current_with_advisor ?? s.with_advisor, 'with a known advisor'), stat(G.profs.filter((p) => !p.former && recruiting(p)).length, 'say they are recruiting'));
+    const EXAMPLES = ['Jeffrey Heer', 'Danqi Chen', 'Li Fei-Fei', 'Barbara Liskov'];
+    const ex = EXAMPLES.map((nm) => G.profs.find((p) => p.n === nm)).filter(Boolean);
+    $('#heroTry').replaceChildren(...(ex.length ? ['Try', ...ex.map((p) => el('a', { href: '#/p/' + encodeURIComponent(p.id) }, p.n))] : []));
     renderAbout();
     updateFavCount();
     $('#onlyKnown').addEventListener('change', (e) => { R.onlyKnown = e.target.checked; R.shown = PAGE; renderResults(); });
