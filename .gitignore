@@ -8,3 +8,5 @@ data/cache/pages/
 data/cache/dblp/
 data/cache/csrankings/
 data/cache/pipeline*.log
+data/cache/student_links_raw.jsonl
+data/cache/people_pages/

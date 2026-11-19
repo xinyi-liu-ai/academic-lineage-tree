@@ -35,6 +35,12 @@ python scripts/extract_advisors.py         # writes data/enrich/homepage.jsonl (
 curl -o data/cache/dblp/dblp.xml.gz https://dblp.org/xml/dblp.xml.gz   # ~1.1 GB, CC0
 python scripts/infer_dblp.py --eval        # writes data/enrich/dblp.jsonl (co-authorship inference)
 python scripts/build_graph.py              # writes docs/data/graph.json
+python scripts/fetch_people_pages.py       # ~1 h, polite crawl of professors' pages + Students/People/Alumni subpages
+python scripts/extract_students.py         # student lists from those pages -> data/enrich/students_homepage.jsonl
+python scripts/build_graph.py
+python scripts/enrich_people.py            # homepages / LinkedIn / current positions for people outside the list
+python scripts/match_people_links.py       # personal homepage links found on advisors' pages
+python scripts/build_graph.py              # final graph
 ```
 
 To preview locally: `python -m http.server 8765 --directory docs` and open http://localhost:8765.
@@ -43,6 +49,7 @@ To preview locally: `python -m http.server 8765 --directory docs` and open http:
 
 - `data/raw/professors.csv` – faculty list with curated advisor columns and a `status` column (current / moved / new / former)
 - `data/raw/universities.csv` – institution names and short names
+- `data/raw/manual_students.csv` – advisor/student links added by hand (e.g. reported by the student); add rows here or open an issue
 - `data/enrich/` – relations pulled from Wikidata and Wikipedia
 - `scripts/` – matching, cleaning and graph-building scripts
 - `docs/` – the static site served by GitHub Pages (vanilla JS, no build step); layout follows the team's Figma mock-up

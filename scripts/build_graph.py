@@ -139,11 +139,14 @@ def main():
                 stats['sheet_' + typ] += 1
 
     # 2) 自动补全的关系（dblp 推断最后处理，见 2b）
-    inferred = []
+    inferred, listed = [], []
     for f in sorted(glob.glob(os.path.join(ROOT, 'data/enrich/*.jsonl'))):
         recs = [json.loads(line) for line in open(f, encoding='utf-8')]
         if os.path.basename(f) == 'dblp.jsonl':
             inferred = recs
+            continue
+        if os.path.basename(f) == 'students_homepage.jsonl':
+            listed = recs  # 导师主页上的学生名单，见 2a
             continue
         cleaned = []
         for r in recs:
@@ -166,6 +169,36 @@ def main():
             else:
                 g.add_edge(r['prof'], other, r.get('type', 'phd'), r['source'], r.get('url', ''))
             stats[r['source'] + '_' + r['rel']] += 1
+
+    # 2a) 导师主页上的学生名单：学生也是名单内教授时用 other_prof（extract_students 已用合著核实）；
+    #     否则找这位导师已有的同名学生；都没有就新建节点，不和别处的同名外部人员合并（常见名字容易张冠李戴）
+    manual_path = os.path.join(ROOT, 'data/raw/manual_students.csv')  # 人工补充的师生关系（如学生本人提供）
+    if os.path.exists(manual_path):
+        pid_of = {p['dblp']: p['id'] for p in profs}
+        with open(manual_path, encoding='utf-8', newline='') as f:
+            for row in csv.DictReader(f):
+                if row['advisor'] in pid_of and row['student'].strip():
+                    listed.append(dict(prof=pid_of[row['advisor']], rel='student', name=row['student'].strip(),
+                                       type=row.get('type') or 'phd', source='sheet', url='',
+                                       h=row.get('homepage', '').strip(), af=row.get('affiliation', '').strip()))
+    mine = defaultdict(dict)
+    for e in g.edges.values():
+        mine[e['a']].setdefault(key(g.nodes[e['s']]['name']), e['s'])
+    for r in listed:
+        k = key(r['name'])
+        other = r.get('other_prof') or mine[r['prof']].get(k)
+        if not other:
+            other = f"hs:{r['prof']}:{k}"
+            g.nodes.setdefault(other, dict(id=other, name=r['name'].strip(), ext=True))
+            mine[r['prof']][k] = other
+        if other == r['prof']:
+            continue
+        if r.get('af') and g.nodes[other].get('ext') and not g.nodes[other].get('af'):
+            g.nodes[other]['af'] = r['af']  # 导师主页上写的去向，如 "Amazon"、"postdoc, Harvard"
+        if r.get('h') and g.nodes[other].get('ext'):
+            g.nodes[other]['h'] = r['h']
+        g.add_edge(r['prof'], other, r.get('type', 'phd'), r.get('source', 'homepage'), r.get('url', ''))
+        stats[r.get('source', 'homepage') + '_student'] += 1
 
     # 2b) dblp 合作论文推断：与已有导师一致时作为佐证；只有其他来源都没有 PhD 导师时才新增
     has_phd = defaultdict(set)
@@ -205,13 +238,20 @@ def main():
     used = {e['a'] for e in g.edges.values()} | {e['s'] for e in g.edges.values()}
     people_path = os.path.join(ROOT, 'data/enrich/people.json')  # 名单外的人：主页 / 领英 / Scholar / 现单位
     people = json.load(open(people_path, encoding='utf-8')) if os.path.exists(people_path) else {}
+    links_path = os.path.join(ROOT, 'data/enrich/student_links.json')  # 导师/学生主页上链过去的个人主页
+    links = json.load(open(links_path, encoding='utf-8')) if os.path.exists(links_path) else {}
     out_nodes = []
     for nid, n in g.nodes.items():
         if n.get('ext'):
             if nid not in used:
                 continue
-            d = dict(id=nid, n=n['name'], x=1, **({'w': n['url']} if n.get('url') else {}))
+            d = dict(id=nid, n=n['name'], x=1, **({'w': n['url']} if n.get('url') else {}), **({'af': n['af']} if n.get('af') else {}), **({'h': n['h']} if n.get('h') else {}))
             d.update(people.get(nid, {}))
+            for k, v in links.get(nid, {}).items():
+                if k in ('h', 'li', 'g') and not d.get(k):
+                    d[k] = v
+                    if k == 'h':
+                        d['hv'] = links[nid]['via']
             out_nodes.append(d)
         else:
             d = dict(id=nid, n=n['name'], u=uni_idx[n['uni']], h=n['homepage'])

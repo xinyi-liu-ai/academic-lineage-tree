@@ -476,14 +476,29 @@
     return null;
   }
 
-  const srcBadges = (e) => [
+  const flagBadges = (e) => [
     e.t === 'postdoc' ? el('span', { class: 'src' }, 'postdoc') : null,
-    e.disputed ? el('span', { class: 'src warn', title: 'From the curated sheet; conflicts with Wikidata / Wikipedia' }, 'unverified') : null,
+    e.disputed ? el('span', { class: 'src warn', title: 'From the curated sheet; conflicts with other sources' }, 'unverified') : null,
     e.inferred ? el('span', { class: 'src infer', title: INFER_TIP + (e.note ? ` (${e.note})` : '') }, 'inferred') : null,
-    ...e.src.map((s) => (e.url && s !== 'sheet'
-      ? el('a', { class: 'src', href: e.url, target: '_blank', rel: 'noopener', title: s === 'dblp' ? (e.note || INFER_TIP) : null }, SRC_LABEL[s])
-      : el('span', { class: 'src' }, SRC_LABEL[s]))),
   ];
+  const REPO = 'https://github.com/xinyi-liu-ai/academic-lineage-tree';
+  const suggestUrl = (n) => `${REPO}/issues/new?` + new URLSearchParams({
+    title: `Correction / addition: ${n.n}`,
+    body: `Person: ${n.n}${n.uni ? ' (' + n.uni + ')' : ''}
+Page: ${location.href}
+
+What is missing or wrong (e.g. a student, an advisor, a homepage)?
+
+Source (homepage, CV, thesis…):
+`,
+  }).toString();
+  const linkedinSearch = (name) => 'https://www.linkedin.com/search/results/people/?keywords=' + encodeURIComponent(name);
+  // 名字直接链到个人主页；没有主页就链到领英（档案或按姓名搜索）
+  const nameLink = (o) => el('a', {
+    class: 'p-name', href: o.h || o.li || linkedinSearch(o.n), target: '_blank', rel: 'noopener',
+    title: o.h ? 'Homepage' : o.li ? 'LinkedIn' : 'No homepage found; search LinkedIn',
+  }, o.n);
+  const scholarLink = (o) => (o.g ? el('a', { class: 'plink', href: o.g, target: '_blank', rel: 'noopener' }, 'Google Scholar') : null);
 
   function peopleList(edges, otherKey) {
     if (!edges.length) return el('p', { class: 'note' }, 'None recorded yet.');
@@ -492,8 +507,10 @@
     const ul = el('ul', { class: 'people' });
     const render = (all) => ul.replaceChildren(...sorted.slice(0, all ? Infinity : LIMIT).map((e) => {
       const o = G.nodes.get(e[otherKey]);
-      return el('li', {}, el('button', { class: 'p-link', type: 'button', onclick: () => go(o.id) }, o.n),
-        el('small', {}, o.ext ? (o.af ? shortAff(o.af) : '') : o.uniShort), ...srcBadges(e));
+      return el('li', {}, nameLink(o),
+        el('small', {}, o.ext ? (o.af ? shortAff(o.af) : '') : o.uniShort), scholarLink(o), ...flagBadges(e),
+        el('button', { class: 'tree-btn', type: 'button', title: `Open ${o.n}’s family tree`, 'aria-label': `Open ${o.n}’s family tree`, onclick: () => go(o.id) },
+          el('img', { src: 'assets/tree-icon.png', alt: '' })));
     }), ...(sorted.length > LIMIT && !all ? [el('li', {}, el('button', { class: 'more-people', type: 'button', onclick: () => render(true) }, `Show all ${sorted.length}`))] : []));
     render(false);
     return ul;
@@ -504,12 +521,11 @@
     const rel = relationTo(id);
     const links = [];
     const ext = (href, text, cls) => el('a', { href, target: '_blank', rel: 'noopener', class: cls || null }, text);
-    if (n.h) links.push(ext(n.h, 'Homepage', 'primary'));
+    if (n.h) { const a = ext(n.h, 'Homepage', 'primary'); if (n.hv) a.title = 'Linked from ' + n.hv; links.push(a); }
     if (n.li) links.push(ext(n.li, 'LinkedIn'));
-    else if (!n.h || n.ext) links.push(ext('https://www.linkedin.com/search/results/people/?keywords=' + encodeURIComponent(n.n), 'Find on LinkedIn'));
+    else if (!n.h || n.ext) links.push(ext(linkedinSearch(n.n), 'Find on LinkedIn'));
     if (n.g) links.push(ext(n.g, 'Google Scholar'));
     if (n.c) links.push(ext(n.c, 'CV'));
-    const more = n.w ? el('p', { class: 'note' }, 'Also on ', ext(n.w, n.w.includes('wikidata') ? 'Wikidata' : n.w.includes('dblp') ? 'dblp' : 'Wikipedia')) : null;
     const fav = n.ext ? null : el('button', { class: `fav ${favs.has(id) ? 'on' : ''}`, type: 'button' }, el('span', { class: 'star' }), favs.has(id) ? 'Starred' : 'Star');
     if (fav) fav.addEventListener('click', () => { toggleFav(id); renderDrawer(id); });
     d.replaceChildren(...[
@@ -518,14 +534,14 @@
         el('div', { class: 'uni' }, n.ext ? (n.af || 'Current position unknown') : n.former ? `Formerly ${n.uni}` : n.uni))),
       n.ext ? el('p', { class: 'note' }, 'Not on the CSRankings faculty list of these 189 US universities (for example in industry, abroad or another field).') : null,
       n.former ? el('p', { class: 'note' }, 'No longer on CSRankings’ current faculty list for these institutions (moved, retired or emeritus)' + (n.now ? `; now listed at ${n.now}.` : '.')) : null,
-      rel ? el('p', { class: 'note' }, rel[1], ' ', ...srcBadges(rel[0])) : null,
+      rel ? el('p', { class: 'note' }, rel[1], ' ', ...flagBadges(rel[0])) : null,
       n.ext || !n.d.length ? null : el('div', { class: 'tags' }, n.d.map((x) => el('span', { class: 'tag' }, SUB_LABEL[x] || x))),
       links.length ? el('div', { class: 'links-row' }, links) : null,
-      n.h ? null : more,
       el('div', { class: 'actions' }, fav, id !== T.root ? el('button', { class: 'btn-dark', type: 'button', onclick: () => go(id) }, 'View this family tree') : null),
       el('h4', {}, `Advisors (${n.adv.length})`), peopleList(n.adv, 'a'),
       el('h4', {}, `Students (${n.stu.length})`), peopleList(n.stu, 's'),
-      el('p', { class: 'note' }, 'Students are only those recorded in Wikidata, Wikipedia or as advisors of other professors in this dataset, so lists are incomplete.')].filter(Boolean));
+      el('p', { class: 'note' }, 'Student lists are incomplete: they only include students we could find in public records. ',
+        el('a', { href: suggestUrl(n), target: '_blank', rel: 'noopener' }, 'Missing someone or something wrong?'))].filter(Boolean));
     d.classList.add('open');
     d.scrollTop = 0;
   }
@@ -534,7 +550,7 @@
   const tip = $('#tip');
   function showTip(ev, n, e) {
     tip.textContent = [n.n, n.ext ? (n.af || null) : n.uni + (n.former ? ' (former)' : ''),
-      e ? `${e.t === 'phd' ? 'PhD' : 'Postdoc'} · ${e.src.map((s) => SRC_LABEL[s]).join(', ')}${e.disputed ? ' · unverified' : ''}${e.inferred ? ' · inferred' : ''}` : null,
+      e ? `${e.t === 'phd' ? 'PhD' : 'Postdoc'}${e.disputed ? ' · unverified' : ''}${e.inferred ? ' · inferred from co-authorship' : ''}` : null,
       'Click for details · double-click to re-center'].filter(Boolean).join('\n');
     tip.hidden = false;
     tip.style.left = Math.min(ev.clientX + 14, innerWidth - 290) + 'px';
