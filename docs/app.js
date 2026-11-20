@@ -74,7 +74,7 @@
       }
     }
     for (const n of nodes.values()) {
-      n.knownAdv = n.adv.some((e) => !e.disputed);
+      n.knownAdv = n.adv.some((e) => !e.disputed && !e.inferred);  // 只算有来源记录的导师，dblp 推断的不算
       n.degree = n.adv.length + n.stu.length;
     }
     const profs = [...nodes.values()].filter((n) => !n.ext);
@@ -274,7 +274,8 @@
         role: 'option', 'aria-selected': i === sel ? 'true' : 'false',
         onmousedown: (e) => { e.preventDefault(); pick(n); },
       }, el('span', {}, n.n), el('small', {}, n.ext ? 'other researcher' : n.uniShort + (n.former ? ' (former)' : '')))));
-      box.hidden = !hits.length;
+      if (!hits.length && fold(input.value).length >= 2) box.replaceChildren(el('li', { class: 'none', role: 'option', 'aria-disabled': 'true' }, 'No one found. Try a last name or another spelling.'));
+      box.hidden = !hits.length && fold(input.value).length < 2;
     };
     const pick = (n) => { input.value = ''; hits = []; render(); go(n.id); };
     input.addEventListener('input', () => {
@@ -358,7 +359,7 @@
           el('div', {}, p.uni)),
         p.d.length ? el('div', { class: 'card-tags' }, p.d.slice(0, 3).map((x) => el('span', { class: 'tag' }, SUB_SHORT[x] || x))) : null,
         el('div', { class: 'card-foot' },
-          nA ? el('span', {}, el('b', {}, nA), ` advisor${nA > 1 ? 's' : ''}`) : el('span', {}, 'Advisor unknown'),
+          nA ? el('span', { title: p.knownAdv ? null : 'Inferred from dblp co-authorship, not recorded in a source' }, el('b', {}, nA), ` ${p.knownAdv ? '' : 'inferred '}advisor${nA > 1 ? 's' : ''}`) : el('span', {}, 'Advisor unknown'),
           nS ? el('span', {}, el('b', {}, nS), ` student${nS > 1 ? 's' : ''}`) : null,
           rcBadge(p))));
   }
@@ -491,8 +492,9 @@
     const n = G.nodes.get(it.id), e = it.edge;
     const badge = e ? (e.disputed ? el('span', { class: 't-badge warn' }, 'unverified') : e.inferred ? el('span', { class: 't-badge' }, 'inferred') : e.t === 'postdoc' ? el('span', { class: 't-badge' }, 'postdoc') : null) : null;
     // 在美国高校任教的人醒目显示（AP 另外高亮，最可能在招生）；业界、国外、学生淡化
-    const role = n.ext ? (n.usAcad ? 'fac' : 'out') : isAP(n) ? 'fac ap' : 'fac';
-    const b = el('button', { class: `tnode ${role} ${gen === 0 ? 'root' : ''} ${isFocus ? 'focus' : ''} ${T.path && T.path.has(it.id) ? 'on-path' : ''}`, type: 'button', 'data-id': it.id, 'data-gen': gen },
+    const role = (n.ext ? (n.usAcad ? 'fac' : 'out') : isAP(n) ? 'fac ap' : 'fac') + (recruiting(n) ? ' rc' : '');
+    const longName = n.n.split(/\s+/).some((w) => w.length > 11) ? ' longname' : '';
+    const b = el('button', { class: `tnode ${role}${longName} ${gen === 0 ? 'root' : ''} ${isFocus ? 'focus' : ''} ${T.path && T.path.has(it.id) ? 'on-path' : ''}`, type: 'button', 'data-id': it.id, 'data-gen': gen },
       avatar(n),
       el('span', { class: 't-name' }, n.n),
       !n.ext && n.ti ? el('span', { class: 't-title' }, titleLine(n, true)) : null,
@@ -538,7 +540,11 @@
       const col = cols.get(g);
       const band = el('div', { class: `band d${Math.min(Math.abs(g), 2)}` });
       const label = genLabel(g, col);
-      if (label) band.append(el('div', { class: 'gen-label', title: genTitle(g, col) }, label + (col && col.items.length > 1 ? ` · ${col.items.length}` : '')));
+      if (label) {
+        const cnt = col && col.items.length > 1 ? ` · ${col.items.length}` : '';
+        const k = Math.abs(g), short = k === 1 ? label : `${g < 0 ? 'Adv.' : 'Stu.'} +${k - 1}`;
+        band.append(el('div', { class: 'gen-label', title: genTitle(g, col) }, el('span', { class: 'gl-long' }, label + cnt), el('span', { class: 'gl-short' }, short + cnt)));
+      }
       if (col) {
         const dir = g > 0 ? 'down' : 'up';
         const f = g === 0 ? null : T.focus[dir][Math.abs(g) - 1];
@@ -604,7 +610,6 @@
     T.path = null;
     drawTree();
     renderDrawer(id);
-    $('#drawer').classList.remove('left');
   }
 
   function relationTo(id) {
@@ -648,10 +653,14 @@ Source (homepage, CV, thesis…):
     const ul = el('ul', { class: 'people' });
     const render = (all) => ul.replaceChildren(...sorted.slice(0, all ? Infinity : LIMIT).map((e) => {
       const o = G.nodes.get(e[otherKey]);
-      return el('li', {}, nameLink(o),
-        el('small', {}, o.ext ? (o.af ? shortAff(o.af) : '') : o.uniShort), scholarLink(o), ...flagBadges(e),
-        el('button', { class: 'tree-btn', type: 'button', title: `Open ${o.n}’s family tree`, 'aria-label': `Open ${o.n}’s family tree`, onclick: () => go(o.id) },
-          el('img', { src: 'assets/tree-icon.png', alt: '' })));
+      const home = o.h || o.li;
+      return el('li', {},
+        el('button', { class: 'p-name', type: 'button', title: 'Show details', onclick: () => renderDrawer(o.id) }, o.n),
+        el('small', {}, o.ext ? (o.af ? shortAff(o.af) : '') : o.uniShort), ...flagBadges(e),
+        el('span', { class: 'p-acts' },
+          home ? el('a', { class: 'plink', href: home, target: '_blank', rel: 'noopener', title: o.h ? 'Homepage' : 'LinkedIn' }, o.h ? 'Homepage' : 'LinkedIn') : null,
+          el('button', { class: 'tree-btn labeled', type: 'button', title: `Open ${o.n}’s family tree`, onclick: () => go(o.id) },
+            el('img', { src: 'assets/tree-icon.png', alt: '' }), 'Tree')));
     }), ...(sorted.length > LIMIT && !all ? [el('li', {}, el('button', { class: 'more-people', type: 'button', onclick: () => render(true) }, `Show all ${sorted.length}`))] : []));
     render(false);
     return ul;
@@ -670,7 +679,6 @@ Source (homepage, CV, thesis…):
     const fav = n.ext ? null : el('button', { class: `fav ${favs.has(id) ? 'on' : ''}`, type: 'button' }, el('span', { class: 'star' }), favs.has(id) ? 'Starred' : 'Star');
     if (fav) fav.addEventListener('click', () => { toggleFav(id); renderDrawer(id); });
     d.replaceChildren(...[
-      el('button', { class: 'close', type: 'button', 'aria-label': 'Close details', onclick: closeDrawer }, '×'),
       el('div', { class: 'who' }, avatar(n), el('div', {}, el('h3', {}, n.n),
         n.ext ? null : el('div', { class: 'uni ti', title: n.as && isAP(n) ? `Homepage: “${n.as[2]}”` : null }, titleLine(n)), el('div', { class: 'uni' }, n.ext ? (n.af || (n.st ? 'PhD student (listed on an advisor’s page)' : 'Current position unknown')) : n.uni))),
       n.rc ? el('div', { class: `rc-box ${n.rc[0]}` },
@@ -683,16 +691,29 @@ Source (homepage, CV, thesis…):
       path && path.length > 2 ? pathChain(path) : null,
       n.ext || !n.d.length ? null : el('div', { class: 'tags' }, n.d.map((x) => el('span', { class: 'tag' }, SUB_LABEL[x] || x))),
       links.length ? el('div', { class: 'links-row' }, links) : null,
-      el('div', { class: 'actions' }, fav, id !== T.root ? el('button', { class: 'btn-dark', type: 'button', onclick: () => go(id) }, 'View this family tree') : null),
+      el('div', { class: 'actions' }, fav, id !== T.root ? el('button', { class: 'btn-dark', type: 'button', onclick: () => go(id) }, `Explore ${n.n.split(' ')[0]}’s family tree`) : null),
       el('h4', {}, `Advisors (${n.adv.length})`), peopleList(n.adv, 'a'),
       el('h4', {}, `Students (${n.stu.length})`), peopleList(n.stu, 's'),
       el('p', { class: 'note' }, 'Student lists are incomplete: they only include students we could find in public records. ',
         el('a', { href: suggestUrl(n), target: '_blank', rel: 'noopener' }, 'Missing someone or something wrong?'))].filter(Boolean));
-    d.classList.add('open');
+    const tab = $('#tabInfo');
+    tab.disabled = false;
+    tab.textContent = `Details · ${n.n}`;
+    sidePane('info');
     d.scrollTop = 0;
+    // 手机上侧栏在树下面：滚过去让人看见
+    if (innerWidth <= 1000) $('#family').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  // 侧栏两个标签：家族名单 / 人物详情。切回名单时保留树上的路径高亮
+  function sidePane(which) {
+    const info = which === 'info';
+    $('#paneFam').hidden = info;
+    $('#drawer').hidden = !info;
+    $('#tabFam').classList.toggle('on', !info); $('#tabFam').setAttribute('aria-selected', String(!info));
+    $('#tabInfo').classList.toggle('on', info); $('#tabInfo').setAttribute('aria-selected', String(info));
   }
   function closeDrawer() {
-    $('#drawer').classList.remove('open');
+    sidePane('fam');
     if (T.path) { T.path = null; drawTree(); for (const li of document.querySelectorAll('#famList .fam-row.sel')) li.classList.remove('sel'); }
   }
 
@@ -713,6 +734,7 @@ Source (homepage, CV, thesis…):
     $('#treeTitle').replaceChildren(n.n, el('small', {}, n.ext ? 'other researcher' : n.uni + (n.former ? ' (former)' : '')));
     document.title = `${n.n} · Academic Lineage Family Tree`;
     closeDrawer();
+    $('#tabInfo').disabled = true; $('#tabInfo').textContent = 'Details';
     drawTree();
     renderFamily();
     syncHash(famHash());
@@ -720,8 +742,9 @@ Source (homepage, CV, thesis…):
 
   /* ---------- academic family list ---------- */
   // 从中心人物出发，沿师生关系（上 = 导师方向，下 = 学生方向）做广度优先搜索，记下最短路径的上下序列
-  const F = { dist: 2, ap: false, nw: false, rc: false, area: false, all: false, cache: null };
-  const F_KEYS = [['ap', 'ap'], ['nw', 'new'], ['rc', 'recruiting'], ['area', 'area'], ['all', 'all']];
+  const F = { dist: 2, ap: false, nw: false, rc: false, area: false, all: false, noinf: false, cache: null };
+  const F_KEYS = [['ap', 'ap'], ['nw', 'new'], ['rc', 'recruiting'], ['area', 'area'], ['all', 'all'], ['noinf', 'noinferred']];
+  const FAM_TOGGLES = [['famAP', 'ap'], ['famNew', 'nw'], ['famRC', 'rc'], ['famArea', 'area'], ['famAll', 'all'], ['famNoInf', 'noinf']];
   // 分享链接带上家族名单的筛选：#/p/<id>?within=3&new=1&recruiting=1
   const famHash = () => {
     const q = [];
@@ -740,19 +763,20 @@ Source (homepage, CV, thesis…):
   const relLabel = (sig) => REL[sig] || `${sig.length} steps away`;
 
   function familyOf(rootId, maxDist) {
-    const seen = new Map([[rootId, '']]), prev = new Map();
+    const seen = new Map([[rootId, '']]), prev = new Map(), inf = new Map();
     let frontier = [rootId];
     for (let k = 1; k <= maxDist && frontier.length; k++) {
       const next = [];
       for (const id of frontier) {
         const n = G.nodes.get(id), sig = seen.get(id);
-        for (const e of n.adv) if (!e.disputed && !seen.has(e.a)) { seen.set(e.a, sig + 'u'); prev.set(e.a, id); next.push(e.a); }
-        for (const e of n.stu) if (!e.disputed && !seen.has(e.s)) { seen.set(e.s, sig + 'd'); prev.set(e.s, id); next.push(e.s); }
+        const ok = (e) => !e.disputed && !(F.noinf && e.inferred);
+        for (const e of n.adv) if (ok(e) && !seen.has(e.a)) { seen.set(e.a, sig + 'u'); prev.set(e.a, id); inf.set(e.a, inf.get(id) || e.inferred); next.push(e.a); }
+        for (const e of n.stu) if (ok(e) && !seen.has(e.s)) { seen.set(e.s, sig + 'd'); prev.set(e.s, id); inf.set(e.s, inf.get(id) || e.inferred); next.push(e.s); }
       }
       frontier = next;
     }
     seen.delete(rootId);
-    return { map: seen, prev };
+    return { map: seen, prev, inf };
   }
   const pathTo = (id) => { const p = [id]; while (F.cache.prev.has(p[0])) p.unshift(F.cache.prev.get(p[0])); return p; };
 
@@ -769,7 +793,6 @@ Source (homepage, CV, thesis…):
     T.selected = id;
     drawTree();
     renderDrawer(id, path);
-    $('#drawer').classList.toggle('left', dir === 'down');  // 路径在学生那边时详情靠左，不挡住路径
     for (const li of document.querySelectorAll('#famList .fam-row')) li.classList.toggle('sel', li.dataset.id === id);
   }
 
@@ -815,8 +838,8 @@ Source (homepage, CV, thesis…):
   function renderFamily() {
     const root = G.nodes.get(T.root);
     if (!root) return;
-    if (!F.cache || F.cache.root !== T.root) F.cache = { root: T.root, ...familyOf(T.root, 4) };
-    for (const [id, key] of [['famAP', 'ap'], ['famNew', 'nw'], ['famRC', 'rc'], ['famArea', 'area'], ['famAll', 'all']]) $('#' + id).checked = F[key];
+    if (!F.cache || F.cache.root !== T.root || F.cache.noinf !== F.noinf) F.cache = { root: T.root, noinf: F.noinf, ...familyOf(T.root, 4) };
+    for (const [id, key] of FAM_TOGGLES) $('#' + id).checked = F[key];
     $('#famNewWrap').hidden = !G.hasAS;
     for (const b of document.querySelectorAll('.fam-controls [data-dist]')) b.classList.toggle('on', +b.dataset.dist === F.dist);
     const areas = new Set(root.ext ? [] : root.a);
@@ -848,11 +871,11 @@ Source (homepage, CV, thesis…):
           avatar(n, true),
           el('span', { class: 'fam-text' },
             el('span', { class: 'fam-name' }, n.n),
-            el('span', { class: 'fam-rel' }, relLabel(sig)),
+            el('span', { class: 'fam-rel' }, relLabel(sig), F.cache.inf.get(n.id) ? el('span', { class: 'src infer', title: 'The connection includes an advisor link inferred from dblp co-authorship' }, 'inferred') : null),
             el('span', { class: 'fam-meta', title: n.ext ? n.af || '' : '' }, n.ext ? outsideSub(n) + (n.usAcad ? ' · not on CSRankings' : '') : `${titleLine(n, true)} · ${n.uniShort}`),
             rcBadge(n))),
-        el('button', { class: 'tree-btn', type: 'button', title: `Open ${n.n}’s family tree`, 'aria-label': `Open ${n.n}’s family tree`, onclick: () => go(n.id) },
-          el('img', { src: 'assets/tree-icon.png', alt: '' })));
+        el('button', { class: 'tree-btn labeled', type: 'button', title: `Open ${n.n}’s family tree`, onclick: () => go(n.id) },
+          el('img', { src: 'assets/tree-icon.png', alt: '' }), 'Tree'));
       return li;
     }) : [el('li', { class: 'fam-empty' }, F.rc ? 'Nobody in this range says on their homepage that they are recruiting. Try a larger range or turn off the filter.' : 'Nobody matches. Try a larger range or fewer filters.')]),
     ...(rows.length > LIMIT ? [el('li', { class: 'fam-empty' }, `Showing the closest ${LIMIT} of ${fmt(rows.length)}.`)] : []));
@@ -883,7 +906,8 @@ Source (homepage, CV, thesis…):
   /* ---------- routing ---------- */
   const current = { view: null };
   let lastList = '#/search';
-  function go(id) { location.hash = '#/p/' + encodeURIComponent(id); }
+  // 离开结果页前记下滚动位置（换 hash 时浏览器会先滚回顶部）
+  function go(id) { if (current.view === 'results') R.scroll = scrollY; location.hash = '#/p/' + encodeURIComponent(id); }
   function show(view) {
     for (const v of ['home', 'results', 'favorites', 'tree', 'about']) $('#view-' + v).hidden = v !== view;
     for (const link of document.querySelectorAll('[data-nav]')) link.classList.toggle('active', link.dataset.nav === view);
@@ -908,9 +932,11 @@ Source (homepage, CV, thesis…):
       S.unis = new Set((p.get('i') || '').split(',').map(uniIndex).filter((i) => i != null));
       R.onlyKnown = p.get('known') === '1'; R.onlyAP = p.get('ap') === '1'; R.onlyRC = p.get('recruiting') === '1';
       $('#onlyKnown').checked = R.onlyKnown; $('#onlyAP').checked = R.onlyAP; $('#onlyRC').checked = R.onlyRC;
+      const back = h === lastList && R.scroll != null;  // 从教授页返回：接着刚才的位置看
       lastList = h;
-      R.shown = PAGE;
+      if (!back) { R.shown = PAGE; R.scroll = null; }
       show('results'); renderResults();
+      if (back) setTimeout(() => scrollTo(0, R.scroll), 0);
       document.title = 'Results · Academic Lineage Family Tree';
       return;
     }
@@ -922,6 +948,7 @@ Source (homepage, CV, thesis…):
 
   /* ---------- init ---------- */
   load().then(() => {
+    $('#loading').hidden = true;
     for (const box of document.querySelectorAll('[data-search]')) mountSearch(box, box.dataset.search);
     const s = G.summary;
     const stat = (v, l) => el('li', {}, el('b', {}, fmt(v)), el('span', {}, l));
@@ -935,7 +962,7 @@ Source (homepage, CV, thesis…):
     for (const [id, key] of [['onlyKnown', 'onlyKnown'], ['onlyAP', 'onlyAP'], ['onlyRC', 'onlyRC']])
       $('#' + id).addEventListener('change', (e) => { R[key] = e.target.checked; R.shown = PAGE; renderResults(); lastList = searchHash(); syncHash(lastList); });
     for (const b of document.querySelectorAll('.fam-controls [data-dist]')) b.addEventListener('click', () => { F.dist = +b.dataset.dist; renderFamily(); syncHash(famHash()); });
-    for (const [id, key] of [['famAP', 'ap'], ['famNew', 'nw'], ['famRC', 'rc'], ['famArea', 'area'], ['famAll', 'all']])
+    for (const [id, key] of FAM_TOGGLES)
       $('#' + id).addEventListener('change', (e) => { F[key] = e.target.checked; renderFamily(); syncHash(famHash()); });
     $('#famNewLabel').textContent = `New APs (since ${ADMIT_YEAR - 3})`;
     $('#famCopy').addEventListener('click', async () => {
@@ -959,6 +986,14 @@ Source (homepage, CV, thesis…):
     const zoom = (d) => { T.zoom = Math.max(0.6, Math.min(1.6, +(T.zoom + d).toFixed(2))); $('#scaleBox').style.transform = `scale(${T.zoom})`; drawTree(); };
     $('#zoomIn').addEventListener('click', () => zoom(0.15));
     $('#zoomOut').addEventListener('click', () => zoom(-0.15));
+    $('#resetBtn').addEventListener('click', () => {
+      T.zoom = 1; $('#scaleBox').style.transform = '';
+      Object.assign(T, { focus: { up: [], down: [] }, page: {}, lo: null, path: null, selected: T.root });
+      for (const li of document.querySelectorAll('#famList .fam-row.sel')) li.classList.remove('sel');
+      drawTree();
+    });
+    $('#tabFam').addEventListener('click', () => sidePane('fam'));
+    $('#tabInfo').addEventListener('click', () => sidePane('info'));
     $('#fullBtn').addEventListener('click', () => {
       const shell = $('#treeShell');
       if (document.fullscreenElement) document.exitFullscreen(); else if (shell.requestFullscreen) shell.requestFullscreen();
@@ -969,6 +1004,7 @@ Source (homepage, CV, thesis…):
     addEventListener('hashchange', route);
     route();
   }).catch((err) => {
-    document.querySelector('main').replaceChildren(el('p', { class: 'noscript' }, 'Could not load the data. ' + err.message));
+    $('#loading').replaceChildren(el('span', {}, 'Could not load the data (' + err.message + '). '),
+      el('button', { class: 'btn-dark', type: 'button', onclick: () => location.reload() }, 'Try again'));
   });
 })();

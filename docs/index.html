@@ -31,6 +31,7 @@
   </header>
 
   <main>
+    <div class="loading" id="loading" role="status"><span class="spinner" aria-hidden="true"></span><span id="loadingText">Loading 6,000+ professors and their academic families…</span></div>
     <!-- 首页 / 搜索页 -->
     <section id="view-home" class="view hero" hidden>
       <p class="eyebrow">For prospective CS PhD students</p>
@@ -48,11 +49,11 @@
         <h2 id="resCount"></h2>
         <div class="results-tools">
           <label class="name-filter"><img src="assets/icons/icon_search.png" alt=""><input id="nameFilter" type="search" placeholder="Filter by name" aria-label="Filter results by name"></label>
-          <label class="toggle"><input type="checkbox" id="onlyKnown"> Known advisor only</label>
+          <label class="toggle" title="Advisor recorded in a source (curated sheet, CV, homepage, Wikidata, Wikipedia); advisors only inferred from dblp co-authorship do not count"><input type="checkbox" id="onlyKnown"> Advisor on record</label>
           <label class="toggle"><input type="checkbox" id="onlyAP"> Assistant professors</label>
           <label class="toggle"><input type="checkbox" id="onlyRC"> Says recruiting</label>
           <select id="sort" aria-label="Sort results">
-            <option value="lineage">Most connected</option>
+            <option value="lineage" title="Number of advisors and students we found in public records, not a ranking">Most links on record</option>
             <option value="name">Name</option>
             <option value="uni">Institution</option>
           </select>
@@ -85,6 +86,7 @@
           <div class="tree-tools">
             <button type="button" id="zoomIn" title="Zoom in"><img src="assets/icons/icon_zoomin.png" alt="Zoom in"></button>
             <button type="button" id="zoomOut" title="Zoom out"><img src="assets/icons/icon_zoomout.png" alt="Zoom out"></button>
+            <button type="button" id="resetBtn" title="Reset view: back to the center person, normal size" aria-label="Reset view"><span class="reset-ico" aria-hidden="true"></span></button>
             <button type="button" id="fullBtn" title="Full screen"><img src="assets/icons/icon_wholescreen.png" alt="Full screen"></button>
           </div>
         </div>
@@ -98,10 +100,14 @@
               </div>
             </div>
             <button class="gen-arrow right" id="genRight" type="button" aria-label="Show later generations"></button>
-            <aside class="drawer" id="drawer" aria-live="polite"></aside>
           </div>
           <!-- 家族名单：从中心人物出发，按亲缘远近列出在美国高校任教的人 -->
-          <aside class="family" id="family" aria-label="Faculty in this academic family">
+          <aside class="family" id="family" aria-label="Academic family and details">
+            <div class="side-tabs" role="tablist">
+              <button type="button" role="tab" id="tabFam" class="on" aria-selected="true">Family list</button>
+              <button type="button" role="tab" id="tabInfo" aria-selected="false" disabled>Details</button>
+            </div>
+            <div class="side-pane" id="paneFam">
             <div class="fam-head">
               <div class="fam-head-row"><h3 id="famTitle">Academic family</h3><button type="button" class="btn-mini" id="famCopy" title="Copy a link to this tree with the current filters">Copy link</button></div>
               <p class="fam-sub" id="famSub"></p>
@@ -117,8 +123,11 @@
               <label class="toggle"><input type="checkbox" id="famRC"> Says recruiting</label>
               <label class="toggle"><input type="checkbox" id="famArea"> Same area</label>
               <label class="toggle"><input type="checkbox" id="famAll"> Include non-faculty</label>
+              <label class="toggle" title="Hide advisor links that were inferred from co-authorship on dblp rather than recorded in a source"><input type="checkbox" id="famNoInf"> Hide inferred links</label>
             </div>
             <ol class="fam-list" id="famList"></ol>
+            </div>
+            <div class="side-pane drawer" id="drawer" aria-live="polite" hidden></div>
           </aside>
         </div>
         <div class="tree-legend">
@@ -128,7 +137,7 @@
           <span><i class="ln disputed"></i>Unverified</span>
           <span><i class="dot fac"></i>US faculty</span>
           <span><i class="dot out"></i>Industry, abroad or student</span>
-          <span class="hint">Click a person for details · double-click to re-center · ← advisors · students →</span>
+          <span class="hint">Click a person for details · double-click to make them the center · ← advisors · students →</span>
         </div>
       </div>
     </section>
