@@ -18,6 +18,8 @@
   const PAGE = 30;
   const MAXGEN = 6;
 
+  // 版本号来自 index.html 里 app.js?v=…：每次发布改这个号，浏览器就不会用旧的缓存
+  const V = (document.currentScript && new URL(document.currentScript.src).searchParams.get('v')) || '';
   const $ = (s, r = document) => r.querySelector(s);
   const el = (tag, attrs = {}, ...kids) => {
     const n = document.createElement(tag);
@@ -48,7 +50,7 @@
   /* ---------- data ---------- */
   let G;
   async function load() {
-    const raw = await (await fetch('data/graph.json')).json();
+    const raw = await (await fetch('data/graph.json' + (V ? '?v=' + V : ''))).json();
     const nodes = new Map();
     for (const n of raw.nodes) {
       n.ext = !!n.x;
