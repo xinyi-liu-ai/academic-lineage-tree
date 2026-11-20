@@ -781,7 +781,7 @@ Source (homepage, CV, thesis…):
     const row = (id, depth, rel) => {
       const o = G.nodes.get(id);
       const tag = id === first ? el('span', { class: 'pc-tag' }, 'This tree') : id === last ? el('span', { class: 'pc-tag sel' }, 'Selected') : null;
-      return el('li', { class: `pc-row ${id === first ? 'start' : ''} ${id === last ? 'end' : ''}`, style: `--depth:${depth}` },
+      return el('li', { class: `pc-row ${depth ? '' : 'top'} ${id === first ? 'start' : ''} ${id === last ? 'end' : ''}`, style: `--depth:${depth}` },
         avatar(o),
         el('span', { class: 'pc-text' },
           el('span', { class: 'pc-name' }, el('b', {}, o.n), tag),
