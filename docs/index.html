@@ -149,6 +149,48 @@
   </main>
 
   <div id="tip" class="tip" hidden></div>
+
+  <!-- 纠错表单 -->
+  <dialog class="fix-dialog" id="fixDialog" aria-labelledby="fixTitle">
+    <form id="fixForm" method="dialog" novalidate>
+      <div class="fix-head">
+        <h3 id="fixTitle">Suggest a correction</h3>
+        <button type="button" class="fix-x" id="fixClose" aria-label="Close">×</button>
+      </div>
+      <p class="fix-intro">Spotted something wrong or missing? Tell us and we’ll check it. No account needed.</p>
+      <label class="fix-field"><span>About</span><input type="text" id="fixWho" name="person" readonly></label>
+      <label class="fix-field"><span>What’s wrong?</span>
+        <select id="fixType" name="type" required>
+          <option value="">Choose one…</option>
+          <option>Wrong advisor</option>
+          <option>Missing advisor</option>
+          <option>Wrong or missing student</option>
+          <option>Job title or institution is wrong</option>
+          <option>Recruiting information is wrong or outdated</option>
+          <option>Photo is not this person</option>
+          <option>Homepage or links are wrong</option>
+          <option>Same person listed twice</option>
+          <option>Remove my photo or information</option>
+          <option>Other</option>
+        </select>
+      </label>
+      <label class="fix-field"><span>What should it be?</span>
+        <textarea id="fixWhat" name="details" rows="4" required placeholder="e.g. Her PhD advisor was Jane Doe (Stanford, 2015), not John Smith."></textarea>
+      </label>
+      <label class="fix-field"><span>Source <small>(optional)</small></span>
+        <input type="url" id="fixSrc" name="source" placeholder="Link to a CV, homepage, thesis or Mathematics Genealogy page">
+      </label>
+      <label class="fix-field"><span>Your email <small>(optional, only if you’d like a reply)</small></span>
+        <input type="email" id="fixEmail" name="email" autocomplete="email">
+      </label>
+      <input type="text" name="_gotcha" class="fix-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="fix-msg" id="fixMsg" role="status"></p>
+      <div class="fix-actions">
+        <button type="button" class="btn-ghost" id="fixCancel">Cancel</button>
+        <button type="submit" class="btn-dark" id="fixSend">Send</button>
+      </div>
+    </form>
+  </dialog>
   <noscript><p class="noscript">This site needs JavaScript to draw the lineage tree.</p></noscript>
   <script src="app.js"></script>
 </body>

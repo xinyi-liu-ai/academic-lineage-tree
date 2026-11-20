@@ -628,16 +628,45 @@
     e.inferred ? el('span', { class: 'src infer', title: INFER_TIP + (e.note ? ` (${e.note})` : '') }, 'inferred') : null,
   ];
   const REPO = 'https://github.com/xinyi-liu-ai/academic-lineage-tree';
-  const suggestUrl = (n) => `${REPO}/issues/new?` + new URLSearchParams({
-    title: `Correction / addition: ${n.n}`,
-    body: `Person: ${n.n}${n.uni ? ' (' + n.uni + ')' : ''}
-Page: ${location.href}
-
-What is missing or wrong (e.g. a student, an advisor, a homepage)?
-
-Source (homepage, CV, thesis…):
-`,
-  }).toString();
+  // 纠错表单提交到 Formspree（https://formspree.io/f/<id>）。还没填时退回到预填好的 GitHub issue 页面
+  const FIX_ENDPOINT = 'https://formspree.io/f/mqpqdpzz';
+  let fixFor = null;
+  function openFix(n, type = '') {
+    fixFor = n;
+    $('#fixWho').value = n ? `${n.n}${n.uni ? ' · ' + n.uni : n.af ? ' · ' + n.af : ''}` : 'General feedback';
+    $('#fixType').value = type; $('#fixWhat').value = ''; $('#fixSrc').value = ''; $('#fixMsg').textContent = ''; $('#fixMsg').className = 'fix-msg';
+    $('#fixSend').disabled = false; $('#fixSend').textContent = FIX_ENDPOINT ? 'Send' : 'Continue on GitHub';
+    const d = $('#fixDialog');
+    if (d.showModal) d.showModal(); else d.setAttribute('open', '');
+    setTimeout(() => $(type ? '#fixWhat' : '#fixType').focus(), 0);
+  }
+  function closeFix() { const d = $('#fixDialog'); if (d.close) d.close(); else d.removeAttribute('open'); }
+  async function sendFix(ev) {
+    ev.preventDefault();
+    const msg = $('#fixMsg');
+    if (!$('#fixType').value || !$('#fixWhat').value.trim()) { msg.textContent = 'Please choose what’s wrong and describe the fix.'; msg.className = 'fix-msg err'; return; }
+    const src = $('#fixSrc').value.trim();
+    if (src && !/^https?:\/\//i.test(src)) { msg.textContent = 'The source should be a link starting with http:// or https://.'; msg.className = 'fix-msg err'; return; }
+    const data = { person: $('#fixWho').value, person_id: fixFor ? fixFor.id : '', type: $('#fixType').value, details: $('#fixWhat').value.trim(),
+      source: src, email: $('#fixEmail').value.trim(), page: location.href, _gotcha: $('#fixForm').elements._gotcha.value };
+    if (!FIX_ENDPOINT) {
+      const body = `Person: ${data.person} (${data.person_id})\nPage: ${data.page}\n\nWhat's wrong: ${data.type}\n\nWhat it should be:\n${data.details}\n\nSource: ${data.source || '—'}\n`;
+      open(`${REPO}/issues/new?` + new URLSearchParams({ title: `${data.type}: ${fixFor ? fixFor.n : 'site'}`, body }).toString(), '_blank', 'noopener');
+      closeFix();
+      return;
+    }
+    $('#fixSend').disabled = true; $('#fixSend').textContent = 'Sending…';
+    try {
+      const r = await fetch(FIX_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) });
+      if (!r.ok) throw new Error(r.status);
+      msg.textContent = 'Thank you! We’ll check it and update the site.'; msg.className = 'fix-msg ok';
+      $('#fixSend').textContent = 'Sent';
+      setTimeout(closeFix, 1600);
+    } catch (e) {
+      msg.textContent = 'Could not send right now. Please try again in a moment.'; msg.className = 'fix-msg err';
+      $('#fixSend').disabled = false; $('#fixSend').textContent = 'Send';
+    }
+  }
   const linkedinSearch = (name) => 'https://www.linkedin.com/search/results/people/?keywords=' + encodeURIComponent(name);
   // 名字直接链到个人主页；没有主页就链到领英（档案或按姓名搜索）
   const nameLink = (o) => el('a', {
@@ -692,10 +721,11 @@ Source (homepage, CV, thesis…):
       n.ext || !n.d.length ? null : el('div', { class: 'tags' }, n.d.map((x) => el('span', { class: 'tag' }, SUB_LABEL[x] || x))),
       links.length ? el('div', { class: 'links-row' }, links) : null,
       el('div', { class: 'actions' }, fav, id !== T.root ? el('button', { class: 'btn-dark', type: 'button', onclick: () => go(id) }, `Explore ${n.n.split(' ')[0]}’s family tree`) : null),
+      el('button', { class: 'fix-btn', type: 'button', onclick: () => openFix(n) }, 'Suggest a correction'),
       el('h4', {}, `Advisors (${n.adv.length})`), peopleList(n.adv, 'a'),
       el('h4', {}, `Students (${n.stu.length})`), peopleList(n.stu, 's'),
       el('p', { class: 'note' }, 'Student lists are incomplete: they only include students we could find in public records. ',
-        el('a', { href: suggestUrl(n), target: '_blank', rel: 'noopener' }, 'Missing someone or something wrong?'))].filter(Boolean));
+        el('button', { class: 'linkbtn inline', type: 'button', onclick: () => openFix(n, 'Wrong or missing student') }, 'Missing someone or something wrong?'))].filter(Boolean));
     const tab = $('#tabInfo');
     tab.disabled = false;
     tab.textContent = `Details · ${n.n}`;
@@ -900,7 +930,8 @@ Source (homepage, CV, thesis…):
         el('li', {}, el('b', {}, 'Homepage / CV: '), 'phrases such as “PhD advisor: …” or “under the supervision of …” found on the professor’s own homepage or CV. Each links to its page.'),
         el('li', {}, el('b', {}, 'dblp (inferred): '), 'for professors with no advisor from the sources above, the co-author who most often appears as senior last author on their papers during their PhD years, using ', a('https://dblp.org', 'dblp'), ' (CC0). Only confident cases are kept; checked against known advisors they are right about 83% of the time.')),
       el('p', {}, 'A curated advisor is marked “unverified” when Wikidata or Wikipedia lists a different advisor for the same person. Photos and job titles are taken from each person’s own homepage; photos are shown directly from that page rather than copied here, so one may disappear if the page changes. Where no photo was found, the avatar shows initials colored by research area; where no title was found, it reads “Faculty”. Favorites are stored only in your browser.'),
-      el('p', {}, 'Data can be wrong or incomplete. Always confirm with the professor’s own CV.'));
+      el('p', {}, 'Data can be wrong or incomplete. Always confirm with the professor’s own CV. ',
+        el('button', { class: 'linkbtn inline', type: 'button', onclick: () => openFix(null, 'Other') }, 'Send us a correction or feedback'), '. To fix something about a specific person, open their details and use “Suggest a correction”.'));
   }
 
   /* ---------- routing ---------- */
@@ -993,6 +1024,11 @@ Source (homepage, CV, thesis…):
       drawTree();
     });
     $('#tabFam').addEventListener('click', () => sidePane('fam'));
+    $('#fixForm').addEventListener('submit', sendFix);
+    $('#fixClose').addEventListener('click', closeFix);
+    $('#fixCancel').addEventListener('click', closeFix);
+    $('#fixDialog').addEventListener('click', (e) => { if (e.target.id === 'fixDialog') closeFix(); });
+    for (const a of document.querySelectorAll('[data-fix]')) a.addEventListener('click', (e) => { e.preventDefault(); openFix(null, 'Other'); });
     $('#tabInfo').addEventListener('click', () => sidePane('info'));
     $('#fullBtn').addEventListener('click', () => {
       const shell = $('#treeShell');
