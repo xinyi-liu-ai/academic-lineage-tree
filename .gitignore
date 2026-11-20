@@ -10,6 +10,7 @@ data/cache/csrankings/
 data/cache/pipeline*.log
 data/cache/student_links_raw.jsonl
 data/cache/people_pages/
+data/cache/recruit_pages/
 data/cache/photo_pages/
 data/cache/photos.log
 data/cache/titles_eval.txt

@@ -101,7 +101,8 @@ class Graph:
             self.alias[ext_hint] = xid
         return xid
 
-    def add_edge(self, adv, stu, typ, src, url=''):
+    def add_edge(self, adv, stu, typ, src, url='', ext=None):
+        """ext: 外部人员在这条来源里的强标识（Wikidata QID / 维基百科词条），拆分同名节点时用。"""
         if adv == stu:
             return
         e = self.edges.get((adv, stu, typ))
@@ -111,7 +112,90 @@ class Graph:
             if url and not e.get('url'):
                 e['url'] = url
         else:
-            self.edges[(adv, stu, typ)] = dict(a=adv, s=stu, t=typ, src=[src], url=url)
+            e = self.edges[(adv, stu, typ)] = dict(a=adv, s=stu, t=typ, src=[src], url=url)
+        if url:
+            e.setdefault('pages', set()).add(url)  # 各来源的出处页面（只供拆分时判断主页链接归属）
+        if ext and ext.split(':')[0] in ('wd', 'wp'):
+            e.setdefault('ids', set()).add(ext)
+
+    def move_edge(self, e, old, new):
+        del self.edges[(e['a'], e['s'], e['t'])]
+        a, s = (new if e['a'] == old else e['a']), (new if e['s'] == old else e['s'])
+        prev = self.edges.get((a, s, e['t']))
+        if prev:
+            prev['src'] += [x for x in e['src'] if x not in prev['src']]
+            for k in ('ids', 'pages'):
+                prev.setdefault(k, set()).update(e.get(k, ()))
+        else:
+            e['a'], e['s'] = a, s
+            self.edges[(a, s, e['t'])] = e
+
+    def split_homonyms(self, start, min_gap=8):
+        """外部人员只按名字合并，同名的两个人会被并成一个节点（如 Heer 的在读学生 Yang Liu 和
+        Fei Liu 的博士导师 Yang Liu）。做法：把节点的边按来源标识分组——带同一个 Wikidata QID / 维基百科
+        词条的边是同一人，一组；没有标识的边（人工表、CV、主页、dblp 推断）合成一组，维持按名字合并。
+        以节点 id 所属的组为准（id 是 QID 时是那一组，按名字建的 x: 节点是无标识那组），其他组若和它
+        构成「A 的博士生 X 又是 P 的博士导师」且 P 入行比 A 晚不到 min_gap 年，就是另一个人，挪到新节点
+        （有 QID 用 QID，否则 x:<另一端 id>:<名字>）。时间线说得通的组照旧合并，比如国外教授既是
+        某教授的学生、又带出几位美国教授。返回 [(原 id, 新 id, 挪走那组的页面)]。"""
+        touch = defaultdict(list)
+        for e in self.edges.values():
+            for nid in (e['a'], e['s']):
+                if self.nodes[nid].get('ext'):
+                    touch[nid].append(e)
+
+        def clash(g1, g2, nid):  # g1 里有 A→X、g2 里有 X→P（或反过来），且时间上排不下
+            for x, y in ((g1, g2), (g2, g1)):
+                for e1 in x:
+                    for e2 in y:
+                        if e1['s'] == nid and e2['a'] == nid and e1['t'] == e2['t'] == 'phd' and \
+                                start.get(e1['a']) and start.get(e2['s']) and start[e2['s']] - start[e1['a']] < min_gap:
+                            return True
+            return False
+
+        splits = []
+        for nid, es in touch.items():
+            if not any(e['s'] == nid for e in es) or not any(e['a'] == nid for e in es):
+                continue  # 只当学生或只当导师：没有可检查的链条
+            groups, plain = [], []  # [(标识集合, 边)]、无标识的边
+            for e in es:
+                ids = e.get('ids')
+                if not ids:
+                    plain.append(e)
+                    continue
+                hit = [g for g in groups if g[0] & ids]
+                merged = (set(ids).union(*(g[0] for g in hit)), [e] + [x for g in hit for x in g[1]])
+                groups = [g for g in groups if not any(g is h for h in hit)] + [merged]
+            if plain:
+                groups.append((set(), plain))
+            anchor = next((g for g in groups if nid in g[0]), None) or (groups[-1] if plain else max(groups, key=lambda g: len(g[1])))
+            n = self.nodes[nid]
+            for ids, move in groups:
+                if move is anchor[1] or not clash(anchor[1], move, nid):
+                    continue
+                other = lambda e: e['s'] if e['a'] == nid else e['a']
+                strong = sorted(ids, key=lambda i: (not i.startswith('wd:'), i))
+                new = strong[0] if strong else f"x:{other(move[0])}:{key(n['name'])}"
+                nn = self.nodes.setdefault(new, dict(id=new, name=n['name'], ext=True, wd=new if strong else None))
+                pages = set().union(*(e.get('pages', set()) for e in move))
+                for e in move:
+                    o = self.nodes[other(e)]
+                    pages.update(x for x in (o.get('homepage'), o.get('cv')) if x)
+                    self.move_edge(e, nid, new)
+                # 导师主页学生名单（2a）带来的去向 / 主页 / 在读标记，跟着名单所在的那条边走
+                listed = lambda g: any(e['s'] == nid or e['s'] == new for e in g if {'homepage', 'sheet'} & set(e['src']))
+                if listed(move) and not listed(anchor[1]):
+                    for k in ('af', 'h', 'cur'):
+                        if k in n:
+                            nn.setdefault(k, n.pop(k))
+                if n.get('wd') in ids:
+                    n['wd'] = None
+                if n.get('url') in pages:
+                    nn.setdefault('url', n['url'])
+                    kept = [e for e in anchor[1] if e.get('url') and e['url'] not in pages]
+                    n['url'] = kept[0]['url'] if kept else ''
+                splits.append((nid, new, pages))
+        return splits
 
 
 def main():
@@ -164,10 +248,11 @@ def main():
             other = r.get('other_prof') or g.resolve(r['name'], ext_id)
             if g.nodes[other].get('ext') and not g.nodes[other].get('url'):
                 g.nodes[other]['url'] = r.get('url', '')
+            hint = None if r.get('other_prof') else ext_id
             if r['rel'] == 'advisor':
-                g.add_edge(other, r['prof'], r.get('type', 'phd'), r['source'], r.get('url', ''))
+                g.add_edge(other, r['prof'], r.get('type', 'phd'), r['source'], r.get('url', ''), hint)
             else:
-                g.add_edge(r['prof'], other, r.get('type', 'phd'), r['source'], r.get('url', ''))
+                g.add_edge(r['prof'], other, r.get('type', 'phd'), r['source'], r.get('url', ''), hint)
             stats[r['source'] + '_' + r['rel']] += 1
 
     # 2a) 导师主页上的学生名单：学生也是名单内教授时用 other_prof（extract_students 已用合著核实）；
@@ -210,9 +295,23 @@ def main():
     for r in inferred:
         stu = r['prof']
         if has_phd.get(stu):
-            match = [a for a in has_phd[stu] if key(g.nodes[a]['name']) == key(r['name'])]
+            # 教授优先、再按 id 排，结果不随集合遍历顺序变
+            match = sorted((a for a in has_phd[stu] if key(g.nodes[a]['name']) == key(r['name'])),
+                           key=lambda a: (bool(g.nodes[a].get('ext')), a))
             if match:
-                g.edges[(match[0], stu, 'phd')]['src'].append('dblp')
+                a, op = match[0], r.get('other_prof')
+                xs = [m for m in match if m.startswith('x:')]
+                if op and op != stu and xs and all(m == op or m.startswith('x:') for m in match) and \
+                        all(key(g.nodes[m]['name']) == key(g.nodes[op]['name']) for m in xs):
+                    # 名单里有同名教授（或写法不全）时人工表 / 主页的导师只能按名字落到 x: 节点；
+                    # dblp 已认出是名单内哪位教授，就把这条边改指向他（他已是导师时并进那条边）
+                    for m in xs:
+                        g.move_edge(g.edges[(m, stu, 'phd')], m, op)
+                        stats['dblp_repointed'] += 1
+                    a = op
+                e = g.edges[(a, stu, 'phd')]
+                if 'dblp' not in e['src']:
+                    e['src'].append('dblp')
                 stats['dblp_confirms'] += 1
             continue
         other = r.get('other_prof') or g.resolve(r['name'], r.get('ext_id'))
@@ -221,6 +320,11 @@ def main():
         g.add_edge(other, stu, 'phd', 'dblp', r['url'])
         g.edges[(other, stu, 'phd')]['note'] = r.get('note', '')
         stats['dblp_advisor'] += 1
+
+    # 2b') 拆开被名字合并的同名外部人员（时间线说不通，见 Graph.split_homonyms；入行年份来自 career_start.py）
+    cs_path = os.path.join(ROOT, 'data/enrich/career_start.json')
+    splits = g.split_homonyms(json.load(open(cs_path, encoding='utf-8')) if os.path.exists(cs_path) else {})
+    stats['homonyms_split'] = len(splits)
 
     # 2c) 合并同一个人的重复节点（find_duplicates.py：同主页 / 同 Scholar / 同名且同导师）
     alias = {}
@@ -297,12 +401,21 @@ def main():
         photos.pop(nid, None)
         people_photos.pop(nid, None)
     # 院系名录（fetch_directories.py）比个人主页可靠，优先；Wikimedia Commons 照片（fetch_wikidata_photos.py）兜底
+    # 但名录里兼职 / 访问 / 研究 / 教学类职称（多半是在别的系的挂名）不覆盖主页上的正式职称
+    SIDE = re.compile(r'adjunct|visiting|courtesy|affiliat|research|instruction|teaching|lecturer', re.I)
+    DIR_STALE = {'p6054'}  # 名录过时：UCSB 的 Zheng Zhang 名录仍写 Assistant Professor
     for pid, r in opt('directory.json').items():
-        if r.get('ti'):
+        if r.get('ti') and pid not in DIR_STALE:
+            if titles.get(pid) and SIDE.search(r['ti']) and not SIDE.search(titles[pid]):
+                continue
             titles[pid] = r['ti']
         if r.get('ph'):
             photos[pid] = r['ph']
     link_updates, dead_links, recruiting = opt('link_updates.json'), opt('dead_links.json'), opt('recruiting.json')
+    # 人工核对后不采用的招生判断：组里的统一表态、条件句、"可能招零到一个"这类说不准的
+    for nid in ('p6487', 'p1552', 'p566', 'p1209'):
+        recruiting.pop(nid, None)
+    ap_since = opt('ap_since.json')  # AP 入职年份（extract_ap_since.py）：{pid: {y, q, src, incoming}}
     bad_urls = opt('photo_https_bad.json')  # https 下打不开的照片地址（verify_photos.py），换下一个来源
     for src in (photos, people_photos):
         for nid in [k for k, u in src.items() if u in bad_urls]:
@@ -311,6 +424,13 @@ def main():
         if u not in bad_urls:
             photos.setdefault(nid, u)
             people_photos.setdefault(nid, u)
+    for old, new, pages in splits:  # 拆分前在原节点上找到的个人主页若来自挪走那一侧的页面，跟着挪到新节点
+        if links.get(old, {}).get('via') in pages and new not in links:
+            links[new] = links.pop(old)
+            if not people.get(old, {}).get('h'):  # 照片和失效标记是按这个主页找的
+                for src in (people_photos, dead_links):
+                    if old in src:
+                        src.setdefault(new, src.pop(old))
     aliases_of = defaultdict(list)
     for drop, keep in alias.items():
         while keep in alias:
@@ -355,6 +475,9 @@ def main():
             if recruiting.get(nid):  # 主页上的招生声明（extract_recruiting.py）：[yes/no, 年份, 抓取年月, 原句, 出处]
                 r = recruiting[nid]
                 d['rc'] = [r['s'], r.get('y'), r.get('at', ''), r.get('q', ''), r.get('src', '')]
+            if ap_since.get(nid) and ap_since[nid].get('y'):  # [入职年份, 是否尚未入职, 原句, 出处]
+                r = ap_since[nid]
+                d['as'] = [r['y'], 1 if r.get('incoming') else 0, r.get('q', ''), r.get('src', '')]
             if n.get('status') == 'former':
                 # 已不在 CSRankings 的美国学校名单上（调去国外、退休、转业界……）：网站只收在美国高校任教的人，
                 # 不再当作教授列出；作为别人的导师 / 学生仍留在树上，显示现在的去向或原学校

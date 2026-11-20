@@ -6,6 +6,13 @@
 "src": "https://justinh.su/",
 "y": null
 },
+"p1006": {
+"at": "2026-11",
+"q": "If you believe you may wish work with me, please list me as a contact in your application to the Ph.D. program.",
+"s": "yes",
+"src": "https://www.arijuels.com/",
+"y": null
+},
 "p1008": {
 "at": "2026-11",
 "q": "I'm not taking on any students at this point.",
@@ -27,11 +34,25 @@
 "src": "https://mimno.infosci.cornell.edu/students.html",
 "y": null
 },
+"p1035": {
+"at": "2026-11",
+"q": "We seek Ph.D. students who share this mission and are excited about three closely connected aspects of our work:",
+"s": "yes",
+"src": "https://emprise.cs.cornell.edu/apply",
+"y": null
+},
 "p1045": {
 "at": "2026-11",
 "q": "Right now, I am primarily looking for strong PhD students, but I am open to hiring postdocs if there is an especially good match.",
 "s": "yes",
 "src": "https://abedavis.com/jointhegroup",
+"y": null
+},
+"p1054": {
+"at": "2026-11",
+"q": "We are looking for passionate new PhD students, Postdocs, and Master students to join the team (more info) !",
+"s": "yes",
+"src": "https://c-psyd.github.io/",
 "y": null
 },
 "p1079": {
@@ -90,6 +111,13 @@
 "src": "https://yonghwi-kwon.github.io/",
 "y": null
 },
+"p1110": {
+"at": "2026-11",
+"q": "We are currently looking for Ph.D. students to join our lab in Fall 2026.",
+"s": "yes",
+"src": "https://smartlab.cs.umd.edu/opportunities",
+"y": 2026
+},
 "p1116": {
 "at": "2026-11",
 "q": "We are looking for motivated Ph.D. students.",
@@ -102,6 +130,13 @@
 "q": "Retired Emeritus Professor (no longer taking students or visiting researchers): Computer Science, UMIACS Founding Director: Human Computer Interaction Lab (1983-2000)",
 "s": "no",
 "src": "https://www.cs.umd.edu/users/ben",
+"y": null
+},
+"p1167": {
+"at": "2026-11",
+"q": "I'm looking for students with strong interest in networked and distributed systems, particularly those who are passionate about privacy and security in the mobile and IoT environments.",
+"s": "yes",
+"src": "https://david.choffnes.com/join.php",
 "y": null
 },
 "p1175": {
@@ -123,6 +158,13 @@
 "q": "Note: I will not be able to accept any new students in Fall 2027.",
 "s": "no",
 "src": "http://www.ccs.neu.edu/home/ek",
+"y": 2027
+},
+"p1185": {
+"at": "2026-11",
+"q": "I am recruiting one PhD student to start in Fall 2027.",
+"s": "yes",
+"src": "https://www.robinwalters.com/lab.html",
 "y": 2027
 },
 "p1187": {
@@ -153,11 +195,32 @@
 "src": "https://web.eecs.umich.edu/~kevinfu",
 "y": null
 },
+"p12": {
+"at": "2026-11",
+"q": "The lab is looking for new PhD students to join the lab in Fall 2027.",
+"s": "yes",
+"src": "http://www.figlab.com",
+"y": 2027
+},
+"p1209": {
+"at": "2026-11",
+"q": "If you are interested in joining our lab as a PhD student supervised by Prof.",
+"s": "yes",
+"src": "https://lab.alexandrato.com/",
+"y": null
+},
 "p124": {
 "at": "2026-11",
 "q": "I am looking for highly motivated students who are interested in building secure AI systems with cryptography to start in Fall 2027.",
 "s": "yes",
 "src": "https://wzheng.github.io/",
+"y": 2027
+},
+"p1240": {
+"at": "2026-11",
+"q": "We will be recruiting new PhD students for the fall of 2027.",
+"s": "yes",
+"src": "https://www.mhealthgroup.org/potential-phd-students.html",
 "y": 2027
 },
 "p1244": {
@@ -216,6 +279,13 @@
 "src": "https://engineering.purdue.edu/~ychu",
 "y": 2027
 },
+"p1272": {
+"at": "2026-11",
+"q": "Openings for Ph.D. (Fall 2027) and Undergrad at Purdue with the intention to pursue graduate school.",
+"s": "yes",
+"src": "http://www.raymond-yeh.com/",
+"y": 2027
+},
 "p1274": {
 "at": "2026-11",
 "q": "I am looking for motivated students who are interested in Cryptography.",
@@ -242,6 +312,20 @@
 "q": "I'm actively recruiting PhD students and post-docs to work on the following projects:",
 "s": "yes",
 "src": "http://tiarkrompf.github.io/",
+"y": null
+},
+"p1292": {
+"at": "2026-11",
+"q": "I have multiple PhD positions available.",
+"s": "yes",
+"src": "https://rjvak7.github.io",
+"y": null
+},
+"p1293": {
+"at": "2026-11",
+"q": "We are actively looking for students/scholars at all levels (BS/MS/PhDs/Post-docs) with a strong relevant background in Robotics, Machine Learning, and Computer Vision.",
+"s": "yes",
+"src": "https://qureshiahmed.github.io/",
 "y": null
 },
 "p1295": {
@@ -321,11 +405,25 @@
 "src": "https://ramyakv.github.io/",
 "y": null
 },
+"p1404": {
+"at": "2026-11",
+"q": "UT Austin is an excellent place for research in cryptography and theoretical computer science, and we are actively recruiting top students.",
+"s": "yes",
+"src": "https://crypto.cs.utexas.edu/applicants.html",
+"y": null
+},
 "p1411": {
 "at": "2026-11",
 "q": "She is currently recruiting PhD students and postdocs.",
 "s": "yes",
 "src": "https://www.cs.utexas.edu/~lili",
+"y": null
+},
+"p1413": {
+"at": "2026-11",
+"q": "UT Austin is an excellent place for research in cryptography and theoretical computer science, and we are actively recruiting top students.",
+"s": "yes",
+"src": "https://crypto.cs.utexas.edu/applicants.html",
 "y": null
 },
 "p1415": {
@@ -341,6 +439,20 @@
 "s": "no",
 "src": "http://www.cs.utexas.edu/~vijay",
 "y": 2027
+},
+"p1430": {
+"at": "2026-11",
+"q": "Yes, I'm looking for new Ph.D. students starting in Fall 2027.",
+"s": "yes",
+"src": "https://www.cs.utexas.edu/~diz/Sub Websites/FAQ.html",
+"y": 2027
+},
+"p1448": {
+"at": "2026-11",
+"q": "Please make sure to mention my name in your application and statement of purpose.",
+"s": "yes",
+"src": "http://vision.jhu.edu/rvidal.html",
+"y": null
 },
 "p1449": {
 "at": "2026-11",
@@ -426,6 +538,13 @@
 "src": "http://www.cs.columbia.edu/~junfeng",
 "y": null
 },
+"p1532": {
+"at": "2026-11",
+"q": "Ph.D. applicants: I am always looking to recruit amazing Ph.D. students.",
+"s": "yes",
+"src": "http://www.cs.columbia.edu/~djhsu/faq.html",
+"y": null
+},
 "p1534": {
 "at": "2026-11",
 "q": "I am also looking for motivated students to join us!",
@@ -447,6 +566,13 @@
 "src": "http://www.cs.columbia.edu/theory/",
 "y": null
 },
+"p1552": {
+"at": "2026-11",
+"q": "If you would like to join our group as a graduate student, please apply to the PhD program in Computer Science at Columbia.",
+"s": "yes",
+"src": "https://theory.cs.columbia.edu/",
+"y": null
+},
 "p1556": {
 "at": "2026-11",
 "q": "I am looking for new Ph.D. students, as well as Columbia project students.",
@@ -459,6 +585,13 @@
 "q": "PhD:The ARCADE Lab is looking for qualified PhD students, who recieve full financial support for theduration of their PhD. The group's recent publications capture the themes of our research.",
 "s": "yes",
 "src": "http://www.cs.columbia.edu/~martha",
+"y": null
+},
+"p1578": {
+"at": "2026-11",
+"q": "Yes, we are always looking for new PhD students.",
+"s": "yes",
+"src": "https://pvl.cs.princeton.edu/join.html",
 "y": null
 },
 "p1587": {
@@ -482,11 +615,25 @@
 "src": "https://www.cs.princeton.edu/~ravian",
 "y": null
 },
+"p1636": {
+"at": "2026-11",
+"q": "It is safe to assume I am taking PhD students and postdocs, unless I explicitly specify otherwise on this page.",
+"s": "yes",
+"src": "https://cims.nyu.edu/~andrewgw/join",
+"y": null
+},
 "p1646": {
 "at": "2026-11",
 "q": "I’m looking for 1–2 PhD students this cycle.",
 "s": "yes",
 "src": "https://hhexiy.github.io/",
+"y": null
+},
+"p1649": {
+"at": "2026-11",
+"q": "Instead, Apply to our PhD Program through official channels, and mention my name in your personal statment.",
+"s": "yes",
+"src": "https://cs.nyu.edu/~dodis/students.html",
 "y": null
 },
 "p1651": {
@@ -517,6 +664,13 @@
 "src": "https://cs.nyu.edu/~mmb586/index.html",
 "y": null
 },
+"p1681": {
+"at": "2026-11",
+"q": "I am currently recruiting talented PhD students, software engineers, research professors, and postdoctoral researchers who are interested in making a positive change in the world by building and deploying open source,…",
+"s": "yes",
+"src": "https://ssl.engineering.nyu.edu/personalpages/jcappos/",
+"y": null
+},
 "p1699": {
 "at": "2026-11",
 "q": "I may have an open positions for Ph.D. student in my group for Fall",
@@ -543,6 +697,13 @@
 "q": "I am actively recruiting new Ph.D. students.",
 "s": "yes",
 "src": "http://www.cs.ucla.edu/~tjn",
+"y": null
+},
+"p1740": {
+"at": "2026-11",
+"q": "Ph.D. students We are looking for Ph.D. students with strong computional and statisical backgrounds.",
+"s": "yes",
+"src": "http://web.cs.ucla.edu/~sriram/openings.html",
 "y": null
 },
 "p1752": {
@@ -629,6 +790,13 @@
 "src": "https://yxw.web.illinois.edu/",
 "y": null
 },
+"p1844": {
+"at": "2026-11",
+"q": "We are actively recruiting students.",
+"s": "yes",
+"src": "https://slurm-lab-usc.github.io/",
+"y": null
+},
 "p1851": {
 "at": "2026-11",
 "q": "I am always looking for motivated postdocs and PhD students.",
@@ -662,6 +830,20 @@
 "q": "We are always looking for top candidates for PhDs and Postdocs with background in systems or theory on data management, mathematical optimization, and machine learning.",
 "s": "yes",
 "src": "https://zhangce.github.io/",
+"y": null
+},
+"p1873": {
+"at": "2026-11",
+"q": "We are always looking for exceptional students at the intersection of Computer Science / Human-Computer Interaction but also, Electrical Engineering, Neuroscience, Physics, Materials Science, and Mechanical Engineering.",
+"s": "yes",
+"src": "https://lab.plopes.org/",
+"y": null
+},
+"p1883": {
+"at": "2026-11",
+"q": "We are always looking for motivated postdocs, PhD students, and undergraduates!",
+"s": "yes",
+"src": "https://chicagohai.github.io/",
 "y": null
 },
 "p1892": {
@@ -720,6 +902,13 @@
 "src": "http://mpaxos.com/",
 "y": null
 },
+"p195": {
+"at": "2026-11",
+"q": "I am looking for PhD students with a strong math background.",
+"s": "yes",
+"src": "http://nanjiang.cs.illinois.edu/prospective-student",
+"y": null
+},
 "p1951": {
 "at": "2026-11",
 "q": "Note to Prospective PhD Students: Unfortunately, I do not currently have available positions for PhD students.",
@@ -776,6 +965,13 @@
 "src": "http://www.ics.uci.edu/~malek",
 "y": null
 },
+"p200": {
+"at": "2026-11",
+"q": "We always have room for strong students in our group.",
+"s": "yes",
+"src": "https://sinrg.csl.illinois.edu/",
+"y": null
+},
 "p2002": {
 "at": "2026-11",
 "q": "If you are a prospective PhD student who wants to be advised by me, you should consider a co-advisor as well and mention me in your application materials.",
@@ -825,6 +1021,13 @@
 "src": "https://sites.google.com/uci.edu/yanning-shen",
 "y": null
 },
+"p2046": {
+"at": "2026-11",
+"q": "Our research group is not currently seeking new students.",
+"s": "no",
+"src": "https://ics.uci.edu/~sjordan/research/applicants.html",
+"y": null
+},
 "p2059": {
 "at": "2026-11",
 "q": "…ngineering (CAE), ACM, and IEEE Research Areas: data science, big data, data mining, database systems, and enterprise data strategies Ph.D. Student Recruiting I am recruiting multiple Ph.D. students at Duke University.",
@@ -872,6 +1075,13 @@
 "q": "I am looking for motivated students to join my research group.",
 "s": "yes",
 "src": "https://users.cs.duke.edu/~xwy",
+"y": null
+},
+"p2115": {
+"at": "2026-11",
+"q": "We are always looking for motivated students to participate in research projects.",
+"s": "yes",
+"src": "http://ilab.cs.ucsb.edu/info",
 "y": null
 },
 "p2120": {
@@ -951,6 +1161,13 @@
 "src": "https://intra.engr.ucr.edu/~htseng",
 "y": null
 },
+"p2209": {
+"at": "2026-11",
+"q": "08/15/2026: I am looking for 1-2 new PhD students who will start their program in Fall 2027.",
+"s": "yes",
+"src": "https://cs.ucr.edu/~ztan/recruitment.html",
+"y": 2027
+},
 "p2210": {
 "at": "2026-11",
 "q": "I'm looking for self-motivated Ph.D. students.",
@@ -984,6 +1201,13 @@
 "q": "The department is expected to have at least 30 openings for PhD students, and other faculty in the area of algorithms are expected to look for new students.",
 "s": "yes",
 "src": "http://www.cs.ucr.edu/~marek",
+"y": null
+},
+"p2240": {
+"at": "2026-11",
+"q": "We have several positions available for PhD/Post Doc in the broad areas of computer architecture and systems engineering.",
+"s": "yes",
+"src": "https://www.cse.psu.edu/hpcl/oppurtunities.html",
 "y": null
 },
 "p2243": {
@@ -1033,6 +1257,13 @@
 "q": "Prospective Students: I’m looking for highly motivated PhD/intern students to join my group.",
 "s": "yes",
 "src": "https://jinghuichen.github.io/",
+"y": null
+},
+"p2264": {
+"at": "2026-11",
+"q": "Hadi Hosseini aboutresearchpublicationslabteachingservicebio join the lab I am always looking for exceptional students.",
+"s": "yes",
+"src": "https://faculty.ist.psu.edu/hadi/join.html",
 "y": null
 },
 "p2265": {
@@ -1091,6 +1322,13 @@
 "src": "https://sites.google.com/view/yana-safonova/about",
 "y": null
 },
+"p2303": {
+"at": "2026-11",
+"q": "We are actively recruiting highly motivated graduate students and postdocs with a capable computational background.",
+"s": "yes",
+"src": "https://koslickilab.github.io/Koslicki-lab-PSU/join",
+"y": null
+},
 "p2307": {
 "at": "2026-11",
 "q": "To prospective students: I am looking for multiple Ph.D. students and undergraduate/graduate research interns who share my academic interests and have a solid background in OS or system/software security or statistics…",
@@ -1098,11 +1336,25 @@
 "src": "http://xinyuxing.org/",
 "y": null
 },
+"p2308": {
+"at": "2026-11",
+"q": "We are always looking for motivated students and researchers interested in trustworthy AI, cyber-physical systems, and design automation.",
+"s": "yes",
+"src": "https://nu-ideas-lab.github.io/group/",
+"y": null
+},
 "p2309": {
 "at": "2026-11",
 "q": "…lar github cv email looking for students I'm always looking for motivated and energetic students (as well as post-docs and visiting scholars) to work together on problems in security, privacy, and applied cryptography.",
 "s": "yes",
 "src": "https://wangxiao1254.github.io/",
+"y": null
+},
+"p2313": {
+"at": "2026-11",
+"q": "I'm not currently recruiting students.",
+"s": "no",
+"src": "https://users.cs.northwestern.edu/~ddowney/prospectives.html",
 "y": null
 },
 "p2321": {
@@ -1154,6 +1406,13 @@
 "src": "https://yscacaca.github.io/",
 "y": null
 },
+"p2357": {
+"at": "2026-11",
+"q": "The lab is continuously hiring self-motivated graduate and undergraduate students who have research interests in cyber security, programming languages, operating systems, and computer networks.",
+"s": "yes",
+"src": "https://sunlab-gmu.github.io",
+"y": null
+},
 "p2359": {
 "at": "2026-11",
 "q": "I am looking for self-motivated PhD students (fully-funded) with strong mathematical ablities and (or) programming skills to solve challenging machine learning problems elegantly with mathematical analysis and empirica…",
@@ -1196,6 +1455,13 @@
 "src": "https://lannan.github.io/",
 "y": null
 },
+"p2396": {
+"at": "2026-11",
+"q": "Multiple Positions for PhD and Intern",
+"s": "yes",
+"src": "https://mason.gmu.edu/~zyan4/opening.html",
+"y": null
+},
 "p2397": {
 "at": "2026-11",
 "q": "I am at capacity for hiring new students.",
@@ -1231,6 +1497,13 @@
 "src": "https://www.alankuhnle.com/group.html",
 "y": 2027
 },
+"p2438": {
+"at": "2026-11",
+"q": "I always have opening for motivated and talented graduate students.",
+"s": "yes",
+"src": "https://people.engr.tamu.edu/bobakm/prospective.html",
+"y": null
+},
 "p2439": {
 "at": "2026-11",
 "q": "Though I remain active in research and field work, I am not taking on new graduate students or post-docs.",
@@ -1244,6 +1517,13 @@
 "s": "yes",
 "src": "https://www.cs.utah.edu/~zhe",
 "y": null
+},
+"p2466": {
+"at": "2026-11",
+"q": "We are looking for a number of motivated PhD students for Fall 2027.",
+"s": "yes",
+"src": "http://mod.cs.utah.edu",
+"y": 2027
 },
 "p2477": {
 "at": "2026-11",
@@ -1301,6 +1581,13 @@
 "src": "https://yongjoopark.com/",
 "y": null
 },
+"p2516": {
+"at": "2026-11",
+"q": "We are taking on new students.",
+"s": "yes",
+"src": "https://varunshankar.com/join.html",
+"y": null
+},
 "p2520": {
 "at": "2026-11",
 "q": "We always have openings for self-motivated students who are interested in doing system research.",
@@ -1355,6 +1642,13 @@
 "q": "I am actively recruiting motivated PhD students to join my lab.",
 "s": "yes",
 "src": "https://jpwco.com/",
+"y": null
+},
+"p2555": {
+"at": "2026-11",
+"q": "I'm looking for self-motivated and hard-working Ph.D. students.",
+"s": "yes",
+"src": "https://skuttal.github.io/skk/",
 "y": null
 },
 "p256": {
@@ -1448,6 +1742,13 @@
 "src": "http://nandofioretto.com/",
 "y": null
 },
+"p2637": {
+"at": "2026-11",
+"q": "We do not currently have openings for graduate students entering in spring 2027.",
+"s": "no",
+"src": "https://ultimateinterface.com/join.html",
+"y": 2027
+},
 "p2649": {
 "at": "2026-11",
 "q": "I regularly seek motivated, creative, detail-oriented, students to join our lab ~I am recruiting a PhD student to start Fall 2027~",
@@ -1462,6 +1763,13 @@
 "src": "https://tandy.cs.illinois.edu/",
 "y": null
 },
+"p2668": {
+"at": "2026-11",
+"q": "We are currently seeking exceptional students to join our team as PhD candidates.",
+"s": "yes",
+"src": "http://www.eng.yale.edu/grablab/",
+"y": null
+},
 "p2670": {
 "at": "2026-11",
 "q": "I am always looking for bright and self-motivated students that wish to do research on computer security and applied cryptography.",
@@ -1474,6 +1782,13 @@
 "q": "I am always looking for motivated graduate students and postdoctoral researchers!",
 "s": "yes",
 "src": "http://anuragkhandelwal.com/",
+"y": null
+},
+"p2687": {
+"at": "2026-11",
+"q": "For research positions: Our group has positions open for graduate students, postdoctoral scholars, and undergraduate researchers.",
+"s": "yes",
+"src": "https://www.yongshanding.com/",
 "y": null
 },
 "p27": {
@@ -1539,11 +1854,32 @@
 "src": "https://dritchie.github.io/prospective_students.html",
 "y": null
 },
+"p2804": {
+"at": "2026-11",
+"q": "The lab is looking for highly motivated students, with strong computational skills, who are excited about developing data-driven approaches to solve important problems in biology and health sciences.",
+"s": "yes",
+"src": "http://rsinghlab.org",
+"y": null
+},
+"p2807": {
+"at": "2026-11",
+"q": "Bergen is recruiting graduate students with a primary research interest in Data Science and SciML (see What is SciML?",
+"s": "yes",
+"src": "http://sites.brown.edu/bergen-lab/people/join-us/",
+"y": null
+},
 "p2817": {
 "at": "2026-11",
 "q": "I am looking for talented students to work at the interface between computer science and economics.",
 "s": "yes",
 "src": "https://yiling.seas.harvard.edu/prospective-students/",
+"y": null
+},
+"p2834": {
+"at": "2026-11",
+"q": "Prospective PhD Students: Please apply to SEAS and mention me in your application.",
+"s": "yes",
+"src": "https://metareflection.seas.harvard.edu/people/",
 "y": null
 },
 "p2837": {
@@ -1595,6 +1931,13 @@
 "src": "http://www.cs.bu.edu/~goldbe",
 "y": null
 },
+"p2886": {
+"at": "2026-11",
+"q": "…tive Ph.D. Students: If you are interested in joining my lab as a Ph.D. student in fall 2027, please mention my name in your application to Rice CS, and email me your CV, transcripts, and any other documents that can h…",
+"s": "yes",
+"src": "https://hangkaiyu.github.io/join.html",
+"y": 2027
+},
 "p29": {
 "at": "2026-11",
 "q": "We are always looking for strongly motivated PhD and MS students.",
@@ -1637,6 +1980,13 @@
 "src": "https://shangjingbo1226.github.io/",
 "y": null
 },
+"p2950": {
+"at": "2026-11",
+"q": "PhD: I'm looking for self-motivated PhD students.",
+"s": "yes",
+"src": "https://web.cs.ucdavis.edu/~zubair/recruitment.html",
+"y": null
+},
 "p2967": {
 "at": "2026-11",
 "q": "Prospective students: I am looking for highly-motivated Ph.D. students to work on programming languages research problems.",
@@ -1671,6 +2021,13 @@
 "s": "no",
 "src": "http://cusecurity.cs.colorado.edu/yueqichen",
 "y": null
+},
+"p3018": {
+"at": "2026-11",
+"q": "We are not recruiting new PhD students for Fall 2027.",
+"s": "no",
+"src": "https://blast-cu.github.io/",
+"y": 2027
 },
 "p3021": {
 "at": "2026-11",
@@ -1728,6 +2085,13 @@
 "src": "https://asudeh.github.io/",
 "y": null
 },
+"p307": {
+"at": "2026-11",
+"q": "We are always looking for strong candidates for PhD students and Research Scientists / Postdocs, as well as MS and BS student researchers.",
+"s": "yes",
+"src": "https://ucsdarclab.com/opportunities/",
+"y": null
+},
 "p3076": {
 "at": "2026-11",
 "q": "…sh for me to review your application, please mention my name in your SOP. After getting the applications, I will schedule an interview with the selected applicants and send my recommendation to the admission committee.",
@@ -1776,6 +2140,13 @@
 "s": "yes",
 "src": "https://qianwen.info/",
 "y": null
+},
+"p3122": {
+"at": "2026-11",
+"q": "If you are a prospective PhD student: I will be hiring 1 PhD student in the Fall 2026 admission cycle.",
+"s": "yes",
+"src": "https://harmanpk.github.io/advising.html",
+"y": 2026
 },
 "p3128": {
 "at": "2026-11",
@@ -1833,12 +2204,33 @@
 "src": "http://cseweb.ucsd.edu/~swanson",
 "y": null
 },
+"p3171": {
+"at": "2026-11",
+"q": "We are looking for new PhD students for Fall 2027!",
+"s": "yes",
+"src": "https://crypto.unc.edu",
+"y": 2027
+},
+"p3195": {
+"at": "2026-11",
+"q": "I'm also recruiting graduate students.",
+"s": "yes",
+"src": "http://aair-lab.github.io/",
+"y": null
+},
 "p3196": {
 "at": "2026-11",
 "q": "I am always looking for PhD students and interns with strong background in SE, Security, or ML. Please apply to ASU SCAI by Dec. 31th (PhD only), and/or send me an email (with your CV).",
 "s": "yes",
 "src": "https://xusheng-xiao.github.io/",
 "y": null
+},
+"p3208": {
+"at": "2026-11",
+"q": "We are recruiting a PhD student for Fall 2027 — view the opening.",
+"s": "yes",
+"src": "https://ghasemzadeh.com/",
+"y": 2027
 },
 "p3215": {
 "at": "2026-11",
@@ -1859,6 +2251,13 @@
 "q": "Prospective Students: I am looking for highly motivated Ph.D. students.",
 "s": "yes",
 "src": "http://hastiseifi.com/",
+"y": null
+},
+"p3224": {
+"at": "2026-11",
+"q": "We’re looking for students who are passionate about designing and building intelligent (knowledgeable) computing systems that interact with humans and the physical world.",
+"s": "yes",
+"src": "https://labs.engineering.asu.edu/kim/",
 "y": null
 },
 "p3247": {
@@ -1952,6 +2351,13 @@
 "src": "https://hangz.me/",
 "y": null
 },
+"p3315": {
+"at": "2026-11",
+"q": "I am always looking for great students who are interested in working at the intersection of health informatics, human computer interaction, and pervasive computing.",
+"s": "yes",
+"src": "https://homes.luddy.indiana.edu/ksiek/ksiek/note-to-incoming-students/index.html",
+"y": null
+},
 "p3319": {
 "at": "2026-11",
 "q": "I am looking for motivated students interested in research in large-scale distributed systems, cloud computing, and distributed machine learning.",
@@ -2001,6 +2407,13 @@
 "src": "https://www.cs.jhu.edu/~cmhuang/notes-for-students.html",
 "y": null
 },
+"p3386": {
+"at": "2026-11",
+"q": "For the coming year, I plan to recruit PhD students applying to the AMS graduate program.",
+"s": "yes",
+"src": "https://nicolasloizou.github.io/openpositions.html",
+"y": null
+},
 "p339": {
 "at": "2026-11",
 "q": "I am taking on new students and postdocs from HDSI, the Department of Computer Science and Engineering, and related departments.",
@@ -2048,6 +2461,13 @@
 "q": "We are looking for new Ph.D. students!",
 "s": "yes",
 "src": "http://people.oregonstate.edu/~fuxia",
+"y": null
+},
+"p3415": {
+"at": "2026-11",
+"q": "Apply through the OSU EECS Graduate Program and mention my name in your application, or file the application form below.",
+"s": "yes",
+"src": "https://true-lab.ai/join.html",
 "y": null
 },
 "p3416": {
@@ -2162,6 +2582,13 @@
 "src": "http://utdallas.edu/~shao",
 "y": null
 },
+"p3520": {
+"at": "2026-11",
+"q": "I am looking for highly self-motivated PhD students with funding support.",
+"s": "yes",
+"src": "https://xinyadu.github.io/recruiting.html",
+"y": null
+},
 "p3526": {
 "at": "2026-11",
 "q": "I am looking for one or two PhD student for Spring 27 and Fall 27, and I am also looking for self-motivated students as Research Intern and Visiting Students.",
@@ -2181,6 +2608,13 @@
 "q": "I am currently looking for motivated students to work on algorithms research.",
 "s": "yes",
 "src": "http://www.utdallas.edu/~bar150630",
+"y": null
+},
+"p3535": {
+"at": "2026-11",
+"q": "I am currently seeking qualified students at all levels (undergraduate, Masters, and PhD) for paid research work related to program-proof co-development, binary code analysis for all platforms (e.g., Intel x86/x64, ARM…",
+"s": "yes",
+"src": "https://personal.utdallas.edu/~hamlen/positions.html",
 "y": null
 },
 "p3542": {
@@ -2225,6 +2659,13 @@
 "src": "http://vishnu.boddeti.net/",
 "y": null
 },
+"p3619": {
+"at": "2026-11",
+"q": "I have opening for one motivated PhD student in the general areas of statistical machine learning, AI, and their applications in computational biology, medical image understanding and human visual attention.",
+"s": "yes",
+"src": "https://ruililuci.com/",
+"y": null
+},
 "p3636": {
 "at": "2026-11",
 "q": "We seek to inform students of industry standard practices and ideologies of a User Experience Designer for them to better understand the profession and to get a feel for it.",
@@ -2246,12 +2687,26 @@
 "src": "https://xuelingz.github.io/",
 "y": null
 },
+"p3656": {
+"at": "2026-11",
+"q": "We are looking for motivated PhD students.",
+"s": "yes",
+"src": "https://mine-lab-nd.github.io/",
+"y": null
+},
 "p366": {
 "at": "2026-11",
 "q": "I'm not currently recruiting PhD students, but students are always welcome to check out information about my lab and example job materials here!",
 "s": "no",
 "src": "http://kvaccaro.com/",
 "y": null
+},
+"p3660": {
+"at": "2026-11",
+"q": "degree or postdoc related to the areas of AI/ML, Data Mining, Cybersecurity, and Public Health, please send me an email with your CV. I aim to recruit 1 postdoc and 4 Ph.D. students for Spring/Fall 2027 (until filled).",
+"s": "yes",
+"src": "http://yes-lab.org/",
+"y": 2027
 },
 "p3662": {
 "at": "2026-11",
@@ -2307,6 +2762,13 @@
 "q": "I am looking for highly motivated students interested in my research.",
 "s": "yes",
 "src": "http://ranger.uta.edu/~jrao",
+"y": null
+},
+"p3753": {
+"at": "2026-11",
+"q": "[Openings] We are always looking for highly-motivated, hard-working and talented students to join our lab.",
+"s": "yes",
+"src": "https://xgao-work.github.io/open.html",
 "y": null
 },
 "p3758": {
@@ -2372,6 +2834,13 @@
 "src": "https://songdj.github.io/",
 "y": null
 },
+"p3799": {
+"at": "2026-11",
+"q": "Song Han is seeking multiple highly motivated PhD students to join the Cyber-Physical Systems (CPS) Lab at the University of Connecticut (UConn), beginning in Spring or Fall 2027.",
+"s": "yes",
+"src": "https://cps.cse.uconn.edu/openings/",
+"y": 2027
+},
 "p3800": {
 "at": "2026-11",
 "q": "[Openings] We are looking for self-motivated PhD students who are committed to artificial intelligence of things (AIoTs) and human-centered AI (HCAI) research for 2027 Spring and 2027 Fall.",
@@ -2384,6 +2853,13 @@
 "q": "I am looking for self-motivated PhD students with interests and expertise in reinforcement learning, optimization, control theory, robotics, and multi-agent systems!",
 "s": "yes",
 "src": "http://feimiao.org/",
+"y": null
+},
+"p3811": {
+"at": "2026-11",
+"q": "For potential PhD applicants I'm looking for self-motivated students (Ph.D., master, undergraduate) who are interested in networking research, particularly in AI for cellular networks (5G and beyond), network systems,…",
+"s": "yes",
+"src": "https://archer-w.github.io/openings/",
 "y": null
 },
 "p3814": {
@@ -2405,6 +2881,13 @@
 "q": "I am looking for talented and motivated students with an interest in systems security and doing inspiring work with real-world impact.",
 "s": "yes",
 "src": "http://cise.ufl.edu/~butler",
+"y": null
+},
+"p382": {
+"at": "2026-11",
+"q": "For Prospective (non-UCSD) students: Please apply direclty through our HDSI Graduate program, CSE Graduate program and indicate my name in your application.",
+"s": "yes",
+"src": "https://lilywenglab.github.io/",
 "y": null
 },
 "p3824": {
@@ -2526,6 +3009,20 @@
 "src": "http://www.wpi.edu/~yli15",
 "y": null
 },
+"p3932": {
+"at": "2026-11",
+"q": "Please note: I am not accepting new PhD students in AY 2026/2027.",
+"s": "no",
+"src": "http://carlo.pinciroli.net/",
+"y": 2026
+},
+"p3935": {
+"at": "2026-11",
+"q": "I am recruiting motivated PhD students interested in doing research in human-computer interaction (HCI), specifically in accessibility and emerging interaction modes and techniques such as brain-computer interfaces, ph…",
+"s": "yes",
+"src": "https://users.wpi.edu/~esolovey/Research_Opportunities.html",
+"y": null
+},
 "p3966": {
 "at": "2026-11",
 "q": "Multiple PhD Positions in Data Mining and Machine Learning at the College of William & Mary.",
@@ -2575,6 +3072,13 @@
 "src": "http://teyenwu.com/",
 "y": null
 },
+"p3996": {
+"at": "2026-11",
+"q": "I am hiring Ph.D. students for 2027.",
+"s": "yes",
+"src": "https://ayzk.github.io/hiring.html",
+"y": 2027
+},
 "p3998": {
 "at": "2026-11",
 "q": "I am looking for highly motivated and self-driven Ph.D. students with strong mathematical backgrounds and/or programming skills.",
@@ -2594,6 +3098,13 @@
 "q": "Openings: I am looking for prospective PhD students.",
 "s": "yes",
 "src": "https://clmiao.github.io/",
+"y": null
+},
+"p4013": {
+"at": "2026-11",
+"q": "edu For Prospective Students: I am looking for prospective Ph.D students and research interns.",
+"s": "yes",
+"src": "https://mdhuai.github.io/",
 "y": null
 },
 "p4041": {
@@ -2622,6 +3133,13 @@
 "q": "I am looking for talented PhD students who are excited about computer vision, natural language understanding, and machine learning in the context of robotics.",
 "s": "yes",
 "src": "http://ttic.uchicago.edu/~mwalter",
+"y": null
+},
+"p4066": {
+"at": "2026-11",
+"q": "Information for prospective students Information for Prospective Students I'm always looking for strong, self-motivated, and ambitious PhD students.",
+"s": "yes",
+"src": "https://eecs.wsu.edu/~jana/prospective-students.html",
 "y": null
 },
 "p4074": {
@@ -2680,6 +3198,13 @@
 "src": "https://mengnandu.com/",
 "y": null
 },
+"p4131": {
+"at": "2026-11",
+"q": "I am currently looking for highly motivated PhD students to work with me on research projects in the areas of Information Security and Cryptography applied to:",
+"s": "yes",
+"src": "https://web.njit.edu/~crix/prospective.html",
+"y": null
+},
 "p4134": {
 "at": "2026-11",
 "q": "Multiple fully-funded Ph.D. positions.",
@@ -2734,6 +3259,20 @@
 "q": "We are actively seeking self-motivated students interested in pursuing Ph.D. degrees in the area of efficient AI, including both efficient AI algorithms and accelerators.",
 "s": "yes",
 "src": "https://eiclab.scs.gatech.edu/pages/prospective_students.html",
+"y": null
+},
+"p4171": {
+"at": "2026-11",
+"q": "I seek self-motivated students who are enthusiastic about machine learning research, especially projects that combine theory and experiments.",
+"s": "yes",
+"src": "https://zcc1307.github.io/faq",
+"y": null
+},
+"p418": {
+"at": "2026-11",
+"q": "Mention my name in your application if you are interested in the lab.",
+"s": "yes",
+"src": "https://faculty.cc.gatech.edu/~zk15/join/",
 "y": null
 },
 "p4185": {
@@ -2841,6 +3380,13 @@
 "src": "https://cis.temple.edu/~wu",
 "y": null
 },
+"p4302": {
+"at": "2026-11",
+"q": "Hiring MS and PhD Students",
+"s": "yes",
+"src": "https://stevemacn.github.io/faq/",
+"y": null
+},
 "p4303": {
 "at": "2026-11",
 "q": "I am seeking for highly motivated graduate students with undergraduate training in computer science, statistics, mathematics, physics or quantitative biological sciences.",
@@ -2931,6 +3477,20 @@
 "s": "yes",
 "src": "https://yue.zyueinfosec.com/",
 "y": null
+},
+"p4401": {
+"at": "2026-11",
+"q": "I am currently seeking highly motivated students with strong academic background for fully funded positions to work at the intersection of software engineering, machine learning, and natural language processing at Drex…",
+"s": "yes",
+"src": "https://sites.udel.edu/preethac/prospective-students/",
+"y": null
+},
+"p4405": {
+"at": "2026-11",
+"q": "I do not intend to accept new students to my lab for Spring’26 or Fall’26 starts.",
+"s": "no",
+"src": "https://gwusec.seas.gwu.edu",
+"y": 2026
 },
 "p442": {
 "at": "2026-11",
@@ -3156,6 +3716,13 @@
 "src": "https://hengfan2010.github.io/",
 "y": null
 },
+"p4602": {
+"at": "2026-11",
+"q": "We welcome motivated undergraduate, master’s, and Ph.D. students.",
+"s": "yes",
+"src": "https://yunhefeng.me/",
+"y": null
+},
 "p4618": {
 "at": "2026-11",
 "q": "Currently, there are several fully funded Ph.D. positions available in generative machine learning, trustworthy machine learning, scalable machine learning, or natural language processing.",
@@ -3182,6 +3749,13 @@
 "q": "I am looking for motivated students to work with.",
 "s": "yes",
 "src": "http://helloqirun.github.io/",
+"y": null
+},
+"p4688": {
+"at": "2026-11",
+"q": "I am looking for motivated students interested in Algorithms and Data Structures.",
+"s": "yes",
+"src": "https://pages.mtu.edu/~yakov/",
 "y": null
 },
 "p4699": {
@@ -3296,11 +3870,25 @@
 "src": "http://www.myweb.ttu.edu/yonchen",
 "y": null
 },
+"p4859": {
+"at": "2026-11",
+"q": "We are looking for bright and well motivated graduate students to join our group.",
+"s": "yes",
+"src": "https://idatavisualizationlab.github.io/",
+"y": null
+},
 "p4899": {
 "at": "2026-11",
 "q": "Huang is currently looking for Master and PhD students, who are interested in her research.",
 "s": "yes",
 "src": "https://unocps.github.io/",
+"y": null
+},
+"p4906": {
+"at": "2026-11",
+"q": "ARA Lab is looking for a PhD student to work at the Advanced Robotics and Automation (ARA) Lab (http://ara.cse.unr.edu), University of Nevada, Reno, for the NSF funded project: CAREER: Less Obstructive Vital Evaluation…",
+"s": "yes",
+"src": "https://ara.cse.unr.edu/?page_id=17",
 "y": null
 },
 "p4913": {
@@ -3401,6 +3989,13 @@
 "src": "https://www.cc.gatech.edu/~amsmti3",
 "y": null
 },
+"p5086": {
+"at": "2026-11",
+"q": "We’re hiring for several PhD students!",
+"s": "yes",
+"src": "https://happyresearchlab.com/apply/",
+"y": null
+},
 "p5095": {
 "at": "2026-11",
 "q": "Apply to the ASU Ph.D. program, and list me as a faculty of interest in your application.",
@@ -3427,6 +4022,13 @@
 "q": "I am looking for multiple self-motivated PhD students and Master’s students who are interested in trustworthy AI systems.",
 "s": "yes",
 "src": "https://linlin-yu.github.io",
+"y": null
+},
+"p5118": {
+"at": "2026-11",
+"q": "Openings: I am looking for self-motivated PhD students to work on deep learning topics.",
+"s": "yes",
+"src": "https://yingxuezhang.com/",
 "y": null
 },
 "p5134": {
@@ -3492,12 +4094,26 @@
 "src": "https://gkioxari.github.io",
 "y": null
 },
+"p5189": {
+"at": "2026-11",
+"q": "I am looking for strong students and postdocs to join my research group.",
+"s": "yes",
+"src": "https://vkostina.caltech.edu/openings",
+"y": null
+},
 "p5202": {
 "at": "2026-11",
 "q": "I am always looking for self-motivated students at all levels.",
 "s": "yes",
 "src": "https://jiaoyangli.me",
 "y": null
+},
+"p5204": {
+"at": "2026-11",
+"q": "Note to prospective PhD students: We expect to accept at least one new PhD student in the 2026-2027 application cycle.",
+"s": "yes",
+"src": "https://www.thecoalalab.com/",
+"y": 2027
 },
 "p5207": {
 "at": "2026-11",
@@ -3539,6 +4155,13 @@
 "q": "I am looking for eager, driven, and motivated students for my group.",
 "s": "yes",
 "src": "https://jonccal.people.clemson.edu",
+"y": null
+},
+"p5236": {
+"at": "2026-11",
+"q": "I am currently not accepting new students, but will recruit in exceptional cases.",
+"s": "no",
+"src": "https://siyuhuang.github.io/lab/contact.html",
 "y": null
 },
 "p5240": {
@@ -3667,6 +4290,13 @@
 "src": "https://brianplancher.com",
 "y": 2027
 },
+"p5307": {
+"at": "2026-11",
+"q": "External students I am regularly looking for strong students interested in systems security, and in particular capture the flag (CTF) competitions, binary program analysis and reverse engineering from undergraduate to…",
+"s": "yes",
+"src": "https://kereoz.github.io/students/",
+"y": null
+},
 "p5308": {
 "at": "2026-11",
 "q": "I am looking for motivated graduate students in systems and software security research.",
@@ -3751,6 +4381,20 @@
 "src": "https://serlop.fiu.edu/team/",
 "y": null
 },
+"p5369": {
+"at": "2026-11",
+"q": "Rahman is seeking a smart, self-motivated, hardworking Ph.D. student.",
+"s": "yes",
+"src": "https://acyd.fiu.edu/position-openings/",
+"y": null
+},
+"p537": {
+"at": "2026-11",
+"q": "We are always looking for passionate new students (PhD, Masters & Bachelors) to work with us!",
+"s": "yes",
+"src": "https://epl.gatech.edu/",
+"y": null
+},
 "p5374": {
 "at": "2026-11",
 "q": "I’m actively looking for motivated and talented students to join my group to discover and solve real-world cybersecurity challenges in the software and hardware of computer systems.",
@@ -3765,11 +4409,32 @@
 "src": "http://www.cs.fsu.edu/~zhao",
 "y": null
 },
+"p5378": {
+"at": "2026-11",
+"q": "FYI: I am avtively looking for self-motivated students to work on interdisciplinary projects in the landscape of AI for Science.",
+"s": "yes",
+"src": "https://imshibo.com/",
+"y": null
+},
 "p5379": {
 "at": "2026-11",
 "q": "We are hiring students!",
 "s": "yes",
 "src": "https://www.cs.fsu.edu/~xzhang/index.html",
+"y": null
+},
+"p5382": {
+"at": "2026-11",
+"q": "[Recruiting PhDs & Interns, 2-3 more available PhD positions for 2026 & 2027]: I am actively seeking ambitious students for Ph.D. or research intern roles (may be withheld if no qualifying candidates).",
+"s": "yes",
+"src": "https://yushundong.github.io/",
+"y": 2026
+},
+"p5383": {
+"at": "2026-11",
+"q": "If you are interested in working with me (David), I encourage you to list me as a potential advisor on your Ph.D. application and reach out to me to let me know that you're interested.",
+"s": "yes",
+"src": "https://ari-lab-gmu.github.io/join-us",
 "y": null
 },
 "p5388": {
@@ -3884,6 +4549,20 @@
 "src": "https://lwan86.github.io",
 "y": null
 },
+"p5450": {
+"at": "2026-11",
+"q": "Prospective students: I am actively looking for self-motivated students at all levels for various research projects in the fields of computer architectures, systems, compilers, software-hardware co-design, privacy-pres…",
+"s": "yes",
+"src": "https://zhouminxuan.github.io/",
+"y": null
+},
+"p5457": {
+"at": "2026-11",
+"q": "I am looking for students that are self motivated, inquisitive, creative, collaborative, and hardworking.",
+"s": "yes",
+"src": "https://www.smart-laboratory.org/group/opportunities.html",
+"y": null
+},
 "p5460": {
 "at": "2026-11",
 "q": "To prospective students: I am recruiting Ph.D. students.",
@@ -3897,6 +4576,13 @@
 "s": "yes",
 "src": "http://kahyunchoi.com",
 "y": 2027
+},
+"p5466": {
+"at": "2026-11",
+"q": "Our first PhD students join in Fall 2026, and we are looking for more PhD students, Master’s students, and undergraduates who are excited about robotics, interactive machine learning, and human-AI interaction.",
+"s": "yes",
+"src": "https://reliable-interactive-autonomy-lab.github.io/",
+"y": 2026
 },
 "p5471": {
 "at": "2026-11",
@@ -3912,6 +4598,20 @@
 "src": "https://boxiong.io",
 "y": null
 },
+"p5477": {
+"at": "2026-11",
+"q": "For Prospective Students: I am looking for prospective Ph.D. students.",
+"s": "yes",
+"src": "https://lynneyan.github.io",
+"y": null
+},
+"p5493": {
+"at": "2026-11",
+"q": "PhD students 2026-27 cycle recruiting updates During the upcoming 2026-27 PhD application cycle, our group expects to recruit between 0 and 2 PhD students.",
+"s": "yes",
+"src": "https://sciphylab.org/apply/",
+"y": 2027
+},
 "p5498": {
 "at": "2026-11",
 "q": "Joining my group as a PhD student If you are interested in pursuing a PhD, I am recruiting PhD students through the JHU CS PhD program.",
@@ -3926,12 +4626,33 @@
 "src": "https://renjiezhao.github.io",
 "y": null
 },
+"p5508": {
+"at": "2026-11",
+"q": "We are actively recruiting highly motivated students to join our lab.",
+"s": "yes",
+"src": "http://scai.cs.jhu.edu/join_scai/",
+"y": null
+},
+"p5510": {
+"at": "2026-11",
+"q": "We are actively looking for highly motivated postdocs, PhD and Master's students, and undergraduate students.",
+"s": "yes",
+"src": "https://chitra-lab.github.io/",
+"y": null
+},
 "p5511": {
 "at": "2026-11",
 "q": "I am not recruiting new PhD students for the 2026-2027 school year.",
 "s": "no",
 "src": "https://www.cs.jhu.edu/~yaxing",
 "y": 2026
+},
+"p5512": {
+"at": "2026-11",
+"q": "We are actively recruiting BS, MSE, and PhD students!",
+"s": "yes",
+"src": "https://sarahchiu.github.io/contact/",
+"y": null
 },
 "p5517": {
 "at": "2026-11",
@@ -4003,6 +4724,13 @@
 "src": "https://people.csail.mit.edu/pulkitag",
 "y": null
 },
+"p5547": {
+"at": "2026-11",
+"q": "When submitting your application, mention my name in your statement of purpose to make sure that I will read your application.",
+"s": "yes",
+"src": "https://flame.csail.mit.edu/lab/prospective/",
+"y": null
+},
 "p5551": {
 "at": "2026-11",
 "q": "Our lab is currently full in capacity.",
@@ -4022,6 +4750,13 @@
 "q": "Prospective PhD students: alas, I will likely not recruit any new PhD students this year, as my group has grown quite large, and I want to make sure I can give my current students the attention they deserve.",
 "s": "no",
 "src": "https://www.vincentsitzmann.com",
+"y": null
+},
+"p5560": {
+"at": "2026-11",
+"q": "We are seeking motivated students who wish to pursue a Ph.D. specializing in wireless networking and sensing systems.",
+"s": "yes",
+"src": "https://inss.egr.msu.edu/openings.html",
 "y": null
 },
 "p5564": {
@@ -4101,6 +4836,13 @@
 "src": "https://thanhnguyentang.github.io",
 "y": null
 },
+"p5596": {
+"at": "2026-11",
+"q": "We’re recruiting motivated PhD, MS, and undergraduate students in human-robot interaction and physical AI.",
+"s": "yes",
+"src": "https://pioneerlab-njit.github.io/openings.html",
+"y": null
+},
 "p5597": {
 "at": "2026-11",
 "q": "Prospective Ph.D. students I am currently recruiting Ph.D. students.",
@@ -4157,6 +4899,13 @@
 "src": "https://izmailovpavel.github.io/group.html",
 "y": null
 },
+"p5627": {
+"at": "2026-11",
+"q": "We are recruiting at the postdoc and graduate student level.",
+"s": "yes",
+"src": "https://biologicalml.org/openings/",
+"y": 2026
+},
 "p5628": {
 "at": "2026-11",
 "q": "Recruiting PhD students for the 2026–27 admissions cycle (Deadline: December 12.) See working together.",
@@ -4204,6 +4953,20 @@
 "q": "I have several openings for postdocs, visiting researchers, and PhD students to work on exciting new projects in embodied AI, video understanding, and multimodal learning at Northeastern University.",
 "s": "yes",
 "src": "https://ltorresa.github.io/home.html",
+"y": null
+},
+"p5653": {
+"at": "2026-11",
+"q": "Prospective PhD students *** We have opening for one PhD student in the Fall 2027 cycle.",
+"s": "yes",
+"src": "https://tealab.sites.northeastern.edu/open-positions/",
+"y": 2027
+},
+"p566": {
+"at": "2026-11",
+"q": "I plan to admit zero or one grad students for the 2027 academic year.",
+"s": "yes",
+"src": "https://web.mit.edu/jda/www/contact.html",
 "y": null
 },
 "p5660": {
@@ -4297,6 +5060,13 @@
 "src": "https://jiachangliu.github.io",
 "y": 2027
 },
+"p5726": {
+"at": "2026-11",
+"q": "I am always looking for highly motivated PhD/intern students to join my group.",
+"s": "yes",
+"src": "https://louise-lulin.github.io/position/",
+"y": null
+},
 "p5735": {
 "at": "2026-11",
 "q": "Looking for new PhD students!",
@@ -4309,6 +5079,13 @@
 "q": "Chunwei has several Ph.D. positions available for the upcoming fall.",
 "s": "yes",
 "src": "https://www.cs.purdue.edu/people/faculty/chunwei.html",
+"y": null
+},
+"p5743": {
+"at": "2026-11",
+"q": "I am always looking for students who are passionate about developing useful theory to guide practical solutions.",
+"s": "yes",
+"src": "https://hanshen-xiao.github.io",
 "y": null
 },
 "p5744": {
@@ -4330,6 +5107,20 @@
 "q": "I am actively looking for highly motivated and curiosity-driven PhD students to join my group.",
 "s": "yes",
 "src": "https://midhul.com",
+"y": null
+},
+"p5750": {
+"at": "2026-11",
+"q": "I will be recruiting PhD students this application cycle.",
+"s": "yes",
+"src": "https://xueqiuyue.com/",
+"y": null
+},
+"p5751": {
+"at": "2026-11",
+"q": "For PhD students with an application deadline in December 2026, please apply to Purdue CS, and mention my name in your application (you are welcome to shoot me an email early at rpaleja {at} purdue.edu).",
+"s": "yes",
+"src": "https://www.rohanpaleja.com/",
 "y": null
 },
 "p5764": {
@@ -4407,6 +5198,13 @@
 "q": "I am looking for self-motivated students/postdocs.",
 "s": "yes",
 "src": "https://sites.google.com/view/minsungk",
+"y": null
+},
+"p5811": {
+"at": "2026-11",
+"q": "If you are interested in working with me, please apply through Rutgers CS PhD program and mention me in your application.",
+"s": "yes",
+"src": "https://xintongemilywang.github.io/join.html",
 "y": null
 },
 "p5812": {
@@ -4500,6 +5298,13 @@
 "src": "https://www.sianjin.com",
 "y": 2027
 },
+"p5848": {
+"at": "2026-11",
+"q": "We always have openings for truly outstanding PhD students, starting every spring and fall.",
+"s": "yes",
+"src": "https://urbanresilience.ai/join-us",
+"y": null
+},
 "p5854": {
 "at": "2026-11",
 "q": "I am not actively recruiting PhD students for Spring 2027 and Fall 2027, and therefore will only consider exceptionally strong applicants.",
@@ -4535,6 +5340,13 @@
 "src": "https://people.tamu.edu/~xinli",
 "y": null
 },
+"p5866": {
+"at": "2026-11",
+"q": "I am actively looking for self-motivated students at all levels (BS/MS/PhD) with relevant backgrounds.",
+"s": "yes",
+"src": "https://yiweilyu-tamu.github.io/homepage/",
+"y": null
+},
 "p5869": {
 "at": "2026-11",
 "q": "🎓 I’m recruiting PhD students!",
@@ -4563,6 +5375,13 @@
 "src": "http://myweb.ttu.edu/shsheng",
 "y": null
 },
+"p5890": {
+"at": "2026-11",
+"q": "I am looking for motivated students with a strong mathematical background.",
+"s": "yes",
+"src": "https://abiy-tasissa.github.io/",
+"y": null
+},
 "p59": {
 "at": "2026-11",
 "q": "AY 2026/2027 Update: I am always looking for great students to join our SYNERGYLAB at CMU. We are interested in the domain of the Internet of Things, particulary considering security and privacy challenges.",
@@ -4582,6 +5401,13 @@
 "q": "I'm looking for students who want to work on Softwrae Engineering and Quantum Computing.",
 "s": "yes",
 "src": "https://www.cs.tulane.edu/~wjiyuan",
+"y": null
+},
+"p5928": {
+"at": "2026-11",
+"q": "I am looking for PhD students interested in machine vision and deep learning, especially controllable models, interpretability, and uncertainty estimation.",
+"s": "yes",
+"src": "https://hieulem.github.io/pages/hiring/index.html",
 "y": null
 },
 "p5929": {
@@ -4703,12 +5529,26 @@
 "src": "https://dongura.me",
 "y": null
 },
+"p6013": {
+"at": "2026-11",
+"q": "The Wang lab is accepting both PhD and MS students through the Department of Computer Science.",
+"s": "yes",
+"src": "https://www.cs.ucr.edu/~mingxunw/opportunities/",
+"y": null
+},
 "p6014": {
 "at": "2026-11",
 "q": "Positions for Ph.D. Candidates (Fall 2027)",
 "s": "yes",
 "src": "https://intra.ece.ucr.edu/~nyu",
 "y": 2027
+},
+"p6018": {
+"at": "2026-11",
+"q": "We're recruiting PhD students, postdocs, and UCR undergraduates — see Join us.",
+"s": "yes",
+"src": "https://codelab-ucr.github.io",
+"y": null
 },
 "p6019": {
 "at": "2026-11",
@@ -4722,6 +5562,13 @@
 "q": "I'm looking for highly-motivated PhD, MEng, and UROP students.",
 "s": "yes",
 "src": "https://people.csail.mit.edu/mengjia",
+"y": null
+},
+"p6020": {
+"at": "2026-11",
+"q": "We are looking for self-motivated PhD students who are interested in computational and statistical genomics.",
+"s": "yes",
+"src": "https://faculty.ucr.edu/~wenxiu/openings.html",
 "y": null
 },
 "p6022": {
@@ -4771,6 +5618,13 @@
 "q": "If you are applying to PhD programs, please apply to the CSE department at UCSD and mention me in your application.",
 "s": "yes",
 "src": "https://sadhikamalladi.github.io/recruitment/index.html",
+"y": null
+},
+"p6042": {
+"at": "2026-11",
+"q": "We are not currently recruiting graduate students at UCSD.",
+"s": "no",
+"src": "https://idekerlab.org/openings/",
 "y": null
 },
 "p6044": {
@@ -4829,6 +5683,13 @@
 "src": "https://huan-zhang.com",
 "y": null
 },
+"p6074": {
+"at": "2026-11",
+"q": "I am actively recruiting Ph.D. students.",
+"s": "yes",
+"src": "https://jiaqima.github.io/opening",
+"y": null
+},
 "p6081": {
 "at": "2026-11",
 "q": "I am looking for motivated and energetic Ph.D. students.",
@@ -4848,6 +5709,13 @@
 "q": "My group has multiple PhD positions available for next fall.",
 "s": "yes",
 "src": "https://wsmoses.com",
+"y": null
+},
+"p6092": {
+"at": "2026-11",
+"q": "We are actively seeking highly motivated graduate students to join our research group.",
+"s": "yes",
+"src": "https://vision.ischool.illinois.edu/openings/",
 "y": null
 },
 "p6098": {
@@ -4906,6 +5774,13 @@
 "src": "https://cse.buffalo.edu/~roshana",
 "y": null
 },
+"p6123": {
+"at": "2026-11",
+"q": "I am actively looking for enthusiastic postdoctoral researchers, PhD candidates, and master's students passionate about delving into applied machine learning and computer vision research.",
+"s": "yes",
+"src": "https://cvml-group-ub.github.io/CVML/prospectivestudents/",
+"y": null
+},
 "p6126": {
 "at": "2026-11",
 "q": "If you are interested, apply to the CS PhD program and mention my name in your application.",
@@ -4919,6 +5794,13 @@
 "s": "yes",
 "src": "https://www.quinnburke.net",
 "y": 2027
+},
+"p6131": {
+"at": "2026-11",
+"q": "📣 We are looking for students interested in research.",
+"s": "yes",
+"src": "https://a4lab.org",
+"y": null
 },
 "p6132": {
 "at": "2026-11",
@@ -4946,6 +5828,20 @@
 "q": "You can find me here: https://androidtestbugreport.github.io/yuzhao_cv/ Hiring: I am looking for self-motivated and hard-working students to join my research group.",
 "s": "yes",
 "src": "https://researchdirectory.uc.edu/p/zhao3y3",
+"y": null
+},
+"p6186": {
+"at": "2026-11",
+"q": "I am recruiting PhD Students to join my lab at CU Boulder.",
+"s": "yes",
+"src": "https://www.estherrolf.com",
+"y": null
+},
+"p6187": {
+"at": "2026-11",
+"q": "Now Recruiting PhD Students!",
+"s": "yes",
+"src": "https://unstable.design",
 "y": null
 },
 "p6192": {
@@ -5039,6 +5935,27 @@
 "src": "https://naimulh0que.github.io",
 "y": null
 },
+"p6244": {
+"at": "2026-11",
+"q": "Fall 2027 I am looking to recruit one Ph.D. student interested in research in Theoretical Computer Science.",
+"s": "yes",
+"src": "https://sra2.github.io/souryar/",
+"y": 2027
+},
+"p6245": {
+"at": "2026-11",
+"q": "We are looking for a Ph.D. student to join a NSF VINES project on resilient and converged NextG networking for future manufacturing systems.",
+"s": "yes",
+"src": "https://tianyuzhang.org/openings",
+"y": null
+},
+"p6246": {
+"at": "2026-11",
+"q": "2 W Washington St, Iowa City, IA 52240 Office Phone : 319-467-1886 previous homepage PhD openings available for Fall 2027.",
+"s": "yes",
+"src": "https://weiranwang19.github.io/",
+"y": 2027
+},
 "p6247": {
 "at": "2026-11",
 "q": "[Ph.D. positions available] We are seeking highly motivated Ph.D. students to join our team at the School of Information Science and Technology, Northeast Normal University (东北师范大学信息科学与技术学院).",
@@ -5060,11 +5977,25 @@
 "src": "https://ruiyu0.github.io",
 "y": 2027
 },
+"p6268": {
+"at": "2026-11",
+"q": "We are actively looking for motivated students to join us.",
+"s": "yes",
+"src": "https://storm.cs.umd.edu/",
+"y": null
+},
 "p6269": {
 "at": "2026-11",
 "q": "I am not currently recruiting PhD students.",
 "s": "no",
 "src": "https://ycunxi.github.io/cunxiyu",
+"y": null
+},
+"p6272": {
+"at": "2026-11",
+"q": "…ause the meat of the work I do is cryptography, I’m looking for students who are interested in investing in learning the foundational skills of modern cryptography—including protocol design, definition writing, proof w…",
+"s": "yes",
+"src": "https://kaptchuk.com/blog/post/work-with-me.html",
 "y": null
 },
 "p6274": {
@@ -5123,6 +6054,13 @@
 "src": "https://samreig.com/students/",
 "y": 2027
 },
+"p6315": {
+"at": "2026-11",
+"q": "Prospective PhD students: Please apply to the University of Miami Computer Science PhD program and name me in your application.",
+"s": "yes",
+"src": "https://morrisalp.github.io/contact.html",
+"y": null
+},
 "p6318": {
 "at": "2026-11",
 "q": "I am actively looking for students, please reach out if you are interested.",
@@ -5144,6 +6082,13 @@
 "src": "https://jjparkcv.github.io",
 "y": null
 },
+"p6322": {
+"at": "2026-11",
+"q": "I am actively looking for motivated and talented students!",
+"s": "yes",
+"src": "https://j-lab.ai/",
+"y": null
+},
 "p6323": {
 "at": "2026-11",
 "q": "I am recruiting undergraduate and graduate researchers (PhD & Postdoc).",
@@ -5163,6 +6108,13 @@
 "q": "I am looking for highly self-motivated students (Ph.D., D.Eng., master, undergraduate, visiting, intern, and high school) to join my group.",
 "s": "yes",
 "src": "https://www.zhangxiao.me",
+"y": null
+},
+"p6336": {
+"at": "2026-11",
+"q": "I am always looking for PhD students who are interested in developing new artificial intelligence and machine learning methods driven by real-world science and engineering applications.",
+"s": "yes",
+"src": "https://aryandeshwal.github.io/mentoring",
 "y": null
 },
 "p6346": {
@@ -5200,12 +6152,26 @@
 "src": "http://web.cs.unlv.edu/jisooy",
 "y": null
 },
+"p636": {
+"at": "2026-11",
+"q": "We're looking for talented and motivated students, postdocs, and staff members to join our team in our quest to understand the human genome and the molecular basis of human disease.",
+"s": "yes",
+"src": "http://compbio.mit.edu/positions.html",
+"y": null
+},
 "p6365": {
 "at": "2026-11",
 "q": "I’m recruiting Ph.D. students at UNC Chapel Hill for Fall 2027.",
 "s": "yes",
 "src": "https://julialen.github.io",
 "y": 2027
+},
+"p6366": {
+"at": "2026-11",
+"q": "We are actively seeking self-motivated students for Ph.D. and intern positions.",
+"s": "yes",
+"src": "https://ideal.cs.unc.edu/join.html",
+"y": null
 },
 "p6370": {
 "at": "2026-11",
@@ -5227,6 +6193,13 @@
 "s": "no",
 "src": "https://www.zhundeng.org",
 "y": 2027
+},
+"p6379": {
+"at": "2026-11",
+"q": "I am actively looking for motivated PhD and MS students to join my research group.",
+"s": "yes",
+"src": "https://xrcui.github.io/",
+"y": null
 },
 "p6393": {
 "at": "2026-11",
@@ -5319,6 +6292,20 @@
 "src": "https://yananguo.com",
 "y": null
 },
+"p6419": {
+"at": "2026-11",
+"q": "I am Looking for in Graduate Students 👨‍🎓 Undergraduate Students 🌍 Ph.D. Students Mention DAST twice times in your email.",
+"s": "yes",
+"src": "https://amitsealami.com/vacancies/",
+"y": null
+},
+"p6420": {
+"at": "2026-11",
+"q": "Job Opening: I am looking for a new Ph.D. student to begin in Fall 2026.",
+"s": "yes",
+"src": "https://ankurmali.github.io/",
+"y": 2026
+},
 "p6426": {
 "at": "2026-11",
 "q": "I am actively recruiting 2–4 highly motivated Ph.D. students with full scholarships to join my research group.",
@@ -5340,6 +6327,13 @@
 "src": "https://sczhang6.github.io",
 "y": 2027
 },
+"p6439": {
+"at": "2026-11",
+"q": "Now Recruiting Ph.D. Students I am hiring Ph.D. candidates for Fall 2027 (priority deadline January 15, 2027)!",
+"s": "yes",
+"src": "https://shirawein.github.io/",
+"y": 2027
+},
 "p6441": {
 "at": "2026-11",
 "q": "🌱🌟 I am actively recruiting PhD students to join my lab starting Spring 2027 and Fall 2027.",
@@ -5354,6 +6348,27 @@
 "src": "https://yiliren.github.io",
 "y": null
 },
+"p6444": {
+"at": "2026-11",
+"q": "We seek strong Ph.D., M.S., and undergraduate applicants who are self-motivated, hard-working, resilient, good communicators, creative, and interested in the lab’s research.",
+"s": "yes",
+"src": "https://therarelab.com/join/",
+"y": null
+},
+"p6445": {
+"at": "2026-11",
+"q": "Mention my name in your application and then contact me.",
+"s": "yes",
+"src": "https://acorn-research.usc.edu/join/",
+"y": null
+},
+"p6448": {
+"at": "2026-11",
+"q": "PhD students For Fall 2027, Yue Zhao, Ruolin Li, and I are recruiting up to six PhD students together through a research cluster that spans our departments.",
+"s": "yes",
+"src": "https://mengyuan-l.github.io/",
+"y": 2027
+},
 "p6449": {
 "at": "2026-11",
 "q": "If you're interested, please mention my name in your PhD application.",
@@ -5366,6 +6381,27 @@
 "q": "PhD, Masters & Undergraduate students I'm looking for students excited about: (a) AI safety and privacy — building trustworthy AI; (b) multi-agent LLMs — understanding AI ecosystems.",
 "s": "yes",
 "src": "https://spkreddy.org/group/",
+"y": null
+},
+"p6453": {
+"at": "2026-11",
+"q": "Ph.D. Students Multiple fully funded Ph.D. positions are available.",
+"s": "yes",
+"src": "https://nordic-eecs.utk.edu/available-positions/",
+"y": null
+},
+"p6456": {
+"at": "2026-11",
+"q": "I’m looking for self-motivated students with strong analytical and programming skills who are interested in machine decision-making, especially optimization, learning, and control under constraints.",
+"s": "yes",
+"src": "https://dongshed.github.io",
+"y": null
+},
+"p6458": {
+"at": "2026-11",
+"q": "I am looking for self-motivated students to work on trustworthy machine learning and machine learning for security.",
+"s": "yes",
+"src": "https://fsuya.org/",
 "y": null
 },
 "p6462": {
@@ -5417,6 +6453,20 @@
 "src": "https://chan0park.github.io",
 "y": 2027
 },
+"p6485": {
+"at": "2026-11",
+"q": "If you feel drawn to the topics/publications listed on my webpage, please mention me in your graduate application and I will read it.",
+"s": "yes",
+"src": "https://esteng.github.io/contact/",
+"y": null
+},
+"p6487": {
+"at": "2026-11",
+"q": "We are taking students!",
+"s": "yes",
+"src": "https://sites.utexas.edu/compling/",
+"y": null
+},
 "p6493": {
 "at": "2026-11",
 "q": "I am recruiting PhD students and postdocs.",
@@ -5437,6 +6487,13 @@
 "s": "yes",
 "src": "https://libingzheren.github.io",
 "y": null
+},
+"p6504": {
+"at": "2026-11",
+"q": "I am recruiting one PhD student to start in Fall 2027.",
+"s": "yes",
+"src": "https://theirisresearchlab.com/join/",
+"y": 2027
 },
 "p6505": {
 "at": "2026-11",
@@ -5578,6 +6635,13 @@
 "src": "https://yanlong.site",
 "y": null
 },
+"p6578": {
+"at": "2026-11",
+"q": "I am always looking for students and postdocs to join my lab.",
+"s": "yes",
+"src": "http://www.jevinwest.org",
+"y": null
+},
 "p6588": {
 "at": "2026-11",
 "q": "I are currently recruiting PhD students.",
@@ -5590,6 +6654,13 @@
 "q": "If you are interested in joining my lab as a PhD student, check out our contact page for more information.",
 "s": "yes",
 "src": "https://natashajaques.ai",
+"y": null
+},
+"p6594": {
+"at": "2026-11",
+"q": "…ted in distributed systems, systems for machine learning and data processing, programming languages, and/or how these topics fit together, please apply to the Allen School at UW and mention my name in your application.",
+"s": "yes",
+"src": "https://stephanie-wang.github.io/",
 "y": null
 },
 "p6604": {
@@ -5620,6 +6691,20 @@
 "src": "https://jwzhang.netlify.app",
 "y": null
 },
+"p6614": {
+"at": "2026-11",
+"q": "2026–2027 updates: We will be looking for at most one new PhD student in the upcoming 2026–2027 cycle.",
+"s": "yes",
+"src": "https://wisc-rt2.github.io/joinus/",
+"y": 2026
+},
+"p6615": {
+"at": "2026-11",
+"q": "I do not have capacity for new students at this time.",
+"s": "no",
+"src": "https://pages.cs.wisc.edu/~khodak/faq.html",
+"y": null
+},
 "p6619": {
 "at": "2026-11",
 "q": "Prospective students: I am recruiting PhD students this cycle.",
@@ -5646,6 +6731,27 @@
 "q": "I’m recruiting a few graduate students for Fall 2027.",
 "s": "yes",
 "src": "https://www.hiraksarkar.com",
+"y": 2027
+},
+"p6641": {
+"at": "2026-11",
+"q": "He is actively recruiting PhD students at Vanderbilt.",
+"s": "yes",
+"src": "https://jonathangratch.com/",
+"y": null
+},
+"p6648": {
+"at": "2026-11",
+"q": "Ph.D. Students Multiple fully-funded Ph.D. positions in generative AI, foundation models, LLM, and digital twins.",
+"s": "yes",
+"src": "https://lab-smile.github.io/openings.html",
+"y": null
+},
+"p6650": {
+"at": "2026-11",
+"q": "I am actively recruiting PhD students to start in Fall 2027, and I am always happy to work with master's and undergraduate students interested in the design, technology, and research of human-centered AI systems.",
+"s": "yes",
+"src": "https://youralien.github.io",
 "y": 2027
 },
 "p6659": {
@@ -5709,6 +6815,13 @@
 "q": "Das is looking for multiple Ph.D. students to join his research group.",
 "s": "yes",
 "src": "https://www.wichita.edu/profiles/academics/engineering/SoC/01_Faculty/Das-Lokesh.php",
+"y": null
+},
+"p6699": {
+"at": "2026-11",
+"q": "I am looking for PhD/master/undergraduate students with strong background in computer science and mathematical maturity.",
+"s": "yes",
+"src": "https://czhang03.codeberg.page/",
 "y": null
 },
 "p6703": {
@@ -5787,6 +6900,13 @@
 "s": "yes",
 "src": "https://web.eecs.umich.edu/~xwangsd",
 "y": 2027
+},
+"p806": {
+"at": "2026-11",
+"q": "Prospective PhD students: The lab is not recruiting PhD students for the 2027 admissions cycle.",
+"s": "no",
+"src": "https://accessibility.eecs.umich.edu/",
+"y": null
 },
 "p809": {
 "at": "2026-11",
@@ -5921,6 +7041,20 @@
 "src": "https://homes.cs.washington.edu/~swang",
 "y": null
 },
+"p912": {
+"at": "2026-11",
+"q": "I will be admitting Ph.D. students for the 2027-2028 academic year.",
+"s": "yes",
+"src": "https://faculty.washington.edu/aylin/advising.html",
+"y": 2027
+},
+"p923": {
+"at": "2026-11",
+"q": "I am actively looking for PhD students interested in science at the intersection of ML and genomics.",
+"s": "yes",
+"src": "http://saramostafavi.github.io/joinus.html",
+"y": null
+},
 "p928": {
 "at": "2026-11",
 "q": "Prospective graduate students: please apply through the system and list me as a potential advisor in your application.",
@@ -5933,6 +7067,13 @@
 "q": "I am not seeking additional MS or PhD advisees at this time.",
 "s": "no",
 "src": "http://www.cs.cmu.edu/~ehn",
+"y": null
+},
+"p944": {
+"at": "2026-11",
+"q": "I will be accepting Ph.D. students for the coming year.",
+"s": "yes",
+"src": "https://hci.stanford.edu/msb/faq/",
 "y": null
 },
 "p95": {

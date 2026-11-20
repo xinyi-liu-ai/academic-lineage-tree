@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Academic Lineage Family Tree</title>
   <meta name="description" content="Explore the PhD advisor lineage of 6,000+ computer science professors at US universities: who trained them, and whom they trained.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Academic Lineage Family Tree">
+  <meta property="og:description" content="Find CS PhD advisors through their academic families: who trained whom at 189 US universities, and who says they are recruiting.">
+  <meta property="og:url" content="https://xinyi-liu-ai.github.io/academic-lineage-tree/">
+  <meta property="og:image" content="https://xinyi-liu-ai.github.io/academic-lineage-tree/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://xinyi-liu-ai.github.io/academic-lineage-tree/assets/og.png">
   <link rel="icon" type="image/png" href="assets/tree-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,9 +64,16 @@
 
     <!-- 收藏页 -->
     <section id="view-favorites" class="view results" hidden>
-      <div class="results-head"><h2>Favorites</h2></div>
-      <p class="muted">Professors you star are kept in this browser only.</p>
+      <div class="results-head">
+        <h2>Favorites <small id="favCount2"></small></h2>
+        <div class="results-tools">
+          <span class="seg-btns" role="group" aria-label="View"><button type="button" data-favview="cards" class="on">Cards</button><button type="button" data-favview="table">Table &amp; notes</button></span>
+          <button type="button" class="btn-ghost" id="favExport" title="Download your favorites, with notes, as a spreadsheet">Export CSV</button>
+        </div>
+      </div>
+      <p class="muted fav-intro">Professors you star are kept in this browser only.</p>
       <ul id="favCards" class="cards"></ul>
+      <div class="fav-wrap" id="favTableWrap" hidden><table class="fav-table" id="favTable"></table></div>
     </section>
 
     <!-- 谱系树页 -->
@@ -87,8 +103,9 @@
           <!-- 家族名单：从中心人物出发，按亲缘远近列出在美国高校任教的人 -->
           <aside class="family" id="family" aria-label="Faculty in this academic family">
             <div class="fam-head">
-              <h3 id="famTitle">Academic family</h3>
+              <div class="fam-head-row"><h3 id="famTitle">Academic family</h3><button type="button" class="btn-mini" id="famCopy" title="Copy a link to this tree with the current filters">Copy link</button></div>
               <p class="fam-sub" id="famSub"></p>
+              <p class="fam-hint">Click someone to see how they are connected.</p>
             </div>
             <div class="fam-controls">
               <div class="seg" role="group" aria-label="How far from the center">
@@ -96,6 +113,7 @@
                 <span class="seg-btns"><button type="button" data-dist="1">1 step</button><button type="button" data-dist="2" class="on">2</button><button type="button" data-dist="3">3</button><button type="button" data-dist="4">4</button></span>
               </div>
               <label class="toggle"><input type="checkbox" id="famAP"> Assistant profs</label>
+              <label class="toggle" id="famNewWrap" hidden><input type="checkbox" id="famNew"> <span id="famNewLabel">New APs</span></label>
               <label class="toggle"><input type="checkbox" id="famRC"> Says recruiting</label>
               <label class="toggle"><input type="checkbox" id="famArea"> Same area</label>
               <label class="toggle"><input type="checkbox" id="famAll"> Include non-faculty</label>

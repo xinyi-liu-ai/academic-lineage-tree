@@ -3,6 +3,8 @@
 输入（全部是缓存，不联网）:
   data/cache/people_pages/{pid}.json   pages[0] 是主页，其余是 People / Students / Join 子页
   data/cache/pages/{pid}_home.txt       people_pages 全空时的备用主页（第一行 "#URL ..."）
+  data/cache/recruit_pages/{pid}.json  fetch_recruit_pages.py 另抓的 Prospective / Join / Openings / FAQ / Contact /
+                                       实验室网站 / 个人主页（排在上面两类之后；实验室页上 "Prof. X is recruiting" 要求 X 是本人）
 输出: data/enrich/recruiting.json
   {pid: {"s": "yes"|"no", "q": 原句(<=220 字), "y": 目标入学年份或 null, "src": 页面 URL, "at": "YYYY-MM"}}
   "at" 用缓存文件的修改时间，表示"什么时候看到的"。
@@ -32,10 +34,12 @@ import random
 import re
 import sys
 import time
+import unicodedata
 from collections import Counter
 
 sys.path.insert(0, os.path.dirname(__file__))
 from build_graph import load_profs, ROOT  # noqa: E402
+from fetch_recruit_pages import home_prefix, under  # noqa: E402
 
 THIS_YEAR = 2026
 MAXQ = 220
@@ -207,15 +211,21 @@ NO_COND_AFTER = re.compile(r"(?i)\s*,?\s*(?:who|that|unless|outside|except|witho
                            r"based\s+on|through\s+email|before|from\s+(?:my\s+)?(?:class|course|outside)|in\s+the\s+cs\s+program|not\s+at\b|"
                            r"as\s+(?:graders?|tas?|teaching)|for\s+(?:summer\s+)?(?:internships?|research\s+credit|directed|independent)|to\s+(?:my|our)\s+(?:class|course)|"
                            r"in\s+(?:those|these|that|this|such|the\s+following|other)\s+(?:areas?|topics?|fields?)|on\s+(?:topics?|projects?|this|that|these)|"
-                           r"in\s+(?:areas?|topics?)\s+(?:of|outside|unrelated)|to\s+work\s+on|working\s+on|who\s+work)")
+                           r"in\s+(?:areas?|topics?)\s+(?:of|outside|unrelated)|to\s+work\s+on|working\s+on|who\s+work|"
+                           # "I cannot admit students on my own"、"I don't admit students, the University does"、
+                           # "not recruiting students wishing to pursue a Ph.D. in Seismology"
+                           # "we are not actively recruiting students through these programs"（但通过别的项目在招）
+                           r"on\s+my\s+own|myself|to\s+(?:the|our)\s+(?:\w+\s+)?program|wishing|wanting|interested\s+in|"
+                           r"through\s+(?:these|those|this|that|other|the\s+following)\b|"
+                           r"(?:the|our)\s+(?:university|department|school|admissions?|committee)\b)")
 # "If you are a NYU student looking for research: I am not taking on direct advisees" -> 只针对本校学生，不算
 NO_SCOPE_HEAD = re.compile(r"(?i)\bif\s+you\s+are\s+(?:a|an)\s+(?:current\s+)?[\w@.-]+\s+(?:undergrad\w*|student|master'?s)")
 
 # 宾语只是本科 / 硕士 / 实习 / 博后 / 访问学者，不算 PhD
-NON_PHD = re.compile(r"(?i)\b(?:undergrad\w*|hourly|research\s+credits?|for\s+credit|independent\s+stud\w+|master'?s|masters|m\.?s\.?\s+students|ms\s+students|meng|reu|interns?\b|internships?|"
+NON_PHD = re.compile(r"(?i)\b(?:undergrad\w*|hourly|research\s+credits?|for\s+credit|independent\s+stud\w+|master['’]?s|honou?rs\s+(?:year|thesis|projects?|program)|masters|m\.?s\.?\s+students|ms\s+students|meng|reu|interns?\b|internships?|"
                      r"high[- ]school|summer\s+(?:students|programs?|camps?|schools?)|visiting\s+students|post-?docs?\w*|post-?doctoral|research\s+(?:scientists?|engineers?|assistants?|staff)|"
                      r"rotation\s+students|capstone|honou?rs?\s+students|bs\s+students|b\.?s\.?\s+students)")
-NON_PHD_STU = re.compile(r"(?i)\b(?:undergrad\w*|hourly|research\s+credits?|for\s+credit|independent\s+stud\w+|master'?s|masters|m\.?s\.?\s+students|ms\s+students|meng|reu|"
+NON_PHD_STU = re.compile(r"(?i)\b(?:undergrad\w*|hourly|research\s+credits?|for\s+credit|independent\s+stud\w+|master['’]?s|honou?rs\s+(?:year|thesis|projects?|program)|masters|m\.?s\.?\s+students|ms\s+students|meng|reu|"
                          r"interns?\b|internships?|high[- ]school|summer\s+(?:students|programs?|camps?|schools?)|rotation\s+students|capstone|honou?rs?\s+students|bs\s+students|b\.?s\.?\s+students)")
 # 宾语不是要招的学生
 BAD_OBJ = re.compile(r"(?i)\b(?:participants?|subjects|volunteers|collaborators?|collaborations?|sponsors?|partners?|reviewers?|teaching assistants?|tas\b|graders?|"
@@ -280,6 +290,23 @@ def classify(sent):
             continue
         if re.search(r"(?i)\b(?:not|no\s+longer|never|unable|n['’]t)\b", seg):
             continue
+        # "We welcome our incoming PhD cohort"（新闻）、"We welcome visiting doctoral researchers"（访问学者）
+        if re.search(r'(?i)\bwelcom(?:e|ing)\s+(?:our|the)\b|\bvisiting\s+(?:\w+\s+)?(?:doctoral|ph\.?\s?d|graduate)', seg):
+            continue
+        # "it is unlikely ... but not impossible that I will accept"；"I prefer to recruit students from my classes"、"I try to recruit PhD students who..."
+        if re.search(r'(?i)\b(?:unlikely|not\s+impossible|doubtful)\b', s[:m.end() + 40]) or re.search(r'(?i)\b(?:prefer|try|tend|attempt)\s+to\b', seg):
+            continue
+        # "Based on how funding is going, I may recruit fewer students or more students"
+        if re.search(r'(?i)\b(?:may|might)\s+(?:\w+\s+)?(?:recruit|admit|take|accept|hire)\s+(?:fewer|more)\b', seg):
+            continue
+        # "We're always looking for Stanford students who are interested in research"、"recruiting UF students"：本校学生做科研
+        um = re.search(r'\b([A-Z][\w&-]*)\s+(?:students|undergraduates)$', seg)
+        if um and not is_phd_obj(seg) and not re.fullmatch(ADJ, um.group(1).lower()):
+            continue
+        # 宾语就是 "master’s students"（后面不是 "..., and PhD students" 这种列举）
+        if re.search(r"(?i)\b(?:undergrad\w*|master['’]?s|masters|m\.?s\.?|b\.?s\.?|meng|honou?rs)\s+students?$", seg) and not is_phd_obj(seg) and \
+                not re.match(r"(?i)\s*(?:,|and|or|&|/)\s*(?:\w+\s+){0,3}?(?:ph\.?\s?d|doctoral)", s[m.end():m.end() + 40]):
+            continue
         if re.search(r'(?i)\bwelcome\b', seg) and re.search(r'(?i)\b(?:questions?|e-?mails?|inquir\w*|enquir\w*|from|visitors?|comments?|feedback)\b', seg):
             continue
         if OTHER.search(seg) or re.search(r'(?i)\b(?:if|whether|when|whom?|which|unless)\s+(?:\w+\s+){0,3}$', head):
@@ -306,8 +333,17 @@ def classify(sent):
 
 # ---------------------------------------------------------------- 主流程
 
-def load_pages(pid):
-    """返回 [(url, text, mtime)]。"""
+def deaccent(s):
+    return unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode().lower()
+
+
+def surname(name):
+    toks = [t for t in re.findall(r'[^\W\d_][\w-]*', name) if t.lower().strip('.') not in ('jr', 'sr', 'ii', 'iii', 'iv')]
+    return deaccent(toks[-1]) if toks else ''
+
+
+def load_pages(pid, name=''):
+    """返回 ([(url, text, mtime)], 主页及子页的个数)。"""
     out = []
     pp = os.path.join(ROOT, 'data/cache/people_pages', pid + '.json')
     if os.path.exists(pp):
@@ -333,7 +369,38 @@ def load_pages(pid):
                 url = first[4:].strip()
             if txt.strip():
                 out.append((url, txt, os.path.getmtime(hp)))
-    return out
+    n_home = len(out)
+    # fetch_recruit_pages.py 另抓的 Prospective / Join / Openings / FAQ / Contact / 实验室 / 个人主页，排在主页和子页后面
+    rp = os.path.join(ROOT, 'data/cache/recruit_pages', pid + '.json')
+    if os.path.exists(rp):
+        mt = os.path.getmtime(rp)
+        try:
+            d = json.load(open(rp, encoding='utf-8'))
+        except Exception:
+            d = {'pages': []}
+        seen = {t for _, t, _ in out}
+        prefix = home_prefix(out[0][0]) if out and out[0][0] else None
+        sur = surname(name)
+        parent_ok = False
+        for p in d.get('pages') or []:
+            t = p.get('text') or ''
+            kind, url = p.get('kind') or 'sub', p.get('url') or ''
+            # 是不是本人的页面：本人主页那一块下面的子页直接算；实验室 / 个人主页 / 别的主机上的页面要求页面里出现本人的姓
+            # （院系简介页旁边列着别人的 "Personal Website"；实验室链接可能是同事的实验室）
+            has_name = bool(sur) and re.search(r'\b' + re.escape(sur) + r'\b', deaccent(t)) is not None
+            if kind == 'sub2':
+                ok = parent_ok or has_name
+            elif kind == 'sub' and prefix and under(url, prefix):
+                ok = True
+            else:
+                ok = has_name
+            if kind != 'sub2':
+                parent_ok = ok
+            if not ok or not t.strip() or t[:3000].count('\x00') > 50 or t in seen:
+                continue
+            seen.add(t)
+            out.append((url, t[:400000], mt))
+    return out, n_home
 
 
 def trim_prefix(s, start):
@@ -378,9 +445,16 @@ def clip(s, m):
     return (('…' if st > 0 else '') + q + ('…' if en < len(s2) else ''))[:MAXQ]
 
 
-def find(pid):
+SUBJ_NAME = re.compile(r'(?i:prof\.?|professor|dr\.?)\s+([A-Z][\w-]+)'
+                       r'|^(?!(?:The|This|That|Our|My|He|She|We|It|Lab|Group|Team|Now|Currently)\b)([A-Z][a-z]+)\s+(?:is|are)\b')
+
+
+def find(pid, name=''):
     found = []
-    for pi, (url, text, mt) in enumerate(load_pages(pid)):
+    pages, n_home = load_pages(pid, name)
+    name_toks = {w.lower() for w in re.findall(r'[A-Za-z][\w-]+', name)}
+    for pi, (url, text, mt) in enumerate(pages):
+        extra = pi >= n_home            # 另抓的页面（实验室网站可能有好几位 PI）
         seen = set()
         for sent, prev in sentences(text):
             if sent in seen:
@@ -390,6 +464,11 @@ def find(pid):
             if not r:
                 continue
             st, strength, m = r
+            if extra:
+                # 实验室页上 "Prof. Smith is recruiting" 必须是本人
+                sm = SUBJ_NAME.match(m.group(0))
+                if sm and (sm.group(1) or sm.group(2)).lower() not in name_toks:
+                    continue
             win = sent[max(0, m.start() - 90):m.end() + 160]
             y = target_year(win)
             ctx = (prev[-60:] + ' ' if len(prev) < 80 else '') + sent[:max(0, m.start()) + 20]
@@ -406,7 +485,7 @@ def find(pid):
                 olds = [int(x) for x in ANY_YEAR.findall(win)]
                 if olds and max(olds) < THIS_YEAR - 1 and re.search(r'(?i)\b(?:for|in|starting|admission)\s+(?:the\s+)?20\d\d', win):
                     continue
-            found.append(dict(s=st, strength=strength, y=y, sent=sent, m=m, src=url, page=pi, mt=mt))
+            found.append(dict(s=st, strength=strength, y=y, sent=sent, m=m, src=url, page=pi, mt=mt, extra=extra))
     return found
 
 
@@ -423,7 +502,7 @@ def main():
     profs = load_profs()
     res = {}
     for p in profs:
-        f = find(p['id'])
+        f = find(p['id'], p['name'])
         if not f:
             continue
         b = pick(f)
