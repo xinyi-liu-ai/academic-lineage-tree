@@ -21,3 +21,6 @@ data/cache/photo_verify.jsonl
 data/audit/
 data/cache/*.log
 docs/_*.html
+data/cache/photo_extra/
+data/cache/advisor_pages/
+data/cache/homepage_extra_snippets.jsonl

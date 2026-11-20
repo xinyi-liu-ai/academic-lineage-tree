@@ -679,7 +679,7 @@ Source (homepage, CV, thesis…):
       n.ext ? el('p', { class: 'note' }, 'Not on the CSRankings faculty list of these 189 US universities (for example in industry, abroad or another field).') : null,
       n.former ? el('p', { class: 'note' }, 'No longer on CSRankings’ current faculty list for these institutions (moved, retired or emeritus)' + (n.now ? `; now listed at ${n.now}.` : '.')) : null,
       rel ? el('p', { class: 'note' }, rel[1], ' ', ...flagBadges(rel[0])) : null,
-      path && path.length > 2 ? el('h4', {}, `How ${G.nodes.get(path[0]).n} is connected`) : null,
+      path && path.length > 2 ? el('h4', {}, `How ${n.n} is related to ${G.nodes.get(path[0]).n}`) : null,
       path && path.length > 2 ? pathChain(path) : null,
       n.ext || !n.d.length ? null : el('div', { class: 'tags' }, n.d.map((x) => el('span', { class: 'tag' }, SUB_LABEL[x] || x))),
       links.length ? el('div', { class: 'links-row' }, links) : null,
@@ -773,21 +773,43 @@ Source (homepage, CV, thesis…):
     for (const li of document.querySelectorAll('#famList .fam-row')) li.classList.toggle('sel', li.dataset.id === id);
   }
 
+  // 连接路径画成一棵小家谱：导师在上、学生缩进在下，每一行都写成“X 的博士学生”，不用箭头
   function pathChain(path) {
-    const ol = el('ol', { class: 'path-chain' });
-    path.forEach((id, i) => {
+    const sig = F.cache.map.get(path[path.length - 1]) || '';
+    const first = path[0], last = path[path.length - 1];
+    const kindOf = (adv, stu) => { const e = G.nodes.get(stu).adv.find((x) => x.a === adv); return e && e.t === 'postdoc' ? 'Postdoc' : 'PhD'; };
+    const row = (id, depth, rel) => {
       const o = G.nodes.get(id);
-      if (i) {
-        const p = G.nodes.get(path[i - 1]);
-        const up = p.adv.find((e) => e.a === id), e = up || p.stu.find((x) => x.s === id);
-        const kind = e && e.t === 'postdoc' ? 'Postdoc' : 'PhD';
-        ol.append(el('li', { class: `pc-step ${up ? 'up' : 'down'}` }, up ? `${kind} advisor of ${p.n}` : `${kind} student of ${p.n}`));
-      }
-      ol.append(el('li', { class: `pc-person ${i === 0 ? 'start' : ''}` },
+      const tag = id === first ? el('span', { class: 'pc-tag' }, 'This tree') : id === last ? el('span', { class: 'pc-tag sel' }, 'Selected') : null;
+      return el('li', { class: `pc-row ${id === first ? 'start' : ''} ${id === last ? 'end' : ''}`, style: `--depth:${depth}` },
         avatar(o),
-        el('span', {}, el('b', {}, o.n), el('small', {}, o.ext ? outsideSub(o) : `${titleLine(o, true)} · ${o.uniShort}`))));
-    });
-    return ol;
+        el('span', { class: 'pc-text' },
+          el('span', { class: 'pc-name' }, el('b', {}, o.n), tag),
+          el('small', {}, o.ext ? outsideSub(o) : `${titleLine(o, true)} · ${o.uniShort}`),
+          rel ? el('span', { class: 'pc-rel' }, rel) : null));
+    };
+    const ol = el('ol', { class: 'path-chain' });
+    if (/^u*d*$/.test(sig)) {
+      // 先往上走 t 步到共同的导师，再往下走到选中的人
+      const t = (sig.match(/^u*/) || [''])[0].length;
+      const both = t > 0 && t < path.length - 1;
+      ol.append(row(path[t], 0, both ? `Shared advisor of ${G.nodes.get(path[t - 1]).n} and ${G.nodes.get(path[t + 1]).n}` : null));
+      for (let j = t - 1; j >= 0; j--) ol.append(row(path[j], t - j, `${kindOf(path[j + 1], path[j])} student of ${G.nodes.get(path[j + 1]).n}`));
+      for (let j = t + 1; j < path.length; j++) ol.append(row(path[j], j - t, `${kindOf(path[j - 1], path[j])} student of ${G.nodes.get(path[j - 1]).n}`));
+    } else {
+      // 先往下再往上（比如学生的另一位导师）：按顺序列出，每一步写成完整的一句话
+      path.forEach((id, i) => {
+        let rel = null;
+        if (i) {
+          const prev = path[i - 1], up = sig[i - 1] === 'u';
+          rel = up ? `${kindOf(id, prev)} advisor of ${G.nodes.get(prev).n}` : `${kindOf(prev, id)} student of ${G.nodes.get(prev).n}`;
+        }
+        ol.append(row(id, 0, rel));
+      });
+    }
+    return el('div', { class: 'path-box' },
+      el('p', { class: 'pc-sum' }, `Relationship to ${G.nodes.get(first).n}: `, el('b', {}, relLabel(sig))),
+      ol);
   }
 
   function renderFamily() {

@@ -4,7 +4,10 @@
 所以要求连续发表。build_graph.py 用它检查「A 的学生 X 又是 P 的导师」这种链条在时间上是否说得通，
 说不通就把名字相同但不是同一人的外部节点拆开。
 数据: data/cache/dblp/index.pkl（infer_dblp.py 生成，不提交）
+另外记下每位教授读博那几年（入行起 7 年）里和哪些名单内教授合写过论文，供 build_graph.py 判断
+「导师主页名单上按名字认出的学生」是否真有师生合作。
 输出: data/enrich/career_start.json  {pid: 年份}
+      data/enrich/early_coauthors.json  {学生 pid: {合作教授 pid: 合写篇数}}
 用法: python scripts/career_start.py
 """
 import json
@@ -26,14 +29,23 @@ def start_year(pubs):
 
 def main():
     data = pickle.load(open(INDEX, 'rb'))
-    out = {}
-    for p in load_profs():
-        y = start_year(data['pubs'].get(p['dblp'], []))
-        if y:
-            out[p['id']] = y
-    with open(os.path.join(ROOT, 'data/enrich/career_start.json'), 'w', encoding='utf-8') as f:
-        json.dump(out, f, separators=(',', ':'), sort_keys=True)
-    print('professors with a start year:', len(out))
+    profs = load_profs()
+    pid_of = {p['dblp']: p['id'] for p in profs}
+    out, early = {}, {}
+    for p in profs:
+        pubs = data['pubs'].get(p['dblp'], [])
+        y = start_year(pubs)
+        if not y:
+            continue
+        out[p['id']] = y
+        co = Counter(pid_of[a] for t, yr, auth, _ in pubs if yr and y <= yr <= y + 6 and t != 'phdthesis'
+                     for a in set(auth) if a in pid_of and a != p['dblp'])
+        if co:
+            early[p['id']] = dict(sorted(co.items()))
+    for name, obj in (('career_start.json', out), ('early_coauthors.json', early)):
+        with open(os.path.join(ROOT, 'data/enrich', name), 'w', encoding='utf-8') as f:
+            json.dump(obj, f, separators=(',', ':'), sort_keys=True)
+    print('professors with a start year:', len(out), 'with early co-authors:', len(early))
 
 
 if __name__ == '__main__':

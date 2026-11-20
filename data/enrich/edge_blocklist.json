@@ -1,0 +1,42 @@
+{
+"_doc": "人工核对的边修正，build_graph.py 在所有自动规则之后应用。block: [导师 id, 学生 id, 理由]，导师是 x:/dblp:/hs:/wd: 外部节点时也按名字匹配（同名节点 id 会随合并/拆分变）；add: [导师 id, 学生 id, 类型, 导师姓名, 理由]（导师不在图里时按姓名建外部节点）；retype: [导师 id, 学生 id, 原类型, 新类型, 理由]；strip: [节点 id, [字段], 理由]；wd_reject / wd_accept: [教授 id, QID, 理由]——人工判定按名字对上的 Wikidata 条目是 / 不是同名另一个人（覆盖 build_graph 的 wd_misfit 规则）",
+"block": [
+["x:robert tibshirani", "p194", "Arindam Banerjee 的博士导师是 Joydeep Ghosh（UT Austin），人工表误填 Tibshirani"],
+["p965", "p313", "Geoffrey Voelker 的博士导师是 Anna Karlin 和 Hank Levy（UW），不是 Mazières"],
+["p1517", "p1709", "Kai-Wei Chang 没有跟 Shih-Fu Chang 做过博士后（同姓误认）"],
+["p1492", "p1443", "Dan Roth 的导师是 Leslie Valiant；Zack Ives 主页名单上的 Dan Roth 不是他"],
+["p3384", "p5596", "Chien-Ming Huang 主页上的 Tsung-Chi Lin 不是 NJIT 的 Tsung-Chi Lin"],
+["p2632", "wd:Q103474165", "Wikidata 上 Marathe → Flanery 的学生关系对不上（同名误配）"],
+["p872", "p1188", "Gatterbauer 在 UW 是 Suciu 的博士后，不是博士生（dblp 推断）"],
+["dblp:Adam Godzik", "p3357", "Yuzhen Ye 在 Godzik 组是博士后（dblp 推断）"],
+["dblp:Lee-Sup Kim", "p5889", "dblp 同名者：推断窗口 2023–2028，Yanggon Kim 1995 年就已博士毕业"],
+["p5846", "p2623", "Zhiyuan Li（TTIC）的学生 Tianhao Wang 后来去了 UCSD，不是 UVA 的 Tianhao Wang（Ninghui Li 的学生）"],
+["p149", "p5535", "Wikidata 上 Rosenfeld 的学生误连到 MIT 经济学家 Andrew Lo（Harvard 经济学博士）"],
+["p970", "p4225", "Monica Lam（Stanford）的学生 Brian Murphy 不是 CUNY 的 Brian Murphy（Victor Pan 的学生）"]
+],
+"add": [
+["wd:Q5648390", "p313", "phd", "Hank Levy", "Geoffrey Voelker 的博士导师（与 Anna Karlin 共同指导）"]
+],
+"retype": [
+["p88", "hs:p88:dongsu han", "postdoc", "phd", "Dongsu Han 是 Seshan 的博士生"]
+],
+"wd_reject": [
+["p1491", "Q102945120", "Mingmin Zhao（Penn）是 MIT 2021 年博士（Katabi）；条目是浙大 2017 年博士"],
+["p2780", "Q102348189", "Srinath Sridhar（Brown）是 MPI 2016 年博士；条目是 CMU 2007 年 Blelloch 的学生"],
+["p3300", "Q102165048", "XiaoFeng Wang（IU）是 CMU 博士；条目是 Case Western 统计学博士"],
+["p6591", "Q141207158", "Natasha Jaques（UW）是 MIT 博士；条目是 Massey 大学 2022 年畜牧学博士"],
+["p6339", "Q102393914", "Rui Kuang（UMN）是 Columbia 博士；条目是中国科大博士"],
+["p4924", "Q58168655", "Yuanyuan Feng（UVM，HCI）；条目是海洋生物学研究者"],
+["p4657", "Q102260854", "Chris Wilcox（CSU）；条目是 UCSC 的渔业生态学博士（Marc Mangel）"],
+["p3805", "Q102391897", "Thomas Peters（UConn）；条目是 Columbia 2010 年数学博士（Ozsváth）"],
+["p3712", "Q102135677", "Stephen Lee（Pitt）；条目是 FSU 1991 年统计学博士"],
+["p6065", "Q102645670", "David Heath（UIUC）是 Georgia Tech 博士；条目是 JHU 博士（Kasif）"],
+["p5051", "Q102192293", "Tie Luo（Missouri S&T）；条目是 Brandeis 1987 年数学博士"]
+],
+"wd_accept": [
+["p1392", "Q103314758", "Dan Negrut 确是 Iowa 1998 年博士（Edward Haug），dblp 入行年份偏晚"]
+],
+"strip": [
+["wd:Q102234965", ["h", "hv", "af", "ph"], "这条 Feng Zhao 的 HUST 主页 / 单位 / 照片是另一个同名的人"]
+]
+}

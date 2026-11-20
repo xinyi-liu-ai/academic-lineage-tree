@@ -6,6 +6,7 @@
   data/raw/universities.csv                 学校全称/简称
   data/enrich/*.jsonl                       自动补全的关系（Wikidata / MGP）
 """
+import datetime
 import glob
 import json
 import os
@@ -47,6 +48,61 @@ def load_unis():
 def parse_domains(d):
     # 'ml (ai-area) theory (theory-area)' -> [('ml','ai'), ('theory','theory')]
     return [(a, b) for a, b in re.findall(r'([\w-]+)\s*\(([\w-]+)-area\)', d)]
+
+
+def uni_tokens(u):
+    u = u.replace('Univ.', 'University').replace(' - ', ' ')
+    return {t for t in re.findall(r'[a-z]{4,}', u.lower()) if t not in {'university', 'state', 'college', 'institute', 'technology'}}
+
+
+# 按名字对上教授的 Wikidata 条目（wikidata_match_method.json 里不是 scholar_id 的），描述的是不是同名的另一个人
+WD_CS = re.compile(r'comput|informat|software|programm|machine learning|artificial intelligence|robot|data|electric|'
+                   r'electronic|cryptograph|engineer|network|cyber|algorithm|human.computer|vision|natural language', re.I)
+WD_OTHER = re.compile(r'(bio)?statistic\w*|econom\w*|biochem\w*|biolog\w*|chemist\w*|physician|medic\w*|cancer|clinic\w*|'
+                      r'psycholog\w*|neuroscien\w*|ecolog\w*|environment\w*|marine|genetic\w*|epidemiolog\w*|pharma\w*|'
+                      r'physicist|sociolog\w*|anthropolog\w*|philosoph\w*|historian|industrial engineer|nurs\w*|'
+                      r'business\w*|financ\w*|lawyer|jurist|athlete|football\w*|actor|actress|musician|composer|artist|'
+                      r'photographer|politician|journalist|priest|geolog\w*|agricult\w*|veterinar\w*|mathemat\w*', re.I)
+WD_PHD_YEAR = re.compile(r'(?:ph\.?\s?d\.?|doctoral|doctorate)\D{0,80}?\b((?:19|20)\d\d)\b', re.I)
+
+
+def ilast(name):
+    """(名首字母, 姓)，比较不同来源写法的同一个人用（"Prof. Manoj Franklin" ~ "Manoj Franklin"）。"""
+    t = [x for x in re.split(r'[\s.,-]+', fold(display_name(name))) if x and x not in {'prof', 'professor', 'dr', 'jr', 'sr', 'ii', 'iii'}]
+    return (t[0][:1], t[-1]) if len(t) > 1 else ('', t[0] if t else '')
+
+
+def wd_misfit(p, w, start, wd_adv=(), sheet_adv=()):
+    """w: wikidata_match_info.json 里的条目信息（co = [和教授在 dblp 上合写过的 Wikidata 导师/学生数, 关系总数]），
+    start: 教授的 career_start；wd_adv / sheet_adv: 条目上 / 人工表里这位教授的博士导师（ilast）。
+    条目的导师 / 学生没有一个和教授合写过论文、和人工表的导师也对不上、且条目本身对不上时返回理由：
+      scholar — 条目有另一个 Google Scholar ID，且任职单位对不上或领域不像 CS（如 UIUC 的统计学家 Bo Li）；
+      field   — 描述 / 职业 / 任职单位是别的领域（统计、经济、生物、数学……）且描述 / 职业没有 CS 字样，任职单位也对不上；
+      sheet   — 人工表有导师、条目的导师和它完全不同，且任职单位对不上（如 Seyoung Kim：表里 Eric Xing，条目是经济学博士）；
+      phd_year — 描述里的博士年份（多是 Mathematics Genealogy 导入的 "Ph.D. <学校> <年份>"）比教授 dblp 入行早 12 年以上
+                 或晚 12 年以上，且没有任何 CS 字样、任职单位对不上。
+    有合写佐证、没有可核对的关系或 dblp 上没有教授的论文时返回 None（不判断）。"""
+    co = w.get('co')
+    if not co or not co[1] or co[0] or set(wd_adv) & set(sheet_adv):
+        return None
+    text = ' '.join([w.get('d') or ''] + (w.get('occ') or []))
+    emp = '|'.join(w.get('emp') or [])
+    emp_ok = bool(uni_tokens(p['uni']) & uni_tokens(emp))
+    m = re.search(r'user=([\w-]{12})', p.get('scholar') or '')
+    gs_conflict = bool(m and w.get('gs') and m.group(1) not in w['gs'])
+    other = bool(WD_OTHER.search(text + ' ' + emp)) and not WD_CS.search(WD_OTHER.sub(' ', text))
+    if gs_conflict and (not emp_ok or other):
+        return 'scholar'
+    if emp_ok:
+        return None
+    if other:
+        return 'field'
+    if wd_adv and sheet_adv:
+        return 'sheet'
+    y = WD_PHD_YEAR.search(w.get('d') or '')
+    if y and start and not WD_CS.search(text) and not start - 12 <= int(y.group(1)) <= start + 12:
+        return 'phd_year'
+    return None
 
 
 class Graph:
@@ -101,8 +157,10 @@ class Graph:
             self.alias[ext_hint] = xid
         return xid
 
-    def add_edge(self, adv, stu, typ, src, url='', ext=None):
-        """ext: 外部人员在这条来源里的强标识（Wikidata QID / 维基百科词条），拆分同名节点时用。"""
+    def add_edge(self, adv, stu, typ, src, url='', ext=None, named=None):
+        """ext: 外部人员在这条来源里的强标识（Wikidata QID / 维基百科词条），拆分同名节点时用。
+        named: 这条来源里哪一端（'a' 导师 / 's' 学生）只是按名字认成名单内教授的；None 表示两端都可靠
+        （人工表、本人的 CV / 主页、QID 对上教授的 Wikidata）。见 detach_implausible。"""
         if adv == stu:
             return
         e = self.edges.get((adv, stu, typ))
@@ -117,6 +175,11 @@ class Graph:
             e.setdefault('pages', set()).add(url)  # 各来源的出处页面（只供拆分时判断主页链接归属）
         if ext and ext.split(':')[0] in ('wd', 'wp'):
             e.setdefault('ids', set()).add(ext)
+        if named:
+            e.setdefault('named', set()).add(named)
+        else:
+            e['firm'] = True
+        return e
 
     def move_edge(self, e, old, new):
         del self.edges[(e['a'], e['s'], e['t'])]
@@ -124,11 +187,77 @@ class Graph:
         prev = self.edges.get((a, s, e['t']))
         if prev:
             prev['src'] += [x for x in e['src'] if x not in prev['src']]
-            for k in ('ids', 'pages'):
+            for k in ('ids', 'pages', 'named'):
                 prev.setdefault(k, set()).update(e.get(k, ()))
+            prev['firm'] = prev.get('firm') or e.get('firm')
         else:
             e['a'], e['s'] = a, s
             self.edges[(a, s, e['t'])] = e
+
+    # 人工核对过、确实成立的教授→教授边，不受 detach_implausible 影响（入行年份被同名者 / 拆开的 dblp 档案带偏）
+    KEEP_PROF_EDGES = {
+        ('p935', 'p1416'),   # Aaron Sidford → Kevin Tian（Stanford）：Kevin Tian 的 dblp 年份混进了同名者
+        ('p5557', 'p2950'),  # Alex X. Liu（MSU）→ Zubair Shafiq：dblp 上 "Alex Liu" 档案只从 2011 年算起
+        ('p949', 'p1214'),   # Gregory Valiant → Hongyang R. Zhang（Stanford，与 Ashish Goel 共同指导）：合写论文在读博后期
+    }
+    # 另：Yao Xie / Kun Sun 主页上的学生 "Jie Wang" 都不是名单里的 Jie Wang 0002（UMass Lowell，1989 年起发表，
+    # 和两人都没有合写过论文），两条边都按规则摘下，不放行
+
+    def _detach(self, e, why, moved):
+        a, s = e['a'], e['s']
+        if 's' in e['named']:
+            old, new = s, f"hs:{a}:{key(self.nodes[s]['name'])}"
+        else:
+            old, new = a, f"x:{s}:{key(self.nodes[a]['name'])}"
+        nn = self.nodes.setdefault(new, dict(id=new, name=self.nodes[old]['name'], ext=True))
+        for k, v in (e.get('listed') or {}).items():  # 学生名单上写的去向 / 主页 / 在读标记
+            nn.setdefault(k, v)
+        moved.append((dict(a=a, s=s, src=list(e['src']), why=why), new))
+        self.move_edge(e, old, new)
+
+    def detach_implausible(self, start, titles, ap_since, early=None, slack=3, max_adv=2):
+        """教授→教授的博士边，若只靠按名字认人的来源（导师主页学生名单、按名字对上的 Wikidata / 维基百科、
+        dblp 推断），且时间上说不通，就不挂到这位教授身上：
+          - 导师入行（career_start）比学生晚 slack 年以上；
+          - 导师 AP 入职（ap_since）不早于学生 AP 入职前 slack 年；
+          - 导师是 Assistant Professor，学生已是 Associate / Full / Distinguished Professor。
+        按名字认错的是学生一端时改成导师名下的外部学生 hs:<导师>:<名字>（和没对上名单的学生一样），
+        是导师一端时改成 x:<学生>:<名字>。
+        第二轮：PhD 导师超过 max_adv 位的教授，只靠按名字认人的边若没有 dblp 佐证（2b 的合著推断一致，
+        或 early_coauthors 里学生读博那几年和这位导师合写过论文），也照此摘下（why='crowded'）。
+        返回 [(原边信息, 新端点)]。"""
+        junior = re.compile(r'assistant professor', re.I)
+        senior = re.compile(r'(associate |distinguished )?professor( emeritus)?', re.I)
+        ap = {k: v['y'] for k, v in ap_since.items() if v.get('y') and not v.get('incoming')}
+        moved = []
+        for e in list(self.edges.values()):
+            a, s = e['a'], e['s']
+            if e['t'] != 'phd' or e.get('firm') or not e.get('named') or \
+                    self.nodes[a].get('ext') or self.nodes[s].get('ext'):
+                continue
+            if (a, s) in self.KEEP_PROF_EDGES:
+                continue
+            why = [w for w, bad in (
+                ('start', a in start and s in start and start[a] > start[s] + slack),
+                ('ap', a in ap and s in ap and ap[a] > ap[s] - slack),
+                ('title', bool(junior.fullmatch(titles.get(a) or '')) and bool(senior.fullmatch(titles.get(s) or '')))) if bad]
+            if why:
+                self._detach(e, why, moved)
+        if not early:  # 没有 early_coauthors.json 就无从判断，不做第二轮
+            return moved
+        into = defaultdict(list)
+        for e in self.edges.values():
+            if e['t'] == 'phd' and not self.nodes[e['s']].get('ext'):
+                into[e['s']].append(e)
+        for s, es in into.items():
+            if len(es) <= max_adv:
+                continue
+            for e in es:
+                a = e['a']
+                if e.get('firm') or not e.get('named') or 'dblp' in e['src'] or self.nodes[a].get('ext') or                         (a, s) in self.KEEP_PROF_EDGES or early.get(s, {}).get(a):
+                    continue
+                self._detach(e, ['crowded'], moved)
+        return moved
 
     def split_homonyms(self, start, min_gap=8):
         """外部人员只按名字合并，同名的两个人会被并成一个节点（如 Heer 的在读学生 Yang Liu 和
@@ -198,6 +327,46 @@ class Graph:
         return splits
 
 
+def apply_overrides(g, ov, stats):
+    """data/enrich/edge_blocklist.json：人工核对的边修正（格式见文件里的 _doc）。外部导师（x:/dblp:/hs:/wd:）的节点 id
+    会随合并 / 拆分 / 摘边变化，所以 block 时也按名字匹配：节点还在就用它的名字，否则用 id 里最后一个冒号之后的部分。
+    返回 {节点 id: 输出时去掉的字段}。"""
+    def ends(a_id, s_id):
+        if a_id.startswith(('x:', 'dblp:', 'hs:', 'wd:')):
+            nm = key(g.nodes[a_id]['name'] if a_id in g.nodes else a_id.rsplit(':', 1)[1])
+            hit = lambda a: a == a_id or (g.nodes[a].get('ext') and key(g.nodes[a]['name']) == nm)
+        else:
+            hit = lambda a: a == a_id
+        return [e for e in g.edges.values() if e['s'] == s_id and hit(e['a'])]
+    for a, s, why in ov.get('block', []):
+        for e in ends(a, s):
+            if 'homepage' in e['src'] and not g.nodes[s].get('ext'):
+                # 导师主页名单上确有这个学生，只是不是名单里的这位教授：留作导师名下的外部学生
+                new = f"hs:{e['a']}:{key(g.nodes[s]['name'])}"
+                g.nodes.setdefault(new, dict(id=new, name=g.nodes[s]['name'], ext=True, **(e.get('listed') or {})))
+                g.move_edge(e, s, new)
+            else:
+                del g.edges[(e['a'], e['s'], e['t'])]
+            stats['manual_blocked'] += 1
+    for a, s, old, new, why in ov.get('retype', []):
+        for e in [e for e in ends(a, s) if e['t'] == old]:
+            del g.edges[(e['a'], e['s'], old)]
+            prev = g.edges.get((e['a'], e['s'], new))
+            if prev:
+                prev['src'] += [x for x in e['src'] if x not in prev['src']]
+            else:
+                e['t'] = new
+                g.edges[(e['a'], e['s'], new)] = e
+            stats['manual_retyped'] += 1
+    for a, s, typ, name, why in ov.get('add', []):
+        if s not in g.nodes:
+            continue
+        g.nodes.setdefault(a, dict(id=a, name=name, ext=True, wd=a if a.startswith('wd:') else None))
+        g.add_edge(a, s, typ, 'sheet')
+        stats['manual_added'] += 1
+    return {nid: fields for nid, fields, why in ov.get('strip', [])}  # 输出节点时去掉的字段
+
+
 def main():
     profs = load_profs()
     unis = load_unis()
@@ -223,6 +392,41 @@ def main():
                 stats['sheet_' + typ] += 1
 
     # 2) 自动补全的关系（dblp 推断最后处理，见 2b）
+    def opt(name):
+        f = os.path.join(ROOT, 'data/enrich', name)
+        return json.load(open(f, encoding='utf-8')) if os.path.exists(f) else {}
+    career_start = opt('career_start.json')  # dblp 入行年份（career_start.py）
+    # QID 只是按名字对上教授的：enrich_wikidata.py 记下的匹配方式是 name_desc（只有姓名 + 描述像学者，单位对不上），
+    # 或 match_wikidata_employer.py 按姓名 + 任职学校对上的（employer_search）：这些教授一端算按名字认人，见
+    # detach_implausible。name_employer（姓名一致且 Wikidata 任职单位就是他的学校）仍算可靠——试过一并当按名字认人，
+    # crowded 规则摘掉的多是对的边（Galil→Katz、Raz→Lovett、Cassell→Bickmore）。维基百科条目也是从这个 QID 找到的，一样处理
+    wd_method = opt('wikidata_match_method.json')
+    name_matched = set(opt('wikidata_employer_match.json')) | {pid for pid, m in wd_method.items() if m == 'name_desc'}
+    # 不是靠 Scholar ID 对上的条目里，描述的明显是同名的另一个人（wd_misfit）：教授自己的 Wikidata / 维基百科导师学生不要；
+    # 别人条目里指向他的那端改成这个 QID 的外部人员
+    wd_adv, sheet_adv = defaultdict(set), defaultdict(set)
+    wd_path = os.path.join(ROOT, 'data/enrich/wikidata.jsonl')
+    for line in (open(wd_path, encoding='utf-8') if os.path.exists(wd_path) else ()):
+        r = json.loads(line)
+        if r['rel'] == 'advisor' and r.get('type', 'phd') == 'phd':
+            wd_adv[r['prof']].add(ilast(r['name']))
+    for e in g.edges.values():  # 这时图里只有人工表的边（第 1 步）
+        if e['t'] == 'phd':
+            sheet_adv[e['s']].add(ilast(g.nodes[e['a']]['name']))
+    wd_misfits = {pid: why for pid, w in opt('wikidata_match_info.json').items()
+                  if wd_method.get(pid, 'scholar_id') != 'scholar_id' and pid in g.nodes and
+                  (why := wd_misfit(g.nodes[pid], w, career_start.get(pid), wd_adv[pid], sheet_adv[pid]))}
+    wd_info, ov = opt('wikidata_match_info.json'), opt('edge_blocklist.json')
+    for pid, q, why in ov.get('wd_reject', []):  # 人工判定（QID 变了就不再适用）
+        if wd_info.get(pid, {}).get('q') == q:
+            wd_misfits[pid] = 'manual'
+    for pid, q, why in ov.get('wd_accept', []):
+        if wd_info.get(pid, {}).get('q') == q:
+            wd_misfits.pop(pid, None)
+    stats['wd_name_matched'] = len(name_matched)
+    stats['wd_misfit_profs'] = len(wd_misfits)
+    for pid, why in sorted(wd_misfits.items()):
+        print('wikidata misfit', pid, g.nodes[pid]['name'], why, file=sys.stderr)
     inferred, listed = [], []
     for f in sorted(glob.glob(os.path.join(ROOT, 'data/enrich/*.jsonl'))):
         recs = [json.loads(line) for line in open(f, encoding='utf-8')]
@@ -242,17 +446,37 @@ def main():
             else:
                 cleaned.append(r)
         for r in cleaned:
+            if r['source'] in ('wikidata', 'wikipedia') and r['prof'] in wd_misfits:
+                stats['wd_misfit_dropped'] += 1
+                continue
             ext_id = r.get('ext_id')
             if not ext_id and r['source'] == 'wikipedia' and '/wiki/' in r.get('url', ''):
                 ext_id = 'wp:' + r['url'].rsplit('/wiki/', 1)[1]
+            if r.get('other_prof') in wd_misfits:  # url 是对面那人的条目；不按名字 resolve，否则又落回这位教授
+                ext_id = 'wd:' + r['url'].rsplit('/', 1)[1]
+                r = {k: v for k, v in r.items() if k != 'other_prof'}
+                g.nodes.setdefault(ext_id, dict(id=ext_id, name=r['name'], ext=True, wd=ext_id))
+                g.alias[ext_id] = ext_id
+                stats['wd_misfit_to_external'] += 1
             other = r.get('other_prof') or g.resolve(r['name'], ext_id)
             if g.nodes[other].get('ext') and not g.nodes[other].get('url'):
                 g.nodes[other]['url'] = r.get('url', '')
             hint = None if r.get('other_prof') else ext_id
+            # 哪一端只是按名字认成教授的：Wikidata / 维基百科里没有 QID→教授的对应、靠 resolve 按名字找到的那端；
+            # 或者 QID 只是按名字对上教授的（name_matched，见上）。本人 CV / 主页写的导师算可靠
+            end = 'a' if r['rel'] == 'advisor' else 's'
+            named = None
+            if r['source'] in ('wikidata', 'wikipedia'):
+                if not r.get('other_prof') and not g.nodes[other].get('ext'):
+                    named = end
+                elif r.get('other_prof') in name_matched:
+                    named = end
+                elif r['prof'] in name_matched:
+                    named = 's' if end == 'a' else 'a'
             if r['rel'] == 'advisor':
-                g.add_edge(other, r['prof'], r.get('type', 'phd'), r['source'], r.get('url', ''), hint)
+                g.add_edge(other, r['prof'], r.get('type', 'phd'), r['source'], r.get('url', ''), hint, named)
             else:
-                g.add_edge(r['prof'], other, r.get('type', 'phd'), r['source'], r.get('url', ''), hint)
+                g.add_edge(r['prof'], other, r.get('type', 'phd'), r['source'], r.get('url', ''), hint, named)
             stats[r['source'] + '_' + r['rel']] += 1
 
     # 2a) 导师主页上的学生名单：学生也是名单内教授时用 other_prof（extract_students 已用合著核实）；
@@ -284,7 +508,11 @@ def main():
             g.nodes[other]['h'] = r['h']
         if r.get('cur') and g.nodes[other].get('ext'):
             g.nodes[other]['cur'] = True  # 导师主页"当前学生"名单里的人
-        g.add_edge(r['prof'], other, r.get('type', 'phd'), r.get('source', 'homepage'), r.get('url', ''))
+        manual = r.get('source') == 'sheet'  # 人工补充的可靠；导师主页名单上的名字只是按名字（+合著）认成教授
+        e = g.add_edge(r['prof'], other, r.get('type', 'phd'), r.get('source', 'homepage'), r.get('url', ''),
+                       named=None if manual else 's')
+        if e and not g.nodes[other].get('ext'):
+            e.setdefault('listed', {}).update({k: (True if k == 'cur' else r[k]) for k in ('af', 'h', 'cur') if r.get(k)})
         stats[r.get('source', 'homepage') + '_student'] += 1
 
     # 2b) dblp 合作论文推断：与已有导师一致时作为佐证；只有其他来源都没有 PhD 导师时才新增
@@ -292,8 +520,16 @@ def main():
     for e in g.edges.values():
         if e['t'] == 'phd':
             has_phd[e['s']].add(e['a'])
+    # 推断窗口（读博那几年）在学生 dblp 入行 6 年以后、AP 入职之后、或还没结束：多半是博士后导师或同名者，不用
+    ap_y = {k: v['y'] for k, v in opt('ap_since.json').items() if v.get('y') and not v.get('incoming')}
+    this_year = datetime.date.today().year
     for r in inferred:
         stu = r['prof']
+        w = re.search(r'(\d{4})\D(\d{4})', r.get('note', ''))
+        if w and ((stu in career_start and int(w.group(1)) >= career_start[stu] + 6) or
+                  (stu in ap_y and int(w.group(1)) > ap_y[stu]) or int(w.group(2)) > this_year):
+            stats['dblp_late_window_skipped'] += 1
+            continue
         if has_phd.get(stu):
             # 教授优先、再按 id 排，结果不随集合遍历顺序变
             match = sorted((a for a in has_phd[stu] if key(g.nodes[a]['name']) == key(r['name'])),
@@ -315,15 +551,20 @@ def main():
                 stats['dblp_confirms'] += 1
             continue
         other = r.get('other_prof') or g.resolve(r['name'], r.get('ext_id'))
+        if not r.get('other_prof') and not g.nodes[other].get('ext'):
+            # infer_dblp 只给名单外的 dblp 作者写 ext_id（名单内的写 other_prof），按名字落到同名教授身上必是认错了人
+            # （如 "Qing Yang 0001" 不是名单里的 Qing Yang）：改用这个 dblp 作者自己的外部节点
+            other = r['ext_id'] if r.get('ext_id') else f"x:{stu}:{key(r['name'])}"
+            g.nodes.setdefault(other, dict(id=other, name=r['name'], ext=True, wd=r.get('ext_id')))
+            stats['dblp_not_listed_prof'] += 1
         if g.nodes[other].get('ext') and not g.nodes[other].get('url'):
             g.nodes[other]['url'] = r['url']
-        g.add_edge(other, stu, 'phd', 'dblp', r['url'])
+        g.add_edge(other, stu, 'phd', 'dblp', r['url'], named='a')  # 合著推断的导师，不算可靠来源
         g.edges[(other, stu, 'phd')]['note'] = r.get('note', '')
         stats['dblp_advisor'] += 1
 
     # 2b') 拆开被名字合并的同名外部人员（时间线说不通，见 Graph.split_homonyms；入行年份来自 career_start.py）
-    cs_path = os.path.join(ROOT, 'data/enrich/career_start.json')
-    splits = g.split_homonyms(json.load(open(cs_path, encoding='utf-8')) if os.path.exists(cs_path) else {})
+    splits = g.split_homonyms(career_start)
     stats['homonyms_split'] = len(splits)
 
     # 2c) 合并同一个人的重复节点（find_duplicates.py：同主页 / 同 Scholar / 同名且同导师）
@@ -392,9 +633,6 @@ def main():
     people = json.load(open(people_path, encoding='utf-8')) if os.path.exists(people_path) else {}
     links_path = os.path.join(ROOT, 'data/enrich/student_links.json')  # 导师/学生主页上链过去的个人主页
     links = json.load(open(links_path, encoding='utf-8')) if os.path.exists(links_path) else {}
-    def opt(name):
-        f = os.path.join(ROOT, 'data/enrich', name)
-        return json.load(open(f, encoding='utf-8')) if os.path.exists(f) else {}
     # 主页上的职称 / 照片地址（extract_titles.py、fetch_photos.py、fetch_people_photos.py）
     titles, photos, people_photos = opt('titles.json'), opt('photos.json'), opt('people_photos.json')
     for nid in opt('photo_blocklist.json'):  # 人工核对出的选错的主页照片，或本人要求删除
@@ -416,12 +654,30 @@ def main():
     for nid in ('p6487', 'p1552', 'p566', 'p1209'):
         recruiting.pop(nid, None)
     ap_since = opt('ap_since.json')  # AP 入职年份（extract_ap_since.py）：{pid: {y, q, src, incoming}}
+    # 3b) 只靠按名字认人的教授→教授边，时间线 / 职称说不通的不挂到教授身上（要用上面的职称，所以放在这里）
+    detached = g.detach_implausible(career_start, titles, ap_since, opt('early_coauthors.json'))
+    stats['implausible_prof_edges_detached'] = len(detached)
+    for e, new in detached:
+        print('detached', e['a'], g.nodes[e['a']]['name'], '->', e['s'], g.nodes[e['s']]['name'],
+              '+'.join(e['src']), ','.join(e['why']), '=>', new, file=sys.stderr)
+    strip = apply_overrides(g, ov, stats)  # 人工核对的边修正
+    trusted = {e['s'] for e in g.edges.values() if e['t'] == 'phd' and set(e['src']) & {'wikidata', 'wikipedia'}}
+    for e in g.edges.values():  # 让人工表导师"存疑"的那条 Wikidata / 维基百科边被摘掉了，就不再存疑
+        if e.get('disputed') and e['s'] not in trusted:
+            e['disputed'] = False
+            stats['sheet_phd_disputed'] -= 1
+    used = {e['a'] for e in g.edges.values()} | {e['s'] for e in g.edges.values()}
     bad_urls = opt('photo_https_bad.json')  # https 下打不开的照片地址（verify_photos.py），换下一个来源
     for src in (photos, people_photos):
         for nid in [k for k, u in src.items() if u in bad_urls]:
             del src[nid]
+    # 院系个人页 / About 页 / sitemap 里补到的照片（fetch_photos_extra.py，逐张人工核对过），排在 Wikimedia 之前兜底
+    blocked = set(opt('photo_blocklist.json'))
+    for nid, u in opt('photos_extra.json').items():
+        if u not in bad_urls and nid not in blocked:
+            photos.setdefault(nid, u)
     for nid, u in opt('wikidata_photos.json').items():
-        if u not in bad_urls:
+        if u not in bad_urls and nid not in wd_misfits:  # 同名另一个人的照片不要
             photos.setdefault(nid, u)
             people_photos.setdefault(nid, u)
     for old, new, pages in splits:  # 拆分前在原节点上找到的个人主页若来自挪走那一侧的页面，跟着挪到新节点
@@ -491,6 +747,9 @@ def main():
             d['d'] = [a for a, _ in parse_domains(n['domain'])]
             d['a'] = sorted({b for _, b in parse_domains(n['domain'])})
             out_nodes.append(d)
+    for d in out_nodes:  # edge_blocklist.json 的 strip：属于同名另一个人的主页 / 单位 / 照片
+        for k in strip.get(d['id'], ()):
+            d.pop(k, None)
     for d in out_nodes:  # 抓来的链接只放行 http(s)，防止 javascript: 之类进到网页
         for k in ('h', 'li', 'g', 'c', 'ph', 'w'):
             if k in d and not re.match(r'https?://', str(d[k]), re.I):
