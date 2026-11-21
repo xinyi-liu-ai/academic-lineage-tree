@@ -103,7 +103,7 @@ def to_text(r, body):
         from pypdf import PdfReader
         try:
             reader = PdfReader(io.BytesIO(body))
-            return '\n'.join((pg.extract_text() or '') for pg in reader.pages[:15]), []
+            return '\n'.join((pg.extract_text() or '') for pg in reader.pages[:80]), []  # CV 的学生名单常在最后几页
         except Exception:
             return '', []
     if 'html' not in ctype and 'text' not in ctype:
@@ -118,16 +118,30 @@ def to_text(r, body):
     return text, p.links
 
 
-def fetch(url):
+REFRESH = re.compile(rb"""<meta[^>]+http-equiv=["']?refresh["']?[^>]*content=["']?\s*\d*\s*;?\s*url\s*=\s*['"]?([^"'>\s]+)""", re.I)
+JS_REDIRECT = re.compile(rb"""(?:window\.|document\.)?location(?:\.href)?\s*=\s*["']([^"']+)["']|location\.replace\(\s*["']([^"']+)["']\s*\)""")
+
+
+def fetch(url, _hops=0):
+    """抓一页转成文字 + 链接。页面几乎没内容时跟随 <meta refresh> 和简单的 JS 跳转；http 超时 / 连不上时改试 https。"""
     if not url or not url.startswith('http') or not allowed(url):
         return '', [], 'robots' if url else ''
     try:
         r, body = polite_get(url)
     except requests.RequestException as e:
+        if url.startswith('http://') and _hops == 0:
+            return fetch('https://' + url[7:], 1)
         return '', [], type(e).__name__
     if r.status_code != 200:
         return '', [], str(r.status_code)
     text, links = to_text(r, body)
+    if _hops < 2 and len(text.strip()) < 1500 and 'html' in r.headers.get('content-type', '').lower():
+        m = REFRESH.search(body[:20000]) or JS_REDIRECT.search(body[:20000])
+        if m:
+            raw = m.group(1) or (m.group(2) if m.re.groups >= 2 else None) or b''
+            target = urljoin(r.url, raw.decode('utf-8', 'ignore'))
+            if target.startswith('http') and target.split('#')[0].rstrip('/') != r.url.split('#')[0].rstrip('/'):
+                return fetch(target, _hops + 1)
     return text, [(urljoin(r.url, h), t) for h, t in links if h], ''
 
 

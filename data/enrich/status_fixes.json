@@ -1,0 +1,21 @@
+{
+ "p2145": {
+  "note": "moved: now Associate Professor at Univ. of Illinois at Urbana-Champaign",
+  "src": "https://www.wanghao.in/"
+ },
+ "p1025": {
+  "note": "left academia (D. E. Shaw & Co.) since 2021; not current Cornell faculty",
+  "src": "https://arbenson.github.io"
+ },
+ "p1672": {
+  "note": "homepage http://www.spchopra.org/ is a hijacked spam site; drop h",
+  "src": "https://cs.nyu.edu/dynamic/people/faculty/"
+ },
+ "drop_as": [
+  "p5684",
+  "p5672",
+  "p1381",
+  "p3649",
+  "p1025"
+ ]
+}

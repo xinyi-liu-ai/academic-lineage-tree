@@ -5,9 +5,18 @@
   data/cache/pages/{pid}_home.txt       people_pages 全空时的备用主页（第一行 "#URL ..."）
   data/cache/recruit_pages/{pid}.json  fetch_recruit_pages.py 另抓的 Prospective / Join / Openings / FAQ / Contact /
                                        实验室网站 / 个人主页（排在上面两类之后；实验室页上 "Prof. X is recruiting" 要求 X 是本人）
+  data/cache/lab_pages/{pid}.json.gz   fetch_lab_pages.py 抓的本人实验室网站（首页 / People / Join，HTML）
+  data/cache/recruit_follow/{pid}.json fetch_lab_pages.py --follow：主页上只有不带年份的 "yes" 时，顺着 "THIS" / "details" /
+                                       "Join" / "Openings" / "Positions" / "Prospective" 链接再抓的一层
 输出: data/enrich/recruiting.json
-  {pid: {"s": "yes"|"no", "q": 原句(<=220 字), "y": 目标入学年份或 null, "src": 页面 URL, "at": "YYYY-MM"}}
+  {pid: {"s": "yes"|"no", "q": 原句(<=220 字), "y": 目标入学年份或 null, "src": 页面 URL, "at": "YYYY-MM",
+         "phd": 句子或所在栏目标题是否写明 PhD / doctoral / graduate, "old": 不带年份的 yes 而页面上最新的日期早于 2026,
+         "inst": 同一段里提到要去 / 在别的学校招（"moving to HKUST"、"Oxford DPhil"）, "yf": 年份从哪来}}
   "at" 用缓存文件的修改时间，表示"什么时候看到的"。
+  yf: "heading"（栏目标题 "Prospective Ph.D. students starting in Fall 2027:"）、"para"（同一段别的句子）、
+      "stamp"（旁边的 "Updated on 05/02/2025"：取那一年、8 月以后写的算下一年）、"footer"（页脚 "Last updated"，页面上没有更新的日期时）、
+      "older"（主页的 yes 不带年份，本人实验室 / Join / 链接页上有往年的 PhD 招生：用往年那句，网站上显示为可能过时）、
+      "ambig"（"2026-2027 school year" 没写 start / join：页面最新日期在起始年 5 月以后时当作这一年里的申请季，取后一年）
 
 规则:
   yes: 第一人称 / 本组明确在招 PhD（"I am looking for motivated PhD students"、"recruiting PhD students for Fall 2027"、
@@ -17,7 +26,10 @@
   no : 明确不招（"I am not taking new students"、"not accepting students for Fall 2027"、"no openings"、"my group is full"、
        "on sabbatical and not recruiting"）。"I do not accept students who haven't taken my class"、
        "I don't accept students every year" 这类附条件的不算。
-  跳过: 目标年份早于 2026（"Fall 2019"、"2021-2022"）；新闻日期戳早于 2025（"Sep 2020: I am recruiting..."）；
+  跳过: 目标年份早于 2026（"Fall 2019"、"2021-2022"；但可用来说明不带年份的 yes 已过时，见 yf="older"）；
+        不带年份、在 (入学年 − 1) 年 8 月以前的新闻条目里（"Sep 2025: I am recruiting..."）；
+        只是招有薪 RA / 按学期的科研助理 / 实习（"paid research work"、"at least one semester"）；
+        院系 / 研究组 / 中心的公共页面上没点本人名字的句子（实验室网站被 >=2 位教授共用时也一样）；
         院系套话（"Prospective students should apply through graduate admissions"）；
         条件句 / 疑问句 / 讲别人的（"if you are looking for PhD students"、"students looking for advisors"）。
   年份: "Fall 2027" / "Fall '27" → 2027；"2027-2028 academic year" → 2027；"2026-27 application/admissions cycle" → 2027
@@ -136,16 +148,72 @@ def norm_year(y):
     return y + 2000 if y < 100 else y
 
 
-def target_year(s):
-    """入学年份：Fall 2027 / 2027-2028 学年 / 2026-27 申请季 / for 2027。"""
+ADMIT = THIS_YEAR + 1          # 现在（2026 年 11 月）招的是 2027 年入学
+FRESH_CUT = (ADMIT - 1, 8)     # 早于这个年月的新闻 / "Updated on" 说的是往年的招生季
+START_W = re.compile(r'(?i)\b(?:start\w*|begin\w*|join\w*|enter\w*|matriculat\w*|incoming|admit\w*\s+in)\b')
+
+
+def target_year(s, newest=None):
+    """入学年份：Fall 2027 / 2027-2028 学年 / 2026-27 申请季 / for 2027。返回 (年份, 是否是没写 start 的学年区间)。
+    "2026-2027 school year" 没写 start / join：可能是 2026 年入学，也可能是 2026-27 学年里的申请季（2027 入学）；
+    页面上最新日期在起始年 5 月以后时取后一年。"""
     ys = [norm_year(m.group(1) or m.group(2)) for m in SEASON_YEAR.finditer(s)]
+    amb = False
     for m in ACAD_YEAR.finditer(s):
         a, b = norm_year(m.group(1) or m.group(2)), norm_year(m.group(3))
-        if b - a == 1:
-            ys.append(b if m.group(4) else a)
+        if b - a != 1:
+            continue
+        if m.group(4):
+            ys.append(b)
+        elif START_W.search(s[max(0, m.start() - 40):m.end() + 25]) or re.search(r'(?i)admission\w*\s+(?:for|in)\s*$', s[max(0, m.start() - 20):m.start()]):
+            ys.append(a)
+        else:
+            amb = True
+            ys.append(b if newest and newest >= (a, 5) else a)
     ys += [int(m.group(1)) for m in FOR_YEAR.finditer(s)]
     ys = [y for y in ys if 2000 <= y <= 2035]
-    return max(ys) if ys else None
+    return (max(ys) if ys else None), amb
+
+
+MONTHS = {m: i + 1 for i, m in enumerate('jan feb mar apr may jun jul aug sep oct nov dec'.split())}
+YM_PATTERNS = [
+    (re.compile(r'(?i)\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+(?:\d{1,2}(?:st|nd|rd|th)?,?\s+)?(20[0-3]\d)\b'),
+     lambda m: (int(m.group(2)), MONTHS[m.group(1).lower()[:3]])),
+    (re.compile(r'\b(20[0-3]\d)[./-](\d{1,2})(?:[./-]\d{1,2})?\b'), lambda m: (int(m.group(1)), int(m.group(2)))),
+    (re.compile(r'\b(\d{1,2})/\d{1,2}/(20[0-3]\d|\d{2})\b'), lambda m: (norm_year(m.group(2)), int(m.group(1)))),
+    (re.compile(r'\b(\d{1,2})/(20[0-3]\d)\b'), lambda m: (int(m.group(2)), int(m.group(1)))),
+    (re.compile(r'(?i)\b(?:spring|summer|fall|autumn|winter)\s+(20[0-3]\d)\b'), lambda m: (int(m.group(1)), {'spr': 2, 'sum': 6, 'fal': 9, 'aut': 9, 'win': 1}[m.group(0)[:3].lower()])),
+]
+UPD = re.compile(r'(?i)\b(?:last\s+)?(?:updated?|modified|revised)\b\s*(?:on|at|in)?\s*:?\s*|\bas\s+of\s+')
+NOW_YM = (2026, 11)
+
+
+def stamp_ym(s, seasons=True):
+    """文字里的年月（"Oct 2026"、"2026/06"、"05/02/2025"、"10/2024"、"Fall 2026"）。"""
+    out = []
+    for i, (p, fn) in enumerate(YM_PATTERNS):
+        if i == 4 and not seasons:
+            continue
+        for m in p.finditer(s):
+            try:
+                y, mo = fn(m)
+            except (KeyError, ValueError):
+                continue
+            if 2000 <= y <= 2035 and 1 <= mo <= 12 and (y, mo) <= NOW_YM:
+                out.append((y, mo))
+    return out
+
+
+def upd_stamps(s):
+    """"Updated on 05/02/2025"、"Last updated: Feb 2026"、"as of March 2025" 里的年月。"""
+    out = []
+    for m in UPD.finditer(s):
+        out += stamp_ym(s[m.end():m.end() + 30], seasons=False)[:1]
+        if not out:
+            y = re.match(r'\s*(20[0-3]\d)\b', s[m.end():m.end() + 8])
+            if y and int(y.group(1)) <= NOW_YM[0]:
+                out.append((int(y.group(1)), 1))
+    return out
 
 
 def stamp_years(s):
@@ -238,6 +306,37 @@ OTHER = re.compile(r"(?i)\b(?:if\s+you|you\s+are|you're|you’re|are\s+you|stude
 APPLY_BOILER = re.compile(r"(?i)(?:should|must|need\s+to)\s+apply\s+(?:directly\s+)?(?:through|to|via)\s+(?:the\s+)?(?:\w+\s+){0,4}(?:admissions?|program)")
 
 
+PAID_RA = re.compile(r"(?i)\bpaid\b|\bhourly\b|\bper\s+semester\b|\bat\s+least\s+(?:one|a)\s+(?:full\s+)?semester|\bfor\s+(?:paid\s+)?research\s+work\b|"
+                     r"\bresearch\s+assistant(?:s|ships?)?\b(?!.{0,30}\bph\.?\s?d)|\bRAs?\b(?![^.]{0,40}ph\.?\s?d)|\binternships?\b|\binterns\b")
+# 明确对 PhD 申请人说的（有这句时 RA / 实习字样不影响）
+PHD_APPLICANT = re.compile(r"(?i)\b(?:recruit\w*|hir\w*|looking\s+for|seeking|accept\w*|admit\w*|tak\w+)\s+(?:\w+\s+){0,4}?(?:new\s+)?(?:ph\.?\s?d\.?|doctoral)\s+(?:students?|applicants?|candidates?)"
+                           r"|(?:ph\.?\s?d\.?|doctoral)\s+(?:applicants?|positions?|admissions?|program)|prospective\s+(?:ph\.?\s?d|doctoral)|fully[- ]funded")
+PHD_WORD = re.compile(r'(?i)(?<![\w-])(?:ph\.?\s?d|doctoral|doctorate|graduate|grad\s+students?|d\.?\s?phil)')
+RECRUITISH = re.compile(r'(?i)prospective|students?|ph\.?\s?d|recruit|opening|position|join|admission|hiring|apply|doctoral|graduate|applicants?')
+# 同一段里讲去别的学校 / 在别的学校招
+INST_MOVE = re.compile(r"(?:\b(?i:moving|move|joining|join(?:ed)?|relocat\w+|transition\w*|heading)\s+to\s+|\b(?i:new\s+(?:position|role)\s+at)\s+)(?:the\s+)?"
+                       r"((?:[A-Z][\w&.'’-]*|of|at|and)(?:\s+(?:[A-Z][\w&.'’-]*|of|and)){0,6})")
+INST_DPHIL = re.compile(r'\b(Oxford)\b[^.]{0,60}\bD\.?Phil|\bD\.?Phil\b[^.]{0,60}\b(Oxford)\b')
+INST_STOP = {'university', 'of', 'the', 'at', 'and', 'institute', 'technology', 'college', 'school', 'state', 'department', 'dept', 'cs', 'cse',
+             'computer', 'science', 'engineering', 'in', 'january', 'february', 'march', 'april', 'may', 'june', 'july', 'august',
+             'september', 'october', 'november', 'december', 'fall', 'spring', 'summer', 'winter'}
+
+
+def other_inst(para, uni):
+    """段落里提到的、不是本人学校的学校名（"moving to HKUST CSE in January 2027"）。"""
+    own = {w for w in re.findall(r'[a-z]+', deaccent(uni)) if w not in INST_STOP}
+    for m in INST_DPHIL.finditer(para):
+        if 'oxford' not in own:
+            return 'Oxford'
+    for m in INST_MOVE.finditer(para):
+        name = re.sub(r'\s+(?:of|and|at|in)$', '', m.group(1).strip(" .,'’"))
+        name = re.split(r'\s+(?:in|on|this|next|starting|from)\b', name)[0]
+        words = {w for w in re.findall(r'[a-z]+', deaccent(name)) if w not in INST_STOP}
+        if words and not words & own and len(name) >= 3 and not re.match(r'(?:My|Our|The|This|I|We)\b', name):
+            return name[:60]
+    return None
+
+
 # 先用便宜的关键词过一遍，绝大多数句子不用跑上面的大正则
 PREFILTER = re.compile(r'(?i)student|ph\.?\s?d|doctoral|advisee|full|capacity|sabbatical|mention')
 
@@ -327,6 +426,9 @@ def classify(sent):
                 continue
         if APPLY_BOILER.search(s) and not re.search(r"(?i)\b(?:i|we|my|our|i'm)\b", seg):
             continue
+        # 招有薪 RA / 按学期的科研助理（"seeking students at all levels ... for paid research work ... at least one semester"）
+        if PAID_RA.search(s) and not PHD_APPLICANT.search(s):
+            continue
         return ('yes', 3 if is_phd_obj(s) else 2, m)
     return None
 
@@ -342,9 +444,53 @@ def surname(name):
     return deaccent(toks[-1]) if toks else ''
 
 
-def load_pages(pid, name=''):
-    """返回 ([(url, text, mtime)], 主页及子页的个数)。"""
+_LAB_FREQ = None
+
+
+def lab_url_freq():
+    """实验室网站 / 实验室页被几位教授的缓存共用（>=2：多位 PI 的研究组、院系中心页）。"""
+    global _LAB_FREQ
+    if _LAB_FREQ is None:
+        import glob
+        import gzip
+        from fetch_recruit_pages import norm
+        c = Counter()
+        for fn in glob.glob(os.path.join(ROOT, 'data/cache/lab_pages', '*.json.gz')):
+            try:
+                d = json.load(gzip.open(fn, 'rt', encoding='utf-8'))
+            except Exception:
+                continue
+            if d.get('lab'):
+                c[norm(d['lab']['url'])] += 1
+        for fn in glob.glob(os.path.join(ROOT, 'data/cache/recruit_pages', '*.json')):
+            try:
+                d = json.load(open(fn, encoding='utf-8'))
+            except Exception:
+                continue
+            for p in d.get('pages') or []:
+                if p.get('kind') == 'lab' and p.get('url'):
+                    c[norm(p['url'])] += 1
+        _LAB_FREQ = c
+    return _LAB_FREQ
+
+
+def html_text(html):
+    from fetch_pages import TextAndLinks
+    tp = TextAndLinks()
+    try:
+        tp.feed(html)
+    except Exception:
+        pass
+    text = re.sub(r'[ \t\r\f\v]+', ' ', ''.join(tp.out))
+    return re.sub(r'\n\s*\n+', '\n', text)
+
+
+def load_pages(pid, name='', homepage=''):
+    """返回 ([(url, text, mtime, meta)], 主页及子页的个数)。meta: extra（另抓的页面）、shared（多人共用的页面）。"""
+    from fetch_recruit_pages import norm
     out = []
+    sur = surname(name)
+    has_name = lambda t: bool(sur) and re.search(r'\b' + re.escape(sur) + r'\b', deaccent(t)) is not None  # noqa: E731
     pp = os.path.join(ROOT, 'data/cache/people_pages', pid + '.json')
     if os.path.exists(pp):
         mt = os.path.getmtime(pp)
@@ -353,12 +499,17 @@ def load_pages(pid, name=''):
         except Exception:
             d = {'pages': []}
         seen = set()
-        for p in d.get('pages') or []:
+        pages = d.get('pages') or []
+        prefixes = [home_prefix(u) for u in {homepage, pages[0].get('url') if pages else ''} if u]
+        for i, p in enumerate(pages):
             t = p.get('text') or ''
             if not t.strip() or t[:3000].count('\x00') > 50 or t in seen:
                 continue        # 空页 / 没解码的 UTF-16 垃圾页 / http 和 https 重复的同一页
+            # 子页要在本人那一块网站下面：院系网站上的 /theory/ 研究组页、中心页不算本人的
+            if i > 0 and prefixes and not any(under(p.get('url') or '', pre) for pre in prefixes):
+                continue
             seen.add(t)
-            out.append((p.get('url') or '', t[:400000], mt))
+            out.append((p.get('url') or '', t[:400000], mt, {}))
     if not out:
         hp = os.path.join(ROOT, 'data/cache/pages', pid + '_home.txt')
         if os.path.exists(hp):
@@ -368,8 +519,9 @@ def load_pages(pid, name=''):
                 first, _, txt = txt.partition('\n')
                 url = first[4:].strip()
             if txt.strip():
-                out.append((url, txt, os.path.getmtime(hp)))
+                out.append((url, txt, os.path.getmtime(hp), {}))
     n_home = len(out)
+    freq = lab_url_freq()
     # fetch_recruit_pages.py 另抓的 Prospective / Join / Openings / FAQ / Contact / 实验室 / 个人主页，排在主页和子页后面
     rp = os.path.join(ROOT, 'data/cache/recruit_pages', pid + '.json')
     if os.path.exists(rp):
@@ -378,28 +530,61 @@ def load_pages(pid, name=''):
             d = json.load(open(rp, encoding='utf-8'))
         except Exception:
             d = {'pages': []}
-        seen = {t for _, t, _ in out}
+        seen = {t for _, t, _, _ in out}
         prefix = home_prefix(out[0][0]) if out and out[0][0] else None
-        sur = surname(name)
-        parent_ok = False
+        parent_ok, parent_shared = False, False
         for p in d.get('pages') or []:
             t = p.get('text') or ''
             kind, url = p.get('kind') or 'sub', p.get('url') or ''
             # 是不是本人的页面：本人主页那一块下面的子页直接算；实验室 / 个人主页 / 别的主机上的页面要求页面里出现本人的姓
             # （院系简介页旁边列着别人的 "Personal Website"；实验室链接可能是同事的实验室）
-            has_name = bool(sur) and re.search(r'\b' + re.escape(sur) + r'\b', deaccent(t)) is not None
             if kind == 'sub2':
-                ok = parent_ok or has_name
+                ok, shared = parent_ok or has_name(t), parent_shared
             elif kind == 'sub' and prefix and under(url, prefix):
-                ok = True
+                ok, shared = True, False
             else:
-                ok = has_name
+                ok, shared = has_name(t), kind == 'lab' and freq[norm(url)] >= 2
             if kind != 'sub2':
-                parent_ok = ok
+                parent_ok, parent_shared = ok, shared
             if not ok or not t.strip() or t[:3000].count('\x00') > 50 or t in seen:
                 continue
             seen.add(t)
-            out.append((url, t[:400000], mt))
+            out.append((url, t[:400000], mt, {'extra': True, 'shared': shared}))
+    # fetch_lab_pages.py 抓的本人实验室网站（首页 / People / Join）
+    lp = os.path.join(ROOT, 'data/cache/lab_pages', pid + '.json.gz')
+    if os.path.exists(lp):
+        import gzip
+        try:
+            d = json.load(gzip.open(lp, 'rt', encoding='utf-8'))
+        except Exception:
+            d = {}
+        if d.get('lab') and d['lab'].get('has_name'):
+            mt = os.path.getmtime(lp)
+            shared = freq[norm(d['lab']['url'])] >= 2
+            seen = {t[:3000] for _, t, _, _ in out}
+            for p in d.get('pages') or []:
+                if not p.get('html'):
+                    continue
+                t = html_text(p['html'])
+                if t.strip() and t[:3000] not in seen:
+                    seen.add(t[:3000])
+                    out.append((p.get('final') or p['url'], t[:400000], mt, {'extra': True, 'shared': shared, 'lab': True}))
+    # fetch_lab_pages.py --follow：主页上 "THIS" / "details" / "Join" / "Positions" 链接再抓的一层
+    fp_ = os.path.join(ROOT, 'data/cache/recruit_follow', pid + '.json')
+    if os.path.exists(fp_):
+        mt = os.path.getmtime(fp_)
+        try:
+            d = json.load(open(fp_, encoding='utf-8'))
+        except Exception:
+            d = {'pages': []}
+        prefix = home_prefix(out[0][0]) if out and out[0][0] else None
+        seen = {t[:3000] for _, t, _, _ in out}
+        for p in d.get('pages') or []:
+            t, url = p.get('text') or '', p.get('final') or p.get('url') or ''
+            if not t.strip() or t[:3000] in seen or not ((prefix and under(url, prefix)) or p.get('own') or has_name(t)):
+                continue
+            seen.add(t[:3000])
+            out.append((url, t[:400000], mt, {'extra': True, 'shared': False, 'follow': True}))
     return out, n_home
 
 
@@ -449,50 +634,136 @@ SUBJ_NAME = re.compile(r'(?i:prof\.?|professor|dr\.?)\s+([A-Z][\w-]+)'
                        r'|^(?!(?:The|This|That|Our|My|He|She|We|It|Lab|Group|Team|Now|Currently)\b)([A-Z][a-z]+)\s+(?:is|are)\b')
 
 
-def find(pid, name=''):
+def para_sentences(para):
+    prev = ''
+    for x in SENT_SPLIT.split(para):
+        x = x.strip(' -*•')
+        if x:
+            yield x, prev
+            prev = x
+
+
+def page_dates(paras):
+    """页面上最新的日期（新闻、"Fall 2026" 课程等；不算版权年份），以及页脚式 "Last updated" 的日期。"""
+    newest, upd = None, []
+    for para in paras:
+        if re.search(r'(?i)©|copyright|all\s+rights', para):
+            continue
+        u = upd_stamps(para)
+        upd += u
+        rest = stamp_ym(UPD.sub(' ', para)) if u else stamp_ym(para)
+        if rest:
+            newest = max(newest or (0, 0), max(rest))
+    return newest, upd
+
+
+def find(pid, name='', uni='', homepage=''):
     found = []
-    pages, n_home = load_pages(pid, name)
+    pages, n_home = load_pages(pid, name, homepage)
     name_toks = {w.lower() for w in re.findall(r'[A-Za-z][\w-]+', name)}
-    for pi, (url, text, mt) in enumerate(pages):
+    sur = surname(name)
+    for pi, (url, text, mt, meta) in enumerate(pages):
         extra = pi >= n_home            # 另抓的页面（实验室网站可能有好几位 PI）
+        paras = paragraphs(text)
+        newest, page_upd = page_dates(paras)
         seen = set()
-        for sent, prev in sentences(text):
-            if sent in seen:
-                continue
-            seen.add(sent)
-            r = classify(sent)
-            if not r:
-                continue
-            st, strength, m = r
-            if extra:
-                # 实验室页上 "Prof. Smith is recruiting" 必须是本人
-                sm = SUBJ_NAME.match(m.group(0))
-                if sm and (sm.group(1) or sm.group(2)).lower() not in name_toks:
+        for qi, para in enumerate(paras):
+            head = ''
+            for j in range(qi - 1, max(-1, qi - 4), -1):
+                if len(paras[j]) <= 100:
+                    head = paras[j]
+                    break
+            sents = list(para_sentences(para))
+            for sent, prev in sents:
+                if sent in seen:
                     continue
-            win = sent[max(0, m.start() - 90):m.end() + 160]
-            y = target_year(win)
-            ctx = (prev[-60:] + ' ' if len(prev) < 80 else '') + sent[:max(0, m.start()) + 20]
-            stamps = stamp_years(ctx)
-            if y is None and stamps and max(stamps) < THIS_YEAR - 1:
-                continue        # 写于 2025 年以前的新闻条目
-            if y is None and stamps and max(stamps) < THIS_YEAR and re.search(
-                    r'(?i)\bthis\s+(?:coming\s+|upcoming\s+)?(?:year|cycle|fall|spring|school\s+year|academic\s+year|admissions?\s+cycle)\b', sent):
-                continue        # "August 2025: ... this coming school year" 说的是去年的招生季
-            if y is not None and y < THIS_YEAR:
-                continue        # 目标年份已过
-            if y is None:
-                # "recruiting for 2021" 一类没被识别成目标年份的旧年份
-                olds = [int(x) for x in ANY_YEAR.findall(win)]
-                if olds and max(olds) < THIS_YEAR - 1 and re.search(r'(?i)\b(?:for|in|starting|admission)\s+(?:the\s+)?20\d\d', win):
+                seen.add(sent)
+                r = classify(sent)
+                if not r:
                     continue
-            found.append(dict(s=st, strength=strength, y=y, sent=sent, m=m, src=url, page=pi, mt=mt, extra=extra))
+                st, strength, m = r
+                if extra:
+                    # 实验室页上 "Prof. Smith is recruiting" 必须是本人
+                    sm = SUBJ_NAME.match(m.group(0))
+                    if sm and (sm.group(1) or sm.group(2)).lower() not in name_toks:
+                        continue
+                if meta.get('shared') and not (sur and re.search(r'\b' + re.escape(sur) + r'\b', deaccent(sent))):
+                    continue        # 研究组 / 中心 / 多人共用的实验室页：句子里要点本人的名字
+                win = sent[max(0, m.start() - 90):m.end() + 160]
+                y, amb = target_year(win, newest)
+                yf = 'ambig' if amb else None
+                if y is None and head and RECRUITISH.search(head):
+                    y, amb = target_year(head, newest)
+                    yf = ('ambig' if amb else 'heading') if y else None
+                if y is None:
+                    for s2, _ in sents:
+                        if s2 is not sent and RECRUITISH.search(s2) and not stamp_ym(s2, seasons=False):
+                            y2, amb2 = target_year(s2, newest)
+                            if y2:
+                                y, yf = y2, ('ambig' if amb2 else 'para')
+                                break
+                ctx = (prev[-60:] + ' ' if len(prev) < 80 else '') + sent[:max(0, m.start()) + 20]
+                stamps = [x for x in stamp_ym(ctx, seasons=False)]
+                if y is None and stamps and max(stamps) < FRESH_CUT and not UPD.search(ctx):
+                    continue        # (入学年 − 1) 年 8 月以前的新闻条目
+                stale = False
+                if y is not None and y < THIS_YEAR:
+                    if st != 'yes' or y < THIS_YEAR - 4:
+                        continue    # 目标年份已过
+                    stale = True    # 往年的 PhD 招生：只用来说明不带年份的 yes 已过时
+                if y is None:
+                    # "recruiting for 2021" 一类没被识别成目标年份的旧年份
+                    olds = [int(x) for x in ANY_YEAR.findall(win)]
+                    if olds and max(olds) < THIS_YEAR - 1 and re.search(r'(?i)\b(?:for|in|starting|admission)\s+(?:the\s+)?20\d\d', win):
+                        if st != 'yes' or max(olds) < THIS_YEAR - 4:
+                            continue
+                        y, yf, stale = max(olds), 'sentence', True
+                old = False
+                if y is None and st == 'yes':
+                    # 旁边的 "Updated on 05/02/2025"；页脚的 "Last updated" 只在页面上没有更新的日期时算
+                    near = upd_stamps(' '.join([head, para] + [paras[j] for j in (qi - 1, qi + 1) if 0 <= j < len(paras) and len(paras[j]) <= 120]))
+                    up, how = (max(near), 'stamp') if near else (None, None)
+                    if up is None and page_upd and (newest is None or newest <= max(page_upd)):
+                        up, how = max(page_upd), 'footer'
+                    if up and up < FRESH_CUT:
+                        y, yf = (up[0] + 1 if up[1] >= 8 else up[0]), how
+                    elif newest and newest < (THIS_YEAR, 1):
+                        old = True  # 页面上最新的日期早于 2026：可能过时
+                phd = bool(PHD_WORD.search(sent) or (head and PHD_WORD.search(head)))
+                inst = other_inst(' '.join([head, para]), uni) if uni else None
+                found.append(dict(s=st, strength=strength, y=y, yf=yf, sent=sent, m=m, src=url, page=pi, mt=mt, extra=extra,
+                                  stale=stale, phd=phd, old=old, inst=inst))
     return found
 
 
 def pick(found):
     def key(f):
         return ((f['y'] or 0), 1 if f['s'] == 'no' else 0, f['strength'], -f['page'])
-    return max(found, key=key)
+    fresh = [f for f in found if not f['stale']]
+    if not fresh:
+        return None
+    b = max(fresh, key=key)
+    if b['s'] == 'yes' and b['y'] is None:
+        # 主页上的 yes 不带年份，本人页面（实验室 / Join / 链接页）上有往年的 PhD 招生：用往年那句（网站上显示为可能过时）
+        # 主页那句只泛指 students 时，往年那句也可以只写 openings / students（"multiple openings (fully funded) starting from Fall 2024"）
+        older = [f for f in found if f['stale'] and f['s'] == 'yes' and (f['phd'] or not b['phd'])]
+        if older:
+            b = dict(max(older, key=lambda f: (f['y'], f['strength'], -f['page'])), yf='older')
+    return b
+
+
+def summarize(res):
+    c = Counter()
+    for v in res.values():
+        if v['s'] != 'yes':
+            c['no'] += 1
+            continue
+        if v.get('y'):
+            c['yes_dated_current' if v['y'] >= ADMIT else 'yes_dated_stale'] += 1
+        else:
+            phd = v['phd'] if 'phd' in v else bool(PHD_WORD.search(v.get('q', '')))
+            c['yes_undated_phd' if phd else 'yes_undated_generic'] += 1
+    return dict(sorted(c.items()))
 
 
 def main():
@@ -501,19 +772,29 @@ def main():
     sample = int(args[args.index('--sample') + 1]) if '--sample' in args else 0
     profs = load_profs()
     res = {}
+    out = os.path.join(ROOT, 'data/enrich/recruiting.json')
+    before = json.load(open(out, encoding='utf-8')) if os.path.exists(out) else {}
     for p in profs:
-        f = find(p['id'], p['name'])
+        f = find(p['id'], p['name'], p['uni'], p['homepage'])
         if not f:
             continue
         b = pick(f)
+        if b is None:
+            continue
         res[p['id']] = dict(s=b['s'], q=clip(b['sent'], b['m']), y=b['y'], src=b['src'],
-                            at=time.strftime('%Y-%m', time.localtime(b['mt'])))
+                            at=time.strftime('%Y-%m', time.localtime(b['mt'])), phd=b['phd'])
+        for k in ('old', 'inst', 'yf'):
+            if b.get(k):
+                res[p['id']][k] = b[k]
         if debug:
             print(p['id'], p['name'], '|', b['s'], b['y'])
             for x in f:
                 print('    ', x['s'], x['y'], '|', clip(x['sent'], x['m']))
     os.makedirs(os.path.join(ROOT, 'data/enrich'), exist_ok=True)
-    out = os.path.join(ROOT, 'data/enrich/recruiting.json')
+    print('之前:', summarize(before))
+    print('之后:', summarize(res))
+    print('年份来源:', dict(Counter(v.get('yf', 'sentence' if v.get('y') else '-') for v in res.values())),
+          'old:', sum(1 for v in res.values() if v.get('old')), 'inst:', sum(1 for v in res.values() if v.get('inst')))
     with open(out, 'w', encoding='utf-8') as fo:
         json.dump(res, fo, ensure_ascii=False, indent=0, sort_keys=True)
     c = Counter(v['s'] for v in res.values())

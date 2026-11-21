@@ -17,14 +17,19 @@
   <link rel="icon" type="image/png" href="assets/tree-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=202611201631">
+  <!-- 数据最大、最先需要：和 app.js 里 fetch 的地址完全一致（app.js 直接读这个 href），bump_version.py 会一起改版本号 -->
+  <link rel="preload" href="data/graph.json?v=202611210550" as="fetch" crossorigin>
+  <!-- 字体不阻塞首屏：先按 print 加载，加载完再切到 all -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,500&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="style.css?v=202611210550">
 </head>
 <body>
   <header class="nav">
     <a class="logo" href="#/" aria-label="Academic Lineage Family Tree home"><img src="assets/tree-icon.png" alt="" width="32" height="32"><span>Academic Lineage</span></a>
     <nav>
       <a href="#/" data-nav="home">HOME</a>
+      <a href="#/connect" data-nav="connect" title="How are two people connected?">CONNECT</a>
       <a href="#/about" data-nav="about">ABOUT</a>
       <a href="#/favorites" class="pill" data-nav="favorites">FAVORITES <span id="favCount" class="fav-count" hidden></span></a>
     </nav>
@@ -37,8 +42,10 @@
       <p class="eyebrow">For prospective CS PhD students</p>
       <h1 class="title">Academic Lineage <span>Family Tree</span></h1>
       <p class="lede">Find advisors through their academic families: who trained whom among computer science professors at US universities, and who says they are recruiting.</p>
+      <p class="home-notice" id="homeNotice" role="alert" hidden></p>
       <div class="search-card" data-search="home"></div>
       <p class="hero-try" id="heroTry"></p>
+      <p class="hero-connect"><a href="#/connect">Compare two people: how are they connected?</a></p>
       <ul class="hero-stats" id="heroStats"></ul>
     </section>
 
@@ -51,9 +58,11 @@
           <label class="name-filter"><img src="assets/icons/icon_search.png" alt=""><input id="nameFilter" type="search" placeholder="Filter by name" aria-label="Filter results by name"></label>
           <label class="toggle" title="Advisor recorded in a source (curated sheet, CV, homepage, Wikidata, Wikipedia); advisors only inferred from dblp co-authorship do not count"><input type="checkbox" id="onlyKnown"> Advisor on record</label>
           <label class="toggle"><input type="checkbox" id="onlyAP"> Assistant professors</label>
-          <label class="toggle"><input type="checkbox" id="onlyRC"> Says recruiting</label>
+          <label class="toggle" title="Their homepage says they are taking PhD students for this admission year"><input type="checkbox" id="onlyRC"> <span id="onlyRCLabel">Recruiting</span></label>
+          <label class="toggle sub-toggle" title="Also include homepages that say they are looking for PhD students but give no year (may be out of date)"><input type="checkbox" id="onlyRCOpen"> <span id="onlyRCOpenLabel">+ open to students (no year)</span></label>
           <select id="sort" aria-label="Sort results">
             <option value="lineage" title="Number of advisors and students we found in public records, not a ranking">Most links on record</option>
+            <option value="recruiting">Recruiting first</option>
             <option value="name">Name</option>
             <option value="uni">Institution</option>
           </select>
@@ -68,7 +77,7 @@
       <div class="results-head">
         <h2>Favorites <small id="favCount2"></small></h2>
         <div class="results-tools">
-          <span class="seg-btns" role="group" aria-label="View"><button type="button" data-favview="cards" class="on">Cards</button><button type="button" data-favview="table">Table &amp; notes</button></span>
+          <span class="seg-btns" role="group" aria-label="View"><button type="button" data-favview="cards" class="on" aria-pressed="true">Cards</button><button type="button" data-favview="table" aria-pressed="false">Table &amp; notes</button></span>
           <button type="button" class="btn-ghost" id="favExport" title="Download your favorites, with notes, as a spreadsheet">Export CSV</button>
         </div>
       </div>
@@ -96,7 +105,7 @@
             <div class="tree-viewport" id="viewport">
               <div class="tree-scale" id="scaleBox">
                 <svg class="links" id="links" aria-hidden="true"></svg>
-                <div class="bands" id="bands"></div>
+                <div class="bands" id="bands" role="group" aria-label="Family tree: advisors to the left, students to the right. Arrow keys move between people, Page Up and Page Down change page, Enter shows details, C makes the person the center."></div>
               </div>
             </div>
             <button class="gen-arrow right" id="genRight" type="button" aria-label="Show later generations"></button>
@@ -104,10 +113,10 @@
           <!-- 家族名单：从中心人物出发，按亲缘远近列出在美国高校任教的人 -->
           <aside class="family" id="family" aria-label="Academic family and details">
             <div class="side-tabs" role="tablist">
-              <button type="button" role="tab" id="tabFam" class="on" aria-selected="true">Family list</button>
-              <button type="button" role="tab" id="tabInfo" aria-selected="false" disabled>Details</button>
+              <button type="button" role="tab" id="tabFam" class="on" aria-selected="true" aria-controls="paneFam" tabindex="0">Family list</button>
+              <button type="button" role="tab" id="tabInfo" aria-selected="false" aria-controls="drawer" tabindex="-1" disabled>Details</button>
             </div>
-            <div class="side-pane" id="paneFam">
+            <div class="side-pane" id="paneFam" role="tabpanel" aria-labelledby="tabFam">
             <div class="fam-head">
               <div class="fam-head-row"><h3 id="famTitle">Academic family</h3><button type="button" class="btn-mini" id="famCopy" title="Copy a link to this tree with the current filters">Copy link</button></div>
               <p class="fam-sub" id="famSub"></p>
@@ -116,18 +125,21 @@
             <div class="fam-controls">
               <div class="seg" role="group" aria-label="How far from the center">
                 <span class="seg-label">Within</span>
-                <span class="seg-btns"><button type="button" data-dist="1">1 step</button><button type="button" data-dist="2" class="on">2</button><button type="button" data-dist="3">3</button><button type="button" data-dist="4">4</button></span>
+                <span class="seg-btns"><button type="button" data-dist="1" aria-pressed="false">1 step</button><button type="button" data-dist="2" class="on" aria-pressed="true" aria-label="2 steps">2</button><button type="button" data-dist="3" aria-pressed="false" aria-label="3 steps">3</button><button type="button" data-dist="4" aria-pressed="false" aria-label="4 steps">4</button></span>
               </div>
               <label class="toggle"><input type="checkbox" id="famAP"> Assistant profs</label>
               <label class="toggle" id="famNewWrap" hidden><input type="checkbox" id="famNew"> <span id="famNewLabel">New APs</span></label>
-              <label class="toggle"><input type="checkbox" id="famRC"> Says recruiting</label>
+              <label class="toggle sub-toggle" id="famNewUnkWrap" hidden title="Also include assistant professors whose start year we could not find"><input type="checkbox" id="famNewUnk"> <span id="famNewUnkLabel">+ start year unknown</span></label>
+              <label class="toggle"><input type="checkbox" id="famRC"> <span id="famRCLabel">Recruiting</span></label>
+              <label class="toggle sub-toggle" title="Also include homepages that say they are looking for PhD students but give no year (may be out of date)"><input type="checkbox" id="famRCOpen"> <span id="famRCOpenLabel">+ open to students (no year)</span></label>
               <label class="toggle"><input type="checkbox" id="famArea"> Same area</label>
               <label class="toggle"><input type="checkbox" id="famAll"> Include non-faculty</label>
               <label class="toggle" title="Hide advisor links that were inferred from co-authorship on dblp rather than recorded in a source"><input type="checkbox" id="famNoInf"> Hide inferred links</label>
+              <p class="fam-filters" id="famFilters" hidden><span id="famFiltersText"></span> · <button type="button" class="linkbtn inline" id="famClear">Clear</button></p>
             </div>
             <ol class="fam-list" id="famList"></ol>
             </div>
-            <div class="side-pane drawer" id="drawer" aria-live="polite" hidden></div>
+            <div class="side-pane drawer" id="drawer" role="tabpanel" aria-labelledby="tabInfo" hidden></div>
           </aside>
         </div>
         <div class="tree-legend">
@@ -142,6 +154,22 @@
       </div>
     </section>
 
+    <!-- 两人关系 -->
+    <section id="view-connect" class="view connect" hidden>
+      <div class="cx-head">
+        <h2>How are two people connected?</h2>
+        <p class="muted">The shortest chain of PhD and postdoc advisor links between any two researchers: lab siblings, academic cousins, a grand-advisor…</p>
+      </div>
+      <div class="search-card cx-card">
+        <div class="cx-form" id="cxForm"></div>
+        <div class="cx-opts">
+          <label class="toggle" title="Leave out advisor links that were inferred from co-authorship on dblp rather than recorded in a source"><input type="checkbox" id="cxNoInf"> Exclude inferred links</label>
+          <button type="button" class="btn-mini" id="cxCopy" hidden title="Copy a link to this comparison">Copy link</button>
+        </div>
+      </div>
+      <div class="cx-out" id="cxOut" aria-live="polite"></div>
+    </section>
+
     <!-- 关于 -->
     <section id="view-about" class="view about" hidden>
       <article class="about-card" id="aboutBody"></article>
@@ -149,6 +177,7 @@
   </main>
 
   <div id="tip" class="tip" hidden></div>
+  <div id="srLive" class="sr-only" role="status" aria-live="polite"></div>
 
   <!-- 纠错表单 -->
   <dialog class="fix-dialog" id="fixDialog" aria-labelledby="fixTitle">
@@ -169,6 +198,7 @@
           <option>Recruiting information is wrong or outdated</option>
           <option>Photo is not this person</option>
           <option>Homepage or links are wrong</option>
+          <option>Listed as an outside researcher but is current faculty</option>
           <option>Same person listed twice</option>
           <option>Remove my photo or information</option>
           <option>Other</option>
@@ -178,12 +208,13 @@
         <textarea id="fixWhat" name="details" rows="4" required placeholder="e.g. Her PhD advisor was Jane Doe (Stanford, 2015), not John Smith."></textarea>
       </label>
       <label class="fix-field"><span>Source <small>(optional)</small></span>
-        <input type="url" id="fixSrc" name="source" placeholder="Link to a CV, homepage, thesis or Mathematics Genealogy page">
+        <input type="text" inputmode="url" id="fixSrc" name="source" placeholder="Link to a CV, homepage, thesis or Mathematics Genealogy page" autocomplete="off">
       </label>
       <label class="fix-field"><span>Your email <small>(optional, only if you’d like a reply)</small></span>
         <input type="email" id="fixEmail" name="email" autocomplete="email">
       </label>
       <input type="text" name="_gotcha" class="fix-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="fix-note">Sent to the site maintainer through Formspree, a form service. Your email is used only to reply.</p>
       <p class="fix-msg" id="fixMsg" role="status"></p>
       <div class="fix-actions">
         <button type="button" class="btn-ghost" id="fixCancel">Cancel</button>
@@ -192,6 +223,6 @@
     </form>
   </dialog>
   <noscript><p class="noscript">This site needs JavaScript to draw the lineage tree.</p></noscript>
-  <script src="app.js?v=202611201631"></script>
+  <script src="app.js?v=202611210550"></script>
 </body>
 </html>

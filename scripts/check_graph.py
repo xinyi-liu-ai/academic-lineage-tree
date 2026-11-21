@@ -19,7 +19,7 @@ hard = 0
 
 
 def is_prof(i):
-    return re.fullmatch(r"p\d+", i) is not None
+    return re.fullmatch(r"p\d+", i) is not None or i.startswith("nf:")  # nf:<名字> 是还没进 CSRankings 的新老师
 
 
 def report(title, items, hard_err=False, total=None):
@@ -134,7 +134,8 @@ for n in nodes.values():
         if v and not re.match(r"https?://", str(v), re.I):
             badurl.append(f"{n['id']} {n.get('n')!r} {f}={str(v)[:60]!r}")
 for e in edges:
-    if len(e) > 4 and e[4] and not re.match(r"https?://", str(e[4]), re.I):
+    # 各来源的出处链接用 " | " 连接（顺序同来源，某个来源没有链接时那一段为空）
+    if len(e) > 4 and e[4] and not all(re.match(r"https?://", u, re.I) for u in str(e[4]).split(" | ") if u.strip()):
         badurl.append(f"edge {e[0]}->{e[1]} url={str(e[4])[:60]!r}")
 report("non-http(s) URLs", badurl, True)
 

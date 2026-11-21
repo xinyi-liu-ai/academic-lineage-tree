@@ -1,0 +1,234 @@
+{
+ "_doc": "同一人在 professors.csv 里出现两次（update_faculty 新行和旧行）。build_graph 合并：节点 id 用较早的那个（收藏夹按 id 存），姓名 / 主页 / 学校 / 状态等用 data 那一行，另一行的边并过来。rename: 显示名修正。",
+ "merge": [
+  {
+   "data": "p6666",
+   "other": "p6665",
+   "names": [
+    "David H. Smith IV",
+    "David H. Smith"
+   ],
+   "note": "VT 主页写 David H. Smith IV"
+  },
+  {
+   "data": "p1051",
+   "other": "p1071",
+   "names": [
+    "Erik Andersen",
+    "Erik Andersen"
+   ],
+   "note": "p1071 上的 dblp 导师 Manocha 来自另一个无后缀的 Erik Andersen，应丢弃"
+  },
+  {
+   "data": "p1349",
+   "other": "p6616",
+   "names": [
+    "Patrick D. McDaniel",
+    "Patrick McDaniel"
+   ],
+   "note": "p6616 是重复的新行；它的学生边被 detach 成 hs:p6616:berkay celik / quinn burke / blaine hoak 等，去重后这些问题随之消失"
+  },
+  {
+   "data": "p5347",
+   "other": "p4089",
+   "names": [
+    "Carl Yang",
+    "Carl J. Yang"
+   ],
+   "note": "p4089(former) 带人工表导师 Jiawei Han + 博后 Lukasiewicz，去重时把这些字段并到 p5347"
+  },
+  {
+   "data": "p637",
+   "other": "p5540",
+   "names": [
+    "Jeffrey Lang",
+    "Jeffrey H. Lang"
+   ],
+   "note": ""
+  },
+  {
+   "data": "p2615",
+   "other": "p2616",
+   "names": [
+    "James W. Davis",
+    "Jim Davis"
+   ],
+   "note": "Jim Davis = James W. Davis"
+  },
+  {
+   "data": "p5582",
+   "other": "p4138",
+   "names": [
+    "Grace Guiling Wang",
+    "Guiling Wang"
+   ],
+   "note": "NJIT 页面: Guiling \"Grace\" Wang"
+  },
+  {
+   "data": "p6226",
+   "other": "p4442",
+   "names": [
+    "Larry Shi",
+    "Weidong Shi"
+   ],
+   "note": "Weidong \"Larry\" Shi，同 Scholar；保留在职那行，名字建议用 Weidong (Larry) Shi"
+  },
+  {
+   "data": "p5365",
+   "other": "p4512",
+   "names": [
+    "Jason Liu",
+    "Jason Liu"
+   ],
+   "note": "Jason Liu 0001"
+  },
+  {
+   "data": "p4811",
+   "other": "p4810",
+   "names": [
+    "Erin L. Brady",
+    "Erin Brady"
+   ],
+   "note": ""
+  },
+  {
+   "data": "p1132",
+   "other": "p1109",
+   "names": [
+    "Zhicheng Liu",
+    "Zhicheng Liu"
+   ],
+   "note": ""
+  },
+  {
+   "data": "p1168",
+   "other": "p5647",
+   "names": [
+    "Huy L. Nguyen",
+    "Huy L. Nguyen"
+   ],
+   "note": ""
+  },
+  {
+   "data": "p3328",
+   "other": "p3345",
+   "names": [
+    "Saúl A. Blanco",
+    "Saúl Blanco"
+   ],
+   "note": ""
+  },
+  {
+   "data": "p1948",
+   "other": "p1978",
+   "names": [
+    "Shuai Mu",
+    "Shuai Mu"
+   ],
+   "note": ""
+  },
+  {
+   "data": "p2817",
+   "other": "p2837",
+   "names": [
+    "Yiling Chen",
+    "Yiling Chen"
+   ],
+   "note": ""
+  },
+  {
+   "data": "p330",
+   "other": "p382",
+   "names": [
+    "Tsui-Wei Weng",
+    "Lily Weng"
+   ],
+   "note": "主页 Tsui-Wei (Lily) Weng"
+  },
+  {
+   "data": "p4063",
+   "other": "p4065",
+   "names": [
+    "David A. McAllester",
+    "David McAllester"
+   ],
+   "note": ""
+  },
+  {
+   "data": "p239",
+   "other": "p6084",
+   "names": [
+    "Sayan Mitra",
+    "Sayan Mitra"
+   ],
+   "note": ""
+  },
+  {
+   "data": "p6056",
+   "other": "p2722",
+   "names": [
+    "Andi Quinn",
+    "Andrew Quinn"
+   ],
+   "note": "主页: Andi Quinn（曾用名 Andrew Quinn）"
+  },
+  {
+   "data": "p4636",
+   "other": "p4643",
+   "names": [
+    "Gursimran Singh Walia",
+    "Gursimran Walia"
+   ],
+   "note": ""
+  },
+  {
+   "data": "p3658",
+   "other": "p3682",
+   "names": [
+    "Xiaobo Sharon Hu",
+    "Xiaobo Hu"
+   ],
+   "note": ""
+  },
+  {
+   "data": "p4687",
+   "other": "p5567",
+   "names": [
+    "Zhenlin Wang",
+    "Zhenlin Wang"
+   ],
+   "note": "两个 MTU 主页地址，同 Scholar"
+  },
+  {
+   "data": "p877",
+   "other": "p922",
+   "names": [
+    "Jamie Morgenstern",
+    "Jamie H. Morgenstern"
+   ],
+   "note": ""
+  },
+  {
+   "data": "p5549",
+   "other": "p594",
+   "names": [
+    "Sam Hopkins",
+    "Samuel B. Hopkins"
+   ],
+   "note": ""
+  },
+  {
+   "data": "p1784",
+   "other": "p5400",
+   "names": [
+    "Cindy Xiong Bearfield",
+    "Cindy Xiong"
+   ],
+   "note": "主页 Cindy Xiong Bearfield, Georgia Tech"
+  }
+ ],
+ "rename": {
+  "p6612": "Lucy Li",
+  "p6226": "Weidong (Larry) Shi"
+ }
+}

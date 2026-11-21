@@ -423,5 +423,2693 @@
   "keep": "wd:Q103330793",
   "drop": "hs:p651:nhat ho",
   "reason": "same_scholar"
+ },
+ {
+  "keep": "p673",
+  "drop": "x:bjoern hartmann",
+  "reason": "same_scholar",
+  "names": [
+   "Björn Hartmann",
+   "Bjoern Hartmann"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "same_photo",
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p3819",
+  "drop": "hs:p2968:tom shrimpton",
+  "reason": "same_scholar",
+  "names": [
+   "Thomas Shrimpton",
+   "Tom Shrimpton"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "same_photo",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "x:kiriakos kutulakos",
+  "drop": "x:kyros kutulakos",
+  "reason": "same_scholar",
+  "names": [
+   "Kiriakos N. Kutulakos",
+   "Kyros Kutulakos"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "same_photo",
+   "shared_student"
+  ],
+  "verified": "verified_web",
+  "note": "主页自称 Kyros Kutulakos，O'Toole 为其博士"
+ },
+ {
+  "keep": "p1339",
+  "drop": "hs:p930:sharon li",
+  "reason": "same_scholar",
+  "names": [
+   "Yixuan Li",
+   "Sharon Li"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "verified_web",
+  "note": "主页: Sharon Y. Li = Yixuan Li，Stanford 博后跟 Chris Ré"
+ },
+ {
+  "keep": "p4145",
+  "drop": "hs:p1522:liping liu",
+  "reason": "same_scholar",
+  "names": [
+   "Li-Ping Liu",
+   "Liping Liu"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p6382",
+  "drop": "hs:p3025:mohammad rifat",
+  "reason": "same_scholar",
+  "names": [
+   "Md. Rashidujjaman Rifat",
+   "Mohammad Rashidujjaman Rifat"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "verified_web",
+  "note": "Amy Voida 组页: Former Ph.D. Students (CU 2016-2017)"
+ },
+ {
+  "keep": "wd:Q29342558",
+  "drop": "dblp:Cheng-Zhong Xu 0001",
+  "reason": "same_scholar",
+  "names": [
+   "Chengzhong Xu",
+   "Cheng-Zhong Xu"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "same_linkedin"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p4912:seyed alinodehi",
+  "drop": "hs:p4913:seyed alinodehi",
+  "reason": "same_scholar",
+  "names": [
+   "Seyed Pourya Hoseini Alinodehi",
+   "Seyed Pourya Hoseini Alinodehi"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "same_linkedin"
+  ],
+  "verified": "graph_data",
+  "note": "两位 Nicolescu 共同指导"
+ },
+ {
+  "keep": "p535",
+  "drop": "hs:p1379:constantine dovrolis",
+  "reason": "same_scholar",
+  "names": [
+   "Constantinos Dovrolis",
+   "Constantine Dovrolis"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p999",
+  "drop": "hs:p930:chris sa",
+  "reason": "same_scholar",
+  "names": [
+   "Christopher De Sa",
+   "Chris De Sa"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p999",
+  "drop": "x:chris de",
+  "reason": "same_homepage",
+  "names": [
+   "Christopher De Sa",
+   "Chris De"
+  ],
+  "evidence": [
+   "same_homepage",
+   "shared_student"
+  ],
+  "verified": "graph_data",
+  "note": "\"Chris De\" 是 Chris De Sa 被截断的名字"
+ },
+ {
+  "keep": "p1476",
+  "drop": "hs:p901:joe devietti",
+  "reason": "same_scholar",
+  "names": [
+   "Joseph Devietti",
+   "Joe Devietti"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p2648",
+  "drop": "hs:p686:brad campbell",
+  "reason": "same_scholar",
+  "names": [
+   "Bradford Campbell",
+   "Brad Campbell"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p3273",
+  "drop": "hs:p3691:chris thomas",
+  "reason": "same_scholar",
+  "names": [
+   "Christopher Thomas",
+   "Chris Thomas"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "x:joshua tenenbaum",
+  "drop": "x:josh tenenbaum",
+  "reason": "same_scholar",
+  "names": [
+   "Joshua B. Tenenbaum",
+   "Josh Tenenbaum"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "same_photo",
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q15429156",
+  "drop": "x:bud mishra",
+  "reason": "same_scholar",
+  "names": [
+   "Bhubaneswar Mishra",
+   "Bud Mishra"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102400507",
+  "drop": "hs:p142:neel krishnaswami",
+  "reason": "same_scholar",
+  "names": [
+   "Neelakantan R. Krishnaswami",
+   "Neel Krishnaswami"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q92906",
+  "drop": "wp:James_Kurose",
+  "reason": "same_scholar",
+  "names": [
+   "Jim Kurose",
+   "James Kurose"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p2241:ranran zhang",
+  "drop": "hs:p2241:haoran zhang",
+  "reason": "same_scholar",
+  "names": [
+   "Ranran Haoran Zhang",
+   "Haoran Zhang"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "same_photo",
+   "shared_advisor"
+  ],
+  "verified": "verified_web",
+  "note": "主页全名 Ranran Haoran Zhang，导师 Rui Zhang"
+ },
+ {
+  "keep": "p3110",
+  "drop": "hs:p3110:catherine zhao",
+  "reason": "same_scholar",
+  "names": [
+   "Qi Zhao",
+   "Catherine Qi Zhao"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data",
+  "note": "教授把自己列在组员页上；合并后自环边被丢弃"
+ },
+ {
+  "keep": "p4978",
+  "drop": "hs:p4978:sidd kaza",
+  "reason": "same_scholar",
+  "names": [
+   "Siddharth Kaza",
+   "Sidd Kaza"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data",
+  "note": "同上，自己列自己"
+ },
+ {
+  "keep": "wd:Q102460171",
+  "drop": "hs:p964:michael kapralov",
+  "reason": "same_homepage",
+  "names": [
+   "Mikhail Kapralov",
+   "Michael Kapralov"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_linkedin",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p3754",
+  "drop": "hs:p866:matt mauriello",
+  "reason": "same_homepage",
+  "names": [
+   "Matthew Louis Mauriello",
+   "Matt Mauriello"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102387593",
+  "drop": "hs:p4222:michail lampis",
+  "reason": "same_homepage",
+  "names": [
+   "Michael Lampis",
+   "Michail Lampis"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo",
+   "shared_advisor"
+  ],
+  "verified": "verified_web",
+  "note": "主页 Michael Lampis，邮箱 michail.lampis，导师 Bar-Noy"
+ },
+ {
+  "keep": "p601",
+  "drop": "hs:p873:monia ghobadi",
+  "reason": "same_scholar",
+  "names": [
+   "Manya Ghobadi",
+   "Monia Ghobadi"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage"
+  ],
+  "verified": "verified_web",
+  "note": "Ratul 页面 Postdocs: \"Monia Ghobadi ... Faculty at MIT\"；本人主页 Manya Ghobadi"
+ },
+ {
+  "keep": "p926",
+  "drop": "x:fei li",
+  "reason": "same_homepage",
+  "names": [
+   "Li Fei-Fei",
+   "Fei-Fei Li"
+  ],
+  "evidence": [
+   "same_homepage",
+   "shared_advisor",
+   "shared_student"
+  ],
+  "verified": "graph_data",
+  "note": "注意：x:fei li 上的 H. V. Jagadish→Fei-Fei Li（wikidata Q103329999）是另一个同名 Fei Li，合并前应先在 edge_blocklist 摘掉这条"
+ },
+ {
+  "keep": "p1362",
+  "drop": "hs:p930:fred sala",
+  "reason": "same_scholar",
+  "names": [
+   "Frederic Sala",
+   "Fred Sala"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p930",
+  "drop": "x:chris re",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Christopher Ré",
+   "Chris Ré"
+  ],
+  "evidence": [
+   "shared_student"
+  ],
+  "verified": "graph_data",
+  "note": "Stanford 主页同一人（cs.stanford.edu/~chrismre），共同学生 Ce Zhang/Frederic Sala"
+ },
+ {
+  "keep": "p1644",
+  "drop": "hs:p954:sam bowman",
+  "reason": "same_scholar",
+  "names": [
+   "Samuel R. Bowman",
+   "Sam Bowman"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p1677",
+  "drop": "hs:p741:lakshmi subramanian",
+  "reason": "same_scholar",
+  "names": [
+   "Lakshminarayanan Subramanian",
+   "Lakshmi Subramanian"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102301342",
+  "drop": "x:srikant",
+  "reason": "same_scholar",
+  "names": [
+   "Rayadurgam Srikant",
+   "R. Srikant"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p5673",
+  "drop": "hs:p96:izzy grosof",
+  "reason": "same_scholar",
+  "names": [
+   "Isaac Grosof",
+   "Izzy Grosof"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "shared_advisor"
+  ],
+  "verified": "verified_web",
+  "note": "主页: Izzy 原为 Isaac 的简称，CMU 博士导师 Mor Harchol-Balter"
+ },
+ {
+  "keep": "p6102",
+  "drop": "hs:p2006:jimmy foulds",
+  "reason": "same_scholar",
+  "names": [
+   "James R. Foulds",
+   "Jimmy Foulds"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q59489679",
+  "drop": "hs:p918:kit kuksenok",
+  "reason": "same_scholar",
+  "names": [
+   "Kateryna Kuksenok",
+   "Kit Kuksenok"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "shared_advisor"
+  ],
+  "verified": "verified_web",
+  "note": "主页只写 \"kit ksen\"；同 Scholar + 同导师 Aragon，可信度中等"
+ },
+ {
+  "keep": "p9",
+  "drop": "hs:p1446:steven wu",
+  "reason": "same_scholar",
+  "names": [
+   "Zhiwei Steven Wu",
+   "Steven Wu"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q55394763",
+  "drop": "x:scott yih",
+  "reason": "same_scholar",
+  "names": [
+   "Wen-tau Yih",
+   "Scott Yih"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "verified_web",
+  "note": "主页: Scott Wen-tau Yih"
+ },
+ {
+  "keep": "wd:Q28017187",
+  "drop": "x:alex smola",
+  "reason": "same_homepage",
+  "names": [
+   "Alexander J. Smola",
+   "Alex Smola"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p814",
+  "drop": "hs:p2812:elizabeth bondi",
+  "reason": "same_scholar",
+  "names": [
+   "Elizabeth Bondi-Kelly",
+   "Elizabeth Bondi"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "shared_advisor"
+  ],
+  "verified": "graph_data",
+  "note": "Tambe alumni 页把她列为 postdoc，合并后会多一条 Tambe→Bondi-Kelly 的 postdoc 边（她是 Tambe 的博士）"
+ },
+ {
+  "keep": "wd:Q6846221",
+  "drop": "x:michael cafarella",
+  "reason": "same_homepage",
+  "names": [
+   "Mike Cafarella",
+   "Michael Cafarella"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "x:jerome feldman",
+  "drop": "x:jerry feldman",
+  "reason": "same_homepage",
+  "names": [
+   "Jerome Feldman",
+   "Jerry Feldman"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p586",
+  "drop": "x:ryan williams",
+  "reason": "same_homepage",
+  "names": [
+   "R. Ryan Williams",
+   "Ryan Williams"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q93034",
+  "drop": "x:ravi kannan",
+  "reason": "same_homepage",
+  "names": [
+   "Ravindran Kannan",
+   "Ravi Kannan"
+  ],
+  "evidence": [
+   "same_homepage",
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102668074",
+  "drop": "hs:p96:kristy gardner",
+  "reason": "same_homepage",
+  "names": [
+   "Kristen Gardner",
+   "Kristy Gardner"
+  ],
+  "evidence": [
+   "same_homepage",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102258377",
+  "drop": "wp:Ashok_Goel",
+  "reason": "same_homepage",
+  "names": [
+   "B. Chandrasekaran",
+   "Balakrishnan Chandrasekaran"
+  ],
+  "evidence": [
+   "same_homepage",
+   "shared_student"
+  ],
+  "verified": "graph_data",
+  "note": "wp 节点 id 取自 Ashok Goel 词条，名字是 Balakrishnan Chandrasekaran"
+ },
+ {
+  "keep": "wd:Q6323607",
+  "drop": "wp:K._Mani_Chandy",
+  "reason": "same_homepage",
+  "names": [
+   "Kanianthra Mani Chandy",
+   "K. Mani Chandy"
+  ],
+  "evidence": [
+   "same_homepage",
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q2571880",
+  "drop": "wp:Andy_van_Dam",
+  "reason": "same_homepage",
+  "names": [
+   "Andries van Dam",
+   "Andy van Dam"
+  ],
+  "evidence": [
+   "same_homepage",
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102404138",
+  "drop": "hs:p3478:jung oh",
+  "reason": "same_homepage",
+  "names": [
+   "Junghwan Oh",
+   "Jung-Hwan Oh"
+  ],
+  "evidence": [
+   "same_homepage",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p5622",
+  "drop": "hs:p5622:panos ipeirotis",
+  "reason": "same_scholar",
+  "names": [
+   "Panagiotis G. Ipeirotis",
+   "Panos Ipeirotis"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data",
+  "note": "自己列自己"
+ },
+ {
+  "keep": "wd:Q102346700",
+  "drop": "x:lori levin",
+  "reason": "same_scholar",
+  "names": [
+   "Lorraine Levin",
+   "Lori S. Levin"
+  ],
+  "evidence": [
+   "same_scholar",
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102121525",
+  "drop": "wp:Benny_Chor",
+  "reason": "same_scholar",
+  "names": [
+   "Ben-Zion Chor",
+   "Benny Chor"
+  ],
+  "evidence": [
+   "same_scholar",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p6612",
+  "drop": "hs:p693:lucy li",
+  "reason": "same_homepage",
+  "names": [
+   "Li Lucy",
+   "Lucy Li"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo",
+   "shared_advisor"
+  ],
+  "verified": "verified_web",
+  "note": "主页名字是 Lucy Li（professors.csv 里写成 \"Li Lucy\"，姓名顺序反了）"
+ },
+ {
+  "keep": "wd:Q7364659",
+  "drop": "x:ron baecker",
+  "reason": "same_homepage",
+  "names": [
+   "Ronald Baecker",
+   "Ron Baecker"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo",
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p869",
+  "drop": "hs:p53:jake wobbrock",
+  "reason": "same_homepage",
+  "names": [
+   "Jacob O. Wobbrock",
+   "Jake Wobbrock"
+  ],
+  "evidence": [
+   "same_homepage",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p995",
+  "drop": "x:tom ristenpart",
+  "reason": "same_homepage",
+  "names": [
+   "Thomas Ristenpart",
+   "Tom Ristenpart"
+  ],
+  "evidence": [
+   "same_homepage",
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p995",
+  "drop": "hs:p321:tom ristenpart",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Thomas Ristenpart",
+   "Tom Ristenpart"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data",
+  "note": "同导师 Bellare"
+ },
+ {
+  "keep": "p1089",
+  "drop": "wd:Q102407901",
+  "reason": "same_homepage",
+  "names": [
+   "Dave Levin",
+   "David Levin"
+  ],
+  "evidence": [
+   "same_homepage",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p3370",
+  "drop": "x:matt green",
+  "reason": "same_homepage",
+  "names": [
+   "Matthew Green",
+   "Matt Green"
+  ],
+  "evidence": [
+   "same_homepage",
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p4143",
+  "drop": "hs:p947:jeff foster",
+  "reason": "same_homepage",
+  "names": [
+   "Jeffrey S. Foster",
+   "Jeff Foster"
+  ],
+  "evidence": [
+   "same_homepage",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p4152",
+  "drop": "hs:p1423:sam guyer",
+  "reason": "same_homepage",
+  "names": [
+   "Samuel Z. Guyer",
+   "Sam Guyer"
+  ],
+  "evidence": [
+   "same_homepage",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q96085795",
+  "drop": "hs:p736:chris hillar",
+  "reason": "same_homepage",
+  "names": [
+   "Christopher Hillar",
+   "Chris Hillar"
+  ],
+  "evidence": [
+   "same_homepage",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102368349",
+  "drop": "hs:p736:angelica cueto",
+  "reason": "same_homepage",
+  "names": [
+   "María Angélica Cueto",
+   "Angelica Cueto"
+  ],
+  "evidence": [
+   "same_homepage",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p5619",
+  "drop": "hs:p669:juanky perdomo",
+  "reason": "same_homepage",
+  "names": [
+   "Juan C. Perdomo",
+   "Juanky Perdomo"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo",
+   "shared_advisor"
+  ],
+  "verified": "verified_web",
+  "note": "主页 Juan Carlos Perdomo，UC Berkeley 博士"
+ },
+ {
+  "keep": "wd:Q125902713",
+  "drop": "hs:p682:alex wei",
+  "reason": "same_homepage",
+  "names": [
+   "Alexander Wei",
+   "Alex Wei"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p580",
+  "drop": "x:stefanie mueller",
+  "reason": "same_scholar",
+  "names": [
+   "Stefanie Müller",
+   "Stefanie Mueller"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p786",
+  "drop": "hs:p53:stephen oney",
+  "reason": "same_scholar",
+  "names": [
+   "Steve Oney",
+   "Stephen Oney"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p801",
+  "drop": "hs:p441:greg bodwin",
+  "reason": "same_scholar",
+  "names": [
+   "Gregory Bodwin",
+   "Greg Bodwin"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p2112",
+  "drop": "hs:p289:ling yan",
+  "reason": "same_scholar",
+  "names": [
+   "Lingqi Yan",
+   "Ling-Qi Yan"
+  ],
+  "evidence": [
+   "same_scholar",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p3551",
+  "drop": "hs:p1463:eugene vorobeychik",
+  "reason": "same_scholar",
+  "names": [
+   "Yevgeniy Vorobeychik",
+   "Eugene Vorobeychik"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage"
+  ],
+  "verified": "verified_web",
+  "note": "主页 Yevgeniy Vorobeychik；同 Scholar"
+ },
+ {
+  "keep": "wd:Q93151",
+  "drop": "wp:Avi_Kak",
+  "reason": "same_scholar",
+  "names": [
+   "Avinash Kak",
+   "Avi Kak"
+  ],
+  "evidence": [
+   "same_scholar",
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p6235",
+  "drop": "hs:p2029:joseph hummel",
+  "reason": "same_homepage",
+  "names": [
+   "Joe Hummel",
+   "Joseph Hummel"
+  ],
+  "evidence": [
+   "same_homepage"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102253272",
+  "drop": "hs:p1063:neal glew",
+  "reason": "same_homepage",
+  "names": [
+   "Arthur Neal Glew",
+   "Neal Glew"
+  ],
+  "evidence": [
+   "same_homepage"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102882492",
+  "drop": "hs:p1519:sanghack lee",
+  "reason": "same_homepage",
+  "names": [
+   "Sanghack Lee",
+   "Sanghack Lee"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p69:eric zeng",
+  "drop": "hs:p861:eric zeng",
+  "reason": "same_homepage",
+  "names": [
+   "Eric Zeng",
+   "Eric Zeng"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p2700:rasmus kyng",
+  "drop": "hs:p689:rasmus kyng",
+  "reason": "same_homepage",
+  "names": [
+   "Rasmus Kyng",
+   "Rasmus Kyng"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p934:guandao yang",
+  "drop": "hs:p996:guandao yang",
+  "reason": "same_homepage",
+  "names": [
+   "Guandao Yang",
+   "Guandao Yang"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p1119:ning gao",
+  "drop": "hs:p3366:ning gao",
+  "reason": "same_homepage",
+  "names": [
+   "Ning Gao",
+   "Ning Gao"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p1274:tamalika mukherjee",
+  "drop": "hs:p1276:tamalika mukherjee",
+  "reason": "same_homepage",
+  "names": [
+   "Tamalika Mukherjee",
+   "Tamalika Mukherjee"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p368",
+  "drop": "hs:p368:parinaz naghizadeh",
+  "reason": "same_scholar",
+  "names": [
+   "Parinaz Naghizadeh Ardabili",
+   "Parinaz Naghizadeh"
+  ],
+  "evidence": [
+   "same_scholar",
+   "same_homepage"
+  ],
+  "verified": "graph_data",
+  "note": "自己列自己"
+ },
+ {
+  "keep": "p1376",
+  "drop": "hs:p1373:matt sinclair",
+  "reason": "same_homepage",
+  "names": [
+   "Matthew D. Sinclair",
+   "Matt Sinclair"
+  ],
+  "evidence": [
+   "same_homepage"
+  ],
+  "verified": "graph_data",
+  "note": "Sankaralingam 页面把他列成 phd，实为硕士阶段，边的类型可能不对"
+ },
+ {
+  "keep": "wd:Q102371481",
+  "drop": "hs:p651:alexandre bouchard",
+  "reason": "same_homepage",
+  "names": [
+   "Alexandre Bouchard-Côté",
+   "Alexandre Bouchard"
+  ],
+  "evidence": [
+   "same_homepage",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p901:benjamin lerner",
+  "drop": "hs:p2783:ben lerner",
+  "reason": "same_homepage",
+  "names": [
+   "Benjamin Lerner",
+   "Ben Lerner"
+  ],
+  "evidence": [
+   "same_homepage"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p1737",
+  "drop": "hs:p1414:sasha sherstov",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Alexander A. Sherstov",
+   "Sasha Sherstov"
+  ],
+  "evidence": [
+   "same_photo",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q59488273",
+  "drop": "hs:p1427:robin kothari",
+  "reason": "same_homepage",
+  "names": [
+   "Robin Kothari",
+   "Robin Kothari"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q115781242",
+  "drop": "hs:p1349:nicolas papernot",
+  "reason": "same_homepage",
+  "names": [
+   "Nicolas Papernot",
+   "Nicolas Papernot"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q103240723",
+  "drop": "hs:p1532:christopher tosh",
+  "reason": "same_homepage",
+  "names": [
+   "Christopher Tosh",
+   "Christopher Tosh"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q113667760",
+  "drop": "hs:p696:makrand sinha",
+  "reason": "same_homepage",
+  "names": [
+   "Makrand Sinha",
+   "Makrand Sinha"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p39:valerie chen",
+  "drop": "hs:p933:valerie chen",
+  "reason": "same_homepage",
+  "names": [
+   "Valerie Chen",
+   "Valerie Chen"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p554:jingyan wang",
+  "drop": "hs:p94:jingyan wang",
+  "reason": "same_homepage",
+  "names": [
+   "Jingyan Wang",
+   "Jingyan Wang"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p652:yutong bai",
+  "drop": "hs:p656:yutong bai",
+  "reason": "same_homepage",
+  "names": [
+   "Yutong Bai",
+   "Yutong Bai"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p661:gina yuan",
+  "drop": "hs:p965:gina yuan",
+  "reason": "same_homepage",
+  "names": [
+   "Gina Yuan",
+   "Gina Yuan"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p992:gene chou",
+  "drop": "hs:p996:gene chou",
+  "reason": "same_homepage",
+  "names": [
+   "Gene Chou",
+   "Gene Chou"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p1030:jack hessel",
+  "drop": "hs:p1033:jack hessel",
+  "reason": "same_homepage",
+  "names": [
+   "Jack Hessel",
+   "Jack Hessel"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p1427:daniel liang",
+  "drop": "hs:p2896:daniel liang",
+  "reason": "same_homepage",
+  "names": [
+   "Daniel Liang",
+   "Daniel Liang"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p1446:georgy noarov",
+  "drop": "hs:p1463:georgy noarov",
+  "reason": "same_homepage",
+  "names": [
+   "Georgy Noarov",
+   "Georgy Noarov"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p1456:paul biberstein",
+  "drop": "hs:p1476:paul biberstein",
+  "reason": "same_homepage",
+  "names": [
+   "Paul Biberstein",
+   "Paul Biberstein"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p1469:suwei ma",
+  "drop": "hs:p1470:suwei ma",
+  "reason": "same_homepage",
+  "names": [
+   "Suwei Ma",
+   "Suwei Ma"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p1756:jinsong mao",
+  "drop": "hs:p1772:jinsong mao",
+  "reason": "same_homepage",
+  "names": [
+   "Jinsong Mao",
+   "Jinsong Mao"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p2065:rickard stureborg",
+  "drop": "hs:p2096:rickard stureborg",
+  "reason": "same_homepage",
+  "names": [
+   "Rickard Stureborg",
+   "Rickard Stureborg"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p317",
+  "drop": "hs:p915:steve swanson",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Steven Swanson",
+   "Steve Swanson"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p4403",
+  "drop": "hs:p1063:geoff mainland",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Geoffrey Mainland",
+   "Geoff Mainland"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p3165",
+  "drop": "hs:p206:parasara sridhar",
+  "reason": "same_homepage",
+  "names": [
+   "Parasara Sridhar Duggirala",
+   "Parasara Sridhar"
+  ],
+  "evidence": [
+   "same_homepage",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p2972",
+  "drop": "hs:p458:alex garrido",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Alexander Gamero-Garrido",
+   "Alex Gamero-Garrido"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p3173",
+  "drop": "hs:p96:ben berg",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Benjamin Berg",
+   "Ben Berg"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p6406",
+  "drop": "hs:p1063:mike hicks",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Michael Hicks",
+   "Mike Hicks"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "x:jonathan kelner",
+  "drop": "hs:p2700:jon kelner",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Jonathan Kelner",
+   "Jon Kelner"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "x:edward felten",
+  "drop": "x:ed felten",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Edward Felten",
+   "Ed Felten"
+  ],
+  "evidence": [
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102087883",
+  "drop": "x:georg lausen",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Georg Lausen",
+   "Georg Lausen"
+  ],
+  "evidence": [
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wp:Hui_Zhang_(computer_scientist)",
+  "drop": "x:hui zhang",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Hui Zhang",
+   "Hui Zhang"
+  ],
+  "evidence": [
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q1659753",
+  "drop": "x:michael paterson",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Mike Paterson",
+   "Michael Paterson"
+  ],
+  "evidence": [
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "x:daniel weitzner",
+  "drop": "x:danny weitzner",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Daniel J. Weitzner",
+   "Danny Weitzner"
+  ],
+  "evidence": [
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102271690",
+  "drop": "wd:Q140376757",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Nate Segerlind",
+   "Nathan Segerlind"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data",
+  "note": "两个 Wikidata 条目，同导师 Buss"
+ },
+ {
+  "keep": "wd:Q102414482",
+  "drop": "hs:p441:charlie brubaker",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Charles Brubaker",
+   "Charlie Brubaker"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102846269",
+  "drop": "hs:p441:ben cousins",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Benjamin Cousins",
+   "Ben Cousins"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102402836",
+  "drop": "hs:p161:rob simmons",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Robert J. Simmons",
+   "Rob Simmons"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102357501",
+  "drop": "hs:p88:jeff pang",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Jeffrey Anston Pang",
+   "Jeff Pang"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q130972871",
+  "drop": "hs:p652:jonathan barron",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Jon Barron",
+   "Jonathan Barron"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102412052",
+  "drop": "hs:p614:ning xie",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Xie Ning",
+   "Ning Xie"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102396464",
+  "drop": "hs:p573:katie byl",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Katherine A Byl",
+   "Katie Byl"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102367626",
+  "drop": "hs:p1070:tim carnes",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Timothy Carnes",
+   "Tim Carnes"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102363931",
+  "drop": "hs:p1117:rob sherwood",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Robert Sherwood",
+   "Rob Sherwood"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q103089651",
+  "drop": "hs:p1676:avi aroya",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Avraham Ben-Aroya",
+   "Avi Ben-Aroya"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102265812",
+  "drop": "hs:p1386:jong choi",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Jongdeok Choi",
+   "Jong-Deok Choi"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102164994",
+  "drop": "hs:p1423:rich cardone",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Richard Cardone",
+   "Rich Cardone"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102767881",
+  "drop": "hs:p1788:charlie curtsinger",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Charles Charlie Curtsinger",
+   "Charlie Curtsinger"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102853594",
+  "drop": "hs:p1788:dan barowy",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Daniel Barowy",
+   "Dan Barowy"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102278961",
+  "drop": "wd:Q102279971",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Yung-Chun (Justin) Wan",
+   "Yung-Chun Wan"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data",
+  "note": "Yung-Chun (Justin) Wan 两个 Wikidata 条目"
+ },
+ {
+  "keep": "wd:Q102342576",
+  "drop": "hs:p2072:charlie garrod",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Charles Shelby Garrod",
+   "Charlie Garrod"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102439244",
+  "drop": "hs:p1990:sam hallman",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Samuel Hallman",
+   "Sam Hallman"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102378622",
+  "drop": "hs:p2783:greg cooper",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Gregory H. Cooper",
+   "Greg Cooper"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102270643",
+  "drop": "hs:p4920:abdelilah rody",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Abdelillah Kandri-Rody",
+   "Abdelilah Kandri-Rody"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q103296914",
+  "drop": "hs:p6595:sam rudy",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Samuel Rudy",
+   "Sam Rudy"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q103296938",
+  "drop": "hs:p6595:ben strom",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Benjamin Strom",
+   "Ben Strom"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102425454",
+  "drop": "hs:p701:timothy hunter",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Tim Hunter",
+   "Timothy Hunter"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102368676",
+  "drop": "hs:p162:kathy stone",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Kathryn Van Stone",
+   "Kathy Van Stone"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102364595",
+  "drop": "hs:p148:tom stepleton",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Thomas Stepleton",
+   "Tom Stepleton"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102665657",
+  "drop": "hs:p686:ben kempke",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Benjamin Ben Kempke",
+   "Ben Kempke"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102770450",
+  "drop": "hs:p686:sam debruin",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Samuel DeBruin",
+   "Sam DeBruin"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102579066",
+  "drop": "hs:p4152:eddie aftandilian",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Edward Emil Aftandilian",
+   "Eddie Aftandilian"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q126081686",
+  "drop": "hs:p5535:alex remorov",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Alexander Remorov",
+   "Alex Remorov"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102974064",
+  "drop": "hs:p5152:don smith",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Donald Alan Smith",
+   "Don Alan Smith"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102123442",
+  "drop": "hs:p741:steve gribble",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Steven David Gribble",
+   "Steve Gribble"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102642253",
+  "drop": "hs:p669:ben rubinstein",
+  "reason": "same_homepage",
+  "names": [
+   "Benjamin I. P. Rubinstein",
+   "Ben Rubinstein"
+  ],
+  "evidence": [
+   "same_homepage",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102398377",
+  "drop": "hs:p6031:mike olsen",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Michael Olsen",
+   "Mike Olsen"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102436602",
+  "drop": "hs:p374:mike conley",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Michael Conley",
+   "Mike Conley"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q55101059",
+  "drop": "wp:Greg_Hannon",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Gregory Hannon",
+   "Greg Hannon"
+  ],
+  "evidence": [
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "wd:Q102196892",
+  "drop": "wp:John_Stasko",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Steven P. Reiss",
+   "Steve Reiss"
+  ],
+  "evidence": [
+   "shared_student"
+  ],
+  "verified": "graph_data",
+  "note": "wp 节点 id 取自 John Stasko 词条，名字是 Steve Reiss"
+ },
+ {
+  "keep": "wd:Q102156319",
+  "drop": "wp:Tracy_Camp",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "J. Philip Kearns",
+   "Phil Kearns"
+  ],
+  "evidence": [
+   "shared_student"
+  ],
+  "verified": "graph_data",
+  "note": "wp 节点 id 取自 Tracy Camp 词条，名字是 Phil Kearns"
+ },
+ {
+  "keep": "wd:Q7426990",
+  "drop": "wp:Sau_Lan_Wu",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Sau Lan Wu",
+   "Sau Lan Wu"
+  ],
+  "evidence": [
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p53:jeffrey stylos",
+  "drop": "hs:p53:jeff stylos",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Jeffrey Stylos",
+   "Jeff Stylos"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p53:jeffrey nichols",
+  "drop": "hs:p53:jeff nichols",
+  "reason": "same_homepage",
+  "names": [
+   "Jeffrey Nichols",
+   "Jeff Nichols"
+  ],
+  "evidence": [
+   "same_homepage",
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p88:christopher canel",
+  "drop": "hs:p88:chris canel",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Christopher Canel",
+   "Chris Canel"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p289:kaien lin",
+  "drop": "hs:p289:kai lin",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Kaien Lin",
+   "Kai-En Lin"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p818:joshua ashkinaze",
+  "drop": "hs:p818:josh ashkinaze",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Joshua Ashkinaze",
+   "Josh Ashkinaze"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p951:samuel grossman",
+  "drop": "hs:p951:sam grossman",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Samuel Grossman",
+   "Sam Grossman"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p1262:weihao chen",
+  "drop": "hs:p1262:wei chen",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "WeiHao Chen",
+   "Wei-Hao Chen"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p1362:nicholas roberts",
+  "drop": "hs:p1362:nick roberts",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Nicholas Roberts",
+   "Nick Roberts"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p2409:nicholas stiffler",
+  "drop": "hs:p2409:nick stiffler",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Nicholas M. Stiffler",
+   "Nick Stiffler"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "hs:p3492:joseph saber",
+  "drop": "hs:p3492:joe saber",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Joseph Saber",
+   "Joe Saber"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p1629",
+  "drop": "x:kai li",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Kai Li",
+   "Kai Li"
+  ],
+  "evidence": [
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p2057",
+  "drop": "x:rong ge",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Rong Ge",
+   "Rong Ge"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p2330",
+  "drop": "wd:Q102271388",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Yan Chen",
+   "Yan Chen"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p2845",
+  "drop": "x:adam smith",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Adam D. Smith",
+   "Adam Smith"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p1064",
+  "drop": "wd:Q102982065",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Cheng Zhang",
+   "Cheng Zhang"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p4614",
+  "drop": "wd:Q102340458",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Wei Jin",
+   "Wei Jin"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p5551",
+  "drop": "x:song han",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Song Han",
+   "Song Han"
+  ],
+  "evidence": [
+   "shared_advisor",
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p489",
+  "drop": "wd:Q102345204",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Jun (Jim) Xu",
+   "Jun Xu"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p877",
+  "drop": "x:jamie morgenstern",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Jamie Morgenstern",
+   "Jamie Morgenstern"
+  ],
+  "evidence": [
+   "shared_advisor",
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p239",
+  "drop": "x:sayan mitra",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Sayan Mitra",
+   "Sayan Mitra"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p1349",
+  "drop": "x:patrick mcdaniel",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Patrick D. McDaniel",
+   "Patrick McDaniel"
+  ],
+  "evidence": [
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p1051",
+  "drop": "wd:Q113667680",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Erik Andersen",
+   "Erik Andersen"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p49",
+  "drop": "x:geoff gordon",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Geoffrey J. Gordon",
+   "Geoff Gordon"
+  ],
+  "evidence": [
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p1138",
+  "drop": "wp:Jen_Golbeck",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Jennifer Golbeck",
+   "Jen Golbeck"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p1399",
+  "drop": "wd:Q103334728",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Greg Durrett",
+   "Gregory Christopher Durrett"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p2129",
+  "drop": "wd:Q102351680",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Ben Hardekopf",
+   "Benjamin Charles Hardekopf"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p3299",
+  "drop": "wd:Q102413801",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Dan Williams",
+   "Daniel John Williams"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p5186",
+  "drop": "wp:Katie_Bouman",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Katherine L. Bouman",
+   "Katie Bouman"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p5272",
+  "drop": "wd:Q102257002",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Dan Rubenstein",
+   "Daniel Stuart Rubenstein"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p6301",
+  "drop": "x:wei gong",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Weibo Gong",
+   "Wei-Bo Gong"
+  ],
+  "evidence": [
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p901",
+  "drop": "wd:Q102425786",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Dan Grossman",
+   "Daniel Grossman"
+  ],
+  "evidence": [
+   "shared_student"
+  ],
+  "verified": "graph_data",
+  "note": "wd 节点上的主页 danielgrossman.org 是另一个人，合并时 keep 是教授，不会被带过去"
+ },
+ {
+  "keep": "p231",
+  "drop": "x:steve lavalle",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Steven M. LaValle",
+   "Steve LaValle"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "x:jennifer vaughan",
+  "drop": "hs:p1463:jenn vaughan",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Jennifer Wortman Vaughan",
+   "Jenn Wortman Vaughan"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p447",
+  "drop": "hs:p669:jake abernethy",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Jacob D. Abernethy",
+   "Jake Abernethy"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p2081",
+  "drop": "hs:p2823:ben rossman",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Benjamin Rossman",
+   "Ben Rossman"
+  ],
+  "evidence": [
+   "shared_advisor"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p993",
+  "drop": "x:sasha rush",
+  "reason": "professor_same_advisor",
+  "names": [
+   "Alexander M. Rush",
+   "Sasha Rush"
+  ],
+  "evidence": [
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p2109",
+  "drop": "x:christopher kruegel",
+  "reason": "same_homepage",
+  "names": [
+   "Christopher Krügel",
+   "Christopher Kruegel"
+  ],
+  "evidence": [
+   "same_homepage"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "x:stephen schach",
+  "drop": "x:steve schach",
+  "reason": "same_name_shared_advisor",
+  "names": [
+   "Stephen Schach",
+   "Steve Schach"
+  ],
+  "evidence": [
+   "shared_student"
+  ],
+  "verified": "graph_data"
+ },
+ {
+  "keep": "p4622",
+  "drop": "x:shubhra kanti",
+  "reason": "same_homepage",
+  "names": [
+   "Shubhra Kanti Karmaker Santu",
+   "Shubhra Kanti"
+  ],
+  "evidence": [
+   "same_homepage",
+   "same_photo"
+  ],
+  "verified": "graph_data",
+  "note": "\"Shubhra Kanti\" 是被截断的名字"
+ },
+ {
+  "keep": "hs:p1271:iftekharul alam",
+  "drop": "hs:p1315:iftekharul alam",
+  "reason": "same_linkedin",
+  "names": [
+   "S. M. Iftekharul Alam",
+   "S. M. Iftekharul Alam"
+  ],
+  "evidence": [
+   "same_linkedin"
+  ],
+  "verified": "graph_data",
+  "note": "只有领英相同"
+ },
+ {
+  "keep": "hs:p1576:maziar sanjabi",
+  "drop": "hs:p39:maziar sanjabi",
+  "reason": "same_linkedin",
+  "names": [
+   "Maziar Sanjabi",
+   "Maziar Sanjabi"
+  ],
+  "evidence": [
+   "same_linkedin"
+  ],
+  "verified": "graph_data",
+  "note": "只有领英相同"
+ },
+ {
+  "keep": "p6712",
+  "drop": "x:jure leskovec",
+  "reason": "same_homepage",
+  "verified": "manual (usability test)"
+ },
+ {
+  "keep": "p6712",
+  "drop": "hs:p1001:jure leskovec",
+  "reason": "same_homepage",
+  "verified": "manual (usability test)"
+ },
+ {
+  "keep": "p6711",
+  "drop": "x:percy liang",
+  "reason": "same_homepage",
+  "verified": "manual (usability test)"
+ },
+ {
+  "keep": "p6711",
+  "drop": "hs:p927:percy liang",
+  "reason": "same_homepage",
+  "verified": "manual (usability test)"
+ },
+ {
+  "keep": "p6713",
+  "drop": "wd:Q113667812",
+  "reason": "same_homepage",
+  "verified": "manual (usability test)"
+ },
+ {
+  "keep": "p6714",
+  "drop": "x:arvind satyanaryan",
+  "reason": "same_homepage",
+  "verified": "manual (usability test)"
+ },
+ {
+  "keep": "p6714",
+  "drop": "hs:p860:arvind satyanarayan",
+  "reason": "same_homepage",
+  "verified": "manual (usability test)"
+ },
+ {
+  "keep": "hs:p295:dheeraj mekala",
+  "drop": "hs:p6679:dheeraj mekala",
+  "reason": "same_homepage",
+  "verified": "manual (usability test)"
+ },
+ {
+  "keep": "p6712",
+  "drop": "dblp:Jure Leskovec",
+  "reason": "same_homepage",
+  "verified": "manual (usability test)"
+ },
+ {
+  "keep": "p6711",
+  "drop": "dblp:Percy Liang",
+  "reason": "same_homepage",
+  "verified": "manual (usability test)"
  }
 ]

@@ -4,6 +4,7 @@ import os, re, time
 p = os.path.join(os.path.dirname(__file__), '..', 'docs', 'index.html')
 s = open(p, encoding='utf-8').read()
 v = time.strftime('%Y%m%d%H%M')
-s2 = re.sub(r'(style\.css|app\.js)\?v=[\w-]+', lambda m: f'{m.group(1)}?v={v}', s)
+# graph.json 出现在 <link rel="preload">，app.js 直接用那个地址去 fetch，三处版本号保持一致
+s2 = re.sub(r'(style\.css|app\.js|graph\.json)\?v=[\w-]+', lambda m: f'{m.group(1)}?v={v}', s)
 open(p, 'w', encoding='utf-8').write(s2)
 print('version', v)

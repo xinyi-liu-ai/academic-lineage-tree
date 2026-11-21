@@ -1,0 +1,1556 @@
+[
+ {
+  "name": "Joseph Calandrino",
+  "uni": "Carnegie Mellon University",
+  "title": "Assistant Professor",
+  "start": "2025",
+  "areas": [
+   "security"
+  ],
+  "homepage": "https://plaintextresponse.com/",
+  "scholar": "",
+  "photo": "https://plaintextresponse.com/static/calandrino.png",
+  "phd_school": "Princeton University",
+  "advisors": [
+   {
+    "name": "Edward Felten",
+    "type": "phd",
+    "quote": "As long time readers will remember, he did his Ph.D. here, advised by Ed Felten.",
+    "url": "https://blog.citp.princeton.edu/author/calandrinogmail-com"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://scsdeans.cs.cmu.edu/new-faculty/2025.html"
+ },
+ {
+  "name": "Tim Dettmers",
+  "uni": "Carnegie Mellon University",
+  "title": "Assistant Professor",
+  "start": "2025",
+  "areas": [
+   "ml",
+   "nlp"
+  ],
+  "homepage": "https://timdettmers.com/about/",
+  "scholar": "https://scholar.google.com/citations?user=lHI3w5kAAAAJ",
+  "photo": "https://timdettmers.com/wp-content/uploads/2025/12/profile_2026_400x400.png",
+  "phd_school": "University of Washington",
+  "advisors": [
+   {
+    "name": "Luke Zettlemoyer",
+    "type": "phd",
+    "quote": "I earn my PhD from University of Washington advised by Luke Zettlemoyer.",
+    "url": "https://timdettmers.com/about/"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://scsdeans.cs.cmu.edu/new-faculty/2025.html"
+ },
+ {
+  "name": "Akari Asai",
+  "uni": "Carnegie Mellon University",
+  "title": "Assistant Professor",
+  "start": "2026",
+  "areas": [
+   "nlp",
+   "ir"
+  ],
+  "homepage": "https://akariasai.github.io/",
+  "scholar": "https://scholar.google.com/citations?user=gqB4u_wAAAAJ",
+  "photo": "https://akariasai.github.io/assets/img/akari-asai-fall2026.jpg",
+  "phd_school": "University of Washington",
+  "advisors": [
+   {
+    "name": "Hannaneh Hajishirzi",
+    "type": "phd",
+    "quote": "Previously, I completed my Ph.D. at the University of Washington in 2025, advised by Hannaneh Hajishirzi, where I worked on retrieval-augmented language models and information-seeking systems.",
+    "url": "https://akariasai.github.io/"
+   }
+  ],
+  "recruiting": {
+   "s": "yes",
+   "y": 2027,
+   "q": "I am hiring PhD students in the upcoming application cycle for a Fall 2027 start.",
+   "src": "https://akariasai.github.io/",
+   "at": "2026-11"
+  },
+  "source_url": "https://scsdeans.cs.cmu.edu/new-faculty/2026.html"
+ },
+ {
+  "name": "Niloofar Mireshghallah",
+  "uni": "Carnegie Mellon University",
+  "title": "Assistant Professor",
+  "start": "2026",
+  "areas": [
+   "nlp",
+   "security"
+  ],
+  "homepage": "https://mireshghallah.github.io/",
+  "scholar": "https://scholar.google.com/citations?user=WUCu45YAAAAJ",
+  "photo": "https://mireshghallah.github.io/pics/pic4.jpg?v=20261102",
+  "phd_school": "UC San Diego",
+  "advisors": [
+   {
+    "name": "Taylor Berg-Kirkpatrick",
+    "type": "phd",
+    "quote": "I received my PhD from UC San Diego, advised by Taylor Berg-Kirkpatrick",
+    "url": "https://mireshghallah.github.io/"
+   },
+   {
+    "name": "Yejin Choi",
+    "type": "postdoc",
+    "quote": "Prior to that, I was a postdoctoral scholar at University of Washington, advised by Yejin Choi and Yulia Tsvetkov.",
+    "url": "https://mireshghallah.github.io/"
+   },
+   {
+    "name": "Yulia Tsvetkov",
+    "type": "postdoc",
+    "quote": "Prior to that, I was a postdoctoral scholar at University of Washington, advised by Yejin Choi and Yulia Tsvetkov.",
+    "url": "https://mireshghallah.github.io/"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://scsdeans.cs.cmu.edu/new-faculty/2026.html"
+ },
+ {
+  "name": "Steve Rathje",
+  "uni": "Carnegie Mellon University",
+  "title": "Assistant Professor",
+  "start": "Fall 2026",
+  "areas": [
+   "hci"
+  ],
+  "homepage": "https://stevenrathje.com/",
+  "scholar": "https://scholar.google.com/citations?user=tw5jvawAAAAJ",
+  "photo": "https://stevenrathje.com/authors/admin/avatar_hu7811619d72c09456a80ea32eaf6ede54_435760_270x270_fill_q75_lanczos_center.jpg",
+  "phd_school": "University of Cambridge",
+  "advisors": [
+   {
+    "name": "Sander van der Linden",
+    "type": "phd",
+    "quote": "PhD in Psychology Advisor: Sander van der Linden",
+    "url": "https://stevenrathje.com/media/Steve%20Rathje%20CV%202026.pdf"
+   },
+   {
+    "name": "Jay Van Bavel",
+    "type": "postdoc",
+    "quote": "Postdoctoral Researcher New York University Advisor: Jay Van Bavel",
+    "url": "https://stevenrathje.com/media/Steve%20Rathje%20CV%202026.pdf"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://scsdeans.cs.cmu.edu/new-faculty/2026.html"
+ },
+ {
+  "name": "Mengzhou Xia",
+  "uni": "Carnegie Mellon University",
+  "title": "Assistant Professor",
+  "start": "2026",
+  "areas": [
+   "nlp",
+   "ml"
+  ],
+  "homepage": "https://xiamengzhou.github.io/",
+  "scholar": "https://scholar.google.com/citations?user=fNexhaUAAAAJ",
+  "photo": "https://xiamengzhou.github.io/images/Mengzhou-small.jpg",
+  "phd_school": "Princeton University",
+  "advisors": [
+   {
+    "name": "Danqi Chen",
+    "type": "phd",
+    "quote": "I recently completed my Ph.D. in Computer Science at Princeton University as part of Princeton NLP and Princeton Language Intelligence (PLI), advised by Prof. Danqi Chen.",
+    "url": "https://xiamengzhou.github.io/"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://scsdeans.cs.cmu.edu/new-faculty/2026.html"
+ },
+ {
+  "name": "Chunqiu Steven Xia",
+  "uni": "Carnegie Mellon University",
+  "title": "Assistant Professor",
+  "start": "2026",
+  "areas": [
+   "se"
+  ],
+  "homepage": "https://steven.cs.illinois.edu/",
+  "scholar": "https://scholar.google.com/citations?user=-PCjRp8AAAAJ",
+  "photo": "https://scsdeans.cs.cmu.edu/new-faculty/resources/2026/Xia.Steven%20Chunqiu.jpg",
+  "phd_school": "University of Illinois Urbana-Champaign",
+  "advisors": [
+   {
+    "name": "Lingming Zhang",
+    "type": "phd",
+    "quote": "I am a final year Computer Science PhD student at UIUC advised by Lingming Zhang.",
+    "url": "https://steven.cs.illinois.edu/"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://scsdeans.cs.cmu.edu/new-faculty/2026.html"
+ },
+ {
+  "name": "Willow Ahrens",
+  "uni": "Georgia Institute of Technology",
+  "title": "Assistant Professor",
+  "start": "Aug 2025",
+  "areas": [
+   "pl",
+   "hpc"
+  ],
+  "homepage": "https://willowahrens.net/",
+  "scholar": "https://scholar.google.com/citations?user=0QFbKQ4AAAAJ",
+  "photo": "https://willowahrens.net/assets/images/bio-photo.jpeg",
+  "phd_school": "MIT",
+  "advisors": [
+   {
+    "name": "Saman Amarasinghe",
+    "type": "phd",
+    "quote": "Field of Study: Computer Science Advisor: Saman Amarasinghe",
+    "url": "https://krellinst.org/csgf/alum/ahrens2017"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://www.cc.gatech.edu/news/new-cs-faculty-member-aims-increase-hpc-efficiency-accessibility"
+ },
+ {
+  "name": "Francisco Romero",
+  "uni": "Georgia Institute of Technology",
+  "title": "Assistant Professor",
+  "start": "Fall 2025",
+  "areas": [
+   "os",
+   "db"
+  ],
+  "homepage": "https://www.franciscoaromero.com/home",
+  "scholar": "https://scholar.google.com/citations?user=mSw8KfIAAAAJ",
+  "photo": "https://scs.gatech.edu/sites/default/files/styles/profile_150x180_/public/images/profiles/2025-08/faromero_headshot.jpg?itok=YFTw-fLx",
+  "phd_school": "Stanford University",
+  "advisors": [
+   {
+    "name": "Christoforos E. Kozyrakis",
+    "type": "phd",
+    "quote": "I received my MS and PhD in EE at Stanford University, advised by Christos Kozyrakis and supported by the Stanford DARE Fellowship.",
+    "url": "https://www.franciscoaromero.com/home"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://www.cc.gatech.edu/news/new-faculty-seeks-improve-visual-analysis-systems"
+ },
+ {
+  "name": "Siddharth Karamcheti",
+  "uni": "Georgia Institute of Technology",
+  "title": "Assistant Professor",
+  "start": "Fall 2026",
+  "areas": [
+   "robotics",
+   "ml"
+  ],
+  "homepage": "https://siddkaramcheti.com/",
+  "scholar": "https://scholar.google.com/citations?user=L5v2PHAAAAAJ",
+  "photo": "https://www.siddkaramcheti.com/assets/img/sidd.jpg",
+  "phd_school": "Stanford University",
+  "advisors": [
+   {
+    "name": "Dorsa Sadigh",
+    "type": "phd",
+    "quote": "Timeline: I completed my PhD in Computer Science at Stanford University in 2025 where I was co-advised by Dorsa Sadigh and Percy Liang.",
+    "url": "https://siddkaramcheti.com/"
+   },
+   {
+    "name": "Percy Liang",
+    "type": "phd",
+    "quote": "Timeline: I completed my PhD in Computer Science at Stanford University in 2025 where I was co-advised by Dorsa Sadigh and Percy Liang.",
+    "url": "https://siddkaramcheti.com/"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://www.cc.gatech.edu/news/incoming-professor-envisions-world-humans-and-robots-working-together"
+ },
+ {
+  "name": "Veronica Rivera",
+  "uni": "Georgia Institute of Technology",
+  "title": "Assistant Professor",
+  "start": "Fall 2026",
+  "areas": [
+   "security",
+   "hci"
+  ],
+  "homepage": "https://vrivera2017.github.io/",
+  "scholar": "",
+  "photo": "https://vrivera2017.github.io/images/rivera_headshot1.jpg",
+  "phd_school": "UC Santa Cruz",
+  "advisors": [
+   {
+    "name": "David Lee",
+    "type": "phd",
+    "quote": "I completed my PhD in Computational Media at the University of California, Santa Cruz, working with David Lee and was a visiting PhD student at the Max Planck Institute for Software Systems with Elissa Redmiles.",
+    "url": "https://vrivera2017.github.io/"
+   },
+   {
+    "name": "Zakir Durumeric",
+    "type": "postdoc",
+    "quote": "Embedded Ethics Postdoctoral Fellow, Computer Science, Institute for Human-Centered AI (HAI) & McCoy Family Center for Ethics in Society Advisor: Zakir Durumeric",
+    "url": "https://vrivera2017.github.io/docs/Rivera_CV_June26.pdf"
+   },
+   {
+    "name": "Yixin Zou",
+    "type": "postdoc",
+    "quote": "Max Planck Institute for Security and Privacy, Postdoctoral Researcher Advisor: Yixin Zou",
+    "url": "https://vrivera2017.github.io/docs/Rivera_CV_June26.pdf"
+   }
+  ],
+  "recruiting": {
+   "s": "yes",
+   "y": 2027,
+   "q": "I am recruiting PhD students to start in Fall 2027.",
+   "src": "https://vrivera2017.github.io/",
+   "at": "2026-11"
+  },
+  "source_url": "https://www.cc.gatech.edu/news/new-faculty-member-examines-how-ai-shapes-our-most-personal-relationships"
+ },
+ {
+  "name": "Alex Ozdemir",
+  "uni": "Georgia Institute of Technology",
+  "title": "Assistant Professor",
+  "start": "Fall 2026",
+  "areas": [
+   "crypto",
+   "security",
+   "pl"
+  ],
+  "homepage": "https://faculty.cc.gatech.edu/~aozdemir/",
+  "scholar": "",
+  "photo": "https://faculty.cc.gatech.edu/~aozdemir/images/headshot-tux.png",
+  "phd_school": "Stanford University",
+  "advisors": [
+   {
+    "name": "Clark Barrett",
+    "type": "phd",
+    "quote": "Before that, I got my PhD at Stanford, advised by Clark Barrett and Dan Boneh.",
+    "url": "https://faculty.cc.gatech.edu/~aozdemir/"
+   },
+   {
+    "name": "Dan Boneh",
+    "type": "phd",
+    "quote": "Before that, I got my PhD at Stanford, advised by Clark Barrett and Dan Boneh.",
+    "url": "https://faculty.cc.gatech.edu/~aozdemir/"
+   }
+  ],
+  "recruiting": {
+   "s": "yes",
+   "y": null,
+   "q": "I am recruiting students and postdocs.",
+   "src": "https://faculty.cc.gatech.edu/~aozdemir/",
+   "at": "2026-11"
+  },
+  "source_url": "https://www.cc.gatech.edu/news/new-faculty-shows-where-cryptography-meets-computer-system"
+ },
+ {
+  "name": "Ge (Tiffany) Wang",
+  "uni": "Univ. of Illinois at Urbana-Champaign",
+  "title": "Assistant Professor",
+  "start": "Aug 2025",
+  "areas": [
+   "hci"
+  ],
+  "homepage": "https://tiffanygewang.github.io/",
+  "scholar": "https://scholar.google.com/citations?user=DVV3PDIAAAAJ",
+  "photo": "https://tiffanygewang.github.io/assets/img/prof_pic.jpg",
+  "phd_school": "University of Oxford",
+  "advisors": [],
+  "recruiting": {
+   "s": "yes",
+   "y": 2027,
+   "q": "I’m looking for motivated PhD students for Fall 2027 and always excited to collaborate with undergraduate and graduate students interested in Human-Computer Interaction and Human-Centered AI.",
+   "src": "https://tiffanygewang.github.io/",
+   "at": "2026-11"
+  },
+  "source_url": "https://siebelschool.illinois.edu/news/siebel-school-new-faculty-2025"
+ },
+ {
+  "name": "Daniel Alabi",
+  "uni": "Univ. of Illinois at Urbana-Champaign",
+  "title": "Assistant Professor",
+  "start": "2025",
+  "areas": [
+   "security",
+   "theory"
+  ],
+  "homepage": "https://alabidan.me/",
+  "scholar": "",
+  "photo": "https://alabidan.me/img/alabidan_me_photo_smaller.png",
+  "phd_school": "Harvard University",
+  "advisors": [],
+  "recruiting": null,
+  "source_url": "https://grainger.illinois.edu/news/stories/77568"
+ },
+ {
+  "name": "Mitchell Gordon",
+  "uni": "Massachusetts Institute of Technology",
+  "title": "Assistant Professor",
+  "start": "2025",
+  "areas": [
+   "hci",
+   "ml"
+  ],
+  "homepage": "https://mitchellg.github.io/",
+  "scholar": "https://scholar.google.com/citations?user=pMkqt6sAAAAJ",
+  "photo": "https://mitchellg.github.io/images/face_3.png",
+  "phd_school": "Stanford University",
+  "advisors": [
+   {
+    "name": "Michael S. Bernstein",
+    "type": "phd",
+    "quote": "Ph.D., Computer Science Advisors: Michael Bernstein and James Landay",
+    "url": "https://mitchellg.github.io/assets/cv.pdf"
+   },
+   {
+    "name": "James A. Landay",
+    "type": "phd",
+    "quote": "Ph.D., Computer Science Advisors: Michael Bernstein and James Landay",
+    "url": "https://mitchellg.github.io/assets/cv.pdf"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://news.mit.edu/2025/mit-schwarzman-college-computing-welcomes-new-faculty-1017"
+ },
+ {
+  "name": "Bailey Flanigan",
+  "uni": "Massachusetts Institute of Technology",
+  "title": "Miller (1922) Career Development Assistant Professor",
+  "start": "2025",
+  "areas": [
+   "ecom"
+  ],
+  "homepage": "https://baileyflanigan.com/",
+  "scholar": "https://scholar.google.com/citations?user=h0PIjYMAAAAJ",
+  "photo": "",
+  "phd_school": "Carnegie Mellon University",
+  "advisors": [
+   {
+    "name": "Ariel Procaccia",
+    "type": "phd",
+    "quote": "I completed my PhD in computer science at Carnegie Mellon University in 2024, where I was extremely lucky to have been advised by Ariel Procaccia.",
+    "url": "https://baileyflanigan.com/"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://news.mit.edu/2025/mit-schwarzman-college-computing-welcomes-new-faculty-1017"
+ },
+ {
+  "name": "Yunha Hwang",
+  "uni": "Massachusetts Institute of Technology",
+  "title": "Assistant Professor",
+  "start": "2025",
+  "areas": [
+   "bio",
+   "ml"
+  ],
+  "homepage": "https://yunhahwang.com/",
+  "scholar": "https://scholar.google.com/citations?user=Xu1L9HYAAAAJ",
+  "photo": "https://images.squarespace-cdn.com/content/v1/64348e7d55843c42b422b711/10921677-8ff0-4586-a333-dd89aacc8c0d/Hwang-3.jpg",
+  "phd_school": "Harvard University",
+  "advisors": [],
+  "recruiting": {
+   "s": "yes",
+   "y": null,
+   "q": "I am looking for PhD students and postdocs to join my lab, please email me if you are interested.",
+   "src": "https://yunhahwang.com/",
+   "at": "2026-11"
+  },
+  "source_url": "https://news.mit.edu/2025/mit-schwarzman-college-computing-welcomes-new-faculty-1017"
+ },
+ {
+  "name": "Hengyun (Harry) Zhou",
+  "uni": "Massachusetts Institute of Technology",
+  "title": "Assistant Professor",
+  "start": "2026",
+  "areas": [
+   "arch"
+  ],
+  "homepage": "https://zphy.github.io/",
+  "scholar": "",
+  "photo": "https://www.eecs.mit.edu/wp-content/uploads/2026/03/Zhou_Hengyun_Harry-scaled-e1778186757540-230x230.jpeg",
+  "phd_school": "Harvard University",
+  "advisors": [
+   {
+    "name": "Mikhail Lukin",
+    "type": "phd",
+    "quote": "Since I really enjoyed that experience, I decided to do my PhD in Mikhail Lukin’s lab at Harvard—a group that intertwines theory and experiments.",
+    "url": "https://cqe.mit.edu/hengyun-harry-zhou/"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://news.mit.edu/2026/school-engineering-welcomes-new-faculty-1110"
+ },
+ {
+  "name": "Jas Brooks",
+  "uni": "Massachusetts Institute of Technology",
+  "title": "Assistant Professor",
+  "start": "Sep 2026",
+  "areas": [
+   "hci"
+  ],
+  "homepage": "https://jasbrooks.net/",
+  "scholar": "https://scholar.google.com/citations?user=WA6Hrt8AAAAJ",
+  "photo": "https://jasbrooks.com/wp-content/uploads/2024/07/2024June21_423.png",
+  "phd_school": "University of Chicago",
+  "advisors": [
+   {
+    "name": "Pedro Lopes",
+    "type": "phd",
+    "quote": "They received a Ph.D. (2025) and B.S. (2016) in Computer Science from the University of Chicago, where they were advised by Professor Pedro Lopes.",
+    "url": "https://jasbrooks.net/"
+   }
+  ],
+  "recruiting": {
+   "s": "yes",
+   "y": 2026,
+   "q": "I am recruiting multiple PhD students and one Postdoc for Summer/Fall 2026!",
+   "src": "https://jasbrooks.net/",
+   "at": "2026-11"
+  },
+  "source_url": "https://news.mit.edu/2026/mit-schwarzman-college-computing-welcomes-new-faculty-1110"
+ },
+ {
+  "name": "Zana Buçinca",
+  "uni": "Massachusetts Institute of Technology",
+  "title": "Assistant Professor",
+  "start": "Sep 2026",
+  "areas": [
+   "hci",
+   "ai"
+  ],
+  "homepage": "https://zbucinca.github.io/",
+  "scholar": "https://scholar.google.com/citations?user=Q_RQYDgAAAAJ",
+  "photo": "https://zbucinca.github.io/assets/img/zbucinca_updated.jpeg",
+  "phd_school": "Harvard University",
+  "advisors": [
+   {
+    "name": "Krzysztof Gajos",
+    "type": "phd",
+    "quote": "I received my PhD in Computer Science from Harvard, where I was fortunate to be advised by Professor Krzysztof Gajos.",
+    "url": "https://zbucinca.github.io/"
+   }
+  ],
+  "recruiting": {
+   "s": "no",
+   "y": 2027,
+   "q": "I am unlikely to accept new PhD students for Fall 2027, but if you have independent funding and would like to work together, please reach out.",
+   "src": "https://zbucinca.github.io/",
+   "at": "2026-11"
+  },
+  "source_url": "https://news.mit.edu/2026/mit-schwarzman-college-computing-welcomes-new-faculty-1110"
+ },
+ {
+  "name": "David Bruns-Smith",
+  "uni": "Massachusetts Institute of Technology",
+  "title": "Assistant Professor",
+  "start": "Sep 2026",
+  "areas": [
+   "ml"
+  ],
+  "homepage": "https://brunssmith.com/",
+  "scholar": "https://scholar.google.com/citations?user=TmmHmzAAAAAJ",
+  "photo": "https://brunssmith.com/assets/images/website_shot_600.jpg",
+  "phd_school": "UC Berkeley",
+  "advisors": [],
+  "recruiting": null,
+  "source_url": "https://news.mit.edu/2026/mit-schwarzman-college-computing-welcomes-new-faculty-1110"
+ },
+ {
+  "name": "Alexandru Damian",
+  "uni": "Massachusetts Institute of Technology",
+  "title": "Assistant Professor",
+  "start": "Sep 2026",
+  "areas": [
+   "ml",
+   "theory"
+  ],
+  "homepage": "https://alex-damian.github.io/",
+  "scholar": "https://scholar.google.com/citations?user=dymr3s8AAAAJ",
+  "photo": "https://alex-damian.github.io/headshot.jpg",
+  "phd_school": "Princeton University",
+  "advisors": [
+   {
+    "name": "Jason D. Lee",
+    "type": "phd",
+    "quote": "I received my Ph.D. in Applied and Computational Mathematics at Princeton University under the supervision of Jason D. Lee",
+    "url": "https://alex-damian.github.io/"
+   }
+  ],
+  "recruiting": {
+   "s": "yes",
+   "y": 2027,
+   "q": "I am actively recruiting Ph.D. students to start in Fall 2027.",
+   "src": "https://alex-damian.github.io/",
+   "at": "2026-11"
+  },
+  "source_url": "https://news.mit.edu/2026/mit-schwarzman-college-computing-welcomes-new-faculty-1110"
+ },
+ {
+  "name": "Silviu Pitis",
+  "uni": "University of Michigan",
+  "title": "Assistant Professor",
+  "start": "Fall 2026",
+  "areas": [
+   "ml",
+   "ai"
+  ],
+  "homepage": "https://silviupitis.com/",
+  "scholar": "https://scholar.google.com/citations?user=oYlo1ycAAAAJ",
+  "photo": "https://silviupitis.com/assets/img/headshot.jpg",
+  "phd_school": "University of Toronto",
+  "advisors": [
+   {
+    "name": "Jimmy Ba",
+    "type": "phd",
+    "quote": "I received my PhD in computer science from the University of Toronto, advised by Jimmy Ba.",
+    "url": "https://silviupitis.com/"
+   },
+   {
+    "name": "Sheila McIlraith",
+    "type": "postdoc",
+    "quote": "Previously, I was a CIFAR AI Safety Postdoctoral Fellow at the Vector Institute, where I worked with Sheila McIlraith.",
+    "url": "https://silviupitis.com/"
+   }
+  ],
+  "recruiting": {
+   "s": "no",
+   "y": null,
+   "q": "I am not recruiting PhD students this cycle.",
+   "src": "https://silviupitis.com/",
+   "at": "2026-11"
+  },
+  "source_url": "https://e-hail.umich.edu/stories/cse-welcomes-new-faculty-of-2025-26"
+ },
+ {
+  "name": "Gabriel Poesia",
+  "uni": "University of Michigan",
+  "title": "Assistant Professor",
+  "start": "Fall 2026",
+  "areas": [
+   "ai",
+   "ml"
+  ],
+  "homepage": "https://gpoesia.com/",
+  "scholar": "",
+  "photo": "https://gpoesia.com/img/me.jpg",
+  "phd_school": "Stanford University",
+  "advisors": [
+   {
+    "name": "Noah Goodman",
+    "type": "phd",
+    "quote": "PhD in Computer Science (2019-2025) at Stanford, advised by Noah Goodman.",
+    "url": "https://gpoesia.com/"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://e-hail.umich.edu/stories/cse-welcomes-new-faculty-of-2025-26"
+ },
+ {
+  "name": "Preston Culbertson",
+  "uni": "Cornell University",
+  "title": "Assistant Professor",
+  "start": "Fall 2025",
+  "areas": [
+   "robotics"
+  ],
+  "homepage": "https://pculbertson.github.io/",
+  "scholar": "https://scholar.google.com/citations?user=8v2kg_0AAAAJ",
+  "photo": "https://pculbertson.github.io/assets/img/preston_culbertson.jpg",
+  "phd_school": "Stanford University",
+  "advisors": [],
+  "recruiting": {
+   "s": "yes",
+   "y": null,
+   "q": "Prospective students: I'm looking for motivated PhD students to join my lab!",
+   "src": "https://pculbertson.github.io/",
+   "at": "2026-11"
+  },
+  "source_url": "https://bowers.cornell.edu/news-stories/seven-faculty-hired-during-recruiting-season"
+ },
+ {
+  "name": "Angelina Wang",
+  "uni": "Cornell University",
+  "title": "Assistant Professor",
+  "start": "Fall 2025",
+  "areas": [
+   "ml",
+   "hci"
+  ],
+  "homepage": "https://angelina-wang.github.io/",
+  "scholar": "https://scholar.google.com/citations?user=cGemfcYAAAAJ",
+  "photo": "https://angelina-wang.infosci.cornell.edu/website_files/headshot.jpeg",
+  "phd_school": "Princeton University",
+  "advisors": [
+   {
+    "name": "Olga Russakovsky",
+    "type": "phd",
+    "quote": "earned my PhD in Computer Science at Princeton University advised by the wonderful Olga Russakovsky",
+    "url": "https://angelina-wang.github.io/"
+   },
+   {
+    "name": "Sanmi Koyejo",
+    "type": "postdoc",
+    "quote": "Postdoctoral Fellow, Stanford University Advisors: Sanmi Koyejo, Daniel E. Ho",
+    "url": "https://angelina-wang.github.io/files/cv.pdf"
+   },
+   {
+    "name": "Daniel E. Ho",
+    "type": "postdoc",
+    "quote": "Postdoctoral Fellow, Stanford University Advisors: Sanmi Koyejo, Daniel E. Ho",
+    "url": "https://angelina-wang.github.io/files/cv.pdf"
+   }
+  ],
+  "recruiting": {
+   "s": "yes",
+   "y": null,
+   "q": "I am currently recruiting both PhD students and postdocs.",
+   "src": "https://angelina-wang.github.io/",
+   "at": "2026-11"
+  },
+  "source_url": "https://bowers.cornell.edu/news-stories/seven-faculty-hired-during-recruiting-season"
+ },
+ {
+  "name": "Benjamin Shestakofsky",
+  "uni": "Cornell University",
+  "title": "Assistant Professor",
+  "start": "Fall 2025",
+  "areas": [
+   "hci"
+  ],
+  "homepage": "https://infosci.cornell.edu/people/benjamin-shestakofsky",
+  "scholar": "",
+  "photo": "https://infosci.cornell.edu/sites/default/files/styles/profile_hero/public/images/people/Ben_Shestakofsky-24_final-2.jpg?h=57024e64&itok=9l8Q_Ns4",
+  "phd_school": "UC Berkeley",
+  "advisors": [],
+  "recruiting": null,
+  "source_url": "https://bowers.cornell.edu/news-stories/cornell-bowers-welcomes-five-new-faculty-members"
+ },
+ {
+  "name": "Kaitlyn Zhou",
+  "uni": "Cornell University",
+  "title": "Assistant Professor",
+  "start": "2026",
+  "areas": [
+   "nlp",
+   "hci"
+  ],
+  "homepage": "https://katezhou.github.io/",
+  "scholar": "https://scholar.google.com/citations?user=SQAK2mwAAAAJ",
+  "photo": "https://katezhou.github.io/assets/profile-pics/profile_picture.png",
+  "phd_school": "Stanford University",
+  "advisors": [
+   {
+    "name": "Daniel Jurafsky",
+    "type": "phd",
+    "quote": "I graduated with a Ph.D. in Computer Science from Stanford University, advised by Dan Jurafsky.",
+    "url": "https://katezhou.github.io/"
+   }
+  ],
+  "recruiting": {
+   "s": "yes",
+   "y": null,
+   "q": "I'm recruiting PhD students in NLP and HCI in both computer science and information science!",
+   "src": "https://katezhou.github.io/",
+   "at": "2026-11"
+  },
+  "source_url": "https://bowers.cornell.edu/news-stories/cornell-bowers-welcomes-five-new-faculty-members"
+ },
+ {
+  "name": "Ayush Sekhari",
+  "uni": "Cornell University",
+  "title": "Assistant Professor",
+  "start": "Nov 2026",
+  "areas": [
+   "ml",
+   "theory"
+  ],
+  "homepage": "https://ayush.sekhari.com/",
+  "scholar": "https://scholar.google.com/citations?user=jH9i188AAAAJ",
+  "photo": "https://ayush.sekhari.com/images/my_picture.png",
+  "phd_school": "Cornell University",
+  "advisors": [
+   {
+    "name": "Karthik Sridharan",
+    "type": "phd",
+    "quote": "He earned his Ph.D. in Computer Science from Cornell University, advised by Prof. Karthik Sridharan and Prof. Robert D. Kleinberg",
+    "url": "https://ayush.sekhari.com/"
+   },
+   {
+    "name": "Robert D. Kleinberg",
+    "type": "phd",
+    "quote": "He earned his Ph.D. in Computer Science from Cornell University, advised by Prof. Karthik Sridharan and Prof. Robert D. Kleinberg",
+    "url": "https://ayush.sekhari.com/"
+   },
+   {
+    "name": "Alexander Rakhlin",
+    "type": "postdoc",
+    "quote": "He completed his postdoctoral research at MIT's Institute for Data, Systems, and Society (IDSS), where he worked with Prof. Alexander (Sasha) Rakhlin.",
+    "url": "https://ayush.sekhari.com/"
+   }
+  ],
+  "recruiting": {
+   "s": "yes",
+   "y": null,
+   "q": "Prospective Mentees: I am recruiting new PhD students and postdocs at Cornell Tech.",
+   "src": "https://ayush.sekhari.com/",
+   "at": "2026-11"
+  },
+  "source_url": "https://bowers.cornell.edu/news-stories/bowers-welcomes-13-pioneering-faculty-members"
+ },
+ {
+  "name": "Sagar Karandikar",
+  "uni": "Univ. of California - Berkeley",
+  "title": "Assistant Professor",
+  "start": "Fall 2025",
+  "areas": [
+   "arch"
+  ],
+  "homepage": "https://sagark.org/",
+  "scholar": "https://scholar.google.com/citations?user=APtrU-cAAAAJ",
+  "photo": "https://sagark.org/assets/images/SagarK_square_web.jpg",
+  "phd_school": "UC Berkeley",
+  "advisors": [
+   {
+    "name": "Krste Asanović",
+    "type": "phd",
+    "quote": "Advisors: Krste Asanović",
+    "url": "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2024/EECS-2024-222.html"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://engineering.berkeley.edu/news/2025/08/berkeley-engineering-welcomes-eleven-new-faculty-members/"
+ },
+ {
+  "name": "Jennifer Volk",
+  "uni": "University of Wisconsin - Madison",
+  "title": "John D. Wiley Assistant Professor",
+  "start": "Jan 2025",
+  "areas": [
+   "arch",
+   "eda"
+  ],
+  "homepage": "https://sites.google.com/view/jennifervolk",
+  "scholar": "",
+  "photo": "",
+  "phd_school": "UC Santa Barbara",
+  "advisors": [],
+  "recruiting": {
+   "s": "yes",
+   "y": null,
+   "q": "I have open positions for students—prospective graduate students are encouraged to apply here.",
+   "src": "https://sites.google.com/view/jennifervolk",
+   "at": "2026-11"
+  },
+  "source_url": "https://engineering.wisc.edu/wp-content/uploads/2025/05/ECE-Spring_2025_Newsletter.pdf"
+ },
+ {
+  "name": "Wei Zhan",
+  "uni": "Purdue University",
+  "title": "Assistant Professor",
+  "start": "Fall 2025",
+  "areas": [
+   "theory"
+  ],
+  "homepage": "https://cs.purdue.edu/homes/weizhan/",
+  "scholar": "https://scholar.google.com/citations?user=eyWN04cAAAAJ",
+  "photo": "https://cs.purdue.edu/homes/weizhan/images/profile.jpg",
+  "phd_school": "Princeton University",
+  "advisors": [
+   {
+    "name": "Ran Raz",
+    "type": "phd",
+    "quote": "I received my Ph.D. from Princeton University, where I was honored to be advised by Ran Raz.",
+    "url": "https://cs.purdue.edu/homes/weizhan/"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://www.cs.purdue.edu/people/faculty/weizhan.html"
+ },
+ {
+  "name": "Zongwei Zhou",
+  "uni": "Johns Hopkins University",
+  "title": "Assistant Professor",
+  "start": "Jul 2026",
+  "areas": [
+   "vision",
+   "bio"
+  ],
+  "homepage": "https://www.zongweiz.com/",
+  "scholar": "https://scholar.google.com/citations?user=JVOeczAAAAAJ",
+  "photo": "https://static.wixstatic.com/media/deaea1_e82c29aef6634c749bf673f13032e49a~mv2.jpg",
+  "phd_school": "Arizona State University",
+  "advisors": [
+   {
+    "name": "Jianming Liang",
+    "type": "phd",
+    "quote": "Towards Annotation-Efficient Deep Learning for Computer-Aided Diagnosis AMIA Doctoral Dissertation Award President's Awards for Innovation Advised by Dr. Jianming Liang",
+    "url": "https://www.zongweiz.com/"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://www.zongweiz.com/"
+ },
+ {
+  "name": "Jiaqi Leng",
+  "uni": "Virginia Tech",
+  "title": "Assistant Professor",
+  "start": "Fall 2026",
+  "areas": [
+   "theory"
+  ],
+  "homepage": "https://jiaqileng.github.io/",
+  "scholar": "https://scholar.google.com/citations?user=Rr83RUsAAAAJ",
+  "photo": "https://jiaqileng.github.io/assets/img/profile.jpg",
+  "phd_school": "University of Maryland, College Park",
+  "advisors": [
+   {
+    "name": "Xiaodi Wu",
+    "type": "phd",
+    "quote": "I earned my B.Sc. from the University of Hong Kong and my Ph.D. from the University of Maryland in 2024 under the supervision of Xiaodi Wu.",
+    "url": "https://jiaqileng.github.io/"
+   }
+  ],
+  "recruiting": {
+   "s": "yes",
+   "y": 2027,
+   "q": "I plan to recruit several Ph.D. students to start in fall 2027, so please reach out if you’re interested.",
+   "src": "https://jiaqileng.github.io/",
+   "at": "2026-11"
+  },
+  "source_url": "https://news.vt.edu/articles/2026/08/quantum-computing-researcher-joins-institute-for-advanced-computing.html"
+ },
+ {
+  "name": "Paul Krogmeier",
+  "uni": "University of Colorado Boulder",
+  "title": "Assistant Professor",
+  "start": "Fall 2026",
+  "areas": [
+   "pl",
+   "logic"
+  ],
+  "homepage": "https://www.colorado.edu/cs/paul-krogmeier",
+  "scholar": "",
+  "photo": "https://www.colorado.edu/cs/sites/default/files/styles/large_image_style/public/2025-08/me-march-2025.jpg?itok=1UWExUAE",
+  "phd_school": "University of Illinois Urbana-Champaign",
+  "advisors": [
+   {
+    "name": "P. Madhusudan",
+    "type": "phd",
+    "quote": "Paul has a PhD in computer science from the University of Illinois where he was advised by Madhusudan Parthasarathy.",
+    "url": "https://www.colorado.edu/cs/paul-krogmeier"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://www.colorado.edu/facultyaffairs/whos-who-new-faculty-cohort-2026"
+ },
+ {
+  "name": "Siyuan Niu",
+  "uni": "University of Central Florida",
+  "title": "Assistant Professor",
+  "start": "Spring 2025",
+  "areas": [
+   "arch"
+  ],
+  "homepage": "https://www.ece.ucf.edu/person/siyuan-niu/",
+  "scholar": "",
+  "photo": "",
+  "phd_school": "University of Montpellier",
+  "advisors": [],
+  "recruiting": null,
+  "source_url": "https://www.cecs.ucf.edu/cecs-hires-additional-11-faculty-for-spring-semester/"
+ },
+ {
+  "name": "Jongha Ryu",
+  "uni": "Pennsylvania State University",
+  "title": "Wormley Family Early Career Assistant Professor",
+  "start": "Fall 2026",
+  "areas": [
+   "ml"
+  ],
+  "homepage": "https://jongharyu.github.io/",
+  "scholar": "https://scholar.google.com/citations?user=5ZYeWgcAAAAJ",
+  "photo": "https://jongharyu.github.io/assets/img/headshot.jpg",
+  "phd_school": "UC San Diego",
+  "advisors": [
+   {
+    "name": "Young-Han Kim",
+    "type": "phd",
+    "quote": "I received my Ph.D. in Electrical Engineering from UC San Diego, advised by Young-Han Kim and Sanjoy Dasgupta, with support from the Kwanjeong Educational Foundation.",
+    "url": "https://jongharyu.github.io/"
+   },
+   {
+    "name": "Sanjoy Dasgupta",
+    "type": "phd",
+    "quote": "I received my Ph.D. in Electrical Engineering from UC San Diego, advised by Young-Han Kim and Sanjoy Dasgupta, with support from the Kwanjeong Educational Foundation.",
+    "url": "https://jongharyu.github.io/"
+   }
+  ],
+  "recruiting": {
+   "s": "yes",
+   "y": 2027,
+   "q": "To prospective students: I plan to recruit a PhD student to join my group in Fall 2027.",
+   "src": "https://jongharyu.github.io/",
+   "at": "2026-11"
+  },
+  "source_url": "https://www.psu.edu/news/engineering/story/college-engineering-welcomes-new-faculty-members"
+ },
+ {
+  "name": "Emma Dauterman",
+  "uni": "Stanford University",
+  "title": "Assistant Professor",
+  "start": "Fall 2025",
+  "areas": [
+   "security",
+   "os"
+  ],
+  "homepage": "https://cs.stanford.edu/~edauterman/",
+  "scholar": "",
+  "photo": "https://cs.stanford.edu/~edauterman/emma_240.jpg",
+  "phd_school": "UC Berkeley",
+  "advisors": [
+   {
+    "name": "Raluca A. Popa",
+    "type": "phd",
+    "quote": "Before that, I completed my Ph.D. in computer science at UC Berkeley where I was advised by Raluca Ada Popa and Ion Stoica.",
+    "url": "https://cs.stanford.edu/~edauterman/"
+   },
+   {
+    "name": "Ion Stoica",
+    "type": "phd",
+    "quote": "Before that, I completed my Ph.D. in computer science at UC Berkeley where I was advised by Raluca Ada Popa and Ion Stoica.",
+    "url": "https://cs.stanford.edu/~edauterman/"
+   },
+   {
+    "name": "Henry Corrigan-Gibbs",
+    "type": "postdoc",
+    "quote": "She was a postdoc at MIT with Henry Corrigan-Gibbs",
+    "url": "https://cs.stanford.edu/~edauterman/bio.txt"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://profiles.stanford.edu/144458"
+ },
+ {
+  "name": "Nirav Atre",
+  "uni": "Stanford University",
+  "title": "Assistant Professor",
+  "start": "Fall 2026",
+  "areas": [
+   "networks",
+   "os"
+  ],
+  "homepage": "https://www.niravatre.com/",
+  "scholar": "https://scholar.google.com/citations?user=Py55TXMAAAAJ",
+  "photo": "https://www.niravatre.com/assets/avatar.png",
+  "phd_school": "Carnegie Mellon University",
+  "advisors": [
+   {
+    "name": "Justine Sherry",
+    "type": "phd",
+    "quote": "Thesis Committee: Justine Sherry (Chair)",
+    "url": "https://niravatre.pages.dev/files/thesis2025-atre.pdf"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://news.stanford.edu/stories/2026/01/report-president-academic-council-professoriate-appointments"
+ },
+ {
+  "name": "Jiangpeng He",
+  "uni": "Indiana University",
+  "title": "Assistant Professor",
+  "start": "Fall 2025",
+  "areas": [
+   "vision",
+   "ml"
+  ],
+  "homepage": "https://jiangpenghe.github.io/",
+  "scholar": "https://scholar.google.com/citations?user=YEsCw1IAAAAJ",
+  "photo": "https://jiangpenghe.github.io/assets/img/prof_pic.jpg",
+  "phd_school": "Purdue University",
+  "advisors": [
+   {
+    "name": "Fengqing Maggie Zhu",
+    "type": "phd",
+    "quote": "I earned my Ph.D. in Electrical and Computer Engineering from Purdue University, in the Video and Image Processing Lab (VIPER), where I had the privilege of being advised by Prof. Fengqing Maggie Zhu and Prof. Edward Delp.",
+    "url": "https://jiangpenghe.github.io/"
+   },
+   {
+    "name": "Edward Delp",
+    "type": "phd",
+    "quote": "I earned my Ph.D. in Electrical and Computer Engineering from Purdue University, in the Video and Image Processing Lab (VIPER), where I had the privilege of being advised by Prof. Fengqing Maggie Zhu and Prof. Edward Delp.",
+    "url": "https://jiangpenghe.github.io/"
+   },
+   {
+    "name": "Hermano Igo Krebs",
+    "type": "postdoc",
+    "quote": "Previously, I was a Postdoctoral Associate at MIT, working with Dr. Hermano Igo Krebs on Smart Rehabilitation Robotics.",
+    "url": "https://jiangpenghe.github.io/"
+   }
+  ],
+  "recruiting": {
+   "s": "yes",
+   "y": null,
+   "q": "I am seeking highly motivated Ph.D students.",
+   "src": "https://jiangpenghe.github.io/",
+   "at": "2026-11"
+  },
+  "source_url": "https://news.iu.edu/luddy/live/news/46920-difference-making-new-faculty-join-the-luddy"
+ },
+ {
+  "name": "Yiwei Zhao",
+  "uni": "Indiana University",
+  "title": "Assistant Professor",
+  "start": "Fall 2026",
+  "areas": [
+   "arch",
+   "hpc"
+  ],
+  "homepage": "https://zhaoyw007.github.io/",
+  "scholar": "https://scholar.google.com/citations?user=ESIzPeQAAAAJ",
+  "photo": "https://zhaoyw007.github.io/assets/images/profile.JPEG",
+  "phd_school": "Carnegie Mellon University",
+  "advisors": [
+   {
+    "name": "Phillip B. Gibbons",
+    "type": "phd",
+    "quote": "I received my Ph.D. from Carnegie Mellon University, advised by Prof. Phillip B. Gibbons in the Parallel Data Lab and the CMU Parlay Lab.",
+    "url": "https://zhaoyw007.github.io/"
+   }
+  ],
+  "recruiting": {
+   "s": "yes",
+   "y": null,
+   "q": "I am seeking highly motivated students at all levels, including Ph.D., master's, and undergraduate, as well as for other research assistant opportunities.",
+   "src": "https://zhaoyw007.github.io/",
+   "at": "2026-11"
+  },
+  "source_url": "https://news.iu.edu/luddy/live/news/54216-new-luddy-school-faculty-bring-exciting-research"
+ },
+ {
+  "name": "Sneha Goenka",
+  "uni": "Princeton University",
+  "title": "Assistant Professor",
+  "start": "Jan 2025",
+  "areas": [
+   "arch",
+   "bio"
+  ],
+  "homepage": "https://snehagoenka.com/",
+  "scholar": "https://scholar.google.com/citations?user=VzbI1DoAAAAJ",
+  "photo": "",
+  "phd_school": "Stanford University",
+  "advisors": [
+   {
+    "name": "Mark Horowitz",
+    "type": "phd",
+    "quote": "in the Electrical Engineering department at Stanford University where I was advised by Prof. Mark Horowitz",
+    "url": "https://snehagoenka.com/"
+   },
+   {
+    "name": "Euan Ashley",
+    "type": "postdoc",
+    "quote": "Thereafter, I was a Postdoctoral Research Scholar at Stanford Medicine with Prof. Euan Ashley.",
+    "url": "https://snehagoenka.com/"
+   }
+  ],
+  "recruiting": {
+   "s": "yes",
+   "y": null,
+   "q": "I am actively looking for postdocs, graduate and undergraduate students to join my lab!",
+   "src": "https://snehagoenka.com/",
+   "at": "2026-11"
+  },
+  "source_url": "https://www.princeton.edu/news/2024/10/02/board-approves-22-new-faculty-appointments"
+ },
+ {
+  "name": "Ewin Tang",
+  "uni": "Princeton University",
+  "title": "Assistant Professor",
+  "start": "Sep 2026",
+  "areas": [
+   "theory"
+  ],
+  "homepage": "https://ewintang.com/",
+  "scholar": "https://scholar.google.com/citations?user=ytm_89IAAAAJ",
+  "photo": "",
+  "phd_school": "University of Washington",
+  "advisors": [
+   {
+    "name": "James R. Lee",
+    "type": "phd",
+    "quote": "I received my PhD at the University of Washington, advised by James Lee.",
+    "url": "https://ewintang.com/"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://mercertimes.com/princeton-board-approves-eight-new-faculty-appointments-across-multiple-disciplines/"
+ },
+ {
+  "name": "Brandon Yushan Feng",
+  "uni": "University of Texas at Austin",
+  "title": "Assistant Professor",
+  "start": "Fall 2025",
+  "areas": [
+   "vision",
+   "graphics"
+  ],
+  "homepage": "https://brandonyfeng.github.io/",
+  "scholar": "https://scholar.google.com/citations?user=VCeYRsYAAAAJ",
+  "photo": "https://brandonyfeng.github.io/images/headshot.jpg",
+  "phd_school": "University of Maryland, College Park",
+  "advisors": [
+   {
+    "name": "Amitabh Varshney",
+    "type": "phd",
+    "quote": "I did my PhD in Computer Science at the University of Maryland, advised by Amitabh Varshney.",
+    "url": "https://brandonyfeng.github.io/"
+   },
+   {
+    "name": "William T. Freeman",
+    "type": "postdoc",
+    "quote": "I am a Postdoctoral Associate at MIT CSAIL, working with William T. Freeman.",
+    "url": "https://brandonyfeng.github.io/"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://cns.utexas.edu/news/announcements/meet-new-faculty-college-natural-sciences"
+ },
+ {
+  "name": "Karthik Mahadevan",
+  "uni": "University of Texas at Austin",
+  "title": "Assistant Professor",
+  "start": "Spring 2027",
+  "areas": [
+   "hci",
+   "robotics"
+  ],
+  "homepage": "https://karthikmahadevan.ca/",
+  "scholar": "https://scholar.google.com/citations?user=i-OiNnAAAAAJ",
+  "photo": "https://karthikmahadevan.ca/author/karthik-mahadevan/avatar_huebbfad1edfa8e198fe68a27ac6a615ca_2526312_270x270_fill_q90_lanczos_center.jpg",
+  "phd_school": "University of Toronto",
+  "advisors": [
+   {
+    "name": "Tovi Grossman",
+    "type": "phd",
+    "quote": "Ph.D., Computer Science University of Toronto Advisor: Dr. Tovi Grossman",
+    "url": "https://karthikmahadevan.ca/files/cv.pdf"
+   },
+   {
+    "name": "Julie Shah",
+    "type": "postdoc",
+    "quote": "I have started my postdoctoral position at MIT working with Prof. Julie Shah and Dr. Ben Armstrong.",
+    "url": "https://karthikmahadevan.ca/"
+   }
+  ],
+  "recruiting": {
+   "s": "yes",
+   "y": 2027,
+   "q": "I will be joining UT Austin as an Assistant Professor in Spring 2027 and recruiting PhD students to start in Fall 2027!",
+   "src": "https://karthikmahadevan.ca/",
+   "at": "2026-11"
+  },
+  "source_url": "https://cns.utexas.edu/news/announcements/meet-new-faculty-college-natural-sciences-2026"
+ },
+ {
+  "name": "Yudai Tanaka",
+  "uni": "University of Texas at Austin",
+  "title": "Assistant Professor",
+  "start": "Fall 2026",
+  "areas": [
+   "hci"
+  ],
+  "homepage": "https://www.cs.utexas.edu/people/faculty-researchers/yudai-tanaka",
+  "scholar": "",
+  "photo": "https://www.cs.utexas.edu/sites/default/files/styles/faculty_photo/public/2026-09/YudaiTanaka-extended.jpg?itok=urv9dQ32",
+  "phd_school": "University of Chicago",
+  "advisors": [
+   {
+    "name": "Pedro Lopes",
+    "type": "phd",
+    "quote": "Yudai Tanaka is a Ph.D. candidate in the Department of Computer Science at University of Chicago advised by Prof. Pedro Lopes.",
+    "url": "https://computerscience.uchicago.edu/people/yudai-tanaka/"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://cns.utexas.edu/news/announcements/meet-new-faculty-college-natural-sciences-2026"
+ },
+ {
+  "name": "Chenfeng Xu",
+  "uni": "University of Texas at Austin",
+  "title": "Assistant Professor",
+  "start": "Fall 2026",
+  "areas": [
+   "ml",
+   "robotics",
+   "vision"
+  ],
+  "homepage": "https://www.chenfengx.com/",
+  "scholar": "https://scholar.google.com/citations?user=RpqvaTUAAAAJ",
+  "photo": "https://cns.utexas.edu/sites/default/files/uploads/images/default/xu.jpg",
+  "phd_school": "UC Berkeley",
+  "advisors": [
+   {
+    "name": "Masayoshi Tomizuka",
+    "type": "phd",
+    "quote": "I obtained my Ph.D degree at UC Berkeley in 2025, fortunately advised by Prof. Masayoshi Tomizuka (ME department) and Prof. Kurt Keutzer (EECS department).",
+    "url": "https://www.chenfengx.com/"
+   },
+   {
+    "name": "Kurt Keutzer",
+    "type": "phd",
+    "quote": "I obtained my Ph.D degree at UC Berkeley in 2025, fortunately advised by Prof. Masayoshi Tomizuka (ME department) and Prof. Kurt Keutzer (EECS department).",
+    "url": "https://www.chenfengx.com/"
+   }
+  ],
+  "recruiting": {
+   "s": "yes",
+   "y": null,
+   "q": "I recruit 1-2 Ph.D. students this year.",
+   "src": "https://www.chenfengx.com/",
+   "at": "2026-11"
+  },
+  "source_url": "https://cns.utexas.edu/news/announcements/meet-new-faculty-college-natural-sciences-2026"
+ },
+ {
+  "name": "Kun Woo Cho",
+  "uni": "University of Texas at Austin",
+  "title": "Assistant Professor",
+  "start": "Aug 2026",
+  "areas": [
+   "networks",
+   "mobile"
+  ],
+  "homepage": "https://kunwoocho.com/",
+  "scholar": "https://scholar.google.com/citations?user=dUGl5SsAAAAJ",
+  "photo": "https://kunwoocho.com/authors/admin/avatar_hu134d4e4e9831ccfc8de4af3f8bdc12b9_11249012_270x270_fill_lanczos_center_3.png",
+  "phd_school": "Princeton University",
+  "advisors": [
+   {
+    "name": "Kyle Jamieson",
+    "type": "phd",
+    "quote": "Doctor of Philosophy (Ph.D.) in Computer Science, Advisor: Kyle Jamieson",
+    "url": "https://kunwoocho.com/uploads/cv.pdf"
+   },
+   {
+    "name": "Ashutosh Sabharwal",
+    "type": "postdoc",
+    "quote": "Before this, I was a Postdoctoral Associate at Rice University, where I was fortunate to be advised by Ashu Sabharwal and Ashok Veeraraghavan",
+    "url": "https://kunwoocho.com/"
+   },
+   {
+    "name": "Ashok Veeraraghavan",
+    "type": "postdoc",
+    "quote": "Before this, I was a Postdoctoral Associate at Rice University, where I was fortunate to be advised by Ashu Sabharwal and Ashok Veeraraghavan",
+    "url": "https://kunwoocho.com/"
+   }
+  ],
+  "recruiting": {
+   "s": "yes",
+   "y": null,
+   "q": "I am looking for self-motivated students and postdocs.",
+   "src": "https://kunwoocho.com/",
+   "at": "2026-11"
+  },
+  "source_url": "https://ece.utexas.edu/news/texas-ece-welcomes-kun-woo-cho-and-guandao-yang-faculty"
+ },
+ {
+  "name": "Guandao Yang",
+  "uni": "University of Texas at Austin",
+  "title": "Assistant Professor",
+  "start": "Fall 2026",
+  "areas": [
+   "vision",
+   "graphics"
+  ],
+  "homepage": "https://www.guandaoyang.com/",
+  "scholar": "https://scholar.google.com/citations?user=_kElCmMAAAAJ",
+  "photo": "https://www.guandaoyang.com/assets/img/prof_pic.JPEG",
+  "phd_school": "Cornell University",
+  "advisors": [
+   {
+    "name": "Serge Belongie",
+    "type": "phd",
+    "quote": "In 2023, I received my Ph.D. from Cornell Tech, advised by Serge Belongie and Bharath Hariharan.",
+    "url": "https://www.guandaoyang.com/"
+   },
+   {
+    "name": "Bharath Hariharan",
+    "type": "phd",
+    "quote": "In 2023, I received my Ph.D. from Cornell Tech, advised by Serge Belongie and Bharath Hariharan.",
+    "url": "https://www.guandaoyang.com/"
+   },
+   {
+    "name": "Leonidas Guibas",
+    "type": "postdoc",
+    "quote": "Before that, I spent two years as a Postdoctoral Scholar at Stanford University, working with Leonidas Guibas and Gordon Wetzstein.",
+    "url": "https://www.guandaoyang.com/"
+   },
+   {
+    "name": "Gordon Wetzstein",
+    "type": "postdoc",
+    "quote": "Before that, I spent two years as a Postdoctoral Scholar at Stanford University, working with Leonidas Guibas and Gordon Wetzstein.",
+    "url": "https://www.guandaoyang.com/"
+   }
+  ],
+  "recruiting": {
+   "s": "yes",
+   "y": null,
+   "q": "I am hiring Ph.D. students at UT Austin.",
+   "src": "https://www.guandaoyang.com/",
+   "at": "2026-11"
+  },
+  "source_url": "https://ece.utexas.edu/news/texas-ece-welcomes-kun-woo-cho-and-guandao-yang-faculty"
+ },
+ {
+  "name": "Jin Wang",
+  "uni": "Arizona State University",
+  "title": "Assistant Professor",
+  "start": "Fall 2025",
+  "areas": [
+   "db",
+   "nlp"
+  ],
+  "homepage": "https://search.asu.edu/profile/5462842",
+  "scholar": "https://scholar.google.com/citations?user=5zl9QR8AAAAJ",
+  "photo": "https://news.engineering.asu.edu/wp-content/uploads/2025/08/JinWang-600x600-72.jpg",
+  "phd_school": "UCLA",
+  "advisors": [
+   {
+    "name": "Carlo Zaniolo",
+    "type": "phd",
+    "quote": "He obtained the Ph.D. degree from Computer Science Department, University of California, Los Angeles in July 2020 under the supervision of Professor Carlo Zaniolo.",
+    "url": "https://search.asu.edu/profile/5462842"
+   }
+  ],
+  "recruiting": {
+   "s": "no",
+   "y": null,
+   "q": "I don't plan to take new PhD students now.",
+   "src": "https://search.asu.edu/profile/5462842",
+   "at": "2026-11"
+  },
+  "source_url": "https://news.engineering.asu.edu/welcome/jin-wang/"
+ },
+ {
+  "name": "Paria Rashidinejad",
+  "uni": "University of Southern California",
+  "title": "WiSE Gabilan Assistant Professor",
+  "start": "Fall 2025",
+  "areas": [
+   "ml",
+   "ai"
+  ],
+  "homepage": "https://pariard.github.io/",
+  "scholar": "https://scholar.google.com/citations?user=BgQkdsYAAAAJ",
+  "photo": "https://pariard.github.io/images/paria.jpg",
+  "phd_school": "UC Berkeley",
+  "advisors": [
+   {
+    "name": "Stuart Russell",
+    "type": "phd",
+    "quote": "I received my Ph.D. in Electrical Engineering and Computer Sciences (EECS) from the University of California, Berkeley, under the supervision of Stuart Russell and Jiantao Jiao.",
+    "url": "https://pariard.github.io/"
+   },
+   {
+    "name": "Jiantao Jiao",
+    "type": "phd",
+    "quote": "I received my Ph.D. in Electrical Engineering and Computer Sciences (EECS) from the University of California, Berkeley, under the supervision of Stuart Russell and Jiantao Jiao.",
+    "url": "https://pariard.github.io/"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://viterbischool.usc.edu/?p=80086"
+ },
+ {
+  "name": "Aleksander Hołyński",
+  "uni": "Columbia University",
+  "title": "Assistant Professor",
+  "start": "Jul 2025",
+  "areas": [
+   "vision",
+   "graphics"
+  ],
+  "homepage": "https://holynski.org/",
+  "scholar": "https://scholar.google.com/citations?user=ypBMJMgAAAAJ",
+  "photo": "",
+  "phd_school": "University of Washington",
+  "advisors": [
+   {
+    "name": "Steven M. Seitz",
+    "type": "phd",
+    "quote": "He completed his PhD studies at the University of Washington, where he was advised by Steve Seitz, Brian Curless, and Rick Szeliski.",
+    "url": "https://www.cs.columbia.edu/2025/cs-welcomes-six-new-faculty"
+   },
+   {
+    "name": "Brian Curless",
+    "type": "phd",
+    "quote": "He completed his PhD studies at the University of Washington, where he was advised by Steve Seitz, Brian Curless, and Rick Szeliski.",
+    "url": "https://www.cs.columbia.edu/2025/cs-welcomes-six-new-faculty"
+   },
+   {
+    "name": "Richard Szeliski",
+    "type": "phd",
+    "quote": "He completed his PhD studies at the University of Washington, where he was advised by Steve Seitz, Brian Curless, and Rick Szeliski.",
+    "url": "https://www.cs.columbia.edu/2025/cs-welcomes-six-new-faculty"
+   },
+   {
+    "name": "Alexei A. Efros",
+    "type": "postdoc",
+    "quote": "Previously, I was a postdoc at UC Berkeley with Alyosha Efros and Angjoo Kanazawa",
+    "url": "https://holynski.org/"
+   },
+   {
+    "name": "Angjoo Kanazawa",
+    "type": "postdoc",
+    "quote": "Previously, I was a postdoc at UC Berkeley with Alyosha Efros and Angjoo Kanazawa",
+    "url": "https://holynski.org/"
+   }
+  ],
+  "recruiting": null,
+  "source_url": "https://www.cs.columbia.edu/2025/cs-welcomes-six-new-faculty"
+ },
+ {
+  "name": "Zishen Wan",
+  "uni": "Columbia University",
+  "title": "Assistant Professor",
+  "start": "Fall 2026",
+  "areas": [
+   "arch"
+  ],
+  "homepage": "https://zishenwan.github.io/",
+  "scholar": "https://scholar.google.com/citations?user=dt3ImqIAAAAJ",
+  "photo": "https://zishenwan.github.io/images/Zishen_photo_4_square.jpg",
+  "phd_school": "Georgia Institute of Technology",
+  "advisors": [
+   {
+    "name": "Arijit Raychowdhury",
+    "type": "phd",
+    "quote": "received my Ph.D. from Georgia Tech in 2025, advised by Prof. Arijit Raychowdhury and Prof. Tushar Krishna.",
+    "url": "https://zishenwan.github.io/"
+   },
+   {
+    "name": "Tushar Krishna",
+    "type": "phd",
+    "quote": "received my Ph.D. from Georgia Tech in 2025, advised by Prof. Arijit Raychowdhury and Prof. Tushar Krishna.",
+    "url": "https://zishenwan.github.io/"
+   },
+   {
+    "name": "Vijay Janapa Reddi",
+    "type": "postdoc",
+    "quote": "a Postdoctoral Fellow at Harvard University, working with Prof. Vijay Janapa Reddi.",
+    "url": "https://zishenwan.github.io/"
+   }
+  ],
+  "recruiting": {
+   "s": "yes",
+   "y": null,
+   "q": "I am recruiting Ph.D. students, postdoctoral researchers, and visiting students interested in computer architecture, systems, VLSI, physical & agentic AI, and AI for computing system design.",
+   "src": "https://zishenwan.github.io/",
+   "at": "2026-11"
+  },
+  "source_url": "https://www.cs.columbia.edu/tag/zishen-wan/"
+ }
+]

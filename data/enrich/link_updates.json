@@ -932,5 +932,77 @@
  "p5027": {
   "homepage": "https://cs.ou.edu/~trytten",
   "scholar": "https://scholar.google.com/citations?user=wmpx67kAAAAJ"
+ },
+ "wd:Q57570139": {
+  "homepage": "http://mat.uc.cl/~crguzmanp/Home.html",
+  "was": "http://www.mat.uc.cl/~crguzmanp/Home.html"
+ },
+ "wd:Q102299595": {
+  "homepage": "https://www.cs.uoi.gr/~loukas",
+  "was": "https://cs.uoi.gr/~loukas"
+ },
+ "wd:Q102420058": {
+  "homepage": "https://www.cs.uoi.gr/~lkon",
+  "was": "https://cs.uoi.gr/~lkon"
+ },
+ "wd:Q102414219": {
+  "homepage": "http://madhavjha.com/",
+  "was": "http://www.madhavjha.com/"
+ },
+ "wd:Q117768937": {
+  "homepage": "http://kristindew.com/",
+  "was": "https://kristindew.com/"
+ },
+ "wd:Q58339495": {
+  "homepage": "http://cslab.ntua.gr/~pnevmati",
+  "was": "http://www.cslab.ntua.gr/~pnevmati"
+ },
+ "hs:p200:zhijian yang": {
+  "homepage": "http://zhijianyang.web.illinois.edu/",
+  "was": "https://zhijianyang.web.illinois.edu/"
+ },
+ "hs:p216:jay shenoy": {
+  "homepage": "http://jayshenoy.web.illinois.edu/index.html",
+  "was": "https://jayshenoy.web.illinois.edu/index.html"
+ },
+ "hs:p219:maxwell bland": {
+  "homepage": "http://bland.web.illinois.edu",
+  "was": "https://bland.web.illinois.edu"
+ },
+ "hs:p321:wei dai": {
+  "homepage": "http://www.wdai.us/",
+  "was": "https://wdai.us/"
+ },
+ "hs:p928:huazhe xu": {
+  "homepage": "http://hxu.rocks/",
+  "was": "https://hxu.rocks/"
+ },
+ "hs:p1311:evaggelia pitoura": {
+  "homepage": "https://www.cs.uoi.gr/~pitoura",
+  "was": "https://cs.uoi.gr/~pitoura"
+ },
+ "hs:p1580:sam barnett": {
+  "homepage": "http://samuelabarnett.com/",
+  "was": "https://www.samuelabarnett.com/"
+ },
+ "hs:p2896:yuhan liu": {
+  "homepage": "http://yuhan-liu.me/",
+  "was": "https://yuhan-liu.me/"
+ },
+ "hs:p3777:lu qi": {
+  "homepage": "http://luqi.info",
+  "was": "https://www.luqi.info"
+ },
+ "hs:p327:junli wang": {
+  "homepage": "http://junliwang.tech/",
+  "was": "https://junliwang.tech/"
+ },
+ "hs:p180:si zhang": {
+  "homepage": "http://sizhang2.web.illinois.edu",
+  "was": "https://sizhang2.web.illinois.edu"
+ },
+ "hs:p1329:olivia zhao": {
+  "homepage": "http://olivia-zhao.com/",
+  "was": "https://www.olivia-zhao.com/"
  }
 }

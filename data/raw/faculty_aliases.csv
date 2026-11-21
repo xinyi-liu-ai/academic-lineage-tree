@@ -20,6 +20,7 @@ Aniket Kittur,Niki Kittur
 James McCann,Jim McCann
 David G. Andersen,Dave G. Andersen
 Matthew T. Mason,Matthew Thomas Mason
+Carolyn P. Rosé,Carolyn Penstein Rosé
 Bhiksha Raj,Bhiksha Ramakrishnan
 Carl Kingsford,Carleton Kingsford
 Mona T. Diab,Mona Talat Diab
@@ -127,6 +128,7 @@ Humphrey Shi,Honghui Shi
 Moinuddin K. Qureshi,Moinuddin Qureshi
 Seth Hutchinson 0001,Seth A. Hutchinson
 Michael D. Bailey,Michael Donald Bailey
+Thomas Plötz,Thomas Ploetz
 Irfan A. Essa,Irfan Essa
 Xu Chu,Chu Xu
 Santosh S. Vempala,Santosh Srinivas Vempala
@@ -198,6 +200,7 @@ Julie A. Shah,Julie Shah
 Russ Tedrake,Russell L. Tedrake
 Justin Solomon 0001,Justin M. Solomon
 Virginia Vassilevska Williams,Virginia Vassilevska
+Stefanie Müller 0001,Stefanie Mueller 0001
 Srini Devadas,Srinivas Devadas
 R. Ryan Williams,Richard Ryan Williams
 R. Ryan Williams,Ryan Williams 0001
@@ -220,6 +223,7 @@ Matei Zaharia,Matei A. Zaharia
 Stuart Russell 0001,Stuart J. Russell
 Sanjit A. Seshia,Sanjit Arunkumar Seshia
 Claire J. Tomlin,Claire Jennifer Tomlin
+Björn Hartmann,Bjoern Hartmann
 Raluca A. Popa,Raluca Ada Popa
 Benjamin Recht,Ben Recht
 Prabal Dutta,Prabal K. Dutta
@@ -293,6 +297,7 @@ Thomas E. Anderson,Tom Anderson 0003
 Magdalena Balazinska,Magda Balazinska
 Amy X. Zhang,Amy Xian Zhang
 Amy X. Zhang,Amy Zhang 0002
+Thomas Rothvoß,Thomas Rothvoss
 Michael B. Taylor,Michael Bedford Taylor
 David Kohlbrenner,David W. Kohlbrenner
 Rajesh P. N. Rao,Raj P. N. Rao
@@ -474,6 +479,8 @@ Alexander Rakhlin,Sasha Rakhlin
 Val Tannen,Val Breazu-Tannen
 Val Tannen,Valeriu Breazu
 Stephanie Weirich,Stephanie C. Weirich
+Danaë Metaxa,Danaé Metaxa
+Danaë Metaxa,Danaë Metaxa-Kakavouli
 Rakesh V. Vohra,Rakesh Vohra
 Jean H. Gallier,Jean Gallier
 Mitchell P. Marcus,Mitch Marcus
@@ -504,11 +511,13 @@ Jennifer Rexford,Jen Rexford
 Thomas L. Griffiths 0001,Thomas Griffiths 0001
 Thomas L. Griffiths 0001,Tom Griffiths 0001
 Zachary Kincaid,Zak Kincaid
+Jaime Fernández Fisac,Jaime F. Fisac
 Adji B. Dieng,Adji Bousso Dieng
 Robert E. Tarjan,Robert Endre Tarjan
 Kyunghyun Cho,KyungHyun Cho
 Joan Bruna,Joan Bruna Estrach
 Samuel R. Bowman,Sam Bowman 0001
+Cláudio T. Silva,Cláudio Teixeira Silva
 David F. Fouhey,David Ford Fouhey
 David F. Fouhey,David Fouhey
 Anirudh Sivaraman,Anirudh Sivaraman Kaushalram
@@ -572,6 +581,7 @@ Aaron Potechin,Aaron Henry Potechin
 Rebecca Willett,Rebecca M. Willett
 Gordon L. Kindlmann,Gordon Kindlmann
 Rick L. Stevens,Rick Stevens
+László Babai,Laci Babai
 Sarah Sebo,Sarah Strohkorb
 Sarah Sebo,Sarah Strohkorb Sebo
 Minh Hoai,Minh Hoai Nguyen
@@ -583,6 +593,7 @@ Steven Skiena,Steven S. Skiena
 Michael Ferdman,Mike Ferdman
 Samir Ranjan Das,Samir R. Das
 R. Sekar 0001,R. C. Sekar 0001
+Tahsin M. Kurç,Tahsin Kurc
 Barbara M. Chapman,Barbara Mary Chapman
 Yanhong A. Liu,Y. Annie Liu
 Yanhong A. Liu,Yanhong Annie Liu
@@ -625,6 +636,7 @@ Rebecca C. Steorts,Rebecca Carter Steorts
 Alicia Nicki Washington,Nicki Washington
 William Yang Wang,William Wang 0001
 Yu-Xiang Wang 0003,Yuxiang Wang 0003
+Christopher Krügel,Christopher Kruegel
 Divyakant Agrawal,Divy Agrawal
 Lingqi Yan 0001,Ling-Qi Yan 0001
 Lingqi Yan 0001,Ling-qi Yan 0001
@@ -673,6 +685,7 @@ Thomas La Porta,Tom LaPorta
 Xiao Wang 0012,Xiao Shaun Wang
 Jessica Hullman,Jessica R. Hullman
 Doug Downey,Douglas Downey
+Fabián E. Bustamante,Fabian E. Bustamante
 Brenna D. Argall,Brenna Argall
 Nikos Hardavellas,Nikolaos Hardavellas
 Michael S. Horn,Michael Horn 0001
@@ -738,6 +751,7 @@ Thomas W. Price,Thomas William Price
 Collin F. Lynch,Collin Lynch
 Don Sheehy,Donald R. Sheehy
 Kathryn T. Stolee,Kathryn Thomasset Stolee
+Wesley K. G. Assunção,Wesley Klewerton Guez Assunção
 Greg Byrd,Gregory T. Byrd
 Rada Chirkova,Rada Y. Chirkova
 Benjamin Watson 0001,Ben Watson 0001
@@ -901,6 +915,8 @@ Martin Styner,Martin A. Styner
 Martin Styner,Martin Andreas Styner
 Ruoyu Wang 0001,Fish Wang
 Georgios Fainekos,Georgios E. Fainekos
+K. Selçuk Candan,K. Selcuk Candan
+K. Selçuk Candan,Kasim Selçuk Candan
 Pavan K. Turaga,Pavan Turaga
 Chris Bryan,Christopher Bryan
 Sarma B. K. Vrudhula,Sarma Vrudhula
@@ -933,6 +949,7 @@ XiaoFeng Wang 0001,Xiaofeng Wang 0006
 David J. Crandall,David Crandall
 Katie A. Siek,Katie Moor
 Katie A. Siek,Katie Siek
+Süleyman Cenk Sahinalp,S. Cenk Sahinalp
 Austin Toombs,Austin L. Toombs
 David B. Leake,David Leake
 Lawrence S. Moss,Larry Moss
@@ -991,6 +1008,7 @@ Mohammed E. Hoque 0001,Mohammed Ehsan Hoque
 Lane A. Hemaspaandra,Lane A. Hemachandra
 Kaave Hosseini,Kaave Seyed Hosseini
 Michael L. Scott,Michael Lee Scott
+Ralf M. Häfner,Ralf M. Haefner
 Rishabh K. Iyer,Rishabh Iyer 0001
 Vibhav Gogate,Vibhav Giridhar Gogate
 Latifur Khan,Latifur R. Khan
@@ -1203,6 +1221,9 @@ Michael D. Jones,Mike Jones 0004
 Dan Ventura,Dan A. Ventura
 Bill Barrett,William A. Barrett
 Quinn Snell,Quinn O. Snell
+Santiago Ontañón,Santi Ontañón
+Santiago Ontañón,Santi Ontañón Villar
+Santiago Ontañón,Santiago Ontañón Villar
 Shahin Jabbari,Shahin Jabbari Arfaee
 Naomi Sirkin,Naomi Ephraim
 Christopher W. Geib,Christopher William Geib
@@ -1211,6 +1232,7 @@ James K. Hahn,James Kwangjune Hahn
 Abdou Youssef,Abdou S. Youssef
 David Saldana,David Saldaña
 Jeffrey C. Trinkle,Jeff Trinkle
+Hector Muñoz-Avila,Héctor Muñoz-Avila
 Ioannis T. Pavlidis,Ioannis Pavlidis
 Mohammad Amin Alipour,Amin Alipour
 Gopal Pandurangan,C. P. Gopalakrishnan
@@ -1223,6 +1245,7 @@ Nathan Fisher,Nathan Wayne Fisher
 Abusayeed Saifullah,Abusayeed M. Saifullah
 RhongHo Jang,Rhongho Jang
 Nam Wook Kim,Namwook Kim
+José Bento 0001,José Bento Ayres Pereira
 Emily Tucker Prud'hommeaux,Emily Prud'hommeaux
 Chuxu Zhang,Chu-Xu Zhang
 Antonella Di Lillo,Antonella DiLillo
@@ -1264,6 +1287,7 @@ Meikang Qiu,Mei Kang Qiu
 Jieqiong Zhao,Helen Zhao 0001
 Gursimran Singh Walia,Gursimran S. Walia
 Harley Eades III,Harley D. Eades III
+Z. Meral Özsoyoglu,Zehra Meral Özsoyoglu
 L. Darrell Whitley,Darrell Whitley
 Iyad Kanj,Iyad A. Kanj
 Jonathan Gemmell,Jonathan F. Gemmell
@@ -1334,6 +1358,8 @@ Casey Kennington,Casey Redd Kennington
 Catherine Mills Olschanowsky,Catherine Olschanowsky
 Catherine Mills Olschanowsky,Cathie Olschanowsky
 John V. Monaco,Vinnie Monaco
+Mathias Kölsch,Mathias Kolsch
+Mathias Kölsch,Mathias N. Kolsch
 Avinash Karanth,Avinash Karanth Kodi
 Avinash Karanth,Avinash Kodi
 David W. Juedes,David Juedes

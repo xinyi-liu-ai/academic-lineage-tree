@@ -24,3 +24,8 @@ docs/_*.html
 data/cache/photo_extra/
 data/cache/advisor_pages/
 data/cache/homepage_extra_snippets.jsonl
+data/cache/lab_pages/
+data/cache/lab_photo_verify.jsonl
+data/cache/students_lab_debug.json
+data/cache/vocab_cache.pkl
+data/cache/recruit_follow/

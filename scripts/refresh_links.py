@@ -58,8 +58,12 @@ def main():
             u['scholar'] = f'https://scholar.google.com/citations?user={sid}'
         if u:
             out[p['id']] = u
-    with open(os.path.join(ROOT, 'data/enrich/link_updates.json'), 'w', encoding='utf-8') as f:
-        json.dump(out, f, ensure_ascii=False, indent=1)
+    path = os.path.join(ROOT, 'data/enrich/link_updates.json')
+    old = json.load(open(path, encoding='utf-8')) if os.path.exists(path) else {}
+    for pid, u in out.items():  # 合并：这次算出的覆盖同名字段，其余（别的脚本 / 人工写的，如 TLS 修复）保留
+        old.setdefault(pid, {}).update(u)
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(old, f, ensure_ascii=False, indent=1)
     profs = {p['id']: p for p in load_profs()}
     print('total', len(out), 'homepage', sum('homepage' in v for v in out.values()),
           'scholar', sum('scholar' in v for v in out.values()))

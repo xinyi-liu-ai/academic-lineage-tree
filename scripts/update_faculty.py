@@ -3,7 +3,8 @@
 - 旧行顺序不变（网页链接 #/p/p{行号} 保持稳定），人工整理的导师列原样保留
 - 仍在原校: status=current；换到名单内另一所学校: 更新学校, status=moved
 - 已不在名单内任何学校: status=former（保留其师承关系，网页上标注）
-- 新老师（在 CSRankings 收录的会议上 2020 年后有论文）追加到末尾, status=new
+- data/raw/faculty_manual.csv：现任但 CSRankings 数据里没有的老师（status=manual）
+- 新老师（在 CSRankings 收录的会议上 2020 年后有论文；或列在 data/raw/faculty_include.csv 里、作者信息还没收录的）追加到末尾, status=new
 研究方向: 2016 年后在 CSRankings 各子领域会议上的论文数，取最多的一个（及占比 >= 30% 的其他方向）
 用法: python scripts/update_faculty.py [--download]
 """
@@ -102,6 +103,11 @@ def main():
 
     for r in old:
         r = (r + [''] * 10)[:10]
+        if r[8] == 'manual' and not cur.get(find(C(r[1]), r[0])):
+            st['manual'] += 1  # 人工补的、CSRankings 仍没有：原样保留
+            seen.add(C(r[1]))
+            rows.append(r)
+            continue
         was = r[8] if r[8] in ('new', 'moved') else 'current'
         seen.add(C(r[1]))
         n = find(C(r[1]), r[0])
@@ -128,14 +134,34 @@ def main():
         keep = [top] + [a for a, v in c.most_common() if a != top and v / tot >= 0.3]
         return ' '.join(f'{a} ({VENUES[a][0]}-area)' for a in keep)
 
+    # CSRankings 名单里有、但 generated-author-info 还没收录的新老师（作者信息比名单更新得慢）：
+    # 不能一概放行（名单里没有论文统计的有两千多人，多是不活跃或教学岗），人工确认后列在 data/raw/faculty_include.csv
+    inc_path = os.path.join(ROOT, 'data/raw/faculty_include.csv')
+    include = {}
+    if os.path.exists(inc_path):
+        for r in csv.DictReader(open(inc_path, encoding='utf-8')):
+            include[(INST.get(r['university'], r['university']), C(r['name']))] = r.get('domain', '')
     for (u, n), r in sorted(info.items()):
-        if n in seen or not any(y >= 2020 for y in pubs.get((u, n), {})):
+        forced = (u, n) in include and bool(r['homepage'])
+        if n in seen or not (forced or any(y >= 2020 for y in pubs.get((u, n), {}))):
             continue
         seen.add(n)
         sid = r['scholarid']
         scholar = f'https://scholar.google.com/citations?user={sid}' if sid and sid != 'NOSCHOLARPAGE' else ''
-        rows.append([u, n, r['homepage'], domain((u, n)), scholar, '', '', '', 'new', ''])
+        dom = domain((u, n)) if pubs.get((u, n)) else include.get((u, n), '')
+        rows.append([u, n, r['homepage'], dom, scholar, '', '', '', 'new', ''])
         st['new'] += 1
+    # 现任、但当前 CSRankings 数据里没有的老师（多半是本人要求不列出）：人工确认后列在 data/raw/faculty_manual.csv，
+    # status=manual，build_graph 当作现任；以后 CSRankings 又收录了，上面会按名字认出这一行，改成 current
+    man_path = os.path.join(ROOT, 'data/raw/faculty_manual.csv')
+    if os.path.exists(man_path):
+        have = {(r[0], fold(display_name(r[1]))) for r in rows}
+        for m in csv.DictReader(open(man_path, encoding='utf-8')):
+            k = (m['University Name'], fold(display_name(m['name'])))
+            if k in have:
+                continue
+            rows.append([m['University Name'], m['name'], m['homepage'], m['domain'], m.get('google scholar', ''), '', '', '', 'manual', ''])
+            st['manual'] += 1
     with open(path, 'w', encoding='utf-8', newline='') as f:
         w = csv.writer(f)
         w.writerow(HEADER)
